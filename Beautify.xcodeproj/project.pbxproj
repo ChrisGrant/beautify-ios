@@ -93,101 +93,21 @@
 		1DDB6A45174BAA40008A2A73 /* SCThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB6A43174BAA40008A2A73 /* SCThemeManager.m */; };
 		1DDB6A46174BAA40008A2A73 /* SCThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB6A43174BAA40008A2A73 /* SCThemeManager.m */; };
 		1DDB6A49174BB209008A2A73 /* SCBeautify_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6A48174BAE3F008A2A73 /* SCBeautify_Private.h */; };
-		1DDB6AE2174BB94C008A2A73 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52016F9AC8500D08DBB /* NSObject+Properties.m */; };
-		1DDB6AE3174BB94C008A2A73 /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52216F9AC8500D08DBB /* UIColor+HexColors.m */; };
-		1DDB6AE5174BB94C008A2A73 /* SCLabelRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A91174158140039F3F3 /* SCLabelRenderer.m */; };
-		1DDB6AE7174BB94C008A2A73 /* SCSwitchBorderLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A991741582F0039F3F3 /* SCSwitchBorderLayer.m */; };
-		1DDB6AE9174BB94C008A2A73 /* SCSwitchLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A9D1741582F0039F3F3 /* SCSwitchLayer.m */; };
-		1DDB6AEA174BB94C008A2A73 /* SCSwitchRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A9F1741582F0039F3F3 /* SCSwitchRenderer.m */; };
-		1DDB6AEB174BB94C008A2A73 /* SCSwitchShadowLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12AA11741582F0039F3F3 /* SCSwitchShadowLayer.m */; };
-		1DDB6AEC174BB94C008A2A73 /* SCSwitchToggleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12AA31741582F0039F3F3 /* SCSwitchToggleLayer.m */; };
-		1DDB6AEE174BB94C008A2A73 /* SCButtonRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12AB31741583F0039F3F3 /* SCButtonRenderer.m */; };
-		1DDB6AEF174BB94C008A2A73 /* SCStyleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12ABA174158650039F3F3 /* SCStyleLayer.m */; };
-		1DDB6AF0174BB94C008A2A73 /* SCStyleRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12ABC174158650039F3F3 /* SCStyleRenderer.m */; };
-		1DDB6AF1174BB94C008A2A73 /* SCViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12ABE174158650039F3F3 /* SCViewRenderer.m */; };
-		1DDB6AF2174BB94C008A2A73 /* SCBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEFD172EA5EF000C7811 /* SCBorder.m */; };
-		1DDB6AF3174BB94C008A2A73 /* SCFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEE9172EA5B1000C7811 /* SCFont.m */; };
-		1DDB6AF4174BB94C008A2A73 /* SCGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEEB172EA5B2000C7811 /* SCGradient.m */; };
-		1DDB6AF5174BB94C008A2A73 /* SCGradientStop.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEED172EA5B3000C7811 /* SCGradientStop.m */; };
-		1DDB6AF6174BB94C008A2A73 /* SCNineBoxedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEEF172EA5B5000C7811 /* SCNineBoxedImage.m */; };
-		1DDB6AF7174BB94C008A2A73 /* SCShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEF1172EA5B6000C7811 /* SCShadow.m */; };
-		1DDB6AF8174BB94C008A2A73 /* SCButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FF01172EA606000C7811 /* SCButtonStyle.m */; };
-		1DDB6AF9174BB94C008A2A73 /* SCLabelStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A7F174157B40039F3F3 /* SCLabelStyle.m */; };
-		1DDB6AFA174BB94C008A2A73 /* SCStyleCustomizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A81174157B40039F3F3 /* SCStyleCustomizer.m */; };
-		1DDB6AFB174BB94C008A2A73 /* SCSwitchStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A83174157B40039F3F3 /* SCSwitchStyle.m */; };
-		1DDB6AFC174BB94C008A2A73 /* SCViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A85174157B40039F3F3 /* SCViewStyle.m */; };
-		1DDB6AFD174BB94C008A2A73 /* SCStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 729757C7173BB861003A34A5 /* SCStyle.m */; };
-		1DDB6AFE174BB94C008A2A73 /* SCStateSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 729757CD173BED3A003A34A5 /* SCStateSetter.m */; };
-		1DDB6AFF174BB94C008A2A73 /* SCStyleSetterCustomizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E168F3173D2EAF004CB021 /* SCStyleSetterCustomizer.m */; };
-		1DDB6B00174BB94C008A2A73 /* SCTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FF03172EA61F000C7811 /* SCTheme.m */; };
-		1DDB6B01174BB94C008A2A73 /* UIView+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54616F9AC9C00D08DBB /* UIView+Beautify.m */; };
-		1DDB6B02174BB94C008A2A73 /* UIView+BeautifyPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54816F9AC9C00D08DBB /* UIView+BeautifyPrivate.m */; };
-		1DDB6B03174BB94C008A2A73 /* UIView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54A16F9AC9C00D08DBB /* UIView+Utilities.m */; };
-		1DDB6B04174BB94C008A2A73 /* SCBeautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB6A38174BA951008A2A73 /* SCBeautify.m */; };
-		1DDB6B05174BB94C008A2A73 /* SCThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB6A43174BAA40008A2A73 /* SCThemeManager.m */; };
-		1DDB6B06174BB97E008A2A73 /* SCLabelRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A90174158140039F3F3 /* SCLabelRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DDB6B07174BB97E008A2A73 /* SCSwitchRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A9E1741582F0039F3F3 /* SCSwitchRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DDB6B08174BB97E008A2A73 /* SCButtonRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AB21741583F0039F3F3 /* SCButtonRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DDB6B09174BB97E008A2A73 /* SCStyleRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12ABB174158650039F3F3 /* SCStyleRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DDB6B0A174BB97E008A2A73 /* SCViewRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12ABD174158650039F3F3 /* SCViewRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DDB6B0B174BB97E008A2A73 /* SCBorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEFC172EA5EE000C7811 /* SCBorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DDB6B0C174BB97E008A2A73 /* SCFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEE8172EA5B0000C7811 /* SCFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DDB6B0D174BB97E008A2A73 /* SCGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEEA172EA5B1000C7811 /* SCGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DDB6B0E174BB97E008A2A73 /* SCGradientStop.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEEC172EA5B3000C7811 /* SCGradientStop.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DDB6B0F174BB97E008A2A73 /* SCNineBoxedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEEE172EA5B4000C7811 /* SCNineBoxedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DDB6B10174BB97E008A2A73 /* SCShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEF0172EA5B5000C7811 /* SCShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DDB6B11174BB97E008A2A73 /* SCBeautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6A37174BA951008A2A73 /* SCBeautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DDB6B12174BB98C008A2A73 /* UIView+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA54516F9AC9C00D08DBB /* UIView+Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DDB6B13174BB9B8008A2A73 /* NSObject+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA51F16F9AC8500D08DBB /* NSObject+Properties.h */; };
-		1DDB6B14174BB9B8008A2A73 /* UIColor+HexColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA52116F9AC8500D08DBB /* UIColor+HexColors.h */; };
-		1DDB6B15174BB9B8008A2A73 /* SCConfigParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AC6174158900039F3F3 /* SCConfigParser.h */; };
-		1DDB6B17174BB9B8008A2A73 /* SCSwitchBorderLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A981741582F0039F3F3 /* SCSwitchBorderLayer.h */; };
-		1DDB6B19174BB9B8008A2A73 /* SCSwitchLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A9C1741582F0039F3F3 /* SCSwitchLayer.h */; };
-		1DDB6B1A174BB9B8008A2A73 /* SCSwitchShadowLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AA01741582F0039F3F3 /* SCSwitchShadowLayer.h */; };
-		1DDB6B1B174BB9B8008A2A73 /* SCSwitchToggleLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AA21741582F0039F3F3 /* SCSwitchToggleLayer.h */; };
-		1DDB6B1E174BB9B8008A2A73 /* SCStyleLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AB9174158650039F3F3 /* SCStyleLayer.h */; };
-		1DDB6B1F174BB9B8008A2A73 /* SCStyleRenderer_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DC6EACD174512BD004EDF37 /* SCStyleRenderer_Private.h */; };
-		1DDB6B20174BB9B8008A2A73 /* SCViewRenderer_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DC6EACE174512BD004EDF37 /* SCViewRenderer_Private.h */; };
-		1DDB6B21174BB9B8008A2A73 /* SCFont_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6969174A2846008A2A73 /* SCFont_Private.h */; };
-		1DDB6B22174BB9B8008A2A73 /* SCNineBoxedImage_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB696C174A2ADC008A2A73 /* SCNineBoxedImage_Private.h */; };
-		1DDB6B23174BB9B8008A2A73 /* SCButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FF00172EA5FE000C7811 /* SCButtonStyle.h */; };
-		1DDB6B24174BB9B8008A2A73 /* SCLabelStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A7E174157B40039F3F3 /* SCLabelStyle.h */; };
-		1DDB6B25174BB9B8008A2A73 /* SCStyleCustomizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A80174157B40039F3F3 /* SCStyleCustomizer.h */; };
-		1DDB6B26174BB9B8008A2A73 /* SCSwitchStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A82174157B40039F3F3 /* SCSwitchStyle.h */; };
-		1DDB6B27174BB9B8008A2A73 /* SCViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A84174157B40039F3F3 /* SCViewStyle.h */; };
-		1DDB6B28174BB9B8008A2A73 /* SCStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 729757C6173BB861003A34A5 /* SCStyle.h */; };
-		1DDB6B29174BB9B8008A2A73 /* SCStateSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 729757CC173BED3A003A34A5 /* SCStateSetter.h */; };
-		1DDB6B2A174BB9B8008A2A73 /* SCStyleProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A8E174157D20039F3F3 /* SCStyleProtocol.h */; };
-		1DDB6B2B174BB9B8008A2A73 /* SCStyleSetterCustomizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E168F2173D2EAE004CB021 /* SCStyleSetterCustomizer.h */; };
-		1DDB6B2C174BB9B8008A2A73 /* SCTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FF02172EA612000C7811 /* SCTheme.h */; };
-		1DDB6B2D174BB9B8008A2A73 /* UIView+BeautifyPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA54716F9AC9C00D08DBB /* UIView+BeautifyPrivate.h */; };
-		1DDB6B2E174BB9B8008A2A73 /* UIView+Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA54916F9AC9C00D08DBB /* UIView+Utilities.h */; };
-		1DDB6B2F174BB9B8008A2A73 /* SCBeautify_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6A48174BAE3F008A2A73 /* SCBeautify_Private.h */; };
 		1DE9D288174E6D890070AFD3 /* SCText.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D286174E6D880070AFD3 /* SCText.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DE9D289174E6D890070AFD3 /* SCText.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D286174E6D880070AFD3 /* SCText.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DE9D28A174E6D890070AFD3 /* SCText.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D287174E6D890070AFD3 /* SCText.m */; };
-		1DE9D28B174E6D890070AFD3 /* SCText.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D287174E6D890070AFD3 /* SCText.m */; };
 		1DE9D28D174E709D0070AFD3 /* SCText.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D287174E6D890070AFD3 /* SCText.m */; };
 		1DE9D2EA174F7BA50070AFD3 /* UIViewController+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D2E8174F7BA50070AFD3 /* UIViewController+Beautify.h */; };
-		1DE9D2EB174F7BA50070AFD3 /* UIViewController+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D2E8174F7BA50070AFD3 /* UIViewController+Beautify.h */; };
 		1DE9D2EC174F7BA50070AFD3 /* UIViewController+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2E9174F7BA50070AFD3 /* UIViewController+Beautify.m */; };
 		1DE9D2ED174F7BA50070AFD3 /* UIViewController+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2E9174F7BA50070AFD3 /* UIViewController+Beautify.m */; };
-		1DE9D2EE174F7BA50070AFD3 /* UIViewController+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2E9174F7BA50070AFD3 /* UIViewController+Beautify.m */; };
 		1DE9D2F8174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D2F6174F7CD00070AFD3 /* UIViewController+BeautifyPrivate.h */; };
-		1DE9D2F9174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D2F6174F7CD00070AFD3 /* UIViewController+BeautifyPrivate.h */; };
 		1DE9D2FA174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2F7174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m */; };
 		1DE9D2FB174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2F7174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m */; };
-		1DE9D2FC174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2F7174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m */; };
 		1DE9D2FF174F7F540070AFD3 /* SCViewControllerStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D2FD174F7F540070AFD3 /* SCViewControllerStyle.h */; };
-		1DE9D300174F7F540070AFD3 /* SCViewControllerStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D2FD174F7F540070AFD3 /* SCViewControllerStyle.h */; };
 		1DE9D301174F7F540070AFD3 /* SCViewControllerStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2FE174F7F540070AFD3 /* SCViewControllerStyle.m */; };
 		1DE9D302174F7F540070AFD3 /* SCViewControllerStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2FE174F7F540070AFD3 /* SCViewControllerStyle.m */; };
-		1DE9D303174F7F540070AFD3 /* SCViewControllerStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2FE174F7F540070AFD3 /* SCViewControllerStyle.m */; };
 		1DE9D307174F7F780070AFD3 /* SCViewControllerRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D305174F7F780070AFD3 /* SCViewControllerRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DE9D308174F7F780070AFD3 /* SCViewControllerRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D305174F7F780070AFD3 /* SCViewControllerRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DE9D309174F7F780070AFD3 /* SCViewControllerRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D306174F7F780070AFD3 /* SCViewControllerRenderer.m */; };
 		1DE9D30A174F7F780070AFD3 /* SCViewControllerRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D306174F7F780070AFD3 /* SCViewControllerRenderer.m */; };
-		1DE9D30B174F7F780070AFD3 /* SCViewControllerRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D306174F7F780070AFD3 /* SCViewControllerRenderer.m */; };
 		1DFE0196172EBB5B00509508 /* SCBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEFD172EA5EF000C7811 /* SCBorder.m */; };
 		1DFE0198172EBB5E00509508 /* SCFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEE9172EA5B1000C7811 /* SCFont.m */; };
 		1DFE0199172EBB6200509508 /* SCShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEF1172EA5B6000C7811 /* SCShadow.m */; };
@@ -198,57 +118,35 @@
 		1DFE01A0172EBBE500509508 /* SCButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FF01172EA606000C7811 /* SCButtonStyle.m */; };
 		543570E617BE312C007FA7CE /* UIBarButtonItem+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 543570E517BE312C007FA7CE /* UIBarButtonItem+Beautify.m */; };
 		543570E717BE312C007FA7CE /* UIBarButtonItem+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 543570E517BE312C007FA7CE /* UIBarButtonItem+Beautify.m */; };
-		543570E817BE312C007FA7CE /* UIBarButtonItem+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 543570E517BE312C007FA7CE /* UIBarButtonItem+Beautify.m */; };
 		543570EA17BE313E007FA7CE /* UIBarButtonItem+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 543570E917BE313E007FA7CE /* UIBarButtonItem+Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		543570EB17BE313E007FA7CE /* UIBarButtonItem+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 543570E917BE313E007FA7CE /* UIBarButtonItem+Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		543570F017BE32C3007FA7CE /* Beautify-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 543570EF17BE32C3007FA7CE /* Beautify-Info.plist */; };
-		543570F217BE32C3007FA7CE /* Beautify-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 543570EF17BE32C3007FA7CE /* Beautify-Info.plist */; };
 		543570F717BE32DB007FA7CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 543570F517BE32DB007FA7CE /* InfoPlist.strings */; };
 		543570F817BE32DB007FA7CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 543570F517BE32DB007FA7CE /* InfoPlist.strings */; };
-		543570F917BE32DB007FA7CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 543570F517BE32DB007FA7CE /* InfoPlist.strings */; };
-		543570FB17BE32E4007FA7CE /* Beautify Release-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 543570FA17BE32E4007FA7CE /* Beautify Release-Info.plist */; };
-		5435710017BE32F1007FA7CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 543570FE17BE32F1007FA7CE /* InfoPlist.strings */; };
-		5435710117BE32F1007FA7CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 543570FE17BE32F1007FA7CE /* InfoPlist.strings */; };
-		5435710217BE32F1007FA7CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 543570FE17BE32F1007FA7CE /* InfoPlist.strings */; };
 		544975CD17D8B953003D7115 /* SCKnobLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 544975CB17D8B953003D7115 /* SCKnobLayer.h */; };
-		544975CE17D8B953003D7115 /* SCKnobLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 544975CB17D8B953003D7115 /* SCKnobLayer.h */; };
 		544975CF17D8B953003D7115 /* SCKnobLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 544975CC17D8B953003D7115 /* SCKnobLayer.m */; };
 		544975D017D8B953003D7115 /* SCKnobLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 544975CC17D8B953003D7115 /* SCKnobLayer.m */; };
-		544975D117D8B953003D7115 /* SCKnobLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 544975CC17D8B953003D7115 /* SCKnobLayer.m */; };
 		547C32D117C4C1EE009D6289 /* SCSliderStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 547C32CF17C4C1EE009D6289 /* SCSliderStyle.h */; };
-		547C32D217C4C1EE009D6289 /* SCSliderStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 547C32CF17C4C1EE009D6289 /* SCSliderStyle.h */; };
 		547C32D317C4C1EE009D6289 /* SCSliderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C32D017C4C1EE009D6289 /* SCSliderStyle.m */; };
 		547C32D417C4C1EE009D6289 /* SCSliderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C32D017C4C1EE009D6289 /* SCSliderStyle.m */; };
-		547C32D517C4C1EE009D6289 /* SCSliderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C32D017C4C1EE009D6289 /* SCSliderStyle.m */; };
 		547C32D817C4C24B009D6289 /* SCSliderBarBorderLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 547C32D617C4C24B009D6289 /* SCSliderBarBorderLayer.h */; };
-		547C32D917C4C24B009D6289 /* SCSliderBarBorderLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 547C32D617C4C24B009D6289 /* SCSliderBarBorderLayer.h */; };
 		54A995B7179FD29C00B9B17C /* SCShadowImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A995B5179FD29C00B9B17C /* SCShadowImage.h */; };
-		54A995B8179FD29C00B9B17C /* SCShadowImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A995B5179FD29C00B9B17C /* SCShadowImage.h */; };
 		54A995B9179FD29C00B9B17C /* SCShadowImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* SCShadowImage.m */; };
 		54A995BA179FD29C00B9B17C /* SCShadowImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* SCShadowImage.m */; };
-		54A995BB179FD29C00B9B17C /* SCShadowImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* SCShadowImage.m */; };
 		54ABF0E817A286EE0070B0B6 /* UINavigationBar+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 5480C1FC17A0127000F4007D /* UINavigationBar+Beautify.h */; };
-		54ABF0E917A286EE0070B0B6 /* UINavigationBar+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 5480C1FC17A0127000F4007D /* UINavigationBar+Beautify.h */; };
-		54ABF0EA17A286F20070B0B6 /* UINavigationBar+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480C1FD17A0127000F4007D /* UINavigationBar+Beautify.m */; };
 		54ABF0EB17A286F20070B0B6 /* UINavigationBar+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480C1FD17A0127000F4007D /* UINavigationBar+Beautify.m */; };
 		54ABF0EC17A287110070B0B6 /* UINavigationBar+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480C1FD17A0127000F4007D /* UINavigationBar+Beautify.m */; };
 		54D7FD7617B8EA590004F952 /* SCBarButtonItemRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54D7FD7417B8EA590004F952 /* SCBarButtonItemRenderer.h */; };
-		54D7FD7717B8EA590004F952 /* SCBarButtonItemRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54D7FD7417B8EA590004F952 /* SCBarButtonItemRenderer.h */; };
 		54D7FD7817B8EA590004F952 /* SCBarButtonItemRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D7FD7517B8EA590004F952 /* SCBarButtonItemRenderer.m */; };
 		54D7FD7917B8EA590004F952 /* SCBarButtonItemRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D7FD7517B8EA590004F952 /* SCBarButtonItemRenderer.m */; };
-		54D7FD7A17B8EA590004F952 /* SCBarButtonItemRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D7FD7517B8EA590004F952 /* SCBarButtonItemRenderer.m */; };
 		54DDE25E17C655930081E1AD /* SCSliderBackgroundLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DDE25C17C655920081E1AD /* SCSliderBackgroundLayer.h */; };
-		54DDE25F17C655930081E1AD /* SCSliderBackgroundLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DDE25C17C655920081E1AD /* SCSliderBackgroundLayer.h */; };
 		54DDE26017C655930081E1AD /* SCSliderBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE25D17C655920081E1AD /* SCSliderBackgroundLayer.m */; };
 		54DDE26117C655930081E1AD /* SCSliderBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE25D17C655920081E1AD /* SCSliderBackgroundLayer.m */; };
-		54DDE26217C655930081E1AD /* SCSliderBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE25D17C655920081E1AD /* SCSliderBackgroundLayer.m */; };
 		54DDE26C17C65D1B0081E1AD /* SCSliderMaximumTrackLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DDE26A17C65D1A0081E1AD /* SCSliderMaximumTrackLayer.h */; };
-		54DDE26D17C65D1B0081E1AD /* SCSliderMaximumTrackLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DDE26A17C65D1A0081E1AD /* SCSliderMaximumTrackLayer.h */; };
 		54DDE26E17C65D1B0081E1AD /* SCSliderMaximumTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE26B17C65D1B0081E1AD /* SCSliderMaximumTrackLayer.m */; };
 		54DDE26F17C65D1B0081E1AD /* SCSliderMaximumTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE26B17C65D1B0081E1AD /* SCSliderMaximumTrackLayer.m */; };
-		54DDE27017C65D1B0081E1AD /* SCSliderMaximumTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE26B17C65D1B0081E1AD /* SCSliderMaximumTrackLayer.m */; };
 		7009050D178C0EB600D7BEF4 /* SCVersionUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7009050B178C0EB600D7BEF4 /* SCVersionUtils.h */; };
-		7009050E178C0EB600D7BEF4 /* SCVersionUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7009050B178C0EB600D7BEF4 /* SCVersionUtils.h */; };
+		700EE91D17E1FFAB00164EA1 /* SCThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6A42174BAA40008A2A73 /* SCThemeManager.h */; };
+		700EE92817E202C400164EA1 /* SCConfigParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194BD17E1B4FA008161D3 /* SCConfigParser.m */; };
 		700F292616F3711300E85ED3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72BF4B3416F3487A00A0C0E3 /* UIKit.framework */; };
 		700F293116F3711300E85ED3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 700F293016F3711300E85ED3 /* main.m */; };
 		700F293516F3711300E85ED3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 700F293416F3711300E85ED3 /* AppDelegate.m */; };
@@ -269,10 +167,8 @@
 		702194FA17E1BC95008161D3 /* SCTableViewCellLabelRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194F917E1BC95008161D3 /* SCTableViewCellLabelRenderer.m */; };
 		7036DB4916F8659400EBA8AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DCD86C16F377DE008ECF8B /* QuartzCore.framework */; };
 		70397B8F17DF33190095001B /* SCBarButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70397B8D17DF33190095001B /* SCBarButtonStyle.h */; };
-		70397B9017DF33190095001B /* SCBarButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70397B8D17DF33190095001B /* SCBarButtonStyle.h */; };
 		70397B9117DF33190095001B /* SCBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* SCBarButtonStyle.m */; };
 		70397B9217DF33190095001B /* SCBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* SCBarButtonStyle.m */; };
-		70397B9317DF33190095001B /* SCBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* SCBarButtonStyle.m */; };
 		7047010517E1C06B00FEA5F5 /* NSObject+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010217E1C06B00FEA5F5 /* NSObject+Beautify.h */; };
 		7047010617E1C06B00FEA5F5 /* NSObject+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010317E1C06B00FEA5F5 /* NSObject+Beautify.m */; };
 		7047010717E1C06B00FEA5F5 /* UIBarButtonItem+BeautifyPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010417E1C06B00FEA5F5 /* UIBarButtonItem+BeautifyPrivate.h */; };
@@ -293,7 +189,6 @@
 		7047012D17E1C27A00FEA5F5 /* SCSliderRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047012C17E1C27A00FEA5F5 /* SCSliderRenderer.h */; };
 		7047012E17E1C3D200FEA5F5 /* SCBeautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB6A38174BA951008A2A73 /* SCBeautify.m */; };
 		7047012F17E1C3F900FEA5F5 /* SCSliderLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011817E1C13200FEA5F5 /* SCSliderLayer.m */; };
-		7047013017E1C3FA00FEA5F5 /* SCSliderLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011817E1C13200FEA5F5 /* SCSliderLayer.m */; };
 		7047013117E1C40100FEA5F5 /* SCSwitchGestureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011C17E1C14300FEA5F5 /* SCSwitchGestureView.m */; };
 		7047013317E1C41200FEA5F5 /* SCTableViewCellLabelRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194F917E1BC95008161D3 /* SCTableViewCellLabelRenderer.m */; };
 		7047013417E1C41E00FEA5F5 /* SCTableViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194CD17E1BC2E008161D3 /* SCTableViewRenderer.m */; };
@@ -308,21 +203,15 @@
 		7047013F17E1C6CE00FEA5F5 /* SCImageViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010F17E1C11100FEA5F5 /* SCImageViewRenderer.m */; };
 		7047014017E1C6D100FEA5F5 /* UIImageView+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011117E1C11100FEA5F5 /* UIImageView+Beautify.m */; };
 		70907E6D1797E6F600F83417 /* SCImageViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70907E6B1797E6F600F83417 /* SCImageViewStyle.h */; };
-		70907E6E1797E6F600F83417 /* SCImageViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70907E6B1797E6F600F83417 /* SCImageViewStyle.h */; };
 		70907E6F1797E6F600F83417 /* SCImageViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70907E6C1797E6F600F83417 /* SCImageViewStyle.m */; };
 		70907E701797E6F600F83417 /* SCImageViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70907E6C1797E6F600F83417 /* SCImageViewStyle.m */; };
-		70907E711797E6F600F83417 /* SCImageViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70907E6C1797E6F600F83417 /* SCImageViewStyle.m */; };
 		70907E7B1797FBC300F83417 /* roller@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70907E7A1797FBC300F83417 /* roller@2x.png */; };
 		70C211B617DF01DB00CA110B /* TableVisualTestViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C211B417DF01DB00CA110B /* TableVisualTestViewController.h */; };
-		70C211B717DF01DB00CA110B /* TableVisualTestViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C211B417DF01DB00CA110B /* TableVisualTestViewController.h */; };
 		70C211B817DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
 		70C211B917DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
-		70C211BA17DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
 		70E19557178462B20096E458 /* VisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E19555178462B20096E458 /* VisualTestViewController.m */; };
 		70F61B8617831AE100DCA906 /* SCRenderUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 70F61B8417831AE100DCA906 /* SCRenderUtils.h */; };
-		70F61B8717831AE100DCA906 /* SCRenderUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 70F61B8417831AE100DCA906 /* SCRenderUtils.h */; };
 		70F61B8917831AE100DCA906 /* SCRenderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F61B8517831AE100DCA906 /* SCRenderUtils.m */; };
-		70F61B8A17831AE100DCA906 /* SCRenderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F61B8517831AE100DCA906 /* SCRenderUtils.m */; };
 		70F61B8B17831B4F00DCA906 /* SCRenderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F61B8517831AE100DCA906 /* SCRenderUtils.m */; };
 		70FE245E17E089D1009A7113 /* barButtonImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 70FE245D17E089D1009A7113 /* barButtonImage.png */; };
 		70FE246517E0B385009A7113 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FE246417E0B385009A7113 /* XCTest.framework */; };
@@ -332,31 +221,19 @@
 		70FE247017E0B385009A7113 /* BeautifyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FE246F17E0B385009A7113 /* BeautifyTests.m */; };
 		7205345917579C61000A27C0 /* SCNavigationBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205345817579C61000A27C0 /* SCNavigationBarRenderer.m */; };
 		7205345C1757A000000A27C0 /* SCNavigationBarStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 7205345A1757A000000A27C0 /* SCNavigationBarStyle.h */; };
-		7205345D1757A000000A27C0 /* SCNavigationBarStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 7205345A1757A000000A27C0 /* SCNavigationBarStyle.h */; };
 		7205345E1757A000000A27C0 /* SCNavigationBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205345B1757A000000A27C0 /* SCNavigationBarStyle.m */; };
 		7205345F1757A000000A27C0 /* SCNavigationBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205345B1757A000000A27C0 /* SCNavigationBarStyle.m */; };
-		720534601757A000000A27C0 /* SCNavigationBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205345B1757A000000A27C0 /* SCNavigationBarStyle.m */; };
 		720534611758EC04000A27C0 /* SCNavigationBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205345817579C61000A27C0 /* SCNavigationBarRenderer.m */; };
-		720534621758EC04000A27C0 /* SCNavigationBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205345817579C61000A27C0 /* SCNavigationBarRenderer.m */; };
 		7276DDAF17563949004CC446 /* SCSwitchState.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D7105317548DAE00635F21 /* SCSwitchState.m */; };
-		7276DDB11756394A004CC446 /* SCSwitchState.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D7105317548DAE00635F21 /* SCSwitchState.m */; };
 		727A86261757453800F6C6D9 /* SCTextShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 727A86251757453800F6C6D9 /* SCTextShadow.m */; };
 		727A862817575C3C00F6C6D9 /* SCTextFieldStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDECCE175656E0002F1093 /* SCTextFieldStyle.h */; };
-		727A862917575C3D00F6C6D9 /* SCTextFieldStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDECCE175656E0002F1093 /* SCTextFieldStyle.h */; };
 		727A862A17575C4600F6C6D9 /* SCTextShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 727A86251757453800F6C6D9 /* SCTextShadow.m */; };
-		727A862B17575C4700F6C6D9 /* SCTextShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 727A86251757453800F6C6D9 /* SCTextShadow.m */; };
 		727A862C17575C5100F6C6D9 /* SCSwitchState.h in Headers */ = {isa = PBXBuildFile; fileRef = 72D7105217548DAE00635F21 /* SCSwitchState.h */; };
-		727A862D17575C5200F6C6D9 /* SCSwitchState.h in Headers */ = {isa = PBXBuildFile; fileRef = 72D7105217548DAE00635F21 /* SCSwitchState.h */; };
 		727A862E17575C5600F6C6D9 /* SCTextShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 727A86241757453800F6C6D9 /* SCTextShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		727A862F17575C5700F6C6D9 /* SCTextShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 727A86241757453800F6C6D9 /* SCTextShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		727A863017575C9F00F6C6D9 /* SCControlRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA81757204B002F1093 /* SCControlRenderer.m */; };
-		727A863117575CA000F6C6D9 /* SCControlRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA81757204B002F1093 /* SCControlRenderer.m */; };
 		727A863217575CAD00F6C6D9 /* SCTextFieldStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDECCF175656E0002F1093 /* SCTextFieldStyle.m */; };
-		727A863317575CAE00F6C6D9 /* SCTextFieldStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDECCF175656E0002F1093 /* SCTextFieldStyle.m */; };
 		727A863417575D1300F6C6D9 /* NSDictionary+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDAB17572A44002F1093 /* NSDictionary+Utilities.m */; };
-		727A863517575D1400F6C6D9 /* NSDictionary+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDAB17572A44002F1093 /* NSDictionary+Utilities.m */; };
 		727A863617575D1700F6C6D9 /* UITextField+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA517571F92002F1093 /* UITextField+Beautify.m */; };
-		727A863717575D1800F6C6D9 /* UITextField+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA517571F92002F1093 /* UITextField+Beautify.m */; };
 		727ADCD116F9B99000D7DDCB /* UIView+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54616F9AC9C00D08DBB /* UIView+Beautify.m */; };
 		727ADCD216F9B99000D7DDCB /* UIView+BeautifyPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54816F9AC9C00D08DBB /* UIView+BeautifyPrivate.m */; };
 		727ADCD316F9B99000D7DDCB /* UIView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54A16F9AC9C00D08DBB /* UIView+Utilities.m */; };
@@ -369,47 +246,31 @@
 		72ADB8D416FC9DE200BE925D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ADB8D316FC9DE200BE925D /* Security.framework */; };
 		72ADB8D616FC9E0200BE925D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ADB8D516FC9E0200BE925D /* CoreGraphics.framework */; };
 		72AE98D4175BB94800787272 /* SCTableViewCellRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72AE98D2175BB94800787272 /* SCTableViewCellRenderer.h */; };
-		72AE98D5175BB94800787272 /* SCTableViewCellRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72AE98D2175BB94800787272 /* SCTableViewCellRenderer.h */; };
 		72AE98D6175BB94800787272 /* SCTableViewCellRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AE98D3175BB94800787272 /* SCTableViewCellRenderer.m */; };
 		72AE98D7175BB94800787272 /* SCTableViewCellRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AE98D3175BB94800787272 /* SCTableViewCellRenderer.m */; };
-		72AE98D8175BB94800787272 /* SCTableViewCellRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AE98D3175BB94800787272 /* SCTableViewCellRenderer.m */; };
 		72AE98DB175BBA7E00787272 /* SCTableViewCellStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 72AE98D9175BBA7E00787272 /* SCTableViewCellStyle.h */; };
-		72AE98DC175BBA7E00787272 /* SCTableViewCellStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 72AE98D9175BBA7E00787272 /* SCTableViewCellStyle.h */; };
 		72AE98DD175BBA7E00787272 /* SCTableViewCellStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AE98DA175BBA7E00787272 /* SCTableViewCellStyle.m */; };
 		72AE98DE175BBA7E00787272 /* SCTableViewCellStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AE98DA175BBA7E00787272 /* SCTableViewCellStyle.m */; };
-		72AE98DF175BBA7E00787272 /* SCTableViewCellStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AE98DA175BBA7E00787272 /* SCTableViewCellStyle.m */; };
 		72D7105417548DAE00635F21 /* SCSwitchState.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D7105317548DAE00635F21 /* SCSwitchState.m */; };
 		72E168FE173D48FC004CB021 /* SCStyleSetterCustomizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E168F3173D2EAF004CB021 /* SCStyleSetterCustomizer.m */; };
 		72F07945175C941100FC27DB /* SCControlRenderingLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F07943175C941100FC27DB /* SCControlRenderingLayer.h */; };
-		72F07946175C941100FC27DB /* SCControlRenderingLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F07943175C941100FC27DB /* SCControlRenderingLayer.h */; };
 		72F07947175C941100FC27DB /* SCControlRenderingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F07944175C941100FC27DB /* SCControlRenderingLayer.m */; };
 		72F07948175C941100FC27DB /* SCControlRenderingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F07944175C941100FC27DB /* SCControlRenderingLayer.m */; };
-		72F07949175C941100FC27DB /* SCControlRenderingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F07944175C941100FC27DB /* SCControlRenderingLayer.m */; };
 		72F07955175C9F2900FC27DB /* UITableViewCell+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F07952175C9F2900FC27DB /* UITableViewCell+Beautify.m */; };
 		72F07956175C9F2900FC27DB /* UITableViewCell+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F07952175C9F2900FC27DB /* UITableViewCell+Beautify.m */; };
-		72F07957175C9F2900FC27DB /* UITableViewCell+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F07952175C9F2900FC27DB /* UITableViewCell+Beautify.m */; };
-		72F07958175C9F9600FC27DB /* UITableViewCell+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F07951175C9F2900FC27DB /* UITableViewCell+Beautify.h */; };
 		72F07959175C9F9700FC27DB /* UITableViewCell+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F07951175C9F2900FC27DB /* UITableViewCell+Beautify.h */; };
 		72F0795C175CCC2F00FC27DB /* SCDelegateMultiplexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F0795A175CCC2D00FC27DB /* SCDelegateMultiplexer.h */; };
-		72F0795D175CCC2F00FC27DB /* SCDelegateMultiplexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F0795A175CCC2D00FC27DB /* SCDelegateMultiplexer.h */; };
 		72F0795E175CCC2F00FC27DB /* SCDelegateMultiplexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F0795B175CCC2E00FC27DB /* SCDelegateMultiplexer.m */; };
 		72F0795F175CCC2F00FC27DB /* SCDelegateMultiplexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F0795B175CCC2E00FC27DB /* SCDelegateMultiplexer.m */; };
-		72F07960175CCC2F00FC27DB /* SCDelegateMultiplexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F0795B175CCC2E00FC27DB /* SCDelegateMultiplexer.m */; };
-		72F0797F1761F11000FC27DB /* Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F0797E1761F11000FC27DB /* Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		72F079801761F11000FC27DB /* Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F0797E1761F11000FC27DB /* Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72F0797F1761F11000FC27DB /* Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F0797E1761F11000FC27DB /* Beautify.h */; };
 		72F079811761F2C500FC27DB /* SCControlRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDEDA71757204A002F1093 /* SCControlRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		72F079821761F2C500FC27DB /* SCControlRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDEDA71757204A002F1093 /* SCControlRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72F079831761F34500FC27DB /* SCNavigationBarRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7205345717579C61000A27C0 /* SCNavigationBarRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		72F079841761F34500FC27DB /* SCNavigationBarRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7205345717579C61000A27C0 /* SCNavigationBarRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72FDECD0175656E0002F1093 /* SCTextFieldStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDECCF175656E0002F1093 /* SCTextFieldStyle.m */; };
 		72FDED9717565736002F1093 /* SCGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDED9617565736002F1093 /* SCGradientLayer.m */; };
 		72FDED9A17565742002F1093 /* SCTextFieldRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDED9917565742002F1093 /* SCTextFieldRenderer.m */; };
 		72FDED9B17565749002F1093 /* SCGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDED9617565736002F1093 /* SCGradientLayer.m */; };
-		72FDED9C1756574A002F1093 /* SCGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDED9617565736002F1093 /* SCGradientLayer.m */; };
 		72FDED9D1756574D002F1093 /* SCTextFieldRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDED9917565742002F1093 /* SCTextFieldRenderer.m */; };
-		72FDED9E1756574E002F1093 /* SCTextFieldRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDED9917565742002F1093 /* SCTextFieldRenderer.m */; };
 		72FDED9F17565754002F1093 /* SCTextFieldRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDED9817565742002F1093 /* SCTextFieldRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		72FDEDA017565755002F1093 /* SCTextFieldRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDED9817565742002F1093 /* SCTextFieldRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72FDEDA617571F92002F1093 /* UITextField+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA517571F92002F1093 /* UITextField+Beautify.m */; };
 		72FDEDA91757204C002F1093 /* SCControlRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA81757204B002F1093 /* SCControlRenderer.m */; };
 		72FDEDAC17572A44002F1093 /* NSDictionary+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDAB17572A44002F1093 /* NSDictionary+Utilities.m */; };
@@ -452,7 +313,6 @@
 		1DDB6A42174BAA40008A2A73 /* SCThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCThemeManager.h; sourceTree = "<group>"; };
 		1DDB6A43174BAA40008A2A73 /* SCThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SCThemeManager.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1DDB6A48174BAE3F008A2A73 /* SCBeautify_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCBeautify_Private.h; sourceTree = "<group>"; };
-		1DDB6AD7174BB8DB008A2A73 /* Beautify Release.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Beautify Release.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DE12A7E174157B40039F3F3 /* SCLabelStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCLabelStyle.h; sourceTree = "<group>"; };
 		1DE12A7F174157B40039F3F3 /* SCLabelStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SCLabelStyle.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1DE12A80174157B40039F3F3 /* SCStyleCustomizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCStyleCustomizer.h; sourceTree = "<group>"; };
@@ -498,8 +358,6 @@
 		543570E917BE313E007FA7CE /* UIBarButtonItem+Beautify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = "UIBarButtonItem+Beautify.h"; path = "Beautify/UIBarButtonItem+Beautify.h"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		543570EF17BE32C3007FA7CE /* Beautify-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Beautify-Info.plist"; path = "Beautify/Beautify-Info.plist"; sourceTree = SOURCE_ROOT; };
 		543570F617BE32DB007FA7CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Beautify/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
-		543570FA17BE32E4007FA7CE /* Beautify Release-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Beautify Release-Info.plist"; path = "Beautify Release/Beautify Release-Info.plist"; sourceTree = SOURCE_ROOT; };
-		543570FF17BE32F1007FA7CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = "Beautify Release/en.lproj/InfoPlist.strings"; sourceTree = SOURCE_ROOT; };
 		544975CB17D8B953003D7115 /* SCKnobLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCKnobLayer.h; path = Beautify/SCKnobLayer.h; sourceTree = SOURCE_ROOT; };
 		544975CC17D8B953003D7115 /* SCKnobLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCKnobLayer.m; path = Beautify/SCKnobLayer.m; sourceTree = SOURCE_ROOT; };
 		547C32CF17C4C1EE009D6289 /* SCSliderStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSliderStyle.h; sourceTree = "<group>"; };
@@ -640,13 +498,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1DDB6AD1174BB8DB008A2A73 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		700F292216F3711300E85ED3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -766,23 +617,6 @@
 				1DF3D71C1743E58400C40FA9 /* Beautify-Prefix.pch */,
 				543570EF17BE32C3007FA7CE /* Beautify-Info.plist */,
 				543570F517BE32DB007FA7CE /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		1DDB6AD8174BB8DB008A2A73 /* Beautify Release */ = {
-			isa = PBXGroup;
-			children = (
-				1DDB6AD9174BB8DC008A2A73 /* Supporting Files */,
-			);
-			path = "Beautify Release";
-			sourceTree = "<group>";
-		};
-		1DDB6AD9174BB8DC008A2A73 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				543570FA17BE32E4007FA7CE /* Beautify Release-Info.plist */,
-				543570FE17BE32F1007FA7CE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1033,7 +867,6 @@
 			isa = PBXGroup;
 			children = (
 				72BF4A9816F3179B00A0C0E3 /* Beautify */,
-				1DDB6AD8174BB8DB008A2A73 /* Beautify Release */,
 				70FE246917E0B385009A7113 /* Beautify Tests */,
 				700F292A16F3711300E85ED3 /* VisualTest */,
 				72BF4A9516F3179B00A0C0E3 /* Frameworks */,
@@ -1046,7 +879,6 @@
 			children = (
 				700F292516F3711300E85ED3 /* VisualTest.app */,
 				1D46460617466915003840E4 /* Beautify.framework */,
-				1DDB6AD7174BB8DB008A2A73 /* Beautify Release.framework */,
 				70FE246317E0B385009A7113 /* Beautify Tests.xctest */,
 			);
 			name = Products;
@@ -1198,84 +1030,8 @@
 				70397B8F17DF33190095001B /* SCBarButtonStyle.h in Headers */,
 				7047012017E1C1F200FEA5F5 /* UISwitch+Beautify.h in Headers */,
 				54DDE26C17C65D1B0081E1AD /* SCSliderMaximumTrackLayer.h in Headers */,
+				700EE91D17E1FFAB00164EA1 /* SCThemeManager.h in Headers */,
 				702194C817E1BC0D008161D3 /* SCSliderLayer.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1DDB6AD2174BB8DB008A2A73 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1DDB6B12174BB98C008A2A73 /* UIView+Beautify.h in Headers */,
-				1DDB6B06174BB97E008A2A73 /* SCLabelRenderer.h in Headers */,
-				54ABF0E917A286EE0070B0B6 /* UINavigationBar+Beautify.h in Headers */,
-				1DDB6B07174BB97E008A2A73 /* SCSwitchRenderer.h in Headers */,
-				1DDB6B08174BB97E008A2A73 /* SCButtonRenderer.h in Headers */,
-				70907E6E1797E6F600F83417 /* SCImageViewStyle.h in Headers */,
-				1DE9D308174F7F780070AFD3 /* SCViewControllerRenderer.h in Headers */,
-				1DDB6B09174BB97E008A2A73 /* SCStyleRenderer.h in Headers */,
-				1DDB6B0A174BB97E008A2A73 /* SCViewRenderer.h in Headers */,
-				1DDB6B0B174BB97E008A2A73 /* SCBorder.h in Headers */,
-				1DDB6B0C174BB97E008A2A73 /* SCFont.h in Headers */,
-				1DDB6B0D174BB97E008A2A73 /* SCGradient.h in Headers */,
-				1DDB6B0E174BB97E008A2A73 /* SCGradientStop.h in Headers */,
-				1DDB6B0F174BB97E008A2A73 /* SCNineBoxedImage.h in Headers */,
-				1DDB6B10174BB97E008A2A73 /* SCShadow.h in Headers */,
-				1DDB6B11174BB97E008A2A73 /* SCBeautify.h in Headers */,
-				1DDB6B13174BB9B8008A2A73 /* NSObject+Properties.h in Headers */,
-				1DDB6B14174BB9B8008A2A73 /* UIColor+HexColors.h in Headers */,
-				1DDB6B15174BB9B8008A2A73 /* SCConfigParser.h in Headers */,
-				1DDB6B17174BB9B8008A2A73 /* SCSwitchBorderLayer.h in Headers */,
-				1DDB6B19174BB9B8008A2A73 /* SCSwitchLayer.h in Headers */,
-				1DDB6B1A174BB9B8008A2A73 /* SCSwitchShadowLayer.h in Headers */,
-				1DDB6B1B174BB9B8008A2A73 /* SCSwitchToggleLayer.h in Headers */,
-				1DDB6B1E174BB9B8008A2A73 /* SCStyleLayer.h in Headers */,
-				1DDB6B1F174BB9B8008A2A73 /* SCStyleRenderer_Private.h in Headers */,
-				1DDB6B20174BB9B8008A2A73 /* SCViewRenderer_Private.h in Headers */,
-				1DDB6B21174BB9B8008A2A73 /* SCFont_Private.h in Headers */,
-				1DDB6B22174BB9B8008A2A73 /* SCNineBoxedImage_Private.h in Headers */,
-				1DDB6B23174BB9B8008A2A73 /* SCButtonStyle.h in Headers */,
-				1DDB6B24174BB9B8008A2A73 /* SCLabelStyle.h in Headers */,
-				1DDB6B25174BB9B8008A2A73 /* SCStyleCustomizer.h in Headers */,
-				1DDB6B26174BB9B8008A2A73 /* SCSwitchStyle.h in Headers */,
-				1DDB6B27174BB9B8008A2A73 /* SCViewStyle.h in Headers */,
-				1DDB6B28174BB9B8008A2A73 /* SCStyle.h in Headers */,
-				70397B9017DF33190095001B /* SCBarButtonStyle.h in Headers */,
-				1DDB6B29174BB9B8008A2A73 /* SCStateSetter.h in Headers */,
-				1DDB6B2A174BB9B8008A2A73 /* SCStyleProtocol.h in Headers */,
-				1DDB6B2B174BB9B8008A2A73 /* SCStyleSetterCustomizer.h in Headers */,
-				1DDB6B2C174BB9B8008A2A73 /* SCTheme.h in Headers */,
-				1DDB6B2D174BB9B8008A2A73 /* UIView+BeautifyPrivate.h in Headers */,
-				70C211B717DF01DB00CA110B /* TableVisualTestViewController.h in Headers */,
-				1DDB6B2E174BB9B8008A2A73 /* UIView+Utilities.h in Headers */,
-				1DDB6B2F174BB9B8008A2A73 /* SCBeautify_Private.h in Headers */,
-				1DE9D289174E6D890070AFD3 /* SCText.h in Headers */,
-				1DE9D2EB174F7BA50070AFD3 /* UIViewController+Beautify.h in Headers */,
-				54A995B8179FD29C00B9B17C /* SCShadowImage.h in Headers */,
-				1DE9D2F9174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.h in Headers */,
-				1DE9D300174F7F540070AFD3 /* SCViewControllerStyle.h in Headers */,
-				72FDEDA017565755002F1093 /* SCTextFieldRenderer.h in Headers */,
-				727A862917575C3D00F6C6D9 /* SCTextFieldStyle.h in Headers */,
-				727A862D17575C5200F6C6D9 /* SCSwitchState.h in Headers */,
-				727A862F17575C5700F6C6D9 /* SCTextShadow.h in Headers */,
-				7009050E178C0EB600D7BEF4 /* SCVersionUtils.h in Headers */,
-				7205345D1757A000000A27C0 /* SCNavigationBarStyle.h in Headers */,
-				72AE98D5175BB94800787272 /* SCTableViewCellRenderer.h in Headers */,
-				72AE98DC175BBA7E00787272 /* SCTableViewCellStyle.h in Headers */,
-				72F07946175C941100FC27DB /* SCControlRenderingLayer.h in Headers */,
-				72F07958175C9F9600FC27DB /* UITableViewCell+Beautify.h in Headers */,
-				72F0795D175CCC2F00FC27DB /* SCDelegateMultiplexer.h in Headers */,
-				54D7FD7717B8EA590004F952 /* SCBarButtonItemRenderer.h in Headers */,
-				72F079801761F11000FC27DB /* Beautify.h in Headers */,
-				72F079821761F2C500FC27DB /* SCControlRenderer.h in Headers */,
-				72F079841761F34500FC27DB /* SCNavigationBarRenderer.h in Headers */,
-				70F61B8717831AE100DCA906 /* SCRenderUtils.h in Headers */,
-				543570EB17BE313E007FA7CE /* UIBarButtonItem+Beautify.h in Headers */,
-				547C32D217C4C1EE009D6289 /* SCSliderStyle.h in Headers */,
-				547C32D917C4C24B009D6289 /* SCSliderBarBorderLayer.h in Headers */,
-				54DDE25F17C655930081E1AD /* SCSliderBackgroundLayer.h in Headers */,
-				544975CE17D8B953003D7115 /* SCKnobLayer.h in Headers */,
-				54DDE26D17C65D1B0081E1AD /* SCSliderMaximumTrackLayer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1301,27 +1057,6 @@
 			name = Beautify;
 			productName = Beautify;
 			productReference = 1D46460617466915003840E4 /* Beautify.framework */;
-			productType = "com.apple.product-type.bundle";
-		};
-		1DDB6AD6174BB8DB008A2A73 /* Beautify Release */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1DDB6ADF174BB8DC008A2A73 /* Build configuration list for PBXNativeTarget "Beautify Release" */;
-			buildPhases = (
-				1DDB6ACF174BB8DB008A2A73 /* ShellScript */,
-				1DDB6AD0174BB8DB008A2A73 /* Sources */,
-				1DDB6AD1174BB8DB008A2A73 /* Frameworks */,
-				1DDB6AD2174BB8DB008A2A73 /* Headers */,
-				1DDB6AD3174BB8DB008A2A73 /* Resources */,
-				1DDB6AD4174BB8DB008A2A73 /* ShellScript */,
-				1DDB6AD5174BB8DB008A2A73 /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Beautify Release";
-			productName = "Beautify Release";
-			productReference = 1DDB6AD7174BB8DB008A2A73 /* Beautify Release.framework */;
 			productType = "com.apple.product-type.bundle";
 		};
 		700F292416F3711300E85ED3 /* VisualTest */ = {
@@ -1388,7 +1123,6 @@
 			targets = (
 				700F292416F3711300E85ED3 /* VisualTest */,
 				1D46460517466915003840E4 /* Beautify */,
-				1DDB6AD6174BB8DB008A2A73 /* Beautify Release */,
 				70FE246217E0B385009A7113 /* Beautify Tests */,
 			);
 		};
@@ -1400,17 +1134,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				543570F817BE32DB007FA7CE /* InfoPlist.strings in Resources */,
-				5435710117BE32F1007FA7CE /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1DDB6AD3174BB8DB008A2A73 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				543570F217BE32C3007FA7CE /* Beautify-Info.plist in Resources */,
-				543570F917BE32DB007FA7CE /* InfoPlist.strings in Resources */,
-				5435710217BE32F1007FA7CE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1425,8 +1148,6 @@
 				700F293B16F3711300E85ED3 /* Default-568h@2x.png in Resources */,
 				543570F017BE32C3007FA7CE /* Beautify-Info.plist in Resources */,
 				543570F717BE32DB007FA7CE /* InfoPlist.strings in Resources */,
-				543570FB17BE32E4007FA7CE /* Beautify Release-Info.plist in Resources */,
-				5435710017BE32F1007FA7CE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1483,45 +1204,6 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Make sure the other platform gets built\n\necho \"Build other platform\"\n\necho xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n\n\n# Build the fat static library binary\n\necho \"Create universal static library\"\n\necho \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\necho mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nmv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n\n\n# Build framework structure\n\necho \"Build symlinks\"\n\necho ln -sfh $FRAMEWORK_VERSION \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\nln -sfh $FRAMEWORK_VERSION \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\necho ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\necho ln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\nln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\necho ln -sfh \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\nln -sfh \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\n\n\n# Link to binary for unit tests\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework\"\nln -sfh \"../${WRAPPER_NAME}/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework/.fake_fw_testing\"\n\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\n    if [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\n    then\n        echo ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n        ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\n    fi\ndone\n\n\n# Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n\necho \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n\necho rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nrm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\necho cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\ncp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n";
 		};
-		1DDB6ACF174BB8DB008A2A73 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave script to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n";
-		};
-		1DDB6AD4174BB8DB008A2A73 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "HEADERS_ROOT=$SRCROOT/$PRODUCT_NAME\nFRAMEWORK_HEADERS_DIR=\"$BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Versions/$FRAMEWORK_VERSION/Headers\"\n\n## only header files expected at this point\nPUBLIC_HEADERS=$(find $FRAMEWORK_HEADERS_DIR/. -not -type d 2> /dev/null | sed -e \"s@.*/@@g\")\n\nFIND_OPTS=\"\"\nfor PUBLIC_HEADER in $PUBLIC_HEADERS; do\n  if [ -n \"$FIND_OPTS\" ]; then\n    FIND_OPTS=\"$FIND_OPTS -o\"\n  fi\n  FIND_OPTS=\"$FIND_OPTS -name '$PUBLIC_HEADER'\"\ndone\n\nif [ -n \"$FIND_OPTS\" ]; then\n  for ORIG_HEADER in $(eval \"find $HEADERS_ROOT/. $FIND_OPTS\" 2> /dev/null | sed -e \"s@^$HEADERS_ROOT/./@@g\"); do\n    PUBLIC_HEADER=$(basename $ORIG_HEADER)\n    RELATIVE_PATH=$(dirname $ORIG_HEADER)\n    if [ -e $FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER ]; then\n      mkdir -p \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH\"\n      mv \"$FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER\" \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH/$PUBLIC_HEADER\"\n    fi\n  done\nfi\n";
-		};
-		1DDB6AD5174BB8DB008A2A73 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n# Nothing for the slave script to do\nexit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n    eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\necho \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\nexit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nUFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nUFW_OTHER_PLATFORM=iphonesimulator\nelse\nUFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\nUFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\necho \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun script.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\nexit 0\nfi\n\n\n# Make sure the other platform gets built\n\necho \"Build other platform\"\n\necho xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n\n\n# Build the fat static library binary\n\necho \"Create universal static library\"\n\necho \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\necho mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nmv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n\n\n# Build framework structure\n\necho \"Build symlinks\"\n\necho ln -sfh $FRAMEWORK_VERSION \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\nln -sfh $FRAMEWORK_VERSION \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\necho ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\necho ln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\nln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\necho ln -sfh \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\nln -sfh \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\n\n\n# Link to binary for unit tests\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework\"\nln -sfh \"../${WRAPPER_NAME}/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/.fake_fw_testing.framework/.fake_fw_testing\"\n\n\n# Build embedded framework structure\n\necho \"Build Embedded Framework\"\n\necho rm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\necho mkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\nmkdir -p \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources\"\necho cp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\ncp -a \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/\"\n\ndeclare -a UFW_FILE_LIST\nlist_files \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}\" UFW_FILE_LIST\nfor filename in \"${UFW_FILE_LIST[@]}\"\ndo\nif [[ \"${filename}\" != \"Info.plist\" ]] && [[ ! \"${filename}\" =~ .*\\.lproj$ ]]\nthen\necho ln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\nln -sfh \"../${WRAPPER_NAME}/Resources/${filename}\" \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/Resources/${filename}\"\nfi\ndone\n\n\n# Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n\necho \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n\necho rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nrm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\necho cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\ncp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1554,6 +1236,7 @@
 				7047011517E1C11100FEA5F5 /* SCImageViewRenderer.m in Sources */,
 				1D46462817466942003840E4 /* SCShadow.m in Sources */,
 				7047011B17E1C13200FEA5F5 /* SCSliderRenderer.m in Sources */,
+				700EE92817E202C400164EA1 /* SCConfigParser.m in Sources */,
 				1D46462917466942003840E4 /* SCButtonStyle.m in Sources */,
 				1D46462A17466942003840E4 /* SCLabelStyle.m in Sources */,
 				1D46462B17466942003840E4 /* SCStyleCustomizer.m in Sources */,
@@ -1607,78 +1290,6 @@
 				547C32D417C4C1EE009D6289 /* SCSliderStyle.m in Sources */,
 				54DDE26117C655930081E1AD /* SCSliderBackgroundLayer.m in Sources */,
 				54DDE26F17C65D1B0081E1AD /* SCSliderMaximumTrackLayer.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1DDB6AD0174BB8DB008A2A73 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1DDB6AE2174BB94C008A2A73 /* NSObject+Properties.m in Sources */,
-				1DDB6AE3174BB94C008A2A73 /* UIColor+HexColors.m in Sources */,
-				1DDB6AE5174BB94C008A2A73 /* SCLabelRenderer.m in Sources */,
-				1DDB6AE7174BB94C008A2A73 /* SCSwitchBorderLayer.m in Sources */,
-				1DDB6AE9174BB94C008A2A73 /* SCSwitchLayer.m in Sources */,
-				1DDB6AEA174BB94C008A2A73 /* SCSwitchRenderer.m in Sources */,
-				1DDB6AEB174BB94C008A2A73 /* SCSwitchShadowLayer.m in Sources */,
-				54A995BB179FD29C00B9B17C /* SCShadowImage.m in Sources */,
-				1DDB6AEC174BB94C008A2A73 /* SCSwitchToggleLayer.m in Sources */,
-				1DDB6AEE174BB94C008A2A73 /* SCButtonRenderer.m in Sources */,
-				1DDB6AEF174BB94C008A2A73 /* SCStyleLayer.m in Sources */,
-				1DDB6AF0174BB94C008A2A73 /* SCStyleRenderer.m in Sources */,
-				1DDB6AF1174BB94C008A2A73 /* SCViewRenderer.m in Sources */,
-				1DDB6AF2174BB94C008A2A73 /* SCBorder.m in Sources */,
-				1DDB6AF3174BB94C008A2A73 /* SCFont.m in Sources */,
-				54ABF0EA17A286F20070B0B6 /* UINavigationBar+Beautify.m in Sources */,
-				7047013017E1C3FA00FEA5F5 /* SCSliderLayer.m in Sources */,
-				1DDB6AF4174BB94C008A2A73 /* SCGradient.m in Sources */,
-				1DDB6AF5174BB94C008A2A73 /* SCGradientStop.m in Sources */,
-				1DDB6AF6174BB94C008A2A73 /* SCNineBoxedImage.m in Sources */,
-				1DDB6AF7174BB94C008A2A73 /* SCShadow.m in Sources */,
-				1DDB6AF8174BB94C008A2A73 /* SCButtonStyle.m in Sources */,
-				1DDB6AF9174BB94C008A2A73 /* SCLabelStyle.m in Sources */,
-				544975D117D8B953003D7115 /* SCKnobLayer.m in Sources */,
-				1DDB6AFA174BB94C008A2A73 /* SCStyleCustomizer.m in Sources */,
-				1DDB6AFB174BB94C008A2A73 /* SCSwitchStyle.m in Sources */,
-				1DDB6AFC174BB94C008A2A73 /* SCViewStyle.m in Sources */,
-				1DDB6AFD174BB94C008A2A73 /* SCStyle.m in Sources */,
-				1DDB6AFE174BB94C008A2A73 /* SCStateSetter.m in Sources */,
-				1DDB6AFF174BB94C008A2A73 /* SCStyleSetterCustomizer.m in Sources */,
-				1DDB6B00174BB94C008A2A73 /* SCTheme.m in Sources */,
-				1DDB6B01174BB94C008A2A73 /* UIView+Beautify.m in Sources */,
-				1DDB6B02174BB94C008A2A73 /* UIView+BeautifyPrivate.m in Sources */,
-				70C211BA17DF01DB00CA110B /* TableVisualTestViewController.m in Sources */,
-				54D7FD7A17B8EA590004F952 /* SCBarButtonItemRenderer.m in Sources */,
-				1DDB6B03174BB94C008A2A73 /* UIView+Utilities.m in Sources */,
-				1DDB6B04174BB94C008A2A73 /* SCBeautify.m in Sources */,
-				1DDB6B05174BB94C008A2A73 /* SCThemeManager.m in Sources */,
-				1DE9D28B174E6D890070AFD3 /* SCText.m in Sources */,
-				1DE9D2EE174F7BA50070AFD3 /* UIViewController+Beautify.m in Sources */,
-				1DE9D2FC174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m in Sources */,
-				1DE9D303174F7F540070AFD3 /* SCViewControllerStyle.m in Sources */,
-				1DE9D30B174F7F780070AFD3 /* SCViewControllerRenderer.m in Sources */,
-				7276DDB11756394A004CC446 /* SCSwitchState.m in Sources */,
-				72FDED9C1756574A002F1093 /* SCGradientLayer.m in Sources */,
-				72FDED9E1756574E002F1093 /* SCTextFieldRenderer.m in Sources */,
-				727A862B17575C4700F6C6D9 /* SCTextShadow.m in Sources */,
-				727A863117575CA000F6C6D9 /* SCControlRenderer.m in Sources */,
-				727A863317575CAE00F6C6D9 /* SCTextFieldStyle.m in Sources */,
-				727A863517575D1400F6C6D9 /* NSDictionary+Utilities.m in Sources */,
-				727A863717575D1800F6C6D9 /* UITextField+Beautify.m in Sources */,
-				720534601757A000000A27C0 /* SCNavigationBarStyle.m in Sources */,
-				720534621758EC04000A27C0 /* SCNavigationBarRenderer.m in Sources */,
-				72AE98D8175BB94800787272 /* SCTableViewCellRenderer.m in Sources */,
-				72AE98DF175BBA7E00787272 /* SCTableViewCellStyle.m in Sources */,
-				72F07949175C941100FC27DB /* SCControlRenderingLayer.m in Sources */,
-				70907E711797E6F600F83417 /* SCImageViewStyle.m in Sources */,
-				72F07957175C9F2900FC27DB /* UITableViewCell+Beautify.m in Sources */,
-				72F07960175CCC2F00FC27DB /* SCDelegateMultiplexer.m in Sources */,
-				70F61B8A17831AE100DCA906 /* SCRenderUtils.m in Sources */,
-				543570E817BE312C007FA7CE /* UIBarButtonItem+Beautify.m in Sources */,
-				547C32D517C4C1EE009D6289 /* SCSliderStyle.m in Sources */,
-				70397B9317DF33190095001B /* SCBarButtonStyle.m in Sources */,
-				54DDE26217C655930081E1AD /* SCSliderBackgroundLayer.m in Sources */,
-				54DDE27017C65D1B0081E1AD /* SCSliderMaximumTrackLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1799,14 +1410,6 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		543570FE17BE32F1007FA7CE /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				543570FF17BE32F1007FA7CE /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		70FE246C17E0B385009A7113 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1858,50 +1461,6 @@
 				MACH_O_TYPE = mh_object;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = NO;
-				SKIP_INSTALL = YES;
-				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Release;
-		};
-		1DDB6AE0174BB8DC008A2A73 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
-				DEAD_CODE_STRIPPING = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Beautify/Beautify-Prefix.pch";
-				INFOPLIST_FILE = "Beautify Release/Beautify Release-Info.plist";
-				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				LINK_WITH_STANDARD_LIBRARIES = NO;
-				MACH_O_TYPE = mh_object;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Debug;
-		};
-		1DDB6AE1174BB8DC008A2A73 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
-				DEAD_CODE_STRIPPING = NO;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Beautify/Beautify-Prefix.pch";
-				INFOPLIST_FILE = "Beautify Release/Beautify Release-Info.plist";
-				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				LINK_WITH_STANDARD_LIBRARIES = NO;
-				MACH_O_TYPE = mh_object;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
 				WRAPPER_EXTENSION = framework;
@@ -2067,15 +1626,6 @@
 			buildConfigurations = (
 				1D46460F17466915003840E4 /* Debug */,
 				1D46461017466915003840E4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1DDB6ADF174BB8DC008A2A73 /* Build configuration list for PBXNativeTarget "Beautify Release" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1DDB6AE0174BB8DC008A2A73 /* Debug */,
-				1DDB6AE1174BB8DC008A2A73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

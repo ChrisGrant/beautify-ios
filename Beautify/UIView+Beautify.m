@@ -25,7 +25,10 @@
 }
 
 -(BOOL)isImmuneToBeautify{
-    return [super isImmuneToBeautify];
+    if([super respondsToSelector:@selector(isImmuneToBeautify)]) {
+        return [super isImmuneToBeautify];
+    }
+    return YES;
 }
 
 -(void)setImmuneToBeautify:(BOOL)immuneToBeautify{

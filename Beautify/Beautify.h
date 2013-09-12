@@ -27,6 +27,7 @@
 #import "SCViewControllerRenderer.h"
 
 #import "SCBeautify.h"
+#import "SCThemeManager.h"
 
 #import "UIView+Beautify.h"
 #import "UIViewController+Beautify.h"
