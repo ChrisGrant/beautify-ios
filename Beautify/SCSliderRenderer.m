@@ -31,7 +31,7 @@
     SCSliderMinimumTrackLayer *_minimumTrackLayer;
     SCSliderMaximumTrackLayer *_maximumTrackLayer;
     SCKnobLayer *_knobLayer;
-        
+    
     // User interaction flags
     BOOL _tapped;
     BOOL _panning;
@@ -55,7 +55,7 @@
             _sliderThickness = 3;
             _knobSize = 30;
         }
-        else{
+        else {
             _sliderThickness = 10;
             _knobSize = 24;
         }
@@ -68,18 +68,16 @@
 }
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    
     if ([keyPath isEqualToString:@"frame"] || [keyPath isEqualToString:@"bounds"]) {
         [self redraw];
     }
-    
     if ([keyPath isEqualToString:@"value"]) {
         [self updateLayerLocations];
     }
 }
 
 -(UISlider*)adaptedSlider {
-    return (UISlider*)[self adaptedView];
+    return [self adaptedView];
 }
 
 -(void)setup:(UISlider*)slider {
@@ -91,7 +89,7 @@
     slider.clipsToBounds = NO;
     
     CGRect bounds  = [self sliderBarSizeWithBounds:[self adaptedSlider].bounds andThickness:_sliderThickness];
-        
+    
     // create the background layer
     _backgroundLayer = [[SCSliderBackgroundLayer alloc] initWithRenderer:self];
     _backgroundLayer.masksToBounds = NO;
@@ -129,8 +127,8 @@
     // create the maximum track layer
     _maximumTrackLayer = [[SCSliderMaximumTrackLayer alloc] initWithRenderer:self];
     _maximumTrackLayer.frame = [self maximumTrackLayerFrame];
-    [_maximumTrackLayer setNeedsDisplay];   
-            
+    [_maximumTrackLayer setNeedsDisplay];
+    
     [_clipLayer addSublayer:_minimumTrackLayer];
     [_clipLayer addSublayer:_maximumTrackLayer];
     [slider.layer addSublayer:_clipLayer];
@@ -151,7 +149,7 @@
     
     // add the knob layer
     [slider.layer addSublayer:_knobLayer];
-     slider.layer.masksToBounds = NO;
+    slider.layer.masksToBounds = NO;
     
     // pan gesture for toggling the slider
 	UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panning:)];
@@ -165,8 +163,26 @@
     [slider addTarget:self action:@selector(touchUp) forControlEvents:UIControlEventValueChanged];
 }
 
--(CGRect)sliderBarSizeWithBounds:(CGRect)bounds andThickness:(float)size{
-    return CGRectInset(CGRectMake(bounds.origin.x, (bounds.size.height / 2) - (size / 2), bounds.size.width, size), WIDTH_PADDING, 0);
+// We should only begin a gesture if the touch started on top of the thumb
+-(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer*)gestureRecognizer {
+    if([gestureRecognizer isKindOfClass:[UIPanGestureRecognizer class]]) {
+        UIPanGestureRecognizer *panGestureRecognizer = (UIPanGestureRecognizer*)gestureRecognizer;
+        CGPoint touchTranslation = [panGestureRecognizer translationInView:self.adaptedView];
+        CGPoint currentTouchLoc = [gestureRecognizer locationOfTouch:0 inView:self.adaptedView];
+        
+        // Calculate the touch's start location based on the translation from the first touch and the current location.
+        CGPoint startLocation = CGPointMake(currentTouchLoc.x - touchTranslation.x, currentTouchLoc.y - touchTranslation.y);
+        
+        CGRect thumbFrame = CGRectInset([self knobFrame], -15, -15); // Add padding so touch doesn't have to be exact.
+        if(!CGRectContainsPoint(thumbFrame, startLocation)) {
+            return NO;
+        }
+    }
+    return YES;
+}
+
+-(CGRect)sliderBarSizeWithBounds:(CGRect)bounds andThickness:(float)thickness{
+    return CGRectInset(CGRectMake(bounds.origin.x, (bounds.size.height / 2) - (thickness / 2), bounds.size.width, thickness), WIDTH_PADDING, 0);
 }
 
 -(void)updateLayerLocations {
@@ -176,46 +192,44 @@
 }
 
 -(CGRect)knobFrame{
-    CGRect bounds = [self adaptedSlider].bounds;
+    UISlider *slider = [self adaptedSlider];
+    CGRect bounds = slider.bounds;
     float xOrigin = bounds.origin.x + bounds.size.height / 2;
     float yOrigin = bounds.origin.y + bounds.size.height / 2;
     
     // compute the centre point of the knob
     CGPoint knobCentrePoint = CGPointMake(xOrigin, yOrigin);
-            
+    
     knobCentrePoint.x += _panLocation.x;
     
     // limit the x range
-    if (knobCentrePoint.x <= [self adaptedSlider].bounds.origin.x + _knobSize) {
-        knobCentrePoint.x = [self adaptedSlider].bounds.origin.x + _knobSize;
-    } else if (knobCentrePoint.x >= [self adaptedSlider].bounds.size.width) {
-        knobCentrePoint.x = [self adaptedSlider].bounds.size.width;
+    if (knobCentrePoint.x <= slider.bounds.origin.x + _knobSize) {
+        knobCentrePoint.x = slider.bounds.origin.x + _knobSize;
+    }
+    else if (knobCentrePoint.x >= slider.bounds.size.width) {
+        knobCentrePoint.x = slider.bounds.size.width;
     }
     
-    [[self adaptedSlider] setValue: [(UISlider*)[self adaptedSlider] maximumValue] * ((knobCentrePoint.x - _knobSize) / ([self adaptedSlider].bounds.size.width - _knobSize))];
+    [slider setValue:slider.maximumValue * ((knobCentrePoint.x - _knobSize) / (slider.bounds.size.width - _knobSize))];
     
-     // compute the overall frame
+    // compute the overall frame
     return CGRectMake(knobCentrePoint.x - _knobSize, knobCentrePoint.y - (_knobSize / 2), _knobSize, _knobSize);
 }
 
 -(CGRect)minimumTrackLayerFrame {
     CGRect bounds = [self adaptedSlider].bounds;
     CGRect knobLocation = [self knobFrame];
-    
     bounds.size.height = _sliderThickness;
     bounds.size.width = (knobLocation.origin.x + (knobLocation.size.width / 2));
-    
     return bounds;
 }
 
 -(CGRect)maximumTrackLayerFrame {
     CGRect bounds = [self adaptedSlider].bounds;
     CGRect knobLocation = [self knobFrame];
-    
     bounds.size.height = _sliderThickness;
     bounds.origin.x = (knobLocation.origin.x + (knobLocation.size.width / 2));
     bounds.size.width = bounds.size.width - _minimumTrackLayer.bounds.size.width;
-    
     return bounds;
 }
 
@@ -224,7 +238,7 @@
 // updates the bounds of the various layers in response to the overall slider frame being changed
 -(void)redraw {
     [CATransaction begin];
-        
+    
     if (_tapped) {
         _tapped = NO;
     }
@@ -246,9 +260,10 @@
     _barBorderLayer.frame = bounds;
     _knobLayer.frame = [self knobFrame];
     
-    _clipLayerShape.path = [SCSwitchBorderLayer borderPathForBounds:_barBorderLayer.bounds andBorder:[self propertyValueForNameWithCurrentState:@"barBorder"]].CGPath;
+    _clipLayerShape.path = [SCSwitchBorderLayer borderPathForBounds:_barBorderLayer.bounds
+                                                          andBorder:[self propertyValueForNameWithCurrentState:@"barBorder"]].CGPath;
     [_backgroundLayer setNeedsDisplay];
-    [_barShadowLayer setNeedsDisplay];    
+    [_barShadowLayer setNeedsDisplay];
     [_minimumTrackLayer setNeedsDisplay];
     [_maximumTrackLayer setNeedsDisplay];
     [_clipLayerShape setNeedsDisplay];
@@ -275,21 +290,18 @@
 #pragma mark - User interaction handling
 
 -(void)panning:(UIPanGestureRecognizer*)gesture {
-    
-    // get the current location
     _panLocation = [gesture locationInView:self.adaptedSlider];
     
-//    if (gesture.state == UIGestureRecognizerStateBegan) {
+    if (gesture.state == UIGestureRecognizerStateBegan) {
         _panning = YES;
-//    } else if (gesture.state == UIGestureRecognizerStateEnded) {
+    }
+    else if (gesture.state == UIGestureRecognizerStateEnded) {
         _panning = NO;
         _panEnding = YES;
+    }
     
-        _knobLayer.frame = [self knobFrame];
-           
-        [[self adaptedSlider] sendActionsForControlEvents:UIControlEventValueChanged];
-           
-        [self updateLayerLocations];
+    [[self adaptedSlider] sendActionsForControlEvents:UIControlEventValueChanged];
+    [self updateLayerLocations];
 }
 
 -(void)touchDown {
