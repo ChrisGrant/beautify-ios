@@ -145,6 +145,9 @@
 		54DDE26E17C65D1B0081E1AD /* SCSliderMaximumTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE26B17C65D1B0081E1AD /* SCSliderMaximumTrackLayer.m */; };
 		54DDE26F17C65D1B0081E1AD /* SCSliderMaximumTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE26B17C65D1B0081E1AD /* SCSliderMaximumTrackLayer.m */; };
 		7009050D178C0EB600D7BEF4 /* SCVersionUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7009050B178C0EB600D7BEF4 /* SCVersionUtils.h */; };
+		700E154417E30668006E124E /* ParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E154317E30668006E124E /* ParserTests.m */; };
+		700E154617E30691006E124E /* BeautifyColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E154517E30691006E124E /* BeautifyColorTests.m */; };
+		700E154717E30D0F006E124E /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52216F9AC8500D08DBB /* UIColor+HexColors.m */; };
 		700EE91D17E1FFAB00164EA1 /* SCThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6A42174BAA40008A2A73 /* SCThemeManager.h */; };
 		700EE92817E202C400164EA1 /* SCConfigParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194BD17E1B4FA008161D3 /* SCConfigParser.m */; };
 		700F292616F3711300E85ED3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72BF4B3416F3487A00A0C0E3 /* UIKit.framework */; };
@@ -374,6 +377,8 @@
 		54DDE26A17C65D1A0081E1AD /* SCSliderMaximumTrackLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCSliderMaximumTrackLayer.h; path = Beautify/SCSliderMaximumTrackLayer.h; sourceTree = SOURCE_ROOT; };
 		54DDE26B17C65D1B0081E1AD /* SCSliderMaximumTrackLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCSliderMaximumTrackLayer.m; path = Beautify/SCSliderMaximumTrackLayer.m; sourceTree = SOURCE_ROOT; };
 		7009050B178C0EB600D7BEF4 /* SCVersionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCVersionUtils.h; sourceTree = "<group>"; };
+		700E154317E30668006E124E /* ParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParserTests.m; sourceTree = "<group>"; };
+		700E154517E30691006E124E /* BeautifyColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeautifyColorTests.m; sourceTree = "<group>"; };
 		700F292516F3711300E85ED3 /* VisualTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisualTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		700F292C16F3711300E85ED3 /* VisualTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VisualTest-Info.plist"; sourceTree = "<group>"; };
 		700F293016F3711300E85ED3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -794,6 +799,8 @@
 			isa = PBXGroup;
 			children = (
 				70FE246F17E0B385009A7113 /* BeautifyTests.m */,
+				700E154317E30668006E124E /* ParserTests.m */,
+				700E154517E30691006E124E /* BeautifyColorTests.m */,
 				70FE246A17E0B385009A7113 /* Supporting Files */,
 			);
 			path = "Beautify Tests";
@@ -1387,7 +1394,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				700E154417E30668006E124E /* ParserTests.m in Sources */,
+				700E154717E30D0F006E124E /* UIColor+HexColors.m in Sources */,
 				70FE247017E0B385009A7113 /* BeautifyTests.m in Sources */,
+				700E154617E30691006E124E /* BeautifyColorTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1526,7 +1536,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Beautify Tests/Beautify Tests-Prefix.pch";
+				GCC_PREFIX_HEADER = "Beautify Tests/BeautifyTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1534,7 +1544,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "Beautify Tests/Beautify Tests-Info.plist";
+				INFOPLIST_FILE = "Beautify Tests/BeautifyTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
@@ -1558,11 +1568,11 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Beautify Tests/Beautify Tests-Prefix.pch";
+				GCC_PREFIX_HEADER = "Beautify Tests/BeautifyTests-Prefix.pch";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = "Beautify Tests/Beautify Tests-Info.plist";
+				INFOPLIST_FILE = "Beautify Tests/BeautifyTests-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = xctest;
