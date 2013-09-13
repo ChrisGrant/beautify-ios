@@ -129,9 +129,9 @@
 		547C32D317C4C1EE009D6289 /* SCSliderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C32D017C4C1EE009D6289 /* SCSliderStyle.m */; };
 		547C32D417C4C1EE009D6289 /* SCSliderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C32D017C4C1EE009D6289 /* SCSliderStyle.m */; };
 		547C32D817C4C24B009D6289 /* SCSliderBarBorderLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 547C32D617C4C24B009D6289 /* SCSliderBarBorderLayer.h */; };
-		54A995B7179FD29C00B9B17C /* SCShadowImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A995B5179FD29C00B9B17C /* SCShadowImage.h */; };
-		54A995B9179FD29C00B9B17C /* SCShadowImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* SCShadowImage.m */; };
-		54A995BA179FD29C00B9B17C /* SCShadowImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* SCShadowImage.m */; };
+		54A995B7179FD29C00B9B17C /* SCDropShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A995B5179FD29C00B9B17C /* SCDropShadow.h */; };
+		54A995B9179FD29C00B9B17C /* SCDropShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* SCDropShadow.m */; };
+		54A995BA179FD29C00B9B17C /* SCDropShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* SCDropShadow.m */; };
 		54ABF0E817A286EE0070B0B6 /* UINavigationBar+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 5480C1FC17A0127000F4007D /* UINavigationBar+Beautify.h */; };
 		54ABF0EB17A286F20070B0B6 /* UINavigationBar+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480C1FD17A0127000F4007D /* UINavigationBar+Beautify.m */; };
 		54ABF0EC17A287110070B0B6 /* UINavigationBar+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480C1FD17A0127000F4007D /* UINavigationBar+Beautify.m */; };
@@ -365,8 +365,8 @@
 		547C32D617C4C24B009D6289 /* SCSliderBarBorderLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCSliderBarBorderLayer.h; path = Beautify/SCSliderBarBorderLayer.h; sourceTree = SOURCE_ROOT; };
 		5480C1FC17A0127000F4007D /* UINavigationBar+Beautify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = "UINavigationBar+Beautify.h"; path = "Beautify/UINavigationBar+Beautify.h"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5480C1FD17A0127000F4007D /* UINavigationBar+Beautify.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = "UINavigationBar+Beautify.m"; path = "Beautify/UINavigationBar+Beautify.m"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		54A995B5179FD29C00B9B17C /* SCShadowImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCShadowImage.h; sourceTree = "<group>"; };
-		54A995B6179FD29C00B9B17C /* SCShadowImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCShadowImage.m; sourceTree = "<group>"; };
+		54A995B5179FD29C00B9B17C /* SCDropShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCDropShadow.h; sourceTree = "<group>"; };
+		54A995B6179FD29C00B9B17C /* SCDropShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCDropShadow.m; sourceTree = "<group>"; };
 		54D7FD7417B8EA590004F952 /* SCBarButtonItemRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCBarButtonItemRenderer.h; path = Beautify/SCBarButtonItemRenderer.h; sourceTree = SOURCE_ROOT; };
 		54D7FD7517B8EA590004F952 /* SCBarButtonItemRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCBarButtonItemRenderer.m; path = Beautify/SCBarButtonItemRenderer.m; sourceTree = SOURCE_ROOT; };
 		54DDE25C17C655920081E1AD /* SCSliderBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCSliderBackgroundLayer.h; path = Beautify/SCSliderBackgroundLayer.h; sourceTree = SOURCE_ROOT; };
@@ -605,8 +605,8 @@
 				72D7105317548DAE00635F21 /* SCSwitchState.m */,
 				727A86241757453800F6C6D9 /* SCTextShadow.h */,
 				727A86251757453800F6C6D9 /* SCTextShadow.m */,
-				54A995B5179FD29C00B9B17C /* SCShadowImage.h */,
-				54A995B6179FD29C00B9B17C /* SCShadowImage.m */,
+				54A995B5179FD29C00B9B17C /* SCDropShadow.h */,
+				54A995B6179FD29C00B9B17C /* SCDropShadow.m */,
 			);
 			name = Properties;
 			sourceTree = "<group>";
@@ -988,7 +988,7 @@
 				1D46466A174669D7003840E4 /* SCTheme.h in Headers */,
 				1D46466B174669D7003840E4 /* UIView+Utilities.h in Headers */,
 				54ABF0E817A286EE0070B0B6 /* UINavigationBar+Beautify.h in Headers */,
-				54A995B7179FD29C00B9B17C /* SCShadowImage.h in Headers */,
+				54A995B7179FD29C00B9B17C /* SCDropShadow.h in Headers */,
 				7047010517E1C06B00FEA5F5 /* NSObject+Beautify.h in Headers */,
 				70C211B617DF01DB00CA110B /* TableVisualTestViewController.h in Headers */,
 				702194CE17E1BC2E008161D3 /* SCTableViewCellLabelRenderer.h in Headers */,
@@ -1213,7 +1213,7 @@
 			files = (
 				1D46461317466942003840E4 /* NSObject+Properties.m in Sources */,
 				1D46461417466942003840E4 /* UIColor+HexColors.m in Sources */,
-				54A995BA179FD29C00B9B17C /* SCShadowImage.m in Sources */,
+				54A995BA179FD29C00B9B17C /* SCDropShadow.m in Sources */,
 				1D46461617466942003840E4 /* SCLabelRenderer.m in Sources */,
 				1D46461817466942003840E4 /* SCSwitchBorderLayer.m in Sources */,
 				70907E701797E6F600F83417 /* SCImageViewStyle.m in Sources */,
@@ -1368,7 +1368,7 @@
 				7205345917579C61000A27C0 /* SCNavigationBarRenderer.m in Sources */,
 				7205345E1757A000000A27C0 /* SCNavigationBarStyle.m in Sources */,
 				72AE98D6175BB94800787272 /* SCTableViewCellRenderer.m in Sources */,
-				54A995B9179FD29C00B9B17C /* SCShadowImage.m in Sources */,
+				54A995B9179FD29C00B9B17C /* SCDropShadow.m in Sources */,
 				70E19557178462B20096E458 /* VisualTestViewController.m in Sources */,
 				72AE98DD175BBA7E00787272 /* SCTableViewCellStyle.m in Sources */,
 				72F07947175C941100FC27DB /* SCControlRenderingLayer.m in Sources */,

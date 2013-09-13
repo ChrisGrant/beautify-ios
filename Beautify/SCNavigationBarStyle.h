@@ -10,7 +10,7 @@
 #import "SCViewStyle.h"
 #import "SCFont.h"
 #import "SCText.h"
-#import "SCShadowImage.h"
+#import "SCDropShadow.h"
 #import "UIColor+HexColors.h"
 
 @class SCText, SCTextShadow, SCGradient;
@@ -23,7 +23,7 @@
 @property SCText *title;
 @property SCTextShadow* titleShadow;
 
-@property SCShadowImage *shadowImage;
+@property SCDropShadow *dropShadow;
 
 +(SCNavigationBarStyle*)defaultStyle;
 

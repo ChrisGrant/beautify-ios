@@ -279,8 +279,8 @@ static NSMutableArray* _objectStack;
         }
         value = newStateSetters;
     }
-    else if ([name isEqualToString:@"shadowImage"]) {
-        value = [self shadowImageFromDict:dict[name]];
+    else if ([name isEqualToString:@"dropShadow"]) {
+        value = [self dropShadowFromDict:dict[name]];
     }
     
     // handle other generic properties, typically string values
@@ -392,13 +392,13 @@ static NSMutableArray* _objectStack;
     return shadow;
 }
 
-+(SCShadowImage*)shadowImageFromDict:(NSDictionary *)shadowImageDict {
-    UIColor *color = [self colorFromDict:shadowImageDict key:@"color"];
-    float height = [shadowImageDict[@"height"] intValue];
++(SCDropShadow*)dropShadowFromDict:(NSDictionary *)dropShadowDict {
+    UIColor *color = [self colorFromDict:dropShadowDict key:@"color"];
+    float height = [dropShadowDict[@"height"] intValue];
     
-    SCShadowImage *shadowImage = [[SCShadowImage alloc] initWithColor:color andHeight:height];
+    SCDropShadow *dropShadow = [[SCDropShadow alloc] initWithColor:color andHeight:height];
     
-    return shadowImage;
+    return dropShadow;
 }
 
 +(UIColor*)colorFromDict:(NSDictionary*)dict key:(NSString*)key
