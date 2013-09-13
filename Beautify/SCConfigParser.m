@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Colin Eberhardt. All rights reserved.
 //
 
-#import "SCConfigParser.h"
+#import "SCConfigParser_Private.h"
 #import "SCButtonStyle.h"
 #import "SCSwitchStyle.h"
 #import "SCLabelStyle.h"
@@ -27,6 +27,7 @@
 #import "SCTableViewCellStyle.h"
 #import "SCImageViewStyle.h"
 #import "SCSliderStyle.h"
+
 
 // A 'stack' for generating useful errors when a property parse operation fails
 static NSMutableArray* _objectStack;
@@ -296,7 +297,7 @@ static NSMutableArray* _objectStack;
     return value;
 }
 
-#pragma mark - Property parsing
+#pragma mark - Beautify Property parsing
 
 +(SCTextShadow*)textShadowFromDict:(NSDictionary *)dict {
     SCTextShadow* shadow = [SCTextShadow new];
@@ -329,18 +330,6 @@ static NSMutableArray* _objectStack;
     state.backgroundColor = [self colorFromDict:setterDict key:@"backgroundColor"];
     state.textShadow = [self textShadowFromDict:[setterDict objectForKey:@"textShadow"]];
     return state;
-}
-
-+(UIControlState)stateFromString:(NSString*)stateString {
-    if ([stateString isEqualToString:@"highlighted"]) {
-        return UIControlStateHighlighted;
-    } else if ([stateString isEqualToString:@"disabled"]) {
-        return UIControlStateDisabled;
-    } else if ([stateString isEqualToString:@"selected"]) {
-        return UIControlStateSelected;
-    }
-    
-    return UIControlStateNormal;
 }
 
 +(NSArray*)shadowsFromArray:(NSArray*)shadowsArray isInner:(BOOL)isInner {
@@ -401,20 +390,6 @@ static NSMutableArray* _objectStack;
     return shadowImage;
 }
 
-+(UIColor*)colorFromDict:(NSDictionary*)dict key:(NSString*)key
-{
-    UIColor *color;
-    NSString* colorString = dict[key];
-    if (colorString != nil) {
-        color = [UIColor colorWithHexString:colorString];
-        if (color == nil) {
-            NSLog(@"Error: Could not parse UIColor from '%@' for %@", colorString,
-                  [self generateObjectStackTrace:@"color"]);
-        }
-    }
-    return color;
-}
-
 +(SCNineBoxedImage*)nineBoxedImageFromDict:(NSDictionary *)nineBoxedImageDict {
     SCNineBoxedImage *image = [SCNineBoxedImage new];
     
@@ -428,30 +403,17 @@ static NSMutableArray* _objectStack;
     return image;
 }
 
+#pragma mark Gradients
+
 +(SCGradient*)gradientFromDict:(NSDictionary *)gradientDict {
     SCGradient *gradient = [SCGradient new];
-    
     gradient.radial = [gradientDict boolForMandatoryKey:@"radial"];
     gradient.radialOffset = [self sizeFromDict:gradientDict[@"radialOffset"]];
     gradient.stops = [self colorGradientFromArray:[gradientDict objectForMandatoryKey:@"stops"]];
-    
     return gradient;
 }
 
 #pragma mark - Generic utilities
-
-+(NSArray*)colorGradientFromArray:(NSArray*)colorGradientArray {
-    NSMutableArray *colorGradient = [NSMutableArray new];
-    
-    for (NSDictionary *stopConfig in colorGradientArray) {
-        SCGradientStop *stop = [SCGradientStop new];
-        stop.stop = [stopConfig floatForMandatoryKey:@"position"];
-        stop.color = [self colorFromDict:stopConfig key:@"color"];
-        [colorGradient addObject:stop];
-    }
-    
-    return [NSArray arrayWithArray:colorGradient];
-}
 
 +(CGSize)sizeFromDict:(NSDictionary *)offsetDict {
     float x = 0;
@@ -472,14 +434,56 @@ static NSMutableArray* _objectStack;
     return CGSizeMake(x, y);
 }
 
-+(UIImage*)imageFromBase64String:(NSString *)dataStr {
-    dataStr = [dataStr substringFromIndex:22];
-    NSData *data = [self base64DataFromString:dataStr];
-    UIImage *image = [UIImage imageWithData:data];
++(UIControlState)stateFromString:(NSString*)stateString {
+    if ([[stateString lowercaseString] isEqualToString:@"highlighted"]) {
+        return UIControlStateHighlighted;
+    }
+    else if ([[stateString lowercaseString] isEqualToString:@"disabled"]) {
+        return UIControlStateDisabled;
+    }
+    else if ([[stateString lowercaseString] isEqualToString:@"selected"]) {
+        return UIControlStateSelected;
+    }
+    return UIControlStateNormal;
+}
+
++(UIColor*)colorFromDict:(NSDictionary*)dict key:(NSString*)key {
+    UIColor *color;
+    NSString* colorString = dict[key];
+    if (colorString) {
+        color = [UIColor colorWithHexString:colorString];
+        if (color == nil) {
+            NSLog(@"Error: Could not parse UIColor from '%@' for %@", colorString,
+                  [self generateObjectStackTrace:@"color"]);
+        }
+    }
+    return color;
+}
+
++(NSArray*)colorGradientFromArray:(NSArray*)colorGradientArray {
+    NSMutableArray *colorGradient = [NSMutableArray new];
+    for (NSDictionary *stopConfig in colorGradientArray) {
+        if([stopConfig.allKeys containsObject:@"position"] && [stopConfig.allKeys containsObject:@"color"]) {
+            SCGradientStop *stop = [SCGradientStop new];
+            stop.stop = [stopConfig floatForMandatoryKey:@"position"];
+            stop.color = [self colorFromDict:stopConfig key:@"color"];
+            [colorGradient addObject:stop];
+        }
+    }
+    return [NSArray arrayWithArray:colorGradient];
+}
+
++(UIImage*)imageFromBase64String:(NSString*)dataStr {
+    UIImage *image;
+    if(dataStr.length > 22) {
+        dataStr = [dataStr substringFromIndex:22];
+        NSData *data = [self base64DataFromString:dataStr];
+        image = [UIImage imageWithData:data];
+    }
     return image;
 }
 
-+(NSData *)base64DataFromString:(NSString *)string {
++(NSData*)base64DataFromString:(NSString*)string {
     unsigned long ixtext, lentext;
     unsigned char ch, inbuf[4], outbuf[3];
     short i, ixinbuf;

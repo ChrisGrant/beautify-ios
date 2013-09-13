@@ -8,33 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "UIColor+HexColors.h"
-
-@interface UIColor (Testing)
--(BOOL)isEqualToColor:(UIColor*)otherColor;
-@end
-
-@implementation UIColor (Testing)
-
--(BOOL)isEqualToColor:(UIColor*)otherColor {
-    CGColorSpaceRef colorSpaceRGB = CGColorSpaceCreateDeviceRGB();
-    
-    UIColor *(^convertColorToRGBSpace)(UIColor*) = ^(UIColor *color) {
-        if(CGColorSpaceGetModel(CGColorGetColorSpace(color.CGColor)) == kCGColorSpaceModelMonochrome) {
-            const CGFloat *oldComponents = CGColorGetComponents(color.CGColor);
-            CGFloat components[4] = {oldComponents[0], oldComponents[0], oldComponents[0], oldComponents[1]};
-            return [UIColor colorWithCGColor:CGColorCreate(colorSpaceRGB, components)];
-        } else
-            return color;
-    };
-    
-    UIColor *selfColor = convertColorToRGBSpace(self);
-    otherColor = convertColorToRGBSpace(otherColor);
-    CGColorSpaceRelease(colorSpaceRGB);
-    
-    return [selfColor isEqual:otherColor];
-}
-
-@end
+#import "UIColor+Comparison.h"
 
 @interface BeautifyColorTests : XCTestCase
 @end
