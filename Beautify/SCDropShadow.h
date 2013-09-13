@@ -1,5 +1,5 @@
 //
-//  SCShadowImage.h
+//  SCDropShadow.h
 //  Beautify
 //
 //  Created by Daniel Allsop on 24/07/2013.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SCShadowImage : NSObject
+@interface SCDropShadow : NSObject
 
 @property UIColor *color;
 

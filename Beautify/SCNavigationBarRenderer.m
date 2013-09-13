@@ -77,9 +77,9 @@
         
         navBar.titleTextAttributes = attributeDictionary;
         
-        if((_navBarBackground) && ([style shadowImage])){
+        if((_navBarBackground) && ([style dropShadow])){
             [navBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-            navBar.shadowImage = [self makeImageWithShadowImage:[style shadowImage]];
+            navBar.shadowImage = [self makeImageWithDropShadow:[style dropShadow]];
         }
         
         UIViewController *presentingController = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
@@ -104,10 +104,10 @@
     return [SCNavigationBarStyle defaultStyle];
 }
 
--(UIImage*)makeImageWithShadowImage:(SCShadowImage*)shadowImage{
+-(UIImage*)makeImageWithDropShadow:(SCDropShadow*)dropShadow{
     CALayer *myLayer = [CALayer layer];
-    myLayer.bounds = CGRectMake(0, 0, ((UINavigationBar*)self.adaptedView).bounds.size.width, shadowImage.height);
-    myLayer.backgroundColor = shadowImage.color.CGColor;
+    myLayer.bounds = CGRectMake(0, 0, ((UINavigationBar*)self.adaptedView).bounds.size.width, dropShadow.height);
+    myLayer.backgroundColor = dropShadow.color.CGColor;
     
     UIGraphicsBeginImageContext([myLayer frame].size);
     [myLayer renderInContext:UIGraphicsGetCurrentContext()];

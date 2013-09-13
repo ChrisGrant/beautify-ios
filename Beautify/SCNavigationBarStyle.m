@@ -21,7 +21,7 @@
     else {
         SCFont *font = [[SCFont alloc] initWithName:[UIFont boldSystemFontOfSize:1].fontName];
         style.title = [[SCText alloc] initWithFont:font color:[UIColor whiteColor]];
-        style.shadowImage = [[SCShadowImage alloc] initWithColor:[UIColor colorWithWhite:0.5 alpha:0.2] andHeight:1.0f];
+        style.dropShadow = [[SCDropShadow alloc] initWithColor:[UIColor colorWithWhite:0.5 alpha:0.2] andHeight:1.0f];
         
         SCGradient *g = [[SCGradient alloc] initWithStops:@[[[SCGradientStop alloc] initWithColor:[UIColor whiteColor] at:0.0],
                                                             [[SCGradientStop alloc] initWithColor:[UIColor colorWithRed:207.0f/255 green:217.0f/255 blue:230.0f/255 alpha:1.0] at:0.02],

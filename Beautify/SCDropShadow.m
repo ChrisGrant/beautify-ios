@@ -1,14 +1,14 @@
 //
-//  SCShadowImage.m
+//  SCDropShadow.m
 //  Beautify
 //
 //  Created by Daniel Allsop on 24/07/2013.
 //  Copyright (c) 2013 Colin Eberhardt. All rights reserved.
 //
 
-#import "SCShadowImage.h"
+#import "SCDropShadow.h"
 
-@implementation SCShadowImage
+@implementation SCDropShadow
 
 -(id)initWithColor:(UIColor*)color andHeight:(float)height{
     if (self = [super init]) {
