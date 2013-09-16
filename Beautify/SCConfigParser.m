@@ -28,7 +28,6 @@
 #import "SCImageViewStyle.h"
 #import "SCSliderStyle.h"
 
-
 // A 'stack' for generating useful errors when a property parse operation fails
 static NSMutableArray* _objectStack;
 

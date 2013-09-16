@@ -37,7 +37,7 @@
 @property SCBarButtonStyle *barButtonItemStyle;
 @property SCSliderStyle *sliderStyle;
 
-+(SCTheme*)default;
++(SCTheme*)defaultTheme;
 
 +(SCTheme*)fromFile:(NSString*)file;
 

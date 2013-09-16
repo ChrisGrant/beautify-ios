@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
 #import "SCConfigParser.h"
+
 @class SCStateSetter;
 @class SCShadow;
 @class SCShadowImage;
