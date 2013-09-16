@@ -9,12 +9,12 @@
 #import <objc/runtime.h>
 #import "UIView+Beautify.h"
 #import "UIView+BeautifyPrivate.h"
-#import "SCStyleRenderer.h"
+#import "BYStyleRenderer.h"
 #import "NSObject+Beautify.h"
 
 @implementation UIView (Beautify)
 
--(SCStyleRenderer*)renderer {
+-(BYStyleRenderer*)renderer {
     [self createRenderer];
     return objc_getAssociatedObject(self, @"renderer");
 }

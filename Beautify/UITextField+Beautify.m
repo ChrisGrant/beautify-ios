@@ -7,9 +7,9 @@
 //
 
 #import "UITextField+Beautify.h"
-#import "SCRenderUtils.h"
+#import "BYRenderUtils.h"
 #import <objc/runtime.h>
-#import "SCDelegateMultiplexer.h"
+#import "BYDelegateMultiplexer.h"
 
 @implementation UITextField (Beautify)
 
@@ -19,11 +19,11 @@
 }
 
 // get / lazy initialize the proxy
--(SCDelegateMultiplexer*)getDelegateProxy {
-    SCDelegateMultiplexer* proxy = (SCDelegateMultiplexer*)objc_getAssociatedObject(self, @"delegateProxy");
+-(BYDelegateMultiplexer*)getDelegateProxy {
+    BYDelegateMultiplexer* proxy = (BYDelegateMultiplexer*)objc_getAssociatedObject(self, @"delegateProxy");
     if (proxy == nil) {
         // create a new proxy
-        proxy = [SCDelegateMultiplexer new];
+        proxy = [BYDelegateMultiplexer new];
         // set the proxy as the delegate for the text field
         [self override_setDelegate:(id<UITextFieldDelegate>)proxy];
         objc_setAssociatedObject(self, @"delegateProxy", proxy, OBJC_ASSOCIATION_RETAIN);
@@ -33,7 +33,7 @@
 
 -(void)override_setDelegate:(id<UITextFieldDelegate>)delegate {
     // get the proxy
-    SCDelegateMultiplexer* proxy = [self getDelegateProxy];
+    BYDelegateMultiplexer* proxy = [self getDelegateProxy];
     // set as the delegate
     proxy.delegate = delegate;
 }

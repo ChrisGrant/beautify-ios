@@ -7,10 +7,10 @@
 //
 
 #import "UIBarButtonItem+Beautify.h"
-#import "SCStyleRenderer.h"
-#import "SCStyleRenderer_Private.h"
-#import "SCThemeManager.h"
-#import "SCThemeManager_Private.h"
+#import "BYStyleRenderer.h"
+#import "BYStyleRenderer_Private.h"
+#import "BYThemeManager.h"
+#import "BYThemeManager_Private.h"
 #import <objc/runtime.h>
 #import "UIView+Beautify.h"
 #import "UIView+BeautifyPrivate.h"
@@ -19,7 +19,7 @@
 
 @implementation UIBarButtonItem (Beautify)
 
--(SCStyleRenderer*)renderer {
+-(BYStyleRenderer*)renderer {
     [self createRenderer];
     return objc_getAssociatedObject(self, @"renderer");
 }
@@ -32,7 +32,7 @@
 -(void)createRenderer {
     // create a renderer for instances not marked as immune to Beautify
     if (!self.isImmuneToBeautify && objc_getAssociatedObject(self, @"renderer") == nil){// && [self valueForKey:@"view"] != nil) {
-        SCStyleRenderer* renderer = [[SCThemeManager instance] rendererForView:self];
+        BYStyleRenderer* renderer = [[BYThemeManager instance] rendererForView:self];
 
         if (renderer != nil) {
             objc_setAssociatedObject(self, @"renderer", renderer, OBJC_ASSOCIATION_RETAIN);
@@ -56,7 +56,7 @@
 
 -(void)themeUpdated:(NSNotification*)notification {
     if(!self.isImmuneToBeautify){
-        SCTheme *theme = notification.object;
+        BYTheme *theme = notification.object;
         [self.renderer setTheme:theme];
     }
 }

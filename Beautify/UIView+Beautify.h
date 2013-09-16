@@ -33,49 +33,49 @@
 
 /*
  The following categories are used to strongly type the renderer properties on each control. Without this you would have
- to cast the renderer to the appropriate type when using the framework, i.e. ((SCSwitchRenderer*)myswitch).style etc...
+ to cast the renderer to the appropriate type when using the framework, i.e. ((BYSwitchRenderer*)myswitch).style etc...
  */
-#import "SCSwitchRenderer.h"
+#import "BYSwitchRenderer.h"
 @interface UISwitch (BeautifyRendererTyping)
-@property (readonly) __weak SCSwitchRenderer *renderer;
+@property (readonly) __weak BYSwitchRenderer *renderer;
 @end
 
-#import "SCSliderRenderer.h"
+#import "BYSliderRenderer.h"
 @interface UISlider (BeautifyRendererTyping)
-@property (readonly) __weak SCSliderRenderer *renderer;
+@property (readonly) __weak BYSliderRenderer *renderer;
 @end
 
-#import "SCTableViewRenderer.h"
+#import "BYTableViewRenderer.h"
 @interface UITableView (BeautifyRendererTyping)
-@property (readonly) __weak SCTableViewRenderer *renderer;
+@property (readonly) __weak BYTableViewRenderer *renderer;
 @end
 
-#import "SCTableViewCellRenderer.h"
+#import "BYTableViewCellRenderer.h"
 @interface UITableViewCell (BeautifyRendererTyping)
-@property (readonly) __weak SCTableViewCellRenderer *renderer;
+@property (readonly) __weak BYTableViewCellRenderer *renderer;
 @end
 
-#import "SCNavigationBarRenderer.h"
+#import "BYNavigationBarRenderer.h"
 @interface UINavigationBar (BeautifyRendererTyping)
-@property (readonly) __weak SCNavigationBarRenderer *renderer;
+@property (readonly) __weak BYNavigationBarRenderer *renderer;
 @end
 
-#import "SCTextFieldRenderer.h"
+#import "BYTextFieldRenderer.h"
 @interface UITextField (BeautifyRendererTyping)
-@property (readonly) __weak SCTextFieldRenderer *renderer;
+@property (readonly) __weak BYTextFieldRenderer *renderer;
 @end
 
-#import "SCLabelRenderer.h"
+#import "BYLabelRenderer.h"
 @interface UILabel (BeautifyRendererTyping)
-@property (readonly) __weak SCLabelRenderer *renderer;
+@property (readonly) __weak BYLabelRenderer *renderer;
 @end
 
-#import "SCButtonRenderer.h"
+#import "BYButtonRenderer.h"
 @interface UIButton (BeautifyRendererTyping)
-@property (readonly) __weak SCButtonRenderer *renderer;
+@property (readonly) __weak BYButtonRenderer *renderer;
 @end
 
-#import "SCImageViewRenderer.h"
+#import "BYImageViewRenderer.h"
 @interface UIImageView (BeautifyRendererTyping)
-@property (readonly) __weak SCImageViewRenderer *renderer;
+@property (readonly) __weak BYImageViewRenderer *renderer;
 @end

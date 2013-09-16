@@ -9,26 +9,26 @@
 #import <objc/runtime.h>
 #import "UIView+BeautifyPrivate.h"
 #import "UIView+Beautify.h"
-#import "SCThemeManager.h"
-#import "SCStyleRenderer.h"
-#import "SCStyleRenderer_Private.h"
-#import "SCTableViewCellLabelRenderer.h"
-#import "SCTableViewRenderer.h"
+#import "BYThemeManager.h"
+#import "BYStyleRenderer.h"
+#import "BYStyleRenderer_Private.h"
+#import "BYTableViewCellLabelRenderer.h"
+#import "BYTableViewRenderer.h"
 #import "UIView+Utilities.h"
-#import "SCBeautify.h"
-#import "SCBeautify_Private.h"
-#import "SCThemeManager_Private.h"
+#import "BYBeautify.h"
+#import "BYBeautify_Private.h"
+#import "BYThemeManager_Private.h"
 #import "NSObject+Beautify.h"
 
 @implementation UIView (BeautifyPrivate)
 
 -(void)createRenderer {
-    if(![[SCBeautify instance] active]) {
+    if(![[BYBeautify instance] active]) {
         // Don't create a renderer if theme loader isn't active.
         return;
     }
     
-    SCStyleRenderer *renderer = objc_getAssociatedObject(self, @"renderer");
+    BYStyleRenderer *renderer = objc_getAssociatedObject(self, @"renderer");
     if (renderer != nil) {
         [renderer viewDidMoveToWindow];
         return;
@@ -38,31 +38,31 @@
         return;
     
     if ([self validHierarchy]) {
-        SCStyleRenderer* renderer;
+        BYStyleRenderer* renderer;
         if ([self isKindOfClass:[UILabel class]]) {
             if ([self isChildOfTableViewCell]) {
-                renderer = [[SCTableViewCellLabelRenderer alloc] initWithView:self
-                                                                        theme:[[SCThemeManager instance] currentTheme]];
+                renderer = [[BYTableViewCellLabelRenderer alloc] initWithView:self
+                                                                        theme:[[BYThemeManager instance] currentTheme]];
             }
             else {
-                renderer = [[SCThemeManager instance] rendererForView:self];
+                renderer = [[BYThemeManager instance] rendererForView:self];
             }
         }
         else if ([self isKindOfClass:[UITableView class]]) {
-            renderer = [[SCTableViewRenderer alloc] initWithView:self theme:[[SCThemeManager instance] currentTheme]];
+            renderer = [[BYTableViewRenderer alloc] initWithView:self theme:[[BYThemeManager instance] currentTheme]];
         }
         else if ([self isKindOfClass:[UIButton class]] && [self isChildOfTableViewCell]) {
             // Don't style buttons that are inside of tableviewcells (yet).
             return;
         }
         else {
-            renderer = [[SCThemeManager instance] rendererForView:self];
+            renderer = [[BYThemeManager instance] rendererForView:self];
         }
         [self associateRenderer:renderer];
     }
 }
 
--(void)associateRenderer:(SCStyleRenderer*)renderer {
+-(void)associateRenderer:(BYStyleRenderer*)renderer {
     if (renderer != nil) {
         objc_setAssociatedObject(self, @"renderer", renderer, OBJC_ASSOCIATION_RETAIN);
     }
@@ -96,7 +96,7 @@
     return YES;
 }
 
--(void)applyTheme:(SCTheme*)theme {
+-(void)applyTheme:(BYTheme*)theme {
     [self.renderer setTheme:theme];
     
     for (UIView* subView in self.subviews) {

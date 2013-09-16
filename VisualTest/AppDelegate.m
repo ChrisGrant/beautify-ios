@@ -17,7 +17,7 @@
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     // enhance the UI controls
-    [[SCBeautify instance] activate];
+    [[BYBeautify instance] activate];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[VisualTestViewController new]];

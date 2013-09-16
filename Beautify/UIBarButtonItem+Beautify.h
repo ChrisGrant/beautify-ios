@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SCBarButtonItemRenderer.h"
+#import "BYBarButtonItemRenderer.h"
 
 @interface UIBarButtonItem (Beautify)
 
 /*
  Return the renderer which enchances the UI for this view controller.
 */
-@property (readonly) __weak SCBarButtonItemRenderer *renderer;
+@property (readonly) __weak BYBarButtonItemRenderer *renderer;
 
 -(void)createRenderer;
 

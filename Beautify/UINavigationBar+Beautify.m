@@ -7,9 +7,9 @@
 //
 
 #import <objc/runtime.h>
-#import "SCStyleRenderer_Private.h"
+#import "BYStyleRenderer_Private.h"
 #import "UIView+Beautify.h"
-#import "SCThemeManager_Private.h"
+#import "BYThemeManager_Private.h"
 #import "UIBarButtonItem+BeautifyPrivate.h"
 
 @implementation UINavigationBar (Beautify)
@@ -48,9 +48,9 @@
                     [barButtonItem createRenderer];
                 }
                 else {
-                    NSMutableArray *values = [(SCBarButtonItemRenderer*)barButtonItem.renderer values];
-                    NSMutableArray *names = [(SCBarButtonItemRenderer*)barButtonItem.renderer names];
-                    NSMutableArray *controlStates = [(SCBarButtonItemRenderer*)barButtonItem.renderer controlStates];
+                    NSMutableArray *values = [(BYBarButtonItemRenderer*)barButtonItem.renderer values];
+                    NSMutableArray *names = [(BYBarButtonItemRenderer*)barButtonItem.renderer names];
+                    NSMutableArray *controlStates = [(BYBarButtonItemRenderer*)barButtonItem.renderer controlStates];
                     [barButtonItem removeRenderer];
                     [barButtonItem createRenderer];
                     [barButtonItem.renderer setValues:values];
@@ -66,7 +66,7 @@
 -(void)createRenderer {
     // create a renderer for instances not marked as immune to Beautify
     if (!self.isImmuneToBeautify && objc_getAssociatedObject(self, @"renderer") == nil) {
-        SCStyleRenderer* renderer = [[SCThemeManager instance] rendererForView:self];
+        BYStyleRenderer* renderer = [[BYThemeManager instance] rendererForView:self];
         if (renderer != nil) {
             objc_setAssociatedObject(self, @"renderer", renderer, OBJC_ASSOCIATION_RETAIN);
             [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(themeUpdated:) name:CSThemeUpdatedNotification object:nil];
@@ -83,7 +83,7 @@
 }
 
 -(void)themeUpdated:(NSNotification*)notification {
-    SCTheme *theme = notification.object;
+    BYTheme *theme = notification.object;
     [self.renderer setTheme:theme];
 }
 
