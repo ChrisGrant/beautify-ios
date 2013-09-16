@@ -19,7 +19,7 @@
 
 @implementation SCTheme
 
-+(SCTheme *)default {
++(SCTheme *)defaultTheme {
     SCTheme* theme = [SCTheme new];
     return theme;
 }
@@ -55,14 +55,6 @@
 -(id)init {
     if (self = [super init]) {
         _name = @"DEFAULT";
-//        _buttonStyle = [SCButtonStyle new];
-//        _switchStyle = [SCSwitchStyle new];
-//        _labelStyle = [SCLabelStyle new];
-//        _viewControllerStyle = [SCViewControllerStyle new];
-//        _textFieldStyle = [SCTextFieldStyle new];
-//        _navigationBarStyle = [SCNavigationBarStyle new];
-//        _barButtonItemStyle = [SCBarButtonStyle new];
-//        _sliderStyle = [SCSliderStyle new];
     }
     return self;
 }

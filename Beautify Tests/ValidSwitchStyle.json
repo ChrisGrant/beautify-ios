@@ -1,0 +1,94 @@
+{
+    "onState": {
+        "textStyle": {
+            "color": "#FFFFFF",
+            "font": {
+                "name": "Helvetica-Bold",
+                "size": 0
+            }
+        },
+        "text": "ON",
+        "backgroundColor": "#000000",
+        "textShadow": {
+            "color": "#0000FF",
+            "offset": {
+                "x": 0,
+                "y": 2
+            }
+        }
+    },
+    "offState": {
+        "textStyle": {
+            "color": "#FF0000",
+            "font": {
+                "name": "Helvetica-Neue",
+                "size": 16
+            }
+        },
+        "text": "OFF",
+        "backgroundColor": "#FFFFFF",
+        "textShadow": {
+            "color": "#000000",
+            "offset": {
+                "x": 2,
+                "y": 0
+            }
+        }
+    },
+    "knobBorder": {
+        "width": 1,
+        "color": "#00FF00",
+        "cornerRadius": 15
+    },
+    "highlightColor": "#FFFFFF",
+    "knobBackgroundColor": "#FFFFFF",
+    "knobBackgroundGradient": {
+        "radial": false,
+        "stops": [
+            {
+                "position": 1,
+                "color": "#FFFFFF"
+            },
+            {
+                "position": 0.0,
+                "color": "#0000FF"
+            }
+        ]
+    },
+    "knobInnerShadows": [
+        {
+            "color": "#FFFFFF",
+            "radius": "2",
+            "offset": {
+                "x": 2,
+                "y": 2
+            }
+        }
+    ],
+    "knobOuterShadows": [],
+    "innerShadows": [
+        {
+            "color": "#000000",
+            "radius": "4",
+            "offset": {
+                "x": 0,
+                "y": 0
+            }
+        }
+    ],
+    "outerShadows": [
+        {
+            "color": "#FF0000",
+            "radius": 0,
+            "offset": {
+                "x": 0,
+                "y": -2
+            }
+        }
+    ],
+    "border": {
+        "width": 1,
+        "color": "#FF0000",
+        "cornerRadius": 15
+    }
+}

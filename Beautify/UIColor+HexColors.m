@@ -40,22 +40,21 @@
     NSUInteger rVal = 0;
     NSScanner *rScanner = [NSScanner scannerWithString:rComponent];
     [rScanner scanHexInt:&rVal];
-    float rRetVal = (float)rVal / 254;
-    
+    float rRetVal = (float)rVal / 255;
 
     NSRange gRange = NSMakeRange(2, 2);
     NSString *gComponent = [hexString substringWithRange:gRange];
     NSUInteger gVal = 0;
     NSScanner *gScanner = [NSScanner scannerWithString:gComponent];
     [gScanner scanHexInt:&gVal];
-    float gRetVal = (float)gVal / 254;
+    float gRetVal = (float)gVal / 255;
 
     NSRange bRange = NSMakeRange(4, 2);
     NSString *bComponent = [hexString substringWithRange:bRange];
     NSUInteger bVal = 0;
     NSScanner *bScanner = [NSScanner scannerWithString:bComponent];
     [bScanner scanHexInt:&bVal];
-    float bRetVal = (float)bVal / 254;
+    float bRetVal = (float)bVal / 255;
     
     float alpha = 1.0f;
     if ([hexString length] == 8)
@@ -65,7 +64,7 @@
         NSUInteger fVal = 0;
         NSScanner *fScanner = [NSScanner scannerWithString:fComponent];
         [fScanner scanHexInt:&fVal];
-        alpha = (float)fVal / 254;
+        alpha = (float)fVal / 255;
     }
     
     return [UIColor colorWithRed:rRetVal green:gRetVal blue:bRetVal alpha:alpha];

@@ -1,0 +1,58 @@
+{
+    "title": {
+        "color": "#000000",
+        "font": {
+            "name": "HelveticaNeue-Bold",
+            "size": 10
+        }
+    },
+    "titleShadow": {
+        "color": "#0000FF",
+        "offset": {
+            "x": 2,
+            "y": 5
+        }
+    },
+    "backgroundColor": "#000000",
+    "backgroundGradient": {
+        "radial": false,
+        "stops": [
+            {
+                "color": "FF0000",
+                "position": "0.1"
+            },
+            {
+                "color": "0000FF",
+                "position": "0.9"
+            }
+        ]
+    },
+    "border": {
+        "width": 1,
+        "color": "#FF0000",
+        "cornerRadius": 8
+    },
+    "outerShadows": [
+        {
+            "radius": 2,
+            "color": "#00FF00",
+            "offset": {
+                "x": 2,
+                "y": 3
+            }
+        }
+    ],
+    "stateSetters": [
+        {
+            "state": "highlighted",
+            "propertyName": "title",
+            "value": {
+                "font": {
+                    "name": "HelveticaNeue-Bold",
+                    "size": 14
+                },
+                "color": "ffffff"
+            }
+        }
+    ]
+}
