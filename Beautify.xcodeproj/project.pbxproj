@@ -228,6 +228,8 @@
 		70F61B8917831AE100DCA906 /* SCRenderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F61B8517831AE100DCA906 /* SCRenderUtils.m */; };
 		70F61B8B17831B4F00DCA906 /* SCRenderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F61B8517831AE100DCA906 /* SCRenderUtils.m */; };
 		70FAFBB317E70ED400EB6843 /* ValidButtonStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 70FF54DE17E7040F00F9BF03 /* ValidButtonStyle.json */; };
+		70FAFBB617E7336D00EB6843 /* ValidSwitchStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 70FAFBB517E7336D00EB6843 /* ValidSwitchStyle.json */; };
+		70FAFBBA17E7425600EB6843 /* PartialSwitchStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 70FAFBB917E7425600EB6843 /* PartialSwitchStyle.json */; };
 		70FE245E17E089D1009A7113 /* barButtonImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 70FE245D17E089D1009A7113 /* barButtonImage.png */; };
 		70FE246517E0B385009A7113 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FE246417E0B385009A7113 /* XCTest.framework */; };
 		70FE246717E0B385009A7113 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FE246617E0B385009A7113 /* Foundation.framework */; };
@@ -465,6 +467,8 @@
 		70F1FD0917E34FB1006018C9 /* ConfigParserPropertyParsingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigParserPropertyParsingTests.m; sourceTree = "<group>"; };
 		70F61B8417831AE100DCA906 /* SCRenderUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = SCRenderUtils.h; path = Beautify/SCRenderUtils.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		70F61B8517831AE100DCA906 /* SCRenderUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCRenderUtils.m; path = Beautify/SCRenderUtils.m; sourceTree = SOURCE_ROOT; };
+		70FAFBB517E7336D00EB6843 /* ValidSwitchStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ValidSwitchStyle.json; sourceTree = "<group>"; };
+		70FAFBB917E7425600EB6843 /* PartialSwitchStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PartialSwitchStyle.json; sourceTree = "<group>"; };
 		70FE245D17E089D1009A7113 /* barButtonImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barButtonImage.png; sourceTree = "<group>"; };
 		70FE246317E0B385009A7113 /* Beautify Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Beautify Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70FE246417E0B385009A7113 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -708,7 +712,7 @@
 		700E156817E34128006E124E /* ConfigParser Tests */ = {
 			isa = PBXGroup;
 			children = (
-				70FF54DC17E703E700F9BF03 /* Test Files */,
+				70FF54DC17E703E700F9BF03 /* Test JSON Files */,
 				700E154317E30668006E124E /* ConfigParserTests.m */,
 				70F1FD0917E34FB1006018C9 /* ConfigParserPropertyParsingTests.m */,
 				700E156917E341C6006E124E /* ConfigParserUtilitiesTests.m */,
@@ -843,6 +847,15 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
+		70FAFBB417E7335200EB6843 /* Switch Style */ = {
+			isa = PBXGroup;
+			children = (
+				70FAFBB517E7336D00EB6843 /* ValidSwitchStyle.json */,
+				70FAFBB917E7425600EB6843 /* PartialSwitchStyle.json */,
+			);
+			name = "Switch Style";
+			sourceTree = "<group>";
+		};
 		70FE246917E0B385009A7113 /* Beautify Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -865,12 +878,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		70FF54DC17E703E700F9BF03 /* Test Files */ = {
+		70FF54DC17E703E700F9BF03 /* Test JSON Files */ = {
 			isa = PBXGroup;
 			children = (
 				70FF54DD17E703F200F9BF03 /* Button Style */,
+				70FAFBB417E7335200EB6843 /* Switch Style */,
 			);
-			name = "Test Files";
+			name = "Test JSON Files";
 			sourceTree = "<group>";
 		};
 		70FF54DD17E703F200F9BF03 /* Button Style */ = {
@@ -1230,7 +1244,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70FAFBB617E7336D00EB6843 /* ValidSwitchStyle.json in Resources */,
 				70FF54E117E7042700F9BF03 /* PartialButtonStyle.json in Resources */,
+				70FAFBBA17E7425600EB6843 /* PartialSwitchStyle.json in Resources */,
 				70FF54DF17E7040F00F9BF03 /* ValidButtonStyle.json in Resources */,
 				70FE246E17E0B385009A7113 /* InfoPlist.strings in Resources */,
 			);

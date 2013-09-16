@@ -1,0 +1,16 @@
+{
+    "onState": {
+        "text": "YES",
+        "backgroundColor": "#000000"
+    },
+    "offState": {
+        "text": "NO",
+        "backgroundColor": "#FFFFFF",
+    },
+    "knobBackgroundColor": "#FFFFFF",
+    "border": {
+        "width": 2,
+        "color": "#FF0000",
+        "cornerRadius": 5
+    }
+}
