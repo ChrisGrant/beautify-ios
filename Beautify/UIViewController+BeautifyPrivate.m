@@ -9,17 +9,17 @@
 #import <objc/runtime.h>
 #import "UIViewController+Beautify.h"
 #import "UIViewController+BeautifyPrivate.h"
-#import "SCThemeManager.h"
-#import "SCStyleRenderer.h"
-#import "SCStyleRenderer_Private.h"
-#import "SCThemeManager_Private.h"
+#import "BYThemeManager.h"
+#import "BYStyleRenderer.h"
+#import "BYStyleRenderer_Private.h"
+#import "BYThemeManager_Private.h"
 
 @implementation UIViewController (BeautifyPrivate)
 
 -(void)createRenderer {
     // create a renderer for instances not marked as immune to Beautify
     if (!self.isImmuneToBeautify && objc_getAssociatedObject(self, @"renderer") == nil) {
-        SCStyleRenderer* renderer = [[SCThemeManager instance] rendererForView:self];
+        BYStyleRenderer* renderer = [[BYThemeManager instance] rendererForView:self];
         if (renderer != nil) {
             objc_setAssociatedObject(self, @"renderer", renderer, OBJC_ASSOCIATION_RETAIN);
             

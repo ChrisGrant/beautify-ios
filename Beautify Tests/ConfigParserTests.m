@@ -7,44 +7,44 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "SCConfigParser.h"
-#import "SCButtonStyle.h"
+#import "BYConfigParser.h"
+#import "BYButtonStyle.h"
 #import "UIColor+Comparison.h"
-#import "SCGradientStop.h"
-#import "SCStateSetter.h"
-#import "SCSwitchState.h"
+#import "BYGradientStop.h"
+#import "BYStateSetter.h"
+#import "BYSwitchState.h"
 
 @interface ConfigParserTests : XCTestCase
 @end
 
-// These tests test the public API of SCConfigParser
+// These tests test the public API of BYConfigParser
 @implementation ConfigParserTests
 
 #pragma mark - Default / Nil Theme Testing
 
 -(void)testConfigParserWithNilDictionary {
-    SCTheme *theme;
-    XCTAssertNoThrow(theme = [SCConfigParser parseStyleObjectPropertiesOnClass:[SCTheme class] fromDict:nil],
+    BYTheme *theme;
+    XCTAssertNoThrow(theme = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYTheme class] fromDict:nil],
                      @"Shouldn't throw with a nil dictionary");
     XCTAssertNil(theme, @"Theme should be nil");
 }
 
 -(void)testConfigParserWithEmptyDictonary {
-    SCTheme *theme;
-    XCTAssertNoThrow(theme = [SCConfigParser parseStyleObjectPropertiesOnClass:[SCTheme class] fromDict:@{}],
+    BYTheme *theme;
+    XCTAssertNoThrow(theme = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYTheme class] fromDict:@{}],
                      @"Shouldn't throw with an empty dictionary");
     [self assertDefaultTheme:theme];
 }
 
 -(void)testConfigParserWithInvalidDictionary {
-    SCTheme *theme;
+    BYTheme *theme;
     NSDictionary *dict = @{@"invalid": @"dictionary", @"still": @{@"Invalid": @"dict", @"theme": @[]}};
-    XCTAssertNoThrow(theme = [SCConfigParser parseStyleObjectPropertiesOnClass:[SCTheme class] fromDict:dict],
+    XCTAssertNoThrow(theme = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYTheme class] fromDict:dict],
                      @"Shouldn't throw with an invalid dictionary");
     [self assertDefaultTheme:theme];
 }
 
--(void)assertDefaultTheme:(SCTheme*)theme {
+-(void)assertDefaultTheme:(BYTheme*)theme {
     XCTAssertNotNil(theme, @"Theme should not be nil");
     XCTAssertEqual(theme.name, @"DEFAULT", @"Theme name should be equal to DEFAULT");
     XCTAssertNil(theme.buttonStyle, @"Should be nil");
@@ -62,23 +62,23 @@
 #pragma mark - Button Style Testing
 
 -(void)testButtonStyleWithNilDict {
-    SCButtonStyle *buttonStyle;
-    XCTAssertNoThrow(buttonStyle = [SCConfigParser parseStyleObjectPropertiesOnClass:[SCButtonStyle class]
+    BYButtonStyle *buttonStyle;
+    XCTAssertNoThrow(buttonStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYButtonStyle class]
                                                                             fromDict:nil]);
     XCTAssertNil(buttonStyle, @"Button style should be nil");
 }
 
 -(void)testButtonStyleWithEmptyDict {
-    SCButtonStyle *buttonStyle;
-    XCTAssertNoThrow(buttonStyle = [SCConfigParser parseStyleObjectPropertiesOnClass:[SCButtonStyle class]
+    BYButtonStyle *buttonStyle;
+    XCTAssertNoThrow(buttonStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYButtonStyle class]
                                                                             fromDict:@{}]);
     XCTAssertNotNil(buttonStyle, @"Button style should not be nil");
 }
 
 -(void)testButtonStyleWithValidDict {
     NSDictionary *dictionary = [self dictionaryFromJSONFile:@"ValidButtonStyle"];
-    SCButtonStyle *buttonStyle;
-    XCTAssertNoThrow(buttonStyle = [SCConfigParser parseStyleObjectPropertiesOnClass:[SCButtonStyle class]
+    BYButtonStyle *buttonStyle;
+    XCTAssertNoThrow(buttonStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYButtonStyle class]
                                                                             fromDict:dictionary],
                      @"Shouldn't throw with valid JSON");
     XCTAssertNotNil(buttonStyle, @"Shouldn't be nil with valid JSON");
@@ -95,19 +95,19 @@
     
     [self assertShadows:buttonStyle.outerShadows hasOneShadowWithColor:[UIColor greenColor] radius:2.0f andOffset:CGSizeMake(2, 3)];
     
-    SCStateSetter *setter = buttonStyle.stateSetters[0];
+    BYStateSetter *setter = buttonStyle.stateSetters[0];
     XCTAssertEqual(setter.state, UIControlStateHighlighted, @"Should be for the highlighted state");
     XCTAssert([setter.propertyName isEqualToString:@"title"], @"Should be for the title");
     
-    XCTAssertEqual([setter.value class], [SCText class], @"Should be of type SCText");
-    SCText *text = setter.value;
+    XCTAssertEqual([setter.value class], [BYText class], @"Should be of type BYText");
+    BYText *text = setter.value;
     [self assertText:text hasName:@"HelveticaNeue-Bold" size:14.0f andColor:[UIColor whiteColor]];
 }
 
 -(void)testButtonStyleWithPartialDict {
     NSDictionary *dictionary = [self dictionaryFromJSONFile:@"PartialButtonStyle"];
-    SCButtonStyle *buttonStyle;
-    XCTAssertNoThrow(buttonStyle = [SCConfigParser parseStyleObjectPropertiesOnClass:[SCButtonStyle class]
+    BYButtonStyle *buttonStyle;
+    XCTAssertNoThrow(buttonStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYButtonStyle class]
                                                                             fromDict:dictionary],
                      @"Shouldn't throw with partial JSON"); 
     XCTAssertNotNil(buttonStyle, @"Shouldn't be nil with valid JSON");
@@ -122,29 +122,29 @@
 #pragma mark - Switch Style Testing
 
 -(void)testSwitchStyleWithNilDict {
-    SCSwitchStyle *switchStyle;
-    XCTAssertNoThrow(switchStyle = [SCConfigParser parseStyleObjectPropertiesOnClass:[SCSwitchStyle class]
+    BYSwitchStyle *switchStyle;
+    XCTAssertNoThrow(switchStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYSwitchStyle class]
                                                                             fromDict:nil]);
     XCTAssertNil(switchStyle, @"Switch style should be nil");
 }
 
 -(void)testSwitchStyleWithEmptyDict {
-    SCSwitchStyle *switchStyle;
-    XCTAssertNoThrow(switchStyle = [SCConfigParser parseStyleObjectPropertiesOnClass:[SCSwitchStyle class]
+    BYSwitchStyle *switchStyle;
+    XCTAssertNoThrow(switchStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYSwitchStyle class]
                                                                             fromDict:@{}]);
     XCTAssertNotNil(switchStyle, @"Switch style should not be nil");
 }
 
 -(void)testSwitchStyleWithValidDict {
     NSDictionary *dictionary = [self dictionaryFromJSONFile:@"ValidSwitchStyle"];
-    SCSwitchStyle *switchStyle;
-    XCTAssertNoThrow(switchStyle = [SCConfigParser parseStyleObjectPropertiesOnClass:[SCSwitchStyle class]
+    BYSwitchStyle *switchStyle;
+    XCTAssertNoThrow(switchStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYSwitchStyle class]
                                                                             fromDict:dictionary],
                      @"Shouldn't throw with valid JSON");
     XCTAssertNotNil(switchStyle, @"Shouldn't be nil with valid JSON");
     
-    SCSwitchState *onState = switchStyle.onState;
-    SCSwitchState *offState = switchStyle.offState;
+    BYSwitchState *onState = switchStyle.onState;
+    BYSwitchState *offState = switchStyle.offState;
     
     [self assertSwitchState:onState
                hasTextColor:[UIColor whiteColor] font:@"Helvetica-Bold" size:0
@@ -178,14 +178,14 @@
 
 -(void)testSwitchStyleWithPartialDict {
     NSDictionary *dictionary = [self dictionaryFromJSONFile:@"PartialSwitchStyle"];
-    SCSwitchStyle *switchStyle;
-    XCTAssertNoThrow(switchStyle = [SCConfigParser parseStyleObjectPropertiesOnClass:[SCSwitchStyle class]
+    BYSwitchStyle *switchStyle;
+    XCTAssertNoThrow(switchStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYSwitchStyle class]
                                                                             fromDict:dictionary],
                      @"Shouldn't throw with valid JSON");
     XCTAssertNotNil(switchStyle, @"Shouldn't be nil with valid JSON");
     
-    SCSwitchState *onState = switchStyle.onState;
-    SCSwitchState *offState = switchStyle.offState;
+    BYSwitchState *onState = switchStyle.onState;
+    BYSwitchState *offState = switchStyle.offState;
     
     [self assertSwitchState:onState
                hasTextColor:nil font:nil size:0
@@ -199,7 +199,7 @@
     [self assertBorder:switchStyle.border hasWidth:2 color:[UIColor redColor] andCornerRadius:5.0f];
 }
 
--(void)assertSwitchState:(SCSwitchState*)state
+-(void)assertSwitchState:(BYSwitchState*)state
             hasTextColor:(UIColor*)textColor font:(NSString*)font size:(float)textSize
                  andText:(NSString*)text
          backgroundColor:(UIColor*)bgColor
@@ -216,14 +216,14 @@
 
 -(void)assertShadows:(NSArray*)array hasOneShadowWithColor:(UIColor*)color radius:(float)radius andOffset:(CGSize)offset {
     XCTAssertEqual(array.count, (NSUInteger)1, @"Should only be 1 shadow");
-    SCShadow *shadow = array[0];
+    BYShadow *shadow = array[0];
     
     XCTAssert([shadow.color isEqualToColor:color], @"Colors should be equal");
     XCTAssertEqual(shadow.radius, radius, @"Radii should be equal");
     XCTAssertEqual(shadow.offset, offset, @"Offset should be equal");
 }
 
--(void)assertGradient:(SCGradient*)gradient hasStopOneColor:(UIColor*)color1 atPosition:(float)position1
+-(void)assertGradient:(BYGradient*)gradient hasStopOneColor:(UIColor*)color1 atPosition:(float)position1
       andStopTwoColor:(UIColor*)color2 atPosition:(float)position2
           andIsRadial:(BOOL)radial withRadialOffset:(CGSize)offset {
                  
@@ -234,22 +234,22 @@
         XCTAssertEqual(gradient.radialOffset, offset, @"Offsets should be equal");
     }
     
-    SCGradientStop *stop1 = gradient.stops[0];
+    BYGradientStop *stop1 = gradient.stops[0];
     XCTAssert([stop1.color isEqualToColor:color1], @"Stop 1 color should be equal");
     XCTAssertEqual(stop1.stop, position1, @"Position 1 should be equal");
 
-    SCGradientStop *stop2 = gradient.stops[1];
+    BYGradientStop *stop2 = gradient.stops[1];
     XCTAssert([stop2.color isEqualToColor:color2], @"Stop 2 color should be equal");
     XCTAssertEqual(stop2.stop, position2, @"Position 2 should be equal");
 }
 
--(void)assertBorder:(SCBorder*)border hasWidth:(float)width color:(UIColor*)color andCornerRadius:(float)radius {
+-(void)assertBorder:(BYBorder*)border hasWidth:(float)width color:(UIColor*)color andCornerRadius:(float)radius {
     XCTAssertEqual(border.width, width, @"Width should be equal");
     XCTAssert([border.color isEqualToColor:color], @"Colors should be equal");
     XCTAssertEqual(border.cornerRadius, radius, @"Corner Radius should be equal");
 }
 
--(void)assertTextShadow:(SCTextShadow*)textShadow hasColor:(UIColor*)color andOffset:(CGSize)size {
+-(void)assertTextShadow:(BYTextShadow*)textShadow hasColor:(UIColor*)color andOffset:(CGSize)size {
     if(!textShadow) {
         return;
     }
@@ -257,7 +257,7 @@
     XCTAssert([textShadow.color isEqualToColor:color], @"Text shadow should be equal");
 }
 
--(void)assertText:(SCText*)text hasName:(NSString*)name size:(float)size andColor:(UIColor*)color {
+-(void)assertText:(BYText*)text hasName:(NSString*)name size:(float)size andColor:(UIColor*)color {
     if(!text) {
         return;
     }
@@ -265,7 +265,7 @@
     [self assertFont:text.font hasName:name andSize:size];
 }
 
--(void)assertFont:(SCFont*)font hasName:(NSString*)name andSize:(float)size {
+-(void)assertFont:(BYFont*)font hasName:(NSString*)name andSize:(float)size {
     if(!font) {
         return;
     }

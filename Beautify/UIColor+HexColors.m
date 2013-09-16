@@ -66,9 +66,7 @@
         [fScanner scanHexInt:&fVal];
         alpha = (float)fVal / 255;
     }
-    
     return [UIColor colorWithRed:rRetVal green:gRetVal blue:bRetVal alpha:alpha];
-
 }
 
 +(NSString *)hexValuesFromUIColor:(UIColor *)color {

@@ -79,39 +79,39 @@
                                                                        action:@selector(pushView)];
     
     // Set properties for UIBarButton UIControlStateNormal
-    SCBarButtonItemRenderer *renderer = customizedButtonRight.renderer;
+    BYBarButtonItemRenderer *renderer = customizedButtonRight.renderer;
 
-    SCText *text = [SCText new];
-    [text setFont:[[SCFont alloc] initWithName:@"Copperplate"]];
+    BYText *text = [BYText new];
+    [text setFont:[[BYFont alloc] initWithName:@"Copperplate"]];
     [text setColor:[UIColor redColor]];
     [renderer setTitleStyle:text forState:UIControlStateNormal];
 
-    SCBorder *border = [SCBorder new];
+    BYBorder *border = [BYBorder new];
     border.width = 5.0f;
     border.color = [UIColor orangeColor];
     border.cornerRadius = 20.0f;
     [renderer setBorder:border forState:UIControlStateNormal];
 
-    SCShadow *innerShadow = [[SCShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:10 color:[UIColor greenColor] isInset:YES];
+    BYShadow *innerShadow = [[BYShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:10 color:[UIColor greenColor] isInset:YES];
     [renderer setInnerShadows:@[innerShadow] forState:UIControlStateNormal];
-    SCShadow *outerShadow = [[SCShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:20 color:[UIColor redColor] isInset:NO];
+    BYShadow *outerShadow = [[BYShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:20 color:[UIColor redColor] isInset:NO];
     [renderer setOuterShadows:@[outerShadow] forState:UIControlStateNormal];
     
     // Set properties for UIBarButton UIControlStateHighlighted    
-    text = [SCText new];
-    [text setFont:[[SCFont alloc] initWithName:@"AmericanTypewriter"]];
+    text = [BYText new];
+    [text setFont:[[BYFont alloc] initWithName:@"AmericanTypewriter"]];
     [text setColor:[UIColor magentaColor]];
     [renderer setTitleStyle:text forState:UIControlStateHighlighted];
     
-    border = [SCBorder new];
+    border = [BYBorder new];
     border.width = 5.0f;
     border.color = [UIColor purpleColor];
     border.cornerRadius = 20.0f;
     [renderer setBorder:border forState:UIControlStateHighlighted];
     
-    innerShadow = [[SCShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:15 color:[UIColor redColor] isInset:YES];
+    innerShadow = [[BYShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:15 color:[UIColor redColor] isInset:YES];
     [renderer setInnerShadows:@[innerShadow] forState:UIControlStateHighlighted];
-    outerShadow = [[SCShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:20 color:[UIColor greenColor] isInset:NO];
+    outerShadow = [[BYShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:20 color:[UIColor greenColor] isInset:NO];
     [renderer setOuterShadows:@[outerShadow] forState:UIControlStateHighlighted];
     
     self.navigationItem.rightBarButtonItems = @[customizedButtonRight, beautifyDefaultButtonRight, defaultButtonRight];
@@ -151,16 +151,16 @@
     [lCustom setText:@"Customised"];
     [lCustom setTextAlignment:NSTextAlignmentCenter];
     
-    SCLabelRenderer *labelRenderer = lCustom.renderer;
+    BYLabelRenderer *labelRenderer = lCustom.renderer;
     
-    SCTextShadow *textShadow = [SCTextShadow new];
+    BYTextShadow *textShadow = [BYTextShadow new];
     [textShadow setColor:[UIColor blueColor]];
     [textShadow setOffset:CGSizeMake(0, 3)];
     [labelRenderer setTextShadow:textShadow forState:UIControlStateNormal];
     [labelRenderer setAlpha:0.9 forState:UIControlStateNormal];
     
-    SCText *text = [SCText new];
-    [text setFont:[[SCFont alloc] initWithName:@"AvenirNext-Medium"]];
+    BYText *text = [BYText new];
+    [text setFont:[[BYFont alloc] initWithName:@"AvenirNext-Medium"]];
     [labelRenderer setTextStyle:text forState:UIControlStateNormal];
     
     [self addDefaultView:lDefault beautifyDefaultView:lBeautify andCustomisedView:lCustom withHeight:50];
@@ -181,18 +181,18 @@
     [iv2 setImmuneToBeautify:NO];
     [iv3 setImmuneToBeautify:NO];
     
-    SCImageViewRenderer *renderer = iv3.renderer;
+    BYImageViewRenderer *renderer = iv3.renderer;
     
-    SCBorder *border = [SCBorder new];
+    BYBorder *border = [BYBorder new];
     border.width = 2.0f;
     border.color = [UIColor whiteColor];
     border.cornerRadius = 25.0f;
     [renderer setBorder:border forState:UIControlStateNormal];
     
-    SCShadow *shadow1 = [[SCShadow alloc] initWithOffset:CGSizeZero radius:25.0 color:[UIColor blueColor] isInset:NO];
+    BYShadow *shadow1 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:25.0 color:[UIColor blueColor] isInset:NO];
     [renderer setOuterShadows:@[shadow1] forState:UIControlStateNormal];
     
-    SCShadow *shadow2 = [[SCShadow alloc] initWithOffset:CGSizeZero radius:51.0 color:[UIColor blackColor] isInset:YES];
+    BYShadow *shadow2 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:51.0 color:[UIColor blackColor] isInset:YES];
     [renderer setInnerShadows:@[shadow2] forState:UIControlStateNormal];
     
     [self addDefaultView:iv1 beautifyDefaultView:iv2 andCustomisedView:iv3 withHeight:200];
@@ -206,10 +206,10 @@
     
     [s3 setDesiredSwitchSize:CGSizeMake(200, 30)];
 
-    SCSwitchRenderer *renderer = s3.renderer;
+    BYSwitchRenderer *renderer = s3.renderer;
     
-    SCSwitchState *onState = [SCSwitchState new];
-    SCTextShadow *textShadow = [SCTextShadow new];
+    BYSwitchState *onState = [BYSwitchState new];
+    BYTextShadow *textShadow = [BYTextShadow new];
     textShadow.offset = CGSizeMake(1, 1);
     textShadow.color = [UIColor darkGrayColor];
     onState.textShadow = textShadow;
@@ -217,7 +217,7 @@
     onState.backgroundColor = [UIColor redColor];
     [renderer setOnState:onState forState:UIControlStateNormal];
 
-    SCBorder *border = [SCBorder new];
+    BYBorder *border = [BYBorder new];
     border.width = 2.0f;
     border.color = [UIColor blackColor];
     border.cornerRadius = 25.0f;
@@ -227,7 +227,7 @@
 
     [renderer setThumbBackgroundColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
-    SCShadow *shadow1 = [[SCShadow alloc] initWithOffset:CGSizeZero radius:100.0 color:[UIColor blackColor] isInset:YES];
+    BYShadow *shadow1 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:100.0 color:[UIColor blackColor] isInset:YES];
     [renderer setThumbInnerShadows:@[shadow1] forState:UIControlStateNormal];
     
     [self addDefaultView:s1 beautifyDefaultView:s2 andCustomisedView:s3 withHeight:30];
@@ -238,9 +238,9 @@
     UISlider *s2 = [UISlider new];
     UISlider *s3 = [UISlider new];
     
-    SCSliderRenderer *renderer = s3.renderer;
+    BYSliderRenderer *renderer = s3.renderer;
     
-    SCBorder *border = [SCBorder new];
+    BYBorder *border = [BYBorder new];
     border.width = 1.0f;
     border.color = [UIColor blackColor];
     border.cornerRadius = 5.0f;
@@ -248,29 +248,29 @@
     
     [renderer setBackgroundColor:[UIColor orangeColor] forState:UIControlStateNormal];
     
-    SCShadow *shadow1 = [[SCShadow alloc] initWithOffset:CGSizeZero radius:10.0 color:[UIColor greenColor] isInset:NO];
+    BYShadow *shadow1 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:10.0 color:[UIColor greenColor] isInset:NO];
     [renderer setBarOuterShadows:@[shadow1] forState:UIControlStateNormal];
     
     // default bar thickness is very thin on ios7 and so trying to draw inner shadows and bar border makes things look a bit ugly
-    SCBorder *barBorder = [SCBorder new];
+    BYBorder *barBorder = [BYBorder new];
     barBorder.width = 1.0f;
     barBorder.color = [UIColor blackColor];
     barBorder.cornerRadius = 5.0f;
     [renderer setBarBorder:barBorder forState:UIControlStateNormal];
 
-    SCShadow *shadow2 = [[SCShadow alloc] initWithOffset:CGSizeZero radius:5.0 color:[UIColor whiteColor] isInset:YES];
+    BYShadow *shadow2 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:5.0 color:[UIColor whiteColor] isInset:YES];
     [renderer setBarInnerShadows:@[shadow2] forState:UIControlStateNormal];
     
     [renderer setMinimumTrackColor:[UIColor blueColor] forState:UIControlStateNormal];
-    [renderer setMinimumTrackBackgroundGradient:[SCGradient new] forState:UIControlStateNormal];
+    [renderer setMinimumTrackBackgroundGradient:[BYGradient new] forState:UIControlStateNormal];
 
     [renderer setMaximumTrackColor:[UIColor redColor] forState:UIControlStateNormal];
-    [renderer setMaximumTrackBackgroundGradient:[SCGradient new] forState:UIControlStateNormal];
+    [renderer setMaximumTrackBackgroundGradient:[BYGradient new] forState:UIControlStateNormal];
     
-    SCShadow *shadow4 = [[SCShadow alloc] initWithOffset:CGSizeZero radius:15.0 color:[UIColor yellowColor] isInset:NO];
+    BYShadow *shadow4 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:15.0 color:[UIColor yellowColor] isInset:NO];
     [renderer setThumbOuterShadows:@[shadow4] forState:UIControlStateNormal];
     
-    SCBorder *thumbBorder = [SCBorder new];
+    BYBorder *thumbBorder = [BYBorder new];
     thumbBorder.width = 1.0f;
     thumbBorder.color = [UIColor blackColor];
     thumbBorder.cornerRadius = 5.0f;
@@ -278,7 +278,7 @@
     
     [renderer setThumbBackgroundColor:[UIColor purpleColor] forState:UIControlStateNormal];
     
-    SCShadow *shadow3 = [[SCShadow alloc] initWithOffset:CGSizeZero radius:10.0 color:[UIColor greenColor] isInset:YES];
+    BYShadow *shadow3 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:10.0 color:[UIColor greenColor] isInset:YES];
     [renderer setThumbInnerShadows:@[shadow3] forState:UIControlStateNormal];
             
     [self addDefaultView:s1 beautifyDefaultView:s2 andCustomisedView:s3 withHeight:25];
@@ -295,17 +295,17 @@
     rtf3.borderStyle = borderStyle;
     [rtf3 setText:text];
     
-    SCTextFieldRenderer *renderer = rtf3.renderer;
+    BYTextFieldRenderer *renderer = rtf3.renderer;
     
     [renderer setBackgroundColor:[UIColor yellowColor] forState:UIControlStateNormal];
     
-    SCBorder *border = [SCBorder new];
+    BYBorder *border = [BYBorder new];
     border.width = 5.0f;
     border.color = [UIColor blackColor];
     border.cornerRadius = 15.0f;
     [renderer setBorder:border forState:UIControlStateNormal];
     
-    SCShadow *shadow1 = [[SCShadow alloc] initWithOffset:CGSizeZero radius:30.0 color:[UIColor blackColor] isInset:YES];
+    BYShadow *shadow1 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:30.0 color:[UIColor blackColor] isInset:YES];
     [renderer setInnerShadows:@[shadow1] forState:UIControlStateNormal];
     
     [self addDefaultView:rtf1 beautifyDefaultView:rtf2 andCustomisedView:rtf3 withHeight:44];
@@ -322,30 +322,30 @@
     [bcCustom setTitle:title forState:UIControlStateNormal];
     [bcCustom addTarget:self action:@selector(pushView) forControlEvents:UIControlEventTouchUpInside];
     
-    SCButtonRenderer *buttonRenderer = bcCustom.renderer;
+    BYButtonRenderer *buttonRenderer = bcCustom.renderer;
     
-    SCText *text = [SCText new];
-    [text setFont:[[SCFont alloc] initWithName:@"Helvetica"]];
+    BYText *text = [BYText new];
+    [text setFont:[[BYFont alloc] initWithName:@"Helvetica"]];
     [text setColor:[UIColor whiteColor]];
     [buttonRenderer setTitleStyle:text forState:UIControlStateNormal];
     
-    SCGradient *gradient = [SCGradient new];
-    [gradient setStops:@[[[SCGradientStop alloc] initWithColor:[UIColor redColor] at:1.0f],
-                         [[SCGradientStop alloc] initWithColor:[UIColor redColor] at:0.5f],
-                         [[SCGradientStop alloc] initWithColor:[UIColor orangeColor] at:0.0f]]];
+    BYGradient *gradient = [BYGradient new];
+    [gradient setStops:@[[[BYGradientStop alloc] initWithColor:[UIColor redColor] at:1.0f],
+                         [[BYGradientStop alloc] initWithColor:[UIColor redColor] at:0.5f],
+                         [[BYGradientStop alloc] initWithColor:[UIColor orangeColor] at:0.0f]]];
     [buttonRenderer setBackgroundGradient:gradient forState:UIControlStateNormal];
     
-    SCGradient *gradient2 = [SCGradient new];
-    [gradient2 setStops:@[[[SCGradientStop alloc] initWithColor:[UIColor redColor] at:1.0f],
-                          [[SCGradientStop alloc] initWithColor:[UIColor redColor] at:0.5f],
-                          [[SCGradientStop alloc] initWithColor:[[UIColor orangeColor] colorWithAlphaComponent:0.5f]
+    BYGradient *gradient2 = [BYGradient new];
+    [gradient2 setStops:@[[[BYGradientStop alloc] initWithColor:[UIColor redColor] at:1.0f],
+                          [[BYGradientStop alloc] initWithColor:[UIColor redColor] at:0.5f],
+                          [[BYGradientStop alloc] initWithColor:[[UIColor orangeColor] colorWithAlphaComponent:0.5f]
                                                              at:0.0f]]];
     [buttonRenderer setBackgroundGradient:gradient2 forState:UIControlStateHighlighted];
     
     [self addDefaultView:bcDefault beautifyDefaultView:bcBeautify andCustomisedView:bcCustom withHeight:44];
     
-    [buttonRenderer setBorder:[SCBorder new] forState:UIControlStateNormal];
-    [buttonRenderer setBorder:[SCBorder new] forState:UIControlStateHighlighted];
+    [buttonRenderer setBorder:[BYBorder new] forState:UIControlStateNormal];
+    [buttonRenderer setBorder:[BYBorder new] forState:UIControlStateHighlighted];
 }
 
 -(void)addTableViews {

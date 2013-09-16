@@ -7,17 +7,17 @@
 //
 
 #import <objc/runtime.h>
-#import "SCVersionUtils.h"
+#import "BYVersionUtils.h"
 #import "UIViewController+Beautify.h"
 #import "UIViewController+BeautifyPrivate.h"
-#import "SCStyleRenderer.h"
-#import "SCStyleRenderer_Private.h"
+#import "BYStyleRenderer.h"
+#import "BYStyleRenderer_Private.h"
 #import "UIView+BeautifyPrivate.h"
 #import "UIView+Beautify.h"
 
 @implementation UIViewController (Beautify)
 
--(SCStyleRenderer*)renderer {
+-(BYStyleRenderer*)renderer {
     [self createRenderer];
     return objc_getAssociatedObject(self, @"renderer");
 }
@@ -47,7 +47,7 @@
 }
 
 -(void)themeUpdated:(NSNotification*)notification {
-    SCTheme *theme = notification.object;
+    BYTheme *theme = notification.object;
     [self.renderer setTheme:theme];
     [self.view applyTheme:theme];
 }

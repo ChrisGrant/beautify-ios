@@ -33,16 +33,16 @@
 }
 
 - (void)modifyTextField:(UITextField *)textField withWidth:(int)width andRadius:(int)radius {
-    SCTextFieldRenderer *renderer1 = ((SCTextFieldRenderer*)textField.renderer);
+    BYTextFieldRenderer *renderer1 = ((BYTextFieldRenderer*)textField.renderer);
     [renderer1 setBackgroundColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
-    SCBorder *border1 = [SCBorder new];
+    BYBorder *border1 = [BYBorder new];
     border1.color = [UIColor redColor];
     border1.width = width;
     border1.cornerRadius = radius;
     [renderer1 setBorder:border1 forState:UIControlStateNormal];
     
-    SCShadow *shadow2 = [[SCShadow alloc] initWithOffset:CGSizeZero radius:75.0 color:[UIColor blackColor] isInset:YES];
+    BYShadow *shadow2 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:75.0 color:[UIColor blackColor] isInset:YES];
     [renderer1 setInnerShadows:@[shadow2] forState:UIControlStateNormal];
 }
 

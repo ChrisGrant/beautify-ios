@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SCDelegateMultiplexer.h"
+#import "BYDelegateMultiplexer.h"
 
 /*
  Text offsets with UITextField are applied by subclassing UITextField and overriding textRectForBounds.
@@ -20,6 +20,6 @@
 - (void)setTextInsets:(UIEdgeInsets)insets;
 
 // gets a proxy which is used to send delegate methods invocations to multiple delegates
-- (SCDelegateMultiplexer*) getDelegateProxy;
+- (BYDelegateMultiplexer*) getDelegateProxy;
 
 @end

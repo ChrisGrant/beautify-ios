@@ -7,14 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SCViewControllerRenderer.h"
+#import "BYViewControllerRenderer.h"
 
 @interface UIViewController (Beautify)
 
 /*
  Return the renderer which enchances the UI for this view controller.
  */
-@property (readonly) SCViewControllerRenderer *renderer;
+@property (readonly) BYViewControllerRenderer *renderer;
 
 /*
  Whether this UIView is 'immune' to the streamed style, i.e. it will maintain the style defined by the

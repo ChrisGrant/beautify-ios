@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@class SCTheme;
+@class BYTheme;
 
 @interface UIView (BeautifyPrivate)
 
 -(void)createRenderer;
 
--(void)applyTheme:(SCTheme*)theme;
+-(void)applyTheme:(BYTheme*)theme;
 
 @end
