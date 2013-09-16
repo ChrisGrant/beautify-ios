@@ -7,9 +7,6 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "SCConfigParser_Private.h"
-#import "SCGradientStop.h"
-#import "UIColor+Comparison.h"
 
 @interface ConfigParserTests : XCTestCase
 @end

@@ -224,6 +224,8 @@
 		70C211B817DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
 		70C211B917DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
 		70E19557178462B20096E458 /* VisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E19555178462B20096E458 /* VisualTestViewController.m */; };
+		70F1FD0A17E34FB1006018C9 /* ConfigParserPropertyParsingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F1FD0917E34FB1006018C9 /* ConfigParserPropertyParsingTests.m */; };
+		70F1FD0B17E3683E006018C9 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52016F9AC8500D08DBB /* NSObject+Properties.m */; };
 		70F61B8617831AE100DCA906 /* SCRenderUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 70F61B8417831AE100DCA906 /* SCRenderUtils.h */; };
 		70F61B8917831AE100DCA906 /* SCRenderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F61B8517831AE100DCA906 /* SCRenderUtils.m */; };
 		70F61B8B17831B4F00DCA906 /* SCRenderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F61B8517831AE100DCA906 /* SCRenderUtils.m */; };
@@ -248,7 +250,6 @@
 		727ADCD116F9B99000D7DDCB /* UIView+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54616F9AC9C00D08DBB /* UIView+Beautify.m */; };
 		727ADCD216F9B99000D7DDCB /* UIView+BeautifyPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54816F9AC9C00D08DBB /* UIView+BeautifyPrivate.m */; };
 		727ADCD316F9B99000D7DDCB /* UIView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54A16F9AC9C00D08DBB /* UIView+Utilities.m */; };
-		727ADCE916F9B9AA00D7DDCB /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52016F9AC8500D08DBB /* NSObject+Properties.m */; };
 		727ADCEA16F9B9AA00D7DDCB /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52216F9AC8500D08DBB /* UIColor+HexColors.m */; };
 		72ADB8D016FC9DD500BE925D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ADB8CF16FC9DD500BE925D /* libicucore.dylib */; };
 		72ADB8D216FC9DDC00BE925D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ADB8D116FC9DDC00BE925D /* CFNetwork.framework */; };
@@ -434,6 +435,7 @@
 		70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableVisualTestViewController.m; sourceTree = "<group>"; };
 		70E19554178462B10096E458 /* VisualTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualTestViewController.h; sourceTree = "<group>"; };
 		70E19555178462B20096E458 /* VisualTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisualTestViewController.m; sourceTree = "<group>"; };
+		70F1FD0917E34FB1006018C9 /* ConfigParserPropertyParsingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigParserPropertyParsingTests.m; sourceTree = "<group>"; };
 		70F61B8417831AE100DCA906 /* SCRenderUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = SCRenderUtils.h; path = Beautify/SCRenderUtils.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		70F61B8517831AE100DCA906 /* SCRenderUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCRenderUtils.m; path = Beautify/SCRenderUtils.m; sourceTree = SOURCE_ROOT; };
 		70FE245D17E089D1009A7113 /* barButtonImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barButtonImage.png; sourceTree = "<group>"; };
@@ -678,6 +680,7 @@
 			isa = PBXGroup;
 			children = (
 				700E154317E30668006E124E /* ConfigParserTests.m */,
+				70F1FD0917E34FB1006018C9 /* ConfigParserPropertyParsingTests.m */,
 				700E156917E341C6006E124E /* ConfigParserUtilitiesTests.m */,
 			);
 			name = "ConfigParser Tests";
@@ -1335,7 +1338,6 @@
 				1D56088617415DB600FFD529 /* SCStyleCustomizer.m in Sources */,
 				1D56087917415D8800FFD529 /* SCLabelRenderer.m in Sources */,
 				7047013617E1C66700FEA5F5 /* UISwitch+Beautify.m in Sources */,
-				727ADCE916F9B9AA00D7DDCB /* NSObject+Properties.m in Sources */,
 				727ADCEA16F9B9AA00D7DDCB /* UIColor+HexColors.m in Sources */,
 				70C211B817DF01DB00CA110B /* TableVisualTestViewController.m in Sources */,
 				544975CF17D8B953003D7115 /* SCKnobLayer.m in Sources */,
@@ -1399,6 +1401,7 @@
 				700E154E17E320C8006E124E /* SCBorder.m in Sources */,
 				700E155E17E3217F006E124E /* SCShadowImage.m in Sources */,
 				700E156117E32190006E124E /* SCViewStyle.m in Sources */,
+				70F1FD0A17E34FB1006018C9 /* ConfigParserPropertyParsingTests.m in Sources */,
 				700E156017E3218A006E124E /* SCViewControllerStyle.m in Sources */,
 				700E155517E32104006E124E /* SCShadow.m in Sources */,
 				700E154417E30668006E124E /* ConfigParserTests.m in Sources */,
@@ -1410,6 +1413,7 @@
 				700E156217E321A1006E124E /* SCGradientStop.m in Sources */,
 				700E155D17E32179006E124E /* SCImageViewStyle.m in Sources */,
 				700E155017E320DF006E124E /* SCGradient.m in Sources */,
+				70F1FD0B17E3683E006018C9 /* NSObject+Properties.m in Sources */,
 				700E155F17E32184006E124E /* SCSwitchState.m in Sources */,
 				700E155417E320FE006E124E /* SCNineBoxedImage.m in Sources */,
 				700E155B17E32132006E124E /* SCTextFieldStyle.m in Sources */,

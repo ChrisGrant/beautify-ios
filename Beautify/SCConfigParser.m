@@ -54,15 +54,17 @@ static NSMutableArray* _objectStack;
 }
 
 +(void)parseName:(NSString *)name newInstance:(id)newInstance withDict:(NSDictionary *)dict {
-    id value = dict[name];
-    if (value == nil || value == [NSNull null]) {
-        NSLog(@"Warning: No property value found for %@.%@", [newInstance class], name);
-        return;
-    }
-    
-    value = [self parseValueForName:name dict:dict];
-    if (value) {
-        [newInstance setValue:value forKey:name];
+    if([dict isKindOfClass:[NSDictionary class]]) {
+        id value = dict[name];
+        if (value == nil || value == [NSNull null]) {
+            NSLog(@"Warning: No property value found for %@.%@", [newInstance class], name);
+            return;
+        }
+        
+        value = [self parseValueForName:name dict:dict];
+        if (value) {
+            [newInstance setValue:value forKey:name];
+        }
     }
 }
 
@@ -300,6 +302,9 @@ static NSMutableArray* _objectStack;
 #pragma mark - Beautify Property parsing
 
 +(SCTextShadow*)textShadowFromDict:(NSDictionary *)dict {
+    if(![dict.allKeys containsObject:@"offset"]) {
+        return nil;
+    }
     SCTextShadow* shadow = [SCTextShadow new];
     [shadow setOffset:[self sizeFromDict:[dict objectForMandatoryKey:@"offset"]]];
     [shadow setColor:[self colorFromDict:dict key:@"color"]];
@@ -307,13 +312,15 @@ static NSMutableArray* _objectStack;
 }
 
 +(SCStateSetter*)stateSetterFromDict:(NSDictionary *)setterDict {
-    SCStateSetter* setter = [SCStateSetter new];
+    if(![setterDict.allKeys containsObject:@"propertyName"] || ![setterDict.allKeys containsObject:@"state"]) {
+        return nil;
+    }
     
+    SCStateSetter* setter = [SCStateSetter new];
     setter.propertyName = [setterDict objectForMandatoryKey:@"propertyName"];
     setter.state = [self stateFromString:[setterDict objectForMandatoryKey:@"state"]];
     
-    // package the value into a dictionray so that it 'looks' the same as in the original JSON
-    // Yeah - this is a bit hacky!
+    // Package the value into a dictionary so that it is in the same format as the original JSON
     NSMutableDictionary* propertyDict = [NSMutableDictionary new];
     [propertyDict setValue:[setterDict objectForMandatoryKey:@"value"] forKey:setter.propertyName];
     setter.value = [self parseValueForName:setter.propertyName dict:propertyDict];
@@ -322,9 +329,13 @@ static NSMutableArray* _objectStack;
 }
 
 +(SCSwitchState*)switchStateFromDict:(NSDictionary *)setterDict {
-    SCSwitchState* state = [SCSwitchState new];
+    if(![setterDict.allKeys containsObject:@"text"] && ![setterDict.allKeys containsObject:@"textStyle"] &&
+       ![setterDict.allKeys containsObject:@"backgroundColor"] && ![setterDict.allKeys containsObject:@"textShadow"]) {
+        return nil;
+    }
     
-    state.text = [setterDict objectForMandatoryKey:@"text"];
+    SCSwitchState* state = [SCSwitchState new];
+    state.text = setterDict[@"text"];
     state.textStyle = (SCText*)[self parseStyleObjectPropertiesOnClass:[SCText class]
                                                               fromDict:[setterDict objectForMandatoryKey:@"textStyle"]];
     state.backgroundColor = [self colorFromDict:setterDict key:@"backgroundColor"];
@@ -366,8 +377,14 @@ static NSMutableArray* _objectStack;
 }
 
 +(SCShadow*)shadowFromDict:(NSDictionary *)shadowDict {
-    SCShadow *shadow = [SCShadow new];
+    if(!shadowDict ||
+       (![shadowDict.allKeys containsObject:@"radius"] &&
+        ![shadowDict.allKeys containsObject:@"offset"] &&
+        ![shadowDict.allKeys containsObject:@"color"])) {
+        return nil;
+    }
     
+    SCShadow *shadow = [SCShadow new];
     if ([[shadowDict allKeys] containsObject:@"radius"]) {
         [shadow setRadius:[shadowDict[@"radius"] doubleValue]];
     }
@@ -405,7 +422,11 @@ static NSMutableArray* _objectStack;
 
 #pragma mark Gradients
 
-+(SCGradient*)gradientFromDict:(NSDictionary *)gradientDict {
++(SCGradient*)gradientFromDict:(NSDictionary*)gradientDict {
+    if(!gradientDict || ![gradientDict.allKeys containsObject:@"radial"] || ![gradientDict.allKeys containsObject:@"stops"]) {
+        return nil;
+    }
+    
     SCGradient *gradient = [SCGradient new];
     gradient.radial = [gradientDict boolForMandatoryKey:@"radial"];
     gradient.radialOffset = [self sizeFromDict:gradientDict[@"radialOffset"]];

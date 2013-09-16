@@ -148,7 +148,7 @@
                                     @{@"p" : @0.0f, @"color" : @"FFFFFF"},
                                     @{@"r" : @0.5f}];
     NSArray *result = [SCConfigParser colorGradientFromArray:colorGradientArray];
-    XCTAssert(0 == result.count, @"Shouldn't be any items in the array - none of them are valid");
+    XCTAssertEqual((NSUInteger)0, result.count, @"Shouldn't be any items in the array - none of them are valid");
 }
 
 -(void)testPartiallyInvalidColorGradientFromArray {
