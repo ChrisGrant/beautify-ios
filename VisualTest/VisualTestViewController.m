@@ -223,12 +223,12 @@
     border.cornerRadius = 25.0f;
     
     [renderer setBorder:border forState:UIControlStateNormal];
-    [renderer setKnobBorder:border forState:UIControlStateNormal];
+    [renderer setThumbBorder:border forState:UIControlStateNormal];
 
-    [renderer setKnobBackgroundColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [renderer setThumbBackgroundColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
     SCShadow *shadow1 = [[SCShadow alloc] initWithOffset:CGSizeZero radius:100.0 color:[UIColor blackColor] isInset:YES];
-    [renderer setKnobInnerShadows:@[shadow1] forState:UIControlStateNormal];
+    [renderer setThumbInnerShadows:@[shadow1] forState:UIControlStateNormal];
     
     [self addDefaultView:s1 beautifyDefaultView:s2 andCustomisedView:s3 withHeight:30];
 }
@@ -268,18 +268,18 @@
     [renderer setMaximumTrackBackgroundGradient:[SCGradient new] forState:UIControlStateNormal];
     
     SCShadow *shadow4 = [[SCShadow alloc] initWithOffset:CGSizeZero radius:15.0 color:[UIColor yellowColor] isInset:NO];
-    [renderer setKnobOuterShadows:@[shadow4] forState:UIControlStateNormal];
+    [renderer setThumbOuterShadows:@[shadow4] forState:UIControlStateNormal];
     
-    SCBorder *knobBorder = [SCBorder new];
-    knobBorder.width = 1.0f;
-    knobBorder.color = [UIColor blackColor];
-    knobBorder.cornerRadius = 5.0f;
-    [renderer setKnobBorder:knobBorder forState:UIControlStateNormal];
+    SCBorder *thumbBorder = [SCBorder new];
+    thumbBorder.width = 1.0f;
+    thumbBorder.color = [UIColor blackColor];
+    thumbBorder.cornerRadius = 5.0f;
+    [renderer setThumbBorder:thumbBorder forState:UIControlStateNormal];
     
-    [renderer setKnobBackgroundColor:[UIColor purpleColor] forState:UIControlStateNormal];
+    [renderer setThumbBackgroundColor:[UIColor purpleColor] forState:UIControlStateNormal];
     
     SCShadow *shadow3 = [[SCShadow alloc] initWithOffset:CGSizeZero radius:10.0 color:[UIColor greenColor] isInset:YES];
-    [renderer setKnobInnerShadows:@[shadow3] forState:UIControlStateNormal];
+    [renderer setThumbInnerShadows:@[shadow3] forState:UIControlStateNormal];
             
     [self addDefaultView:s1 beautifyDefaultView:s2 andCustomisedView:s3 withHeight:25];
 }

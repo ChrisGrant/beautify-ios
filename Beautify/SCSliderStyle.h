@@ -39,13 +39,13 @@
 @property UIImage *maximumTrackImage;
 @property SCGradient *maximumTrackBackgroundGradient;
 
-// knob
-@property SCBorder *knobBorder;
-@property UIColor *knobBackgroundColor;
-@property UIImage *knobImage;
-@property SCGradient *knobBackgroundGradient;
-@property NSArray *knobInnerShadows;
-@property NSArray *knobOuterShadows;
+// thumb
+@property SCBorder *thumbBorder;
+@property UIColor *thumbBackgroundColor;
+@property UIImage *thumbImage;
+@property SCGradient *thumbBackgroundGradient;
+@property NSArray *thumbInnerShadows;
+@property NSArray *thumbOuterShadows;
 
 +(SCSliderStyle*)defaultStyle;
 

@@ -81,41 +81,41 @@
  */
 -(void)setMaximumTrackBackgroundGradient:(SCGradient*)maximumTrackBackgroundGradient forState:(UIControlState)state;
 
-#pragma mark - knob customizers
+#pragma mark - thumb customizers
 
 /*
- Set the border for the knob on the slider bar associated with this renderer.
+ Set the border for the thumb on the slider bar associated with this renderer.
  */
-- (void)setKnobBorder:(SCBorder *)knobBorder forState:(UIControlState)state;
+- (void)setThumbBorder:(SCBorder *)thumbBorder forState:(UIControlState)state;
 
 /*
- Set the background color for the knob on the slider bar associated with this renderer.
+ Set the background color for the thumb on the slider bar associated with this renderer.
  */
--(void)setKnobBackgroundColor:(UIColor*)knobBackgroundColor forState:(UIControlState)state;
+-(void)setThumbBackgroundColor:(UIColor*)thumbBackgroundColor forState:(UIControlState)state;
 
 /*
- Set the image for the knob on the the slider bar associated with this renderer.
+ Set the image for the thumb on the the slider bar associated with this renderer.
  */
--(void)setKnobImage:(UIImage*)knobImage forState:(UIControlState)state;
+-(void)setThumbImage:(UIImage*)thumbImage forState:(UIControlState)state;
 
 /*
- Set the background gradient for the knob on the slider bar associated with this renderer.
+ Set the background gradient for the thumb on the slider bar associated with this renderer.
  */
--(void)setKnobBackgroundGradient:(SCGradient*)knobBackgroundGradient forState:(UIControlState)state;
+-(void)setThumbBackgroundGradient:(SCGradient*)thumbBackgroundGradient forState:(UIControlState)state;
 
 /*
- Set the size of the knob on the slider bar associated with this renderer.
+ Set the size of the thumb on the slider bar associated with this renderer.
  */
--(void)setKnobSize:(float)knobSize forState:(UIControlState)state;
+-(void)setThumbSize:(float)thumbSize forState:(UIControlState)state;
 
 /*
- Set the inner shadows for the knob on the slider bar associated with this renderer.
+ Set the inner shadows for the thumb on the slider bar associated with this renderer.
  */
--(void)setKnobInnerShadows:(NSArray*)knobInnerShadows forState:(UIControlState)state;
+-(void)setThumbInnerShadows:(NSArray*)thumbInnerShadows forState:(UIControlState)state;
 
 /*
- Set the outer shadows for the knob on the slider bar associated with this renderer.
+ Set the outer shadows for the thumb on the slider bar associated with this renderer.
  */
--(void)setKnobOuterShadows:(NSArray*)knobOuterShadows forState:(UIControlState)state;
+-(void)setThumbOuterShadows:(NSArray*)thumbOuterShadows forState:(UIControlState)state;
 
 @end

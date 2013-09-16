@@ -1,5 +1,5 @@
 //
-//  SwitchKnobLayer.h
+//  SCThumbLayer.h
 //  Beautify
 //
 //  Created by Colin Eberhardt on 14/03/2013.
@@ -10,9 +10,9 @@
 #import "SCViewRenderer.h"
 
 /*
- * A layer that renders the knob
+ * A layer that renders the thumb
  */
-@interface SCKnobLayer  : SCStyleLayer
+@interface SCThumbLayer  : SCStyleLayer
 
 @property (readonly) SCViewRenderer* renderer;
 

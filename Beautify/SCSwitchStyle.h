@@ -20,25 +20,25 @@
  */
 @interface SCSwitchStyle : SCViewStyle
 
-// the render state of the on and off positions
+// The render state of the on and off positions
 @property SCSwitchState *onState;
 @property SCSwitchState *offState;
 
-// background
+// Background
 @property UIColor *highlightColor;
 
-// border
+// Border
 @property SCBorder *border;
 @property NSArray *innerShadows;
 @property NSArray *outerShadows;
 
-// knob
-@property SCBorder *knobBorder;
-@property UIColor *knobBackgroundColor;
-@property SCGradient *knobBackgroundGradient;
-@property NSArray *knobInnerShadows;
-@property NSArray *knobOuterShadows;
-@property UIImage *knobImage, *trackLayerImage, *borderLayerImage;
+// Thumb
+@property SCBorder *thumbBorder;
+@property UIColor *thumbBackgroundColor;
+@property SCGradient *thumbBackgroundGradient;
+@property NSArray *thumbInnerShadows;
+@property NSArray *thumbOuterShadows;
+@property UIImage *thumbImage, *trackLayerImage, *borderLayerImage;
 
 +(SCSwitchStyle*)defaultStyle;
 

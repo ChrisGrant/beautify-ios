@@ -35,14 +35,14 @@
             }
         }
     },
-    "knobBorder": {
+    "thumbBorder": {
         "width": 1,
         "color": "#00FF00",
         "cornerRadius": 15
     },
     "highlightColor": "#FFFFFF",
-    "knobBackgroundColor": "#FFFFFF",
-    "knobBackgroundGradient": {
+    "thumbBackgroundColor": "#FFFFFF",
+    "thumbBackgroundGradient": {
         "radial": false,
         "stops": [
             {
@@ -55,7 +55,7 @@
             }
         ]
     },
-    "knobInnerShadows": [
+    "thumbInnerShadows": [
         {
             "color": "#FFFFFF",
             "radius": "2",
@@ -65,7 +65,7 @@
             }
         }
     ],
-    "knobOuterShadows": [],
+    "thumbOuterShadows": [],
     "innerShadows": [
         {
             "color": "#000000",

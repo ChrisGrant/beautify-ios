@@ -47,8 +47,8 @@
         
         // Need to have a separate left and right text rect so text alignment looks correct.
 
-        // Consider the width of the knob - the text rects shouldn't intersect the knob's frame.
-        CGFloat halfKnobWidth = self.frame.size.height / 2;
+        // Consider the width of the thumb - the text rects shouldn't intersect the thumb's frame.
+        CGFloat halfThumbWidth = self.frame.size.height / 2;
         
         // Consider the radius of the corners, as the text doesn't look visually correct if we don't. Add padding when there
         // is corner radius so that the amount of visual space is equal.
@@ -57,12 +57,12 @@
         
         CGRect leftTextRect = CGRectMake(leftTrackRect.origin.x + quarterCornerRadius,
                                          leftTrackRect.origin.y,
-                                         leftTrackRect.size.width - halfKnobWidth - quarterCornerRadius,
+                                         leftTrackRect.size.width - halfThumbWidth - quarterCornerRadius,
                                          leftTrackRect.size.height);
         
-        CGRect rightTextRect = CGRectMake(rightTrackRect.origin.x + halfKnobWidth - quarterCornerRadius,
+        CGRect rightTextRect = CGRectMake(rightTrackRect.origin.x + halfThumbWidth - quarterCornerRadius,
                                           rightTrackRect.origin.y,
-                                          rightTrackRect.size.width - halfKnobWidth,
+                                          rightTrackRect.size.width - halfThumbWidth,
                                           rightTrackRect.size.height);
         
         [self drawStateText:onState inRect:leftTextRect];

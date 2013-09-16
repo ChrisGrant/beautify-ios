@@ -7,7 +7,7 @@
         "text": "NO",
         "backgroundColor": "#FFFFFF",
     },
-    "knobBackgroundColor": "#FFFFFF",
+    "thumbBackgroundColor": "#FFFFFF",
     "border": {
         "width": 2,
         "color": "#FF0000",

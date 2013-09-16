@@ -155,18 +155,18 @@
                     andText:@"OFF" backgroundColor:[UIColor whiteColor]
             textShadowColor:[UIColor blackColor] andTextShadowOffset:CGSizeMake(2, 0)];
     
-    [self assertBorder:switchStyle.knobBorder hasWidth:1 color:[UIColor greenColor] andCornerRadius:15.0f];
+    [self assertBorder:switchStyle.thumbBorder hasWidth:1 color:[UIColor greenColor] andCornerRadius:15.0f];
     
     XCTAssert([switchStyle.highlightColor isEqualToColor:[UIColor whiteColor]], @"Highlight color should be white");
-    XCTAssert([switchStyle.knobBackgroundColor isEqualToColor:[UIColor whiteColor]], @"Background color should be white");
+    XCTAssert([switchStyle.thumbBackgroundColor isEqualToColor:[UIColor whiteColor]], @"Background color should be white");
     
-    [self assertGradient:switchStyle.knobBackgroundGradient
+    [self assertGradient:switchStyle.thumbBackgroundGradient
          hasStopOneColor:[UIColor whiteColor] atPosition:1.0f
          andStopTwoColor:[UIColor blueColor] atPosition:0.0f andIsRadial:NO withRadialOffset:CGSizeZero];
     
-    [self assertShadows:switchStyle.knobInnerShadows hasOneShadowWithColor:[UIColor whiteColor]
+    [self assertShadows:switchStyle.thumbInnerShadows hasOneShadowWithColor:[UIColor whiteColor]
                  radius:2 andOffset:CGSizeMake(2, 2)];
-    XCTAssertEqual(switchStyle.knobOuterShadows.count, (NSUInteger)0, @"Should be no outer shadows");
+    XCTAssertEqual(switchStyle.thumbOuterShadows.count, (NSUInteger)0, @"Should be no outer shadows");
     
     [self assertShadows:switchStyle.innerShadows hasOneShadowWithColor:[UIColor blackColor]
                  radius:4 andOffset:CGSizeZero];

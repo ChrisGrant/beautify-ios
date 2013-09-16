@@ -109,14 +109,13 @@
 		543570F017BE32C3007FA7CE /* Beautify-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 543570EF17BE32C3007FA7CE /* Beautify-Info.plist */; };
 		543570F717BE32DB007FA7CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 543570F517BE32DB007FA7CE /* InfoPlist.strings */; };
 		543570F817BE32DB007FA7CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 543570F517BE32DB007FA7CE /* InfoPlist.strings */; };
-		544975CD17D8B953003D7115 /* SCKnobLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 544975CB17D8B953003D7115 /* SCKnobLayer.h */; };
-		544975CF17D8B953003D7115 /* SCKnobLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 544975CC17D8B953003D7115 /* SCKnobLayer.m */; };
-		544975D017D8B953003D7115 /* SCKnobLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 544975CC17D8B953003D7115 /* SCKnobLayer.m */; };
+		544975CD17D8B953003D7115 /* SCThumbLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 544975CB17D8B953003D7115 /* SCThumbLayer.h */; };
+		544975CF17D8B953003D7115 /* SCThumbLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 544975CC17D8B953003D7115 /* SCThumbLayer.m */; };
+		544975D017D8B953003D7115 /* SCThumbLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 544975CC17D8B953003D7115 /* SCThumbLayer.m */; };
 		547C32D117C4C1EE009D6289 /* SCSliderStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 547C32CF17C4C1EE009D6289 /* SCSliderStyle.h */; };
 		547C32D417C4C1EE009D6289 /* SCSliderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C32D017C4C1EE009D6289 /* SCSliderStyle.m */; };
 		547C32D817C4C24B009D6289 /* SCSliderBarBorderLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 547C32D617C4C24B009D6289 /* SCSliderBarBorderLayer.h */; };
 		54A995B7179FD29C00B9B17C /* SCDropShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A995B5179FD29C00B9B17C /* SCDropShadow.h */; };
-		54A995B9179FD29C00B9B17C /* SCDropShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* SCDropShadow.m */; };
 		54A995BA179FD29C00B9B17C /* SCDropShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* SCDropShadow.m */; };
 		54ABF0E817A286EE0070B0B6 /* UINavigationBar+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 5480C1FC17A0127000F4007D /* UINavigationBar+Beautify.h */; };
 		54ABF0EB17A286F20070B0B6 /* UINavigationBar+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480C1FD17A0127000F4007D /* UINavigationBar+Beautify.m */; };
@@ -152,7 +151,7 @@
 		700E155B17E32132006E124E /* SCTextFieldStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDECCF175656E0002F1093 /* SCTextFieldStyle.m */; };
 		700E155C17E3213C006E124E /* SCTextShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 727A86251757453800F6C6D9 /* SCTextShadow.m */; };
 		700E155D17E32179006E124E /* SCImageViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70907E6C1797E6F600F83417 /* SCImageViewStyle.m */; };
-		700E155E17E3217F006E124E /* SCShadowImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* SCShadowImage.m */; };
+		700E155E17E3217F006E124E /* SCDropShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* SCDropShadow.m */; };
 		700E155F17E32184006E124E /* SCSwitchState.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D7105317548DAE00635F21 /* SCSwitchState.m */; };
 		700E156017E3218A006E124E /* SCViewControllerStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2FE174F7F540070AFD3 /* SCViewControllerStyle.m */; };
 		700E156117E32190006E124E /* SCViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A85174157B40039F3F3 /* SCViewStyle.m */; };
@@ -256,8 +255,7 @@
 		70FF54D217E6FB0D00F9BF03 /* SCViewControllerStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2FE174F7F540070AFD3 /* SCViewControllerStyle.m */; };
 		70FF54D317E6FB1000F9BF03 /* SCViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A85174157B40039F3F3 /* SCViewStyle.m */; };
 		70FF54D417E6FB1B00F9BF03 /* SCConfigParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194BD17E1B4FA008161D3 /* SCConfigParser.m */; };
-		70FF54D517E6FB2000F9BF03 /* SCShadowImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* SCShadowImage.m */; };
-		70FF54D617E6FB2100F9BF03 /* SCShadowImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* SCShadowImage.m */; };
+		70FF54D617E6FB2100F9BF03 /* SCDropShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* SCDropShadow.m */; };
 		70FF54D717E6FB2700F9BF03 /* SCSliderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C32D017C4C1EE009D6289 /* SCSliderStyle.m */; };
 		70FF54D817E6FB2A00F9BF03 /* SCStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 729757C7173BB861003A34A5 /* SCStyle.m */; };
 		70FF54D917E6FB3300F9BF03 /* SCNineBoxedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEEF172EA5B5000C7811 /* SCNineBoxedImage.m */; };
@@ -395,8 +393,8 @@
 		543570E917BE313E007FA7CE /* UIBarButtonItem+Beautify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = "UIBarButtonItem+Beautify.h"; path = "Beautify/UIBarButtonItem+Beautify.h"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		543570EF17BE32C3007FA7CE /* Beautify-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Beautify-Info.plist"; path = "Beautify/Beautify-Info.plist"; sourceTree = SOURCE_ROOT; };
 		543570F617BE32DB007FA7CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Beautify/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
-		544975CB17D8B953003D7115 /* SCKnobLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCKnobLayer.h; path = Beautify/SCKnobLayer.h; sourceTree = SOURCE_ROOT; };
-		544975CC17D8B953003D7115 /* SCKnobLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCKnobLayer.m; path = Beautify/SCKnobLayer.m; sourceTree = SOURCE_ROOT; };
+		544975CB17D8B953003D7115 /* SCThumbLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCThumbLayer.h; path = Beautify/SCThumbLayer.h; sourceTree = SOURCE_ROOT; };
+		544975CC17D8B953003D7115 /* SCThumbLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCThumbLayer.m; path = Beautify/SCThumbLayer.m; sourceTree = SOURCE_ROOT; };
 		547C32CF17C4C1EE009D6289 /* SCSliderStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCSliderStyle.h; sourceTree = "<group>"; };
 		547C32D017C4C1EE009D6289 /* SCSliderStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCSliderStyle.m; sourceTree = "<group>"; };
 		547C32D617C4C24B009D6289 /* SCSliderBarBorderLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SCSliderBarBorderLayer.h; path = Beautify/SCSliderBarBorderLayer.h; sourceTree = SOURCE_ROOT; };
@@ -919,8 +917,8 @@
 		7247BBE6172A8D0A0020C66C /* Switch */ = {
 			isa = PBXGroup;
 			children = (
-				544975CB17D8B953003D7115 /* SCKnobLayer.h */,
-				544975CC17D8B953003D7115 /* SCKnobLayer.m */,
+				544975CB17D8B953003D7115 /* SCThumbLayer.h */,
+				544975CC17D8B953003D7115 /* SCThumbLayer.m */,
 				1DE12A981741582F0039F3F3 /* SCSwitchBorderLayer.h */,
 				1DE12A991741582F0039F3F3 /* SCSwitchBorderLayer.m */,
 				7047012817E1C23800FEA5F5 /* SCSwitchGestureView.h */,
@@ -1087,7 +1085,7 @@
 				1D464651174669C4003840E4 /* UIView+BeautifyPrivate.h in Headers */,
 				1DDB696B174A2887008A2A73 /* SCFont_Private.h in Headers */,
 				1DDB696D174A2C8E008A2A73 /* SCNineBoxedImage_Private.h in Headers */,
-				544975CD17D8B953003D7115 /* SCKnobLayer.h in Headers */,
+				544975CD17D8B953003D7115 /* SCThumbLayer.h in Headers */,
 				7047011317E1C11100FEA5F5 /* SCTopShadowRenderingLayer.h in Headers */,
 				702194CF17E1BC2E008161D3 /* SCTableViewRenderer.h in Headers */,
 				7047011217E1C11100FEA5F5 /* SCImageViewRenderer.h in Headers */,
@@ -1371,7 +1369,7 @@
 				7205345F1757A000000A27C0 /* SCNavigationBarStyle.m in Sources */,
 				7047011D17E1C14300FEA5F5 /* SCSwitchGestureView.m in Sources */,
 				720534611758EC04000A27C0 /* SCNavigationBarRenderer.m in Sources */,
-				544975D017D8B953003D7115 /* SCKnobLayer.m in Sources */,
+				544975D017D8B953003D7115 /* SCThumbLayer.m in Sources */,
 				72AE98D7175BB94800787272 /* SCTableViewCellRenderer.m in Sources */,
 				72AE98DE175BBA7E00787272 /* SCTableViewCellStyle.m in Sources */,
 				72F07948175C941100FC27DB /* SCControlRenderingLayer.m in Sources */,
@@ -1412,7 +1410,7 @@
 				727ADCEA16F9B9AA00D7DDCB /* UIColor+HexColors.m in Sources */,
 				70FF54CD17E6FAF600F9BF03 /* SCTableViewCellStyle.m in Sources */,
 				70C211B817DF01DB00CA110B /* TableVisualTestViewController.m in Sources */,
-				544975CF17D8B953003D7115 /* SCKnobLayer.m in Sources */,
+				544975CF17D8B953003D7115 /* SCThumbLayer.m in Sources */,
 				70FF54C317E6FACA00F9BF03 /* SCBorder.m in Sources */,
 				727ADCD116F9B99000D7DDCB /* UIView+Beautify.m in Sources */,
 				727ADCD216F9B99000D7DDCB /* UIView+BeautifyPrivate.m in Sources */,
@@ -1428,7 +1426,7 @@
 				7047013B17E1C6AE00FEA5F5 /* SCSliderBarShadowLayer.m in Sources */,
 				54ABF0EC17A287110070B0B6 /* UINavigationBar+Beautify.m in Sources */,
 				70FF54CC17E6FAF100F9BF03 /* SCSwitchState.m in Sources */,
-				70FF54D617E6FB2100F9BF03 /* SCShadowImage.m in Sources */,
+				70FF54D617E6FB2100F9BF03 /* SCDropShadow.m in Sources */,
 				70FF54C817E6FADB00F9BF03 /* SCLabelStyle.m in Sources */,
 				7047013317E1C41200FEA5F5 /* SCTableViewCellLabelRenderer.m in Sources */,
 				7047012E17E1C3D200FEA5F5 /* SCBeautify.m in Sources */,
@@ -1463,7 +1461,6 @@
 				70FF54CE17E6FAF900F9BF03 /* SCText.m in Sources */,
 				7205345917579C61000A27C0 /* SCNavigationBarRenderer.m in Sources */,
 				72AE98D6175BB94800787272 /* SCTableViewCellRenderer.m in Sources */,
-				54A995B9179FD29C00B9B17C /* SCDropShadow.m in Sources */,
 				70E19557178462B20096E458 /* VisualTestViewController.m in Sources */,
 				72F07947175C941100FC27DB /* SCControlRenderingLayer.m in Sources */,
 				72F07955175C9F2900FC27DB /* UITableViewCell+Beautify.m in Sources */,
@@ -1491,7 +1488,7 @@
 				700E156317E321A6006E124E /* SCStyle.m in Sources */,
 				700E154F17E320D7006E124E /* SCButtonStyle.m in Sources */,
 				700E154E17E320C8006E124E /* SCBorder.m in Sources */,
-				700E155E17E3217F006E124E /* SCShadowImage.m in Sources */,
+				700E155E17E3217F006E124E /* SCDropShadow.m in Sources */,
 				700E156117E32190006E124E /* SCViewStyle.m in Sources */,
 				70F1FD0A17E34FB1006018C9 /* ConfigParserPropertyParsingTests.m in Sources */,
 				70FF54C217E6FA8900F9BF03 /* SCTheme.m in Sources */,

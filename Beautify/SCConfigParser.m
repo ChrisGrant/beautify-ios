@@ -219,7 +219,7 @@ static NSMutableArray* _objectStack;
             NSLog(@"Error: Could not parse %@", [self generateObjectStackTrace:nil]);
         }
     }
-    else if ([name isEqualToString:@"knobImage"]) {
+    else if ([name isEqualToString:@"thumbImage"]) {
         value = [self imageFromBase64String:dict[name]];
         if (value == nil) {
             NSLog(@"Error: Could not parse %@", [self generateObjectStackTrace:nil]);

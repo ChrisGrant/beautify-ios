@@ -32,9 +32,9 @@
         offState.text = @"";
         offState.backgroundColor = [UIColor clearColor];
         
-        style.knobBackgroundColor = [UIColor whiteColor];
-        style.knobBorder = [[SCBorder alloc] initWithColor:[UIColor clearColor] width:0 radius:15];
-        style.knobOuterShadows = @[[[SCShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:3 color:[UIColor colorWithWhite:0.0 alpha:0.5] isInset:NO]];
+        style.thumbBackgroundColor = [UIColor whiteColor];
+        style.thumbBorder = [[SCBorder alloc] initWithColor:[UIColor clearColor] width:0 radius:15];
+        style.thumbOuterShadows = @[[[SCShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:3 color:[UIColor colorWithWhite:0.0 alpha:0.5] isInset:NO]];
     }
     else {
         style.border = [[SCBorder alloc] initWithColor:[UIColor clearColor] width:0 radius:15];
@@ -53,11 +53,11 @@
         
         style.innerShadows = @[[[SCShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:4 color:[UIColor blackColor] isInset:YES]];
         
-        style.knobBackgroundGradient = [[SCGradient alloc] initWithStops:@[[[SCGradientStop alloc] initWithColor:[UIColor colorWithWhite:0.78 alpha:1.0] at:0.0],
+        style.thumbBackgroundGradient = [[SCGradient alloc] initWithStops:@[[[SCGradientStop alloc] initWithColor:[UIColor colorWithWhite:0.78 alpha:1.0] at:0.0],
                                                                            [[SCGradientStop alloc] initWithColor:[UIColor colorWithWhite:0.9 alpha:1.0] at:1.0]]];
-        style.knobInnerShadows = @[[[SCShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:2.0 color:[UIColor whiteColor] isInset:YES]];
-        style.knobBorder = [[SCBorder alloc] initWithColor:[UIColor colorWithWhite:0.5 alpha:1.0] width:1 radius:15];
-        style.knobOuterShadows = @[[[SCShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:3 color:[UIColor colorWithWhite:0.0 alpha:0.5] isInset:NO]];
+        style.thumbInnerShadows = @[[[SCShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:2.0 color:[UIColor whiteColor] isInset:YES]];
+        style.thumbBorder = [[SCBorder alloc] initWithColor:[UIColor colorWithWhite:0.5 alpha:1.0] width:1 radius:15];
+        style.thumbOuterShadows = @[[[SCShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:3 color:[UIColor colorWithWhite:0.0 alpha:0.5] isInset:NO]];
     }
     return style;
 }

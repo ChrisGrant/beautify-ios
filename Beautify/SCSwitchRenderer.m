@@ -11,7 +11,7 @@
 #import "SCViewRenderer_Private.h"
 #import "SCSwitchRenderer.h"
 #import "SCSwitchBorderLayer.h"
-#import "SCKnobLayer.h"
+#import "SCThumbLayer.h"
 #import "SCSwitchToggleLayer.h"
 #import "SCRenderUtils.h"
 #import "SCSwitchShadowLayer.h"
@@ -24,7 +24,7 @@
 @implementation SCSwitchRenderer {
     CAShapeLayer* _clipLayerShape;
     CALayer* _clipLayer;
-    SCKnobLayer* _knobLayer;
+    SCThumbLayer* _thumbLayer;
     SCSwitchBorderLayer* _borderLayer;
     SCSwitchShadowLayer* _shadowLayer;
     SCSwitchToggleLayer* _toggleLayer;
@@ -89,11 +89,11 @@
     _trackLength = (size.width - size.height/2)*2;
     _toggleOffset = size.width - size.height;
     
-    // create the knob layer
-    _knobLayer = [[SCKnobLayer alloc] initWithRenderer:self];
-    _knobLayer.masksToBounds = NO;
-    _knobLayer.frame = [self knobFrame];
-    [_knobLayer setNeedsDisplay];
+    // create the thumb layer
+    _thumbLayer = [[SCThumbLayer alloc] initWithRenderer:self];
+    _thumbLayer.masksToBounds = NO;
+    _thumbLayer.frame = [self thumbFrame];
+    [_thumbLayer setNeedsDisplay];
     
     // create the border layer
     _borderLayer = [[SCSwitchBorderLayer alloc] initWithRenderer:self];
@@ -135,8 +135,8 @@
     // add the border layer
     [swtch.layer addSublayer:_borderLayer];
     
-    // add the knob layer
-    [swtch.layer addSublayer:_knobLayer];
+    // add the thumb layer
+    [swtch.layer addSublayer:_thumbLayer];
     
     // Put a view on top for the gestures - otherwise it will be the wrong size!
     _gestureView = [SCSwitchGestureView new];
@@ -189,37 +189,37 @@
 }
 
 -(void)updateLayerLocations {
-    _knobLayer.frame = [self knobFrame];
+    _thumbLayer.frame = [self thumbFrame];
     _toggleLayer.frame = [self toggleLayerFrame];
 }
 
--(CGRect)knobFrame {
+-(CGRect)thumbFrame {
     CGRect bounds = [self adaptedBounds];
     float xOrigin = bounds.origin.x + bounds.size.height / 2;
     float yOrigin = bounds.origin.y + bounds.size.height / 2;
     float halfWidth = bounds.size.height / 2;
     
-    // compute the centre point of the knob
-    CGPoint knobCentrePoint = CGPointMake(xOrigin, yOrigin);
+    // compute the centre point of the thumb
+    CGPoint thumbCentrePoint = CGPointMake(xOrigin, yOrigin);
     
     // adjust for whether the switch is currently on or off
-    knobCentrePoint.x += ([self adaptedSwitch].isOn) ? _toggleOffset : 0;
+    thumbCentrePoint.x += ([self adaptedSwitch].isOn) ? _toggleOffset : 0;
     
     if (_panning) {
         // offset based on current panning state
-        knobCentrePoint.x += _panLocation.x;
+        thumbCentrePoint.x += _panLocation.x;
         
         // limit the x range
-        if (knobCentrePoint.x + halfWidth > bounds.size.width) {
-            knobCentrePoint.x = xOrigin + _toggleOffset;
+        if (thumbCentrePoint.x + halfWidth > bounds.size.width) {
+            thumbCentrePoint.x = xOrigin + _toggleOffset;
         }
-        else if (knobCentrePoint.x - halfWidth < 0) {
-            knobCentrePoint.x = xOrigin;
+        else if (thumbCentrePoint.x - halfWidth < 0) {
+            thumbCentrePoint.x = xOrigin;
         }
     }
     
     // compute the overall frame
-    return CGRectMake(knobCentrePoint.x - halfWidth, knobCentrePoint.y - halfWidth,
+    return CGRectMake(thumbCentrePoint.x - halfWidth, thumbCentrePoint.y - halfWidth,
                       bounds.size.height, bounds.size.height);
 }
 
@@ -264,7 +264,7 @@
     _borderLayer.frame = bounds;
     _shadowLayer.frame = [self adaptedBounds];
     _toggleLayer.frame = [self toggleLayerFrame];
-    _knobLayer.frame = [self knobFrame];
+    _thumbLayer.frame = [self thumbFrame];
     
     // border radius affects the clip of the toggle layer
     _clipLayerShape.path = [SCSwitchBorderLayer borderPathForBounds:_borderLayer.bounds andBorder:[self propertyValueForNameWithCurrentState:@"border"]].CGPath;
@@ -274,7 +274,7 @@
     [_borderLayer setNeedsDisplay];
     [_shadowLayer setNeedsDisplay];
     [_toggleLayer setNeedsDisplay];
-    [_knobLayer setNeedsDisplay];
+    [_thumbLayer setNeedsDisplay];
     
     [super configureFromStyle];
     
@@ -383,38 +383,38 @@
     [self setPropertyValue:borderLayerImage forName:@"borderLayerImage" forState:state];
 }
 
-// knob
-- (void)setKnobBorder:(SCBorder *)border forState:(UIControlState)state {
-    [self setPropertyValue:border forName:@"knobBorder" forState:state];
+// thumb
+- (void)setThumbBorder:(SCBorder *)border forState:(UIControlState)state {
+    [self setPropertyValue:border forName:@"thumbBorder" forState:state];
 }
 
--(void)setKnobBackgroundColor:(UIColor*)knobBackgroundColor forState:(UIControlState)state {
-    [self setPropertyValue:knobBackgroundColor forName:@"knobBackgroundColor" forState:state];
+-(void)setThumbBackgroundColor:(UIColor*)thumbBackgroundColor forState:(UIControlState)state {
+    [self setPropertyValue:thumbBackgroundColor forName:@"thumbBackgroundColor" forState:state];
 }
 
--(void)setKnobHighlightColor:(UIColor*)knobHighlightColor forState:(UIControlState)state {
-    [self setPropertyValue:knobHighlightColor forName:@"knobHighlightColor" forState:state];
+-(void)setThumbHighlightColor:(UIColor*)thumbHighlightColor forState:(UIControlState)state {
+    [self setPropertyValue:thumbHighlightColor forName:@"thumbHighlightColor" forState:state];
 }
 
--(void)setKnobBackgroundGradient:(SCGradient*)knobBackgroundGradient forState:(UIControlState)state {
-    [self setPropertyValue:knobBackgroundGradient forName:@"knobBackgroundGradient" forState:state];
+-(void)setThumbBackgroundGradient:(SCGradient*)thumbBackgroundGradient forState:(UIControlState)state {
+    [self setPropertyValue:thumbBackgroundGradient forName:@"thumbBackgroundGradient" forState:state];
 }
 
--(void)setKnobSize:(float)knobSize forState:(UIControlState)state {
-    [self setPropertyValue:[NSValue value:&knobSize
-                             withObjCType:@encode(float)] forName:@"knobSize" forState:state];
+-(void)setThumbSize:(float)thumbSize forState:(UIControlState)state {
+    [self setPropertyValue:[NSValue value:&thumbSize
+                             withObjCType:@encode(float)] forName:@"thumbSize" forState:state];
 }
 
--(void)setKnobInnerShadows:(NSArray*)knobInnerShadows forState:(UIControlState)state {
-    [self setPropertyValue:knobInnerShadows forName:@"knobInnerShadows" forState:state];
+-(void)setThumbInnerShadows:(NSArray*)thumbInnerShadows forState:(UIControlState)state {
+    [self setPropertyValue:thumbInnerShadows forName:@"thumbInnerShadows" forState:state];
 }
 
--(void)setKnobOuterShadows:(NSArray*)knobOuterShadows forState:(UIControlState)state {
-    [self setPropertyValue:knobOuterShadows forName:@"knobOuterShadows" forState:state];
+-(void)setThumbOuterShadows:(NSArray*)thumbOuterShadows forState:(UIControlState)state {
+    [self setPropertyValue:thumbOuterShadows forName:@"thumbOuterShadows" forState:state];
 }
 
--(void)setKnobImage:(UIImage*)knobImage forState:(UIControlState)state {
-    [self setPropertyValue:knobImage forName:@"knobImage" forState:state];
+-(void)setThumbImage:(UIImage*)thumbImage forState:(UIControlState)state {
+    [self setPropertyValue:thumbImage forName:@"thumbImage" forState:state];
 }
 
 

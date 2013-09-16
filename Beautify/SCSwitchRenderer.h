@@ -65,41 +65,41 @@
  */
 -(void)setBorderLayerImage:(UIImage*)borderLayerImage forState:(UIControlState)state;
 
-#pragma mark - Knob customizers
+#pragma mark - Thumb customizers
 
 /*
- Set the border for the knob on the switch associated with this renderer.
+ Set the border for the thumb on the switch associated with this renderer.
  */
--(void)setKnobBorder:(SCBorder*)border forState:(UIControlState)state;
+-(void)setThumbBorder:(SCBorder*)border forState:(UIControlState)state;
 
 /*
- Set the background color for the knob on the switch associated with this renderer.
+ Set the background color for the thumb on the switch associated with this renderer.
  */
--(void)setKnobBackgroundColor:(UIColor*)knobBackgroundColor forState:(UIControlState)state;
+-(void)setThumbBackgroundColor:(UIColor*)thumbBackgroundColor forState:(UIControlState)state;
 
 /*
- Set the highlight color for the knob on the switch associated with this renderer.
+ Set the highlight color for the thumb on the switch associated with this renderer.
  */
--(void)setKnobHighlightColor:(UIColor*)knobHighlightColor forState:(UIControlState)state;
+-(void)setThumbHighlightColor:(UIColor*)thumbHighlightColor forState:(UIControlState)state;
 
 /*
- Set the background gradient for the knob on the switch associated with this renderer.
+ Set the background gradient for the thumb on the switch associated with this renderer.
  */
--(void)setKnobBackgroundGradient:(SCGradient*)knobBackgroundGradient forState:(UIControlState)state;
+-(void)setThumbBackgroundGradient:(SCGradient*)thumbBackgroundGradient forState:(UIControlState)state;
 
 /*
- Set the inner shadows for the knob on the switch associated with this renderer.
+ Set the inner shadows for the thumb on the switch associated with this renderer.
  */
--(void)setKnobInnerShadows:(NSArray*)knobInnerShadows forState:(UIControlState)state;
+-(void)setThumbInnerShadows:(NSArray*)thumbInnerShadows forState:(UIControlState)state;
 
 /*
- Set the outer shadows for the knob on the switch associated with this renderer.
+ Set the outer shadows for the thumb on the switch associated with this renderer.
  */
--(void)setKnobOuterShadows:(NSArray*)knobOuterShadows forState:(UIControlState)state;
+-(void)setThumbOuterShadows:(NSArray*)thumbOuterShadows forState:(UIControlState)state;
 
 /*
- Set the image for the knob on the switch associated with this renderer.
+ Set the image for the thumb on the switch associated with this renderer.
  */
--(void)setKnobImage:(UIImage*)knobImage forState:(UIControlState)state;
+-(void)setThumbImage:(UIImage*)thumbImage forState:(UIControlState)state;
 
 @end

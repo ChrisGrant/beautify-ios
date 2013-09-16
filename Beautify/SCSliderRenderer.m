@@ -12,7 +12,7 @@
 #import "SCViewRenderer_Private.h"
 #import "SCSliderRenderer.h"
 #import "SCSliderBarBorderLayer.h"
-#import "SCKnobLayer.h"
+#import "SCThumbLayer.h"
 #import "SCSliderMinimumTrackLayer.h"
 #import "SCSliderMaximumTrackLayer.h"
 #import "SCRenderUtils.h"
@@ -30,7 +30,7 @@
     SCSliderBarBorderLayer *_barBorderLayer;
     SCSliderMinimumTrackLayer *_minimumTrackLayer;
     SCSliderMaximumTrackLayer *_maximumTrackLayer;
-    SCKnobLayer *_knobLayer;
+    SCThumbLayer *_thumbLayer;
     
     // User interaction flags
     BOOL _tapped;
@@ -41,7 +41,7 @@
     BOOL _highlighted;
     
     float _sliderThickness;
-    float _knobSize;
+    float _thumbSize;
 }
 
 #define WIDTH_PADDING 3
@@ -53,11 +53,11 @@
         
         if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")){
             _sliderThickness = 3;
-            _knobSize = 30;
+            _thumbSize = 30;
         }
         else {
             _sliderThickness = 10;
-            _knobSize = 24;
+            _thumbSize = 24;
         }
         
         [self setup:slider];
@@ -141,14 +141,14 @@
     // add the bar border layer
     [slider.layer addSublayer:_barBorderLayer];
     
-    // create the knob layer
-    _knobLayer = [[SCKnobLayer alloc] initWithRenderer:self];
-    _knobLayer.masksToBounds = NO;
-    _knobLayer.frame = [self knobFrame];
-    [_knobLayer setNeedsDisplay];
+    // create the thumb layer
+    _thumbLayer = [[SCThumbLayer alloc] initWithRenderer:self];
+    _thumbLayer.masksToBounds = NO;
+    _thumbLayer.frame = [self thumbFrame];
+    [_thumbLayer setNeedsDisplay];
     
-    // add the knob layer
-    [slider.layer addSublayer:_knobLayer];
+    // add the thumb layer
+    [slider.layer addSublayer:_thumbLayer];
     slider.layer.masksToBounds = NO;
     
     // pan gesture for toggling the slider
@@ -173,7 +173,7 @@
         // Calculate the touch's start location based on the translation from the first touch and the current location.
         CGPoint startLocation = CGPointMake(currentTouchLoc.x - touchTranslation.x, currentTouchLoc.y - touchTranslation.y);
         
-        CGRect thumbFrame = CGRectInset([self knobFrame], -15, -15); // Add padding so touch doesn't have to be exact.
+        CGRect thumbFrame = CGRectInset([self thumbFrame], -15, -15); // Add padding so touch doesn't have to be exact.
         if(!CGRectContainsPoint(thumbFrame, startLocation)) {
             return NO;
         }
@@ -186,49 +186,49 @@
 }
 
 -(void)updateLayerLocations {
-    _knobLayer.frame = [self knobFrame];
+    _thumbLayer.frame = [self thumbFrame];
     _minimumTrackLayer.frame = [self minimumTrackLayerFrame];
     _maximumTrackLayer.frame = [self maximumTrackLayerFrame];
 }
 
--(CGRect)knobFrame{
+-(CGRect)thumbFrame{
     UISlider *slider = [self adaptedSlider];
     CGRect bounds = slider.bounds;
     float xOrigin = bounds.origin.x + bounds.size.height / 2;
     float yOrigin = bounds.origin.y + bounds.size.height / 2;
     
-    // compute the centre point of the knob
-    CGPoint knobCentrePoint = CGPointMake(xOrigin, yOrigin);
+    // compute the centre point of the thumb
+    CGPoint thumbCentrePoint = CGPointMake(xOrigin, yOrigin);
     
-    knobCentrePoint.x += _panLocation.x;
+    thumbCentrePoint.x += _panLocation.x;
     
     // limit the x range
-    if (knobCentrePoint.x <= slider.bounds.origin.x + _knobSize) {
-        knobCentrePoint.x = slider.bounds.origin.x + _knobSize;
+    if (thumbCentrePoint.x <= slider.bounds.origin.x + _thumbSize) {
+        thumbCentrePoint.x = slider.bounds.origin.x + _thumbSize;
     }
-    else if (knobCentrePoint.x >= slider.bounds.size.width) {
-        knobCentrePoint.x = slider.bounds.size.width;
+    else if (thumbCentrePoint.x >= slider.bounds.size.width) {
+        thumbCentrePoint.x = slider.bounds.size.width;
     }
     
-    [slider setValue:slider.maximumValue * ((knobCentrePoint.x - _knobSize) / (slider.bounds.size.width - _knobSize))];
+    [slider setValue:slider.maximumValue * ((thumbCentrePoint.x - _thumbSize) / (slider.bounds.size.width - _thumbSize))];
     
     // compute the overall frame
-    return CGRectMake(knobCentrePoint.x - _knobSize, knobCentrePoint.y - (_knobSize / 2), _knobSize, _knobSize);
+    return CGRectMake(thumbCentrePoint.x - _thumbSize, thumbCentrePoint.y - (_thumbSize / 2), _thumbSize, _thumbSize);
 }
 
 -(CGRect)minimumTrackLayerFrame {
     CGRect bounds = [self adaptedSlider].bounds;
-    CGRect knobLocation = [self knobFrame];
+    CGRect thumbLocation = [self thumbFrame];
     bounds.size.height = _sliderThickness;
-    bounds.size.width = (knobLocation.origin.x + (knobLocation.size.width / 2));
+    bounds.size.width = (thumbLocation.origin.x + (thumbLocation.size.width / 2));
     return bounds;
 }
 
 -(CGRect)maximumTrackLayerFrame {
     CGRect bounds = [self adaptedSlider].bounds;
-    CGRect knobLocation = [self knobFrame];
+    CGRect thumbLocation = [self thumbFrame];
     bounds.size.height = _sliderThickness;
-    bounds.origin.x = (knobLocation.origin.x + (knobLocation.size.width / 2));
+    bounds.origin.x = (thumbLocation.origin.x + (thumbLocation.size.width / 2));
     bounds.size.width = bounds.size.width - _minimumTrackLayer.bounds.size.width;
     return bounds;
 }
@@ -258,7 +258,7 @@
     _minimumTrackLayer.frame = [self  minimumTrackLayerFrame];
     _maximumTrackLayer.frame = [self maximumTrackLayerFrame];
     _barBorderLayer.frame = bounds;
-    _knobLayer.frame = [self knobFrame];
+    _thumbLayer.frame = [self thumbFrame];
     
     _clipLayerShape.path = [SCSwitchBorderLayer borderPathForBounds:_barBorderLayer.bounds
                                                           andBorder:[self propertyValueForNameWithCurrentState:@"barBorder"]].CGPath;
@@ -269,7 +269,7 @@
     [_clipLayerShape setNeedsDisplay];
     [_clipLayer setNeedsDisplay];
     [_barBorderLayer setNeedsDisplay];
-    [_knobLayer setNeedsDisplay];
+    [_thumbLayer setNeedsDisplay];
     
     [super configureFromStyle];
     
@@ -364,34 +364,34 @@
     [self setPropertyValue:maximumTrackBackgroundGradient forName:@"maximumTrackBackgroundGradient" forState:state];
 }
 
-// knob
-- (void)setKnobBorder:(SCBorder *)knobBorder forState:(UIControlState)state {
-    [self setPropertyValue:knobBorder forName:@"knobBorder" forState:state];
+// thumb
+- (void)setThumbBorder:(SCBorder *)thumbBorder forState:(UIControlState)state {
+    [self setPropertyValue:thumbBorder forName:@"thumbBorder" forState:state];
 }
 
--(void)setKnobBackgroundColor:(UIColor*)knobBackgroundColor forState:(UIControlState)state {
-    [self setPropertyValue:knobBackgroundColor forName:@"knobBackgroundColor" forState:state];
+-(void)setThumbBackgroundColor:(UIColor*)thumbBackgroundColor forState:(UIControlState)state {
+    [self setPropertyValue:thumbBackgroundColor forName:@"thumbBackgroundColor" forState:state];
 }
 
--(void)setKnobImage:(UIImage*)knobImage forState:(UIControlState)state {
-    [self setPropertyValue:knobImage forName:@"knobImage" forState:state];
+-(void)setThumbImage:(UIImage*)thumbImage forState:(UIControlState)state {
+    [self setPropertyValue:thumbImage forName:@"thumbImage" forState:state];
 }
 
--(void)setKnobBackgroundGradient:(SCGradient*)knobBackgroundGradient forState:(UIControlState)state {
-    [self setPropertyValue:knobBackgroundGradient forName:@"knobBackgroundGradient" forState:state];
+-(void)setThumbBackgroundGradient:(SCGradient*)thumbBackgroundGradient forState:(UIControlState)state {
+    [self setPropertyValue:thumbBackgroundGradient forName:@"thumbBackgroundGradient" forState:state];
 }
 
--(void)setKnobSize:(float)knobSize forState:(UIControlState)state {
-    [self setPropertyValue:[NSValue value:&knobSize
-                             withObjCType:@encode(float)] forName:@"knobSize" forState:state];
+-(void)setThumbSize:(float)thumbSize forState:(UIControlState)state {
+    [self setPropertyValue:[NSValue value:&thumbSize
+                             withObjCType:@encode(float)] forName:@"thumbSize" forState:state];
 }
 
--(void)setKnobInnerShadows:(NSArray*)knobInnerShadows forState:(UIControlState)state {
-    [self setPropertyValue:knobInnerShadows forName:@"knobInnerShadows" forState:state];
+-(void)setThumbInnerShadows:(NSArray*)thumbInnerShadows forState:(UIControlState)state {
+    [self setPropertyValue:thumbInnerShadows forName:@"thumbInnerShadows" forState:state];
 }
 
--(void)setKnobOuterShadows:(NSArray*)knobOuterShadows forState:(UIControlState)state {
-    [self setPropertyValue:knobOuterShadows forName:@"knobOuterShadows" forState:state];
+-(void)setThumbOuterShadows:(NSArray*)thumbOuterShadows forState:(UIControlState)state {
+    [self setPropertyValue:thumbOuterShadows forName:@"thumbOuterShadows" forState:state];
 }
 
 @end
