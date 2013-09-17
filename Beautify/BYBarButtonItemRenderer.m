@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Colin Eberhardt. All rights reserved.
 //
 
-#import "BYBarButtonItemRenderer.h"
+#import "BYBarButtonItemRenderer_Private.h"
 #import "UIView+Utilities.h"
 #import "BYStyleRenderer_Private.h"
 #import "BYViewRenderer_Private.h"
@@ -24,6 +24,10 @@
 #import "BYVersionUtils.h"
 
 #import "BYBarButtonStyle.h"
+#import "BYThemeManager.h"
+
+#define BACK_BUTTON_ARROW_BASE_START_POSITION 12.0
+#define BACK_BUTTON_CORNER_PADDING 5.0
 
 @implementation BYBarButtonItemRenderer{
     BYLabelRenderer *_labelRenderer;
@@ -33,18 +37,14 @@
 
 -(id)initWithView:(id)barButtonItem theme:(BYTheme*)theme {
     UIButton *button = (UIButton*)[barButtonItem valueForKey:@"view"];
-    
-    if(button) {
-        if(self = [super initWithView:button theme:theme]) {
-            // Hijack the button rendering
-            [self setup:barButtonItem theme:theme];
-        }
+    if(self = [super initWithView:button theme:theme]) {
+        // Hijack the button rendering
+        [self setup:barButtonItem theme:theme];
     }
     return self;
 }
 
 -(void)setup:(UIBarButtonItem*)barButtonItem theme:(BYTheme*)theme {
-    
     _barButtonItem = barButtonItem;
     
     // Remove bezel from UIBarButtonItem
@@ -92,6 +92,122 @@
         
         [super configureFromStyle];
     }
+}
+
+-(void)applyBackButtonStyleForState:(UIControlState)state {
+    BYText *textStyle = [self propertyValueForName:@"title" forState:state];;
+    BYTextShadow* textShadow = [self propertyValueForName:@"titleShadow" forState:state];
+    BYGradient *gradient = [self propertyValueForName:@"backgroundGradient" forState:state];
+    BYNineBoxedImage *backgroundImage = [self propertyValueForName:@"backgroundImage" forState:state];
+    BYBorder *border = [self propertyValueForName:@"border" forState:state];
+    NSArray *innerShadows = [self propertyValueForName:@"innerShadows" forState:state];
+    NSArray *outerShadows = [self propertyValueForName:@"outerShadows" forState:state];
+    
+    // background image or shaodows, gradiant and border
+    CGSize newSize = CGSizeMake(48, 31);
+    UIImage *newImage;
+    
+    if(backgroundImage) {
+        UIGraphicsBeginImageContext(newSize);
+        [backgroundImage.data drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+        newImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    }
+    else {
+        CGRect rect = CGRectMake(0, 0, newSize.width, newSize.height);
+        CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+        
+        UIGraphicsBeginImageContextWithOptions(newSize, NO, 0);
+        
+        // draw back button shaped bezier path
+        UIBezierPath *aPath = [UIBezierPath bezierPath];
+        [aPath moveToPoint:CGPointMake(BACK_BUTTON_ARROW_BASE_START_POSITION, 0.0)];
+        [aPath addArcWithCenter:CGPointMake((newSize.width - BACK_BUTTON_CORNER_PADDING), BACK_BUTTON_CORNER_PADDING)
+                         radius:border.cornerRadius startAngle:((3 * M_PI) / 2) endAngle:0 clockwise:YES];
+        [aPath addArcWithCenter:CGPointMake((newSize.width - BACK_BUTTON_CORNER_PADDING), (newSize.height - BACK_BUTTON_CORNER_PADDING))
+                         radius:border.cornerRadius startAngle:0 endAngle:(M_PI / 2) clockwise:YES];
+        [aPath addLineToPoint:CGPointMake(BACK_BUTTON_ARROW_BASE_START_POSITION, newSize.height)];
+        [aPath addLineToPoint:CGPointMake(1.0, (newSize.height / 2))];
+        [aPath closePath];
+        [border.color setStroke];
+        [aPath setLineWidth:border.width];
+        [aPath stroke];
+        [aPath addClip];
+        
+        CGContextRef context = UIGraphicsGetCurrentContext();
+        
+        // render outer shadows
+        RenderOuterShadows(context, border, outerShadows, rect);
+        
+        // render gradient
+        RenderGradient(gradient, context, rect);
+        
+        // Render Inner Shadows
+        for (BYShadow *shadow in innerShadows) {
+            // Create a larger rectangle, which we're going to subtract the visible path from and apply a shadow
+            CGMutablePathRef path = CGPathCreateMutable();
+            
+            //(when drawing the shadow for a path whichs bounding box is not known pass "CGPathGetPathBoundingBox(visiblePath)" instead of "bounds" in the following line:)
+            //-42 cuould just be any offset > 0
+            CGPathAddRect(path, NULL, CGRectInset(aPath.bounds, -42, -42));
+            
+            // Add the visible path (so that it gets subtracted for the shadow)
+            CGPathAddPath(path, NULL, aPath.CGPath);
+            CGPathCloseSubpath(path);
+            
+            // Add the visible paths as the clipping path to the context
+            CGContextAddPath(context, aPath.CGPath);
+            CGContextClip(context);
+            
+            // Now setup the shadow properties on the context
+            CGContextSaveGState(context);
+            CGContextSetShadowWithColor(context, shadow.offset, shadow.radius, [shadow.color CGColor]);
+            
+            // Now fill the rectangle, so the shadow gets drawn
+            [shadow.color setFill];
+            CGContextSaveGState(context);
+            CGContextAddPath(context, path);
+            CGContextEOFillPath(context);
+        }
+        
+        // render border
+        CGContextAddPath(context, aPath.CGPath);
+        CGContextSetStrokeColorWithColor(context, border.color.CGColor);
+        CGContextSetLineWidth(context, border.width);
+        CGContextStrokePath(context);
+        
+        newImage = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
+        
+        CGColorSpaceRelease(colorspace);
+    }
+    
+    [[UIBarButtonItem appearance] setBackButtonBackgroundImage:newImage forState:state barMetrics:UIBarMetricsDefault];
+    
+    // Set the text attributes
+    NSMutableDictionary *dictionary = [NSMutableDictionary new];
+    if(textStyle.font) {
+        [dictionary setObject:[UIFont fontWithName:textStyle.font.name size:textStyle.font.size] forKey:UITextAttributeFont];
+    }
+    
+    if(textStyle.color) {
+        [dictionary setObject:textStyle.color forKey:UITextAttributeTextColor];
+    }
+    
+    if(textShadow.color) {
+        [dictionary setObject:textShadow.color forKey:UITextAttributeTextShadowColor];
+    }
+    
+    [dictionary setObject:[NSValue valueWithUIOffset: UIOffsetMake(textShadow.offset.width, textShadow.offset.height)]
+                   forKey:UITextAttributeTextShadowOffset];
+    
+    [[UIBarButtonItem appearance] setTitleTextAttributes:dictionary forState:state];
+}
+
+-(void)applyBackButtonStyles {
+    [self applyBackButtonStyleForState:UIControlStateNormal];
+    [self applyBackButtonStyleForState:UIControlStateHighlighted];
 }
 
 -(id)styleFromTheme:(BYTheme*)theme {

@@ -79,6 +79,9 @@
     // Returns image set as associatedObject if not immuneToBeautify
     [self swizzleMethod:[UIImageView class] method:@"image"];
     
+    // Used to style the back button item
+    [self swizzleMethod:[UINavigationBar class] method:@"pushNavigationItem:"];
+    
     [self swizzleMethod:[UISwitch class] method:@"setFrame:"];
 }
 
