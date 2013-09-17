@@ -34,7 +34,7 @@
         
         style.thumbBackgroundColor = [UIColor whiteColor];
         style.thumbBorder = [[BYBorder alloc] initWithColor:[UIColor clearColor] width:0 radius:15];
-        style.thumbOuterShadows = @[[[BYShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:3 color:[UIColor colorWithWhite:0.0 alpha:0.5] isInset:NO]];
+        style.thumbOuterShadows = @[[[BYShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:3 color:[UIColor colorWithWhite:0.0 alpha:0.5]]];
     }
     else {
         style.border = [[BYBorder alloc] initWithColor:[UIColor clearColor] width:0 radius:15];
@@ -51,13 +51,13 @@
         offState.text = @"OFF";
         offState.backgroundColor = [UIColor colorWithWhite:0.93 alpha:1.0f];
         
-        style.innerShadows = @[[[BYShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:4 color:[UIColor blackColor] isInset:YES]];
+        style.innerShadows = @[[[BYShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:4 color:[UIColor blackColor]]];
         
         style.thumbBackgroundGradient = [[BYGradient alloc] initWithStops:@[[[BYGradientStop alloc] initWithColor:[UIColor colorWithWhite:0.78 alpha:1.0] at:0.0],
                                                                            [[BYGradientStop alloc] initWithColor:[UIColor colorWithWhite:0.9 alpha:1.0] at:1.0]]];
-        style.thumbInnerShadows = @[[[BYShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:2.0 color:[UIColor whiteColor] isInset:YES]];
+        style.thumbInnerShadows = @[[[BYShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:2.0 color:[UIColor whiteColor]]];
         style.thumbBorder = [[BYBorder alloc] initWithColor:[UIColor colorWithWhite:0.5 alpha:1.0] width:1 radius:15];
-        style.thumbOuterShadows = @[[[BYShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:3 color:[UIColor colorWithWhite:0.0 alpha:0.5] isInset:NO]];
+        style.thumbOuterShadows = @[[[BYShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:3 color:[UIColor colorWithWhite:0.0 alpha:0.5]]];
     }
     return style;
 }

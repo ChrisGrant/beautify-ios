@@ -388,10 +388,6 @@ static NSMutableArray* _objectStack;
         [shadow setRadius:[shadowDict[@"radius"] doubleValue]];
     }
     
-    if ([shadowDict[@"inset"] boolValue]) {
-        [shadow setInset:YES];
-    }
-    
     [shadow setOffset:[self sizeFromDict:[shadowDict objectForMandatoryKey:@"offset"]]];
     [shadow setColor:[self colorFromDict:shadowDict key:@"color"]];
     return shadow;
