@@ -223,6 +223,7 @@
 		70C211B817DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
 		70C211B917DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
 		70E19557178462B20096E458 /* VisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E19555178462B20096E458 /* VisualTestViewController.m */; };
+		70EAFD9517E892680087081B /* BYBarButtonItemRenderer_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EAFD9417E892680087081B /* BYBarButtonItemRenderer_Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		70F1FD0A17E34FB1006018C9 /* ConfigParserPropertyParsingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F1FD0917E34FB1006018C9 /* ConfigParserPropertyParsingTests.m */; };
 		70F1FD0B17E3683E006018C9 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52016F9AC8500D08DBB /* NSObject+Properties.m */; };
 		70F61B8617831AE100DCA906 /* BYRenderUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 70F61B8417831AE100DCA906 /* BYRenderUtils.h */; };
@@ -464,6 +465,7 @@
 		70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableVisualTestViewController.m; sourceTree = "<group>"; };
 		70E19554178462B10096E458 /* VisualTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualTestViewController.h; sourceTree = "<group>"; };
 		70E19555178462B20096E458 /* VisualTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisualTestViewController.m; sourceTree = "<group>"; };
+		70EAFD9417E892680087081B /* BYBarButtonItemRenderer_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYBarButtonItemRenderer_Private.h; path = Beautify/BYBarButtonItemRenderer_Private.h; sourceTree = SOURCE_ROOT; };
 		70F1FD0917E34FB1006018C9 /* ConfigParserPropertyParsingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ConfigParserPropertyParsingTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		70F61B8417831AE100DCA906 /* BYRenderUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = BYRenderUtils.h; path = Beautify/BYRenderUtils.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		70F61B8517831AE100DCA906 /* BYRenderUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYRenderUtils.m; path = Beautify/BYRenderUtils.m; sourceTree = SOURCE_ROOT; };
@@ -592,37 +594,37 @@
 			isa = PBXGroup;
 			children = (
 				1D3DA629172EA7A3006216B7 /* Properties */,
-				72FDECCE175656E0002F1093 /* BYTextFieldStyle.h */,
-				72FDECCF175656E0002F1093 /* BYTextFieldStyle.m */,
-				547C32CF17C4C1EE009D6289 /* BYSliderStyle.h */,
-				547C32D017C4C1EE009D6289 /* BYSliderStyle.m */,
+				70397B8D17DF33190095001B /* BYBarButtonStyle.h */,
+				70397B8E17DF33190095001B /* BYBarButtonStyle.m */,
 				1D13FF00172EA5FE000C7811 /* BYButtonStyle.h */,
 				1D13FF01172EA606000C7811 /* BYButtonStyle.m */,
+				70907E6B1797E6F600F83417 /* BYImageViewStyle.h */,
+				70907E6C1797E6F600F83417 /* BYImageViewStyle.m */,
 				1DE12A7E174157B40039F3F3 /* BYLabelStyle.h */,
 				1DE12A7F174157B40039F3F3 /* BYLabelStyle.m */,
-				1DE12A80174157B40039F3F3 /* BYStyleCustomizer.h */,
-				1DE12A81174157B40039F3F3 /* BYStyleCustomizer.m */,
-				1DE12A82174157B40039F3F3 /* BYSwitchStyle.h */,
-				1DE12A83174157B40039F3F3 /* BYSwitchStyle.m */,
-				1DE12A84174157B40039F3F3 /* BYViewStyle.h */,
-				1DE12A85174157B40039F3F3 /* BYViewStyle.m */,
-				729757C6173BB861003A34A5 /* BYStyle.h */,
-				729757C7173BB861003A34A5 /* BYStyle.m */,
+				7205345A1757A000000A27C0 /* BYNavigationBarStyle.h */,
+				7205345B1757A000000A27C0 /* BYNavigationBarStyle.m */,
+				547C32CF17C4C1EE009D6289 /* BYSliderStyle.h */,
+				547C32D017C4C1EE009D6289 /* BYSliderStyle.m */,
 				729757CC173BED3A003A34A5 /* BYStateSetter.h */,
 				729757CD173BED3A003A34A5 /* BYStateSetter.m */,
+				729757C6173BB861003A34A5 /* BYStyle.h */,
+				729757C7173BB861003A34A5 /* BYStyle.m */,
+				1DE12A80174157B40039F3F3 /* BYStyleCustomizer.h */,
+				1DE12A81174157B40039F3F3 /* BYStyleCustomizer.m */,
 				1DE12A8E174157D20039F3F3 /* BYStyleProtocol.h */,
 				72E168F2173D2EAE004CB021 /* BYStyleSetterCustomizer.h */,
 				72E168F3173D2EAF004CB021 /* BYStyleSetterCustomizer.m */,
-				1DE9D2FD174F7F540070AFD3 /* BYViewControllerStyle.h */,
-				1DE9D2FE174F7F540070AFD3 /* BYViewControllerStyle.m */,
-				7205345A1757A000000A27C0 /* BYNavigationBarStyle.h */,
-				7205345B1757A000000A27C0 /* BYNavigationBarStyle.m */,
+				1DE12A82174157B40039F3F3 /* BYSwitchStyle.h */,
+				1DE12A83174157B40039F3F3 /* BYSwitchStyle.m */,
 				72AE98D9175BBA7E00787272 /* BYTableViewCellStyle.h */,
 				72AE98DA175BBA7E00787272 /* BYTableViewCellStyle.m */,
-				70907E6B1797E6F600F83417 /* BYImageViewStyle.h */,
-				70907E6C1797E6F600F83417 /* BYImageViewStyle.m */,
-				70397B8D17DF33190095001B /* BYBarButtonStyle.h */,
-				70397B8E17DF33190095001B /* BYBarButtonStyle.m */,
+				72FDECCE175656E0002F1093 /* BYTextFieldStyle.h */,
+				72FDECCF175656E0002F1093 /* BYTextFieldStyle.m */,
+				1DE9D2FD174F7F540070AFD3 /* BYViewControllerStyle.h */,
+				1DE9D2FE174F7F540070AFD3 /* BYViewControllerStyle.m */,
+				1DE12A84174157B40039F3F3 /* BYViewStyle.h */,
+				1DE12A85174157B40039F3F3 /* BYViewStyle.m */,
 			);
 			name = Styles;
 			sourceTree = "<group>";
@@ -703,6 +705,7 @@
 		54D7FD7317B8EA210004F952 /* BarButtonItem */ = {
 			isa = PBXGroup;
 			children = (
+				70EAFD9417E892680087081B /* BYBarButtonItemRenderer_Private.h */,
 				54D7FD7417B8EA590004F952 /* BYBarButtonItemRenderer.h */,
 				54D7FD7517B8EA590004F952 /* BYBarButtonItemRenderer.m */,
 			);
@@ -812,11 +815,11 @@
 				1DE9D2F7174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m */,
 				5480C1FC17A0127000F4007D /* UINavigationBar+Beautify.h */,
 				5480C1FD17A0127000F4007D /* UINavigationBar+Beautify.m */,
+				7047010417E1C06B00FEA5F5 /* UIBarButtonItem+BeautifyPrivate.h */,
 				543570E917BE313E007FA7CE /* UIBarButtonItem+Beautify.h */,
 				543570E517BE312C007FA7CE /* UIBarButtonItem+Beautify.m */,
 				7047010217E1C06B00FEA5F5 /* NSObject+Beautify.h */,
 				7047010317E1C06B00FEA5F5 /* NSObject+Beautify.m */,
-				7047010417E1C06B00FEA5F5 /* UIBarButtonItem+BeautifyPrivate.h */,
 			);
 			path = StyleRolling;
 			sourceTree = SOURCE_ROOT;
@@ -1071,6 +1074,7 @@
 				1D464665174669D7003840E4 /* BYViewStyle.h in Headers */,
 				1D464666174669D7003840E4 /* BYStyle.h in Headers */,
 				1D464667174669D7003840E4 /* BYStateSetter.h in Headers */,
+				70EAFD9517E892680087081B /* BYBarButtonItemRenderer_Private.h in Headers */,
 				1D464668174669D7003840E4 /* BYStyleProtocol.h in Headers */,
 				1D464669174669D7003840E4 /* BYStyleSetterCustomizer.h in Headers */,
 				1D46466A174669D7003840E4 /* BYTheme.h in Headers */,

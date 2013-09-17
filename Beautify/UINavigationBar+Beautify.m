@@ -11,6 +11,7 @@
 #import "UIView+Beautify.h"
 #import "BYThemeManager_Private.h"
 #import "UIBarButtonItem+BeautifyPrivate.h"
+#import "BYBarButtonItemRenderer_Private.h"
 
 @implementation UINavigationBar (Beautify)
 
@@ -61,6 +62,17 @@
             }
         }
     }
+}
+
+-(void)override_pushNavigationItem:(UINavigationItem *)item {
+    [self override_pushNavigationItem:item];
+    
+    if(!item.backBarButtonItem) {
+        item.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStyleBordered target:nil action:nil];
+        [item.backBarButtonItem createRenderer];
+    }
+    
+    [[self.backItem.backBarButtonItem renderer] applyBackButtonStyles];
 }
 
 -(void)createRenderer {
