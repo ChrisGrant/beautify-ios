@@ -10,12 +10,11 @@
 
 @implementation BYShadow
 
--(id)initWithOffset:(CGSize)offset radius:(float)radius color:(UIColor*)color isInset:(BOOL)inset {
+-(id)initWithOffset:(CGSize)offset radius:(float)radius color:(UIColor*)color {
     if (self = [super init]) {
         _offset = offset;
         _radius = radius;
         _color = color;
-        _inset = inset;
     }
     return self;
 }

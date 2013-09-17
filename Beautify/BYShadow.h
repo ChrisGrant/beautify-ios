@@ -29,13 +29,8 @@
 @property UIColor *color;
 
 /*
- Whether the shadow should be rendered inside the UI element.
+ Init with the specified offset, blur radius and color.
  */
-@property BOOL inset;
-
-/*
- Init with the specified offset, blur radius, color and inset.
- */
--(id)initWithOffset:(CGSize)offset radius:(float)radius color:(UIColor*)color isInset:(BOOL)inset;
+-(id)initWithOffset:(CGSize)offset radius:(float)radius color:(UIColor*)color;
 
 @end

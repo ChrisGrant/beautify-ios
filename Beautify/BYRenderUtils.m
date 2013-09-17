@@ -19,13 +19,10 @@ UIEdgeInsets ComputeInsetsForShadows(NSArray* outerShadows) {
     UIEdgeInsets inset = UIEdgeInsetsZero;
     
     for (BYShadow *ss in outerShadows) {
-        // These should all be not-inset
-        if(!ss.inset) {
-            inset.top = MAX(inset.top, ss.radius);
-            inset.bottom = MAX(inset.bottom, ss.radius);
-            inset.left = MAX(inset.left, ss.radius);
-            inset.right = MAX(inset.right, ss.radius);
-        }
+        inset.top = MAX(inset.top, ss.radius);
+        inset.bottom = MAX(inset.bottom, ss.radius);
+        inset.left = MAX(inset.left, ss.radius);
+        inset.right = MAX(inset.right, ss.radius);
     }
     return inset;
 }
@@ -44,7 +41,7 @@ void RenderInnerShadows(CGContextRef ctx, BYBorder* border, NSArray* innerShadow
     
     for(BYShadow *shadow in innerShadows) {
         // These should all be inset
-        if(shadow.inset && !(CGSizeEqualToSize(CGSizeZero, shadow.offset) && shadow.radius == 0.0f)) {
+        if(!(CGSizeEqualToSize(CGSizeZero, shadow.offset) && shadow.radius == 0.0f)) {
             CGContextSaveGState(ctx);
             {
                 CGRect insideBorderRect = CGRectInset(rect, border.width/2, border.width/2);
@@ -88,8 +85,8 @@ void RenderInnerShadows(CGContextRef ctx, BYBorder* border, NSArray* innerShadow
                     
                     CGContextSetShadowWithColor(ctx, CGSizeMake(xOffset + copysign(0.1, xOffset),
                                                                 yOffset + copysign(0.1, yOffset)),
-                                                                shadowBlurRadius,
-                                                                shadow.color.CGColor);
+                                                shadowBlurRadius,
+                                                shadow.color.CGColor);
                     [ovalPath addClip];
                     
                     CGAffineTransform transform = CGAffineTransformMakeTranslation(-round(ovalBorderRect.size.width), 0);
@@ -109,22 +106,19 @@ void RenderOuterShadows(CGContextRef ctx, BYBorder* border, NSArray* outerShadow
                                                           cornerRadius:border.cornerRadius];
     
     for (BYShadow *ss in outerShadows) {
-        // These should all be not-inset
-        if(!ss.inset) {
-            CGContextSaveGState(ctx);
-            {
-                // create a shadow
-                CGContextSetShadowWithColor(ctx, ss.offset, ss.radius, ss.color.CGColor);
-                
-                // render the path
-                CGContextAddPath(ctx, borderPath.CGPath);
-                CGContextSetFillColorWithColor(ctx, ss.color.CGColor);
-                CGContextSetLineWidth(ctx, 1.0);
-
-                CGContextFillPath(ctx);
-            }
-            CGContextRestoreGState(ctx);
+        CGContextSaveGState(ctx);
+        {
+            // create a shadow
+            CGContextSetShadowWithColor(ctx, ss.offset, ss.radius, ss.color.CGColor);
+            
+            // render the path
+            CGContextAddPath(ctx, borderPath.CGPath);
+            CGContextSetFillColorWithColor(ctx, ss.color.CGColor);
+            CGContextSetLineWidth(ctx, 1.0);
+            
+            CGContextFillPath(ctx);
         }
+        CGContextRestoreGState(ctx);
     }
 }
 

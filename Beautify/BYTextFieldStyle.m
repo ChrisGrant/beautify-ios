@@ -26,8 +26,8 @@
         style.title = [[BYText alloc] initWithFont:titleFont color:[UIColor blackColor]];
         style.backgroundColor = [UIColor whiteColor];
         style.border = [[BYBorder alloc] initWithColor:[UIColor colorWithWhite:0.33 alpha:1.0] width:2 radius:7.0];
-        style.outerShadows = @[[[BYShadow alloc] initWithOffset:CGSizeMake(0, 1.0) radius:1.0f color:[UIColor colorWithWhite:1.0 alpha:0.8f] isInset:NO]];
-        style.innerShadows = @[[[BYShadow alloc] initWithOffset:CGSizeMake(0, 1.0) radius:2.0f color:[UIColor colorWithWhite:0.0 alpha:0.8f] isInset:YES]];
+        style.outerShadows = @[[[BYShadow alloc] initWithOffset:CGSizeMake(0, 1.0) radius:1.0f color:[UIColor colorWithWhite:1.0 alpha:0.8f]]];
+        style.innerShadows = @[[[BYShadow alloc] initWithOffset:CGSizeMake(0, 1.0) radius:2.0f color:[UIColor colorWithWhite:0.0 alpha:0.8f]]];
     }
     return style;
 }

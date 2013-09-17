@@ -42,7 +42,7 @@
     border1.cornerRadius = radius;
     [renderer1 setBorder:border1 forState:UIControlStateNormal];
     
-    BYShadow *shadow2 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:75.0 color:[UIColor blackColor] isInset:YES];
+    BYShadow *shadow2 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:75.0 color:[UIColor blackColor]];
     [renderer1 setInnerShadows:@[shadow2] forState:UIControlStateNormal];
 }
 

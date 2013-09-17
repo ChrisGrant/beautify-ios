@@ -31,7 +31,7 @@
                                                                         [[BYGradientStop alloc] initWithColor:[UIColor colorWithWhite:0.9 alpha:0.9] at:1.0]]];
         style.backgroundColor = [UIColor blackColor];
         
-        style.innerShadows = @[[[BYShadow alloc] initWithOffset:CGSizeMake(0, 1) radius:1.0f color:[UIColor colorWithWhite:0.0f alpha:0.9f] isInset:YES]];
+        style.innerShadows = @[[[BYShadow alloc] initWithOffset:CGSizeMake(0, 1) radius:1.0f color:[UIColor colorWithWhite:0.0f alpha:0.9f]]];
     }
     return style;
 }
