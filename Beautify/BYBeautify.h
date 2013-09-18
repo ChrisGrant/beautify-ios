@@ -22,12 +22,6 @@
     BYBorder* border = [[BYBorder alloc] initWithColor:[UIColor redColor] width:30.0f radius:15.0f];
     [renderer setBorder:border forState:UIControlStateNormal];
  
- In development you are most likely going to want to activate beautify then connect to a streaming design session. To achieve
- this, add the following to your app delegate's `application:didFinishLaunchingWithOptions:` method:
- 
-    [[BYBeautify instance] activate];
-    [[BYBeautifyStreamer instance] initiateDesignSessionWithUsername:@"test"];
- 
  When you application is ready for release, you can save your style as a JSON file, then activate and load the style 
  with the following method:
  
@@ -42,12 +36,12 @@
 +(BYBeautify*)instance;
 
 /*
- Activates the beautify in order to 'enhance' the UI controls of your application.
+ Activates beautify in order to 'enhance' the UI controls of your application.
  */
 -(void)activate;
 
 /*
- Activates the beautify and loads a style from a JSON file with the given name.
+ Activates beautify and loads a style from a JSON file with the given name.
  */
 -(void)activateWithStyle:(NSString*)styleName;
 
