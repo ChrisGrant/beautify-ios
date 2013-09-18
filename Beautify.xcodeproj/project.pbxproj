@@ -1192,9 +1192,9 @@
 		72BF4A8A16F3179B00A0C0E3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = "Beautify-Prefix.pch";
+				CLASSPREFIX = BY;
 				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "Colin Eberhardt";
+				ORGANIZATIONNAME = Beautify;
 				TargetAttributes = {
 					70FE246217E0B385009A7113 = {
 						TestTargetID = 1D46460517466915003840E4;
