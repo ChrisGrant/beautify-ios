@@ -14,6 +14,7 @@
 #import "BYStateSetter.h"
 #import "BYSwitchState.h"
 #import "BYLabelStyle.h"
+#import "BYViewControllerStyle.h"
 
 @interface ConfigParserTests : XCTestCase
 @end
@@ -71,12 +72,8 @@
 }
 
 -(void)testButtonStyleWithValidDict {
-    NSDictionary *dictionary = [self dictionaryFromJSONFile:@"ValidButtonStyle"];
-    BYButtonStyle *buttonStyle;
-    XCTAssertNoThrow(buttonStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYButtonStyle class]
-                                                                            fromDict:dictionary],
-                     @"Shouldn't throw with valid JSON");
-    XCTAssertNotNil(buttonStyle, @"Shouldn't be nil with valid JSON");
+    BYButtonStyle *buttonStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"ValidButtonStyle"
+                                                                                         andClass:[BYButtonStyle class]];
     
     [self assertText:buttonStyle.title hasName:@"HelveticaNeue-Bold" size:10.0f andColor:[UIColor blackColor]];
 
@@ -100,12 +97,8 @@
 }
 
 -(void)testButtonStyleWithPartialDict {
-    NSDictionary *dictionary = [self dictionaryFromJSONFile:@"PartialButtonStyle"];
-    BYButtonStyle *buttonStyle;
-    XCTAssertNoThrow(buttonStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYButtonStyle class]
-                                                                            fromDict:dictionary],
-                     @"Shouldn't throw with partial JSON"); 
-    XCTAssertNotNil(buttonStyle, @"Shouldn't be nil with valid JSON");
+    BYButtonStyle *buttonStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialButtonStyle"
+                                                                                         andClass:[BYButtonStyle class]];
     
     [self assertText:buttonStyle.title hasName:@"HelveticaNeue" size:11 andColor:[UIColor blackColor]];
     
@@ -125,13 +118,8 @@
 }
 
 -(void)testSwitchStyleWithValidDict {
-    NSDictionary *dictionary = [self dictionaryFromJSONFile:@"ValidSwitchStyle"];
-    BYSwitchStyle *switchStyle;
-    XCTAssertNoThrow(switchStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYSwitchStyle class]
-                                                                            fromDict:dictionary],
-                     @"Shouldn't throw with valid JSON");
-    XCTAssertNotNil(switchStyle, @"Shouldn't be nil with valid JSON");
-    
+    BYSwitchStyle *switchStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"ValidSwitchStyle"
+                                                                                       andClass:[BYSwitchStyle class]];
     BYSwitchState *onState = switchStyle.onState;
     BYSwitchState *offState = switchStyle.offState;
     
@@ -166,13 +154,8 @@
 }
 
 -(void)testSwitchStyleWithPartialDict {
-    NSDictionary *dictionary = [self dictionaryFromJSONFile:@"PartialSwitchStyle"];
-    BYSwitchStyle *switchStyle;
-    XCTAssertNoThrow(switchStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYSwitchStyle class]
-                                                                            fromDict:dictionary],
-                     @"Shouldn't throw with valid JSON");
-    XCTAssertNotNil(switchStyle, @"Shouldn't be nil with valid JSON");
-    
+    BYSwitchStyle *switchStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialSwitchStyle"
+                                                                                         andClass:[BYSwitchStyle class]];
     BYSwitchState *onState = switchStyle.onState;
     BYSwitchState *offState = switchStyle.offState;
     
@@ -212,30 +195,59 @@
 }
 
 -(void)testLabelStyleWithValidDict {
-    NSDictionary *dictionary = [self dictionaryFromJSONFile:@"ValidLabelStyle"];
-    BYLabelStyle *labelStyle;
-    XCTAssertNoThrow(labelStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYLabelStyle class]
-                                                                           fromDict:dictionary],
-                     @"Shouldn't throw with valid JSON");
-    XCTAssertNotNil(labelStyle, @"Shouldn't be nil with valid JSON");
-    
+    BYLabelStyle *labelStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"ValidLabelStyle"
+                                                                                       andClass:[BYLabelStyle class]];
     [self assertText:labelStyle.title hasName:@"HelveticaNeue-Bold" size:29 andColor:[UIColor redColor]];
     [self assertTextShadow:labelStyle.titleShadow hasColor:[UIColor blueColor] andOffset:CGSizeMake(2, 5)];
 }
 
 -(void)testLabelStyleWithPartialDict {
-    NSDictionary *dictionary = [self dictionaryFromJSONFile:@"PartialLabelStyle"];
-    BYLabelStyle *labelStyle;
-    XCTAssertNoThrow(labelStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYLabelStyle class]
-                                                                           fromDict:dictionary],
-                     @"Shouldn't throw with valid JSON");
-    XCTAssertNotNil(labelStyle, @"Shouldn't be nil with valid JSON");
-    
+    BYLabelStyle *labelStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialLabelStyle"
+                                                                                       andClass:[BYLabelStyle class]];
     [self assertText:labelStyle.title hasName:nil size:0 andColor:[UIColor whiteColor]];
     [self assertTextShadow:labelStyle.titleShadow hasColor:[UIColor blueColor] andOffset:CGSizeZero];
 }
 
+#pragma mark - View Controller Testing
+
+-(void)testViewControllerStyleWithNilDict {
+    [self assertStyleIsNilWithNilDictForClass:[BYLabelStyle class]];
+}
+
+-(void)testViewControllerStyleWithEmptyDict {
+    [self assertStyleIsNotNilWithEmptyDictForClass:[BYLabelStyle class]];
+}
+
+-(void)testViewControllerStyleWithValidDict {
+    BYViewControllerStyle *vcStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"ValidVCStyle"
+                                                                                             andClass:[BYViewControllerStyle class]];
+    XCTAssert([vcStyle.backgroundColor isEqualToColor:[UIColor whiteColor]], @"Background should be white");
+    [self assertGradient:vcStyle.backgroundGradient hasStopOneColor:[UIColor whiteColor] atPosition:1.0f
+         andStopTwoColor:[UIColor blueColor] atPosition:0 andIsRadial:NO withRadialOffset:CGSizeZero];
+    
+    XCTAssertNotNil(vcStyle.backgroundImage.data, @"Image should have some data");
+    XCTAssertEqual(vcStyle.backgroundImage.top, 12, @"Top should be 12");
+    XCTAssertEqual(vcStyle.backgroundImage.left, 9, @"Left should be 9");
+    XCTAssertEqual(vcStyle.backgroundImage.bottom, 6, @"Bottom should be 6");
+    XCTAssertEqual(vcStyle.backgroundImage.right, 200, @"Right should be 200");
+}
+
+-(void)testViewControllerStyleWithPartialDict {
+    BYViewControllerStyle *vcStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialVCStyle"
+                                                                                             andClass:[BYViewControllerStyle class]];
+    XCTAssert([vcStyle.backgroundColor isEqualToColor:[UIColor whiteColor]], @"Background should be white");
+}
+
 #pragma mark - Helper Methods
+
+-(id)assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:(NSString*)fileName andClass:(Class)class {
+    NSDictionary *dictionary = [self dictionaryFromJSONFile:fileName];
+    id style;
+    XCTAssertNoThrow(style = [BYConfigParser parseStyleObjectPropertiesOnClass:class fromDict:dictionary],
+                     @"Shouldn't throw with valid JSON");
+    XCTAssertNotNil(style, @"Shouldn't be nil with valid JSON");
+    return style;
+}
 
 -(void)assertStyleIsNilWithNilDictForClass:(Class)class {
     id style;

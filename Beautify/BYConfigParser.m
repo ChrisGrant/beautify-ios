@@ -405,8 +405,19 @@ static NSMutableArray* _objectStack;
 +(BYNineBoxedImage*)nineBoxedImageFromDict:(NSDictionary *)nineBoxedImageDict {
     BYNineBoxedImage *image = [BYNineBoxedImage new];
     
-    NSString* dataStr = [nineBoxedImageDict objectForMandatoryKey:@"data"];
-    image.data = [self imageFromBase64String:dataStr];
+    if(![nineBoxedImageDict isKindOfClass:[NSDictionary class]]) {
+        NSLog(@"WARNING - Nineboxed image was not a dictionary. Can not parse.");
+        return nil;
+    }
+    
+    if([nineBoxedImageDict.allKeys containsObject:@"data"]) {
+        NSString* dataStr = [nineBoxedImageDict objectForMandatoryKey:@"data"];
+        image.data = [self imageFromBase64String:dataStr];
+    }
+    else {
+        NSLog(@"WARNING - Nineboxed image had no 'data' property");
+    }
+    
     image.top = [nineBoxedImageDict intForMandatoryKey:@"top"];
     image.right = [nineBoxedImageDict intForMandatoryKey:@"right"];
     image.bottom = [nineBoxedImageDict intForMandatoryKey:@"bottom"];
