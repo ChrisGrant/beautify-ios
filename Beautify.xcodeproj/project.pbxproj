@@ -160,6 +160,8 @@
 		700E156617E33DF1006E124E /* UIColor+Comparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E156517E33DF1006E124E /* UIColor+Comparison.m */; };
 		700E156717E33F45006E124E /* NSDictionary+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDAB17572A44002F1093 /* NSDictionary+Utilities.m */; };
 		700E156A17E341C6006E124E /* ConfigParserUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E156917E341C6006E124E /* ConfigParserUtilitiesTests.m */; };
+		700ED7D417E9B933009C2C49 /* PartialLabelStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 700ED7D217E9B933009C2C49 /* PartialLabelStyle.json */; };
+		700ED7D517E9B933009C2C49 /* ValidLabelStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 700ED7D317E9B933009C2C49 /* ValidLabelStyle.json */; };
 		700EE91D17E1FFAB00164EA1 /* BYThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6A42174BAA40008A2A73 /* BYThemeManager.h */; };
 		700EE92817E202C400164EA1 /* BYConfigParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194BD17E1B4FA008161D3 /* BYConfigParser.m */; };
 		700F292616F3711300E85ED3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72BF4B3416F3487A00A0C0E3 /* UIKit.framework */; };
@@ -416,6 +418,8 @@
 		700E156417E33DF1006E124E /* UIColor+Comparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Comparison.h"; sourceTree = "<group>"; };
 		700E156517E33DF1006E124E /* UIColor+Comparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Comparison.m"; sourceTree = "<group>"; };
 		700E156917E341C6006E124E /* ConfigParserUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigParserUtilitiesTests.m; sourceTree = "<group>"; };
+		700ED7D217E9B933009C2C49 /* PartialLabelStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PartialLabelStyle.json; sourceTree = "<group>"; };
+		700ED7D317E9B933009C2C49 /* ValidLabelStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ValidLabelStyle.json; sourceTree = "<group>"; };
 		700F292516F3711300E85ED3 /* VisualTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisualTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		700F292C16F3711300E85ED3 /* VisualTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VisualTest-Info.plist"; sourceTree = "<group>"; };
 		700F293016F3711300E85ED3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -723,6 +727,15 @@
 			name = "ConfigParser Tests";
 			sourceTree = "<group>";
 		};
+		700ED7D117E9B8CD009C2C49 /* Label Style */ = {
+			isa = PBXGroup;
+			children = (
+				700ED7D217E9B933009C2C49 /* PartialLabelStyle.json */,
+				700ED7D317E9B933009C2C49 /* ValidLabelStyle.json */,
+			);
+			name = "Label Style";
+			sourceTree = "<group>";
+		};
 		700F28F916F365D300E85ED3 /* Parser */ = {
 			isa = PBXGroup;
 			children = (
@@ -884,6 +897,7 @@
 		70FF54DC17E703E700F9BF03 /* Test JSON Files */ = {
 			isa = PBXGroup;
 			children = (
+				700ED7D117E9B8CD009C2C49 /* Label Style */,
 				70FF54DD17E703F200F9BF03 /* Button Style */,
 				70FAFBB417E7335200EB6843 /* Switch Style */,
 			);
@@ -1250,7 +1264,9 @@
 			files = (
 				70FAFBB617E7336D00EB6843 /* ValidSwitchStyle.json in Resources */,
 				70FF54E117E7042700F9BF03 /* PartialButtonStyle.json in Resources */,
+				700ED7D417E9B933009C2C49 /* PartialLabelStyle.json in Resources */,
 				70FAFBBA17E7425600EB6843 /* PartialSwitchStyle.json in Resources */,
+				700ED7D517E9B933009C2C49 /* ValidLabelStyle.json in Resources */,
 				70FF54DF17E7040F00F9BF03 /* ValidButtonStyle.json in Resources */,
 				70FE246E17E0B385009A7113 /* InfoPlist.strings in Resources */,
 			);

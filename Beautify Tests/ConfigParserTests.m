@@ -13,6 +13,7 @@
 #import "BYGradientStop.h"
 #import "BYStateSetter.h"
 #import "BYSwitchState.h"
+#import "BYLabelStyle.h"
 
 @interface ConfigParserTests : XCTestCase
 @end
@@ -62,17 +63,11 @@
 #pragma mark - Button Style Testing
 
 -(void)testButtonStyleWithNilDict {
-    BYButtonStyle *buttonStyle;
-    XCTAssertNoThrow(buttonStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYButtonStyle class]
-                                                                            fromDict:nil]);
-    XCTAssertNil(buttonStyle, @"Button style should be nil");
+    [self assertStyleIsNilWithNilDictForClass:[BYButtonStyle class]];
 }
 
 -(void)testButtonStyleWithEmptyDict {
-    BYButtonStyle *buttonStyle;
-    XCTAssertNoThrow(buttonStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYButtonStyle class]
-                                                                            fromDict:@{}]);
-    XCTAssertNotNil(buttonStyle, @"Button style should not be nil");
+    [self assertStyleIsNotNilWithEmptyDictForClass:[BYButtonStyle class]];
 }
 
 -(void)testButtonStyleWithValidDict {
@@ -122,17 +117,11 @@
 #pragma mark - Switch Style Testing
 
 -(void)testSwitchStyleWithNilDict {
-    BYSwitchStyle *switchStyle;
-    XCTAssertNoThrow(switchStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYSwitchStyle class]
-                                                                            fromDict:nil]);
-    XCTAssertNil(switchStyle, @"Switch style should be nil");
+    [self assertStyleIsNilWithNilDictForClass:[BYSwitchStyle class]];
 }
 
 -(void)testSwitchStyleWithEmptyDict {
-    BYSwitchStyle *switchStyle;
-    XCTAssertNoThrow(switchStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYSwitchStyle class]
-                                                                            fromDict:@{}]);
-    XCTAssertNotNil(switchStyle, @"Switch style should not be nil");
+    [self assertStyleIsNotNilWithEmptyDictForClass:[BYSwitchStyle class]];
 }
 
 -(void)testSwitchStyleWithValidDict {
@@ -212,7 +201,56 @@
     [self assertTextShadow:state.textShadow hasColor:textShadowColor andOffset:offset];
 }
 
+#pragma mark - Label Style Testing 
+
+-(void)testLabelStyleWithNilDict {
+    [self assertStyleIsNilWithNilDictForClass:[BYLabelStyle class]];
+}
+
+-(void)testLabelStyleWithEmptyDict {
+    [self assertStyleIsNotNilWithEmptyDictForClass:[BYLabelStyle class]];
+}
+
+-(void)testLabelStyleWithValidDict {
+    NSDictionary *dictionary = [self dictionaryFromJSONFile:@"ValidLabelStyle"];
+    BYLabelStyle *labelStyle;
+    XCTAssertNoThrow(labelStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYLabelStyle class]
+                                                                           fromDict:dictionary],
+                     @"Shouldn't throw with valid JSON");
+    XCTAssertNotNil(labelStyle, @"Shouldn't be nil with valid JSON");
+    
+    [self assertText:labelStyle.title hasName:@"HelveticaNeue-Bold" size:29 andColor:[UIColor redColor]];
+    [self assertTextShadow:labelStyle.titleShadow hasColor:[UIColor blueColor] andOffset:CGSizeMake(2, 5)];
+}
+
+-(void)testLabelStyleWithPartialDict {
+    NSDictionary *dictionary = [self dictionaryFromJSONFile:@"PartialLabelStyle"];
+    BYLabelStyle *labelStyle;
+    XCTAssertNoThrow(labelStyle = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYLabelStyle class]
+                                                                           fromDict:dictionary],
+                     @"Shouldn't throw with valid JSON");
+    XCTAssertNotNil(labelStyle, @"Shouldn't be nil with valid JSON");
+    
+    [self assertText:labelStyle.title hasName:nil size:0 andColor:[UIColor whiteColor]];
+    [self assertTextShadow:labelStyle.titleShadow hasColor:[UIColor blueColor] andOffset:CGSizeZero];
+}
+
 #pragma mark - Helper Methods
+
+-(void)assertStyleIsNilWithNilDictForClass:(Class)class {
+    id style;
+    XCTAssertNoThrow(style = [BYConfigParser parseStyleObjectPropertiesOnClass:class fromDict:nil], @"Shouldn't throw");
+    XCTAssertNil(style, @"Style should be nil for class %@", class);
+}
+
+-(void)assertStyleIsNotNilWithEmptyDictForClass:(Class)class {
+    id style;
+    XCTAssertNoThrow(style = [BYConfigParser parseStyleObjectPropertiesOnClass:class
+                                                                      fromDict:@{}]);
+    XCTAssertNotNil(style, @"Style should not be nil");
+    
+    XCTAssertEqual([style class], class, @"Class should be the same");
+}
 
 -(void)assertShadows:(NSArray*)array hasOneShadowWithColor:(UIColor*)color radius:(float)radius andOffset:(CGSize)offset {
     XCTAssertEqual(array.count, (NSUInteger)1, @"Should only be 1 shadow");

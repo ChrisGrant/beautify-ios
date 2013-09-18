@@ -17,7 +17,6 @@
  */
 @interface BYLabelStyle : BYViewStyle
 
-// text
 @property BYText *title;
 
 @property BYTextShadow* titleShadow;

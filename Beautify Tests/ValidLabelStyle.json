@@ -1,0 +1,16 @@
+{
+    "title": {
+        "color": "#FF0000",
+        "font": {
+            "name": "HelveticaNeue-Bold",
+            "size": 29
+        }
+    },
+    "titleShadow": {
+        "color": "#0000FF",
+        "offset": {
+            "x": 2,
+            "y": 5
+        }
+    }
+}
