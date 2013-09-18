@@ -20,7 +20,8 @@ Activating beautify requires one line of code:
 
 Place this at the top of the `didFinishLaunchingWithOptions:` method in your app delegate and all of the controls in your app will then be rendered with beautify. You shouldn't notice an immediate change. The default states of the controls have been styled to match the default Apple style. When you do want to modify the appearance of your controls you have two options:
 
-* 	####Building a Theme in Code
+1.	**Building a Theme in Code**
+	
 	Start off by instantiating a new `BYTheme` object. This object contains all of the properties you will need to style your application. Don't worry about leaving some of the properties nil if you want to keep the default style. If beautify detects a nil property then it will revert to the default style anyway.
 	
 	Every style has a `defaultStyle` method for when you wish to take a default style for a control and modify it slightly. Doing this for the switch would look something like this:
@@ -36,7 +37,7 @@ Place this at the top of the `didFinishLaunchingWithOptions:` method in your app
 
 		[[BYThemeManager instance] applyTheme:themeBuiltInCode];
 
-*	####Loading a Theme from a JSON File
+2.	**Loading a Theme from a JSON File**
 
 	It is also possible to build your theme in JSON and then pass that into the app.
 	
