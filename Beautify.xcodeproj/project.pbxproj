@@ -129,6 +129,12 @@
 		54DDE26C17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DDE26A17C65D1A0081E1AD /* BYSliderMaximumTrackLayer.h */; };
 		54DDE26E17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE26B17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m */; };
 		54DDE26F17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE26B17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m */; };
+		7007254217EAF0C0001F7C41 /* PartialNavigationBarStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7007253C17EAF0C0001F7C41 /* PartialNavigationBarStyle.json */; };
+		7007254317EAF0C0001F7C41 /* PartialTableViewCellStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7007253D17EAF0C0001F7C41 /* PartialTableViewCellStyle.json */; };
+		7007254417EAF0C0001F7C41 /* PartialTextFieldStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7007253E17EAF0C0001F7C41 /* PartialTextFieldStyle.json */; };
+		7007254517EAF0C0001F7C41 /* ValidNavigationBarStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7007253F17EAF0C0001F7C41 /* ValidNavigationBarStyle.json */; };
+		7007254617EAF0C0001F7C41 /* ValidTableViewCellStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7007254017EAF0C0001F7C41 /* ValidTableViewCellStyle.json */; };
+		7007254717EAF0C0001F7C41 /* ValidTextFieldStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7007254117EAF0C0001F7C41 /* ValidTextFieldStyle.json */; };
 		7009050D178C0EB600D7BEF4 /* BYVersionUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7009050B178C0EB600D7BEF4 /* BYVersionUtils.h */; };
 		700E154417E30668006E124E /* ConfigParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E154317E30668006E124E /* ConfigParserTests.m */; };
 		700E154617E30691006E124E /* BeautifyColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E154517E30691006E124E /* BeautifyColorTests.m */; };
@@ -422,6 +428,12 @@
 		54DDE25D17C655920081E1AD /* BYSliderBackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYSliderBackgroundLayer.m; path = Beautify/BYSliderBackgroundLayer.m; sourceTree = SOURCE_ROOT; };
 		54DDE26A17C65D1A0081E1AD /* BYSliderMaximumTrackLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYSliderMaximumTrackLayer.h; path = Beautify/BYSliderMaximumTrackLayer.h; sourceTree = SOURCE_ROOT; };
 		54DDE26B17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYSliderMaximumTrackLayer.m; path = Beautify/BYSliderMaximumTrackLayer.m; sourceTree = SOURCE_ROOT; };
+		7007253C17EAF0C0001F7C41 /* PartialNavigationBarStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PartialNavigationBarStyle.json; sourceTree = "<group>"; };
+		7007253D17EAF0C0001F7C41 /* PartialTableViewCellStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PartialTableViewCellStyle.json; sourceTree = "<group>"; };
+		7007253E17EAF0C0001F7C41 /* PartialTextFieldStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PartialTextFieldStyle.json; sourceTree = "<group>"; };
+		7007253F17EAF0C0001F7C41 /* ValidNavigationBarStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ValidNavigationBarStyle.json; sourceTree = "<group>"; };
+		7007254017EAF0C0001F7C41 /* ValidTableViewCellStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ValidTableViewCellStyle.json; sourceTree = "<group>"; };
+		7007254117EAF0C0001F7C41 /* ValidTextFieldStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ValidTextFieldStyle.json; sourceTree = "<group>"; };
 		7009050B178C0EB600D7BEF4 /* BYVersionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYVersionUtils.h; sourceTree = "<group>"; };
 		700E154317E30668006E124E /* ConfigParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ConfigParserTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		700E154517E30691006E124E /* BeautifyColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeautifyColorTests.m; sourceTree = "<group>"; };
@@ -750,6 +762,33 @@
 			name = BarButtonItem;
 			sourceTree = "<group>";
 		};
+		7007253917EAF022001F7C41 /* Text Field Style */ = {
+			isa = PBXGroup;
+			children = (
+				7007253E17EAF0C0001F7C41 /* PartialTextFieldStyle.json */,
+				7007254117EAF0C0001F7C41 /* ValidTextFieldStyle.json */,
+			);
+			name = "Text Field Style";
+			sourceTree = "<group>";
+		};
+		7007253A17EAF02B001F7C41 /* Navigation Bar Style */ = {
+			isa = PBXGroup;
+			children = (
+				7007253C17EAF0C0001F7C41 /* PartialNavigationBarStyle.json */,
+				7007253F17EAF0C0001F7C41 /* ValidNavigationBarStyle.json */,
+			);
+			name = "Navigation Bar Style";
+			sourceTree = "<group>";
+		};
+		7007253B17EAF035001F7C41 /* Table View Cell Style */ = {
+			isa = PBXGroup;
+			children = (
+				7007253D17EAF0C0001F7C41 /* PartialTableViewCellStyle.json */,
+				7007254017EAF0C0001F7C41 /* ValidTableViewCellStyle.json */,
+			);
+			name = "Table View Cell Style";
+			sourceTree = "<group>";
+		};
 		700E156817E34128006E124E /* ConfigParser Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -944,9 +983,9 @@
 			children = (
 				700E156817E34128006E124E /* ConfigParser Tests */,
 				700E154517E30691006E124E /* BeautifyColorTests.m */,
-				70FE246A17E0B385009A7113 /* Supporting Files */,
 				700E156417E33DF1006E124E /* UIColor+Comparison.h */,
 				700E156517E33DF1006E124E /* UIColor+Comparison.m */,
+				70FE246A17E0B385009A7113 /* Supporting Files */,
 			);
 			path = "Beautify Tests";
 			sourceTree = "<group>";
@@ -964,10 +1003,13 @@
 		70FF54DC17E703E700F9BF03 /* Test JSON Files */ = {
 			isa = PBXGroup;
 			children = (
-				700ED7D617E9C045009C2C49 /* View Controller Style */,
-				700ED7D117E9B8CD009C2C49 /* Label Style */,
 				70FF54DD17E703F200F9BF03 /* Button Style */,
+				700ED7D117E9B8CD009C2C49 /* Label Style */,
+				7007253A17EAF02B001F7C41 /* Navigation Bar Style */,
 				70FAFBB417E7335200EB6843 /* Switch Style */,
+				7007253B17EAF035001F7C41 /* Table View Cell Style */,
+				7007253917EAF022001F7C41 /* Text Field Style */,
+				700ED7D617E9C045009C2C49 /* View Controller Style */,
 			);
 			name = "Test JSON Files";
 			sourceTree = "<group>";
@@ -1361,9 +1403,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7007254617EAF0C0001F7C41 /* ValidTableViewCellStyle.json in Resources */,
+				7007254317EAF0C0001F7C41 /* PartialTableViewCellStyle.json in Resources */,
+				7007254417EAF0C0001F7C41 /* PartialTextFieldStyle.json in Resources */,
 				70FAFBB617E7336D00EB6843 /* ValidSwitchStyle.json in Resources */,
+				7007254517EAF0C0001F7C41 /* ValidNavigationBarStyle.json in Resources */,
 				70FF54E117E7042700F9BF03 /* PartialButtonStyle.json in Resources */,
 				700ED7D917E9C0DF009C2C49 /* PartialVCStyle.json in Resources */,
+				7007254717EAF0C0001F7C41 /* ValidTextFieldStyle.json in Resources */,
+				7007254217EAF0C0001F7C41 /* PartialNavigationBarStyle.json in Resources */,
 				700ED7D417E9B933009C2C49 /* PartialLabelStyle.json in Resources */,
 				70FAFBBA17E7425600EB6843 /* PartialSwitchStyle.json in Resources */,
 				700ED7D517E9B933009C2C49 /* ValidLabelStyle.json in Resources */,

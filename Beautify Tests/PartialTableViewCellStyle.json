@@ -1,0 +1,27 @@
+{
+    "title": {
+        "color": "#000000",
+        "font": {
+            "name": "Arial-BoldMT",
+            "size": 9
+        }
+    },
+    "backgroundGradient": {
+        "radial": false,
+        "stops": [
+                  {
+                  "color": "00ff00",
+                  "position": "0.1"
+                  },
+                  {
+                  "color": "0000FF",
+                  "position": "0.9"
+                  }
+                  ]
+    },
+    "border": {
+        "width": 1,
+        "color": "#FF0000",
+        "cornerRadius": 8
+    }
+}

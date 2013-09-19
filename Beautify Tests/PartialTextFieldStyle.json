@@ -1,0 +1,13 @@
+{
+    "title": {
+        "color": "#FF0000",
+        "font": {
+            "name": "HelveticaNeue-Bold"
+        }
+    },
+    "backgroundColor": "#0000FF",
+    "border": {
+        "width": 1,
+        "cornerRadius": 8
+    }
+}

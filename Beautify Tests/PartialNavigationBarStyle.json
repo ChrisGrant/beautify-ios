@@ -1,0 +1,10 @@
+{
+    "title": {
+        "color": "#FFFFFF",
+        "font": {
+            "name": "Helvetica-Bold",
+            "size": 0
+        }
+    },
+    "backgroundColor": "#00ff00"
+}

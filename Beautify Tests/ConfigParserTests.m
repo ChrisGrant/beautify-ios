@@ -15,6 +15,9 @@
 #import "BYSwitchState.h"
 #import "BYLabelStyle.h"
 #import "BYViewControllerStyle.h"
+#import "BYTextFieldStyle.h"
+#import "BYNavigationBarStyle.h"
+#import "BYTableViewCellStyle.h"
 
 @interface ConfigParserTests : XCTestCase
 @end
@@ -238,10 +241,117 @@
     XCTAssert([vcStyle.backgroundColor isEqualToColor:[UIColor whiteColor]], @"Background should be white");
 }
 
+#pragma mark - Text Field Testing
+
+-(void)testTextFieldStyleWithNilDict {
+    [self assertStyleIsNilWithNilDictForClass:[BYTextFieldStyle class]];
+}
+
+-(void)testTextFieldStyleWithEmptyDict {
+    [self assertStyleIsNotNilWithEmptyDictForClass:[BYTextFieldStyle class]];
+}
+
+-(void)testTextFieldStyleWithValidDict {
+    BYTextFieldStyle *textStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"ValidTextFieldStyle"
+                                                                                          andClass:[BYTextFieldStyle class]];
+    
+    [self assertText:textStyle.title hasName:@"HelveticaNeue-Medium" size:10.0f andColor:[UIColor blackColor]];
+    
+    XCTAssert([textStyle.backgroundColor isEqualToColor:[UIColor blackColor]], @"Background should be black");
+    
+    [self assertGradient:textStyle.backgroundGradient hasStopOneColor:[UIColor redColor] atPosition:0.5
+         andStopTwoColor:[UIColor blueColor] atPosition:0.9f andIsRadial:YES withRadialOffset:CGSizeZero];
+    
+    [self assertBorder:textStyle.border hasWidth:1.0f color:[UIColor redColor] andCornerRadius:8.0f];
+    
+    [self assertShadows:textStyle.outerShadows hasOneShadowWithColor:[UIColor greenColor] radius:2.0f andOffset:CGSizeMake(2, 3)];
+}
+
+-(void)testTextFieldStyleWithPartialDict {
+    BYTextFieldStyle *textStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialTextFieldStyle"
+                                                                                          andClass:[BYTextFieldStyle class]];
+    [self assertText:textStyle.title hasName:@"HelveticaNeue-Bold" size:0 andColor:[UIColor redColor]];
+    
+    XCTAssert([textStyle.backgroundColor isEqualToColor:[UIColor blueColor]], @"Background should be black");
+    
+    [self assertBorder:textStyle.border hasWidth:1.0f color:nil andCornerRadius:8.0f];
+}
+
+#pragma mark - Navigation Bar Testing
+
+-(void)testNavBarStyleWithNilDict {
+    [self assertStyleIsNilWithNilDictForClass:[BYNavigationBarStyle class]];
+}
+
+-(void)testNavBarStyleWithEmptyDict {
+    [self assertStyleIsNotNilWithEmptyDictForClass:[BYNavigationBarStyle class]];
+}
+
+-(void)testNavBarStyleWithValidDict {
+    BYNavigationBarStyle *navStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"ValidNavigationBarStyle"
+                                                                                             andClass:[BYNavigationBarStyle class]];
+    XCTAssert([navStyle.backgroundColor isEqualToColor:[UIColor greenColor]], @"BG color should be green");
+    [self assertGradient:navStyle.backgroundGradient
+         hasStopOneColor:[UIColor blackColor] atPosition:0
+         andStopTwoColor:[UIColor whiteColor] atPosition:1.0
+             andIsRadial:NO withRadialOffset:CGSizeZero];
+    
+    [self assertText:navStyle.title hasName:@"Helvetica-Bold" size:0 andColor:[UIColor whiteColor]];
+    [self assertTextShadow:navStyle.titleShadow hasColor:[UIColor blueColor] andOffset:CGSizeMake(10, 10)];
+    
+    XCTAssert([navStyle.dropShadow.color isEqualToColor:[UIColor blueColor]], @"Drop shadow should be blue");
+    XCTAssertEqual(navStyle.dropShadow.height, 12.0f, @"Should be 12px high");
+}
+
+-(void)testNavBarStyleWithPartialDict {
+    BYTextFieldStyle *navStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialNavigationBarStyle"
+                                                                                          andClass:[BYNavigationBarStyle class]];
+    XCTAssert([navStyle.backgroundColor isEqualToColor:[UIColor greenColor]], @"BG color should be green");
+    [self assertText:navStyle.title hasName:@"Helvetica-Bold" size:0 andColor:[UIColor whiteColor]];
+}
+
+#pragma mark - Table View Cell Testing
+
+-(void)testTableCellStyleWithNilDict {
+    [self assertStyleIsNilWithNilDictForClass:[BYTableViewCellStyle class]];
+}
+
+-(void)testTableCellStyleWithEmptyDict {
+    [self assertStyleIsNotNilWithEmptyDictForClass:[BYTableViewCellStyle class]];
+}
+
+-(void)testTableCellStyleWithValidDict {
+    BYTableViewCellStyle *tableStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"ValidTableViewCellStyle"
+                                                                                             andClass:[BYTableViewCellStyle class]];
+    [self assertText:tableStyle.title hasName:@"Arial-BoldMT" size:2 andColor:[UIColor redColor]];
+    [self assertTextShadow:tableStyle.titleShadow hasColor:[UIColor blueColor] andOffset:CGSizeMake(2, 5)];
+    XCTAssert([tableStyle.backgroundColor isEqualToColor:[UIColor whiteColor]], @"BG should be white");
+    [self assertGradient:tableStyle.backgroundGradient
+         hasStopOneColor:[UIColor redColor] atPosition:0.1 andStopTwoColor:[UIColor blueColor] atPosition:0.9
+             andIsRadial:NO withRadialOffset:CGSizeZero];
+    [self assertBorder:tableStyle.border hasWidth:1 color:[UIColor redColor] andCornerRadius:8];
+    [self assertShadows:tableStyle.outerShadows hasOneShadowWithColor:[UIColor greenColor] radius:2 andOffset:CGSizeMake(2, 3)];
+    [self assertShadows:tableStyle.innerShadows hasOneShadowWithColor:[UIColor redColor] radius:3 andOffset:CGSizeMake(5, 5)];
+    XCTAssertNotNil(tableStyle.accessoryViewImage, @"Accessory image should not be nil");
+    XCTAssertNotNil(tableStyle.editingAccessoryViewImage, @"Editing accessory image should not be nil");
+}
+
+-(void)testTableCellStyleWithPartialDict {
+    BYTableViewCellStyle *tableStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialTableViewCellStyle"
+                                                                                               andClass:[BYTableViewCellStyle class]];
+    [self assertText:tableStyle.title hasName:@"Arial-BoldMT" size:9 andColor:[UIColor blackColor]];
+    [self assertGradient:tableStyle.backgroundGradient
+         hasStopOneColor:[UIColor greenColor] atPosition:0.1 andStopTwoColor:[UIColor blueColor] atPosition:0.9
+             andIsRadial:NO withRadialOffset:CGSizeZero];
+    [self assertBorder:tableStyle.border hasWidth:1 color:[UIColor redColor] andCornerRadius:8];
+}
+
 #pragma mark - Helper Methods
 
 -(id)assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:(NSString*)fileName andClass:(Class)class {
     NSDictionary *dictionary = [self dictionaryFromJSONFile:fileName];
+    XCTAssertNotNil(dictionary, @"Dictionary should not be nil with valid JSON. Check file name and if the file is in the test bundle");
+    
     id style;
     XCTAssertNoThrow(style = [BYConfigParser parseStyleObjectPropertiesOnClass:class fromDict:dictionary],
                      @"Shouldn't throw with valid JSON");
@@ -295,7 +405,9 @@
 
 -(void)assertBorder:(BYBorder*)border hasWidth:(float)width color:(UIColor*)color andCornerRadius:(float)radius {
     XCTAssertEqual(border.width, width, @"Width should be equal");
-    XCTAssert([border.color isEqualToColor:color], @"Colors should be equal");
+    if(color != nil && border.color != nil) {
+        XCTAssert([border.color isEqualToColor:color], @"Colors should be equal");
+    }
     XCTAssertEqual(border.cornerRadius, radius, @"Corner Radius should be equal");
 }
 

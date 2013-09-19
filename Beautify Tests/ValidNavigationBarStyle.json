@@ -1,0 +1,34 @@
+{
+    "title": {
+        "color": "#FFFFFF",
+        "font": {
+            "name": "Helvetica-Bold",
+            "size": 0
+        }
+    },
+    "titleShadow": {
+        "color": "#0000FF",
+        "offset": {
+            "x": 10,
+            "y": 10
+        }
+    },
+    "backgroundColor": "#00ff00",
+    "backgroundGradient": {
+        "radial": false,
+        "stops": [
+                  {
+                  "position": "0.0",
+                  "color": "#000000"
+                  },
+                  {
+                  "position": "1.0",
+                  "color": "#FFFFFF"
+                  }
+                  ]
+    },
+    "dropShadow": {
+        "color": "0000FF",
+        "height": 12
+    }
+}
