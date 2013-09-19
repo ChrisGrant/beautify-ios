@@ -37,8 +37,6 @@
 @property BYBarButtonStyle *barButtonItemStyle;
 @property BYSliderStyle *sliderStyle;
 
-+(BYTheme*)defaultTheme;
-
 +(BYTheme*)fromFile:(NSString*)file;
 
 +(BYTheme*)fromDictionary:(NSDictionary*)dict;

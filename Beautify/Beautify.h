@@ -47,6 +47,7 @@
 #import "UIView+Beautify.h"
 #import "UIViewController+Beautify.h"
 #import "UIBarButtonItem+Beautify.h"
+#import "UISwitch+Beautify.h"
 
 #import "BYBeautify.h"
 #import "BYThemeManager.h"

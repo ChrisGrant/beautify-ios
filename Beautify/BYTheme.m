@@ -16,13 +16,10 @@
 #import "BYTextFieldStyle.h"
 #import "BYSliderStyle.h"
 #import "BYBarButtonStyle.h"
+#import "BYTableViewCellStyle.h"
+#import "BYImageViewStyle.h"
 
 @implementation BYTheme
-
-+(BYTheme *)defaultTheme {
-    BYTheme* theme = [BYTheme new];
-    return theme;
-}
 
 +(BYTheme *)fromDictionary:(NSDictionary *)dict {
     NSDictionary *themeDict = dict[@"theme"];
@@ -55,6 +52,16 @@
 -(id)init {
     if (self = [super init]) {
         _name = @"DEFAULT";
+        self.buttonStyle = [BYButtonStyle defaultStyle];
+        self.switchStyle = [BYSwitchStyle defaultStyle];
+        self.labelStyle = [BYLabelStyle defaultStyle];
+        self.viewControllerStyle = [BYViewControllerStyle defaultStyle];
+        self.textFieldStyle = [BYTextFieldStyle defaultStyle];
+        self.navigationBarStyle = [BYNavigationBarStyle defaultStyle];
+        self.tableViewCellStyle = [BYTableViewCellStyle defaultStyle];
+        self.imageViewStyle = [BYImageViewStyle defaultStyle];
+        self.barButtonItemStyle = [BYBarButtonStyle defaultStyle];
+        self.sliderStyle = [BYSliderStyle defaultStyle];
     }
     return self;
 }
