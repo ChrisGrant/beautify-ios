@@ -53,23 +53,23 @@
 		1D464650174669C4003840E4 /* BYViewRenderer_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DC6EACE174512BD004EDF37 /* BYViewRenderer_Private.h */; settings = {ATTRIBUTES = (); }; };
 		1D464651174669C4003840E4 /* UIView+BeautifyPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA54716F9AC9C00D08DBB /* UIView+BeautifyPrivate.h */; settings = {ATTRIBUTES = (); }; };
 		1D464655174669D7003840E4 /* NSObject+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA51F16F9AC8500D08DBB /* NSObject+Properties.h */; };
-		1D464656174669D7003840E4 /* UIColor+HexColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA52116F9AC8500D08DBB /* UIColor+HexColors.h */; };
+		1D464656174669D7003840E4 /* UIColor+HexColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA52116F9AC8500D08DBB /* UIColor+HexColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D464657174669D7003840E4 /* BYConfigParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AC6174158900039F3F3 /* BYConfigParser.h */; };
 		1D464659174669D7003840E4 /* BYSwitchBorderLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A981741582F0039F3F3 /* BYSwitchBorderLayer.h */; };
 		1D46465B174669D7003840E4 /* BYSwitchLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A9C1741582F0039F3F3 /* BYSwitchLayer.h */; };
 		1D46465C174669D7003840E4 /* BYSwitchShadowLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AA01741582F0039F3F3 /* BYSwitchShadowLayer.h */; };
 		1D46465D174669D7003840E4 /* BYSwitchToggleLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AA21741582F0039F3F3 /* BYSwitchToggleLayer.h */; };
 		1D464660174669D7003840E4 /* BYStyleLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AB9174158650039F3F3 /* BYStyleLayer.h */; };
-		1D464661174669D7003840E4 /* BYButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FF00172EA5FE000C7811 /* BYButtonStyle.h */; };
-		1D464662174669D7003840E4 /* BYLabelStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A7E174157B40039F3F3 /* BYLabelStyle.h */; };
+		1D464661174669D7003840E4 /* BYButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FF00172EA5FE000C7811 /* BYButtonStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D464662174669D7003840E4 /* BYLabelStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A7E174157B40039F3F3 /* BYLabelStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D464663174669D7003840E4 /* BYStyleCustomizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A80174157B40039F3F3 /* BYStyleCustomizer.h */; };
-		1D464664174669D7003840E4 /* BYSwitchStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A82174157B40039F3F3 /* BYSwitchStyle.h */; };
-		1D464665174669D7003840E4 /* BYViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A84174157B40039F3F3 /* BYViewStyle.h */; };
-		1D464666174669D7003840E4 /* BYStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 729757C6173BB861003A34A5 /* BYStyle.h */; };
+		1D464664174669D7003840E4 /* BYSwitchStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A82174157B40039F3F3 /* BYSwitchStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D464665174669D7003840E4 /* BYViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A84174157B40039F3F3 /* BYViewStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D464666174669D7003840E4 /* BYStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 729757C6173BB861003A34A5 /* BYStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D464667174669D7003840E4 /* BYStateSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 729757CC173BED3A003A34A5 /* BYStateSetter.h */; };
-		1D464668174669D7003840E4 /* BYStyleProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A8E174157D20039F3F3 /* BYStyleProtocol.h */; };
+		1D464668174669D7003840E4 /* BYStyleProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A8E174157D20039F3F3 /* BYStyleProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D464669174669D7003840E4 /* BYStyleSetterCustomizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E168F2173D2EAE004CB021 /* BYStyleSetterCustomizer.h */; };
-		1D46466A174669D7003840E4 /* BYTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FF02172EA612000C7811 /* BYTheme.h */; };
+		1D46466A174669D7003840E4 /* BYTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FF02172EA612000C7811 /* BYTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D46466B174669D7003840E4 /* UIView+Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA54916F9AC9C00D08DBB /* UIView+Utilities.h */; };
 		1D46467617466A07003840E4 /* Beautify-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 1DF3D71C1743E58400C40FA9 /* Beautify-Prefix.pch */; };
 		1D56087917415D8800FFD529 /* BYLabelRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A91174158140039F3F3 /* BYLabelRenderer.m */; };
@@ -92,13 +92,13 @@
 		1DDB6A49174BB209008A2A73 /* BYBeautify_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6A48174BAE3F008A2A73 /* BYBeautify_Private.h */; };
 		1DE9D288174E6D890070AFD3 /* BYText.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D286174E6D880070AFD3 /* BYText.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DE9D28A174E6D890070AFD3 /* BYText.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D287174E6D890070AFD3 /* BYText.m */; };
-		1DE9D2EA174F7BA50070AFD3 /* UIViewController+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D2E8174F7BA50070AFD3 /* UIViewController+Beautify.h */; };
+		1DE9D2EA174F7BA50070AFD3 /* UIViewController+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D2E8174F7BA50070AFD3 /* UIViewController+Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DE9D2EC174F7BA50070AFD3 /* UIViewController+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2E9174F7BA50070AFD3 /* UIViewController+Beautify.m */; };
 		1DE9D2ED174F7BA50070AFD3 /* UIViewController+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2E9174F7BA50070AFD3 /* UIViewController+Beautify.m */; };
 		1DE9D2F8174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D2F6174F7CD00070AFD3 /* UIViewController+BeautifyPrivate.h */; };
 		1DE9D2FA174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2F7174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m */; };
 		1DE9D2FB174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2F7174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m */; };
-		1DE9D2FF174F7F540070AFD3 /* BYViewControllerStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D2FD174F7F540070AFD3 /* BYViewControllerStyle.h */; };
+		1DE9D2FF174F7F540070AFD3 /* BYViewControllerStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D2FD174F7F540070AFD3 /* BYViewControllerStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DE9D302174F7F540070AFD3 /* BYViewControllerStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2FE174F7F540070AFD3 /* BYViewControllerStyle.m */; };
 		1DE9D307174F7F780070AFD3 /* BYViewControllerRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D305174F7F780070AFD3 /* BYViewControllerRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DE9D309174F7F780070AFD3 /* BYViewControllerRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D306174F7F780070AFD3 /* BYViewControllerRenderer.m */; };
@@ -112,15 +112,15 @@
 		544975CD17D8B953003D7115 /* BYThumbLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 544975CB17D8B953003D7115 /* BYThumbLayer.h */; };
 		544975CF17D8B953003D7115 /* BYThumbLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 544975CC17D8B953003D7115 /* BYThumbLayer.m */; };
 		544975D017D8B953003D7115 /* BYThumbLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 544975CC17D8B953003D7115 /* BYThumbLayer.m */; };
-		547C32D117C4C1EE009D6289 /* BYSliderStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 547C32CF17C4C1EE009D6289 /* BYSliderStyle.h */; };
+		547C32D117C4C1EE009D6289 /* BYSliderStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 547C32CF17C4C1EE009D6289 /* BYSliderStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547C32D417C4C1EE009D6289 /* BYSliderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C32D017C4C1EE009D6289 /* BYSliderStyle.m */; };
 		547C32D817C4C24B009D6289 /* BYSliderBarBorderLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 547C32D617C4C24B009D6289 /* BYSliderBarBorderLayer.h */; };
-		54A995B7179FD29C00B9B17C /* BYDropShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A995B5179FD29C00B9B17C /* BYDropShadow.h */; };
+		54A995B7179FD29C00B9B17C /* BYDropShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A995B5179FD29C00B9B17C /* BYDropShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54A995BA179FD29C00B9B17C /* BYDropShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* BYDropShadow.m */; };
 		54ABF0E817A286EE0070B0B6 /* UINavigationBar+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 5480C1FC17A0127000F4007D /* UINavigationBar+Beautify.h */; };
 		54ABF0EB17A286F20070B0B6 /* UINavigationBar+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480C1FD17A0127000F4007D /* UINavigationBar+Beautify.m */; };
 		54ABF0EC17A287110070B0B6 /* UINavigationBar+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480C1FD17A0127000F4007D /* UINavigationBar+Beautify.m */; };
-		54D7FD7617B8EA590004F952 /* BYBarButtonItemRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54D7FD7417B8EA590004F952 /* BYBarButtonItemRenderer.h */; };
+		54D7FD7617B8EA590004F952 /* BYBarButtonItemRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54D7FD7417B8EA590004F952 /* BYBarButtonItemRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54D7FD7817B8EA590004F952 /* BYBarButtonItemRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D7FD7517B8EA590004F952 /* BYBarButtonItemRenderer.m */; };
 		54D7FD7917B8EA590004F952 /* BYBarButtonItemRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D7FD7517B8EA590004F952 /* BYBarButtonItemRenderer.m */; };
 		54DDE25E17C655930081E1AD /* BYSliderBackgroundLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DDE25C17C655920081E1AD /* BYSliderBackgroundLayer.h */; };
@@ -164,7 +164,7 @@
 		700ED7D517E9B933009C2C49 /* ValidLabelStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 700ED7D317E9B933009C2C49 /* ValidLabelStyle.json */; };
 		700ED7D917E9C0DF009C2C49 /* PartialVCStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 700ED7D717E9C0DF009C2C49 /* PartialVCStyle.json */; };
 		700ED7DA17E9C0DF009C2C49 /* ValidVCStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 700ED7D817E9C0DF009C2C49 /* ValidVCStyle.json */; };
-		700EE91D17E1FFAB00164EA1 /* BYThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6A42174BAA40008A2A73 /* BYThemeManager.h */; };
+		700EE91D17E1FFAB00164EA1 /* BYThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6A42174BAA40008A2A73 /* BYThemeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		700EE92817E202C400164EA1 /* BYConfigParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194BD17E1B4FA008161D3 /* BYConfigParser.m */; };
 		700F292616F3711300E85ED3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72BF4B3416F3487A00A0C0E3 /* UIKit.framework */; };
 		700F293116F3711300E85ED3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 700F293016F3711300E85ED3 /* main.m */; };
@@ -179,12 +179,12 @@
 		702194C817E1BC0D008161D3 /* BYSliderLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 702194C217E1BC0D008161D3 /* BYSliderLayer.h */; };
 		702194C917E1BC0D008161D3 /* BYSliderMinimumTrackLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 702194C317E1BC0D008161D3 /* BYSliderMinimumTrackLayer.h */; };
 		702194CA17E1BC0D008161D3 /* BYSliderMinimumTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194C417E1BC0D008161D3 /* BYSliderMinimumTrackLayer.m */; };
-		702194CE17E1BC2E008161D3 /* BYTableViewCellLabelRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 702194CB17E1BC2E008161D3 /* BYTableViewCellLabelRenderer.h */; };
-		702194CF17E1BC2E008161D3 /* BYTableViewRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 702194CC17E1BC2E008161D3 /* BYTableViewRenderer.h */; };
+		702194CE17E1BC2E008161D3 /* BYTableViewCellLabelRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 702194CB17E1BC2E008161D3 /* BYTableViewCellLabelRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		702194CF17E1BC2E008161D3 /* BYTableViewRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 702194CC17E1BC2E008161D3 /* BYTableViewRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		702194D017E1BC2E008161D3 /* BYTableViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194CD17E1BC2E008161D3 /* BYTableViewRenderer.m */; };
 		702194FA17E1BC95008161D3 /* BYTableViewCellLabelRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194F917E1BC95008161D3 /* BYTableViewCellLabelRenderer.m */; };
 		7036DB4916F8659400EBA8AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DCD86C16F377DE008ECF8B /* QuartzCore.framework */; };
-		70397B8F17DF33190095001B /* BYBarButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70397B8D17DF33190095001B /* BYBarButtonStyle.h */; };
+		70397B8F17DF33190095001B /* BYBarButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70397B8D17DF33190095001B /* BYBarButtonStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70397B9117DF33190095001B /* BYBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* BYBarButtonStyle.m */; };
 		70397B9217DF33190095001B /* BYBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* BYBarButtonStyle.m */; };
 		7047010517E1C06B00FEA5F5 /* NSObject+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010217E1C06B00FEA5F5 /* NSObject+Beautify.h */; };
@@ -192,7 +192,7 @@
 		7047010717E1C06B00FEA5F5 /* UIBarButtonItem+BeautifyPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010417E1C06B00FEA5F5 /* UIBarButtonItem+BeautifyPrivate.h */; };
 		7047010A17E1C08F00FEA5F5 /* UISlider+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010817E1C08F00FEA5F5 /* UISlider+Beautify.h */; };
 		7047010B17E1C08F00FEA5F5 /* UISlider+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010917E1C08F00FEA5F5 /* UISlider+Beautify.m */; };
-		7047011217E1C11100FEA5F5 /* BYImageViewRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010C17E1C11100FEA5F5 /* BYImageViewRenderer.h */; };
+		7047011217E1C11100FEA5F5 /* BYImageViewRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010C17E1C11100FEA5F5 /* BYImageViewRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7047011317E1C11100FEA5F5 /* BYTopShadowRenderingLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010D17E1C11100FEA5F5 /* BYTopShadowRenderingLayer.h */; };
 		7047011417E1C11100FEA5F5 /* BYTopShadowRenderingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010E17E1C11100FEA5F5 /* BYTopShadowRenderingLayer.m */; };
 		7047011517E1C11100FEA5F5 /* BYImageViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010F17E1C11100FEA5F5 /* BYImageViewRenderer.m */; };
@@ -204,7 +204,7 @@
 		7047012017E1C1F200FEA5F5 /* UISwitch+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047011E17E1C1F200FEA5F5 /* UISwitch+Beautify.h */; };
 		7047012117E1C1F200FEA5F5 /* UISwitch+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011F17E1C1F200FEA5F5 /* UISwitch+Beautify.m */; };
 		7047012917E1C23800FEA5F5 /* BYSwitchGestureView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047012817E1C23800FEA5F5 /* BYSwitchGestureView.h */; };
-		7047012D17E1C27A00FEA5F5 /* BYSliderRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047012C17E1C27A00FEA5F5 /* BYSliderRenderer.h */; };
+		7047012D17E1C27A00FEA5F5 /* BYSliderRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047012C17E1C27A00FEA5F5 /* BYSliderRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7047012E17E1C3D200FEA5F5 /* BYBeautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB6A38174BA951008A2A73 /* BYBeautify.m */; };
 		7047012F17E1C3F900FEA5F5 /* BYSliderLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011817E1C13200FEA5F5 /* BYSliderLayer.m */; };
 		7047013117E1C40100FEA5F5 /* BYSwitchGestureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011C17E1C14300FEA5F5 /* BYSwitchGestureView.m */; };
@@ -220,7 +220,7 @@
 		7047013E17E1C6CA00FEA5F5 /* BYTopShadowRenderingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010E17E1C11100FEA5F5 /* BYTopShadowRenderingLayer.m */; };
 		7047013F17E1C6CE00FEA5F5 /* BYImageViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010F17E1C11100FEA5F5 /* BYImageViewRenderer.m */; };
 		7047014017E1C6D100FEA5F5 /* UIImageView+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011117E1C11100FEA5F5 /* UIImageView+Beautify.m */; };
-		70907E6D1797E6F600F83417 /* BYImageViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70907E6B1797E6F600F83417 /* BYImageViewStyle.h */; };
+		70907E6D1797E6F600F83417 /* BYImageViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70907E6B1797E6F600F83417 /* BYImageViewStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70907E701797E6F600F83417 /* BYImageViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70907E6C1797E6F600F83417 /* BYImageViewStyle.m */; };
 		70907E7B1797FBC300F83417 /* roller@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70907E7A1797FBC300F83417 /* roller@2x.png */; };
 		70AB9D7417E9DF4000879E5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FE246617E0B385009A7113 /* Foundation.framework */; };
@@ -236,7 +236,7 @@
 		70C211B817DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
 		70C211B917DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
 		70E19557178462B20096E458 /* VisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E19555178462B20096E458 /* VisualTestViewController.m */; };
-		70EAFD9517E892680087081B /* BYBarButtonItemRenderer_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EAFD9417E892680087081B /* BYBarButtonItemRenderer_Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		70EAFD9517E892680087081B /* BYBarButtonItemRenderer_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 70EAFD9417E892680087081B /* BYBarButtonItemRenderer_Private.h */; };
 		70F1FD0A17E34FB1006018C9 /* ConfigParserPropertyParsingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F1FD0917E34FB1006018C9 /* ConfigParserPropertyParsingTests.m */; };
 		70F1FD0B17E3683E006018C9 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52016F9AC8500D08DBB /* NSObject+Properties.m */; };
 		70F61B8617831AE100DCA906 /* BYRenderUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 70F61B8417831AE100DCA906 /* BYRenderUtils.h */; };
@@ -278,13 +278,13 @@
 		70FF54DF17E7040F00F9BF03 /* ValidButtonStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 70FF54DE17E7040F00F9BF03 /* ValidButtonStyle.json */; };
 		70FF54E117E7042700F9BF03 /* PartialButtonStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 70FF54E017E7042700F9BF03 /* PartialButtonStyle.json */; };
 		7205345917579C61000A27C0 /* BYNavigationBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205345817579C61000A27C0 /* BYNavigationBarRenderer.m */; };
-		7205345C1757A000000A27C0 /* BYNavigationBarStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 7205345A1757A000000A27C0 /* BYNavigationBarStyle.h */; };
+		7205345C1757A000000A27C0 /* BYNavigationBarStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 7205345A1757A000000A27C0 /* BYNavigationBarStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7205345F1757A000000A27C0 /* BYNavigationBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205345B1757A000000A27C0 /* BYNavigationBarStyle.m */; };
 		720534611758EC04000A27C0 /* BYNavigationBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205345817579C61000A27C0 /* BYNavigationBarRenderer.m */; };
 		7276DDAF17563949004CC446 /* BYSwitchState.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D7105317548DAE00635F21 /* BYSwitchState.m */; };
-		727A862817575C3C00F6C6D9 /* BYTextFieldStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDECCE175656E0002F1093 /* BYTextFieldStyle.h */; };
+		727A862817575C3C00F6C6D9 /* BYTextFieldStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDECCE175656E0002F1093 /* BYTextFieldStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		727A862A17575C4600F6C6D9 /* BYTextShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 727A86251757453800F6C6D9 /* BYTextShadow.m */; };
-		727A862C17575C5100F6C6D9 /* BYSwitchState.h in Headers */ = {isa = PBXBuildFile; fileRef = 72D7105217548DAE00635F21 /* BYSwitchState.h */; };
+		727A862C17575C5100F6C6D9 /* BYSwitchState.h in Headers */ = {isa = PBXBuildFile; fileRef = 72D7105217548DAE00635F21 /* BYSwitchState.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		727A862E17575C5600F6C6D9 /* BYTextShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 727A86241757453800F6C6D9 /* BYTextShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		727A863017575C9F00F6C6D9 /* BYControlRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA81757204B002F1093 /* BYControlRenderer.m */; };
 		727A863217575CAD00F6C6D9 /* BYTextFieldStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDECCF175656E0002F1093 /* BYTextFieldStyle.m */; };
@@ -298,10 +298,10 @@
 		72ADB8D216FC9DDC00BE925D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ADB8D116FC9DDC00BE925D /* CFNetwork.framework */; };
 		72ADB8D416FC9DE200BE925D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ADB8D316FC9DE200BE925D /* Security.framework */; };
 		72ADB8D616FC9E0200BE925D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ADB8D516FC9E0200BE925D /* CoreGraphics.framework */; };
-		72AE98D4175BB94800787272 /* BYTableViewCellRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72AE98D2175BB94800787272 /* BYTableViewCellRenderer.h */; };
+		72AE98D4175BB94800787272 /* BYTableViewCellRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72AE98D2175BB94800787272 /* BYTableViewCellRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72AE98D6175BB94800787272 /* BYTableViewCellRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AE98D3175BB94800787272 /* BYTableViewCellRenderer.m */; };
 		72AE98D7175BB94800787272 /* BYTableViewCellRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AE98D3175BB94800787272 /* BYTableViewCellRenderer.m */; };
-		72AE98DB175BBA7E00787272 /* BYTableViewCellStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 72AE98D9175BBA7E00787272 /* BYTableViewCellStyle.h */; };
+		72AE98DB175BBA7E00787272 /* BYTableViewCellStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 72AE98D9175BBA7E00787272 /* BYTableViewCellStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72AE98DE175BBA7E00787272 /* BYTableViewCellStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AE98DA175BBA7E00787272 /* BYTableViewCellStyle.m */; };
 		72E168FE173D48FC004CB021 /* BYStyleSetterCustomizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E168F3173D2EAF004CB021 /* BYStyleSetterCustomizer.m */; };
 		72F07945175C941100FC27DB /* BYControlRenderingLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F07943175C941100FC27DB /* BYControlRenderingLayer.h */; };
@@ -313,7 +313,7 @@
 		72F0795C175CCC2F00FC27DB /* BYDelegateMultiplexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F0795A175CCC2D00FC27DB /* BYDelegateMultiplexer.h */; };
 		72F0795E175CCC2F00FC27DB /* BYDelegateMultiplexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F0795B175CCC2E00FC27DB /* BYDelegateMultiplexer.m */; };
 		72F0795F175CCC2F00FC27DB /* BYDelegateMultiplexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F0795B175CCC2E00FC27DB /* BYDelegateMultiplexer.m */; };
-		72F0797F1761F11000FC27DB /* Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F0797E1761F11000FC27DB /* Beautify.h */; };
+		72F0797F1761F11000FC27DB /* Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F0797E1761F11000FC27DB /* Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72F079811761F2C500FC27DB /* BYControlRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDEDA71757204A002F1093 /* BYControlRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72F079831761F34500FC27DB /* BYNavigationBarRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7205345717579C61000A27C0 /* BYNavigationBarRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72FDED9717565736002F1093 /* BYGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDED9617565736002F1093 /* BYGradientLayer.m */; };
@@ -1121,44 +1121,58 @@
 			buildActionMask = 2147483647;
 			files = (
 				700E154A17E31E33006E124E /* BYConfigParser_Private.h in Headers */,
-				1D464642174669A9003840E4 /* BYLabelRenderer.h in Headers */,
-				1D464643174669A9003840E4 /* BYSwitchRenderer.h in Headers */,
-				1D464644174669A9003840E4 /* BYButtonRenderer.h in Headers */,
-				1DE9D307174F7F780070AFD3 /* BYViewControllerRenderer.h in Headers */,
-				1D464645174669A9003840E4 /* BYStyleRenderer.h in Headers */,
 				702194C617E1BC0D008161D3 /* BYSliderBarShadowLayer.h in Headers */,
-				1D464646174669A9003840E4 /* BYViewRenderer.h in Headers */,
+				1D464643174669A9003840E4 /* BYSwitchRenderer.h in Headers */,
 				7047010717E1C06B00FEA5F5 /* UIBarButtonItem+BeautifyPrivate.h in Headers */,
+				1D464644174669A9003840E4 /* BYButtonRenderer.h in Headers */,
+				702194CF17E1BC2E008161D3 /* BYTableViewRenderer.h in Headers */,
+				7047011217E1C11100FEA5F5 /* BYImageViewRenderer.h in Headers */,
+				54D7FD7617B8EA590004F952 /* BYBarButtonItemRenderer.h in Headers */,
+				72AE98D4175BB94800787272 /* BYTableViewCellRenderer.h in Headers */,
+				1D464642174669A9003840E4 /* BYLabelRenderer.h in Headers */,
 				1D464647174669A9003840E4 /* BYBorder.h in Headers */,
-				7047012D17E1C27A00FEA5F5 /* BYSliderRenderer.h in Headers */,
+				1D464645174669A9003840E4 /* BYStyleRenderer.h in Headers */,
 				1D464648174669A9003840E4 /* BYFont.h in Headers */,
+				1DE9D307174F7F780070AFD3 /* BYViewControllerRenderer.h in Headers */,
 				1D464649174669A9003840E4 /* BYGradient.h in Headers */,
 				1D46464A174669A9003840E4 /* BYGradientStop.h in Headers */,
+				72F079831761F34500FC27DB /* BYNavigationBarRenderer.h in Headers */,
+				1D464646174669A9003840E4 /* BYViewRenderer.h in Headers */,
+				72F079811761F2C500FC27DB /* BYControlRenderer.h in Headers */,
+				7047012D17E1C27A00FEA5F5 /* BYSliderRenderer.h in Headers */,
 				1D46464B174669A9003840E4 /* BYNineBoxedImage.h in Headers */,
 				1D46464C174669A9003840E4 /* BYShadow.h in Headers */,
+				72FDED9F17565754002F1093 /* BYTextFieldRenderer.h in Headers */,
 				1DDB6A39174BA951008A2A73 /* BYBeautify.h in Headers */,
+				702194CE17E1BC2E008161D3 /* BYTableViewCellLabelRenderer.h in Headers */,
 				7009050D178C0EB600D7BEF4 /* BYVersionUtils.h in Headers */,
 				1D46464D174669A9003840E4 /* UIView+Beautify.h in Headers */,
 				1D46467617466A07003840E4 /* Beautify-Prefix.pch in Headers */,
 				1D464655174669D7003840E4 /* NSObject+Properties.h in Headers */,
 				1D464656174669D7003840E4 /* UIColor+HexColors.h in Headers */,
+				70907E6D1797E6F600F83417 /* BYImageViewStyle.h in Headers */,
+				1D464661174669D7003840E4 /* BYButtonStyle.h in Headers */,
+				1D464664174669D7003840E4 /* BYSwitchStyle.h in Headers */,
+				1D464665174669D7003840E4 /* BYViewStyle.h in Headers */,
+				1D464666174669D7003840E4 /* BYStyle.h in Headers */,
+				1DE9D2FF174F7F540070AFD3 /* BYViewControllerStyle.h in Headers */,
+				727A862817575C3C00F6C6D9 /* BYTextFieldStyle.h in Headers */,
+				7205345C1757A000000A27C0 /* BYNavigationBarStyle.h in Headers */,
+				72AE98DB175BBA7E00787272 /* BYTableViewCellStyle.h in Headers */,
+				547C32D117C4C1EE009D6289 /* BYSliderStyle.h in Headers */,
+				70397B8F17DF33190095001B /* BYBarButtonStyle.h in Headers */,
+				70EAFD9517E892680087081B /* BYBarButtonItemRenderer_Private.h in Headers */,
 				1D464657174669D7003840E4 /* BYConfigParser.h in Headers */,
 				1DDB6A49174BB209008A2A73 /* BYBeautify_Private.h in Headers */,
 				1D464659174669D7003840E4 /* BYSwitchBorderLayer.h in Headers */,
 				1D46465B174669D7003840E4 /* BYSwitchLayer.h in Headers */,
 				1D46465C174669D7003840E4 /* BYSwitchShadowLayer.h in Headers */,
-				70907E6D1797E6F600F83417 /* BYImageViewStyle.h in Headers */,
 				1D46465D174669D7003840E4 /* BYSwitchToggleLayer.h in Headers */,
 				1D464660174669D7003840E4 /* BYStyleLayer.h in Headers */,
 				7047011617E1C11100FEA5F5 /* UIImageView+Beautify.h in Headers */,
-				1D464661174669D7003840E4 /* BYButtonStyle.h in Headers */,
 				1D464662174669D7003840E4 /* BYLabelStyle.h in Headers */,
 				1D464663174669D7003840E4 /* BYStyleCustomizer.h in Headers */,
-				1D464664174669D7003840E4 /* BYSwitchStyle.h in Headers */,
-				1D464665174669D7003840E4 /* BYViewStyle.h in Headers */,
-				1D464666174669D7003840E4 /* BYStyle.h in Headers */,
 				1D464667174669D7003840E4 /* BYStateSetter.h in Headers */,
-				70EAFD9517E892680087081B /* BYBarButtonItemRenderer_Private.h in Headers */,
 				1D464668174669D7003840E4 /* BYStyleProtocol.h in Headers */,
 				1D464669174669D7003840E4 /* BYStyleSetterCustomizer.h in Headers */,
 				1D46466A174669D7003840E4 /* BYTheme.h in Headers */,
@@ -1167,7 +1181,6 @@
 				54A995B7179FD29C00B9B17C /* BYDropShadow.h in Headers */,
 				7047010517E1C06B00FEA5F5 /* NSObject+Beautify.h in Headers */,
 				70C211B617DF01DB00CA110B /* TableVisualTestViewController.h in Headers */,
-				702194CE17E1BC2E008161D3 /* BYTableViewCellLabelRenderer.h in Headers */,
 				1D46464F174669C4003840E4 /* BYStyleRenderer_Private.h in Headers */,
 				1D464650174669C4003840E4 /* BYViewRenderer_Private.h in Headers */,
 				1D464651174669C4003840E4 /* UIView+BeautifyPrivate.h in Headers */,
@@ -1175,35 +1188,22 @@
 				1DDB696D174A2C8E008A2A73 /* BYNineBoxedImage_Private.h in Headers */,
 				544975CD17D8B953003D7115 /* BYThumbLayer.h in Headers */,
 				7047011317E1C11100FEA5F5 /* BYTopShadowRenderingLayer.h in Headers */,
-				702194CF17E1BC2E008161D3 /* BYTableViewRenderer.h in Headers */,
-				7047011217E1C11100FEA5F5 /* BYImageViewRenderer.h in Headers */,
 				1DE9D288174E6D890070AFD3 /* BYText.h in Headers */,
 				1DE9D2EA174F7BA50070AFD3 /* UIViewController+Beautify.h in Headers */,
 				1DE9D2F8174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.h in Headers */,
-				54D7FD7617B8EA590004F952 /* BYBarButtonItemRenderer.h in Headers */,
-				1DE9D2FF174F7F540070AFD3 /* BYViewControllerStyle.h in Headers */,
-				72FDED9F17565754002F1093 /* BYTextFieldRenderer.h in Headers */,
-				727A862817575C3C00F6C6D9 /* BYTextFieldStyle.h in Headers */,
 				727A862C17575C5100F6C6D9 /* BYSwitchState.h in Headers */,
 				702194C917E1BC0D008161D3 /* BYSliderMinimumTrackLayer.h in Headers */,
 				727A862E17575C5600F6C6D9 /* BYTextShadow.h in Headers */,
-				7205345C1757A000000A27C0 /* BYNavigationBarStyle.h in Headers */,
 				7047012917E1C23800FEA5F5 /* BYSwitchGestureView.h in Headers */,
-				72AE98D4175BB94800787272 /* BYTableViewCellRenderer.h in Headers */,
-				72AE98DB175BBA7E00787272 /* BYTableViewCellStyle.h in Headers */,
 				72F07945175C941100FC27DB /* BYControlRenderingLayer.h in Headers */,
 				72F07959175C9F9700FC27DB /* UITableViewCell+Beautify.h in Headers */,
 				72F0795C175CCC2F00FC27DB /* BYDelegateMultiplexer.h in Headers */,
 				72F0797F1761F11000FC27DB /* Beautify.h in Headers */,
-				72F079811761F2C500FC27DB /* BYControlRenderer.h in Headers */,
-				72F079831761F34500FC27DB /* BYNavigationBarRenderer.h in Headers */,
 				70F61B8617831AE100DCA906 /* BYRenderUtils.h in Headers */,
 				543570EA17BE313E007FA7CE /* UIBarButtonItem+Beautify.h in Headers */,
-				547C32D117C4C1EE009D6289 /* BYSliderStyle.h in Headers */,
 				7047010A17E1C08F00FEA5F5 /* UISlider+Beautify.h in Headers */,
 				547C32D817C4C24B009D6289 /* BYSliderBarBorderLayer.h in Headers */,
 				54DDE25E17C655930081E1AD /* BYSliderBackgroundLayer.h in Headers */,
-				70397B8F17DF33190095001B /* BYBarButtonStyle.h in Headers */,
 				7047012017E1C1F200FEA5F5 /* UISwitch+Beautify.h in Headers */,
 				54DDE26C17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.h in Headers */,
 				700EE91D17E1FFAB00164EA1 /* BYThemeManager.h in Headers */,
@@ -1989,6 +1989,7 @@
 				70AB9DA417E9DF4100879E5E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70FE247417E0B385009A7113 /* Build configuration list for PBXNativeTarget "Beautify Tests" */ = {
 			isa = XCConfigurationList;
