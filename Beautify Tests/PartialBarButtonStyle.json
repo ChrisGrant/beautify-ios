@@ -1,0 +1,20 @@
+{
+    "backgroundGradient": {
+        "radial": false,
+        "stops": [
+                  {
+                  "color": "FF0000",
+                  "position": "0.0"
+                  },
+                  {
+                  "color": "0000FF",
+                  "position": "0.5"
+                  }
+                  ]
+    },
+    "border": {
+        "width": 5,
+        "color": "#FF0000",
+        "cornerRadius": 1
+    }
+}

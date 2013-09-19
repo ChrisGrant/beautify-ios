@@ -18,6 +18,9 @@
 #import "BYTextFieldStyle.h"
 #import "BYNavigationBarStyle.h"
 #import "BYTableViewCellStyle.h"
+#import "BYSliderStyle.h"
+#import "BYBarButtonStyle.h"
+#import "BYImageViewStyle.h"
 
 @interface ConfigParserTests : XCTestCase
 @end
@@ -344,6 +347,117 @@
          hasStopOneColor:[UIColor greenColor] atPosition:0.1 andStopTwoColor:[UIColor blueColor] atPosition:0.9
              andIsRadial:NO withRadialOffset:CGSizeZero];
     [self assertBorder:tableStyle.border hasWidth:1 color:[UIColor redColor] andCornerRadius:8];
+}
+
+#pragma mark - Image View Testing
+
+-(void)testImageViewStyleWithNilDict {
+    [self assertStyleIsNilWithNilDictForClass:[BYImageViewStyle class]];
+}
+
+-(void)testImageViewStyleWithEmptyDict {
+    [self assertStyleIsNotNilWithEmptyDictForClass:[BYImageViewStyle class]];
+}
+
+-(void)testImageViewStyleWithValidDict {
+    BYImageViewStyle *imageStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"ValidImageViewStyle"
+                                                                                           andClass:[BYImageViewStyle class]];
+    [self assertBorder:imageStyle.border hasWidth:53.0f color:[UIColor redColor] andCornerRadius:1];
+    [self assertShadows:imageStyle.outerShadows hasOneShadowWithColor:[UIColor greenColor] radius:2.0f andOffset:CGSizeMake(2, 3)];
+    [self assertShadows:imageStyle.innerShadows hasOneShadowWithColor:[UIColor whiteColor] radius:5.0f andOffset:CGSizeMake(1, 4)];
+}
+
+-(void)testImageViewStyleWithPartialDict {
+    BYImageViewStyle *imageStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialImageViewStyle"
+                                                                                           andClass:[BYImageViewStyle class]];
+    [self assertBorder:imageStyle.border hasWidth:1 color:[UIColor redColor] andCornerRadius:0];
+}
+
+#pragma mark - Bar Button Testing
+
+-(void)testBarButtonStyleWithNilDict {
+    [self assertStyleIsNilWithNilDictForClass:[BYBarButtonStyle class]];
+}
+
+-(void)testBarButtonStyleWithEmptyDict {
+    [self assertStyleIsNotNilWithEmptyDictForClass:[BYBarButtonStyle class]];
+}
+
+-(void)testBarButtonStyleWithValidDict {
+    BYBarButtonStyle *barStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"ValidBarButtonStyle"
+                                                                                         andClass:[BYBarButtonStyle class]];
+    [self assertText:barStyle.title hasName:@"HelveticaNeue-Bold" size:10.0f andColor:[UIColor blackColor]];
+    
+    [self assertTextShadow:barStyle.titleShadow hasColor:[UIColor blueColor] andOffset:CGSizeMake(2, 5)];
+    
+    XCTAssert([barStyle.backgroundColor isEqualToColor:[UIColor whiteColor]], @"Background should be white");
+    
+    [self assertGradient:barStyle.backgroundGradient hasStopOneColor:[UIColor redColor] atPosition:0.1
+         andStopTwoColor:[UIColor blueColor] atPosition:0.9f andIsRadial:NO withRadialOffset:CGSizeZero];
+    
+    [self assertBorder:barStyle.border hasWidth:1.0f color:[UIColor redColor] andCornerRadius:8.0f];
+    
+    [self assertShadows:barStyle.outerShadows hasOneShadowWithColor:[UIColor greenColor] radius:2.0f andOffset:CGSizeMake(2, 3)];
+}
+
+-(void)testBarButtonStyleWithPartialDict {
+    BYBarButtonStyle *barStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialBarButtonStyle"
+                                                                                         andClass:[BYBarButtonStyle class]];
+    
+    [self assertGradient:barStyle.backgroundGradient hasStopOneColor:[UIColor redColor] atPosition:0.0
+         andStopTwoColor:[UIColor blueColor] atPosition:0.5f andIsRadial:NO withRadialOffset:CGSizeZero];
+    [self assertBorder:barStyle.border hasWidth:5.0f color:[UIColor redColor] andCornerRadius:1.0f];
+}
+
+#pragma mark - Slider Testing
+
+-(void)testSliderStyleWithNilDict {
+    [self assertStyleIsNilWithNilDictForClass:[BYSliderStyle class]];
+}
+
+-(void)testSliderStyleWithEmptyDict {
+    [self assertStyleIsNotNilWithEmptyDictForClass:[BYSliderStyle class]];
+}
+
+-(void)testSliderStyleWithValidDict {
+    BYSliderStyle *sliderStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"ValidSliderStyle"
+                                                                                               andClass:[BYSliderStyle class]];
+    
+    [self assertBorder:sliderStyle.border hasWidth:1 color:[UIColor redColor] andCornerRadius:15];
+    XCTAssert([sliderStyle.backgroundColor isEqualToColor:[UIColor blueColor]], @"BG should be blue");
+    [self assertBorder:sliderStyle.barBorder hasWidth:2 color:[UIColor redColor] andCornerRadius:10];
+    
+    [self assertShadows:sliderStyle.barInnerShadows hasOneShadowWithColor:[UIColor blackColor] radius:4 andOffset:CGSizeZero];
+    [self assertShadows:sliderStyle.barOuterShadows hasOneShadowWithColor:[UIColor redColor] radius:0 andOffset:CGSizeMake(0, -2)];
+    
+    XCTAssert([sliderStyle.minimumTrackColor isEqualToColor:[UIColor blackColor]], @"Minimum track should be black");
+    [self assertGradient:sliderStyle.minimumTrackBackgroundGradient
+         hasStopOneColor:[UIColor redColor] atPosition:0.5 andStopTwoColor:[UIColor blueColor] atPosition:0.6
+             andIsRadial:NO withRadialOffset:CGSizeZero];
+    
+    XCTAssert([sliderStyle.maximumTrackColor isEqualToColor:[UIColor greenColor]], @"Maximum track should be green");
+    [self assertGradient:sliderStyle.maximumTrackBackgroundGradient
+         hasStopOneColor:[UIColor redColor] atPosition:0.1 andStopTwoColor:[UIColor whiteColor] atPosition:0.5
+             andIsRadial:NO withRadialOffset:CGSizeZero];
+    
+    
+    [self assertBorder:sliderStyle.thumbBorder hasWidth:1 color:[UIColor greenColor] andCornerRadius:15.0f];
+    
+    XCTAssert([sliderStyle.thumbBackgroundColor isEqualToColor:[UIColor whiteColor]], @"Background color should be white");
+    
+    [self assertGradient:sliderStyle.thumbBackgroundGradient
+         hasStopOneColor:[UIColor whiteColor] atPosition:1.0f
+         andStopTwoColor:[UIColor blueColor] atPosition:0.0f andIsRadial:NO withRadialOffset:CGSizeZero];
+    
+    [self assertShadows:sliderStyle.thumbInnerShadows hasOneShadowWithColor:[UIColor whiteColor]
+                 radius:2 andOffset:CGSizeMake(2, 2)];
+    XCTAssertEqual(sliderStyle.thumbOuterShadows.count, (NSUInteger)0, @"Should be no outer shadows");
+}
+
+-(void)testSliderStyleWithPartialDict {
+    BYSliderStyle *sliderStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialSliderStyle"
+                                                                                               andClass:[BYSliderStyle class]];
+    
 }
 
 #pragma mark - Helper Methods
