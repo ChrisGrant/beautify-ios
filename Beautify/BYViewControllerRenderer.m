@@ -28,16 +28,15 @@
 }
 
 -(void)setup:(UIViewController*)viewController theme:(BYTheme*)theme {
-    // Create the background image and gradient views
+    // Create the background image
     _backgroundImageView = [[UIImageView alloc] initWithFrame:viewController.view.bounds];
-   
-    // Add to the view]
-    [viewController.view addSubview:_backgroundImageView];
-    [viewController.view sendSubviewToBack:_backgroundImageView];
+    [_backgroundImageView setContentMode:UIViewContentModeScaleAspectFill];
+    [viewController.view.layer insertSublayer:_backgroundImageView.layer atIndex:0];
 
     // Hide until required
     _backgroundImageView.hidden = YES;
-    
+
+    // Create the background gradient
     _backgroundGradientLayer = [[BYGradientLayer alloc] initWithRenderer:self];
     [_backgroundGradientLayer setFrame:viewController.view.bounds];
     [viewController.view.layer insertSublayer:_backgroundGradientLayer atIndex:0];

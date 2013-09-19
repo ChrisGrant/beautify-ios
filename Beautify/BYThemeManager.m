@@ -63,7 +63,7 @@
 -(BYStyleRenderer*)rendererForView:(id)view {
     // Some controls should not be styled at all.
     if ([view isKindOfClass:NSClassFromString(@"UIButtonLabel")] ||
-        [view isKindOfClass:NSClassFromString(@"UINavigationController")] ||
+        [view isKindOfClass:[UINavigationController class]] ||
         [view isKindOfClass:NSClassFromString(@"UICalloutBarButton")] ||
         [view isKindOfClass:NSClassFromString(@"UITextFieldLabel")] ||
         [view isKindOfClass:NSClassFromString(@"UIAlertButton")] ||
@@ -71,7 +71,8 @@
         [view isKindOfClass:NSClassFromString(@"_UINavigationBarBackground")] ||
         [view isKindOfClass:NSClassFromString(@"_UINavigationBarBackIndicatorView")]||
         [view isKindOfClass:NSClassFromString(@"_UITextFieldRoundedRectBackgroundViewNeue")]||
-        [view isKindOfClass:NSClassFromString(@"_UIToolbarBackground")]) {
+        [view isKindOfClass:NSClassFromString(@"_UIToolbarBackground")] ||
+        [view isKindOfClass:[UITabBarController class]]) {
         return nil;
     }
 
@@ -85,8 +86,7 @@
             id rendererClass = (self.renderers)[viewType];
             id rendererClassInstance = [NSClassFromString(rendererClass) alloc];
             
-            BYStyleRenderer* renderer = [rendererClassInstance initWithView:view
-                                                                      theme:[[BYThemeManager instance] currentTheme]];
+            BYStyleRenderer* renderer = [rendererClassInstance initWithView:view theme:[[BYThemeManager instance] currentTheme]];
             return renderer;
         }
     }
