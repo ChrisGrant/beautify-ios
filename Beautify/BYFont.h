@@ -28,4 +28,9 @@
  */
 -(id)initWithName:(NSString*)name;
 
+/*
+ Init with the specified font name and size
+ */
+-(id)initWithName:(NSString *)name andSize:(float)size;
+
 @end

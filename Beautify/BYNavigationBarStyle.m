@@ -16,7 +16,8 @@
 +(BYNavigationBarStyle*)defaultStyle {
     BYNavigationBarStyle *style = [BYNavigationBarStyle new];
     if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
-        style.title = [[BYText alloc] initWithFont:[BYFont new] color:[UIColor blackColor]];
+        style.title = [[BYText alloc] initWithFont:[[BYFont alloc] initWithName:@"HelveticaNeue-Medium" andSize:18.0f]
+                                             color:[UIColor blackColor]];
     }
     else {
         BYFont *font = [[BYFont alloc] initWithName:[UIFont boldSystemFontOfSize:1].fontName];

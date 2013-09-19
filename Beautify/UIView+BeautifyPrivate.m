@@ -119,6 +119,11 @@
         [names addObject:@"_UIStepperButton"];
     }
     
+    // UINavigationBar and UITabBar labels should not be styled by the standard UILabel styling.
+    if([self isKindOfClass:[UILabel class]]) {
+        [names addObjectsFromArray:@[@"UINavigationBar", @"UITabBar"]];
+    }
+    
     // Modal/Alert Views
     if([NSStringFromClass([self class]) isEqualToString:@"_UIModalItemTableViewCell"] ||
        [self isKindOfClass:[UILabel class]] ||
