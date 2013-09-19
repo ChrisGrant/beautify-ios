@@ -102,8 +102,8 @@ Every style has a `defaultStyle` method for when you wish to take a default styl
 
 ```objc	
 BYTheme *themeBuiltInCode = [BYTheme defaultTheme];
-BSwitchStyle *modifiedSwitchStyle = [BYSwitchStyle defaultStyle];
-modifiedSwitchStyle.border = [[BYBorder alloc] initWithColor:[UIColor blue] width:2.0f radius:0];
+BYSwitchStyle *modifiedSwitchStyle = [BYSwitchStyle defaultStyle];
+modifiedSwitchStyle.border = [[BYBorder alloc] initWithColor:[UIColor blueColor] width:2.0f radius:0];
 themeBuiltInCode.switchStyle = modifiedSwitchStyle;
 ```
 	
