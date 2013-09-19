@@ -23,6 +23,12 @@
     return self;
 }
 
+-(id)initWithName:(NSString *)name andSize:(float)size {
+    BYFont *font = [self initWithName:name];
+    font.size = size;
+    return font;
+}
+
 -(UIFont*)createFont:(UIFont*)font {
     if (_size != 0.0 || font == nil) {
         return [UIFont fontWithName:self.name size:self.size];
