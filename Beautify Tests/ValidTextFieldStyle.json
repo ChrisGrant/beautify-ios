@@ -1,0 +1,39 @@
+{
+    "title": {
+        "color": "#000000",
+        "font": {
+            "name": "HelveticaNeue-Medium",
+            "size": 10
+        }
+    },
+    "backgroundColor": "#000000",
+    "backgroundGradient": {
+        "radial": true,
+        "stops": [
+                  {
+                  "color": "FF0000",
+                  "position": "0.5"
+                  },
+                  {
+                  "color": "0000FF",
+                  "position": "0.9"
+                  }
+                  ]
+    },
+    "border": {
+        "width": 1,
+        "color": "#FF0000",
+        "cornerRadius": 8
+    },
+    "outerShadows":
+    [
+        {
+        "radius": 2,
+        "color": "#00FF00",
+        "offset": {
+            "x": 2,
+            "y": 3
+            }
+        }
+    ]
+}

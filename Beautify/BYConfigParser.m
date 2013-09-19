@@ -502,6 +502,12 @@ static NSMutableArray* _objectStack;
 
 +(UIImage*)imageFromBase64String:(NSString*)dataStr {
     UIImage *image;
+    
+    if(![dataStr isKindOfClass:[NSString class]]) {
+        NSLog(@"Image data string was not a string! Image will be nil.");
+        return nil;
+    }
+    
     if(dataStr.length > 22) {
         dataStr = [dataStr substringFromIndex:22];
         NSData *data = [self base64DataFromString:dataStr];
