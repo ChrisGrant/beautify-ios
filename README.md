@@ -96,7 +96,7 @@ Place this at the top of the `didFinishLaunchingWithOptions:` method in your app
 
 ####Building a theme in code
 	
-Start off by instantiating a new“Ω” `BYTheme` object. This object contains all of the properties you will need to style your application. Don't worry about leaving some of the properties nil if you want to keep the default style. If beautify detects a nil property then it will revert to the default style anyway.
+Start off by instantiating a new `BYTheme` object. This object contains all of the properties you will need to style your application. Don't worry about leaving some of the properties nil if you want to keep the default style. If beautify detects a nil property then it will revert to the default style anyway.
 	
 Every style has a `defaultStyle` method for when you wish to take a default style for a control and modify it slightly. Doing this for the switch would look something like this:
 
