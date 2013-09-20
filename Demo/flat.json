@@ -1,0 +1,258 @@
+{
+    "theme": {
+        "buttonStyle": {
+            "title": {
+                "color": "#FFFFFF",
+                "font": {
+                    "name": "ArialMT",
+                    "size": 18
+                }
+            },
+            "backgroundColor": "#1ABC9C",
+            "border": {
+                "width": "0",
+                "color": "#FFFFFF",
+                "cornerRadius": "10"
+            },
+            "innerShadows": [],
+            "outerShadows": [],
+            "stateSetters": [
+                {
+                    "propertyName": "backgroundColor",
+                    "state": "highlighted",
+                    "value": "#16A085"
+                },
+                {
+                    "state": "highlighted",
+                    "propertyName": "title",
+                    "value": {
+                        "color": "#FFFFFF",
+                        "font": {
+                            "name": "ArialMT",
+                            "size": 18
+                        }
+                    }
+                }
+            ]
+        },
+        "textFieldStyle": {
+            "title": {
+                "color": "#404E65",
+                "font": {
+                    "name": "Helvetica",
+                    "size": 14
+                }
+            },
+            "backgroundColor": "#FFFFFF",
+            "border": {
+                "width": "4",
+                "color": "#16A085",
+                "cornerRadius": "10"
+            },
+            "innerShadows": [],
+            "outerShadows": [],
+            "stateSetters": []
+        },
+        "viewControllerStyle": {
+            "backgroundColor": "#FFFFFF",
+            "backgroundGradient": {
+                "radial": true,
+                "stops": []
+            },
+            "stateSetters": []
+        },
+        "labelStyle": {
+            "title": {
+                "color": "#404E65",
+                "font": {
+                    "name": "HelveticaNeue-Light",
+                    "size": 0
+                }
+            },
+            "stateSetters": []
+        },
+        "switchStyle": {
+            "onState": {
+                "textStyle": {
+                    "color": "#FFFFFF",
+                    "font": {
+                        "name": "Helvetica-Bold",
+                        "size": 0
+                    }
+                },
+                "text": " ",
+                "backgroundColor": "#34495E",
+                "textShadow": {
+                    "color": "#00000000",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            },
+            "offState": {
+                "textStyle": {
+                    "color": "#888888",
+                    "font": {
+                        "name": "Helvetica-Bold",
+                        "size": 0
+                    }
+                },
+                "text": " ",
+                "backgroundColor": "#888888",
+                "textShadow": {
+                    "color": "#00000000",
+                    "offset": {
+                        "x": 0,
+                        "y": 0
+                    }
+                }
+            },
+            "thumbBorder": {
+                "width": "4",
+                "color": "#2C3E50",
+                "cornerRadius": "15"
+            },
+            "highlightColor": "#00000000",
+            "thumbBackgroundColor": "#1ABC9C",
+            "thumbInnerShadows": [],
+            "thumbOuterShadows": [],
+            "innerShadows": [],
+            "outerShadows": [],
+            "border": {
+                "width": "3",
+                "color": "#FFFFFF",
+                "cornerRadius": "15"
+            },
+            "stateSetters": [
+                {
+                    "propertyName": "thumbBackgroundColor",
+                    "state": "highlighted",
+                    "value": "#DDDDDD"
+                }
+            ]
+        },
+        "navigationBarStyle": {
+            "title": {
+                "color": "#FFFFFF",
+                "font": {
+                    "name": "Helvetica-Bold",
+                    "size": 0
+                }
+            },
+            "backgroundColor": "#2C3E50",
+            "titleShadow": {
+                "color": "#00000099",
+                "offset": {
+                    "x": 0,
+                    "y": -1
+                }
+            },
+            "stateSetters": []
+        },
+        "tableViewCellStyle": {
+            "title": {
+                "color": "#404E65",
+                "font": {
+                    "name": "Verdana",
+                    "size": 0
+                }
+            },
+            "backgroundColor": "#FFFFFF",
+            "border": {
+                "width": "0",
+                "color": "#555555",
+                "cornerRadius": 0
+            },
+            "innerShadows": [],
+            "outerShadows": [
+                {
+                    "color": "#DDDDDD",
+                    "radius": "1",
+                    "offset": {
+                        "x": 2,
+                        "y": 2
+                    },
+                    "circleChanger": {
+                        "offset": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "angle": 0,
+                        "distance": 0
+                    }
+                }
+            ],
+            "titleShadow": {
+                "color": "#00000000",
+                "offset": {
+                    "x": 0,
+                    "y": 0
+                }
+            },
+            "stateSetters": [
+                {
+                    "state": "highlighted",
+                    "propertyName": "title",
+                    "value": {
+                        "color": "#FFFFFF",
+                        "font": {
+                            "name": "Verdana",
+                            "size": 0
+                        }
+                    }
+                },
+                {
+                    "propertyName": "backgroundColor",
+                    "state": "highlighted",
+                    "value": "#1ABC9C"
+                }
+            ]
+        },
+        "imageViewStyle": {
+            "border": {
+                "width": 0,
+                "color": "#00000000",
+                "cornerRadius": 0
+            },
+            "innerShadows": [],
+            "outerShadows": [],
+            "stateSetters": []
+        },
+        "barButtonItemStyle": {
+            "title": {
+                "color": "#FFFFFF",
+                "font": {
+                    "name": "ArialMT",
+                    "size": 14
+                }
+            },
+            "backgroundColor": "#1ABC9C",
+            "border": {
+                "width": "0",
+                "color": "#000000",
+                "cornerRadius": "5"
+            },
+            "innerShadows": [],
+            "outerShadows": [],
+            "stateSetters": [
+                {
+                    "propertyName": "backgroundColor",
+                    "state": "highlighted",
+                    "value": "#16A085"
+                },
+                {
+                    "state": "highlighted",
+                    "propertyName": "title",
+                    "value": {
+                        "color": "#FFFFFF",
+                        "font": {
+                            "name": "ArialMT",
+                            "size": 14
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

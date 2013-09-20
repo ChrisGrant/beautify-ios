@@ -7,6 +7,7 @@
 //
 
 #import "DemoViewController.h"
+#import <Beautify/Beautify.h>
 
 @interface DemoViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -22,9 +23,7 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-    if(self.applyCustomStyles) {
-        
-    }
+    [self.imageView setImmuneToBeautify:NO];
 }
 
 @end
