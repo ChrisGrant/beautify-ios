@@ -11,6 +11,7 @@
                 <outlet property="leftSwitch" destination="54L-sG-y6h" id="h3w-EV-lYk"/>
                 <outlet property="rightSwitch" destination="f5T-pR-adu" id="7De-ZM-Wbv"/>
                 <outlet property="slider" destination="68h-GB-fVO" id="X7P-3s-z34"/>
+                <outlet property="tableView" destination="cjZ-6j-4d7" id="SMG-kx-Ntj"/>
                 <outlet property="textField" destination="rrh-XY-5tw" id="OSc-5E-Pga"/>
                 <outlet property="titleLabel" destination="YPh-uK-6rS" id="8Cf-rl-MUu"/>
                 <outlet property="view" destination="1" id="Cbx-LN-dB8"/>
@@ -28,6 +29,9 @@
                     <constraints>
                         <constraint firstAttribute="width" constant="354" id="28u-cg-poq"/>
                     </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="fQ8-hm-yHw"/>
+                    </connections>
                 </tableView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="HfG-rB-yNO">
                     <rect key="frame" x="354" y="0.0" width="670" height="768"/>
