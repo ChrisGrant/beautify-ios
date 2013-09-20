@@ -16,7 +16,7 @@
 
 @implementation BYButtonStyle
 
-+(BYButtonStyle*)defaultStyle {
++(BYButtonStyle*)defaultCustomStyle {
     BYButtonStyle *style = [BYButtonStyle new];
     style.title = [[BYText alloc] initWithFont:[BYFont new] color:[UIColor whiteColor]];
     style.backgroundColor = [UIColor clearColor];

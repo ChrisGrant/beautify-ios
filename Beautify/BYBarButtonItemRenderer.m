@@ -214,7 +214,7 @@
     if(theme.barButtonItemStyle) {
         return theme.barButtonItemStyle;
     }
-    BYBarButtonStyle *barStyle =  [BYBarButtonStyle defaultStyle];
+    BYBarButtonStyle *barStyle =  [BYBarButtonStyle defaultCustomStyle];
     barStyle.backgroundColor = _barButtonItem.tintColor;
     return barStyle;
 }

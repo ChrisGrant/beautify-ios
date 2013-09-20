@@ -83,7 +83,7 @@
             return theme.buttonStyle;
         }
         if(button.buttonType == UIButtonTypeCustom) {
-            return [BYButtonStyle defaultStyle];
+            return [BYButtonStyle defaultCustomStyle];
         }
         else {
             return [BYButtonStyle defaultSystemStyle];
