@@ -52,7 +52,7 @@
 -(id)init {
     if (self = [super init]) {
         _name = @"DEFAULT";
-        self.buttonStyle = [BYButtonStyle defaultCustomStyle];
+        self.buttonStyle = [BYButtonStyle defaultSystemStyle];
         self.switchStyle = [BYSwitchStyle defaultStyle];
         self.labelStyle = [BYLabelStyle defaultStyle];
         self.viewControllerStyle = [BYViewControllerStyle defaultStyle];
