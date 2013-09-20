@@ -55,16 +55,16 @@
 -(void)assertDefaultTheme:(BYTheme*)theme {
     XCTAssertNotNil(theme, @"Theme should not be nil");
     XCTAssertEqual(theme.name, @"DEFAULT", @"Theme name should be equal to DEFAULT");
-    XCTAssertNil(theme.buttonStyle, @"Should be nil");
-    XCTAssertNil(theme.switchStyle, @"Should be nil");
-    XCTAssertNil(theme.labelStyle, @"Should be nil");
-    XCTAssertNil(theme.viewControllerStyle, @"Should be nil");
-    XCTAssertNil(theme.textFieldStyle, @"Should be nil");
-    XCTAssertNil(theme.navigationBarStyle, @"Should be nil");
-    XCTAssertNil(theme.tableViewCellStyle, @"Should be nil");
-    XCTAssertNil(theme.imageViewStyle, @"Should be nil");
-    XCTAssertNil(theme.barButtonItemStyle, @"Should be nil");
-    XCTAssertNil(theme.sliderStyle, @"Should be nil");
+    XCTAssertNotNil(theme.buttonStyle, @"Should be nil");
+    XCTAssertNotNil(theme.switchStyle, @"Should be nil");
+    XCTAssertNotNil(theme.labelStyle, @"Should be nil");
+    XCTAssertNotNil(theme.viewControllerStyle, @"Should be nil");
+    XCTAssertNotNil(theme.textFieldStyle, @"Should be nil");
+    XCTAssertNotNil(theme.navigationBarStyle, @"Should be nil");
+    XCTAssertNotNil(theme.tableViewCellStyle, @"Should be nil");
+    XCTAssertNotNil(theme.imageViewStyle, @"Should be nil");
+    XCTAssertNotNil(theme.barButtonItemStyle, @"Should be nil");
+    XCTAssertNotNil(theme.sliderStyle, @"Should be nil");
 }
 
 #pragma mark - Button Style Testing
