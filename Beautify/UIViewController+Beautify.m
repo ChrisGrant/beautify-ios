@@ -40,7 +40,7 @@
 
     // the view controller does not appear in the view hierarchy, so we need to set the
     // vc's view to have the same immunity value
-    [self.view setImmuneToBeautify:immuneToBeautify];
+    [self setImmuneToBeautify:immuneToBeautify];
 }
 
 -(BOOL)shouldCreateRenderer {
