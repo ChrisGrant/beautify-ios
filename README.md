@@ -1,6 +1,10 @@
 #beautify-ios
 [Beautify](http://beautify.io/ "beautify") enhances Apple's UIKit controls, re-rendering them  to give you much more control over their visual appearance. 
 
+The **beautify-ios** framework is part of a much more ambitious project, which will allow live-styling of applications that have been enhanced by the beautify framework. We plan to release this to our beta programme members shortly.
+
+**beautify-ios** currently supports the following controls; `UISwitch`, `UISlider`, `UITableViewCell`, `UINavigationBar`, `UITextField`, `UILabel`, `UIButton` and `UIImageView`, with more to follow …
+
 ## Contents
 
   * [A quick introduction](#a-quick-introduction)
