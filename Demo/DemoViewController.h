@@ -10,4 +10,6 @@
 
 @interface DemoViewController : UIViewController
 
+@property BOOL applyCustomStyles;
+
 @end
