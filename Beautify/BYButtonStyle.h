@@ -34,5 +34,6 @@
 @property NSArray *outerShadows;
 
 +(BYButtonStyle*)defaultStyle;
++(BYButtonStyle*)defaultSystemStyle;
 
 @end

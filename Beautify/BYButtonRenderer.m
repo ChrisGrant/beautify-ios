@@ -23,7 +23,7 @@
 -(id)initWithView:(id)view theme:(BYTheme*)theme {
     UIButton *button = (UIButton*)view;
     // Only create a renderer if the button is custom!
-    if(button.buttonType != UIButtonTypeCustom) {
+    if(button.buttonType != UIButtonTypeCustom && button.buttonType != UIButtonTypeSystem) {
         return nil;
     }
     
@@ -35,7 +35,7 @@
 }
 
 -(void)setup:(UIButton*)button theme:(BYTheme*)theme {
-    if(button.buttonType == UIButtonTypeCustom) {
+    if(button.buttonType == UIButtonTypeCustom || button.buttonType == UIButtonTypeSystem) {
         [button hideAllSubViews];
         
         _labelRenderer = [[BYLabelRenderer alloc] initWithView:button.titleLabel theme:theme];
@@ -78,14 +78,17 @@
 
 -(id)styleFromTheme:(BYTheme*)theme {
     UIButton *button = (UIButton*)self.adaptedView;
-
-    if(button.buttonType == UIButtonTypeCustom) {
+    if(button.buttonType == UIButtonTypeCustom || button.buttonType == UIButtonTypeSystem) {
         if(theme.buttonStyle) {
             return theme.buttonStyle;
         }
-        return [BYButtonStyle defaultStyle];
+        if(button.buttonType == UIButtonTypeCustom) {
+            return [BYButtonStyle defaultStyle];
+        }
+        else {
+            return [BYButtonStyle defaultSystemStyle];
+        }
     }
-    
     NSLog(@"Could not find an appropriate style for this type of button!");
     return nil;
 }
