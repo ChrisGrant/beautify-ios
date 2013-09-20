@@ -10,6 +10,6 @@
 
 @interface BYBarButtonStyle : BYButtonStyle
 
-+(BYBarButtonStyle*)defaultStyle;
++(BYBarButtonStyle*)defaultCustomStyle;
 
 @end

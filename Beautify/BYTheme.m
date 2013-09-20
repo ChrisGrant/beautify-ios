@@ -52,7 +52,7 @@
 -(id)init {
     if (self = [super init]) {
         _name = @"DEFAULT";
-        self.buttonStyle = [BYButtonStyle defaultStyle];
+        self.buttonStyle = [BYButtonStyle defaultCustomStyle];
         self.switchStyle = [BYSwitchStyle defaultStyle];
         self.labelStyle = [BYLabelStyle defaultStyle];
         self.viewControllerStyle = [BYViewControllerStyle defaultStyle];
@@ -60,7 +60,7 @@
         self.navigationBarStyle = [BYNavigationBarStyle defaultStyle];
         self.tableViewCellStyle = [BYTableViewCellStyle defaultStyle];
         self.imageViewStyle = [BYImageViewStyle defaultStyle];
-        self.barButtonItemStyle = [BYBarButtonStyle defaultStyle];
+        self.barButtonItemStyle = [BYBarButtonStyle defaultCustomStyle];
         self.sliderStyle = [BYSliderStyle defaultStyle];
     }
     return self;

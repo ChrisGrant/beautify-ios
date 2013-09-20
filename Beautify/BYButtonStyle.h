@@ -33,7 +33,10 @@
 @property NSArray *innerShadows;
 @property NSArray *outerShadows;
 
-+(BYButtonStyle*)defaultStyle;
+// This is the default style for UIButtonTypeCustom
++(BYButtonStyle*)defaultCustomStyle;
+
+// This is the default style for UIButtonTypeSystem (or UIButtonTypeRoundedRect in iOS6)
 +(BYButtonStyle*)defaultSystemStyle;
 
 @end

@@ -13,7 +13,7 @@
 
 @implementation BYBarButtonStyle
 
-+(BYBarButtonStyle*)defaultStyle {
++(BYBarButtonStyle*)defaultCustomStyle {
     BYBarButtonStyle *style = [BYBarButtonStyle new];
     
     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
