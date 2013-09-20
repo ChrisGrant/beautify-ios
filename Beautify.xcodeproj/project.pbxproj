@@ -53,7 +53,7 @@
 		1D464650174669C4003840E4 /* BYViewRenderer_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DC6EACE174512BD004EDF37 /* BYViewRenderer_Private.h */; settings = {ATTRIBUTES = (); }; };
 		1D464651174669C4003840E4 /* UIView+BeautifyPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA54716F9AC9C00D08DBB /* UIView+BeautifyPrivate.h */; settings = {ATTRIBUTES = (); }; };
 		1D464655174669D7003840E4 /* NSObject+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA51F16F9AC8500D08DBB /* NSObject+Properties.h */; };
-		1D464656174669D7003840E4 /* UIColor+HexColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA52116F9AC8500D08DBB /* UIColor+HexColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D464656174669D7003840E4 /* UIColor+HexColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA52116F9AC8500D08DBB /* UIColor+HexColors.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		1D464657174669D7003840E4 /* BYConfigParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AC6174158900039F3F3 /* BYConfigParser.h */; };
 		1D464659174669D7003840E4 /* BYSwitchBorderLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A981741582F0039F3F3 /* BYSwitchBorderLayer.h */; };
 		1D46465B174669D7003840E4 /* BYSwitchLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A9C1741582F0039F3F3 /* BYSwitchLayer.h */; };
@@ -196,6 +196,7 @@
 		702194D017E1BC2E008161D3 /* BYTableViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194CD17E1BC2E008161D3 /* BYTableViewRenderer.m */; };
 		702194FA17E1BC95008161D3 /* BYTableViewCellLabelRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194F917E1BC95008161D3 /* BYTableViewCellLabelRenderer.m */; };
 		7027C5D117EC92F5006D8008 /* flat.json in Resources */ = {isa = PBXBuildFile; fileRef = 7027C5D017EC92F5006D8008 /* flat.json */; };
+		7027C5D417ECA20E006D8008 /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52216F9AC8500D08DBB /* UIColor+HexColors.m */; };
 		7036DB4916F8659400EBA8AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DCD86C16F377DE008ECF8B /* QuartzCore.framework */; };
 		70397B8F17DF33190095001B /* BYBarButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70397B8D17DF33190095001B /* BYBarButtonStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70397B9117DF33190095001B /* BYBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* BYBarButtonStyle.m */; };
@@ -310,7 +311,6 @@
 		727ADCD116F9B99000D7DDCB /* UIView+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54616F9AC9C00D08DBB /* UIView+Beautify.m */; };
 		727ADCD216F9B99000D7DDCB /* UIView+BeautifyPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54816F9AC9C00D08DBB /* UIView+BeautifyPrivate.m */; };
 		727ADCD316F9B99000D7DDCB /* UIView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54A16F9AC9C00D08DBB /* UIView+Utilities.m */; };
-		727ADCEA16F9B9AA00D7DDCB /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52216F9AC8500D08DBB /* UIColor+HexColors.m */; };
 		72ADB8D016FC9DD500BE925D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ADB8CF16FC9DD500BE925D /* libicucore.dylib */; };
 		72ADB8D216FC9DDC00BE925D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ADB8D116FC9DDC00BE925D /* CFNetwork.framework */; };
 		72ADB8D416FC9DE200BE925D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ADB8D316FC9DE200BE925D /* Security.framework */; };
@@ -1645,7 +1645,6 @@
 				70FF54D917E6FB3300F9BF03 /* BYNineBoxedImage.m in Sources */,
 				70FF54D117E6FB0700F9BF03 /* BYTheme.m in Sources */,
 				7047013617E1C66700FEA5F5 /* UISwitch+Beautify.m in Sources */,
-				727ADCEA16F9B9AA00D7DDCB /* UIColor+HexColors.m in Sources */,
 				70FF54CD17E6FAF600F9BF03 /* BYTableViewCellStyle.m in Sources */,
 				70C211B817DF01DB00CA110B /* TableVisualTestViewController.m in Sources */,
 				544975CF17D8B953003D7115 /* BYThumbLayer.m in Sources */,
@@ -1696,6 +1695,7 @@
 				72FDEDA91757204C002F1093 /* BYControlRenderer.m in Sources */,
 				7047012F17E1C3F900FEA5F5 /* BYSliderLayer.m in Sources */,
 				70FF54C717E6FAD800F9BF03 /* BYImageViewStyle.m in Sources */,
+				7027C5D417ECA20E006D8008 /* UIColor+HexColors.m in Sources */,
 				70FF54CE17E6FAF900F9BF03 /* BYText.m in Sources */,
 				7205345917579C61000A27C0 /* BYNavigationBarRenderer.m in Sources */,
 				72AE98D6175BB94800787272 /* BYTableViewCellRenderer.m in Sources */,
