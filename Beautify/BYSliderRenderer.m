@@ -40,7 +40,6 @@
     
     BOOL _highlighted;
     
-    float _sliderThickness;
     float _thumbSize;
 }
 
@@ -52,11 +51,9 @@
         UISlider* slider = (UISlider*)view;
         
         if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")){
-            _sliderThickness = 3;
             _thumbSize = 30;
         }
         else {
-            _sliderThickness = 10;
             _thumbSize = 24;
         }
         
@@ -88,7 +85,7 @@
     
     slider.clipsToBounds = NO;
     
-    CGRect bounds  = [self sliderBarSizeWithBounds:[self adaptedSlider].bounds andThickness:_sliderThickness];
+    CGRect bounds  = [self sliderBarSizeWithBounds:[self adaptedSlider].bounds andThickness:[self sliderThickness]];
     
     // create the background layer
     _backgroundLayer = [[BYSliderBackgroundLayer alloc] initWithRenderer:self];
@@ -219,7 +216,7 @@
 -(CGRect)minimumTrackLayerFrame {
     CGRect bounds = [self adaptedSlider].bounds;
     CGRect thumbLocation = [self thumbFrame];
-    bounds.size.height = _sliderThickness;
+    bounds.size.height = [self sliderThickness];
     bounds.size.width = (thumbLocation.origin.x + (thumbLocation.size.width / 2));
     return bounds;
 }
@@ -227,7 +224,7 @@
 -(CGRect)maximumTrackLayerFrame {
     CGRect bounds = [self adaptedSlider].bounds;
     CGRect thumbLocation = [self thumbFrame];
-    bounds.size.height = _sliderThickness;
+    bounds.size.height = [self sliderThickness];
     bounds.origin.x = (thumbLocation.origin.x + (thumbLocation.size.width / 2));
     bounds.size.width = bounds.size.width - _minimumTrackLayer.bounds.size.width;
     return bounds;
@@ -249,7 +246,7 @@
         [CATransaction setDisableActions:YES];
     }
     
-    CGRect bounds = [self sliderBarSizeWithBounds:[self adaptedSlider].bounds andThickness:_sliderThickness];
+    CGRect bounds = [self sliderBarSizeWithBounds:[self adaptedSlider].bounds andThickness:[self sliderThickness]];
     
     // update the frames
     _backgroundLayer.frame = [self adaptedSlider].bounds;
@@ -274,6 +271,12 @@
     [super configureFromStyle];
     
     [CATransaction commit];
+}
+
+// the slider thickness is a fraction of the controls height
+- (float)sliderThickness {
+    return [self adaptedSlider].bounds.size.height *
+            [[self propertyValueForNameWithCurrentState:@"barHeightFraction"] floatValue];
 }
 
 -(id)styleFromTheme:(BYTheme*)theme {
@@ -326,6 +329,11 @@
 }
 
 // slider bar
+
+- (void)setBarHeightFraction:(float)barHeightFraction forState:(UIControlState)state {
+    [self setPropertyValue:@(barHeightFraction) forName:@"barHeightFraction" forState:state];
+}
+
 -(void)setBarBorder:(BYBorder*)barBorder forState:(UIControlState)state {
     [self setPropertyValue:barBorder forName:@"barBorder" forState:state];
 }

@@ -1,5 +1,56 @@
 {
     "theme": {
+        "sliderStyle": {
+            "title": {
+                "color": "#FFFFFF",
+                "font": {
+                    "name": "ArialMT",
+                    "size": 18
+                }
+            },
+            "barHeightFraction" : 0.5,
+            "backgroundColor": "#00000000",
+            "border": {
+                "width": "0",
+                "color": "#000000",
+                "cornerRadius": "10"
+            },
+            "barBorder": {
+                "width": "0",
+                "color": "#000000",
+                "cornerRadius": "10"
+            },
+            "barInnerShadows": [],
+            "barOuterShadows": [],
+            "minimumTrackColor": "#1ABC9C",
+            "maximumTrackColor": "#D6DBDF",
+            "thumbBorder": {
+                "width": "4",
+                "color": "#2C3E50",
+                "cornerRadius": "15"
+            },
+            "thumbBackgroundColor": "#1ABC9C",
+            "thumbInnerShadows": [],
+            "thumbOuterShadows": [],
+            "stateSetters": [
+                             {
+                             "propertyName": "backgroundColor",
+                             "state": "highlighted",
+                             "value": "#16A085"
+                             },
+                             {
+                             "state": "highlighted",
+                             "propertyName": "title",
+                             "value": {
+                             "color": "#FFFFFF",
+                             "font": {
+                             "name": "ArialMT",
+                             "size": 18
+                             }
+                             }
+                             }
+                             ]
+        },
         "buttonStyle": {
             "title": {
                 "color": "#FFFFFF",

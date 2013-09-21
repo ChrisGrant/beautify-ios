@@ -128,6 +128,7 @@ static NSMutableArray* _objectStack;
         }
     }
     else if ([lowerCaseName hasSuffix:@"size"] ||
+             [lowerCaseName hasSuffix:@"fraction"] ||
              [lowerCaseName hasSuffix:@"radius"] ||
              [lowerCaseName hasSuffix:@"thickness"] ||
              [lowerCaseName hasSuffix:@"width"]) {

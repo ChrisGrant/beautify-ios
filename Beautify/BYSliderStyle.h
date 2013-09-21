@@ -28,6 +28,7 @@
 @property BYBorder *barBorder;
 @property NSArray *barInnerShadows;
 @property NSArray *barOuterShadows;
+@property float barHeightFraction;
 
 // minimum track customizers
 @property UIColor *minimumTrackColor;

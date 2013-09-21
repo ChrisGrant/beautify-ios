@@ -33,6 +33,11 @@
 #pragma mark - Slider bar customizers
 
 /*
+ Set the bar height as a fraction of the overall slider height.
+ */
+-(void)setBarHeightFraction:(float)barHeightFraction forState:(UIControlState)state;
+
+/*
  Set the border for the slider bar associated with this renderer.
  */
 -(void)setBarBorder:(BYBorder*)barBorder forState:(UIControlState)state;

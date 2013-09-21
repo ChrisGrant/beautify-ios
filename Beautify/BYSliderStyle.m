@@ -22,6 +22,7 @@
     style.backgroundColor = [UIColor clearColor];
     
     if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
+        style.barHeightFraction = 0.1;
         style.barBorder = [[BYBorder alloc] initWithColor:[UIColor clearColor] width:0 radius:3];
         style.minimumTrackColor = [UIColor colorWithRed:0 green:122.0f/255.0f blue:1.0f alpha:1.0f];
         style.maximumTrackColor = [UIColor colorWithWhite:0.7 alpha:1.0];
@@ -31,6 +32,7 @@
         style.thumbOuterShadows = @[[[BYShadow alloc] initWithOffset:CGSizeMake(0, 2) radius:4.0 color:[UIColor colorWithWhite:0.0 alpha:0.5]]];
     }
     else {
+        style.barHeightFraction = 0.33;
         style.barBorder = [[BYBorder alloc] initWithColor:[UIColor clearColor] width:0 radius:5];
         
         style.minimumTrackColor = [UIColor colorWithRed:109.0f/255.0f green:163.0f/255.0f blue:237.0f/255.0f alpha:1.0f];
