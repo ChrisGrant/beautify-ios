@@ -17,13 +17,13 @@
 @property (readonly) BYViewControllerRenderer *renderer;
 
 /*
- Whether this UIView is 'immune' to the streamed style, i.e. it will maintain the style defined by the
+ Whether this view controller is 'immune' to the globally applied theme, i.e. it will maintain the style defined by the
  developer when the UI was designed, either in the Interface Bulder or in code.
  */
 -(BOOL)isImmuneToBeautify;
 
 /*
- Set whether this UIView is 'immune' to streamed styles.
+ Set whether this view controller is 'immune' to the globally appled theme.
  */
 -(void)setImmuneToBeautify:(BOOL)immuneToBeautify;
 

@@ -55,19 +55,18 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = tbc;
     [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 
 -(void)tabBarController:(UITabBarController*)tabBarController didSelectViewController:(UIViewController*)viewController{
     if(viewController == standardNav) {
-        [tabBarController setImmuneToBeautify:YES];
     }
     else if(viewController == demoNav) {
-        [tabBarController setImmuneToBeautify:NO];
         [[BYThemeManager instance] applyTheme:[BYTheme new]];
     }
     else if (viewController == customNav) {
-        [tabBarController setImmuneToBeautify:NO];
         BYTheme *theme = [BYTheme fromFile:@"flat"];
         [[BYThemeManager instance] applyTheme:theme];
     }
