@@ -83,41 +83,37 @@
     CGFloat yOffset = (rect.size.height - fontHeight) / 2.0 + 1.0;
     CGRect textRect = CGRectMake(rect.origin.x, yOffset, rect.size.width, fontHeight);
     
-    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
-    [paragraphStyle setAlignment:NSTextAlignmentCenter];
-    [paragraphStyle setLineBreakMode:NSLineBreakByClipping];
+    NSMutableParagraphStyle *paraStyle = [[NSMutableParagraphStyle alloc] init];
+    [paraStyle setAlignment:NSTextAlignmentCenter];
+    [paraStyle setLineBreakMode:NSLineBreakByClipping];
     
-    NSDictionary *textAttributes = @{NSFontAttributeName:font, NSParagraphStyleAttributeName:paragraphStyle};
+    NSMutableDictionary *textAttributes = @{NSFontAttributeName:font, NSParagraphStyleAttributeName:paraStyle}.mutableCopy;
     
+    // Draw the text offset by the shadow offset to represent the shadow first.
     if(state.textShadow && !CGSizeEqualToSize(CGSizeZero, state.textShadow.offset)) {
         CGRect shadowRect = CGRectMake(textRect.origin.x + state.textShadow.offset.width,
                                        textRect.origin.y + state.textShadow.offset.height,
-                                       textRect.size.width,
-                                       textRect.size.height);
-        [state.textShadow.color set];
-
-        // Different text drawing methods for iOS 6 and 7.
-        if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
-            [state.text drawInRect:shadowRect withAttributes:textAttributes];
-        }
-        else {
-            [state.text drawInRect:shadowRect withFont:font lineBreakMode:NSLineBreakByClipping alignment:NSTextAlignmentCenter];
-        }
+                                       textRect.size.width, textRect.size.height);
+        [self drawText:state.text inRect:shadowRect withFont:font andColor:state.textShadow.color andAttributes:textAttributes];
     }
     
-    if(state.textStyle.color) {
-        [state.textStyle.color set];
-    }
-    else {
-        // If there's not a colour, use black otherwise we can end up using the same color as the shadow color set above.
-        [[UIColor blackColor] set];
-    }
+    // Draw the real text in the original location on top of the shadow.
+    [self drawText:state.text inRect:textRect withFont:font andColor:state.textStyle.color andAttributes:textAttributes];
+}
+
+-(void)drawText:(NSString*)text inRect:(CGRect)rect withFont:(UIFont*)font andColor:(UIColor*)color andAttributes:(NSMutableDictionary*)attributes {
+    // If there's not a colour, use black.
+    UIColor *textColor = color ? color : [UIColor blackColor];
     
     if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
-        [state.text drawInRect:textRect withAttributes:textAttributes];
+        // In iOS7 we have to add the text color as the foreground color in the dict.
+        [attributes setObject:textColor forKey:NSForegroundColorAttributeName];
+        [text drawInRect:rect withAttributes:attributes];
     }
     else {
-        [state.text drawInRect:textRect withFont:font lineBreakMode:NSLineBreakByClipping alignment:NSTextAlignmentCenter];
+        // In iOS6, we 'set' the color instead
+        [textColor set];
+        [text drawInRect:rect withFont:font lineBreakMode:NSLineBreakByClipping alignment:NSTextAlignmentCenter];
     }
 }
 
