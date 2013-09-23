@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BYTextShadow : NSObject
+@interface BYTextShadow : NSObject <NSCopying>
 
 +(BYTextShadow*)shadowWithOffset:(CGSize)offset andColor:(UIColor*)color;
 

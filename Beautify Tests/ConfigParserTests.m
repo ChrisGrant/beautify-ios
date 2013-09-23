@@ -457,7 +457,8 @@
 -(void)testSliderStyleWithPartialDict {
     BYSliderStyle *sliderStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialSliderStyle"
                                                                                                andClass:[BYSliderStyle class]];
-    
+    [self assertBorder:sliderStyle.border hasWidth:2 color:[UIColor blackColor] andCornerRadius:9.0f];
+    XCTAssert([sliderStyle.backgroundColor isEqualToColor:[UIColor whiteColor]], @"BG should be white");
 }
 
 #pragma mark - Helper Methods

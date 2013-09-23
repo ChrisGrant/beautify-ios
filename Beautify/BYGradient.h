@@ -11,7 +11,7 @@
 /*
  A style property representing a background gradient for a UIView.
  */
-@interface BYGradient : NSObject
+@interface BYGradient : NSObject <NSCopying>
 
 /*
  Whether the gradient is radial or not.

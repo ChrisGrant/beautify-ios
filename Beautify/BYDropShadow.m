@@ -18,4 +18,11 @@
     return self;
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+    BYDropShadow *copy = [[BYDropShadow allocWithZone:zone] init];
+    copy.color = self.color.copy;
+    copy.height = self.height;
+    return copy;
+}
+
 @end

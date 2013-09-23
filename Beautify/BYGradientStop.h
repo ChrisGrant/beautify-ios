@@ -11,7 +11,7 @@
 /*
  A style property representing a stop for a background gradient for a UIView.
  */
-@interface BYGradientStop : NSObject
+@interface BYGradientStop : NSObject <NSCopying>
 
 /*
  The color to use for this stop.
