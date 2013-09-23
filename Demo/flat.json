@@ -106,7 +106,7 @@
                              {
                              "propertyName": "backgroundColor",
                              "state": "highlighted",
-                             "value": "#16A085"
+                             "value": "#DDDDDD"
                              }
                              ]
         },
@@ -268,9 +268,9 @@
         },
         "imageViewStyle": {
             "border": {
-                "width": 0,
-                "color": "#00000000",
-                "cornerRadius": 0
+                "width": 4,
+                "color": "#DDDDDD",
+                "cornerRadius": 25
             },
             "innerShadows": [],
             "outerShadows": [],

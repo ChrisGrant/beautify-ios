@@ -44,10 +44,10 @@
     standardVC.beautifyDescripiton = @"This view controller has not been styled by beautify. All the controls you see here should be the default iOS style controls.";
     
     demoVC.title = @"Beautified";
-    demoVC.beautifyDescripiton = @"This view controller has been styled by beautify. All the controls you see here have the default beautify style applied to them.";
+    demoVC.beautifyDescripiton = @"This view controller has been styled by beautify. All the controls you see here have the default beautify style applied to them, which matches the system styling in iOS 6 and iOS 7. There are a few differences, but we are working on them ;-)";
     
     customVC.title = @"Customised";
-    customVC.beautifyDescripiton = @"This view controller has been styled by beautify. All the controls you see here have had a custom beautify style applied to them.";
+    customVC.beautifyDescripiton = @"This view controller has been styled by beautify. All the controls you see here have had a custom beautify style applied to them. The switch above allows you to swap the current theme.";
     
     [standardVC setImmuneToBeautify:YES];
     customVC.applyCustomStyles = YES;
