@@ -8,17 +8,13 @@
                     "size": 18
                 }
             },
-            "backgroundColor": "#A592F7",
+            "backgroundColor": "#00D4F0",
             "backgroundGradient": {
                 "radial": false,
                 "stops": [
                           {
                           "position": 0,
-                          "color": "#8272CE"
-                          },
-                          {
-                          "position": "0.5",
-                          "color": "#9987F5"
+                          "color": "#00D4F0"
                           },
                           {
                           "position": 1,
@@ -70,27 +66,23 @@
         },
         "textFieldStyle": {
             "title": {
-                "color": "#6CAEFF",
+                "color": "#00D4F0",
                 "font": {
                     "name": "ArialMT",
-                    "size": 18
+                    "size": 15
                 }
             },
             "backgroundColor": "#212634",
             "border": {
-                "width": 0,
+                "width": 2,
                 "color": "#16A085",
-                "cornerRadius": 5
+                "cornerRadius": 10
             },
-            "innerShadows": [],
-            "outerShadows": [
+            "outerShadows": [],
+            "innerShadows": [
                              {
                              "color": "#000000BF",
-                             "radius": 5,
-                             "offset": {
-                             "x": 1.4,
-                             "y": 1.4
-                             }
+                             "radius": 5
                              }
                              ],
             "stateSetters": [
@@ -137,7 +129,7 @@
                         "size": 0
                     }
                 },
-                "text": "YES",
+                "text": "Y",
                 "backgroundColor": "#212634",
                 "textShadow": {
                     "color": "#00000000",
@@ -155,7 +147,7 @@
                         "size": 0
                     }
                 },
-                "text": " NO",
+                "text": "N",
                 "backgroundColor": "#272727",
                 "textShadow": {
                     "color": "#00000000",
@@ -171,7 +163,7 @@
                 "cornerRadius": 5
             },
             "highlightColor": "#00000000",
-            "thumbBackgroundColor": "#A592F7",
+            "thumbBackgroundColor": "#00D4F0",
             "thumbInnerShadows": [],
             "thumbOuterShadows": [],
             "innerShadows": [],
@@ -202,7 +194,7 @@
             "title": {
                 "color": "#C9C3E6",
                 "font": {
-                    "name": "ArialMT",
+                    "name": "ArialMT-Bold",
                     "size": 0
                 }
             },
@@ -211,7 +203,7 @@
                 "color": "#00000099",
                 "offset": {
                     "x": 0,
-                    "y": -1
+                    "y": -2
                 }
             },
             "stateSetters": []
@@ -290,14 +282,14 @@
         },
         "imageViewStyle": {
             "border": {
-                "width": 0,
-                "color": "#00000000",
+                "width": 2,
+                "color": "#C9C3E6",
                 "cornerRadius": 0
             },
             "innerShadows": [
                              {
                              "color": "#000000",
-                             "radius": 0,
+                             "radius": 10,
                              "offset": {
                              "x": 0,
                              "y": 0
@@ -357,6 +349,44 @@
                              "size": 14
                              }
                              }
+                             }
+                             ]
+        },
+        "sliderStyle": {
+            "barHeightFraction": 0.2,
+            "backgroundColor": "#00000000",
+            "border": {
+                "width": "0",
+                "color": "#000000",
+                "cornerRadius": "0"
+            },
+            "barBorder": {
+                "width": "0",
+                "color": "#000000",
+                "cornerRadius": "5"
+            },
+            "barInnerShadows": [],
+            "barOuterShadows": [],
+            "minimumTrackColor": "#00D4F0",
+            "maximumTrackColor": "#BRBRBR",
+            "thumbBorder": {
+                "width": "0",
+                "color": "#00000000",
+                "cornerRadius": "5"
+            },
+            "thumbBackgroundColor": "#00D4F0",
+            "thumbInnerShadows": [],
+            "thumbOuterShadows": [
+                                  {
+                                  "color": "#000000BF",
+                                  "radius": 5,
+                                  }
+                                  ],
+            "stateSetters": [
+                             {
+                             "propertyName": "backgroundColor",
+                             "state": "highlighted",
+                             "value": "#16A085"
                              }
                              ]
         }
