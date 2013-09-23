@@ -197,6 +197,7 @@
 		702194FA17E1BC95008161D3 /* BYTableViewCellLabelRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194F917E1BC95008161D3 /* BYTableViewCellLabelRenderer.m */; };
 		7027C5D117EC92F5006D8008 /* flat.json in Resources */ = {isa = PBXBuildFile; fileRef = 7027C5D017EC92F5006D8008 /* flat.json */; };
 		7027C5D417ECA20E006D8008 /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52216F9AC8500D08DBB /* UIColor+HexColors.m */; };
+		7027C5D617F04341006D8008 /* dark.json in Resources */ = {isa = PBXBuildFile; fileRef = 7027C5D517F04341006D8008 /* dark.json */; };
 		7036DB4916F8659400EBA8AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DCD86C16F377DE008ECF8B /* QuartzCore.framework */; };
 		70397B8F17DF33190095001B /* BYBarButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70397B8D17DF33190095001B /* BYBarButtonStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70397B9117DF33190095001B /* BYBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* BYBarButtonStyle.m */; };
@@ -485,6 +486,7 @@
 		702194CD17E1BC2E008161D3 /* BYTableViewRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYTableViewRenderer.m; path = Beautify/BYTableViewRenderer.m; sourceTree = SOURCE_ROOT; };
 		702194F917E1BC95008161D3 /* BYTableViewCellLabelRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYTableViewCellLabelRenderer.m; path = Beautify/BYTableViewCellLabelRenderer.m; sourceTree = SOURCE_ROOT; };
 		7027C5D017EC92F5006D8008 /* flat.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flat.json; sourceTree = "<group>"; };
+		7027C5D517F04341006D8008 /* dark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dark.json; sourceTree = "<group>"; };
 		70397B8D17DF33190095001B /* BYBarButtonStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBarButtonStyle.h; sourceTree = "<group>"; };
 		70397B8E17DF33190095001B /* BYBarButtonStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBarButtonStyle.m; sourceTree = "<group>"; };
 		7047010217E1C06B00FEA5F5 /* NSObject+Beautify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Beautify.h"; path = "Beautify/NSObject+Beautify.h"; sourceTree = SOURCE_ROOT; };
@@ -993,6 +995,7 @@
 				70F0E09517EC4914001207E5 /* DemoiPhoneViewController.xib */,
 				70F0E09817EC4B39001207E5 /* DemoiPadViewController.xib */,
 				7027C5D017EC92F5006D8008 /* flat.json */,
+				7027C5D517F04341006D8008 /* dark.json */,
 				70F0E09E17EC59CC001207E5 /* beautifyImage.png */,
 				70F0E09F17EC59CC001207E5 /* beautifyImage@2x.png */,
 			);
@@ -1453,6 +1456,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70F0E0A017EC59CC001207E5 /* beautifyImage.png in Resources */,
+				7027C5D617F04341006D8008 /* dark.json in Resources */,
 				70F0E09717EC4914001207E5 /* DemoiPhoneViewController.xib in Resources */,
 				70F0E09917EC4B39001207E5 /* DemoiPadViewController.xib in Resources */,
 				70F0E0A117EC59CC001207E5 /* beautifyImage@2x.png in Resources */,

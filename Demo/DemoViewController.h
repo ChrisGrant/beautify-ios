@@ -12,4 +12,6 @@
 
 @property BOOL applyCustomStyles;
 
+@property NSString *beautifyDescripiton;
+
 @end
