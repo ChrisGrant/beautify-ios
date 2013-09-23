@@ -50,6 +50,7 @@
     customVC.beautifyDescripiton = @"This view controller has been styled by beautify. All the controls you see here have had a custom beautify style applied to them.";
     
     [standardVC setImmuneToBeautify:YES];
+    customVC.applyCustomStyles = YES;
     
     standardNav = [[UINavigationController alloc] initWithRootViewController:standardVC];
     demoNav = [[UINavigationController alloc] initWithRootViewController:demoVC];
@@ -61,7 +62,6 @@
     self.window.rootViewController = tbc;
     [self.window makeKeyAndVisible];
     
-    
     return YES;
 }
 
@@ -72,8 +72,6 @@
         [[BYThemeManager instance] applyTheme:[BYTheme new]];
     }
     else if (viewController == customNav) {
-        BYTheme *theme = [BYTheme fromFile:@"flat"];
-        [[BYThemeManager instance] applyTheme:theme];
     }
 }
 

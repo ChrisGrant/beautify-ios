@@ -7,6 +7,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DemoViewController">
             <connections>
                 <outlet property="button" destination="3jR-Qu-mdl" id="uDg-91-opB"/>
+                <outlet property="customStyleSwitch" destination="g4u-RM-ioV" id="lsu-E2-Xzc"/>
                 <outlet property="descriptionLabel" destination="suQ-fg-0Ir" id="QbG-CT-r62"/>
                 <outlet property="imageView" destination="lYY-OR-WAy" id="sfd-wu-B7K"/>
                 <outlet property="leftSwitch" destination="54L-sG-y6h" id="h3w-EV-lYk"/>
@@ -99,6 +100,10 @@
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <switch hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4u-RM-ioV">
+                            <rect key="frame" x="20" y="95" width="51" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </switch>
                     </subviews>
                     <constraints>
                         <constraint firstItem="54L-sG-y6h" firstAttribute="top" secondItem="f5T-pR-adu" secondAttribute="top" id="5wI-au-CEo"/>
@@ -108,7 +113,9 @@
                         <constraint firstAttribute="centerX" secondItem="68h-GB-fVO" secondAttribute="centerX" id="CoO-zG-E7U"/>
                         <constraint firstItem="lYY-OR-WAy" firstAttribute="top" secondItem="68h-GB-fVO" secondAttribute="bottom" constant="49" id="Len-i1-GNo"/>
                         <constraint firstAttribute="bottom" secondItem="lYY-OR-WAy" secondAttribute="bottom" constant="100" id="MGw-Qh-fjj"/>
+                        <constraint firstItem="g4u-RM-ioV" firstAttribute="leading" secondItem="HfG-rB-yNO" secondAttribute="leading" constant="20" id="Tdg-am-Pzs"/>
                         <constraint firstItem="68h-GB-fVO" firstAttribute="top" secondItem="rrh-XY-5tw" secondAttribute="bottom" constant="107" id="WfS-wu-SHZ"/>
+                        <constraint firstItem="g4u-RM-ioV" firstAttribute="centerY" secondItem="YPh-uK-6rS" secondAttribute="centerY" id="bpU-k8-BjQ"/>
                         <constraint firstItem="YPh-uK-6rS" firstAttribute="top" secondItem="HfG-rB-yNO" secondAttribute="top" constant="100" id="cv3-gd-WWe"/>
                         <constraint firstItem="rrh-XY-5tw" firstAttribute="leading" secondItem="54L-sG-y6h" secondAttribute="leading" id="dJH-aw-pDd"/>
                         <constraint firstAttribute="centerX" secondItem="lYY-OR-WAy" secondAttribute="centerX" id="eTg-u9-0O4"/>
