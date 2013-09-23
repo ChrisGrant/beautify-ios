@@ -214,6 +214,7 @@
     textShadow.color = [UIColor darkGrayColor];
     onState.textShadow = textShadow;
     onState.text = @"YES";
+    onState.textStyle = [[BYText alloc] initWithFont:[[BYFont alloc] initWithName:@"ArialMT-Bold"] color:[UIColor blueColor]];
     onState.backgroundColor = [UIColor redColor];
     [renderer setOnState:onState forState:UIControlStateNormal];
 
