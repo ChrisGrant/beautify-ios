@@ -11,7 +11,7 @@
 /*
  A style property representing the font for the text on a UIView.
  */
-@interface BYFont : NSObject
+@interface BYFont : NSObject <NSCopying>
 
 /*
  The font name.

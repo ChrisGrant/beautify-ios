@@ -10,7 +10,7 @@
 
 @class BYFont;
 
-@interface BYText : NSObject
+@interface BYText : NSObject <NSCopying>
 
 /*
  Font for the text.

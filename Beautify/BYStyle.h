@@ -8,7 +8,7 @@
 
 #import "BYStyleProtocol.h"
 
-@interface BYStyle : NSObject <BYStyleProtocol>
+@interface BYStyle : NSObject <BYStyleProtocol, NSCopying>
 
 @property NSArray* stateSetters;
 

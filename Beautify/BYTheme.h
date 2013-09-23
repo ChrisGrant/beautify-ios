@@ -23,7 +23,7 @@
  * Represents a rendering configuration, typically containing a number of
  * style configurations for a range of UI elements.
  */
-@interface BYTheme : NSObject
+@interface BYTheme : NSObject <NSCopying>
 
 @property NSString *name;
 @property BYButtonStyle *buttonStyle;

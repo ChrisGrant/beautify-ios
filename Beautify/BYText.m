@@ -19,4 +19,11 @@
     return self;
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+    BYText *copy = [[BYText allocWithZone:zone] init];
+    copy.font = self.font.copy;
+    copy.color = self.color.copy;
+    return copy;
+}
+
 @end

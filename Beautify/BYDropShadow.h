@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BYDropShadow : NSObject
+@interface BYDropShadow : NSObject <NSCopying>
 
 @property UIColor *color;
 

@@ -19,4 +19,12 @@
     return self;
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+    BYShadow *copy = [[BYShadow allocWithZone:zone] init];
+    copy.offset = self.offset;
+    copy.radius = self.radius;
+    copy.color = self.color.copy;
+    return copy;
+}
+
 @end

@@ -1,11 +1,4 @@
 {
-    "title": {
-        "color": "#000000",
-        "font": {
-            "name": "HelveticaNeue",
-            "size": 11
-        }
-    },
     "backgroundColor": "#FFFFFF",
     "border": {
         "width": 2,

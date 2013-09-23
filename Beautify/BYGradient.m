@@ -36,4 +36,12 @@
     return str;
 }
 
+-(id)copyWithZone:(NSZone*)zone {
+    BYGradient *gradient = [[BYGradient allocWithZone:zone] init];
+    gradient.radial = self.radial;
+    gradient.radialOffset = self.radialOffset;
+    gradient.stops = self.stops.copy;
+    return gradient;
+}
+
 @end

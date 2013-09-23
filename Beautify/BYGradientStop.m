@@ -23,4 +23,11 @@
     return [NSString stringWithFormat:@"(%@, %f)", self.color, self.stop];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+    BYGradientStop *copy = [[BYGradientStop allocWithZone:zone] init];
+    copy.color = self.color.copy;
+    copy.stop = self.stop;
+    return copy;
+}
+
 @end

@@ -11,7 +11,7 @@
 /*
  A style property representing the border for a UIView.
  */
-@interface BYBorder : NSObject
+@interface BYBorder : NSObject <NSCopying>
 
 /*
  The border width.

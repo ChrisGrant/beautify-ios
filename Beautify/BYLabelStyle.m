@@ -18,4 +18,11 @@
     return style;
 }
 
+-(id)copyWithZone:(NSZone*)zone {
+    BYLabelStyle *copy = [super copyWithZone:zone];
+    copy.title = self.title.copy;
+    copy.titleShadow = self.titleShadow.copy;
+    return copy;
+}
+
 @end

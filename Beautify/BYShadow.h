@@ -11,7 +11,7 @@
 /*
  A style property representing a shadow for a UIView.
  */
-@interface BYShadow : NSObject
+@interface BYShadow : NSObject <NSCopying>
 
 /*
  The blur radius for the shadow.
