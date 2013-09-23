@@ -14,6 +14,7 @@
 #import "BYStyleRenderer_Private.h"
 #import "UIView+BeautifyPrivate.h"
 #import "UIView+Beautify.h"
+#import "NSObject+Beautify.h"
 
 @implementation UIViewController (Beautify)
 
@@ -31,12 +32,11 @@
 }
 
 -(BOOL)isImmuneToBeautify {
-    return objc_getAssociatedObject(self, @"immuneToBeautify") != nil;
+    return [super isImmuneToBeautify];
 }
 
 -(void)setImmuneToBeautify:(BOOL)immuneToBeautify {
-    id immunityFlag = immuneToBeautify ? [NSObject new] : nil;
-    objc_setAssociatedObject(self, @"immuneToBeautify", immunityFlag, OBJC_ASSOCIATION_RETAIN);
+    [super setImmuneToBeautify:immuneToBeautify];
 }
 
 -(BOOL)shouldCreateRenderer {
