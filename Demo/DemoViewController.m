@@ -45,8 +45,8 @@
         self.customStyleSwitch.hidden = NO;
         [self.customStyleSwitch setDesiredSwitchSize:CGSizeMake(100, 30)];
         BYSwitchState *offState = [BYSwitchState new];
-        offState.backgroundColor = [UIColor lightGrayColor];
-        offState.textStyle = [[BYText alloc] initWithFont:[[BYFont alloc] initWithName:@"HelveticaNeue"] color:[UIColor blueColor]];
+        offState.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+        offState.textStyle = [[BYText alloc] initWithFont:[[BYFont alloc] initWithName:@"HelveticaNeue"] color:[UIColor blackColor]];
         offState.text = @"Dark";
         [self.customStyleSwitch.renderer setOffState:offState forState:UIControlStateNormal];
         [self.customStyleSwitch.renderer setOffState:offState forState:UIControlStateHighlighted];
@@ -54,15 +54,15 @@
                          forControlEvents:UIControlEventValueChanged];
         
         BYSwitchState *onState = [BYSwitchState new];
-        onState.backgroundColor = [UIColor darkGrayColor];
-        onState.textStyle = [[BYText alloc] initWithFont:[[BYFont alloc] initWithName:@"HelveticaNeue"] color:[UIColor blueColor]];
+        onState.backgroundColor = [UIColor colorWithWhite:0.2 alpha:1.0];
+        onState.textStyle = [[BYText alloc] initWithFont:[[BYFont alloc] initWithName:@"HelveticaNeue"] color:[UIColor whiteColor]];
         onState.text = @"Light";
         [self.customStyleSwitch.renderer setOnState:onState forState:UIControlStateNormal];
         [self.customStyleSwitch.renderer setOnState:onState forState:UIControlStateHighlighted];
         [self.customStyleSwitch addTarget:self action:@selector(customStyleSwitchValueChanged:)
                          forControlEvents:UIControlEventValueChanged];
         
-        [self.rightSwitch setDesiredSwitchSize:CGSizeMake(100, 44)];
+        [self.rightSwitch setDesiredSwitchSize:CGSizeMake(70, 40)];
     }
 }
 
@@ -81,10 +81,6 @@
             BYTheme *theme = [BYTheme fromFile:@"dark"];
             [[BYThemeManager instance] applyTheme:theme];
         }
-    }
-    else {
-        BYTheme *theme = [BYTheme fromFile:@"flat"];
-        [[BYThemeManager instance] applyTheme:theme];
     }
 }
 

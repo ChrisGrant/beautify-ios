@@ -102,7 +102,13 @@
             },
             "innerShadows": [],
             "outerShadows": [],
-            "stateSetters": []
+            "stateSetters": [
+                             {
+                             "propertyName": "backgroundColor",
+                             "state": "highlighted",
+                             "value": "#16A085"
+                             }
+                             ]
         },
         "viewControllerStyle": {
             "backgroundColor": "#FFFFFF",

@@ -93,7 +93,13 @@
                              }
                              }
                              ],
-            "stateSetters": []
+            "stateSetters": [
+                             {
+                             "propertyName": "backgroundColor",
+                             "state": "highlighted",
+                             "value": "#EEEEEE"
+                             }
+                             ]
         },
         "viewControllerStyle": {
             "backgroundColor": "#1C1C1C",
