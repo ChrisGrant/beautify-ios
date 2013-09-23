@@ -37,10 +37,6 @@
 -(void)setImmuneToBeautify:(BOOL)immuneToBeautify {
     id immunityFlag = immuneToBeautify ? [NSObject new] : nil;
     objc_setAssociatedObject(self, @"immuneToBeautify", immunityFlag, OBJC_ASSOCIATION_RETAIN);
-
-    // the view controller does not appear in the view hierarchy, so we need to set the
-    // vc's view to have the same immunity value
-    [self setImmuneToBeautify:immuneToBeautify];
 }
 
 -(BOOL)shouldCreateRenderer {
