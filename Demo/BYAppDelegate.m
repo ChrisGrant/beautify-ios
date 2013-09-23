@@ -41,8 +41,13 @@
     }
     
     standardVC.title = @"Standard";
+    standardVC.beautifyDescripiton = @"This view controller has not been styled by beautify. All the controls you see here should be the default iOS style controls.";
+    
     demoVC.title = @"Beautified";
+    demoVC.beautifyDescripiton = @"This view controller has been styled by beautify. All the controls you see here have the default beautify style applied to them.";
+    
     customVC.title = @"Customised";
+    customVC.beautifyDescripiton = @"This view controller has been styled by beautify. All the controls you see here have had a custom beautify style applied to them.";
     
     [standardVC setImmuneToBeautify:YES];
     

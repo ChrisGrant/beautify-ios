@@ -9,8 +9,9 @@
 #import "DemoViewController.h"
 #import <Beautify/Beautify.h>
 
-@interface DemoViewController () <UITableViewDataSource>
+@interface DemoViewController () <UITableViewDataSource, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *button;
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UISwitch *leftSwitch;
@@ -28,12 +29,20 @@
     // you have to explicitly enable beautify for image views
     [self.imageView setImmuneToBeautify:NO];
     
+    [self.descriptionLabel setText:self.beautifyDescripiton];
+    
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Bar Button"
                                                                               style:UIBarButtonItemStylePlain
                                                                              target:nil
                                                                              action:nil];
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField {
+    // Hide the keyboard when the 'done' button on the keyboard is tapped.
+    [self.textField resignFirstResponder];
+    return YES;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
