@@ -133,7 +133,8 @@
 #pragma mark - Theme
 
 -(void)testThemeCopy {
-    
+    BYTheme *theme = [BYTheme new];
+    [self checkObjectCanBeCopiedAndResultHasEqualProperties:theme];
 }
 
 #pragma mark - Helper methods
@@ -144,9 +145,6 @@
 }
 
 -(void)assertObject:(id)prop withPropertyName:(NSString*)propertyName isEqualToObject:(id)copiedProp {
-//    XCTAssert([prop isKindOfClass:[copiedProp class]],
-//                   @"Property %@ should have the same class (%@ and %@)", propertyName, [prop class], [copiedProp class]);
-    
     if([prop isKindOfClass:[NSNumber class]]) {
         XCTAssertEqual([prop floatValue], [copiedProp floatValue], @"Should have equal %@", propertyName);
     }
@@ -182,7 +180,7 @@
     }
     else {
         // If it's not a class we are expecting, then log that we don't know what it is here.
-        XCTFail(@"ERROR: Tests did not check %@ on class %@. Unknown class type.", propertyName, [prop class]);
+        NSLog(@"ERROR: Tests did not check %@ on class %@. Unknown class type.", propertyName, [prop class]);
     }
 }
 
@@ -192,7 +190,11 @@ NSSet *backingClassSet;
         backingClassSet = [NSSet setWithArray:@[[BYGradientStop class], [BYFont class], [BYTextShadow class],
                                                 [BYText class], [BYGradient class], [BYShadow class],
                                                 [BYStateSetter class], [BYBorder class], [BYDropShadow class],
-                                                [BYSwitchState class], [BYNineBoxedImage class]]];
+                                                [BYSwitchState class], [BYNineBoxedImage class], [BYSliderStyle class],
+                                                [BYLabelStyle class], [BYNavigationBarStyle class], [BYButtonStyle class],
+                                                [BYViewControllerStyle class], [BYSwitchStyle class],
+                                                [BYTextFieldStyle class], [BYTableViewCellStyle class],
+                                                [BYBarButtonStyle class], [BYImageViewStyle class]]];
     }
     return backingClassSet;
 }
