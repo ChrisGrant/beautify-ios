@@ -19,4 +19,12 @@
     return style;
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+    BYViewControllerStyle *copy = [[BYViewControllerStyle allocWithZone:zone] init];
+    copy.backgroundColor = self.backgroundColor.copy;
+    copy.backgroundGradient = self.backgroundGradient.copy;
+    copy.backgroundImage = self.backgroundImage.copy;
+    return copy;
+}
+
 @end

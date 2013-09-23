@@ -464,7 +464,7 @@
 #pragma mark - Helper Methods
 
 -(id)assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:(NSString*)fileName andClass:(Class)class {
-    NSDictionary *dictionary = [self dictionaryFromJSONFile:fileName];
+    NSDictionary *dictionary = [ConfigParserTests dictionaryFromJSONFile:fileName];
     XCTAssertNotNil(dictionary, @"Dictionary should not be nil with valid JSON. Check file name and if the file is in the test bundle");
     
     id style;
@@ -485,7 +485,6 @@
     XCTAssertNoThrow(style = [BYConfigParser parseStyleObjectPropertiesOnClass:class
                                                                       fromDict:@{}]);
     XCTAssertNotNil(style, @"Style should not be nil");
-    
     XCTAssertEqual([style class], class, @"Class should be the same");
 }
 
@@ -550,7 +549,7 @@
     XCTAssertEqual(font.size, size, @"Size should be equal");
 }
 
--(NSDictionary*)dictionaryFromJSONFile:(NSString*)fileName {
++(NSDictionary*)dictionaryFromJSONFile:(NSString*)fileName {
     NSBundle *unitTestBundle = [NSBundle bundleForClass:[self class]];
     NSString *path = [unitTestBundle pathForResource:fileName ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:path];

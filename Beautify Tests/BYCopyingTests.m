@@ -11,6 +11,7 @@
 #import "UIColor+Comparison.h"
 #import "NSObject+Properties.h"
 #import "BYConfigParser_Private.h"
+#import "BYStateSetter.h"
 
 @interface BYCopyingTests : XCTestCase
 @end
@@ -89,12 +90,62 @@
 
 #pragma mark - Styles
 
-// TODO
+-(void)testButtonStyleCopy {
+    BYButtonStyle *style = [self styleFromDictNamed:@"ValidButtonStyle" andClass:[BYButtonStyle class]];
+    [self checkObjectCanBeCopiedAndResultHasEqualProperties:style];
+}
+
+-(void)testImageViewStyleCopy {
+    BYImageViewStyle *style = [self styleFromDictNamed:@"ValidImageViewStyle" andClass:[BYImageViewStyle class]];
+    [self checkObjectCanBeCopiedAndResultHasEqualProperties:style];
+}
+
+-(void)testLabelStyleCopy {
+    BYLabelStyle *style = [self styleFromDictNamed:@"ValidLabelStyle" andClass:[BYLabelStyle class]];
+    [self checkObjectCanBeCopiedAndResultHasEqualProperties:style];
+}
+
+-(void)testNavigationBarStyleCopy {
+    BYNavigationBarStyle *style = [self styleFromDictNamed:@"ValidNavigationBarStyle" andClass:[BYNavigationBarStyle class]];
+    [self checkObjectCanBeCopiedAndResultHasEqualProperties:style];
+}
+
+-(void)testSliderStyleCopy {
+    BYSliderStyle *style = [self styleFromDictNamed:@"ValidSliderStyle" andClass:[BYSliderStyle class]];
+    [self checkObjectCanBeCopiedAndResultHasEqualProperties:style];
+}
+
+-(void)testSwitchStyleCopy {
+    BYSwitchStyle *style = [self styleFromDictNamed:@"ValidSwitchStyle" andClass:[BYSwitchStyle class]];
+    [self checkObjectCanBeCopiedAndResultHasEqualProperties:style];
+}
+
+-(void)testTableViewCellStyleCopy {
+    BYTableViewCellStyle *style = [self styleFromDictNamed:@"ValidTableViewCellStyle" andClass:[BYTableViewCellStyle class]];
+    [self checkObjectCanBeCopiedAndResultHasEqualProperties:style];
+}
+
+-(void)testViewControllerStyleCopy {
+    BYViewControllerStyle *style = [self styleFromDictNamed:@"ValidVCStyle" andClass:[BYViewControllerStyle class]];
+    [self checkObjectCanBeCopiedAndResultHasEqualProperties:style];
+}
+
+#pragma mark - Theme
+
+-(void)testThemeCopy {
+    
+}
 
 #pragma mark - Helper methods
 
+-(id)styleFromDictNamed:(NSString*)name andClass:(Class)class {
+    NSDictionary *dictionary = [BYCopyingTests dictionaryFromJSONFile:name];
+    return [BYConfigParser parseStyleObjectPropertiesOnClass:class fromDict:dictionary];
+}
+
 -(void)assertObject:(id)prop withPropertyName:(NSString*)propertyName isEqualToObject:(id)copiedProp {
-    XCTAssertEqual([prop class], [copiedProp class], @"Property %@ should have the same class (%@)", propertyName, [prop class]);
+//    XCTAssert([prop isKindOfClass:[copiedProp class]],
+//                   @"Property %@ should have the same class (%@ and %@)", propertyName, [prop class], [copiedProp class]);
     
     if([prop isKindOfClass:[NSNumber class]]) {
         XCTAssertEqual([prop floatValue], [copiedProp floatValue], @"Should have equal %@", propertyName);
@@ -109,7 +160,7 @@
         NSLog(@"Array");
         NSArray *array = prop;
         NSArray *copiedArray = copiedProp;
-        XCTAssertEqual(array, copiedProp, @"Array for %@ should have the same length", propertyName);
+        XCTAssertEqual(array.count, copiedArray.count, @"Array for %@ should have the same length", propertyName);
         
         // For arrays, we call this method again, but for each item in the array.
         [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
@@ -126,15 +177,24 @@
         UIImage *copiedImage = copiedProp;
         XCTAssert([UIImagePNGRepresentation(image) isEqualToData:UIImagePNGRepresentation(copiedImage)], @"Image data should be equal!");
     }
-    else if ([prop isKindOfClass:[BYGradientStop class]] || [prop isKindOfClass:[BYFont class]]
-             || [prop isKindOfClass:[BYTextShadow class]] || [prop isKindOfClass:[BYText class]]) {
-        
+    else if ([[self allowedClassSet] containsObject:[prop class]]) {
         [self assertObjectOne:prop isEqualToObjectTwo:copiedProp];
     }
     else {
         // If it's not a class we are expecting, then log that we don't know what it is here.
-        XCTFail(@"ERROR: Tests did not check %@ on %@. Unknown class type.", propertyName, [prop class]);
+        XCTFail(@"ERROR: Tests did not check %@ on class %@. Unknown class type.", propertyName, [prop class]);
     }
+}
+
+NSSet *backingClassSet;
+-(NSSet*)allowedClassSet {
+    if(!backingClassSet) {
+        backingClassSet = [NSSet setWithArray:@[[BYGradientStop class], [BYFont class], [BYTextShadow class],
+                                                [BYText class], [BYGradient class], [BYShadow class],
+                                                [BYStateSetter class], [BYBorder class], [BYDropShadow class],
+                                                [BYSwitchState class], [BYNineBoxedImage class]]];
+    }
+    return backingClassSet;
 }
 
 -(void)assertObjectOne:(NSObject *)object isEqualToObjectTwo:(NSObject *)object2 {
@@ -143,6 +203,9 @@
     for (NSString *propertyName in properties) {
         id prop = [object valueForKey:propertyName];
         id copiedProp = [object2 valueForKey:propertyName];
+        if(prop == nil && copiedProp == nil) {
+            return;
+        }
         [self assertObject:prop withPropertyName:propertyName isEqualToObject:copiedProp];
     }
 }
@@ -155,6 +218,21 @@
     XCTAssertEqual([object class], [object2 class], @"Should have the same class (%@)", [object class]);
     
     [self assertObjectOne:object isEqualToObjectTwo:object2];
+}
+
++(NSDictionary*)dictionaryFromJSONFile:(NSString*)fileName {
+    NSBundle *unitTestBundle = [NSBundle bundleForClass:[self class]];
+    NSString *path = [unitTestBundle pathForResource:fileName ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSError *error;
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data
+                                                               options:NSJSONReadingMutableContainers
+                                                                 error:&error];
+    if(error) {
+        NSLog(@"Error - %@", error.debugDescription);
+        return nil;
+    }
+    return dictionary;
 }
 
 @end

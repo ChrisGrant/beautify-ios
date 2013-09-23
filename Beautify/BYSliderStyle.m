@@ -52,4 +52,32 @@
     return style;
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+    BYSliderStyle *copy = [super copyWithZone:zone];
+    copy.border = self.border.copy;
+    copy.backgroundColor = self.backgroundColor.copy;
+    
+    copy.barBorder = self.barBorder.copy;
+    copy.barInnerShadows = self.barInnerShadows.copy;
+    copy.barOuterShadows = self.barOuterShadows.copy;
+    copy.barHeightFraction = self.barHeightFraction;
+    
+    copy.minimumTrackColor = self.minimumTrackColor.copy;
+    copy.minimumTrackImage = self.minimumTrackImage.copy;
+    copy.minimumTrackBackgroundGradient = self.minimumTrackBackgroundGradient;
+    
+    copy.maximumTrackColor = self.maximumTrackColor.copy;
+    copy.maximumTrackImage = self.maximumTrackImage.copy;
+    copy.maximumTrackBackgroundGradient = self.maximumTrackBackgroundGradient;
+    
+    copy.thumbBorder = self.thumbBorder.copy;
+    copy.thumbBackgroundColor = self.thumbBackgroundColor.copy;
+    copy.thumbImage = self.thumbImage.copy;
+    copy.thumbBackgroundGradient = self.thumbBackgroundGradient.copy;
+    copy.thumbInnerShadows = self.thumbInnerShadows.copy;
+    copy.thumbOuterShadows = self.thumbOuterShadows.copy;
+
+    return copy;
+}
+
 @end
