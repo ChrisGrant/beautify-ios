@@ -78,29 +78,28 @@
     return NO;
 }
 
-// checks whether the view hierarchy for this control is 'valid', i.e. whether thsi control should
-// be beautified. There are two reasons a hierarchy may not be valid:
-//
-// 1. The hierarchy includes certain controls which automatically exclude this controls
-// 2. a superview is immune to beautify
 -(BOOL)validHierarchy {
-    
     NSArray *exceptionNames = [self heirarchyExceptionClassNames];
-    
-    // navigate the superview hierarchy
-    UIView* view = self;
-    while(view != nil) {
-        // if this is an exception class, this control is immune
-        for(NSString *className in exceptionNames) {
-            if([view isKindOfClass:NSClassFromString(className)]) {
+    UIResponder *resp = self;
+    while (resp != nil) {
+        if([resp isKindOfClass:[UIView class]]) {
+            UIView *v = (UIView*)resp;
+            if(v.isImmuneToBeautify) {
+                return NO;
+            }
+            for(NSString *className in exceptionNames) {
+                if([v isKindOfClass:NSClassFromString(className)] ) {
+                    return NO;
+                }
+            }
+        }
+        else if ([resp isKindOfClass:[UIViewController class]]) {
+            UIViewController *vc = (UIViewController*)resp;
+            if([vc isImmuneToBeautify]) {
                 return NO;
             }
         }
-        // check for superview immunity
-        if (view.isImmuneToBeautify) {
-            return NO;
-        }
-        view = view.superview;
+        resp = [resp nextResponder];
     }
     return YES;
 }

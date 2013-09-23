@@ -14,6 +14,7 @@
 #import "BYStyleRenderer_Private.h"
 #import "UIView+BeautifyPrivate.h"
 #import "UIView+Beautify.h"
+#import "NSObject+Beautify.h"
 
 @implementation UIViewController (Beautify)
 
@@ -31,16 +32,11 @@
 }
 
 -(BOOL)isImmuneToBeautify {
-    return objc_getAssociatedObject(self, @"immuneToBeautify") != nil;
+    return [super isImmuneToBeautify];
 }
 
 -(void)setImmuneToBeautify:(BOOL)immuneToBeautify {
-    id immunityFlag = immuneToBeautify ? [NSObject new] : nil;
-    objc_setAssociatedObject(self, @"immuneToBeautify", immunityFlag, OBJC_ASSOCIATION_RETAIN);
-
-    // the view controller does not appear in the view hierarchy, so we need to set the
-    // vc's view to have the same immunity value
-    [self.view setImmuneToBeautify:immuneToBeautify];
+    [super setImmuneToBeautify:immuneToBeautify];
 }
 
 -(BOOL)shouldCreateRenderer {
