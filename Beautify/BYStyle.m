@@ -19,4 +19,9 @@
     return nil;
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+    [NSException raise:@"Implement in subclass" format:@"Copy with zone must be implemented in subclasses of BYStyle"];
+    return nil;
+}
+
 @end

@@ -16,4 +16,14 @@
                                      resizingMode:UIImageResizingModeStretch];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+    BYNineBoxedImage *copy = [[BYNineBoxedImage allocWithZone:zone] init];
+    copy.top = self.top;
+    copy.left = self.left;
+    copy.bottom = self.bottom;
+    copy.right = self.right;
+    copy.data = self.data.copy;
+    return copy;
+}
+
 @end

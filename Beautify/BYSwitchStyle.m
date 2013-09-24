@@ -62,4 +62,29 @@
     return style;
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+    BYSwitchStyle *copy = [super copyWithZone:zone];
+    
+    copy.onState = self.onState.copy;
+    copy.offState = self.offState.copy;
+    
+    copy.highlightColor = self.highlightColor.copy;
+    
+    copy.border = self.border.copy;
+    copy.innerShadows = self.innerShadows.copy;
+    copy.outerShadows = self.outerShadows.copy;
+    
+    copy.thumbBorder = self.thumbBorder.copy;
+    copy.thumbBackgroundColor = self.thumbBackgroundColor.copy;
+    copy.thumbImage = self.thumbImage.copy;
+    copy.thumbBackgroundGradient = self.thumbBackgroundGradient.copy;
+    copy.thumbInnerShadows = self.thumbInnerShadows.copy;
+    copy.thumbOuterShadows = self.thumbOuterShadows.copy;
+    
+    copy.trackLayerImage = self.trackLayerImage.copy;
+    copy.borderLayerImage = self.borderLayerImage.copy;
+    
+    return copy;
+}
+
 @end

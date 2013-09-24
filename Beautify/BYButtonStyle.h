@@ -17,7 +17,7 @@
 /**
  * Represents a group of rendering properties for a given button style.
  */
-@interface BYButtonStyle : BYViewStyle
+@interface BYButtonStyle : BYViewStyle 
 
 // text
 @property BYText *title;

@@ -10,6 +10,7 @@
 #import "BYVersionUtils.h"
 #import "BYGradient.h"
 #import "BYGradientStop.h"
+#import "BYTextShadow.h"
 
 @implementation BYNavigationBarStyle
 
@@ -32,6 +33,16 @@
         style.backgroundGradient = g;
     }
     return style;
+}
+
+-(id)copyWithZone:(NSZone*)zone {
+    BYNavigationBarStyle *copy = [super copyWithZone:zone];
+    copy.backgroundColor = self.backgroundColor.copy;
+    copy.backgroundGradient = self.backgroundGradient.copy;
+    copy.title = self.title.copy;
+    copy.titleShadow = self.titleShadow.copy;
+    copy.dropShadow = self.dropShadow.copy;
+    return copy;
 }
 
 @end

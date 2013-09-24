@@ -202,6 +202,7 @@
 		70397B8F17DF33190095001B /* BYBarButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70397B8D17DF33190095001B /* BYBarButtonStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70397B9117DF33190095001B /* BYBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* BYBarButtonStyle.m */; };
 		70397B9217DF33190095001B /* BYBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* BYBarButtonStyle.m */; };
+		7044FB5C17F072620066E61A /* BYCopyingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7044FB5B17F072620066E61A /* BYCopyingTests.m */; };
 		7047010517E1C06B00FEA5F5 /* NSObject+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010217E1C06B00FEA5F5 /* NSObject+Beautify.h */; };
 		7047010617E1C06B00FEA5F5 /* NSObject+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010317E1C06B00FEA5F5 /* NSObject+Beautify.m */; };
 		7047010717E1C06B00FEA5F5 /* UIBarButtonItem+BeautifyPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010417E1C06B00FEA5F5 /* UIBarButtonItem+BeautifyPrivate.h */; };
@@ -489,6 +490,7 @@
 		7027C5D517F04341006D8008 /* dark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dark.json; sourceTree = "<group>"; };
 		70397B8D17DF33190095001B /* BYBarButtonStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBarButtonStyle.h; sourceTree = "<group>"; };
 		70397B8E17DF33190095001B /* BYBarButtonStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBarButtonStyle.m; sourceTree = "<group>"; };
+		7044FB5B17F072620066E61A /* BYCopyingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYCopyingTests.m; sourceTree = "<group>"; };
 		7047010217E1C06B00FEA5F5 /* NSObject+Beautify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Beautify.h"; path = "Beautify/NSObject+Beautify.h"; sourceTree = SOURCE_ROOT; };
 		7047010317E1C06B00FEA5F5 /* NSObject+Beautify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Beautify.m"; path = "Beautify/NSObject+Beautify.m"; sourceTree = SOURCE_ROOT; };
 		7047010417E1C06B00FEA5F5 /* UIBarButtonItem+BeautifyPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIBarButtonItem+BeautifyPrivate.h"; path = "Beautify/UIBarButtonItem+BeautifyPrivate.h"; sourceTree = SOURCE_ROOT; };
@@ -912,6 +914,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7044FB5A17F072530066E61A /* Copying Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7044FB5B17F072620066E61A /* BYCopyingTests.m */,
+			);
+			name = "Copying Tests";
+			sourceTree = "<group>";
+		};
 		7074287616F861B1003C2D1F /* Renderers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1040,6 +1050,7 @@
 		70FE246917E0B385009A7113 /* Beautify Tests */ = {
 			isa = PBXGroup;
 			children = (
+				7044FB5A17F072530066E61A /* Copying Tests */,
 				700E156817E34128006E124E /* ConfigParser Tests */,
 				700E154517E30691006E124E /* BeautifyColorTests.m */,
 				700E156417E33DF1006E124E /* UIColor+Comparison.h */,
@@ -1746,6 +1757,7 @@
 				70FF54C217E6FA8900F9BF03 /* BYTheme.m in Sources */,
 				700E156017E3218A006E124E /* BYViewControllerStyle.m in Sources */,
 				700E155517E32104006E124E /* BYShadow.m in Sources */,
+				7044FB5C17F072620066E61A /* BYCopyingTests.m in Sources */,
 				700E154417E30668006E124E /* ConfigParserTests.m in Sources */,
 				700E154717E30D0F006E124E /* UIColor+HexColors.m in Sources */,
 				700E156617E33DF1006E124E /* UIColor+Comparison.m in Sources */,

@@ -12,11 +12,16 @@
 
 +(BYTextShadow*)shadowWithOffset:(CGSize)offset andColor:(UIColor*)color {
     BYTextShadow *shadow = [BYTextShadow new];
-    
     shadow.offset = offset;
     shadow.color = color;
-    
     return shadow;
+}
+
+-(id)copyWithZone:(NSZone *)zone {
+    BYTextShadow *copy = [[BYTextShadow allocWithZone:zone] init];
+    copy.offset = self.offset;
+    copy.color = self.color.copy;
+    return copy;
 }
 
 @end
