@@ -27,6 +27,11 @@
 }
 
 -(UIView*)hitTest:(CGPoint)point withEvent:(UIEvent*)event {
+    
+    if(!_adaptedSwitch.enabled || !_adaptedSwitch.userInteractionEnabled || _adaptedSwitch.isHidden) {
+        return nil;
+    }
+    
     CGPoint windowOrigin = [_adaptedSwitch convertPoint:CGPointZero toView:self];
     if(!CGPointEqualToPoint(CGPointZero, windowOrigin)) {
         CGSize size = _adaptedSwitch.desiredSwitchSize;
