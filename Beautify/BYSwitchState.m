@@ -16,6 +16,7 @@
     copy.text = self.text.copy;
     copy.backgroundColor = self.backgroundColor.copy;
     copy.textShadow = self.textShadow.copy;
+    copy.borderColor = self.borderColor.copy;
     return copy;
 }
 

@@ -20,6 +20,7 @@
 #import "UISwitch+Beautify.h"
 #import "BYSwitchGestureView.h"
 #import "BYSwitchBorderLayer.h"
+#import "BYVersionUtils.h"
 
 @implementation BYSwitchRenderer {
     CAShapeLayer* _clipLayerShape;
@@ -97,7 +98,6 @@
     
     // create the border layer
     _borderLayer = [[BYSwitchBorderLayer alloc] initWithRenderer:self];
-    // the frame is inset to accomodate the shadow
     _borderLayer.frame = bounds;
     [_borderLayer setNeedsDisplay];
        
@@ -218,13 +218,22 @@
         }
     }
     
+    CGRect thumbFrame = CGRectMake(thumbCentrePoint.x - halfWidth, thumbCentrePoint.y - halfWidth,
+                                   bounds.size.height, bounds.size.height);
+    
+    NSNumber *inset = [self propertyValueForNameWithCurrentState:@"thumbInset"];
+    
     // compute the overall frame
-    return CGRectMake(thumbCentrePoint.x - halfWidth, thumbCentrePoint.y - halfWidth,
-                      bounds.size.height, bounds.size.height);
+    return CGRectInset(thumbFrame, inset.floatValue, inset.floatValue);
 }
 
 -(CGRect)toggleLayerFrame {
     CGRect bounds = [self adaptedBounds];
+    
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
+        return bounds;
+    }
+    
     float toggleX = [self adaptedSwitch].isOn ? 0 : -_toggleOffset;
     
     if (_panning) {
@@ -305,12 +314,14 @@
     [[self adaptedSwitch] setOn:![self adaptedSwitch].isOn];
     [[self adaptedSwitch] sendActionsForControlEvents:UIControlEventValueChanged];
     [self updateLayerLocations];
+    [self redraw];
 }
 
 -(void)swiped:(UISwipeGestureRecognizer*)gesture {
     [[self adaptedSwitch] setOn:![self adaptedSwitch].isOn];
     [[self adaptedSwitch] sendActionsForControlEvents:UIControlEventValueChanged];
     [self updateLayerLocations];
+    [self redraw];
 }
 
 -(void)panning:(UIPanGestureRecognizer*)gesture {

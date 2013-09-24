@@ -25,16 +25,19 @@
     style.offState = offState;
     
     if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
-        style.border = [[BYBorder alloc] initWithColor:[UIColor colorWithWhite:0.88 alpha:1.0] width:2 radius:25];
+        style.border = [[BYBorder alloc] initWithColor:[UIColor clearColor] width:1.5 radius:20];
         
-        onState.text = @"";
+        style.thumbInset = 1.5;
+        
         onState.backgroundColor = [UIColor colorWithRed:75.0f/255.0f green:216.0f/255.0f blue:99.0f/255.0f alpha:1.0f];
-        offState.text = @"";
+        onState.borderColor = [UIColor colorWithRed:75.0f/255.0f green:216.0f/255.0f blue:99.0f/255.0f alpha:1.0f];
+        
         offState.backgroundColor = [UIColor clearColor];
+        offState.borderColor = [UIColor colorWithWhite:0.88f alpha:1.0f];
         
         style.thumbBackgroundColor = [UIColor whiteColor];
         style.thumbBorder = [[BYBorder alloc] initWithColor:[UIColor clearColor] width:0 radius:15];
-        style.thumbOuterShadows = @[[[BYShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:3 color:[UIColor colorWithWhite:0.0 alpha:0.5]]];
+        style.thumbOuterShadows = @[[[BYShadow alloc] initWithOffset:CGSizeMake(0, 2) radius:5 color:[UIColor colorWithWhite:0.0 alpha:0.6]]];
     }
     else {
         style.border = [[BYBorder alloc] initWithColor:[UIColor clearColor] width:0 radius:15];
@@ -80,6 +83,7 @@
     copy.thumbBackgroundGradient = self.thumbBackgroundGradient.copy;
     copy.thumbInnerShadows = self.thumbInnerShadows.copy;
     copy.thumbOuterShadows = self.thumbOuterShadows.copy;
+    copy.thumbInset = self.thumbInset;
     
     copy.trackLayerImage = self.trackLayerImage.copy;
     copy.borderLayerImage = self.borderLayerImage.copy;
