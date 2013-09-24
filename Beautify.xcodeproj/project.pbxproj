@@ -974,9 +974,9 @@
 		70907E721797F21000F83417 /* ImageView */ = {
 			isa = PBXGroup;
 			children = (
-				7047010C17E1C11100FEA5F5 /* BYImageViewRenderer.h */,
 				7047010D17E1C11100FEA5F5 /* BYTopShadowRenderingLayer.h */,
 				7047010E17E1C11100FEA5F5 /* BYTopShadowRenderingLayer.m */,
+				7047010C17E1C11100FEA5F5 /* BYImageViewRenderer.h */,
 				7047010F17E1C11100FEA5F5 /* BYImageViewRenderer.m */,
 				7047011017E1C11100FEA5F5 /* UIImageView+Beautify.h */,
 				7047011117E1C11100FEA5F5 /* UIImageView+Beautify.m */,

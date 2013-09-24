@@ -10,20 +10,15 @@
 #import "BYStyleRenderer_Private.h"
 #import "BYImageViewStyle.h"
 #import "BYTheme.h"
-#import "BYControlRenderer_Private.h"
-#import "BYViewRenderer_Private.h"
-#import "UIView+Utilities.h"
 #import "UIImageView+Beautify.h"
 #import "BYControlRenderingLayer.h"
 #import "BYTopShadowRenderingLayer.h"
 #import "BYBorder.h"
-
 #import "BYRenderUtils.h"
 
 @implementation BYImageViewRenderer {
     UIImageView *_replacementImageView;
     BYControlRenderingLayer *_backgroundLayer;
-    
     BYTopShadowRenderingLayer *_topLayer;
 }
 
