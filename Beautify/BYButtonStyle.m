@@ -50,10 +50,23 @@
         highlightTextColorSetter.state = UIControlStateHighlighted;
         highlightTextColorSetter.value = [[BYText alloc] initWithFont:[[BYFont alloc] initWithName:@"Helvetica-Bold" andSize:15.0f]
                                                                color:[UIColor whiteColor]];
-        
         style.stateSetters = @[highlightTextColorSetter, highlightedBGSetter];
     }
     return style;
+}
+
+-(id)copyWithZone:(NSZone*)zone {
+    id copy = [super copyWithZone:zone];
+    [copy setTitle:self.title.copy];
+    [copy setTitleShadow:self.titleShadow.copy];
+    [copy setBackgroundColor:self.backgroundColor.copy];
+    [copy setBackgroundGradient:self.backgroundGradient.copy];
+    [copy setBackgroundImage:self.backgroundImage.copy];
+    [copy setBorder:self.border.copy];
+    [copy setInnerShadows:self.innerShadows.copy];
+    [copy setOuterShadows:self.outerShadows.copy];
+    [copy setStateSetters:self.stateSetters.copy];
+    return copy;
 }
 
 @end

@@ -11,7 +11,7 @@
 /*
  A style property representing a nine-boxed image for use as a background for a UIView.
  */
-@interface BYNineBoxedImage : NSObject
+@interface BYNineBoxedImage : NSObject <NSCopying>
 
 /*
  The top inset.

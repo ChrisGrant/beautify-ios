@@ -19,4 +19,12 @@
     return self;
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+    BYBorder *copy = [[BYBorder allocWithZone:zone] init];
+    copy.color = self.color;
+    copy.width = self.width;
+    copy.cornerRadius = self.cornerRadius;
+    return copy;
+}
+
 @end

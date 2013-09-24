@@ -70,4 +70,20 @@
     return self.name;
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+    BYTheme *theme = [[[self class] allocWithZone:zone] init];
+    theme.name = self.name.copy;
+    theme.buttonStyle = self.buttonStyle.copy;
+    theme.switchStyle = self.switchStyle.copy;
+    theme.labelStyle = self.labelStyle.copy;
+    theme.viewControllerStyle = self.viewControllerStyle.copy;
+    theme.textFieldStyle = self.textFieldStyle.copy;
+    theme.navigationBarStyle = self.navigationBarStyle.copy;
+    theme.tableViewCellStyle = self.tableViewCellStyle.copy;
+    theme.imageViewStyle = self.imageViewStyle.copy;
+    theme.barButtonItemStyle = self.barButtonItemStyle.copy;
+    theme.sliderStyle = self.sliderStyle.copy;
+    return theme;
+}
+
 @end

@@ -36,4 +36,11 @@
     return [UIFont fontWithName:self.name size:font.pointSize];
 }
 
+-(id)copyWithZone:(NSZone *)zone {
+    BYFont *copy = [[BYFont allocWithZone:zone] init];
+    copy.name = self.name.copy;
+    copy.size = self.size;
+    return copy;
+}
+
 @end

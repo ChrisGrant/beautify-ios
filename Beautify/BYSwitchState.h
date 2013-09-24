@@ -10,7 +10,7 @@
 #import "BYText.h"
 #import "BYTextShadow.h"
 
-@interface BYSwitchState : NSObject
+@interface BYSwitchState : NSObject <NSCopying>
 
 /*
  The font and colour of the text

@@ -10,4 +10,13 @@
 
 @implementation BYSwitchState
 
+-(id)copyWithZone:(NSZone *)zone {
+    BYSwitchState *copy = [[BYSwitchState allocWithZone:zone] init];
+    copy.textStyle = self.textStyle.copy;
+    copy.text = self.text.copy;
+    copy.backgroundColor = self.backgroundColor.copy;
+    copy.textShadow = self.textShadow.copy;
+    return copy;
+}
+
 @end
