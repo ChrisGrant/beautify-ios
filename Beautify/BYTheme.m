@@ -51,7 +51,6 @@
 
 -(id)init {
     if (self = [super init]) {
-        _name = @"DEFAULT";
         self.buttonStyle = [BYButtonStyle defaultSystemStyle];
         self.switchStyle = [BYSwitchStyle defaultStyle];
         self.labelStyle = [BYLabelStyle defaultStyle];
@@ -66,13 +65,8 @@
     return self;
 }
 
--(NSString*)description {
-    return self.name;
-}
-
 -(id)copyWithZone:(NSZone *)zone {
     BYTheme *theme = [[[self class] allocWithZone:zone] init];
-    theme.name = self.name.copy;
     theme.buttonStyle = self.buttonStyle.copy;
     theme.switchStyle = self.switchStyle.copy;
     theme.labelStyle = self.labelStyle.copy;
