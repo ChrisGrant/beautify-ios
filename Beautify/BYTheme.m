@@ -18,6 +18,7 @@
 #import "BYBarButtonStyle.h"
 #import "BYTableViewCellStyle.h"
 #import "BYImageViewStyle.h"
+#import "BYJSONVersion.h"
 
 @implementation BYTheme
 
@@ -35,16 +36,26 @@
     BYTheme* theme = nil;
     if (json) {
         NSError* jsonError;
-        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:json
-                                                             options:NSJSONReadingAllowFragments
+        NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingAllowFragments
                                                                error:&jsonError];
         if (jsonError) {
             NSLog(@"Error: Could not parse JSON! %@", jsonError.debugDescription);
-        } else {
-            theme = [self fromDictionary:dict];
         }
-    } else {
-        NSLog(@"[BYTheme fromFile] failed - unable to load file");
+        else {
+            // Find the version of the JSON file being passed in.
+            NSString *fileVersion = dict[@"schemaVersion"];
+            
+            // Compare it to the current version. If they aren't equal, we can't continue and should log an error.
+            if([fileVersion isEqualToString:JSON_SCHEMA_VERSION]) {
+                theme = [self fromDictionary:dict];
+            }
+            else {
+                NSLog(@"[BYTheme fromFile] failed - The version of the file (%@) was invalid. Expecting %@", fileVersion, JSON_SCHEMA_VERSION);
+            }
+        }
+    }
+    else {
+        NSLog(@"[BYTheme fromFile] failed - Unable to load file");
     }
     return theme;
 }
