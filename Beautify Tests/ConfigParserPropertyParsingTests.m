@@ -13,6 +13,7 @@
 #import "BYStateSetter.h"
 #import "BYShadow.h"
 #import "BYGradientStop.h"
+#import "BYBackgroundImage.h"
 
 @interface ConfigParserPropertyParsingTests : XCTestCase
 @end
@@ -250,6 +251,36 @@
     
     gradient = [BYConfigParser gradientFromDict:@{@"This is not a gradient" : @"Shouldnt be able to parse it!"}];
     XCTAssertNil(gradient, @"Gradient should be nil if the dictionary doesn't have the neccesary data");
+}
+
+#pragma mark - Background Images 
+
+-(void)testValidBackgroundImageFromDict {
+    NSString *base64ImageString = @"data:image/gif;base64,R0lGODlhDwAPAKECAAAAzMzM/////wAAACwAAAAADwAPAAACIISPeQHsrZ5ModrLlN48CXF8m2iQ3YmmKqVlRtW4MLwWACH+H09wdGltaXplZCBieSBVbGVhZCBTbWFydFNhdmVyIQAAOw==";
+    BYBackgroundImage *bgIm = [BYConfigParser backgroundImageFromDict:@{@"data":base64ImageString,
+                                                                         @"contentMode":@"fill"}];
+    
+    XCTAssertNotNil(bgIm, @"Image shouldn't be nil");
+    XCTAssertNotNil(bgIm.image, @"Image's image shouldn't be nil");
+    XCTAssertEqual(bgIm.image.size, CGSizeMake(15, 15), @"Image should be 15x15");
+
+    XCTAssertEqual(bgIm.contentMode, BYImageContentModeFill, @"Should be fill");
+    
+    bgIm = [BYConfigParser backgroundImageFromDict:@{@"data":base64ImageString,
+                                                     @"contentMode":@"aspectFill"}];
+    XCTAssertEqual(bgIm.contentMode, BYImageContentModeAspectFill, @"Should be aspect fill");
+    
+    bgIm = [BYConfigParser backgroundImageFromDict:@{@"data":base64ImageString,
+                                                     @"contentMode":@"tile"}];
+    XCTAssertEqual(bgIm.contentMode, BYImageContentModeTile, @"Should be tile");
+    
+    bgIm = [BYConfigParser backgroundImageFromDict:@{@"data":base64ImageString,
+                                                     @"contentMode":@"ASPECTFILl"}];
+    XCTAssertEqual(bgIm.contentMode, BYImageContentModeAspectFill, @"Should be aspect fill");
+    
+    bgIm = [BYConfigParser backgroundImageFromDict:@{@"data":base64ImageString,
+                                                     @"contentMode":@"Tile"}];
+    XCTAssertEqual(bgIm.contentMode, BYImageContentModeTile, @"Should be tile");
 }
 
 @end

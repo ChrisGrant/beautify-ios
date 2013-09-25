@@ -419,7 +419,25 @@ static NSMutableArray* _objectStack;
         NSLog(@"WARNING - Image had no 'data' property");
     }
     
+    bgImage.contentMode = [BYConfigParser contentModeFromDict:backgroundImageDict];
+    
     return bgImage;
+}
+
++(BYImageContentMode)contentModeFromDict:(NSDictionary*)dict {
+    if([[dict allKeys] containsObject:@"contentMode"]) {
+        NSString *contentString = [dict[@"contentMode"] lowercaseString];
+        if([contentString isEqualToString:@"fill"]) {
+            return BYImageContentModeFill;
+        }
+        else if([contentString isEqualToString:@"aspectfill"]) {
+            return BYImageContentModeAspectFill;
+        }
+        else if([contentString isEqualToString:@"tile"]) {
+            return BYImageContentModeTile;
+        }
+    }
+    return BYImageContentModeFill; // Default to fill.
 }
 
 #pragma mark Gradients

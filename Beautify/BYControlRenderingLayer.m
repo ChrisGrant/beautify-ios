@@ -56,9 +56,7 @@
 
 -(void)drawInContext:(CGContextRef)ctx {
     UIGraphicsPushContext(ctx);
-
     [self drawLayerInRect:originalFrame withContext:ctx];
-    
     UIGraphicsPopContext();
 }
 
@@ -101,10 +99,28 @@
     // Draw the background image
     if (backgroundImage) {
         UIImage *image = [backgroundImage image];
-        CGContextDrawTiledImage(ctx, CGRectMake(0, 0,
-                                                image.size.width / self.contentsScale,
-                                                image.size.height / self.contentsScale),
-                                image.CGImage);
+        CGImageRef imageRef = image.CGImage;
+
+        if(backgroundImage.contentMode == BYImageContentModeAspectFill) {
+            // There's no built in way to make an image use aspect fill, so calculate a new frame.
+            CGSize rectSize = rect.size;
+            CGFloat horizontalRatio = rectSize.width / CGImageGetWidth(imageRef);
+            CGFloat verticalRatio = rectSize.height / CGImageGetHeight(imageRef);
+            CGFloat ratio = MAX(horizontalRatio, verticalRatio); // The radio is the biggest of the v & h ratio
+            // Calculate a new size based on the ratio
+            CGSize aspectFillSize = CGSizeMake(CGImageGetWidth(imageRef) * ratio, CGImageGetHeight(imageRef) * ratio);
+
+            // Calculate the final frame, centered on the original frame, then draw the image in this.
+            CGRect r = CGRectMake((rectSize.width-aspectFillSize.width)/2, (rectSize.height-aspectFillSize.height)/2,
+                                  aspectFillSize.width, aspectFillSize.height);
+            CGContextDrawImage(ctx, r, imageRef);
+        }
+        else if (backgroundImage.contentMode == BYImageContentModeFill) {
+            CGContextDrawImage(ctx, rect, imageRef);
+        }
+        else if (backgroundImage.contentMode == BYImageContentModeTile) {
+            CGContextDrawTiledImage(ctx, CGRectMake(0, 0, image.size.width / self.contentsScale, image.size.height / self.contentsScale), imageRef);
+        }
     }
     
     RenderInnerShadows(ctx, border, innerShadows, rect);
