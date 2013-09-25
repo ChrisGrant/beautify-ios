@@ -17,58 +17,83 @@
 @implementation BYSwitchToggleLayer
 
 -(void)drawInContext:(CGContextRef)ctx {
+    BYSwitchState *onState = [self.renderer propertyValueForNameWithCurrentState:@"onState"];
+    BYSwitchState *offState = [self.renderer propertyValueForNameWithCurrentState:@"offState"];
     
-    UIImage *trackLayerImage = [self.renderer propertyValueForNameWithCurrentState:@"trackLayerImage"];
-    
-    if (trackLayerImage != nil) {
-        CGContextTranslateCTM(ctx, 0, self.bounds.size.height);
-        CGContextScaleCTM(ctx, 1.0, -1.0);
-        CGContextDrawImage(ctx, self.bounds, trackLayerImage.CGImage);
+    // Consider the radius of the corners, as the text doesn't look visually correct if we don't. Add padding when there
+    // is corner radius so that the amount of visual space is equal.
+    BYBorder *border = [self.renderer propertyValueForNameWithCurrentState:@"border"];
+
+    if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
+        
+        CGFloat eigthCornerRadius = border.cornerRadius / 8;
+
+        if(((UISwitch*)self.renderer.adaptedView).on) {
+            // track to the left of the thumb
+            CGRect leftTrackRect = self.bounds;
+            CGContextSetFillColorWithColor(ctx, onState.backgroundColor.CGColor);
+            CGContextFillRect(ctx, leftTrackRect);
+            
+            UIGraphicsPushContext(ctx);
+            [self drawStateText:onState inRect:CGRectMake(0, 0, self.bounds.size.width - self.bounds.size.height + eigthCornerRadius, self.bounds.size.height)];
+            UIGraphicsPopContext();
+        }
+        else {
+            // track to the left of the thumb
+            CGRect leftTrackRect = self.bounds;
+            CGContextSetFillColorWithColor(ctx, offState.backgroundColor.CGColor);
+            CGContextFillRect(ctx, leftTrackRect);
+            [self drawStateText:offState inRect:CGRectMake(self.bounds.size.height - eigthCornerRadius, 0, self.bounds.size.width - self.bounds.size.height + eigthCornerRadius, self.bounds.size.height)];
+
+        }
     }
     else {
+        UIImage *trackLayerImage = [self.renderer propertyValueForNameWithCurrentState:@"trackLayerImage"];
+        
+        if (trackLayerImage != nil) {
+            CGContextTranslateCTM(ctx, 0, self.bounds.size.height);
+            CGContextScaleCTM(ctx, 1.0, -1.0);
+            CGContextDrawImage(ctx, self.bounds, trackLayerImage.CGImage);
+        }
+        else {
+            // the length of each track
+            CGFloat trackLength = self.bounds.size.width;
+            
+            // track to the left of the thumb
+            CGRect leftTrackRect = CGRectMake(0, 0, trackLength / 2, self.frame.size.height);
+            CGContextSetFillColorWithColor(ctx, onState.backgroundColor.CGColor);
+            CGContextFillRect(ctx, leftTrackRect);
+            
+            // track to the left of the right of the thumb
+            CGRect rightTrackRect = CGRectOffset(leftTrackRect, trackLength / 2, 0);
+            CGContextSetFillColorWithColor(ctx, offState.backgroundColor.CGColor);
+            CGContextFillRect(ctx, rightTrackRect);
+            
+            UIGraphicsPushContext(ctx);
+            
+            // Need to have a separate left and right text rect so text alignment looks correct.
+            
+            // Consider the width of the thumb - the text rects shouldn't intersect the thumb's frame.
+            CGFloat halfThumbWidth = self.frame.size.height / 2;
 
-        BYSwitchState *onState = [self.renderer propertyValueForNameWithCurrentState:@"onState"];
-        BYSwitchState *offState = [self.renderer propertyValueForNameWithCurrentState:@"offState"];
-        
-        // the length of each track
-        CGFloat trackLength = self.bounds.size.width;
-        
-        // track to the left of the thumb
-        CGRect leftTrackRect = CGRectMake(0, 0, trackLength / 2, self.frame.size.height);
-        CGContextSetFillColorWithColor(ctx, onState.backgroundColor.CGColor);
-        CGContextFillRect(ctx, leftTrackRect);
-        
-        // track to the left of the right of the thumb
-        CGRect rightTrackRect = CGRectOffset(leftTrackRect, trackLength / 2, 0);
-        CGContextSetFillColorWithColor(ctx, offState.backgroundColor.CGColor);
-        CGContextFillRect(ctx, rightTrackRect);
-        
-        UIGraphicsPushContext(ctx);
-        
-        // Need to have a separate left and right text rect so text alignment looks correct.
+            CGFloat quarterCornerRadius = border.cornerRadius / 4;
 
-        // Consider the width of the thumb - the text rects shouldn't intersect the thumb's frame.
-        CGFloat halfThumbWidth = self.frame.size.height / 2;
-        
-        // Consider the radius of the corners, as the text doesn't look visually correct if we don't. Add padding when there
-        // is corner radius so that the amount of visual space is equal.
-        BYBorder *border = [self.renderer propertyValueForNameWithCurrentState:@"border"];
-        CGFloat quarterCornerRadius = border.cornerRadius / 4;
-        
-        CGRect leftTextRect = CGRectMake(leftTrackRect.origin.x + quarterCornerRadius,
-                                         leftTrackRect.origin.y,
-                                         leftTrackRect.size.width - halfThumbWidth - quarterCornerRadius,
-                                         leftTrackRect.size.height);
-        
-        CGRect rightTextRect = CGRectMake(rightTrackRect.origin.x + halfThumbWidth - quarterCornerRadius,
-                                          rightTrackRect.origin.y,
-                                          rightTrackRect.size.width - halfThumbWidth,
-                                          rightTrackRect.size.height);
-        
-        [self drawStateText:onState inRect:leftTextRect];
-        [self drawStateText:offState inRect:rightTextRect];
-        
-        UIGraphicsPopContext();
+            
+            CGRect leftTextRect = CGRectMake(leftTrackRect.origin.x + quarterCornerRadius,
+                                             leftTrackRect.origin.y,
+                                             leftTrackRect.size.width - halfThumbWidth - quarterCornerRadius,
+                                             leftTrackRect.size.height);
+            
+            CGRect rightTextRect = CGRectMake(rightTrackRect.origin.x + halfThumbWidth - quarterCornerRadius,
+                                              rightTrackRect.origin.y,
+                                              rightTrackRect.size.width - halfThumbWidth,
+                                              rightTrackRect.size.height);
+            
+            [self drawStateText:onState inRect:leftTextRect];
+            [self drawStateText:offState inRect:rightTextRect];
+            
+            UIGraphicsPopContext();
+        }
     }
 }
 

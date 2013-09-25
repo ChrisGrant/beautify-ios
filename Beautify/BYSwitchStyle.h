@@ -39,6 +39,7 @@
 @property NSArray *thumbInnerShadows;
 @property NSArray *thumbOuterShadows;
 @property UIImage *thumbImage, *trackLayerImage, *borderLayerImage;
+@property CGFloat thumbInset;
 
 +(BYSwitchStyle*)defaultStyle;
 

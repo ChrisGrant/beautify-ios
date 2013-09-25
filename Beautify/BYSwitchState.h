@@ -32,4 +32,9 @@
  */
 @property BYTextShadow* textShadow;
 
+/*
+ The border color for the swich at this state
+ */
+@property UIColor* borderColor;
+
 @end

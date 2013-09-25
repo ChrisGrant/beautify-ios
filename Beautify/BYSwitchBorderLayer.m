@@ -44,7 +44,7 @@
         
         NSArray* innerShadows = [self.renderer propertyValueForNameWithCurrentState:@"innerShadows"];
         UIColor* highlightColor = [self.renderer propertyValueForNameWithCurrentState:@"highlightColor"];
-
+        
         if(highlightColor) {
             CGRect rect = CGRectMake(border.cornerRadius/2, self.frame.size.height/2,
                                      self.frame.size.width - border.cornerRadius, self.frame.size.height/2);
@@ -57,13 +57,20 @@
         
         RenderInnerShadows(ctx, border, innerShadows, self.bounds);
         
-        // render the border
-        CGContextAddPath(ctx, borderPath.CGPath);
-        CGContextSetStrokeColorWithColor(ctx, border.color.CGColor);
-        CGContextSetLineWidth(ctx, border.width);
-        CGContextStrokePath(ctx);
+        if (border.width > 0) {
+            UISwitch *view = self.renderer.adaptedView;
+            NSString *propName = view.on ? @"onState" : @"offState";
+            BYSwitchState *state = [self.renderer propertyValueForNameWithCurrentState:propName];
+            // Use the state's border color if it has one - otherwise use the borders own color.
+            UIColor *borderColor = state.borderColor != nil ? state.borderColor : border.color;
+            
+            // render the border
+            CGContextAddPath(ctx, borderPath.CGPath);
+            CGContextSetStrokeColorWithColor(ctx, borderColor.CGColor);
+            CGContextSetLineWidth(ctx, border.width);
+            CGContextStrokePath(ctx);
+        }
     }
-    
 }
-    
+
 @end
