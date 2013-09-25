@@ -11,6 +11,7 @@
 #import "BYGradientStop.h"
 #import "BYRenderUtils.h"
 #import "BYStyleRenderer_Private.h"
+#import "BYBackgroundImage.h"
 
 @implementation BYControlRenderingLayer {
     BYViewRenderer* _renderer;
@@ -55,9 +56,7 @@
 
 -(void)drawInContext:(CGContextRef)ctx {
     UIGraphicsPushContext(ctx);
-
     [self drawLayerInRect:originalFrame withContext:ctx];
-    
     UIGraphicsPopContext();
 }
 
@@ -75,7 +74,8 @@
     BYGradient *backgroundGradient = [self propertyValue:@"backgroundGradient"];
     NSArray *innerShadows = [self propertyValue:@"innerShadows"];
     BYBorder *border = [self propertyValue:@"border"];
-    
+    BYBackgroundImage *backgroundImage = [self propertyValue:@"backgroundImage"];
+
     // a rounded rectangle bezier path that describes the layer
     UIBezierPath *layerPath = [UIBezierPath bezierPathWithRoundedRect:rect
                                                          cornerRadius:border.cornerRadius];
@@ -96,10 +96,36 @@
         RenderGradient(backgroundGradient, ctx, originalFrame);
     }
     
+    // Draw the background image
+    if (backgroundImage) {
+        UIImage *image = [backgroundImage image];
+        CGImageRef imageRef = image.CGImage;
+
+        if(backgroundImage.contentMode == BYImageContentModeAspectFill) {
+            // There's no built in way to make an image use aspect fill, so calculate a new frame.
+            CGSize rectSize = rect.size;
+            CGFloat horizontalRatio = rectSize.width / CGImageGetWidth(imageRef);
+            CGFloat verticalRatio = rectSize.height / CGImageGetHeight(imageRef);
+            CGFloat ratio = MAX(horizontalRatio, verticalRatio); // The radio is the biggest of the v & h ratio
+            // Calculate a new size based on the ratio
+            CGSize aspectFillSize = CGSizeMake(CGImageGetWidth(imageRef) * ratio, CGImageGetHeight(imageRef) * ratio);
+
+            // Calculate the final frame, centered on the original frame, then draw the image in this.
+            CGRect r = CGRectMake((rectSize.width-aspectFillSize.width)/2, (rectSize.height-aspectFillSize.height)/2,
+                                  aspectFillSize.width, aspectFillSize.height);
+            CGContextDrawImage(ctx, r, imageRef);
+        }
+        else if (backgroundImage.contentMode == BYImageContentModeFill) {
+            CGContextDrawImage(ctx, rect, imageRef);
+        }
+        else if (backgroundImage.contentMode == BYImageContentModeTile) {
+            CGContextDrawTiledImage(ctx, CGRectMake(0, 0, image.size.width / self.contentsScale, image.size.height / self.contentsScale), imageRef);
+        }
+    }
+    
     RenderInnerShadows(ctx, border, innerShadows, rect);
     
     // Draw the border
-
     if (border.width > 0) {                
         CGContextSetStrokeColorWithColor(ctx, border.color.CGColor);
         layerPath.lineWidth = border.width;

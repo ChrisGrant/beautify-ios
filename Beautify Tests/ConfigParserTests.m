@@ -54,7 +54,6 @@
 
 -(void)assertDefaultTheme:(BYTheme*)theme {
     XCTAssertNotNil(theme, @"Theme should not be nil");
-    XCTAssertEqual(theme.name, @"DEFAULT", @"Theme name should be equal to DEFAULT");
     XCTAssertNotNil(theme.buttonStyle, @"Should be nil");
     XCTAssertNotNil(theme.switchStyle, @"Should be nil");
     XCTAssertNotNil(theme.labelStyle, @"Should be nil");
@@ -230,12 +229,6 @@
     XCTAssert([vcStyle.backgroundColor isEqualToColor:[UIColor whiteColor]], @"Background should be white");
     [self assertGradient:vcStyle.backgroundGradient hasStopOneColor:[UIColor whiteColor] atPosition:1.0f
          andStopTwoColor:[UIColor blueColor] atPosition:0 andIsRadial:NO withRadialOffset:CGSizeZero];
-    
-    XCTAssertNotNil(vcStyle.backgroundImage.data, @"Image should have some data");
-    XCTAssertEqual(vcStyle.backgroundImage.top, 12, @"Top should be 12");
-    XCTAssertEqual(vcStyle.backgroundImage.left, 9, @"Left should be 9");
-    XCTAssertEqual(vcStyle.backgroundImage.bottom, 6, @"Bottom should be 6");
-    XCTAssertEqual(vcStyle.backgroundImage.right, 200, @"Right should be 200");
 }
 
 -(void)testViewControllerStyleWithPartialDict {

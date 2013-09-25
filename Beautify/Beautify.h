@@ -12,7 +12,7 @@
 #import "BYGradient.h"
 #import "BYGradientStop.h"
 #import "BYShadow.h"
-#import "BYNineBoxedImage.h"
+#import "BYBackgroundImage.h"
 #import "BYText.h"
 #import "BYTextShadow.h"
 #import "BYSwitchState.h"

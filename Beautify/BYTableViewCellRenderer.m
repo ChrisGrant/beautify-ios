@@ -12,8 +12,7 @@
 #import "BYTheme.h"
 #import "BYControlRenderingLayer.h"
 #import "BYControlRenderer_Private.h"
-#import "BYNineBoxedImage.h"
-#import "BYNineBoxedImage_Private.h"
+#import "BYBackgroundImage.h"
 #import "BYText.h"
 #import "BYTextShadow.h"
 #import "BYFont.h"
@@ -39,7 +38,7 @@
     cell.backgroundView = [[UIView alloc] initWithFrame:cell.frame];
     
     // add the renderer and image layer
-    [self addNineBoxAndRendererLayers:cell.backgroundView];
+    [self addRendererLayers:cell.backgroundView];
     
     // replace the selected background view
     cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
@@ -93,7 +92,7 @@
 
 -(void)configureSelectedView {
     UIView *adaptedView = (UIView*)self.adaptedView;
-    BYNineBoxedImage* backgroundImage = [self propertyValueForName:@"backgroundImage" forState:UIControlStateHighlighted];
+    BYBackgroundImage* backgroundImage = [self propertyValueForName:@"backgroundImage" forState:UIControlStateHighlighted];
     
     if (backgroundImage == nil) {
         _selectedNineBoxImage.hidden = YES;
@@ -104,7 +103,7 @@
     else {
         _selectedLayer.hidden = YES;
         _selectedNineBoxImage.hidden = NO;
-        _selectedNineBoxImage.image = [backgroundImage createNineBoxedImage];
+        _selectedNineBoxImage.image = backgroundImage.image;
     }
 }
 

@@ -11,7 +11,7 @@
 #import "BYViewRenderer_Private.h"
 #import "BYStyleRenderer_Private.h"
 #import "UIView+Utilities.h"
-#import "BYNineBoxedImage.h"
+#import "BYBackgroundImage.h"
 #import "BYControlRenderer_Private.h"
 #import "BYTextFieldStyle.h"
 #import "BYFont_Private.h"
@@ -50,7 +50,7 @@
         }
         [textField getDelegateProxy].proxiedDelegate = self;
         
-        [self addNineBoxAndRendererLayers];
+        [self addRendererLayers];
         [self configureFromStyle];
     }
 }

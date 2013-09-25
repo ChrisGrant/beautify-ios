@@ -11,7 +11,7 @@
 #import "BYBorder.h"
 #import "BYShadow.h"
 #import "BYGradient.h"
-#import "BYNineBoxedImage.h"
+#import "BYBackgroundImage.h"
 #import "BYTextShadow.h"
 #import "UIColor+HexColors.h"
 
@@ -24,7 +24,7 @@
 // background
 @property UIColor *backgroundColor;
 @property BYGradient *backgroundGradient;
-@property BYNineBoxedImage *backgroundImage;
+@property BYBackgroundImage *backgroundImage;
 
 // border
 @property BYBorder *border;

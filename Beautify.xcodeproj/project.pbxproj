@@ -23,7 +23,7 @@
 		1D46462417466942003840E4 /* BYFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEE9172EA5B1000C7811 /* BYFont.m */; };
 		1D46462517466942003840E4 /* BYGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEEB172EA5B2000C7811 /* BYGradient.m */; };
 		1D46462617466942003840E4 /* BYGradientStop.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEED172EA5B3000C7811 /* BYGradientStop.m */; };
-		1D46462717466942003840E4 /* BYNineBoxedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEEF172EA5B5000C7811 /* BYNineBoxedImage.m */; };
+		1D46462717466942003840E4 /* BYBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEEF172EA5B5000C7811 /* BYBackgroundImage.m */; };
 		1D46462817466942003840E4 /* BYShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEF1172EA5B6000C7811 /* BYShadow.m */; };
 		1D46462917466942003840E4 /* BYButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FF01172EA606000C7811 /* BYButtonStyle.m */; };
 		1D46462A17466942003840E4 /* BYLabelStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A7F174157B40039F3F3 /* BYLabelStyle.m */; };
@@ -46,7 +46,7 @@
 		1D464648174669A9003840E4 /* BYFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEE8172EA5B0000C7811 /* BYFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D464649174669A9003840E4 /* BYGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEEA172EA5B1000C7811 /* BYGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D46464A174669A9003840E4 /* BYGradientStop.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEEC172EA5B3000C7811 /* BYGradientStop.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D46464B174669A9003840E4 /* BYNineBoxedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEEE172EA5B4000C7811 /* BYNineBoxedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D46464B174669A9003840E4 /* BYBackgroundImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEEE172EA5B4000C7811 /* BYBackgroundImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D46464C174669A9003840E4 /* BYShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEF0172EA5B5000C7811 /* BYShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D46464D174669A9003840E4 /* UIView+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA54516F9AC9C00D08DBB /* UIView+Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D46464F174669C4003840E4 /* BYStyleRenderer_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DC6EACD174512BD004EDF37 /* BYStyleRenderer_Private.h */; settings = {ATTRIBUTES = (); }; };
@@ -84,7 +84,6 @@
 		1D56088517415DB600FFD529 /* BYViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12ABE174158650039F3F3 /* BYViewRenderer.m */; };
 		1D56088617415DB600FFD529 /* BYStyleCustomizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A81174157B40039F3F3 /* BYStyleCustomizer.m */; };
 		1DDB696B174A2887008A2A73 /* BYFont_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6969174A2846008A2A73 /* BYFont_Private.h */; };
-		1DDB696D174A2C8E008A2A73 /* BYNineBoxedImage_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB696C174A2ADC008A2A73 /* BYNineBoxedImage_Private.h */; };
 		1DDB6A39174BA951008A2A73 /* BYBeautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6A37174BA951008A2A73 /* BYBeautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DDB6A3B174BA951008A2A73 /* BYBeautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB6A38174BA951008A2A73 /* BYBeautify.m */; };
 		1DDB6A45174BAA40008A2A73 /* BYThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB6A43174BAA40008A2A73 /* BYThemeManager.m */; };
@@ -153,7 +152,7 @@
 		700E155117E320E8006E124E /* BYFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEE9172EA5B1000C7811 /* BYFont.m */; };
 		700E155217E320F2006E124E /* BYLabelStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A7F174157B40039F3F3 /* BYLabelStyle.m */; };
 		700E155317E320F9006E124E /* BYNavigationBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205345B1757A000000A27C0 /* BYNavigationBarStyle.m */; };
-		700E155417E320FE006E124E /* BYNineBoxedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEEF172EA5B5000C7811 /* BYNineBoxedImage.m */; };
+		700E155417E320FE006E124E /* BYBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEEF172EA5B5000C7811 /* BYBackgroundImage.m */; };
 		700E155517E32104006E124E /* BYShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEF1172EA5B6000C7811 /* BYShadow.m */; };
 		700E155617E3210B006E124E /* BYSliderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C32D017C4C1EE009D6289 /* BYSliderStyle.m */; };
 		700E155717E32111006E124E /* BYStateSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 729757CD173BED3A003A34A5 /* BYStateSetter.m */; };
@@ -247,6 +246,7 @@
 		70AB9D8217E9DF4000879E5E /* BYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AB9D8117E9DF4000879E5E /* BYAppDelegate.m */; };
 		70AB9D9017E9DF4000879E5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70AB9D8F17E9DF4000879E5E /* Images.xcassets */; };
 		70AB9DAA17E9E7F300879E5E /* Beautify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AB9DA917E9E7F300879E5E /* Beautify.framework */; };
+		70B492F017F2DF33002B62DB /* BYJSONVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 70B492EF17F2DF33002B62DB /* BYJSONVersion.h */; };
 		70C211B617DF01DB00CA110B /* TableVisualTestViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C211B417DF01DB00CA110B /* TableVisualTestViewController.h */; };
 		70C211B817DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
 		70C211B917DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
@@ -292,7 +292,7 @@
 		70FF54D617E6FB2100F9BF03 /* BYDropShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* BYDropShadow.m */; };
 		70FF54D717E6FB2700F9BF03 /* BYSliderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C32D017C4C1EE009D6289 /* BYSliderStyle.m */; };
 		70FF54D817E6FB2A00F9BF03 /* BYStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 729757C7173BB861003A34A5 /* BYStyle.m */; };
-		70FF54D917E6FB3300F9BF03 /* BYNineBoxedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEEF172EA5B5000C7811 /* BYNineBoxedImage.m */; };
+		70FF54D917E6FB3300F9BF03 /* BYBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEEF172EA5B5000C7811 /* BYBackgroundImage.m */; };
 		70FF54DA17E6FB3600F9BF03 /* BYStateSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 729757CD173BED3A003A34A5 /* BYStateSetter.m */; };
 		70FF54DB17E6FB3E00F9BF03 /* BYSwitchStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A83174157B40039F3F3 /* BYSwitchStyle.m */; };
 		70FF54DF17E7040F00F9BF03 /* ValidButtonStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 70FF54DE17E7040F00F9BF03 /* ValidButtonStyle.json */; };
@@ -361,8 +361,8 @@
 		1D13FEEB172EA5B2000C7811 /* BYGradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BYGradient.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1D13FEEC172EA5B3000C7811 /* BYGradientStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYGradientStop.h; sourceTree = "<group>"; };
 		1D13FEED172EA5B3000C7811 /* BYGradientStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYGradientStop.m; sourceTree = "<group>"; };
-		1D13FEEE172EA5B4000C7811 /* BYNineBoxedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYNineBoxedImage.h; sourceTree = "<group>"; };
-		1D13FEEF172EA5B5000C7811 /* BYNineBoxedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYNineBoxedImage.m; sourceTree = "<group>"; };
+		1D13FEEE172EA5B4000C7811 /* BYBackgroundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBackgroundImage.h; sourceTree = "<group>"; };
+		1D13FEEF172EA5B5000C7811 /* BYBackgroundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBackgroundImage.m; sourceTree = "<group>"; };
 		1D13FEF0172EA5B5000C7811 /* BYShadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYShadow.h; sourceTree = "<group>"; };
 		1D13FEF1172EA5B6000C7811 /* BYShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYShadow.m; sourceTree = "<group>"; };
 		1D13FEFC172EA5EE000C7811 /* BYBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBorder.h; sourceTree = "<group>"; };
@@ -375,7 +375,6 @@
 		1DC6EACD174512BD004EDF37 /* BYStyleRenderer_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYStyleRenderer_Private.h; path = Beautify/BYStyleRenderer_Private.h; sourceTree = SOURCE_ROOT; };
 		1DC6EACE174512BD004EDF37 /* BYViewRenderer_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYViewRenderer_Private.h; path = Beautify/BYViewRenderer_Private.h; sourceTree = SOURCE_ROOT; };
 		1DDB6969174A2846008A2A73 /* BYFont_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYFont_Private.h; sourceTree = "<group>"; };
-		1DDB696C174A2ADC008A2A73 /* BYNineBoxedImage_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYNineBoxedImage_Private.h; sourceTree = "<group>"; };
 		1DDB6A37174BA951008A2A73 /* BYBeautify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBeautify.h; sourceTree = "<group>"; };
 		1DDB6A38174BA951008A2A73 /* BYBeautify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BYBeautify.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1DDB6A42174BAA40008A2A73 /* BYThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYThemeManager.h; sourceTree = "<group>"; };
@@ -521,6 +520,7 @@
 		70AB9D8117E9DF4000879E5E /* BYAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BYAppDelegate.m; sourceTree = "<group>"; };
 		70AB9D8F17E9DF4000879E5E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		70AB9DA917E9E7F300879E5E /* Beautify.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Beautify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70B492EF17F2DF33002B62DB /* BYJSONVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYJSONVersion.h; sourceTree = "<group>"; };
 		70C211B417DF01DB00CA110B /* TableVisualTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableVisualTestViewController.h; sourceTree = "<group>"; };
 		70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableVisualTestViewController.m; sourceTree = "<group>"; };
 		70E19554178462B10096E458 /* VisualTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualTestViewController.h; sourceTree = "<group>"; };
@@ -718,9 +718,8 @@
 				1D13FEEB172EA5B2000C7811 /* BYGradient.m */,
 				1D13FEEC172EA5B3000C7811 /* BYGradientStop.h */,
 				1D13FEED172EA5B3000C7811 /* BYGradientStop.m */,
-				1D13FEEE172EA5B4000C7811 /* BYNineBoxedImage.h */,
-				1DDB696C174A2ADC008A2A73 /* BYNineBoxedImage_Private.h */,
-				1D13FEEF172EA5B5000C7811 /* BYNineBoxedImage.m */,
+				1D13FEEE172EA5B4000C7811 /* BYBackgroundImage.h */,
+				1D13FEEF172EA5B5000C7811 /* BYBackgroundImage.m */,
 				1D13FEF0172EA5B5000C7811 /* BYShadow.h */,
 				1D13FEF1172EA5B6000C7811 /* BYShadow.m */,
 				1DE9D286174E6D880070AFD3 /* BYText.h */,
@@ -984,9 +983,9 @@
 		70907E721797F21000F83417 /* ImageView */ = {
 			isa = PBXGroup;
 			children = (
-				7047010C17E1C11100FEA5F5 /* BYImageViewRenderer.h */,
 				7047010D17E1C11100FEA5F5 /* BYTopShadowRenderingLayer.h */,
 				7047010E17E1C11100FEA5F5 /* BYTopShadowRenderingLayer.m */,
+				7047010C17E1C11100FEA5F5 /* BYImageViewRenderer.h */,
 				7047010F17E1C11100FEA5F5 /* BYImageViewRenderer.m */,
 				7047011017E1C11100FEA5F5 /* UIImageView+Beautify.h */,
 				7047011117E1C11100FEA5F5 /* UIImageView+Beautify.m */,
@@ -1204,6 +1203,7 @@
 				1DDB6A42174BAA40008A2A73 /* BYThemeManager.h */,
 				1DDB6A43174BAA40008A2A73 /* BYThemeManager.m */,
 				7009050B178C0EB600D7BEF4 /* BYVersionUtils.h */,
+				70B492EF17F2DF33002B62DB /* BYJSONVersion.h */,
 			);
 			path = Beautify;
 			sourceTree = "<group>";
@@ -1255,7 +1255,7 @@
 				1D464646174669A9003840E4 /* BYViewRenderer.h in Headers */,
 				72F079811761F2C500FC27DB /* BYControlRenderer.h in Headers */,
 				7047012D17E1C27A00FEA5F5 /* BYSliderRenderer.h in Headers */,
-				1D46464B174669A9003840E4 /* BYNineBoxedImage.h in Headers */,
+				1D46464B174669A9003840E4 /* BYBackgroundImage.h in Headers */,
 				1D46464C174669A9003840E4 /* BYShadow.h in Headers */,
 				72FDED9F17565754002F1093 /* BYTextFieldRenderer.h in Headers */,
 				1DDB6A39174BA951008A2A73 /* BYBeautify.h in Headers */,
@@ -1300,7 +1300,6 @@
 				1D464650174669C4003840E4 /* BYViewRenderer_Private.h in Headers */,
 				1D464651174669C4003840E4 /* UIView+BeautifyPrivate.h in Headers */,
 				1DDB696B174A2887008A2A73 /* BYFont_Private.h in Headers */,
-				1DDB696D174A2C8E008A2A73 /* BYNineBoxedImage_Private.h in Headers */,
 				544975CD17D8B953003D7115 /* BYThumbLayer.h in Headers */,
 				7047011317E1C11100FEA5F5 /* BYTopShadowRenderingLayer.h in Headers */,
 				1DE9D288174E6D890070AFD3 /* BYText.h in Headers */,
@@ -1311,6 +1310,7 @@
 				727A862E17575C5600F6C6D9 /* BYTextShadow.h in Headers */,
 				7047012917E1C23800FEA5F5 /* BYSwitchGestureView.h in Headers */,
 				72F07945175C941100FC27DB /* BYControlRenderingLayer.h in Headers */,
+				70B492F017F2DF33002B62DB /* BYJSONVersion.h in Headers */,
 				72F07959175C9F9700FC27DB /* UITableViewCell+Beautify.h in Headers */,
 				72F0795C175CCC2F00FC27DB /* BYDelegateMultiplexer.h in Headers */,
 				72F0797F1761F11000FC27DB /* Beautify.h in Headers */,
@@ -1578,7 +1578,7 @@
 				1D46462417466942003840E4 /* BYFont.m in Sources */,
 				1D46462517466942003840E4 /* BYGradient.m in Sources */,
 				1D46462617466942003840E4 /* BYGradientStop.m in Sources */,
-				1D46462717466942003840E4 /* BYNineBoxedImage.m in Sources */,
+				1D46462717466942003840E4 /* BYBackgroundImage.m in Sources */,
 				7047011517E1C11100FEA5F5 /* BYImageViewRenderer.m in Sources */,
 				1D46462817466942003840E4 /* BYShadow.m in Sources */,
 				7047011B17E1C13200FEA5F5 /* BYSliderRenderer.m in Sources */,
@@ -1657,7 +1657,7 @@
 				7047013517E1C65E00FEA5F5 /* NSObject+Beautify.m in Sources */,
 				1D56088617415DB600FFD529 /* BYStyleCustomizer.m in Sources */,
 				1D56087917415D8800FFD529 /* BYLabelRenderer.m in Sources */,
-				70FF54D917E6FB3300F9BF03 /* BYNineBoxedImage.m in Sources */,
+				70FF54D917E6FB3300F9BF03 /* BYBackgroundImage.m in Sources */,
 				70FF54D117E6FB0700F9BF03 /* BYTheme.m in Sources */,
 				7047013617E1C66700FEA5F5 /* UISwitch+Beautify.m in Sources */,
 				70FF54CD17E6FAF600F9BF03 /* BYTableViewCellStyle.m in Sources */,
@@ -1769,7 +1769,7 @@
 				700E155017E320DF006E124E /* BYGradient.m in Sources */,
 				70F1FD0B17E3683E006018C9 /* NSObject+Properties.m in Sources */,
 				700E155F17E32184006E124E /* BYSwitchState.m in Sources */,
-				700E155417E320FE006E124E /* BYNineBoxedImage.m in Sources */,
+				700E155417E320FE006E124E /* BYBackgroundImage.m in Sources */,
 				700E155B17E32132006E124E /* BYTextFieldStyle.m in Sources */,
 				700E156717E33F45006E124E /* NSDictionary+Utilities.m in Sources */,
 				700E154617E30691006E124E /* BeautifyColorTests.m in Sources */,

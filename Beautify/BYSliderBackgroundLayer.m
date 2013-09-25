@@ -20,7 +20,6 @@
 }
 
 -(void)drawInContext:(CGContextRef)ctx {
-    
     UIBezierPath *backgroundPath = [self backgroundPath];
     BYBorder* border = [self.renderer propertyValueForNameWithCurrentState:@"border"];
     UIColor *backgroundColor = [self.renderer propertyValueForNameWithCurrentState:@"backgroundColor"];

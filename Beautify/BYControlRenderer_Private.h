@@ -14,13 +14,11 @@
 
 @property BYControlRenderingLayer *controlLayer;
 
-@property UIImageView* nineBoxImage;
-
 // indicates whether the control this renderer is associated with is currenlty highlighted.
 @property BOOL highlighted;
 
--(void)addNineBoxAndRendererLayers:(UIView*)view;
+-(void)addRendererLayers:(UIView*)view;
 
--(void)addNineBoxAndRendererLayers;
+-(void)addRendererLayers;
 
 @end

@@ -8,7 +8,7 @@
 
 #import "BYViewRenderer.h"
 
-@class BYGradient, BYNineBoxedImage, BYBorder;
+@class BYGradient, BYBackgroundImage, BYBorder;
 
 @interface BYControlRenderer : BYViewRenderer
 
@@ -27,7 +27,7 @@
 /*
  Set the background image for the button associated with this renderer.
  */
--(void)setBackgroundImage:(BYNineBoxedImage*)backgroundImage forState:(UIControlState)state;
+-(void)setBackgroundImage:(BYBackgroundImage*)backgroundImage forState:(UIControlState)state;
 
 #pragma mark - Border customizers
 

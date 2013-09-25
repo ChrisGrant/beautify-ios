@@ -12,6 +12,6 @@
 @interface UIImageView (Beautify)
 
 -(void)setBeautifyBackingImage:(UIImage*)backingImage;
--(UIImage*)BeautifyBackingImage;
+-(UIImage*)beautifyBackingImage;
 
 @end

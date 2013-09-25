@@ -10,7 +10,7 @@
 #import "UIImageView+Beautify.h"
 #import "UIView+Beautify.h"
 
-#define THEME_ROLLER_BACKING_IMAGE_NAME @"backingImage"
+#define BEAUTIFY_BACKING_IMAGE_NAME @"backingImage"
 
 @implementation UIImageView (Beautify)
 
@@ -30,9 +30,7 @@
     if([self isImmuneToBeautify]) {
         return [self override_image];
     }
-    else {
-        return [self BeautifyBackingImage];
-    }
+    return [self beautifyBackingImage];
 }
 
 -(void)setImmuneToBeautify:(BOOL)immuneToBeautify {
@@ -40,9 +38,8 @@
         
         UIImage *image = self.image;
         [super setImmuneToBeautify:immuneToBeautify];
-        
         if(immuneToBeautify) {
-            [self setImage:[self BeautifyBackingImage]];
+            [self setImage:[self beautifyBackingImage]];
         }
         else {
             [self setImage:image];
@@ -50,12 +47,31 @@
     }
 }
 
--(void)setBeautifyBackingImage:(UIImage*)backingImage {
-    objc_setAssociatedObject(self, THEME_ROLLER_BACKING_IMAGE_NAME, backingImage, OBJC_ASSOCIATION_RETAIN);
+-(BOOL)isImmuneToBeautify {
+    if ([super isImmuneToBeautify]) {
+        return YES;
+    }
+    
+    // This image view isn't immune, but check that none of it's parents are immune to beautify.
+    id resp = [self nextResponder];
+    while (resp != nil) {
+        if([resp respondsToSelector:@selector(isImmuneToBeautify)]) {
+            if([resp isImmuneToBeautify]) {
+                return YES;
+            }
+        }
+        resp = [resp nextResponder];
+    }
+    
+    return NO;
 }
 
--(UIImage*)BeautifyBackingImage {
-    return objc_getAssociatedObject(self, THEME_ROLLER_BACKING_IMAGE_NAME);
+-(void)setBeautifyBackingImage:(UIImage*)backingImage {
+    objc_setAssociatedObject(self, BEAUTIFY_BACKING_IMAGE_NAME, backingImage, OBJC_ASSOCIATION_RETAIN);
+}
+
+-(UIImage*)beautifyBackingImage {
+    return objc_getAssociatedObject(self, BEAUTIFY_BACKING_IMAGE_NAME);
 }
 
 @end

@@ -12,7 +12,7 @@
 @class BYStateSetter;
 @class BYShadow;
 @class BYShadowImage;
-@class BYNineBoxedImage;
+@class BYBackgroundImage;
 
 @interface BYConfigParser (BYConfigParser)
 
@@ -25,7 +25,7 @@
 +(BYShadow*)outerShadowFromDict:(NSDictionary*)shadowDict;
 +(BYShadow*)shadowFromDict:(NSDictionary*)shadowDict;
 +(BYShadowImage*)shadowImageFromDict:(NSDictionary*)shadowImageDict;
-+(BYNineBoxedImage*)nineBoxedImageFromDict:(NSDictionary*)nineBoxedImageDict;
++(BYBackgroundImage*)backgroundImageFromDict:(NSDictionary*)backgroundImageDict;
 +(BYGradient*)gradientFromDict:(NSDictionary *)gradientDict;
 
 // Generic utilities

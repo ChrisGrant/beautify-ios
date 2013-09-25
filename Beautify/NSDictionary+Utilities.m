@@ -13,7 +13,7 @@
 -(id)objectForMandatoryKey:(NSString*)key {
     id value = self[key];
     if (value == nil || value == [NSNull null]) {
-        NSLog(@"ERROR: Mandatory property was missing key \"%@\"", key);
+        return nil;
     }
     return value;
 }
