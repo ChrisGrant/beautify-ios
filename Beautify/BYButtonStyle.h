@@ -12,7 +12,7 @@
 #import "BYBorder.h"
 #import "BYShadow.h"
 #import "BYGradient.h"
-#import "BYNineBoxedImage.h"
+#import "BYBackgroundImage.h"
 
 /**
  * Represents a group of rendering properties for a given button style.
@@ -26,7 +26,7 @@
 // background
 @property UIColor *backgroundColor;
 @property BYGradient *backgroundGradient;
-@property BYNineBoxedImage *backgroundImage;
+@property BYBackgroundImage *backgroundImage;
 
 // border
 @property BYBorder *border;

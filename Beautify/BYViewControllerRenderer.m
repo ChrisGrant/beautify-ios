@@ -12,7 +12,6 @@
 #import "BYTheme.h"
 #import "BYGradient.h"
 #import "BYGradientLayer.h"
-#import "BYNineBoxedImage_Private.h"
 #import "BYStyleRenderer_Private.h"
 
 @implementation BYViewControllerRenderer {
@@ -68,7 +67,7 @@
 
 -(void)redrawViewController:(UIViewController*)vc style:(BYViewControllerStyle*)style {
     BYGradient *backgroundGradient = [self propertyValueForNameWithCurrentState:@"backgroundGradient"];
-    BYNineBoxedImage *backgroundImage = [self propertyValueForNameWithCurrentState:@"backgroundImage"];
+    BYBackgroundImage *backgroundImage = [self propertyValueForNameWithCurrentState:@"backgroundImage"];
     UIColor *backgroundColor = [self propertyValueForNameWithCurrentState:@"backgroundColor"];
         
     if (backgroundImage == nil) {
@@ -79,7 +78,7 @@
         // Update the background image
         _backgroundImageView.hidden = NO;
         _backgroundImageView.frame = vc.view.bounds;
-        _backgroundImageView.image = [style.backgroundImage createNineBoxedImage];
+        _backgroundImageView.image = style.backgroundImage.image;
     }
     
     if (backgroundColor == nil) {
@@ -113,7 +112,7 @@
     [self setPropertyValue:backgroundGradient forName:@"backgroundGradient" forState:state];
 }
 
--(void)setBackgroundImage:(BYNineBoxedImage*)backgroundImage forState:(UIControlState)state {
+-(void)setBackgroundImage:(BYBackgroundImage*)backgroundImage forState:(UIControlState)state {
     [self setPropertyValue:backgroundImage forName:@"backgroundImage" forState:state];
 }
 

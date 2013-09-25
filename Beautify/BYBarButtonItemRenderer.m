@@ -53,7 +53,7 @@
     UIButton *button = (UIButton*)[barButtonItem valueForKey:@"view"];
     
     if(button) {
-        [self addNineBoxAndRendererLayers];
+        [self addRendererLayers];
         _labelRenderer = [[BYLabelRenderer alloc] initWithView:button.titleLabel theme:theme];
         
         [button addTarget:self action:@selector(touchDown) forControlEvents:UIControlEventTouchDown];
@@ -98,7 +98,7 @@
     BYText *textStyle = [self propertyValueForName:@"title" forState:state];;
     BYTextShadow* textShadow = [self propertyValueForName:@"titleShadow" forState:state];
     BYGradient *gradient = [self propertyValueForName:@"backgroundGradient" forState:state];
-    BYNineBoxedImage *backgroundImage = [self propertyValueForName:@"backgroundImage" forState:state];
+    BYBackgroundImage *backgroundImage = [self propertyValueForName:@"backgroundImage" forState:state];
     BYBorder *border = [self propertyValueForName:@"border" forState:state];
     NSArray *innerShadows = [self propertyValueForName:@"innerShadows" forState:state];
     NSArray *outerShadows = [self propertyValueForName:@"outerShadows" forState:state];
@@ -109,7 +109,7 @@
     
     if(backgroundImage) {
         UIGraphicsBeginImageContext(newSize);
-        [backgroundImage.data drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+        [backgroundImage.image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
         newImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
     }
@@ -233,7 +233,7 @@
     [self storePropertyValue:backgroundGradient forName:@"backgroundGradient" forState:state];
 }
 
--(void)setBackgroundImage:(BYNineBoxedImage*)backgroundImage forState:(UIControlState)state {
+-(void)setBackgroundImage:(BYBackgroundImage*)backgroundImage forState:(UIControlState)state {
     [self storePropertyValue:backgroundImage forName:@"backgroundImage" forState:state];
 }
 

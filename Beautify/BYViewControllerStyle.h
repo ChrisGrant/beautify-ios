@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "BYStyle.h"
-#import "BYNineBoxedImage.h"
+#import "BYBackgroundImage.h"
 #import "BYGradient.h"
 
 @interface BYViewControllerStyle : BYStyle
 
 @property UIColor *backgroundColor;
 
-@property BYNineBoxedImage *backgroundImage;
+@property BYBackgroundImage *backgroundImage;
 
 @property BYGradient *backgroundGradient;
 

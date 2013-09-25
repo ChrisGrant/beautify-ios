@@ -9,7 +9,7 @@
 #import "BYStyleRenderer.h"
 
 @class BYGradient;
-@class BYNineBoxedImage;
+@class BYBackgroundImage;
 
 @interface BYViewControllerRenderer : BYStyleRenderer
 
@@ -26,6 +26,6 @@
 /*
  Set the background image for the view controller associated with this renderer.
  */
--(void)setBackgroundImage:(BYNineBoxedImage*)backgroundImage forState:(UIControlState)state;
+-(void)setBackgroundImage:(BYBackgroundImage*)backgroundImage forState:(UIControlState)state;
 
 @end
