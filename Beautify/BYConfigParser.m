@@ -56,7 +56,6 @@ static NSMutableArray* _objectStack;
     if([dict isKindOfClass:[NSDictionary class]]) {
         id value = dict[name];
         if (value == nil || value == [NSNull null]) {
-            NSLog(@"Warning: No property value found for %@.%@", [newInstance class], name);
             return;
         }
         
@@ -285,10 +284,11 @@ static NSMutableArray* _objectStack;
     else if ([name isEqualToString:@"dropShadow"]) {
         value = [self dropShadowFromDict:dict[name]];
     }
-    
-    // handle other generic properties, typically string values
-    else {
+    else if ([name isEqualToString:@"name"]) {
         value = dict[name];
+    }
+    else {
+        NSLog(@"ERROR: Unknown property (%@) when parsing!", name);
     }
     
     // Remove the latest name after parsing has completed
