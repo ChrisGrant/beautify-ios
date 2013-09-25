@@ -1,4 +1,5 @@
 {
+    "schemaVersion": "1.0",
     "theme": {
         "buttonStyle": {
             "title": {
@@ -379,7 +380,7 @@
             "thumbOuterShadows": [
                                   {
                                   "color": "#000000BF",
-                                  "radius": 5,
+                                  "radius": 5
                                   }
                                   ],
             "stateSetters": [

@@ -54,7 +54,6 @@
 
 -(void)assertDefaultTheme:(BYTheme*)theme {
     XCTAssertNotNil(theme, @"Theme should not be nil");
-    XCTAssertEqual(theme.name, @"DEFAULT", @"Theme name should be equal to DEFAULT");
     XCTAssertNotNil(theme.buttonStyle, @"Should be nil");
     XCTAssertNotNil(theme.switchStyle, @"Should be nil");
     XCTAssertNotNil(theme.labelStyle, @"Should be nil");

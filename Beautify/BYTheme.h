@@ -25,7 +25,6 @@
  */
 @interface BYTheme : NSObject <NSCopying>
 
-@property NSString *name;
 @property BYButtonStyle *buttonStyle;
 @property BYSwitchStyle *switchStyle;
 @property BYLabelStyle *labelStyle;
