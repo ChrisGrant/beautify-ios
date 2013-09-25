@@ -16,7 +16,7 @@
 #import "NSObject+Properties.h"
 #import "BYFont.h"
 #import "BYBorder.h"
-#import "BYNineBoxedImage.h"
+#import "BYBackgroundImage.h"
 #import "BYTheme.h"
 #import "BYStateSetter.h"
 #import "BYTextFieldStyle.h"
@@ -214,7 +214,7 @@ static NSMutableArray* _objectStack;
     
     // handle other specific properties
     else if ([name isEqualToString:@"backgroundImage"]) {
-        value = [self nineBoxedImageFromDict:dict[name]];
+        value = [self backgroundImageFromDict:dict[name]];
         if (value == nil) {
             NSLog(@"Error: Could not parse %@", [self generateObjectStackTrace:nil]);
         }
@@ -403,28 +403,23 @@ static NSMutableArray* _objectStack;
     return dropShadow;
 }
 
-+(BYNineBoxedImage*)nineBoxedImageFromDict:(NSDictionary *)nineBoxedImageDict {
-    BYNineBoxedImage *image = [BYNineBoxedImage new];
++(BYBackgroundImage*)backgroundImageFromDict:(NSDictionary *)backgroundImageDict {
+    BYBackgroundImage *bgImage = [BYBackgroundImage new];
     
-    if(![nineBoxedImageDict isKindOfClass:[NSDictionary class]]) {
-        NSLog(@"WARNING - Nineboxed image was not a dictionary. Can not parse.");
+    if(![backgroundImageDict isKindOfClass:[NSDictionary class]]) {
+        NSLog(@"WARNING - Image was not a dictionary. Can not parse.");
         return nil;
     }
     
-    if([nineBoxedImageDict.allKeys containsObject:@"data"]) {
-        NSString* dataStr = [nineBoxedImageDict objectForMandatoryKey:@"data"];
-        image.data = [self imageFromBase64String:dataStr];
+    if([backgroundImageDict.allKeys containsObject:@"data"]) {
+        NSString* dataStr = [backgroundImageDict objectForMandatoryKey:@"data"];
+        bgImage.image = [self imageFromBase64String:dataStr];
     }
     else {
-        NSLog(@"WARNING - Nineboxed image had no 'data' property");
+        NSLog(@"WARNING - Image had no 'data' property");
     }
     
-    image.top = [nineBoxedImageDict intForMandatoryKey:@"top"];
-    image.right = [nineBoxedImageDict intForMandatoryKey:@"right"];
-    image.bottom = [nineBoxedImageDict intForMandatoryKey:@"bottom"];
-    image.left = [nineBoxedImageDict intForMandatoryKey:@"left"];
-    
-    return image;
+    return bgImage;
 }
 
 #pragma mark Gradients

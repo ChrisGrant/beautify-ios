@@ -39,7 +39,7 @@
         [button hideAllSubViews];
         
         _labelRenderer = [[BYLabelRenderer alloc] initWithView:button.titleLabel theme:theme];
-        [self addNineBoxAndRendererLayers];
+        [self addRendererLayers];
         [self configureFromStyle];
     }
     
@@ -70,7 +70,6 @@
         [_labelRenderer setTextStyle:text forState:UIControlStateNormal];
     }
     [_labelRenderer setTextShadow:textShadow forState:UIControlStateNormal];
-    
     [_labelRenderer redraw];
     
     [super configureFromStyle];

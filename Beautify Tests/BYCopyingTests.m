@@ -43,15 +43,11 @@
     [self checkObjectCanBeCopiedAndResultHasEqualProperties:stop1];
 }
 
--(void)testNineBoxedImageCopy {
-    BYNineBoxedImage *image = [[BYNineBoxedImage alloc] init];
-    image.left = 23;
-    image.right = 21;
-    image.top = 2;
-    image.bottom = 9;
+-(void)testBackgroundImageCopy {
+    BYBackgroundImage *image = [[BYBackgroundImage alloc] init];
     NSString *base64ImageString = @"data:image/gif;base64,R0lGODlhDwAPAKECAAAAzMzM/////wAAACwAAAAADwAPAAACIISPeQHsrZ5ModrLlN48CXF8m2iQ3YmmKqVlRtW4MLwWACH+H09wdGltaXplZCBieSBVbGVhZCBTbWFydFNhdmVyIQAAOw==";
     UIImage *im = [BYConfigParser imageFromBase64String:base64ImageString];
-    image.data = im;
+    image.image = im;
     [self checkObjectCanBeCopiedAndResultHasEqualProperties:image];
 }
 
@@ -190,7 +186,7 @@ NSSet *backingClassSet;
         backingClassSet = [NSSet setWithArray:@[[BYGradientStop class], [BYFont class], [BYTextShadow class],
                                                 [BYText class], [BYGradient class], [BYShadow class],
                                                 [BYStateSetter class], [BYBorder class], [BYDropShadow class],
-                                                [BYSwitchState class], [BYNineBoxedImage class], [BYSliderStyle class],
+                                                [BYSwitchState class], [BYBackgroundImage class], [BYSliderStyle class],
                                                 [BYLabelStyle class], [BYNavigationBarStyle class], [BYButtonStyle class],
                                                 [BYViewControllerStyle class], [BYSwitchStyle class],
                                                 [BYTextFieldStyle class], [BYTableViewCellStyle class],

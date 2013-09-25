@@ -11,6 +11,7 @@
 #import "BYGradientStop.h"
 #import "BYRenderUtils.h"
 #import "BYStyleRenderer_Private.h"
+#import "BYBackgroundImage.h"
 
 @implementation BYControlRenderingLayer {
     BYViewRenderer* _renderer;
@@ -75,7 +76,8 @@
     BYGradient *backgroundGradient = [self propertyValue:@"backgroundGradient"];
     NSArray *innerShadows = [self propertyValue:@"innerShadows"];
     BYBorder *border = [self propertyValue:@"border"];
-    
+    BYBackgroundImage *backgroundImage = [self propertyValue:@"backgroundImage"];
+
     // a rounded rectangle bezier path that describes the layer
     UIBezierPath *layerPath = [UIBezierPath bezierPathWithRoundedRect:rect
                                                          cornerRadius:border.cornerRadius];
@@ -96,10 +98,18 @@
         RenderGradient(backgroundGradient, ctx, originalFrame);
     }
     
+    // Draw the background image
+    if (backgroundImage) {
+        UIImage *image = [backgroundImage image];
+        CGContextDrawTiledImage(ctx, CGRectMake(0, 0,
+                                                image.size.width / self.contentsScale,
+                                                image.size.height / self.contentsScale),
+                                image.CGImage);
+    }
+    
     RenderInnerShadows(ctx, border, innerShadows, rect);
     
     // Draw the border
-
     if (border.width > 0) {                
         CGContextSetStrokeColorWithColor(ctx, border.color.CGColor);
         layerPath.lineWidth = border.width;

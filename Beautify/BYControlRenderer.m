@@ -10,22 +10,16 @@
 #import "BYControlRenderingLayer.h"
 #import "BYStyleRenderer_Private.h"
 #import "BYViewRenderer_Private.h"
-#import "BYNineBoxedImage.h"
-#import "BYNineBoxedImage_Private.h"
+#import "BYBackgroundImage.h"
 #import "BYControlRenderer_Private.h"
 
 @implementation BYControlRenderer
 
--(void)addNineBoxAndRendererLayers {
-    [self addNineBoxAndRendererLayers:(UIView*)self.adaptedView];
+-(void)addRendererLayers {
+    [self addRendererLayers:(UIView*)self.adaptedView];
 }
 
--(void)addNineBoxAndRendererLayers:(UIView*)view {
-    _nineBoxImage = [UIImageView new];
-    _nineBoxImage.frame = view.bounds;
-    [view addSubview:_nineBoxImage];
-    [view sendSubviewToBack:_nineBoxImage];
-    
+-(void)addRendererLayers:(UIView*)view {
     // The control layer that renders the background and border
     _controlLayer = [[BYControlRenderingLayer alloc] initWithRenderer:self];
     [_controlLayer setFrame:view.bounds];
@@ -34,20 +28,9 @@
 
 -(void)configureFromStyle {
     UIView *adaptedView = (UIView*)self.adaptedView;
-    
-    BYNineBoxedImage *backgroundImage = [self propertyValueForNameWithCurrentState:@"backgroundImage"];
-    if (backgroundImage == nil) {
-        _nineBoxImage.hidden = YES;
-        _controlLayer.hidden = NO;
-        
-        [_controlLayer setFrame:adaptedView.bounds];
-        [_controlLayer setNeedsDisplay];
-    }
-    else {
-        _controlLayer.hidden = YES;
-        _nineBoxImage.hidden = NO;
-        _nineBoxImage.image = [backgroundImage createNineBoxedImage];
-    }
+    _controlLayer.hidden = NO;
+    [_controlLayer setFrame:adaptedView.bounds];
+    [_controlLayer setNeedsDisplay];
 }
 
 // override if a UI element supports more than UIControlStateNormal
@@ -63,7 +46,7 @@
     [self setPropertyValue:backgroundGradient forName:@"backgroundGradient" forState:state];
 }
 
--(void)setBackgroundImage:(BYNineBoxedImage*)backgroundImage forState:(UIControlState)state {
+-(void)setBackgroundImage:(BYBackgroundImage*)backgroundImage forState:(UIControlState)state {
     [self setPropertyValue:backgroundImage forName:@"backgroundImage" forState:state];
 }
 
