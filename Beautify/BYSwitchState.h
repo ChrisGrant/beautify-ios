@@ -37,4 +37,9 @@
  */
 @property UIColor* borderColor;
 
+/*
+ Create a Switch State with the specified text style, text, background color and text shadow.
+ */
++(BYSwitchState*)stateWithTextStyle:(BYText*)textStyle text:(NSString*)string backgroundColor:(UIColor*)bgColor textShadow:(BYTextShadow*)textShadow;
+
 @end

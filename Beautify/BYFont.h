@@ -26,11 +26,11 @@
 /*
  Init with the specified font name.
  */
--(id)initWithName:(NSString*)name;
++(BYFont*)fontWithName:(NSString*)name;
 
 /*
- Init with the specified font name and size
+ Create with the specified font name and size
  */
--(id)initWithName:(NSString *)name andSize:(float)size;
++(BYFont*)fontWithName:(NSString*)name andSize:(float)size;
 
 @end

@@ -10,10 +10,13 @@
 
 @interface BYTextShadow : NSObject <NSCopying>
 
-+(BYTextShadow*)shadowWithOffset:(CGSize)offset andColor:(UIColor*)color;
-
 @property CGSize offset;
 
 @property UIColor *color;
+
+/*
+ Create a text shadow with the specified offset and color.
+ */
++(BYTextShadow*)shadowWithOffset:(CGSize)offset andColor:(UIColor*)color;
 
 @end

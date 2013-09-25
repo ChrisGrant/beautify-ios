@@ -11,12 +11,11 @@
 
 @implementation BYText
 
--(id)initWithFont:(BYFont*)font color:(UIColor*)color {
-    if (self = [super init]) {
-        _font = font;
-        _color = color;
-    }
-    return self;
++(BYText *)textWithFont:(BYFont *)font color:(UIColor *)color {
+    BYText *text = [BYText new];
+    text.font = font;
+    text.color = color;
+    return text;
 }
 
 -(id)copyWithZone:(NSZone *)zone {

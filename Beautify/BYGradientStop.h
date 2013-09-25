@@ -24,8 +24,8 @@
 @property float stop;
 
 /*
- Init with the specified color at the specified location.
+ Create with the specified color at the specified location.
  */
--(id)initWithColor:(UIColor*)color at:(float)stop;
++(BYGradientStop*)stopWithColor:(UIColor*)color at:(float)stop;
 
 @end

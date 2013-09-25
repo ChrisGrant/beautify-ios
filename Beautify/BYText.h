@@ -23,8 +23,8 @@
 @property UIColor *color;
 
 /*
- Init with the specified font and color.
+ Create with the specified font and color.
  */
--(id)initWithFont:(BYFont*)font color:(UIColor*)color;
++(BYText*)textWithFont:(BYFont*)font color:(UIColor*)color;
 
 @end

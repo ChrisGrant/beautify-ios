@@ -11,16 +11,11 @@
 
 @implementation BYGradientStop
 
--(id)initWithColor:(UIColor*)color at:(float)stop {
-    if (self = [super init]) {
-        _color = color;
-        _stop = stop;
-    }
-    return self;
-}
-
--(NSString *)description{
-    return [NSString stringWithFormat:@"(%@, %f)", self.color, self.stop];
++(BYGradientStop*)stopWithColor:(UIColor*)color at:(float)stopLocation {
+    BYGradientStop *stop = [BYGradientStop new];
+    stop.color = color;
+    stop.stop = stopLocation;
+    return stop;
 }
 
 -(id)copyWithZone:(NSZone *)zone {
@@ -28,6 +23,10 @@
     copy.color = self.color.copy;
     copy.stop = self.stop;
     return copy;
+}
+
+-(NSString *)description{
+    return [NSString stringWithFormat:@"(%@, %f)", self.color, self.stop];
 }
 
 @end

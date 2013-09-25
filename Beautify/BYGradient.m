@@ -11,6 +11,12 @@
 
 @implementation BYGradient
 
++(BYGradient*)gradientWithStops:(NSArray *)stops {
+    BYGradient *gradient = [BYGradient new];
+    gradient.stops = stops;
+    return gradient;
+}
+
 -(id)initWithStops:(NSArray*)stops {
     if (self = [super init]) {
         _stops = stops;
@@ -19,12 +25,12 @@
     return self;
 }
 
--(id)initWithStops:(NSArray*)stops isRadial:(BOOL)isRadial radialOffset:(CGSize)radialOffset {
-    if (self = [self initWithStops:stops]) {
-        _radial = isRadial;
-        _radialOffset = radialOffset;
-    }
-    return self;
++(BYGradient*)gradientWithStops:(NSArray*)stops isRadial:(BOOL)isRadial radialOffset:(CGSize)radialOffset {
+    BYGradient *gradient = [BYGradient new];
+    gradient.stops = stops;
+    gradient.radial = isRadial;
+    gradient.radialOffset = radialOffset;
+    return gradient;
 }
 
 -(NSString *)description {

@@ -398,7 +398,7 @@ static NSMutableArray* _objectStack;
     UIColor *color = [self colorFromDict:dropShadowDict key:@"color"];
     float height = [dropShadowDict[@"height"] intValue];
     
-    BYDropShadow *dropShadow = [[BYDropShadow alloc] initWithColor:color andHeight:height];
+    BYDropShadow *dropShadow = [BYDropShadow shadowWithColor:color andHeight:height];
     
     return dropShadow;
 }

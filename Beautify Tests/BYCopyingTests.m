@@ -21,25 +21,25 @@
 #pragma mark - Properties
 
 -(void)testBorderCopy {
-    BYBorder *border = [[BYBorder alloc] initWithColor:[UIColor redColor] width:2 radius:29];
+    BYBorder *border = [BYBorder borderWithColor:[UIColor redColor] width:2 radius:29];
     [self checkObjectCanBeCopiedAndResultHasEqualProperties:border];
 }
 
 -(void)testFontCopy {
-    BYFont *font = [[BYFont alloc] initWithName:@"HelveticaNeue-Bold" andSize:22.0f];
+    BYFont *font = [BYFont fontWithName:@"HelveticaNeue-Bold" andSize:22.0f];
     [self checkObjectCanBeCopiedAndResultHasEqualProperties:font];
 }
 
 -(void)testGradientCopy {
-    BYGradientStop *stop1 = [[BYGradientStop alloc] initWithColor:[UIColor redColor] at:0.1];
-    BYGradientStop *stop2 = [[BYGradientStop alloc] initWithColor:[UIColor greenColor] at:2.0];
+    BYGradientStop *stop1 = [BYGradientStop stopWithColor:[UIColor redColor] at:0.1];
+    BYGradientStop *stop2 = [BYGradientStop stopWithColor:[UIColor greenColor] at:2.0];
     NSArray *stops = @[stop1, stop2];
-    BYGradient *gradient = [[BYGradient alloc] initWithStops:stops isRadial:YES radialOffset:CGSizeMake(20, 40)];
+    BYGradient *gradient = [BYGradient gradientWithStops:stops isRadial:YES radialOffset:CGSizeMake(20, 40)];
     [self checkObjectCanBeCopiedAndResultHasEqualProperties:gradient];
 }
 
 -(void)testGradientStopCopy {
-    BYGradientStop *stop1 = [[BYGradientStop alloc] initWithColor:[UIColor redColor] at:0.5];
+    BYGradientStop *stop1 = [BYGradientStop stopWithColor:[UIColor redColor] at:0.5];
     [self checkObjectCanBeCopiedAndResultHasEqualProperties:stop1];
 }
 
@@ -52,18 +52,18 @@
 }
 
 -(void)testShadowCopy {
-    BYShadow *shadow = [[BYShadow alloc] initWithOffset:CGSizeMake(10, 5) radius:4 color:[UIColor blueColor]];
+    BYShadow *shadow = [BYShadow shadowWithOffset:CGSizeMake(10, 5) radius:4 color:[UIColor blueColor]];
     [self checkObjectCanBeCopiedAndResultHasEqualProperties:shadow];
 }
 
 -(void)testTextCopy {
-    BYText *text = [[BYText alloc] initWithFont:[[BYFont alloc] initWithName:@"Helvetica" andSize:24.0f] color:[UIColor orangeColor]];
+    BYText *text = [BYText textWithFont:[BYFont fontWithName:@"Helvetica" andSize:24.0f] color:[UIColor orangeColor]];
     [self checkObjectCanBeCopiedAndResultHasEqualProperties:text];
 }
 
 -(void)testSwitchStateCopy {
     BYSwitchState *state = [[BYSwitchState alloc] init];
-    state.textStyle = [[BYText alloc] initWithFont:[[BYFont alloc] initWithName:@"ArialMT" andSize:10.0f] color:[UIColor grayColor]];
+    state.textStyle = [BYText textWithFont:[BYFont fontWithName:@"ArialMT" andSize:10.0f] color:[UIColor grayColor]];
     state.text = @"Hello Hello";
     state.backgroundColor = [UIColor grayColor];
     state.textShadow = [[BYTextShadow alloc] init];
@@ -80,7 +80,7 @@
 }
 
 -(void)testDropShadowCopy {
-    BYDropShadow *shadow = [[BYDropShadow alloc] initWithColor:[UIColor blueColor] andHeight:23.0f];
+    BYDropShadow *shadow = [BYDropShadow shadowWithColor:[UIColor blueColor] andHeight:23.0f];
     [self checkObjectCanBeCopiedAndResultHasEqualProperties:shadow];
 }
 
