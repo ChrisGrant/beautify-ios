@@ -29,7 +29,7 @@
     return theme;
 }
 
-+(BYTheme *)fromFile:(NSString *)file {
++(BYTheme*)fromFile:(NSString *)file {
     NSString* filePath = [[NSBundle mainBundle] pathForResource:file ofType:@"json"];
     NSData* json = [NSData dataWithContentsOfFile:filePath];
     
@@ -40,6 +40,13 @@
                                                                error:&jsonError];
         if (jsonError) {
             NSLog(@"Error: Could not parse JSON! %@", jsonError.debugDescription);
+        } else {
+            NSError *parseError;
+            theme = [[BYTheme alloc] initWithDictionary:dict error:&parseError];
+            if(parseError) {
+                NSLog(@"Parse error when reading the JSON - %@", parseError.debugDescription);
+                return nil;
+            }
         }
         else {
             // Find the version of the JSON file being passed in.
