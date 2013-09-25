@@ -13,7 +13,7 @@
 +(BYLabelStyle*)defaultStyle {
     BYLabelStyle *style = [BYLabelStyle new];
     BYFont* textFont = [BYFont new];
-    style.title = [[BYText alloc] initWithFont:textFont color:[UIColor blackColor]];
+    style.title = [BYText textWithFont:textFont color:[UIColor blackColor]];
     style.titleShadow = nil;
     return style;
 }

@@ -10,13 +10,12 @@
 
 @implementation BYBorder
 
--(id)initWithColor:(UIColor*)color width:(float)width radius:(float)radius {
-    if (self = [super init]) {
-        _color = color;
-        _width = width;
-        _cornerRadius = radius;
-    }
-    return self;
++(BYBorder*)borderWithColor:(UIColor*)color width:(float)width radius:(float)radius {
+    BYBorder *border = [BYBorder new];
+    border.color = color;
+    border.width = width;
+    border.cornerRadius = radius;
+    return border;
 }
 
 -(id)copyWithZone:(NSZone *)zone {

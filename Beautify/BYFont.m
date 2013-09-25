@@ -12,21 +12,24 @@
 
 @implementation BYFont
 
--(id)init {
-    return [self initWithName:[UIFont systemFontOfSize:1.0f].fontName];
++(BYFont*)fontWithName:(NSString*)name {
+    BYFont *font = [BYFont new];
+    font.name = name;
+    return font;
 }
 
--(id)initWithName:(NSString*)name {
-    if (self = [super init]) {
-        _name = name;
-    }
-    return self;
-}
-
--(id)initWithName:(NSString *)name andSize:(float)size {
-    BYFont *font = [self initWithName:name];
++(BYFont*)fontWithName:(NSString *)name andSize:(float)size {
+    BYFont *font = [BYFont new];
+    font.name = name;
     font.size = size;
     return font;
+}
+
+-(id)init {
+    if(self = [super init]) {
+        self.name = [UIFont systemFontOfSize:1.0f].fontName;
+    }
+    return self;
 }
 
 -(UIFont*)createFont:(UIFont*)font {

@@ -29,8 +29,8 @@
 @property UIColor *color;
 
 /*
- Init with the specified offset, blur radius and color.
+ Create with the specified offset, blur radius and color.
  */
--(id)initWithOffset:(CGSize)offset radius:(float)radius color:(UIColor*)color;
++(BYShadow*)shadowWithOffset:(CGSize)offset radius:(float)radius color:(UIColor*)color;
 
 @end

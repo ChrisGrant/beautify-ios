@@ -10,6 +10,15 @@
 
 @implementation BYSwitchState
 
++(BYSwitchState *)stateWithTextStyle:(BYText *)textStyle text:(NSString *)string backgroundColor:(UIColor *)bgColor textShadow:(BYTextShadow *)textShadow {
+    BYSwitchState *state = [BYSwitchState new];
+    state.textStyle = textStyle;
+    state.text = string;
+    state.backgroundColor = bgColor;
+    state.textShadow = textShadow;
+    return state;
+}
+
 -(id)copyWithZone:(NSZone *)zone {
     BYSwitchState *copy = [[BYSwitchState allocWithZone:zone] init];
     copy.textStyle = self.textStyle.copy;

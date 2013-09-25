@@ -29,8 +29,8 @@
 @property UIColor *color;
 
 /*
- Init a BYBorder with the specified properties.
+ Create a BYBorder with the specified properties.
  */
--(id)initWithColor:(UIColor*)color width:(float)width radius:(float)radius;
++(BYBorder*)borderWithColor:(UIColor*)color width:(float)width radius:(float)radius;
 
 @end

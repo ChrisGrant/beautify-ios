@@ -12,7 +12,7 @@
 
 +(BYTableViewCellStyle*)defaultStyle {
     BYTableViewCellStyle *style = [BYTableViewCellStyle new];
-    style.title = [[BYText alloc] initWithFont:[BYFont new] color:[UIColor blackColor]];
+    style.title = [BYText textWithFont:[BYFont new] color:[UIColor blackColor]];
     return style;
 }
 

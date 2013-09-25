@@ -10,12 +10,11 @@
 
 @implementation BYDropShadow
 
--(id)initWithColor:(UIColor*)color andHeight:(float)height{
-    if (self = [super init]) {
-        self.color = color;
-        self.height = height;
-    }
-    return self;
++(BYDropShadow *)shadowWithColor:(UIColor *)color andHeight:(float)height {
+    BYDropShadow *shadow = [BYDropShadow new];
+    shadow.color = color;
+    shadow.height = height;
+    return shadow;
 }
 
 -(id)copyWithZone:(NSZone *)zone {

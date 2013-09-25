@@ -29,13 +29,13 @@
 @property NSArray *stops;
 
 /*
- Init with the specified array of BYGradientStops, this will create a linear gradient.
+ Create with the specified array of BYGradientStops, this will create a linear gradient.
  */
--(id)initWithStops:(NSArray*)colors;
++(BYGradient*)gradientWithStops:(NSArray*)colors;
 
 /*
- Init with the specified array of BYGradientStops, will optionally create a radial gradient.
+ Create with the specified array of BYGradientStops, will optionally create a radial gradient.
  */
--(id)initWithStops:(NSArray*)colors isRadial:(BOOL)isRadial radialOffset:(CGSize)radialOffset;
++(BYGradient*)gradientWithStops:(NSArray*)stops isRadial:(BOOL)radial radialOffset:(CGSize)radialOffset;
 
 @end

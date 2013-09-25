@@ -82,7 +82,7 @@
     BYBarButtonItemRenderer *renderer = customizedButtonRight.renderer;
 
     BYText *text = [BYText new];
-    [text setFont:[[BYFont alloc] initWithName:@"Copperplate"]];
+    [text setFont:[BYFont fontWithName:@"Copperplate"]];
     [text setColor:[UIColor redColor]];
     [renderer setTitleStyle:text forState:UIControlStateNormal];
 
@@ -92,14 +92,14 @@
     border.cornerRadius = 20.0f;
     [renderer setBorder:border forState:UIControlStateNormal];
 
-    BYShadow *innerShadow = [[BYShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:10 color:[UIColor greenColor]];
+    BYShadow *innerShadow = [BYShadow shadowWithOffset:CGSizeMake(0, 0) radius:10 color:[UIColor greenColor]];
     [renderer setInnerShadows:@[innerShadow] forState:UIControlStateNormal];
-    BYShadow *outerShadow = [[BYShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:20 color:[UIColor redColor]];
+    BYShadow *outerShadow = [BYShadow shadowWithOffset:CGSizeMake(0, 0) radius:20 color:[UIColor redColor]];
     [renderer setOuterShadows:@[outerShadow] forState:UIControlStateNormal];
     
     // Set properties for UIBarButton UIControlStateHighlighted    
     text = [BYText new];
-    [text setFont:[[BYFont alloc] initWithName:@"AmericanTypewriter"]];
+    [text setFont:[BYFont fontWithName:@"AmericanTypewriter"]];
     [text setColor:[UIColor magentaColor]];
     [renderer setTitleStyle:text forState:UIControlStateHighlighted];
     
@@ -109,9 +109,9 @@
     border.cornerRadius = 20.0f;
     [renderer setBorder:border forState:UIControlStateHighlighted];
     
-    innerShadow = [[BYShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:15 color:[UIColor redColor]];
+    innerShadow = [BYShadow shadowWithOffset:CGSizeMake(0, 0) radius:15 color:[UIColor redColor]];
     [renderer setInnerShadows:@[innerShadow] forState:UIControlStateHighlighted];
-    outerShadow = [[BYShadow alloc] initWithOffset:CGSizeMake(0, 0) radius:20 color:[UIColor greenColor]];
+    outerShadow = [BYShadow shadowWithOffset:CGSizeMake(0, 0) radius:20 color:[UIColor greenColor]];
     [renderer setOuterShadows:@[outerShadow] forState:UIControlStateHighlighted];
     
     self.navigationItem.rightBarButtonItems = @[customizedButtonRight, beautifyDefaultButtonRight, defaultButtonRight];
@@ -160,7 +160,7 @@
     [labelRenderer setAlpha:0.9 forState:UIControlStateNormal];
     
     BYText *text = [BYText new];
-    [text setFont:[[BYFont alloc] initWithName:@"AvenirNext-Medium"]];
+    [text setFont:[BYFont fontWithName:@"AvenirNext-Medium"]];
     [labelRenderer setTextStyle:text forState:UIControlStateNormal];
     
     [self addDefaultView:lDefault beautifyDefaultView:lBeautify andCustomisedView:lCustom withHeight:50];
@@ -189,10 +189,10 @@
     border.cornerRadius = 25.0f;
     [renderer setBorder:border forState:UIControlStateNormal];
     
-    BYShadow *shadow1 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:25.0 color:[UIColor blueColor]];
+    BYShadow *shadow1 = [BYShadow shadowWithOffset:CGSizeZero radius:25.0 color:[UIColor blueColor]];
     [renderer setOuterShadows:@[shadow1] forState:UIControlStateNormal];
     
-    BYShadow *shadow2 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:51.0 color:[UIColor blackColor]];
+    BYShadow *shadow2 = [BYShadow shadowWithOffset:CGSizeZero radius:51.0 color:[UIColor blackColor]];
     [renderer setInnerShadows:@[shadow2] forState:UIControlStateNormal];
     
     [self addDefaultView:iv1 beautifyDefaultView:iv2 andCustomisedView:iv3 withHeight:200];
@@ -214,7 +214,7 @@
     textShadow.color = [UIColor darkGrayColor];
     onState.textShadow = textShadow;
     onState.text = @"YES";
-    onState.textStyle = [[BYText alloc] initWithFont:[[BYFont alloc] initWithName:@"ArialMT-Bold"] color:[UIColor blueColor]];
+    onState.textStyle = [BYText textWithFont:[BYFont fontWithName:@"ArialMT-Bold"] color:[UIColor blueColor]];
     onState.backgroundColor = [UIColor redColor];
     [renderer setOnState:onState forState:UIControlStateNormal];
 
@@ -228,7 +228,7 @@
 
     [renderer setThumbBackgroundColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
-    BYShadow *shadow1 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:100.0 color:[UIColor blackColor]];
+    BYShadow *shadow1 = [BYShadow shadowWithOffset:CGSizeZero radius:100.0 color:[UIColor blackColor]];
     [renderer setThumbInnerShadows:@[shadow1] forState:UIControlStateNormal];
     
     [self addDefaultView:s1 beautifyDefaultView:s2 andCustomisedView:s3 withHeight:30];
@@ -249,7 +249,7 @@
     
     [renderer setBackgroundColor:[UIColor orangeColor] forState:UIControlStateNormal];
     
-    BYShadow *shadow1 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:10.0 color:[UIColor greenColor]];
+    BYShadow *shadow1 = [BYShadow shadowWithOffset:CGSizeZero radius:10.0 color:[UIColor greenColor]];
     [renderer setBarOuterShadows:@[shadow1] forState:UIControlStateNormal];
     
     // default bar thickness is very thin on ios7 and so trying to draw inner shadows and bar border makes things look a bit ugly
@@ -259,7 +259,7 @@
     barBorder.cornerRadius = 5.0f;
     [renderer setBarBorder:barBorder forState:UIControlStateNormal];
 
-    BYShadow *shadow2 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:5.0 color:[UIColor whiteColor]];
+    BYShadow *shadow2 = [BYShadow shadowWithOffset:CGSizeZero radius:5.0 color:[UIColor whiteColor]];
     [renderer setBarInnerShadows:@[shadow2] forState:UIControlStateNormal];
     
     [renderer setMinimumTrackColor:[UIColor blueColor] forState:UIControlStateNormal];
@@ -268,7 +268,7 @@
     [renderer setMaximumTrackColor:[UIColor redColor] forState:UIControlStateNormal];
     [renderer setMaximumTrackBackgroundGradient:[BYGradient new] forState:UIControlStateNormal];
     
-    BYShadow *shadow4 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:15.0 color:[UIColor yellowColor]];
+    BYShadow *shadow4 = [BYShadow shadowWithOffset:CGSizeZero radius:15.0 color:[UIColor yellowColor]];
     [renderer setThumbOuterShadows:@[shadow4] forState:UIControlStateNormal];
     
     BYBorder *thumbBorder = [BYBorder new];
@@ -279,7 +279,7 @@
     
     [renderer setThumbBackgroundColor:[UIColor purpleColor] forState:UIControlStateNormal];
     
-    BYShadow *shadow3 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:10.0 color:[UIColor greenColor]];
+    BYShadow *shadow3 = [BYShadow shadowWithOffset:CGSizeZero radius:10.0 color:[UIColor greenColor]];
     [renderer setThumbInnerShadows:@[shadow3] forState:UIControlStateNormal];
             
     [self addDefaultView:s1 beautifyDefaultView:s2 andCustomisedView:s3 withHeight:25];
@@ -306,7 +306,7 @@
     border.cornerRadius = 15.0f;
     [renderer setBorder:border forState:UIControlStateNormal];
     
-    BYShadow *shadow1 = [[BYShadow alloc] initWithOffset:CGSizeZero radius:30.0 color:[UIColor blackColor]];
+    BYShadow *shadow1 = [BYShadow shadowWithOffset:CGSizeZero radius:30.0 color:[UIColor blackColor]];
     [renderer setInnerShadows:@[shadow1] forState:UIControlStateNormal];
     
     [self addDefaultView:rtf1 beautifyDefaultView:rtf2 andCustomisedView:rtf3 withHeight:44];
@@ -326,21 +326,20 @@
     BYButtonRenderer *buttonRenderer = bcCustom.renderer;
     
     BYText *text = [BYText new];
-    [text setFont:[[BYFont alloc] initWithName:@"Helvetica"]];
+    [text setFont:[BYFont fontWithName:@"Helvetica"]];
     [text setColor:[UIColor whiteColor]];
     [buttonRenderer setTitleStyle:text forState:UIControlStateNormal];
     
     BYGradient *gradient = [BYGradient new];
-    [gradient setStops:@[[[BYGradientStop alloc] initWithColor:[UIColor redColor] at:1.0f],
-                         [[BYGradientStop alloc] initWithColor:[UIColor redColor] at:0.5f],
-                         [[BYGradientStop alloc] initWithColor:[UIColor orangeColor] at:0.0f]]];
+    [gradient setStops:@[[BYGradientStop stopWithColor:[UIColor redColor] at:1.0f],
+                         [BYGradientStop stopWithColor:[UIColor redColor] at:0.5f],
+                         [BYGradientStop stopWithColor:[UIColor orangeColor] at:0.0f]]];
     [buttonRenderer setBackgroundGradient:gradient forState:UIControlStateNormal];
     
     BYGradient *gradient2 = [BYGradient new];
-    [gradient2 setStops:@[[[BYGradientStop alloc] initWithColor:[UIColor redColor] at:1.0f],
-                          [[BYGradientStop alloc] initWithColor:[UIColor redColor] at:0.5f],
-                          [[BYGradientStop alloc] initWithColor:[[UIColor orangeColor] colorWithAlphaComponent:0.5f]
-                                                             at:0.0f]]];
+    [gradient2 setStops:@[[BYGradientStop stopWithColor:[UIColor redColor] at:1.0f],
+                          [BYGradientStop stopWithColor:[UIColor redColor] at:0.5f],
+                          [BYGradientStop stopWithColor:[[UIColor orangeColor] colorWithAlphaComponent:0.5f] at:0.0f]]];
     [buttonRenderer setBackgroundGradient:gradient2 forState:UIControlStateHighlighted];
     
     [self addDefaultView:bcDefault beautifyDefaultView:bcBeautify andCustomisedView:bcCustom withHeight:44];

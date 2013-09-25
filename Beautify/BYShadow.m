@@ -10,13 +10,12 @@
 
 @implementation BYShadow
 
--(id)initWithOffset:(CGSize)offset radius:(float)radius color:(UIColor*)color {
-    if (self = [super init]) {
-        _offset = offset;
-        _radius = radius;
-        _color = color;
-    }
-    return self;
++(BYShadow *)shadowWithOffset:(CGSize)offset radius:(float)radius color:(UIColor *)color {
+    BYShadow *shadow = [BYShadow new];
+    shadow.offset = offset;
+    shadow.radius = radius;
+    shadow.color = color;
+    return shadow;
 }
 
 -(id)copyWithZone:(NSZone *)zone {
