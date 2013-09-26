@@ -28,7 +28,24 @@
 
 -(UIView*)hitTest:(CGPoint)point withEvent:(UIEvent*)event {
     
+    // Don't do anything if it's disabled or hidden.
     if(!_adaptedSwitch.enabled || !_adaptedSwitch.userInteractionEnabled || _adaptedSwitch.isHidden) {
+        return nil;
+    }
+    
+    // Check if the switch is on the screen
+    UIView *v = _adaptedSwitch;
+    BOOL inWindow = NO; // Is switch view in the window?
+    while (v != nil) {
+        if([v isKindOfClass:[UIWindow class]]) {
+            inWindow = YES;
+            break;
+        }
+        v = v.superview;
+    }
+    
+    // If the switch isn't in the window, don't send the gesture.
+    if(!inWindow) {
         return nil;
     }
     
