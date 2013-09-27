@@ -10,69 +10,60 @@
 #import "BYStyleRenderer_Private.h"
 #import "UIView+Beautify.h"
 #import "BYThemeManager_Private.h"
-#import "UIBarButtonItem+BeautifyPrivate.h"
-#import "BYBarButtonItemRenderer_Private.h"
+#import "UIView+BeautifyPrivate.h"
+
+#import "UIView+Utilities.h"
+
+#import "BYBackBarButtonItemRenderer.h"
 
 @implementation UINavigationBar (Beautify)
 
 -(void)override_layoutSubviews{
     [self override_layoutSubviews];
+    [self searchForBackButtonInSubviewsOfView:self];
     
-    for(UINavigationItem *uiNavigationbarItem in self.items){
-        if([uiNavigationbarItem.rightBarButtonItems count] > 0){
-            [self createRedererForEachItemInArray:uiNavigationbarItem.rightBarButtonItems];
+    // Find all of the UINavigationItems and then set the last one to be the back button renderer.
+    NSArray *barviews = [self searchForBackButtonInSubviewsOfView:self];
+    if(barviews.count > 0) {
+        UIView *backBarView = barviews[barviews.count - 1];
+        [backBarView createRenderer];
+        if([[backBarView renderer] isKindOfClass:[BYBackBarButtonItemRenderer class]]) {
+            BYBackBarButtonItemRenderer *renderer = (BYBackBarButtonItemRenderer*)backBarView.renderer;
+            [renderer setIsBackButtonRenderer:YES];
         }
+    }
     
-        if([uiNavigationbarItem.leftBarButtonItems count] > 0){
-            [self createRedererForEachItemInArray:uiNavigationbarItem.leftBarButtonItems];
+    // Go through all of the items and check they have a renderer.
+    for (UINavigationItem *item in self.items) {
+        [self createRendererForItem:item.leftBarButtonItem];
+        for(UIBarButtonItem *bbi in item.rightBarButtonItems) {
+            [self createRendererForItem:bbi];
         }
-    
-        if(uiNavigationbarItem.backBarButtonItem){
-            UIBarButtonItem *barButtonItem = uiNavigationbarItem.backBarButtonItem;
-            if(![barButtonItem isImmuneToBeautify]){
-                [barButtonItem createRenderer];
-            }
+        
+        [self createRendererForItem:item.rightBarButtonItem];
+        for(UIBarButtonItem *bbi in item.leftBarButtonItems) {
+            [self createRendererForItem:bbi];
         }
     }
 }
 
--(void)createRedererForEachItemInArray:(NSArray*)array{
-    for(UINavigationItem *navBarItem in array){
-        if([[navBarItem valueForKey:@"view"] isKindOfClass:[UIToolbar class]]){
-            UIToolbar *toolbar = (UIToolbar*)[navBarItem valueForKey:@"view"];
-            [self createRedererForEachItemInArray:toolbar.items];
-        }
-        else {
-            UIBarButtonItem *barButtonItem = (UIBarButtonItem*)navBarItem;
-            if([navBarItem isKindOfClass:[UIBarButtonItem class]] && ![barButtonItem isImmuneToBeautify]){
-                if(barButtonItem.renderer && [barButtonItem.renderer adaptedView] != nil){
-                    [barButtonItem createRenderer];
-                }
-                else {
-                    NSMutableArray *values = [(BYBarButtonItemRenderer*)barButtonItem.renderer values];
-                    NSMutableArray *names = [(BYBarButtonItemRenderer*)barButtonItem.renderer names];
-                    NSMutableArray *controlStates = [(BYBarButtonItemRenderer*)barButtonItem.renderer controlStates];
-                    [barButtonItem removeRenderer];
-                    [barButtonItem createRenderer];
-                    [barButtonItem.renderer setValues:values];
-                    [barButtonItem.renderer setNames:names];
-                    [barButtonItem.renderer setControlStates:controlStates];
-                    [barButtonItem.renderer styleViaStoredValueNamesAndStates];
-                }
-            }
-        }
-    }
+-(void)createRendererForItem:(UIBarButtonItem *)bbi {
+    UIView *v = [bbi valueForKey:@"view"];
+    [v createRenderer];
 }
 
--(void)override_pushNavigationItem:(UINavigationItem *)item {
-    [self override_pushNavigationItem:item];
-    
-    if(!item.backBarButtonItem) {
-        item.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStyleBordered target:nil action:nil];
-        [item.backBarButtonItem createRenderer];
+// Recursively finds an array of all the UINavigationItemButtonViews
+-(NSArray*)searchForBackButtonInSubviewsOfView:(UIView*)view {
+    NSMutableArray *array = [NSMutableArray new];
+    if([view isKindOfClass:NSClassFromString(@"UINavigationItemButtonView")]) {
+        [array addObject:view];
     }
-    
-    [[self.backItem.backBarButtonItem renderer] applyBackButtonStyles];
+    else {
+        for (UIView *v in view.subviews) {
+            [array addObjectsFromArray:[self searchForBackButtonInSubviewsOfView:v]];
+        }
+    }
+    return array;
 }
 
 -(void)createRenderer {
@@ -86,6 +77,10 @@
         else {
             NSLog(@"Renderer for UI element not found: %@", self.class);
         }
+        
+#warning TODO - do we want to do this? Check the style to see. If it's default and we don't specify any bg etc we don't want to. Otherwise yes.
+        [self setBackIndicatorImage:[UIImage new]];
+        [self setBackIndicatorTransitionMaskImage:[UIImage new]];
     }
 }
 

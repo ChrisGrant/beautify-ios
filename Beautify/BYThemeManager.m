@@ -25,8 +25,9 @@
                                 @"UITextField" : @"BYTextFieldRenderer",
                                 @"UIImageView" : @"BYImageViewRenderer",
                                 @"UITableViewCell" : @"BYTableViewCellRenderer",
-                                @"UIBarButtonItem" : @"BYBarButtonItemRenderer",
-                                @"UISlider" : @"BYSliderRenderer"};
+                                @"UISlider" : @"BYSliderRenderer",
+                                @"UINavigationButton" : @"BYBackBarButtonItemRenderer",
+                                @"UINavigationItemView" : @"BYBackBarButtonItemRenderer" };
     });
     return instance;
 }
@@ -67,7 +68,6 @@
         [view isKindOfClass:NSClassFromString(@"UICalloutBarButton")] ||
         [view isKindOfClass:NSClassFromString(@"UITextFieldLabel")] ||
         [view isKindOfClass:NSClassFromString(@"UIAlertButton")] ||
-        [view isKindOfClass:NSClassFromString(@"UINavigationButton")] ||
         [view isKindOfClass:NSClassFromString(@"_UINavigationBarBackground")] ||
         [view isKindOfClass:NSClassFromString(@"_UINavigationBarBackIndicatorView")]||
         [view isKindOfClass:NSClassFromString(@"_UITextFieldRoundedRectBackgroundViewNeue")]||

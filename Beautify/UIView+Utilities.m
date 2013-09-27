@@ -51,11 +51,11 @@
     }
 }
 
-- (void)setPreviousFont:(UIFont *)previousFont {
+-(void)setPreviousFont:(UIFont*)previousFont {
     objc_setAssociatedObject(self, @"previousFont", previousFont, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (UIFont *)previousFont {
+-(UIFont*)previousFont {
     return (UIFont*) objc_getAssociatedObject(self, @"previousFont");
 }
 
