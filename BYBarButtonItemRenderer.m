@@ -13,11 +13,13 @@
 #import "BYLabelRenderer.h"
 #import "BYTheme.h"
 #import "BYBarButtonStyle.h"
-#import "UIView+Utilities.h"
 
 @implementation BYBarButtonItemRenderer {
     UILabel *_label;
     BYLabelRenderer *_labelRenderer;
+    BOOL _isBackButtonRenderer;
+    BYBarButtonStyle *_normalStyle;
+    BYBarButtonStyle *_backStyle;
 }
 
 -(id)initWithView:(id)view theme:(BYTheme*)theme {
@@ -41,8 +43,30 @@
 }
 
 -(BYBarButtonStyle*)styleFromTheme:(BYTheme*)theme {
-    BYBarButtonStyle *barStyle = theme.barButtonItemStyle;
-    return barStyle;
+    // Store both the back button and the normal button style for future use.
+    _normalStyle = theme.barButtonItemStyle;
+    _backStyle = theme.backBarButtonItemStyle;
+    
+    if(self.isBackButtonRenderer) {
+        return theme.backBarButtonItemStyle;
+    }
+    return theme.barButtonItemStyle;
+}
+
+-(void)setIsBackButtonRenderer:(BOOL)isBackButtonRenderer {
+    _isBackButtonRenderer = isBackButtonRenderer;
+    if(_isBackButtonRenderer) {
+        self.style = _backStyle;
+    }
+    else {
+        self.style = _normalStyle;
+    }
+    [self setUpStyleCustomizersForControlStates];
+    [self redraw];
+}
+
+-(BOOL)isBackButtonRenderer {
+    return _isBackButtonRenderer;
 }
 
 -(void)configureFromStyle {

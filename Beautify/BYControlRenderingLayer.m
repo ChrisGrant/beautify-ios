@@ -106,7 +106,7 @@
             CGSize rectSize = rect.size;
             CGFloat horizontalRatio = rectSize.width / CGImageGetWidth(imageRef);
             CGFloat verticalRatio = rectSize.height / CGImageGetHeight(imageRef);
-            CGFloat ratio = MAX(horizontalRatio, verticalRatio); // The radio is the biggest of the v & h ratio
+            CGFloat ratio = MAX(horizontalRatio, verticalRatio); // The ratio is the biggest of the v & h ratio
             // Calculate a new size based on the ratio
             CGSize aspectFillSize = CGSizeMake(CGImageGetWidth(imageRef) * ratio, CGImageGetHeight(imageRef) * ratio);
 

@@ -34,6 +34,7 @@
 @property BYTableViewCellStyle *tableViewCellStyle;
 @property BYImageViewStyle *imageViewStyle;
 @property BYBarButtonStyle *barButtonItemStyle;
+@property BYBarButtonStyle *backBarButtonItemStyle;
 @property BYSliderStyle *sliderStyle;
 
 +(BYTheme*)fromFile:(NSString*)file;

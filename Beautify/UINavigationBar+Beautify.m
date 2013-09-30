@@ -30,6 +30,7 @@
         if([[backBarView renderer] isKindOfClass:[BYBarButtonItemRenderer class]]) {
             BYBarButtonItemRenderer *renderer = (BYBarButtonItemRenderer*)backBarView.renderer;
             [renderer setIsBackButtonRenderer:YES];
+            [renderer redraw];
         }
     }
     
@@ -77,8 +78,6 @@
         else {
             NSLog(@"Renderer for UI element not found: %@", self.class);
         }
-        
-#warning TODO - do we want to do this? Check the style to see. If it's default and we don't specify any bg etc we don't want to. Otherwise yes.
         [self setBackIndicatorImage:[UIImage new]];
         [self setBackIndicatorTransitionMaskImage:[UIImage new]];
     }

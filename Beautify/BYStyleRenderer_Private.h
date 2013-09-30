@@ -25,6 +25,8 @@
 // Updates this renderer with the given theme. This will cause the renderer to redraw itself.
 -(void)setTheme:(BYTheme*)theme;
 
+-(void)setUpStyleCustomizersForControlStates;
+
 /*
  Trigger a redraw. If you make changes to the style associated with the renderer,
  then you must invoke this method in order for the changes to take effect.
