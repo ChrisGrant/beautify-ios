@@ -23,4 +23,8 @@
     return copy;
 }
 
++(BOOL)propertyIsOptional:(NSString *)propertyName {
+    return [propertyName isEqualToString:@"alpha"];
+}
+
 @end

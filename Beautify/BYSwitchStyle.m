@@ -94,4 +94,11 @@
     return copy;
 }
 
++(BOOL)propertyIsOptional:(NSString *)propertyName {
+    if([propertyName isEqualToString:@"thumbInset"])
+        return YES;
+
+    return [super propertyIsOptional:propertyName];
+}
+
 @end

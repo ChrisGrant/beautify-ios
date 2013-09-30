@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSONModel.h"
 
 /*
  State setters are used to describe hwo various visual states affect a style. A state setter
  is associated with a control state and describes the value that will be applied to a given style property
  when the givestate is entered.
  */
-@interface BYStateSetter : NSObject
+@interface BYStateSetter : JSONModel
 
 @property UIControlState state;
 

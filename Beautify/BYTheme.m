@@ -24,8 +24,7 @@
 
 +(BYTheme *)fromDictionary:(NSDictionary *)dict {
     NSDictionary *themeDict = dict[@"theme"];
-    BYTheme* theme = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYTheme class]
-                                                              fromDict:themeDict];
+    BYTheme* theme = [[BYTheme alloc] initWithDictionary:themeDict error:nil];
     return theme;
 }
 
@@ -40,24 +39,25 @@
                                                                error:&jsonError];
         if (jsonError) {
             NSLog(@"Error: Could not parse JSON! %@", jsonError.debugDescription);
-        } else {
-            NSError *parseError;
-            theme = [[BYTheme alloc] initWithDictionary:dict error:&parseError];
-            if(parseError) {
-                NSLog(@"Parse error when reading the JSON - %@", parseError.debugDescription);
-                return nil;
-            }
         }
         else {
             // Find the version of the JSON file being passed in.
             NSString *fileVersion = dict[@"schemaVersion"];
             
             // Compare it to the current version. If they aren't equal, we can't continue and should log an error.
-            if([fileVersion isEqualToString:JSON_SCHEMA_VERSION]) {
-                theme = [self fromDictionary:dict];
+            if(![fileVersion isEqualToString:JSON_SCHEMA_VERSION]) {
+                NSLog(@"[BYTheme fromFile] failed - The version of the file (%@) was invalid. Expecting %@", fileVersion, JSON_SCHEMA_VERSION);
+                return nil;
+            }
+            
+            NSError *parseError;
+            theme = [[BYTheme alloc] initWithDictionary:dict[@"theme"] error:&parseError];
+            if(parseError) {
+                NSLog(@"Parse error when reading the JSON - %@", parseError.debugDescription);
+                return nil;
             }
             else {
-                NSLog(@"[BYTheme fromFile] failed - The version of the file (%@) was invalid. Expecting %@", fileVersion, JSON_SCHEMA_VERSION);
+                return theme;
             }
         }
     }

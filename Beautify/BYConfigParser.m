@@ -464,12 +464,12 @@ static NSMutableArray* _objectStack;
     if(offsetDict) {
         if ([[offsetDict allKeys] containsObject:@"x"]) {
             if([NSNull null] != offsetDict[@"x"]) {
-                x = [offsetDict[@"x"] doubleValue];
+                x = [offsetDict[@"x"] floatValue];
             }
         }
         if ([[offsetDict allKeys] containsObject:@"y"]) {
             if([NSNull null] != offsetDict[@"y"]) {
-                y = [offsetDict[@"y"] doubleValue];
+                y = [offsetDict[@"y"] floatValue];
             }
         }
     }

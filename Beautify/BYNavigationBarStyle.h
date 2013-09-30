@@ -17,13 +17,13 @@
 
 @interface BYNavigationBarStyle : BYViewStyle
 
-@property UIColor* backgroundColor;
-@property BYGradient *backgroundGradient;
+@property UIColor<Optional> *backgroundColor;
+@property BYGradient<Optional> *backgroundGradient;
 
 @property BYText *title;
-@property BYTextShadow* titleShadow;
+@property BYTextShadow<Optional> *titleShadow;
 
-@property BYDropShadow *dropShadow;
+@property BYDropShadow<Optional> *dropShadow;
 
 +(BYNavigationBarStyle*)defaultStyle;
 

@@ -15,9 +15,9 @@
 
 @property UIColor *backgroundColor;
 
-@property BYBackgroundImage *backgroundImage;
+@property BYBackgroundImage<Optional> *backgroundImage;
 
-@property BYGradient *backgroundGradient;
+@property BYGradient<Optional> *backgroundGradient;
 
 +(BYViewControllerStyle*)defaultStyle;
 

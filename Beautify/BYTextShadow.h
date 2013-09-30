@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSONModel.h"
 
-@interface BYTextShadow : NSObject <NSCopying>
+@interface BYTextShadow : JSONModel <NSCopying>
 
 @property CGSize offset;
 
