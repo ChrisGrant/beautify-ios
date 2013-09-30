@@ -25,10 +25,10 @@
         style.dropShadow = [BYDropShadow shadowWithColor:[UIColor colorWithWhite:0.5 alpha:0.2] andHeight:1.0f];
         
         BYGradient *g = [BYGradient gradientWithStops:@[[BYGradientStop stopWithColor:[UIColor whiteColor] at:0.0],
-                                                            [BYGradientStop stopWithColor:[UIColor colorWithRed:207.0f/255 green:217.0f/255 blue:230.0f/255 alpha:1.0] at:0.02],
-                                                            [BYGradientStop stopWithColor:[UIColor colorWithRed:190.0f/255 green:204.0f/255 blue:221.0f/255 alpha:1.0] at:0.05],
-                                                            [BYGradientStop stopWithColor:[UIColor colorWithRed:88.0f/255 green:115.0f/255 blue:151.0f/255 alpha:1.0] at:0.98],
-                                                            [BYGradientStop stopWithColor:[UIColor colorWithRed:63.0f/255 green:92.0f/255 blue:128.0f/255 alpha:1.0] at:1.0]]
+                                                        [BYGradientStop stopWithColor:[UIColor colorWithRed:207.0f/255 green:217.0f/255 blue:230.0f/255 alpha:1.0] at:0.02],
+                                                        [BYGradientStop stopWithColor:[UIColor colorWithRed:190.0f/255 green:204.0f/255 blue:221.0f/255 alpha:1.0] at:0.05],
+                                                        [BYGradientStop stopWithColor:[UIColor colorWithRed:88.0f/255 green:115.0f/255 blue:151.0f/255 alpha:1.0] at:0.98],
+                                                        [BYGradientStop stopWithColor:[UIColor colorWithRed:63.0f/255 green:92.0f/255 blue:128.0f/255 alpha:1.0] at:1.0]]
                                              isRadial:NO
                                          radialOffset:CGSizeZero];
         style.backgroundGradient = g;

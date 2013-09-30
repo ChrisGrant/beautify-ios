@@ -25,10 +25,22 @@
 }
 
 -(BOOL)isImmuneToBeautify{
-    if([super respondsToSelector:@selector(isImmuneToBeautify)]) {
-        return [super isImmuneToBeautify];
+    if ([super isImmuneToBeautify]) {
+        return YES;
     }
-    return YES;
+    
+    // This view isn't immune, but check that none of it's parents are immune to beautify.
+    id resp = [self nextResponder];
+    while (resp != nil) {
+        if([resp respondsToSelector:@selector(isImmuneToBeautify)]) {
+            if([resp isImmuneToBeautify]) {
+                return YES;
+            }
+        }
+        resp = [resp nextResponder];
+    }
+    
+    return NO;
 }
 
 -(void)setImmuneToBeautify:(BOOL)immuneToBeautify{
