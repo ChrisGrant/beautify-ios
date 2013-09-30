@@ -1,8 +1,8 @@
 {
-    "backgroundColor": "#FFFFFF",
-    "border": {
-        "width": 2,
-        "color": "000000",
-        "cornerRadius": 9
+    "minimumTrackColor": "000000",
+    "thumbBorder": {
+        "width": 1,
+        "color": "#00FF00",
+        "cornerRadius": 15
     }
 }

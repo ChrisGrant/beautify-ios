@@ -355,12 +355,6 @@
         },
         "sliderStyle": {
             "barHeightFraction": 0.2,
-            "backgroundColor": "#00000000",
-            "border": {
-                "width": "0",
-                "color": "#000000",
-                "cornerRadius": "0"
-            },
             "barBorder": {
                 "width": "0",
                 "color": "#000000",

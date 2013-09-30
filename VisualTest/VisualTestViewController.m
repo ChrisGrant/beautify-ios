@@ -245,9 +245,6 @@
     border.width = 1.0f;
     border.color = [UIColor blackColor];
     border.cornerRadius = 5.0f;
-    [renderer setBorder:border forState:UIControlStateNormal];
-    
-    [renderer setBackgroundColor:[UIColor orangeColor] forState:UIControlStateNormal];
     
     BYShadow *shadow1 = [BYShadow shadowWithOffset:CGSizeZero radius:10.0 color:[UIColor greenColor]];
     [renderer setBarOuterShadows:@[shadow1] forState:UIControlStateNormal];

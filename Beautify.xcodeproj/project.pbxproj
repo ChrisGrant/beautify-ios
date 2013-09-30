@@ -122,9 +122,6 @@
 		54D7FD7617B8EA590004F952 /* BYBarButtonItemRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54D7FD7417B8EA590004F952 /* BYBarButtonItemRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54D7FD7817B8EA590004F952 /* BYBarButtonItemRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D7FD7517B8EA590004F952 /* BYBarButtonItemRenderer.m */; };
 		54D7FD7917B8EA590004F952 /* BYBarButtonItemRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D7FD7517B8EA590004F952 /* BYBarButtonItemRenderer.m */; };
-		54DDE25E17C655930081E1AD /* BYSliderBackgroundLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DDE25C17C655920081E1AD /* BYSliderBackgroundLayer.h */; };
-		54DDE26017C655930081E1AD /* BYSliderBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE25D17C655920081E1AD /* BYSliderBackgroundLayer.m */; };
-		54DDE26117C655930081E1AD /* BYSliderBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE25D17C655920081E1AD /* BYSliderBackgroundLayer.m */; };
 		54DDE26C17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DDE26A17C65D1A0081E1AD /* BYSliderMaximumTrackLayer.h */; };
 		54DDE26E17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE26B17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m */; };
 		54DDE26F17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE26B17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m */; };
@@ -436,8 +433,6 @@
 		54A995B6179FD29C00B9B17C /* BYDropShadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYDropShadow.m; sourceTree = "<group>"; };
 		54D7FD7417B8EA590004F952 /* BYBarButtonItemRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYBarButtonItemRenderer.h; path = Beautify/BYBarButtonItemRenderer.h; sourceTree = SOURCE_ROOT; };
 		54D7FD7517B8EA590004F952 /* BYBarButtonItemRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYBarButtonItemRenderer.m; path = Beautify/BYBarButtonItemRenderer.m; sourceTree = SOURCE_ROOT; };
-		54DDE25C17C655920081E1AD /* BYSliderBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYSliderBackgroundLayer.h; path = Beautify/BYSliderBackgroundLayer.h; sourceTree = SOURCE_ROOT; };
-		54DDE25D17C655920081E1AD /* BYSliderBackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYSliderBackgroundLayer.m; path = Beautify/BYSliderBackgroundLayer.m; sourceTree = SOURCE_ROOT; };
 		54DDE26A17C65D1A0081E1AD /* BYSliderMaximumTrackLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYSliderMaximumTrackLayer.h; path = Beautify/BYSliderMaximumTrackLayer.h; sourceTree = SOURCE_ROOT; };
 		54DDE26B17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYSliderMaximumTrackLayer.m; path = Beautify/BYSliderMaximumTrackLayer.m; sourceTree = SOURCE_ROOT; };
 		7007253C17EAF0C0001F7C41 /* PartialNavigationBarStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PartialNavigationBarStyle.json; sourceTree = "<group>"; };
@@ -758,8 +753,6 @@
 		547C32CE17C4C1B4009D6289 /* Slider */ = {
 			isa = PBXGroup;
 			children = (
-				54DDE25C17C655920081E1AD /* BYSliderBackgroundLayer.h */,
-				54DDE25D17C655920081E1AD /* BYSliderBackgroundLayer.m */,
 				547C32D617C4C24B009D6289 /* BYSliderBarBorderLayer.h */,
 				702194BF17E1BC0D008161D3 /* BYSliderBarBorderLayer.m */,
 				702194C017E1BC0D008161D3 /* BYSliderBarShadowLayer.h */,
@@ -1318,7 +1311,6 @@
 				543570EA17BE313E007FA7CE /* UIBarButtonItem+Beautify.h in Headers */,
 				7047010A17E1C08F00FEA5F5 /* UISlider+Beautify.h in Headers */,
 				547C32D817C4C24B009D6289 /* BYSliderBarBorderLayer.h in Headers */,
-				54DDE25E17C655930081E1AD /* BYSliderBackgroundLayer.h in Headers */,
 				7047012017E1C1F200FEA5F5 /* UISwitch+Beautify.h in Headers */,
 				54DDE26C17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.h in Headers */,
 				700EE91D17E1FFAB00164EA1 /* BYThemeManager.h in Headers */,
@@ -1634,7 +1626,6 @@
 				7047010617E1C06B00FEA5F5 /* NSObject+Beautify.m in Sources */,
 				70397B9217DF33190095001B /* BYBarButtonStyle.m in Sources */,
 				547C32D417C4C1EE009D6289 /* BYSliderStyle.m in Sources */,
-				54DDE26117C655930081E1AD /* BYSliderBackgroundLayer.m in Sources */,
 				54DDE26F17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1722,7 +1713,6 @@
 				70397B9117DF33190095001B /* BYBarButtonStyle.m in Sources */,
 				70F61B8B17831B4F00DCA906 /* BYRenderUtils.m in Sources */,
 				543570E617BE312C007FA7CE /* UIBarButtonItem+Beautify.m in Sources */,
-				54DDE26017C655930081E1AD /* BYSliderBackgroundLayer.m in Sources */,
 				54DDE26E17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,18 +18,6 @@
  */
 @interface BYSliderRenderer : BYViewRenderer <UIGestureRecognizerDelegate>
 
-#pragma mark - General Control customizers
-
-/*
- Set the border for the control associated with this renderer.
- */
--(void)setBorder:(BYBorder*)border forState:(UIControlState)state;
-
-/*
- Set the background color for the control of the control associated with this renderer.
- */
--(void)setBackgroundColor:(UIColor*)backgroundColor forState:(UIControlState)state;
-
 #pragma mark - Slider bar customizers
 
 /*

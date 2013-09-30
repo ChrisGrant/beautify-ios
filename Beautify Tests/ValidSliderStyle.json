@@ -1,10 +1,4 @@
 {
-    "border": {
-        "width": 1,
-        "color": "#FF0000",
-        "cornerRadius": 15
-    },
-    "backgroundColor": "0000FF",
     "barBorder": {
         "width": 2,
         "color": "#FF0000",

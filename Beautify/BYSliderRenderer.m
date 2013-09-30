@@ -19,13 +19,11 @@
 #import "BYSliderBarShadowLayer.h"
 #import "BYTheme.h"
 #import "BYControlRenderingLayer.h"
-#import "BYSliderBackgroundLayer.h"
 #import "BYSwitchBorderLayer.h"
 
 @implementation BYSliderRenderer {
     CAShapeLayer* _clipLayerShape;
     CALayer* _clipLayer;
-    BYSliderBackgroundLayer *_backgroundLayer;
     BYSliderBarShadowLayer *_barShadowLayer;
     BYSliderBarBorderLayer *_barBorderLayer;
     BYSliderMinimumTrackLayer *_minimumTrackLayer;
@@ -86,16 +84,6 @@
     slider.clipsToBounds = NO;
     
     CGRect bounds  = [self sliderBarSizeWithBounds:[self adaptedSlider].bounds andThickness:[self sliderThickness]];
-    
-    // create the background layer
-    _backgroundLayer = [[BYSliderBackgroundLayer alloc] initWithRenderer:self];
-    _backgroundLayer.masksToBounds = NO;
-    _backgroundLayer.frame = [self adaptedSlider].bounds;
-    [_backgroundLayer  setNeedsDisplay];
-    
-    // add the backgroundLayer
-    [slider.layer addSublayer:_backgroundLayer];
-    slider.layer.masksToBounds = NO;
     
     // create the shadow layer
     _barShadowLayer = [[BYSliderBarShadowLayer alloc] initWithRenderer:self];
@@ -249,7 +237,6 @@
     CGRect bounds = [self sliderBarSizeWithBounds:[self adaptedSlider].bounds andThickness:[self sliderThickness]];
     
     // update the frames
-    _backgroundLayer.frame = [self adaptedSlider].bounds;
     [_barShadowLayer setFrame:bounds withWidthPadding:WIDTH_PADDING];
     _clipLayer.frame = bounds;
     _minimumTrackLayer.frame = [self  minimumTrackLayerFrame];
@@ -259,7 +246,6 @@
     
     _clipLayerShape.path = [BYSwitchBorderLayer borderPathForBounds:_barBorderLayer.bounds
                                                           andBorder:[self propertyValueForNameWithCurrentState:@"barBorder"]].CGPath;
-    [_backgroundLayer setNeedsDisplay];
     [_barShadowLayer setNeedsDisplay];
     [_minimumTrackLayer setNeedsDisplay];
     [_maximumTrackLayer setNeedsDisplay];
@@ -318,15 +304,6 @@
 }
 
 #pragma mark - Style property setters
-
-// border
--(void)setBorder:(BYBorder*)border forState:(UIControlState)state {
-    [self setPropertyValue:border forName:@"border" forState:state];
-}
-
--(void)setBackgroundColor:(UIColor*)backgroundColor forState:(UIControlState)state {
-    [self setPropertyValue:backgroundColor forName:@"backgroundColor" forState:state];
-}
 
 // slider bar
 
