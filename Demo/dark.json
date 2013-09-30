@@ -1,5 +1,5 @@
 {
-    "schemaVersion": "1.2",
+    "schemaVersion": "1.3",
     "theme": {
         "buttonStyle": {
             "title": {
@@ -388,6 +388,50 @@
                              "propertyName": "backgroundColor",
                              "state": "highlighted",
                              "value": "#16A085"
+                             }
+                             ]
+        },
+        "backBarButtonItemStyle": {
+            "title": {
+                "color": "#FFFFFF",
+                "font": {
+                    "name": "ArialMT",
+                    "size": 14
+                }
+            },
+            "backgroundColor": "#272727",
+            "border": {
+                "width": "0",
+                "color": "#000000",
+                "cornerRadius": "5"
+            },
+            "innerShadows": [],
+            "outerShadows": [
+                             {
+                             "color": "#000000BF",
+                             "radius": 5,
+                             "offset": {
+                             "x": 1.4,
+                             "y": 1.4
+                             }
+                             }
+                             ],
+            "stateSetters": [
+                             {
+                             "propertyName": "backgroundColor",
+                             "state": "highlighted",
+                             "value": "#232323"
+                             },
+                             {
+                             "state": "highlighted",
+                             "propertyName": "title",
+                             "value": {
+                             "color": "#FFFFFF",
+                             "font": {
+                             "name": "ArialMT",
+                             "size": 14
+                             }
+                             }
                              }
                              ]
         }
