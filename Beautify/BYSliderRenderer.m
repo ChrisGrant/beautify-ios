@@ -34,8 +34,6 @@
     BOOL _tapped;
     BOOL _panning;
     BOOL _panEnding;
-    CGPoint _panLocation;
-    
     BOOL _highlighted;
     
     float _thumbSize;
@@ -185,7 +183,7 @@
     // compute the centre point of the thumb
     CGPoint thumbCentrePoint = CGPointMake(xOrigin, yOrigin);
     
-    thumbCentrePoint.x += _panLocation.x;
+    thumbCentrePoint.x += slider.value * slider.bounds.size.width;
     
     // limit the x range
     if (thumbCentrePoint.x <= slider.bounds.origin.x + _thumbSize) {
@@ -194,8 +192,6 @@
     else if (thumbCentrePoint.x >= slider.bounds.size.width) {
         thumbCentrePoint.x = slider.bounds.size.width;
     }
-    
-    [slider setValue:slider.maximumValue * ((thumbCentrePoint.x - _thumbSize) / (slider.bounds.size.width - _thumbSize))];
     
     // compute the overall frame
     return CGRectMake(thumbCentrePoint.x - _thumbSize, thumbCentrePoint.y - (_thumbSize / 2), _thumbSize, _thumbSize);
@@ -260,9 +256,8 @@
 }
 
 // the slider thickness is a fraction of the controls height
-- (float)sliderThickness {
-    return [self adaptedSlider].bounds.size.height *
-            [[self propertyValueForNameWithCurrentState:@"barHeightFraction"] floatValue];
+-(float)sliderThickness {
+    return [self adaptedSlider].bounds.size.height * [[self propertyValueForNameWithCurrentState:@"barHeightFraction"] floatValue];
 }
 
 -(id)styleFromTheme:(BYTheme*)theme {
@@ -279,7 +274,9 @@
 #pragma mark - User interaction handling
 
 -(void)panning:(UIPanGestureRecognizer*)gesture {
-    _panLocation = [gesture locationInView:self.adaptedSlider];
+    CGPoint panLocation = [gesture locationInView:self.adaptedSlider];
+    
+    ((UISlider*)self.adaptedView).value = panLocation.x / ((UIView*)self.adaptedView).bounds.size.width;
     
     if (gesture.state == UIGestureRecognizerStateBegan) {
         _panning = YES;
