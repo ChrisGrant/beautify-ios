@@ -111,11 +111,10 @@
     return 100;
 }
 
-- (IBAction)buttonTapped:(UIButton *)sender {
-    
+-(IBAction)buttonTapped:(UIButton *)sender {
     UIViewController *vc = [UIViewController new];
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
-    button.backgroundColor = [UIColor redColor];
+    [button setTitle:@"Push View Controller" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [vc.view addSubview:button];
     [[self navigationController] pushViewController:vc animated:YES];
