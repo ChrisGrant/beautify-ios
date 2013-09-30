@@ -232,6 +232,7 @@
 		7047013E17E1C6CA00FEA5F5 /* BYTopShadowRenderingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010E17E1C11100FEA5F5 /* BYTopShadowRenderingLayer.m */; };
 		7047013F17E1C6CE00FEA5F5 /* BYImageViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010F17E1C11100FEA5F5 /* BYImageViewRenderer.m */; };
 		7047014017E1C6D100FEA5F5 /* UIImageView+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011117E1C11100FEA5F5 /* UIImageView+Beautify.m */; };
+		707A868D17F96BC5005A102F /* BYBarButtonItemRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FF912717F5A51E00972848 /* BYBarButtonItemRenderer.m */; };
 		70907E6D1797E6F600F83417 /* BYImageViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70907E6B1797E6F600F83417 /* BYImageViewStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70907E701797E6F600F83417 /* BYImageViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70907E6C1797E6F600F83417 /* BYImageViewStyle.m */; };
 		70907E7B1797FBC300F83417 /* roller@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70907E7A1797FBC300F83417 /* roller@2x.png */; };
@@ -1714,6 +1715,7 @@
 				72F0795E175CCC2F00FC27DB /* BYDelegateMultiplexer.m in Sources */,
 				70FF54D417E6FB1B00F9BF03 /* BYConfigParser.m in Sources */,
 				70397B9117DF33190095001B /* BYBarButtonStyle.m in Sources */,
+				707A868D17F96BC5005A102F /* BYBarButtonItemRenderer.m in Sources */,
 				70F61B8B17831B4F00DCA906 /* BYRenderUtils.m in Sources */,
 				543570E617BE312C007FA7CE /* UIBarButtonItem+Beautify.m in Sources */,
 				54DDE26017C655930081E1AD /* BYSliderBackgroundLayer.m in Sources */,
