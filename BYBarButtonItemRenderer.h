@@ -1,5 +1,5 @@
 //
-//  BYBackBarButtonItemRenderer.h
+//  BYBarButtonItemRenderer.h
 //  Beautify
 //
 //  Created by Chris Grant on 27/09/2013.
@@ -8,7 +8,7 @@
 
 #import "BYControlRenderer.h"
 
-@interface BYBackBarButtonItemRenderer : BYControlRenderer
+@interface BYBarButtonItemRenderer : BYControlRenderer
 
 @property BOOL isBackButtonRenderer;
 

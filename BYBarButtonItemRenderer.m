@@ -1,12 +1,12 @@
 //
-//  BYBackBarButtonItemRenderer.m
+//  BYBarButtonItemRenderer.m
 //  Beautify
 //
 //  Created by Chris Grant on 27/09/2013.
 //  Copyright (c) 2013 Beautify. All rights reserved.
 //
 
-#import "BYBackBarButtonItemRenderer.h"
+#import "BYBarButtonItemRenderer.h"
 #import "BYControlRenderer_Private.h"
 #import "BYStyleRenderer_Private.h"
 #import "BYViewRenderer_Private.h"
@@ -15,7 +15,7 @@
 #import "BYBarButtonStyle.h"
 #import "UIView+Utilities.h"
 
-@implementation BYBackBarButtonItemRenderer {
+@implementation BYBarButtonItemRenderer {
     UILabel *_label;
     BYLabelRenderer *_labelRenderer;
 }

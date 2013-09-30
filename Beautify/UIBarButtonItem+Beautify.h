@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BYBackBarButtonItemRenderer.h"
+#import "BYBarButtonItemRenderer.h"
 
 @interface UIBarButtonItem (Beautify)
 
--(BYBackBarButtonItemRenderer*)renderer;
+-(BYBarButtonItemRenderer*)renderer;
 
 /*
  Whether this view is 'immune' to the globally applied theme, i.e. it will maintain the style defined by the

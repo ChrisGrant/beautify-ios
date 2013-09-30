@@ -26,8 +26,8 @@
                                 @"UIImageView" : @"BYImageViewRenderer",
                                 @"UITableViewCell" : @"BYTableViewCellRenderer",
                                 @"UISlider" : @"BYSliderRenderer",
-                                @"UINavigationButton" : @"BYBackBarButtonItemRenderer",
-                                @"UINavigationItemView" : @"BYBackBarButtonItemRenderer" };
+                                @"UINavigationButton" : @"BYBarButtonItemRenderer",
+                                @"UINavigationItemView" : @"BYBarButtonItemRenderer" };
     });
     return instance;
 }

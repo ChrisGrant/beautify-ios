@@ -14,7 +14,7 @@
 
 #import "UIView+Utilities.h"
 
-#import "BYBackBarButtonItemRenderer.h"
+#import "BYBarButtonItemRenderer.h"
 
 @implementation UINavigationBar (Beautify)
 
@@ -27,8 +27,8 @@
     if(barviews.count > 0) {
         UIView *backBarView = barviews[barviews.count - 1];
         [backBarView createRenderer];
-        if([[backBarView renderer] isKindOfClass:[BYBackBarButtonItemRenderer class]]) {
-            BYBackBarButtonItemRenderer *renderer = (BYBackBarButtonItemRenderer*)backBarView.renderer;
+        if([[backBarView renderer] isKindOfClass:[BYBarButtonItemRenderer class]]) {
+            BYBarButtonItemRenderer *renderer = (BYBarButtonItemRenderer*)backBarView.renderer;
             [renderer setIsBackButtonRenderer:YES];
         }
     }
