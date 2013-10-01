@@ -70,7 +70,8 @@
         self.navigationBarStyle = [BYNavigationBarStyle defaultStyle];
         self.tableViewCellStyle = [BYTableViewCellStyle defaultStyle];
         self.imageViewStyle = [BYImageViewStyle defaultStyle];
-        self.barButtonItemStyle = [BYBarButtonStyle defaultCustomStyle];
+        self.barButtonItemStyle = [BYBarButtonStyle defaultStyle];
+        self.backBarButtonItemStyle = [BYBarButtonStyle defaultBackButtonStyle];
         self.sliderStyle = [BYSliderStyle defaultStyle];
     }
     return self;
@@ -87,6 +88,7 @@
     theme.tableViewCellStyle = self.tableViewCellStyle.copy;
     theme.imageViewStyle = self.imageViewStyle.copy;
     theme.barButtonItemStyle = self.barButtonItemStyle.copy;
+    theme.backBarButtonItemStyle = self.backBarButtonItemStyle.copy;
     theme.sliderStyle = self.sliderStyle.copy;
     return theme;
 }

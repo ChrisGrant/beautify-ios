@@ -27,6 +27,7 @@
 #import "BYTableViewCellStyle.h"
 #import "BYImageViewStyle.h"
 #import "BYSliderStyle.h"
+#import "BYBarButtonStyle.h"
 
 // A 'stack' for generating useful errors when a property parse operation fails
 static NSMutableArray* _objectStack;
@@ -199,8 +200,8 @@ static NSMutableArray* _objectStack;
             NSLog(@"Error: Could not parse %@", [self generateObjectStackTrace:nil]);
         }
     }
-    else if ([name hasSuffix:@"barButtonItemStyle"]) {
-        value = [self parseStyleObjectPropertiesOnClass:[BYButtonStyle class] fromDict:dict[name]];
+    else if ([lowerCaseName hasSuffix:@"barbuttonitemstyle"]) {
+        value = [self parseStyleObjectPropertiesOnClass:[BYBarButtonStyle class] fromDict:dict[name]];
         if(value == nil) {
             NSLog(@"Error: Could not parse %@", [self generateObjectStackTrace:nil]);
         }
