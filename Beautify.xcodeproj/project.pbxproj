@@ -280,6 +280,7 @@
 		70BF4EFD17FB294800F807F6 /* UIImage+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 70BF4EFB17FB294700F807F6 /* UIImage+Base64.h */; };
 		70BF4EFE17FB294800F807F6 /* UIImage+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF4EFC17FB294800F807F6 /* UIImage+Base64.m */; };
 		70BF4EFF17FB29EF00F807F6 /* BYBarButtonItemRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FF912717F5A51E00972848 /* BYBarButtonItemRenderer.m */; };
+		70BF4F0017FB2AB600F807F6 /* UIImage+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF4EFC17FB294800F807F6 /* UIImage+Base64.m */; };
 		70C211B617DF01DB00CA110B /* TableVisualTestViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C211B417DF01DB00CA110B /* TableVisualTestViewController.h */; };
 		70C211B817DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
 		70C211B917DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
@@ -1866,6 +1867,7 @@
 				700E155117E320E8006E124E /* BYFont.m in Sources */,
 				700E155817E32119006E124E /* BYSwitchStyle.m in Sources */,
 				700E155717E32111006E124E /* BYStateSetter.m in Sources */,
+				70BF4F0017FB2AB600F807F6 /* UIImage+Base64.m in Sources */,
 				700E155C17E3213C006E124E /* BYTextShadow.m in Sources */,
 				700E155217E320F2006E124E /* BYLabelStyle.m in Sources */,
 				700E155A17E32125006E124E /* BYText.m in Sources */,
