@@ -17,4 +17,6 @@
 
 -(UIImage*)UIImageFromNSString:(NSString*)string;
 
+-(UIControlState)stateFromString:(NSString*)stateString;
+
 @end

@@ -29,6 +29,19 @@
     return image;
 }
 
+-(UIControlState)stateFromString:(NSString*)stateString {
+    if ([[stateString lowercaseString] isEqualToString:@"highlighted"]) {
+        return UIControlStateHighlighted;
+    }
+    else if ([[stateString lowercaseString] isEqualToString:@"disabled"]) {
+        return UIControlStateDisabled;
+    }
+    else if ([[stateString lowercaseString] isEqualToString:@"selected"]) {
+        return UIControlStateSelected;
+    }
+    return UIControlStateNormal;
+}
+
 -(NSData*)base64DataFromString:(NSString*)string {
     unsigned long ixtext, lentext;
     unsigned char ch, inbuf[4], outbuf[3];

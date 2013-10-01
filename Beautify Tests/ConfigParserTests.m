@@ -7,7 +7,6 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "BYConfigParser.h"
 #import "BYButtonStyle.h"
 #import "UIColor+Comparison.h"
 #import "BYGradientStop.h"
@@ -21,6 +20,9 @@
 #import "BYSliderStyle.h"
 #import "BYBarButtonStyle.h"
 #import "BYImageViewStyle.h"
+#import "BYTheme.h"
+#import "BYSwitchStyle.h"
+
 
 @interface ConfigParserTests : XCTestCase
 @end
@@ -32,14 +34,14 @@
 
 -(void)testConfigParserWithNilDictionary {
     BYTheme *theme;
-    XCTAssertNoThrow(theme = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYTheme class] fromDict:nil],
+    XCTAssertNoThrow(theme = [[BYTheme alloc] initWithDictionary:nil error:nil],
                      @"Shouldn't throw with a nil dictionary");
     XCTAssertNil(theme, @"Theme should be nil");
 }
 
 -(void)testConfigParserWithEmptyDictonary {
     BYTheme *theme;
-    XCTAssertNoThrow(theme = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYTheme class] fromDict:@{}],
+    XCTAssertNoThrow(theme = [[BYTheme alloc] initWithDictionary:@{} error:nil],
                      @"Shouldn't throw with an empty dictionary");
     [self assertDefaultTheme:theme];
 }
@@ -47,7 +49,7 @@
 -(void)testConfigParserWithInvalidDictionary {
     BYTheme *theme;
     NSDictionary *dict = @{@"invalid": @"dictionary", @"still": @{@"Invalid": @"dict", @"theme": @[]}};
-    XCTAssertNoThrow(theme = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYTheme class] fromDict:dict],
+    XCTAssertNoThrow(theme = [[BYTheme alloc] initWithDictionary:dict error:nil],
                      @"Shouldn't throw with an invalid dictionary");
     [self assertDefaultTheme:theme];
 }
@@ -461,7 +463,7 @@
     XCTAssertNotNil(dictionary, @"Dictionary should not be nil with valid JSON. Check file name and if the file is in the test bundle");
     
     id style;
-    XCTAssertNoThrow(style = [BYConfigParser parseStyleObjectPropertiesOnClass:class fromDict:dictionary],
+    XCTAssertNoThrow(style = [[class alloc] initWithDictionary:dictionary error:nil],
                      @"Shouldn't throw with valid JSON");
     XCTAssertNotNil(style, @"Shouldn't be nil with valid JSON");
     return style;
@@ -469,14 +471,14 @@
 
 -(void)assertStyleIsNilWithNilDictForClass:(Class)class {
     id style;
-    XCTAssertNoThrow(style = [BYConfigParser parseStyleObjectPropertiesOnClass:class fromDict:nil], @"Shouldn't throw");
+    XCTAssertNoThrow(style = [[class alloc] initWithDictionary:nil error:nil], @"Shouldn't throw");
     XCTAssertNil(style, @"Style should be nil for class %@", class);
 }
 
 -(void)assertStyleIsNotNilWithEmptyDictForClass:(Class)class {
     id style;
-    XCTAssertNoThrow(style = [BYConfigParser parseStyleObjectPropertiesOnClass:class
-                                                                      fromDict:@{}]);
+    XCTAssertNoThrow(style = [[class alloc] initWithDictionary:@{} error:nil], @"Shouldn't throw");
+
     XCTAssertNotNil(style, @"Style should not be nil");
     XCTAssertEqual([style class], class, @"Class should be the same");
 }
@@ -503,11 +505,11 @@
     
     BYGradientStop *stop1 = gradient.stops[0];
     XCTAssert([stop1.color isEqualToColor:color1], @"Stop 1 color should be equal");
-    XCTAssertEqual(stop1.stop, position1, @"Position 1 should be equal");
+    XCTAssertEqual(stop1.position, position1, @"Position 1 should be equal");
 
     BYGradientStop *stop2 = gradient.stops[1];
     XCTAssert([stop2.color isEqualToColor:color2], @"Stop 2 color should be equal");
-    XCTAssertEqual(stop2.stop, position2, @"Position 2 should be equal");
+    XCTAssertEqual(stop2.position, position2, @"Position 2 should be equal");
 }
 
 -(void)assertBorder:(BYBorder*)border hasWidth:(float)width color:(UIColor*)color andCornerRadius:(float)radius {

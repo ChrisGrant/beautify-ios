@@ -66,7 +66,7 @@ static NSDictionary* styleProperties = nil;
         
         BYStateSetter *stateSetter = [BYStateSetter new];
         stateSetter.propertyName = dict[@"propertyName"];
-        stateSetter.state = [BYStateSetter stateFromString:dict[@"state"]];
+        stateSetter.state = [valueTransformer stateFromString:dict[@"state"]];
         
         id value = dict[@"value"];
         
@@ -98,19 +98,6 @@ static NSDictionary* styleProperties = nil;
     }
     NSLog(@"State Setter Error - State setters MUST have propertyName, state and value");
     return nil;
-}
-
-+(UIControlState)stateFromString:(NSString*)stateString {
-    if ([[stateString lowercaseString] isEqualToString:@"highlighted"]) {
-        return UIControlStateHighlighted;
-    }
-    else if ([[stateString lowercaseString] isEqualToString:@"disabled"]) {
-        return UIControlStateDisabled;
-    }
-    else if ([[stateString lowercaseString] isEqualToString:@"selected"]) {
-        return UIControlStateSelected;
-    }
-    return UIControlStateNormal;
 }
 
 @end

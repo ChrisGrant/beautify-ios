@@ -10,8 +10,8 @@
 #import "Beautify.h"
 #import "UIColor+Comparison.h"
 #import "NSObject+Properties.h"
-#import "BYConfigParser_Private.h"
 #import "BYStateSetter.h"
+#import "JSONValueTransformer+BeautifyExtension.h"
 
 @interface BYCopyingTests : XCTestCase
 @end
@@ -46,7 +46,8 @@
 -(void)testBackgroundImageCopy {
     BYBackgroundImage *image = [[BYBackgroundImage alloc] init];
     NSString *base64ImageString = @"data:image/gif;base64,R0lGODlhDwAPAKECAAAAzMzM/////wAAACwAAAAADwAPAAACIISPeQHsrZ5ModrLlN48CXF8m2iQ3YmmKqVlRtW4MLwWACH+H09wdGltaXplZCBieSBVbGVhZCBTbWFydFNhdmVyIQAAOw==";
-    UIImage *im = [BYConfigParser imageFromBase64String:base64ImageString];
+    JSONValueTransformer *vt = [JSONValueTransformer new];
+    UIImage *im = [vt UIImageFromNSString:base64ImageString];
     image.data = im;
     [self checkObjectCanBeCopiedAndResultHasEqualProperties:image];
 }
@@ -137,7 +138,8 @@
 
 -(id)styleFromDictNamed:(NSString*)name andClass:(Class)class {
     NSDictionary *dictionary = [BYCopyingTests dictionaryFromJSONFile:name];
-    return [BYConfigParser parseStyleObjectPropertiesOnClass:class fromDict:dictionary];
+    id style = [[class alloc] initWithDictionary:dictionary error:nil];
+    return style;
 }
 
 -(void)assertObject:(id)prop withPropertyName:(NSString*)propertyName isEqualToObject:(id)copiedProp {

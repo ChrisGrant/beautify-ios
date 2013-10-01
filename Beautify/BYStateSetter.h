@@ -26,6 +26,6 @@
 
 @property NSString *propertyName;
 
-@property id<Ignore> value;
+@property id value;
 
 @end
