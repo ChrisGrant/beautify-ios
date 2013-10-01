@@ -13,7 +13,7 @@
 
 @property CGSize offset;
 
-@property UIColor *color;
+@property UIColor<Optional> *color;
 
 /*
  Create a text shadow with the specified offset and color.

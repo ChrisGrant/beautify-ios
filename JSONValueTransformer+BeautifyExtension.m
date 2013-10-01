@@ -15,8 +15,23 @@
     return [UIColor colorWithHexString:string];
 }
 
--(NSValue*)CGSizeFromNSDictionary:(NSDictionary*)dict {
-    return [NSValue valueWithCGSize:CGSizeZero];
+-(NSValue*)CGSizeFromNSDictionary:(NSDictionary*)offsetDict {
+    float x = 0;
+    float y = 0;
+    
+    if(offsetDict) {
+        if ([[offsetDict allKeys] containsObject:@"x"]) {
+            if([NSNull null] != offsetDict[@"x"]) {
+                x = [offsetDict[@"x"] doubleValue];
+            }
+        }
+        if ([[offsetDict allKeys] containsObject:@"y"]) {
+            if([NSNull null] != offsetDict[@"y"]) {
+                y = [offsetDict[@"y"] doubleValue];
+            }
+        }
+    }
+    return [NSValue valueWithCGSize:CGSizeMake(x, y)];
 }
 
 -(UIImage *)UIImageFromNSString:(NSString *)string {

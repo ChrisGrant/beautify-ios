@@ -75,7 +75,7 @@
 }
 
 -(void)testButtonStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYButtonStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYButtonStyle class]];
 }
 
 -(void)testButtonStyleWithValidDict {
@@ -98,7 +98,6 @@
     XCTAssertEqual(setter.state, UIControlStateHighlighted, @"Should be for the highlighted state");
     XCTAssert([setter.propertyName isEqualToString:@"title"], @"Should be for the title");
     
-    XCTAssertEqual([setter.value class], [BYText class], @"Should be of type BYText");
     BYText *text = setter.value;
     [self assertText:text hasName:@"HelveticaNeue-Bold" size:14.0f andColor:[UIColor whiteColor]];
 }
@@ -121,7 +120,7 @@
 }
 
 -(void)testSwitchStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYSwitchStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYSwitchStyle class]];
 }
 
 -(void)testSwitchStyleWithValidDict {
@@ -198,7 +197,7 @@
 }
 
 -(void)testLabelStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYLabelStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYLabelStyle class]];
 }
 
 -(void)testLabelStyleWithValidDict {
@@ -211,8 +210,8 @@
 -(void)testLabelStyleWithPartialDict {
     BYLabelStyle *labelStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialLabelStyle"
                                                                                        andClass:[BYLabelStyle class]];
-    [self assertText:labelStyle.title hasName:nil size:0 andColor:[UIColor whiteColor]];
-    [self assertTextShadow:labelStyle.titleShadow hasColor:[UIColor blueColor] andOffset:CGSizeZero];
+    [self assertText:labelStyle.title hasName:@"HelveticaNeue-Bold" size:10.0f andColor:[UIColor whiteColor]];
+    [self assertTextShadow:labelStyle.titleShadow hasColor:[UIColor blueColor] andOffset:CGSizeMake(1, 2)];
 }
 
 #pragma mark - View Controller Testing
@@ -222,7 +221,7 @@
 }
 
 -(void)testViewControllerStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYLabelStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYLabelStyle class]];
 }
 
 -(void)testViewControllerStyleWithValidDict {
@@ -246,7 +245,7 @@
 }
 
 -(void)testTextFieldStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYTextFieldStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYTextFieldStyle class]];
 }
 
 -(void)testTextFieldStyleWithValidDict {
@@ -268,7 +267,7 @@
 -(void)testTextFieldStyleWithPartialDict {
     BYTextFieldStyle *textStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialTextFieldStyle"
                                                                                           andClass:[BYTextFieldStyle class]];
-    [self assertText:textStyle.title hasName:@"HelveticaNeue-Bold" size:0 andColor:[UIColor redColor]];
+    [self assertText:textStyle.title hasName:@"HelveticaNeue-Bold" size:12.0f andColor:[UIColor redColor]];
     
     XCTAssert([textStyle.backgroundColor isEqualToColor:[UIColor blueColor]], @"Background should be black");
     
@@ -282,7 +281,7 @@
 }
 
 -(void)testNavBarStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYNavigationBarStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYNavigationBarStyle class]];
 }
 
 -(void)testNavBarStyleWithValidDict {
@@ -315,7 +314,7 @@
 }
 
 -(void)testTableCellStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYTableViewCellStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYTableViewCellStyle class]];
 }
 
 -(void)testTableCellStyleWithValidDict {
@@ -351,7 +350,7 @@
 }
 
 -(void)testImageViewStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYImageViewStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYImageViewStyle class]];
 }
 
 -(void)testImageViewStyleWithValidDict {
@@ -375,7 +374,7 @@
 }
 
 -(void)testBarButtonStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYBarButtonStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYBarButtonStyle class]];
 }
 
 -(void)testBarButtonStyleWithValidDict {
@@ -411,7 +410,7 @@
 }
 
 -(void)testSliderStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYSliderStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYSliderStyle class]];
 }
 
 -(void)testSliderStyleWithValidDict {
@@ -424,6 +423,8 @@
     
     [self assertShadows:sliderStyle.barInnerShadows hasOneShadowWithColor:[UIColor blackColor] radius:4 andOffset:CGSizeZero];
     [self assertShadows:sliderStyle.barOuterShadows hasOneShadowWithColor:[UIColor redColor] radius:0 andOffset:CGSizeMake(0, -2)];
+    
+    XCTAssertEqual((float)sliderStyle.barHeightFraction, 1.0f, @"Bar Height Fraction should be 1");
     
     XCTAssert([sliderStyle.minimumTrackColor isEqualToColor:[UIColor blackColor]], @"Minimum track should be black");
     [self assertGradient:sliderStyle.minimumTrackBackgroundGradient
@@ -454,6 +455,7 @@
                                                                                                andClass:[BYSliderStyle class]];
     [self assertBorder:sliderStyle.border hasWidth:2 color:[UIColor blackColor] andCornerRadius:9.0f];
     XCTAssert([sliderStyle.backgroundColor isEqualToColor:[UIColor whiteColor]], @"BG should be white");
+    XCTAssertEqual(sliderStyle.barHeightFraction, 0.2f, @"Bar Height fraction should be 0.2");
 }
 
 #pragma mark - Helper Methods
@@ -475,12 +477,11 @@
     XCTAssertNil(style, @"Style should be nil for class %@", class);
 }
 
--(void)assertStyleIsNotNilWithEmptyDictForClass:(Class)class {
+-(void)assertStyleIsNilWithEmptyDictForClass:(Class)class {
     id style;
     XCTAssertNoThrow(style = [[class alloc] initWithDictionary:@{} error:nil], @"Shouldn't throw");
 
-    XCTAssertNotNil(style, @"Style should not be nil");
-    XCTAssertEqual([style class], class, @"Class should be the same");
+    XCTAssertNil(style, @"Style should not be nil");
 }
 
 -(void)assertShadows:(NSArray*)array hasOneShadowWithColor:(UIColor*)color radius:(float)radius andOffset:(CGSize)offset {

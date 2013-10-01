@@ -33,9 +33,9 @@
 @property CGSize offset;
 
 /*
- Color for the shadow.
+ Color for the shadow. Defaults to black.
  */
-@property UIColor *color;
+@property UIColor<Optional> *color;
 
 /*
  Create with the specified offset, blur radius and color.

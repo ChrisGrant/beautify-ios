@@ -29,43 +29,43 @@
     NSDictionary *validDict = [NSDictionary new];
     
     validDict = @{@"x": @"", @"y": @""};
-    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:validDict], CGSizeZero, @"Empty values dictionary - size should be zero");
+    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:validDict].CGSizeValue, CGSizeZero, @"Empty values dictionary - size should be zero");
     
     validDict = @{@"x": @"10", @"y": @"10"};
-    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:validDict], CGSizeMake(10, 10), @"This should be a valid dictionary");
+    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:validDict].CGSizeValue, CGSizeMake(10, 10), @"This should be a valid dictionary");
     
     validDict = @{@"y": @"120", @"x": @"5"};
-    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:validDict], CGSizeMake(5, 120), @"This should be a valid dictionary");
+    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:validDict].CGSizeValue, CGSizeMake(5, 120), @"This should be a valid dictionary");
     
     validDict = @{@"x": @"2"};
-    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:validDict], CGSizeMake(2, 0), @"This should be a valid dictionary");
+    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:validDict].CGSizeValue, CGSizeMake(2, 0), @"This should be a valid dictionary");
     
     validDict = @{@"y": @"9"};
-    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:validDict], CGSizeMake(0, 9), @"This should be a valid dictionary");
+    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:validDict].CGSizeValue, CGSizeMake(0, 9), @"This should be a valid dictionary");
 }
 
 -(void)testSizeFromDictionaryWithInvalidSizes {
     NSDictionary *invalidDict = [NSDictionary new];
-    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:invalidDict], CGSizeZero, @"Empty dictionary - size should be zero");
+    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:invalidDict].CGSizeValue, CGSizeZero, @"Empty dictionary - size should be zero");
     
     invalidDict = @{@"x": @"", @"y": @""};
-    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:invalidDict], CGSizeZero, @"Empty values dictionary - size should be zero");
+    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:invalidDict].CGSizeValue, CGSizeZero, @"Empty values dictionary - size should be zero");
     
     invalidDict = @{@"x": @"", @"y": @""};
-    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:invalidDict], CGSizeZero, @"Empty values dictionary - size should be zero");
+    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:invalidDict].CGSizeValue, CGSizeZero, @"Empty values dictionary - size should be zero");
     
     invalidDict = @{@"x": @"a", @"y": @"a"};
-    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:invalidDict], CGSizeZero, @"Invalid values in dictionary - size should be zero");
+    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:invalidDict].CGSizeValue, CGSizeZero, @"Invalid values in dictionary - size should be zero");
     
     invalidDict = @{@"x": @"a1a", @"y": @"a2"};
-    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:invalidDict], CGSizeZero, @"Invalid values in dictionary - size should be zero");
+    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:invalidDict].CGSizeValue, CGSizeZero, @"Invalid values in dictionary - size should be zero");
     
     invalidDict = @{@"y": @"-"};
-    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:invalidDict], CGSizeZero, @"Invalid values in dictionary - size should be zero");
+    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:invalidDict].CGSizeValue, CGSizeZero, @"Invalid values in dictionary - size should be zero");
 }
 
 -(void)testSizeFromDictionaryWithNoDictionary {
-    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:nil], CGSizeZero, @"Without a dictionary, size should be CGSizeZero");
+    XCTAssertEqual([_valueTransformer CGSizeFromNSDictionary:nil].CGSizeValue, CGSizeZero, @"Without a dictionary, size should be CGSizeZero");
 }
 
 #pragma mark - State From String

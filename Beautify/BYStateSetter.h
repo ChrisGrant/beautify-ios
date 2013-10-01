@@ -18,7 +18,7 @@
 /*
  State setters are used to describe hwo various visual states affect a style. A state setter
  is associated with a control state and describes the value that will be applied to a given style property
- when the givestate is entered.
+ when the givestate is ehantered.
  */
 @interface BYStateSetter : JSONModel
 
@@ -26,6 +26,7 @@
 
 @property NSString *propertyName;
 
-@property id value;
+-(id)value;
+-(void)setValue:(id)val;
 
 @end

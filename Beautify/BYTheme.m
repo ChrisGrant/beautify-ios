@@ -66,6 +66,17 @@
     return theme;
 }
 
+-(instancetype)initWithDictionary:(NSDictionary *)dict error:(NSError *__autoreleasing *)err {
+    if(!dict)
+        return nil;
+    
+    BYTheme *theme = [super initWithDictionary:dict error:err];
+    if(theme == nil) {
+        theme = [BYTheme new];
+    }
+    return theme;
+}
+
 -(id)init {
     if (self = [super init]) {
         self.buttonStyle = [BYButtonStyle defaultSystemStyle];

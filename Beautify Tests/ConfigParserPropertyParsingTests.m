@@ -180,9 +180,6 @@
 -(void)testShadowsFromDictWithInvalidDict {
     BYShadow *shadow = [[BYShadow alloc] initWithDictionary:nil error:nil];
     XCTAssertNil(shadow, @"Shadow should be nil if the dictionary is nil");
-    
-    shadow = [[BYShadow alloc] initWithDictionary:@{@"This is not a shadow" : @"Not"} error:nil];
-    XCTAssertNil(shadow, @"If the dictionary doesn't have the necessary shadow data, it should return nil");
 }
 
 #pragma mark - Gradients
@@ -234,7 +231,7 @@
                                                                          @{@"position":@0.5, @"color": @"00FF00"},
                                                                          @{@"position":@0.8, @"color": @"0000FF"}]
                                                               } error:nil];
-    XCTAssertNil(gradient, @"If we don't specify radial, gradient should always be nil");
+    XCTAssertNotNil(gradient, @"If we don't specify radial, gradient should still not be nil");
     
     gradient = [[BYGradient alloc] initWithDictionary:@{@"radialOffset": @{@"x": @20, @"y":@30},
                                                   @"radial": @NO} error:nil];

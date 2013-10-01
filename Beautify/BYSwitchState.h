@@ -16,12 +16,12 @@
 /*
  The font and colour of the text
  */
-@property BYText* textStyle;
+@property BYText<Optional> *textStyle;
 
 /*
  The text rendered for this switch state
  */
-@property NSString* text;
+@property NSString<Optional> *text;
 
 /*
  The background color for the switch at this state

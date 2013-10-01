@@ -20,7 +20,17 @@ static JSONValueTransformer* valueTransformer = nil;
 static NSArray* colors = nil;
 static NSDictionary* styleProperties = nil;
 
-@implementation BYStateSetter
+@implementation BYStateSetter {
+    id _val;
+}
+
+-(id)value {
+    return _val;
+}
+
+-(void)setValue:(id)val {
+    _val = val;
+}
 
 -(NSString *)description {
     return [NSString stringWithFormat:@"property : %@, value : %@",
@@ -43,7 +53,7 @@ static NSDictionary* styleProperties = nil;
                        @"thumbbackgroundcolor",
                        @"highlightcolor"];
             styleProperties = @{@"title"  : [BYText class],
-                                @"titleShadow" : [BYTextShadow class],
+                                @"titleshadow" : [BYTextShadow class],
                                 @"backgroundgradient" : [BYGradient class],
                                 @"backgroundimage" : [BYBackgroundImage class],
                                 @"border" : [BYBorder class],

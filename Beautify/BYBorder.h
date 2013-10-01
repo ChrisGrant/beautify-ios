@@ -27,7 +27,7 @@
 /*
  The color of the border.
  */
-@property UIColor *color;
+@property UIColor<Optional> *color;
 
 /*
  Create a BYBorder with the specified properties.
