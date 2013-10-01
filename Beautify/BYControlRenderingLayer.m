@@ -98,7 +98,7 @@
     
     // Draw the background image
     if (backgroundImage) {
-        UIImage *image = [backgroundImage image];
+        UIImage *image = [backgroundImage data];
         CGImageRef imageRef = image.CGImage;
 
         if(backgroundImage.contentMode == BYImageContentModeAspectFill) {

@@ -12,8 +12,12 @@
 
 -(id)copyWithZone:(NSZone *)zone {
     BYBackgroundImage *copy = [[BYBackgroundImage allocWithZone:zone] init];
-    copy.image = self.image.copy;
+    copy.data = self.data.copy;
     return copy;
+}
+
++(BOOL)propertyIsOptional:(NSString *)propertyName {
+    return [[propertyName lowercaseString] isEqualToString:@"contentMode"];
 }
 
 @end

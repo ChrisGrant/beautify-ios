@@ -7,11 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSONModel.h"
+
+@protocol BYGradientStop
+@end
+
+@interface NSArray (Stop) <BYGradientStop>
+@end
 
 /*
  A style property representing a stop for a background gradient for a UIView.
  */
-@interface BYGradientStop : NSObject <NSCopying>
+@interface BYGradientStop : JSONModel <NSCopying>
 
 /*
  The color to use for this stop.
@@ -21,7 +28,7 @@
 /*
  The location of the stop, in the range 0-1.
  */
-@property float stop;
+@property float position;
 
 /*
  Create with the specified color at the specified location.

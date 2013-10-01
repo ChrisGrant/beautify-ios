@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSONModel.h"
 
 typedef NS_ENUM(NSInteger, BYImageContentMode) {
     BYImageContentModeFill,
@@ -17,12 +18,12 @@ typedef NS_ENUM(NSInteger, BYImageContentMode) {
 /*
  A style property representing an image for use as a background for a view.
  */
-@interface BYBackgroundImage : NSObject <NSCopying>
+@interface BYBackgroundImage : JSONModel <NSCopying>
 
-/*	
+/*
  The image.
  */
-@property UIImage* image;
+@property UIImage* data;
 
 /*
  The content mode for the image when it is displayed

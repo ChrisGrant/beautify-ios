@@ -29,8 +29,8 @@
 
 // border
 @property BYBorder<Optional> *border;
-@property NSArray<Optional> *innerShadows;
-@property NSArray<Optional> *outerShadows;
+@property NSArray<BYShadow, Optional> *innerShadows;
+@property NSArray<BYShadow, Optional> *outerShadows;
 
 +(BYTextFieldStyle*)defaultStyle;
 

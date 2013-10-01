@@ -50,4 +50,12 @@
     return gradient;
 }
 
++(BOOL)propertyIsOptional:(NSString *)propertyName {
+    if([[propertyName lowercaseString] isEqualToString:@"radial"] ||
+       [[propertyName lowercaseString] isEqualToString:@"radialoffset"]) {
+        return YES;
+    }
+    return NO;
+}
+
 @end

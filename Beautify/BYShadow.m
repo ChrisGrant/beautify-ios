@@ -26,4 +26,12 @@
     return copy;
 }
 
++(BOOL)propertyIsOptional:(NSString *)propertyName {
+    if ([propertyName isEqualToString:@"radius"] ||
+        [[propertyName lowercaseString] isEqualToString:@"offset"]) {
+        return YES;
+    }
+    return NO;
+}
+
 @end

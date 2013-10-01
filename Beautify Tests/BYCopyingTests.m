@@ -47,7 +47,7 @@
     BYBackgroundImage *image = [[BYBackgroundImage alloc] init];
     NSString *base64ImageString = @"data:image/gif;base64,R0lGODlhDwAPAKECAAAAzMzM/////wAAACwAAAAADwAPAAACIISPeQHsrZ5ModrLlN48CXF8m2iQ3YmmKqVlRtW4MLwWACH+H09wdGltaXplZCBieSBVbGVhZCBTbWFydFNhdmVyIQAAOw==";
     UIImage *im = [BYConfigParser imageFromBase64String:base64ImageString];
-    image.image = im;
+    image.data = im;
     [self checkObjectCanBeCopiedAndResultHasEqualProperties:image];
 }
 

@@ -16,6 +16,4 @@
  */
 @interface BYConfigParser : NSObject
 
-+(id)parseStyleObjectPropertiesOnClass:(Class)theClass fromDict:(NSDictionary*)dict;
-
 @end

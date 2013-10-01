@@ -132,7 +132,7 @@ void RenderGradient(BYGradient* gradient, CGContextRef ctx, CGRect rect) {
     
     for (BYGradientStop *gs in gradient.stops) {
         [gradientArray addObject:(id)gs.color.CGColor];
-        locations[[gradient.stops indexOfObject:gs]] = gs.stop;
+        locations[[gradient.stops indexOfObject:gs]] = gs.position;
     }
     
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();

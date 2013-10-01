@@ -12,6 +12,7 @@
 #import "BYFont.h"
 #import "BYGradient.h"
 #import "BYSwitchState.h"
+#import "BYShadow.h"
 
 @class Font, Border;
 
@@ -29,15 +30,15 @@
 
 // Border
 @property BYBorder<Optional> *border;
-@property NSArray<Optional> *innerShadows;
-@property NSArray<Optional> *outerShadows;
+@property NSArray<BYShadow, Optional> *innerShadows;
+@property NSArray<BYShadow, Optional> *outerShadows;
 
 // Thumb
 @property BYBorder<Optional> *thumbBorder;
 @property UIColor<Optional> *thumbBackgroundColor;
 @property BYGradient<Optional> *thumbBackgroundGradient;
-@property NSArray<Optional> *thumbInnerShadows;
-@property NSArray<Optional> *thumbOuterShadows;
+@property NSArray<BYShadow, Optional> *thumbInnerShadows;
+@property NSArray<BYShadow, Optional> *thumbOuterShadows;
 @property UIImage<Optional> *thumbImage;
 @property UIImage<Optional> *trackLayerImage;
 @property UIImage<Optional> *borderLayerImage;

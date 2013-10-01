@@ -7,12 +7,17 @@
 //
 
 #import "BYStateSetter.h"
+#import "BYConfigParser_Private.h"
 
 @implementation BYStateSetter
 
 -(NSString *)description {
     return [NSString stringWithFormat:@"property : %@, value : %@",
             self.propertyName, self.value];
+}
+
+-(instancetype)initWithDictionary:(NSDictionary *)dict error:(NSError *__autoreleasing *)err {
+    return [BYConfigParser stateSetterFromDict:dict];
 }
 
 @end

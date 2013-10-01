@@ -12,6 +12,7 @@
 #import "BYFont.h"
 #import "BYGradient.h"
 #import "BYSwitchState.h"
+#import "BYShadow.h"
 
 @class Font, Border;
 
@@ -26,8 +27,8 @@
 
 // slider bar customizers
 @property BYBorder<Optional> *barBorder;
-@property NSArray<Optional> *barInnerShadows;
-@property NSArray<Optional> *barOuterShadows;
+@property NSArray<BYShadow, Optional> *barInnerShadows;
+@property NSArray<BYShadow, Optional> *barOuterShadows;
 @property float barHeightFraction;
 
 // minimum track customizers
@@ -45,8 +46,8 @@
 @property UIColor<Optional> *thumbBackgroundColor;
 @property UIImage<Optional> *thumbImage;
 @property BYGradient<Optional> *thumbBackgroundGradient;
-@property NSArray<Optional> *thumbInnerShadows;
-@property NSArray<Optional> *thumbOuterShadows;
+@property NSArray<BYShadow, Optional> *thumbInnerShadows;
+@property NSArray<BYShadow, Optional> *thumbOuterShadows;
 
 +(BYSliderStyle*)defaultStyle;
 

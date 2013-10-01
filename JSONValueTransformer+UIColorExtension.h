@@ -18,4 +18,6 @@
 
 -(BYGradient*)BYGradientFromNSDictionary:(NSDictionary*)dict;
 
+-(UIImage*)UIImageFromNSString:(NSString*)string;
+
 @end
