@@ -6,11 +6,10 @@
 //  Copyright (c) 2013 Beautify. All rights reserved.
 //
 
-#import "JSONValueTransformer+UIColorExtension.h"
+#import "JSONValueTransformer+BeautifyExtension.h"
 #import "UIColor+HexColors.h"
-#import "BYConfigParser_Private.h"
 
-@implementation JSONValueTransformer (UIColorExtension)
+@implementation JSONValueTransformer (BeautifyExtensions)
 
 -(UIColor*)UIColorFromNSString:(NSString*)string {
     return [UIColor colorWithHexString:string];
@@ -20,13 +19,8 @@
     return [NSValue valueWithCGSize:CGSizeZero];
 }
 
--(BYGradient*)BYGradientFromNSDictionary:(NSDictionary *)dict {
-    return [BYConfigParser gradientFromDict:dict];
-}
-
 -(UIImage *)UIImageFromNSString:(NSString *)string {
     UIImage *image;
-
     if(string.length > 22) {
         string = [string substringFromIndex:22];
         NSData *data = [self base64DataFromString:string];

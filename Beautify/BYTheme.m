@@ -7,7 +7,6 @@
 //
 
 #import "BYTheme.h"
-#import "BYConfigParser.h"
 #import "BYSwitchStyle.h"
 #import "BYLabelStyle.h"
 #import "BYViewControllerStyle.h"

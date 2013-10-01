@@ -54,7 +54,6 @@
 		1D464651174669C4003840E4 /* UIView+BeautifyPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA54716F9AC9C00D08DBB /* UIView+BeautifyPrivate.h */; settings = {ATTRIBUTES = (); }; };
 		1D464655174669D7003840E4 /* NSObject+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA51F16F9AC8500D08DBB /* NSObject+Properties.h */; };
 		1D464656174669D7003840E4 /* UIColor+HexColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA52116F9AC8500D08DBB /* UIColor+HexColors.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		1D464657174669D7003840E4 /* BYConfigParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AC6174158900039F3F3 /* BYConfigParser.h */; };
 		1D464659174669D7003840E4 /* BYSwitchBorderLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A981741582F0039F3F3 /* BYSwitchBorderLayer.h */; };
 		1D46465B174669D7003840E4 /* BYSwitchLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A9C1741582F0039F3F3 /* BYSwitchLayer.h */; };
 		1D46465C174669D7003840E4 /* BYSwitchShadowLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AA01741582F0039F3F3 /* BYSwitchShadowLayer.h */; };
@@ -141,8 +140,6 @@
 		700E154417E30668006E124E /* ConfigParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E154317E30668006E124E /* ConfigParserTests.m */; };
 		700E154617E30691006E124E /* BeautifyColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E154517E30691006E124E /* BeautifyColorTests.m */; };
 		700E154717E30D0F006E124E /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52216F9AC8500D08DBB /* UIColor+HexColors.m */; };
-		700E154A17E31E33006E124E /* BYConfigParser_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 700E154817E31E33006E124E /* BYConfigParser_Private.h */; };
-		700E154D17E32023006E124E /* BYConfigParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194BD17E1B4FA008161D3 /* BYConfigParser.m */; };
 		700E154E17E320C8006E124E /* BYBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEFD172EA5EF000C7811 /* BYBorder.m */; };
 		700E154F17E320D7006E124E /* BYButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FF01172EA606000C7811 /* BYButtonStyle.m */; };
 		700E155017E320DF006E124E /* BYGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEEB172EA5B2000C7811 /* BYGradient.m */; };
@@ -166,14 +163,12 @@
 		700E156217E321A1006E124E /* BYGradientStop.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEED172EA5B3000C7811 /* BYGradientStop.m */; };
 		700E156317E321A6006E124E /* BYStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 729757C7173BB861003A34A5 /* BYStyle.m */; };
 		700E156617E33DF1006E124E /* UIColor+Comparison.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E156517E33DF1006E124E /* UIColor+Comparison.m */; };
-		700E156717E33F45006E124E /* NSDictionary+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDAB17572A44002F1093 /* NSDictionary+Utilities.m */; };
 		700E156A17E341C6006E124E /* ConfigParserUtilitiesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E156917E341C6006E124E /* ConfigParserUtilitiesTests.m */; };
 		700ED7D417E9B933009C2C49 /* PartialLabelStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 700ED7D217E9B933009C2C49 /* PartialLabelStyle.json */; };
 		700ED7D517E9B933009C2C49 /* ValidLabelStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 700ED7D317E9B933009C2C49 /* ValidLabelStyle.json */; };
 		700ED7D917E9C0DF009C2C49 /* PartialVCStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 700ED7D717E9C0DF009C2C49 /* PartialVCStyle.json */; };
 		700ED7DA17E9C0DF009C2C49 /* ValidVCStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 700ED7D817E9C0DF009C2C49 /* ValidVCStyle.json */; };
 		700EE91D17E1FFAB00164EA1 /* BYThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6A42174BAA40008A2A73 /* BYThemeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		700EE92817E202C400164EA1 /* BYConfigParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194BD17E1B4FA008161D3 /* BYConfigParser.m */; };
 		700F292616F3711300E85ED3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72BF4B3416F3487A00A0C0E3 /* UIKit.framework */; };
 		700F293116F3711300E85ED3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 700F293016F3711300E85ED3 /* main.m */; };
 		700F293516F3711300E85ED3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 700F293416F3711300E85ED3 /* AppDelegate.m */; };
@@ -314,7 +309,6 @@
 		70FF54D117E6FB0700F9BF03 /* BYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FF03172EA61F000C7811 /* BYTheme.m */; };
 		70FF54D217E6FB0D00F9BF03 /* BYViewControllerStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2FE174F7F540070AFD3 /* BYViewControllerStyle.m */; };
 		70FF54D317E6FB1000F9BF03 /* BYViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A85174157B40039F3F3 /* BYViewStyle.m */; };
-		70FF54D417E6FB1B00F9BF03 /* BYConfigParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194BD17E1B4FA008161D3 /* BYConfigParser.m */; };
 		70FF54D617E6FB2100F9BF03 /* BYDropShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* BYDropShadow.m */; };
 		70FF54D717E6FB2700F9BF03 /* BYSliderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C32D017C4C1EE009D6289 /* BYSliderStyle.m */; };
 		70FF54D817E6FB2A00F9BF03 /* BYStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 729757C7173BB861003A34A5 /* BYStyle.m */; };
@@ -336,7 +330,6 @@
 		727A862E17575C5600F6C6D9 /* BYTextShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 727A86241757453800F6C6D9 /* BYTextShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		727A863017575C9F00F6C6D9 /* BYControlRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA81757204B002F1093 /* BYControlRenderer.m */; };
 		727A863217575CAD00F6C6D9 /* BYTextFieldStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDECCF175656E0002F1093 /* BYTextFieldStyle.m */; };
-		727A863417575D1300F6C6D9 /* NSDictionary+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDAB17572A44002F1093 /* NSDictionary+Utilities.m */; };
 		727A863617575D1700F6C6D9 /* UITextField+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA517571F92002F1093 /* UITextField+Beautify.m */; };
 		727ADCD116F9B99000D7DDCB /* UIView+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54616F9AC9C00D08DBB /* UIView+Beautify.m */; };
 		727ADCD216F9B99000D7DDCB /* UIView+BeautifyPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54816F9AC9C00D08DBB /* UIView+BeautifyPrivate.m */; };
@@ -437,7 +430,6 @@
 		1DE12ABC174158650039F3F3 /* BYStyleRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYStyleRenderer.m; path = Beautify/BYStyleRenderer.m; sourceTree = SOURCE_ROOT; };
 		1DE12ABD174158650039F3F3 /* BYViewRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYViewRenderer.h; path = Beautify/BYViewRenderer.h; sourceTree = SOURCE_ROOT; };
 		1DE12ABE174158650039F3F3 /* BYViewRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYViewRenderer.m; path = Beautify/BYViewRenderer.m; sourceTree = SOURCE_ROOT; };
-		1DE12AC6174158900039F3F3 /* BYConfigParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYConfigParser.h; path = Beautify/BYConfigParser.h; sourceTree = SOURCE_ROOT; };
 		1DE9D286174E6D880070AFD3 /* BYText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYText.h; sourceTree = "<group>"; };
 		1DE9D287174E6D890070AFD3 /* BYText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYText.m; sourceTree = "<group>"; };
 		1DE9D2E8174F7BA50070AFD3 /* UIViewController+Beautify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = "UIViewController+Beautify.h"; path = "Beautify/UIViewController+Beautify.h"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -481,7 +473,6 @@
 		7009050B178C0EB600D7BEF4 /* BYVersionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYVersionUtils.h; sourceTree = "<group>"; };
 		700E154317E30668006E124E /* ConfigParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ConfigParserTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		700E154517E30691006E124E /* BeautifyColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeautifyColorTests.m; sourceTree = "<group>"; };
-		700E154817E31E33006E124E /* BYConfigParser_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYConfigParser_Private.h; sourceTree = SOURCE_ROOT; };
 		700E156417E33DF1006E124E /* UIColor+Comparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Comparison.h"; sourceTree = "<group>"; };
 		700E156517E33DF1006E124E /* UIColor+Comparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Comparison.m"; sourceTree = "<group>"; };
 		700E156917E341C6006E124E /* ConfigParserUtilitiesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigParserUtilitiesTests.m; sourceTree = "<group>"; };
@@ -500,7 +491,6 @@
 		700F293A16F3711300E85ED3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		70207AE617BE199A00632311 /* ShadowTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ShadowTestViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		70207AE717BE199A00632311 /* ShadowTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ShadowTestViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		702194BD17E1B4FA008161D3 /* BYConfigParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYConfigParser.m; path = Beautify/BYConfigParser.m; sourceTree = SOURCE_ROOT; };
 		702194BF17E1BC0D008161D3 /* BYSliderBarBorderLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYSliderBarBorderLayer.m; path = Beautify/BYSliderBarBorderLayer.m; sourceTree = SOURCE_ROOT; };
 		702194C017E1BC0D008161D3 /* BYSliderBarShadowLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYSliderBarShadowLayer.h; path = Beautify/BYSliderBarShadowLayer.h; sourceTree = SOURCE_ROOT; };
 		702194C117E1BC0D008161D3 /* BYSliderBarShadowLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYSliderBarShadowLayer.m; path = Beautify/BYSliderBarShadowLayer.m; sourceTree = SOURCE_ROOT; };
@@ -534,8 +524,8 @@
 		7047011F17E1C1F200FEA5F5 /* UISwitch+Beautify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UISwitch+Beautify.m"; path = "Beautify/UISwitch+Beautify.m"; sourceTree = SOURCE_ROOT; };
 		7047012817E1C23800FEA5F5 /* BYSwitchGestureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYSwitchGestureView.h; path = Beautify/BYSwitchGestureView.h; sourceTree = SOURCE_ROOT; };
 		7047012C17E1C27A00FEA5F5 /* BYSliderRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYSliderRenderer.h; path = Beautify/BYSliderRenderer.h; sourceTree = SOURCE_ROOT; };
-		707A869117F9B435005A102F /* JSONValueTransformer+UIColorExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONValueTransformer+UIColorExtension.h"; sourceTree = SOURCE_ROOT; };
-		707A869217F9B435005A102F /* JSONValueTransformer+UIColorExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONValueTransformer+UIColorExtension.m"; sourceTree = SOURCE_ROOT; };
+		707A869117F9B435005A102F /* JSONValueTransformer+BeautifyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JSONValueTransformer+BeautifyExtension.h"; sourceTree = SOURCE_ROOT; };
+		707A869217F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONValueTransformer+BeautifyExtension.m"; sourceTree = SOURCE_ROOT; };
 		70907E6B1797E6F600F83417 /* BYImageViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYImageViewStyle.h; sourceTree = "<group>"; };
 		70907E6C1797E6F600F83417 /* BYImageViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYImageViewStyle.m; sourceTree = "<group>"; };
 		70907E7A1797FBC300F83417 /* roller@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "roller@2x.png"; sourceTree = "<group>"; };
@@ -645,8 +635,6 @@
 		72FDEDA517571F92002F1093 /* UITextField+Beautify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = "UITextField+Beautify.m"; path = "Beautify/UITextField+Beautify.m"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		72FDEDA71757204A002F1093 /* BYControlRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYControlRenderer.h; path = Beautify/BYControlRenderer.h; sourceTree = SOURCE_ROOT; };
 		72FDEDA81757204B002F1093 /* BYControlRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = BYControlRenderer.m; path = Beautify/BYControlRenderer.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		72FDEDAA17572A44002F1093 /* NSDictionary+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Utilities.h"; path = "Beautify/NSDictionary+Utilities.h"; sourceTree = SOURCE_ROOT; };
-		72FDEDAB17572A44002F1093 /* NSDictionary+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+Utilities.m"; path = "Beautify/NSDictionary+Utilities.m"; sourceTree = SOURCE_ROOT; };
 		72FDEDAD175739D1002F1093 /* BYControlRenderer_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BYControlRenderer_Private.h; path = Beautify/BYControlRenderer_Private.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -922,11 +910,8 @@
 			isa = PBXGroup;
 			children = (
 				70B46F3616F718E800B8F114 /* Utilities */,
-				700E154817E31E33006E124E /* BYConfigParser_Private.h */,
-				1DE12AC6174158900039F3F3 /* BYConfigParser.h */,
-				702194BD17E1B4FA008161D3 /* BYConfigParser.m */,
-				707A869117F9B435005A102F /* JSONValueTransformer+UIColorExtension.h */,
-				707A869217F9B435005A102F /* JSONValueTransformer+UIColorExtension.m */,
+				707A869117F9B435005A102F /* JSONValueTransformer+BeautifyExtension.h */,
+				707A869217F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -1080,8 +1065,6 @@
 				72FDA52016F9AC8500D08DBB /* NSObject+Properties.m */,
 				72FDA52116F9AC8500D08DBB /* UIColor+HexColors.h */,
 				72FDA52216F9AC8500D08DBB /* UIColor+HexColors.m */,
-				72FDEDAA17572A44002F1093 /* NSDictionary+Utilities.h */,
-				72FDEDAB17572A44002F1093 /* NSDictionary+Utilities.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -1342,7 +1325,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				700E154A17E31E33006E124E /* BYConfigParser_Private.h in Headers */,
 				702194C617E1BC0D008161D3 /* BYSliderBarShadowLayer.h in Headers */,
 				1D464643174669A9003840E4 /* BYSwitchRenderer.h in Headers */,
 				7047010717E1C06B00FEA5F5 /* UIBarButtonItem+BeautifyPrivate.h in Headers */,
@@ -1387,6 +1369,7 @@
 				72AE98DB175BBA7E00787272 /* BYTableViewCellStyle.h in Headers */,
 				547C32D117C4C1EE009D6289 /* BYSliderStyle.h in Headers */,
 				70397B8F17DF33190095001B /* BYBarButtonStyle.h in Headers */,
+				70EAFD9517E892680087081B /* BYBarButtonItemRenderer_Private.h in Headers */,
 				1D464657174669D7003840E4 /* BYConfigParser.h in Headers */,
 				1DDB6A49174BB209008A2A73 /* BYBeautify_Private.h in Headers */,
 				1D464659174669D7003840E4 /* BYSwitchBorderLayer.h in Headers */,
@@ -1404,7 +1387,7 @@
 				1D464669174669D7003840E4 /* BYStyleSetterCustomizer.h in Headers */,
 				1D46466A174669D7003840E4 /* BYTheme.h in Headers */,
 				1D46466B174669D7003840E4 /* UIView+Utilities.h in Headers */,
-				707A869317F9B435005A102F /* JSONValueTransformer+UIColorExtension.h in Headers */,
+				707A869317F9B435005A102F /* JSONValueTransformer+BeautifyExtension.h in Headers */,
 				54ABF0E817A286EE0070B0B6 /* UINavigationBar+Beautify.h in Headers */,
 				54A995B7179FD29C00B9B17C /* BYDropShadow.h in Headers */,
 				7047010517E1C06B00FEA5F5 /* NSObject+Beautify.h in Headers */,
@@ -1686,7 +1669,7 @@
 				1DDB6A46174BAA40008A2A73 /* BYThemeManager.m in Sources */,
 				1D46461A17466942003840E4 /* BYSwitchLayer.m in Sources */,
 				1D46461B17466942003840E4 /* BYSwitchRenderer.m in Sources */,
-				707A869417F9B435005A102F /* JSONValueTransformer+UIColorExtension.m in Sources */,
+				707A869417F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m in Sources */,
 				1D46461C17466942003840E4 /* BYSwitchShadowLayer.m in Sources */,
 				1D46461D17466942003840E4 /* BYSwitchToggleLayer.m in Sources */,
 				1D46461F17466942003840E4 /* BYButtonRenderer.m in Sources */,
@@ -1702,7 +1685,6 @@
 				1D46462817466942003840E4 /* BYShadow.m in Sources */,
 				7047011B17E1C13200FEA5F5 /* BYSliderRenderer.m in Sources */,
 				70B492D117F2CDAB002B62DB /* JSONKeyMapper.m in Sources */,
-				700EE92817E202C400164EA1 /* BYConfigParser.m in Sources */,
 				1D46462917466942003840E4 /* BYButtonStyle.m in Sources */,
 				1D46462A17466942003840E4 /* BYLabelStyle.m in Sources */,
 				1D46462B17466942003840E4 /* BYStyleCustomizer.m in Sources */,
@@ -1741,7 +1723,6 @@
 				727A863017575C9F00F6C6D9 /* BYControlRenderer.m in Sources */,
 				7047012117E1C1F200FEA5F5 /* UISwitch+Beautify.m in Sources */,
 				727A863217575CAD00F6C6D9 /* BYTextFieldStyle.m in Sources */,
-				727A863417575D1300F6C6D9 /* NSDictionary+Utilities.m in Sources */,
 				702194CA17E1BC0D008161D3 /* BYSliderMinimumTrackLayer.m in Sources */,
 				70B492C817F2CDAB002B62DB /* NSArray+JSONModel.m in Sources */,
 				727A863617575D1700F6C6D9 /* UITextField+Beautify.m in Sources */,
@@ -1844,7 +1825,6 @@
 				72F07947175C941100FC27DB /* BYControlRenderingLayer.m in Sources */,
 				72F07955175C9F2900FC27DB /* UITableViewCell+Beautify.m in Sources */,
 				72F0795E175CCC2F00FC27DB /* BYDelegateMultiplexer.m in Sources */,
-				70FF54D417E6FB1B00F9BF03 /* BYConfigParser.m in Sources */,
 				70397B9117DF33190095001B /* BYBarButtonStyle.m in Sources */,
 				707A868D17F96BC5005A102F /* BYBarButtonItemRenderer.m in Sources */,
 				70F61B8B17831B4F00DCA906 /* BYRenderUtils.m in Sources */,
@@ -1871,7 +1851,6 @@
 				700E155117E320E8006E124E /* BYFont.m in Sources */,
 				70B492DF17F2D054002B62DB /* JSONModelClassProperty.m in Sources */,
 				700E155817E32119006E124E /* BYSwitchStyle.m in Sources */,
-				700E154D17E32023006E124E /* BYConfigParser.m in Sources */,
 				700E155717E32111006E124E /* BYStateSetter.m in Sources */,
 				700E155C17E3213C006E124E /* BYTextShadow.m in Sources */,
 				700E155217E320F2006E124E /* BYLabelStyle.m in Sources */,
@@ -1906,7 +1885,6 @@
 				70B492E217F2D060002B62DB /* JSONKeyMapper.m in Sources */,
 				700E155417E320FE006E124E /* BYBackgroundImage.m in Sources */,
 				700E155B17E32132006E124E /* BYTextFieldStyle.m in Sources */,
-				700E156717E33F45006E124E /* NSDictionary+Utilities.m in Sources */,
 				700E154617E30691006E124E /* BeautifyColorTests.m in Sources */,
 				70B492E317F2D062002B62DB /* JSONValueTransformer.m in Sources */,
 				700E155617E3210B006E124E /* BYSliderStyle.m in Sources */,

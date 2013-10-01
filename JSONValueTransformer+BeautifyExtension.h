@@ -8,15 +8,12 @@
 
 #import "JSONValueTransformer.h"
 #import <UIKit/UIKit.h>
-#import "BYGradient.h"
 
-@interface JSONValueTransformer (UIColorExtension)
+@interface JSONValueTransformer (BeautifyExtensions)
 
 -(UIColor*)UIColorFromNSString:(NSString*)color;
 
 -(NSValue*)CGSizeFromNSDictionary:(NSDictionary*)dict;
-
--(BYGradient*)BYGradientFromNSDictionary:(NSDictionary*)dict;
 
 -(UIImage*)UIImageFromNSString:(NSString*)string;
 

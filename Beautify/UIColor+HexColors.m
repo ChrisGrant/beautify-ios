@@ -70,7 +70,6 @@
 }
 
 +(NSString *)hexValuesFromUIColor:(UIColor *)color {
-    
     if (!color) {
         return nil;
     }
