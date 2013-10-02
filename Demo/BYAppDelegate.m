@@ -23,7 +23,6 @@
 }
 
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
-    
     [[BYBeautify instance] activate];
     
     UITabBarController *tbc = [UITabBarController new];
@@ -48,13 +47,13 @@
     
     customVC.title = @"Customised";
     customVC.beautifyDescripiton = @"This view controller has been styled by beautify. All the controls you see here have had a custom beautify style applied to them. The switch above allows you to swap the current theme.";
-    
-    [standardVC setImmuneToBeautify:YES];
     customVC.applyCustomStyles = YES;
     
     standardNav = [[UINavigationController alloc] initWithRootViewController:standardVC];
     demoNav = [[UINavigationController alloc] initWithRootViewController:demoVC];
     customNav = [[UINavigationController alloc] initWithRootViewController:customVC];
+    
+    [standardNav setImmuneToBeautify:YES];
     
     [tbc setViewControllers:@[standardNav, demoNav, customNav]];
     

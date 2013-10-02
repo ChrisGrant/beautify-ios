@@ -20,30 +20,33 @@
 
 -(void)override_layoutSubviews{
     [self override_layoutSubviews];
-    [self searchForBackButtonInSubviewsOfView:self];
     
-    // Find all of the UINavigationItems and then set the last one to be the back button renderer.
-    NSArray *barviews = [self searchForBackButtonInSubviewsOfView:self];
-    if(barviews.count > 0) {
-        UIView *backBarView = barviews[barviews.count - 1];
-        [backBarView createRenderer];
-        if([[backBarView renderer] isKindOfClass:[BYBarButtonItemRenderer class]]) {
-            BYBarButtonItemRenderer *renderer = (BYBarButtonItemRenderer*)backBarView.renderer;
-            [renderer setIsBackButtonRenderer:YES];
-            [renderer redraw];
-        }
-    }
-    
-    // Go through all of the items and check they have a renderer.
-    for (UINavigationItem *item in self.items) {
-        [self createRendererForItem:item.leftBarButtonItem];
-        for(UIBarButtonItem *bbi in item.rightBarButtonItems) {
-            [self createRendererForItem:bbi];
+    if (!self.isImmuneToBeautify) {
+        
+        // Find all of the UINavigationItems and then set the last one to be the back button renderer.
+        [self searchForBackButtonInSubviewsOfView:self];
+        NSArray *barviews = [self searchForBackButtonInSubviewsOfView:self];
+        if(barviews.count > 0) {
+            UIView *backBarView = barviews[barviews.count - 1];
+            [backBarView createRenderer];
+            if([[backBarView renderer] isKindOfClass:[BYBarButtonItemRenderer class]]) {
+                BYBarButtonItemRenderer *renderer = (BYBarButtonItemRenderer*)backBarView.renderer;
+                [renderer setIsBackButtonRenderer:YES];
+                [renderer redraw];
+            }
         }
         
-        [self createRendererForItem:item.rightBarButtonItem];
-        for(UIBarButtonItem *bbi in item.leftBarButtonItems) {
-            [self createRendererForItem:bbi];
+        // Go through all of the items and check they have a renderer.
+        for (UINavigationItem *item in self.items) {
+            [self createRendererForItem:item.leftBarButtonItem];
+            for(UIBarButtonItem *bbi in item.rightBarButtonItems) {
+                [self createRendererForItem:bbi];
+            }
+            
+            [self createRendererForItem:item.rightBarButtonItem];
+            for(UIBarButtonItem *bbi in item.leftBarButtonItems) {
+                [self createRendererForItem:bbi];
+            }
         }
     }
 }
