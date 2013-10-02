@@ -19,7 +19,6 @@
 
 +(BYSliderStyle*)defaultStyle {
     BYSliderStyle *style = [BYSliderStyle new];
-    style.backgroundColor = [UIColor clearColor];
     
     if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
         style.barHeightFraction = 0.1;
@@ -54,8 +53,6 @@
 
 -(id)copyWithZone:(NSZone *)zone {
     BYSliderStyle *copy = [super copyWithZone:zone];
-    copy.border = self.border.copy;
-    copy.backgroundColor = self.backgroundColor.copy;
     
     copy.barBorder = self.barBorder.copy;
     copy.barInnerShadows = self.barInnerShadows.copy;

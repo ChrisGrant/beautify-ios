@@ -19,13 +19,11 @@
 #import "BYSliderBarShadowLayer.h"
 #import "BYTheme.h"
 #import "BYControlRenderingLayer.h"
-#import "BYSliderBackgroundLayer.h"
 #import "BYSwitchBorderLayer.h"
 
 @implementation BYSliderRenderer {
     CAShapeLayer* _clipLayerShape;
     CALayer* _clipLayer;
-    BYSliderBackgroundLayer *_backgroundLayer;
     BYSliderBarShadowLayer *_barShadowLayer;
     BYSliderBarBorderLayer *_barBorderLayer;
     BYSliderMinimumTrackLayer *_minimumTrackLayer;
@@ -36,8 +34,6 @@
     BOOL _tapped;
     BOOL _panning;
     BOOL _panEnding;
-    CGPoint _panLocation;
-    
     BOOL _highlighted;
     
     float _thumbSize;
@@ -86,16 +82,6 @@
     slider.clipsToBounds = NO;
     
     CGRect bounds  = [self sliderBarSizeWithBounds:[self adaptedSlider].bounds andThickness:[self sliderThickness]];
-    
-    // create the background layer
-    _backgroundLayer = [[BYSliderBackgroundLayer alloc] initWithRenderer:self];
-    _backgroundLayer.masksToBounds = NO;
-    _backgroundLayer.frame = [self adaptedSlider].bounds;
-    [_backgroundLayer  setNeedsDisplay];
-    
-    // add the backgroundLayer
-    [slider.layer addSublayer:_backgroundLayer];
-    slider.layer.masksToBounds = NO;
     
     // create the shadow layer
     _barShadowLayer = [[BYSliderBarShadowLayer alloc] initWithRenderer:self];
@@ -197,7 +183,7 @@
     // compute the centre point of the thumb
     CGPoint thumbCentrePoint = CGPointMake(xOrigin, yOrigin);
     
-    thumbCentrePoint.x += _panLocation.x;
+    thumbCentrePoint.x += slider.value * slider.bounds.size.width;
     
     // limit the x range
     if (thumbCentrePoint.x <= slider.bounds.origin.x + _thumbSize) {
@@ -206,8 +192,6 @@
     else if (thumbCentrePoint.x >= slider.bounds.size.width) {
         thumbCentrePoint.x = slider.bounds.size.width;
     }
-    
-    [slider setValue:slider.maximumValue * ((thumbCentrePoint.x - _thumbSize) / (slider.bounds.size.width - _thumbSize))];
     
     // compute the overall frame
     return CGRectMake(thumbCentrePoint.x - _thumbSize, thumbCentrePoint.y - (_thumbSize / 2), _thumbSize, _thumbSize);
@@ -249,7 +233,6 @@
     CGRect bounds = [self sliderBarSizeWithBounds:[self adaptedSlider].bounds andThickness:[self sliderThickness]];
     
     // update the frames
-    _backgroundLayer.frame = [self adaptedSlider].bounds;
     [_barShadowLayer setFrame:bounds withWidthPadding:WIDTH_PADDING];
     _clipLayer.frame = bounds;
     _minimumTrackLayer.frame = [self  minimumTrackLayerFrame];
@@ -259,7 +242,6 @@
     
     _clipLayerShape.path = [BYSwitchBorderLayer borderPathForBounds:_barBorderLayer.bounds
                                                           andBorder:[self propertyValueForNameWithCurrentState:@"barBorder"]].CGPath;
-    [_backgroundLayer setNeedsDisplay];
     [_barShadowLayer setNeedsDisplay];
     [_minimumTrackLayer setNeedsDisplay];
     [_maximumTrackLayer setNeedsDisplay];
@@ -274,9 +256,8 @@
 }
 
 // the slider thickness is a fraction of the controls height
-- (float)sliderThickness {
-    return [self adaptedSlider].bounds.size.height *
-            [[self propertyValueForNameWithCurrentState:@"barHeightFraction"] floatValue];
+-(float)sliderThickness {
+    return [self adaptedSlider].bounds.size.height * [[self propertyValueForNameWithCurrentState:@"barHeightFraction"] floatValue];
 }
 
 -(id)styleFromTheme:(BYTheme*)theme {
@@ -293,7 +274,9 @@
 #pragma mark - User interaction handling
 
 -(void)panning:(UIPanGestureRecognizer*)gesture {
-    _panLocation = [gesture locationInView:self.adaptedSlider];
+    CGPoint panLocation = [gesture locationInView:self.adaptedSlider];
+    
+    ((UISlider*)self.adaptedView).value = panLocation.x / ((UIView*)self.adaptedView).bounds.size.width;
     
     if (gesture.state == UIGestureRecognizerStateBegan) {
         _panning = YES;
@@ -318,15 +301,6 @@
 }
 
 #pragma mark - Style property setters
-
-// border
--(void)setBorder:(BYBorder*)border forState:(UIControlState)state {
-    [self setPropertyValue:border forName:@"border" forState:state];
-}
-
--(void)setBackgroundColor:(UIColor*)backgroundColor forState:(UIControlState)state {
-    [self setPropertyValue:backgroundColor forName:@"backgroundColor" forState:state];
-}
 
 // slider bar
 

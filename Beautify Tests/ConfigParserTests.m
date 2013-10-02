@@ -415,9 +415,7 @@
 -(void)testSliderStyleWithValidDict {
     BYSliderStyle *sliderStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"ValidSliderStyle"
                                                                                                andClass:[BYSliderStyle class]];
-    
-    [self assertBorder:sliderStyle.border hasWidth:1 color:[UIColor redColor] andCornerRadius:15];
-    XCTAssert([sliderStyle.backgroundColor isEqualToColor:[UIColor blueColor]], @"BG should be blue");
+
     [self assertBorder:sliderStyle.barBorder hasWidth:2 color:[UIColor redColor] andCornerRadius:10];
     
     [self assertShadows:sliderStyle.barInnerShadows hasOneShadowWithColor:[UIColor blackColor] radius:4 andOffset:CGSizeZero];
@@ -452,8 +450,6 @@
 -(void)testSliderStyleWithPartialDict {
     BYSliderStyle *sliderStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialSliderStyle"
                                                                                                andClass:[BYSliderStyle class]];
-    [self assertBorder:sliderStyle.border hasWidth:2 color:[UIColor blackColor] andCornerRadius:9.0f];
-    XCTAssert([sliderStyle.backgroundColor isEqualToColor:[UIColor whiteColor]], @"BG should be white");
     XCTAssertEqual(sliderStyle.barHeightFraction, 0.2f, @"Bar Height fraction should be 0.2");
 }
 

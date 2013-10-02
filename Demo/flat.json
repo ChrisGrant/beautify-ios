@@ -10,12 +10,6 @@
                 }
             },
             "barHeightFraction" : 0.5,
-            "backgroundColor": "#00000000",
-            "border": {
-                "width": "0",
-                "color": "#000000",
-                "cornerRadius": "10"
-            },
             "barBorder": {
                 "width": "0",
                 "color": "#000000",

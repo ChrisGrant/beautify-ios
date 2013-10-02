@@ -21,10 +21,6 @@
  */
 @interface BYSliderStyle : BYViewStyle
 
-// general control customizers
-@property BYBorder *border;
-@property UIColor *backgroundColor;
-
 // slider bar customizers
 @property BYBorder<Optional> *barBorder;
 @property NSArray<BYShadow, Optional> *barInnerShadows;
