@@ -25,7 +25,6 @@
     if (self = [super init]) {
         _adaptedView = view;
         _style = [self styleFromTheme:theme];
-        _customizersForStateMap = [NSMutableDictionary new];
         
         [self setUpStyleCustomizersForControlStates];
 
@@ -72,6 +71,8 @@
 }
 
 -(void)setUpStyleCustomizersForControlStates {
+    _customizersForStateMap = [NSMutableDictionary new];
+
     BYStyleCustomizer *highlightedCustomizer = [self createCustomizersForState:UIControlStateHighlighted];
     _customizersForStateMap[DescriptionForState(UIControlStateHighlighted)] = highlightedCustomizer;
     BYStyleCustomizer *normalCustomizer = [self createCustomizersForState:UIControlStateNormal];

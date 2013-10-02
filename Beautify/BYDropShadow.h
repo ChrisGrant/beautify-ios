@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSONModel.h"
 
-@interface BYDropShadow : NSObject <NSCopying>
+@interface BYDropShadow : JSONModel <NSCopying>
 
 @property UIColor *color;
 

@@ -19,7 +19,7 @@
 
 @property BYText *title;
 
-@property BYTextShadow* titleShadow;
+@property BYTextShadow<Optional> *titleShadow;
 
 +(BYLabelStyle*)defaultStyle;
 

@@ -7,7 +7,6 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "BYConfigParser.h"
 #import "BYButtonStyle.h"
 #import "UIColor+Comparison.h"
 #import "BYGradientStop.h"
@@ -21,6 +20,8 @@
 #import "BYSliderStyle.h"
 #import "BYBarButtonStyle.h"
 #import "BYImageViewStyle.h"
+#import "BYTheme.h"
+#import "BYSwitchStyle.h"
 
 @interface ConfigParserTests : XCTestCase
 @end
@@ -32,14 +33,14 @@
 
 -(void)testConfigParserWithNilDictionary {
     BYTheme *theme;
-    XCTAssertNoThrow(theme = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYTheme class] fromDict:nil],
+    XCTAssertNoThrow(theme = [[BYTheme alloc] initWithDictionary:nil error:nil],
                      @"Shouldn't throw with a nil dictionary");
     XCTAssertNil(theme, @"Theme should be nil");
 }
 
 -(void)testConfigParserWithEmptyDictonary {
     BYTheme *theme;
-    XCTAssertNoThrow(theme = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYTheme class] fromDict:@{}],
+    XCTAssertNoThrow(theme = [[BYTheme alloc] initWithDictionary:@{} error:nil],
                      @"Shouldn't throw with an empty dictionary");
     [self assertDefaultTheme:theme];
 }
@@ -47,7 +48,7 @@
 -(void)testConfigParserWithInvalidDictionary {
     BYTheme *theme;
     NSDictionary *dict = @{@"invalid": @"dictionary", @"still": @{@"Invalid": @"dict", @"theme": @[]}};
-    XCTAssertNoThrow(theme = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYTheme class] fromDict:dict],
+    XCTAssertNoThrow(theme = [[BYTheme alloc] initWithDictionary:dict error:nil],
                      @"Shouldn't throw with an invalid dictionary");
     [self assertDefaultTheme:theme];
 }
@@ -73,7 +74,7 @@
 }
 
 -(void)testButtonStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYButtonStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYButtonStyle class]];
 }
 
 -(void)testButtonStyleWithValidDict {
@@ -96,7 +97,6 @@
     XCTAssertEqual(setter.state, UIControlStateHighlighted, @"Should be for the highlighted state");
     XCTAssert([setter.propertyName isEqualToString:@"title"], @"Should be for the title");
     
-    XCTAssertEqual([setter.value class], [BYText class], @"Should be of type BYText");
     BYText *text = setter.value;
     [self assertText:text hasName:@"HelveticaNeue-Bold" size:14.0f andColor:[UIColor whiteColor]];
 }
@@ -119,7 +119,7 @@
 }
 
 -(void)testSwitchStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYSwitchStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYSwitchStyle class]];
 }
 
 -(void)testSwitchStyleWithValidDict {
@@ -196,7 +196,7 @@
 }
 
 -(void)testLabelStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYLabelStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYLabelStyle class]];
 }
 
 -(void)testLabelStyleWithValidDict {
@@ -209,8 +209,8 @@
 -(void)testLabelStyleWithPartialDict {
     BYLabelStyle *labelStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialLabelStyle"
                                                                                        andClass:[BYLabelStyle class]];
-    [self assertText:labelStyle.title hasName:nil size:0 andColor:[UIColor whiteColor]];
-    [self assertTextShadow:labelStyle.titleShadow hasColor:[UIColor blueColor] andOffset:CGSizeZero];
+    [self assertText:labelStyle.title hasName:@"HelveticaNeue-Bold" size:10.0f andColor:[UIColor whiteColor]];
+    [self assertTextShadow:labelStyle.titleShadow hasColor:[UIColor blueColor] andOffset:CGSizeMake(1, 2)];
 }
 
 #pragma mark - View Controller Testing
@@ -220,7 +220,7 @@
 }
 
 -(void)testViewControllerStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYLabelStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYLabelStyle class]];
 }
 
 -(void)testViewControllerStyleWithValidDict {
@@ -244,7 +244,7 @@
 }
 
 -(void)testTextFieldStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYTextFieldStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYTextFieldStyle class]];
 }
 
 -(void)testTextFieldStyleWithValidDict {
@@ -266,7 +266,7 @@
 -(void)testTextFieldStyleWithPartialDict {
     BYTextFieldStyle *textStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialTextFieldStyle"
                                                                                           andClass:[BYTextFieldStyle class]];
-    [self assertText:textStyle.title hasName:@"HelveticaNeue-Bold" size:0 andColor:[UIColor redColor]];
+    [self assertText:textStyle.title hasName:@"HelveticaNeue-Bold" size:12.0f andColor:[UIColor redColor]];
     
     XCTAssert([textStyle.backgroundColor isEqualToColor:[UIColor blueColor]], @"Background should be black");
     
@@ -280,7 +280,7 @@
 }
 
 -(void)testNavBarStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYNavigationBarStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYNavigationBarStyle class]];
 }
 
 -(void)testNavBarStyleWithValidDict {
@@ -313,7 +313,7 @@
 }
 
 -(void)testTableCellStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYTableViewCellStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYTableViewCellStyle class]];
 }
 
 -(void)testTableCellStyleWithValidDict {
@@ -349,7 +349,7 @@
 }
 
 -(void)testImageViewStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYImageViewStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYImageViewStyle class]];
 }
 
 -(void)testImageViewStyleWithValidDict {
@@ -373,7 +373,7 @@
 }
 
 -(void)testBarButtonStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYBarButtonStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYBarButtonStyle class]];
 }
 
 -(void)testBarButtonStyleWithValidDict {
@@ -409,7 +409,7 @@
 }
 
 -(void)testSliderStyleWithEmptyDict {
-    [self assertStyleIsNotNilWithEmptyDictForClass:[BYSliderStyle class]];
+    [self assertStyleIsNilWithEmptyDictForClass:[BYSliderStyle class]];
 }
 
 -(void)testSliderStyleWithValidDict {
@@ -420,6 +420,8 @@
     
     [self assertShadows:sliderStyle.barInnerShadows hasOneShadowWithColor:[UIColor blackColor] radius:4 andOffset:CGSizeZero];
     [self assertShadows:sliderStyle.barOuterShadows hasOneShadowWithColor:[UIColor redColor] radius:0 andOffset:CGSizeMake(0, -2)];
+    
+    XCTAssertEqual((float)sliderStyle.barHeightFraction, 1.0f, @"Bar Height Fraction should be 1");
     
     XCTAssert([sliderStyle.minimumTrackColor isEqualToColor:[UIColor blackColor]], @"Minimum track should be black");
     [self assertGradient:sliderStyle.minimumTrackBackgroundGradient
@@ -448,9 +450,7 @@
 -(void)testSliderStyleWithPartialDict {
     BYSliderStyle *sliderStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialSliderStyle"
                                                                                                andClass:[BYSliderStyle class]];
-    XCTAssert([sliderStyle.minimumTrackColor isEqualToColor:[UIColor blackColor]], @"Minimum track color should be black");
-
-    [self assertBorder:sliderStyle.thumbBorder hasWidth:1 color:[UIColor greenColor] andCornerRadius:15.0f];
+    XCTAssertEqual(sliderStyle.barHeightFraction, 0.2f, @"Bar Height fraction should be 0.2");
 }
 
 #pragma mark - Helper Methods
@@ -460,7 +460,7 @@
     XCTAssertNotNil(dictionary, @"Dictionary should not be nil with valid JSON. Check file name and if the file is in the test bundle");
     
     id style;
-    XCTAssertNoThrow(style = [BYConfigParser parseStyleObjectPropertiesOnClass:class fromDict:dictionary],
+    XCTAssertNoThrow(style = [[class alloc] initWithDictionary:dictionary error:nil],
                      @"Shouldn't throw with valid JSON");
     XCTAssertNotNil(style, @"Shouldn't be nil with valid JSON");
     return style;
@@ -468,16 +468,15 @@
 
 -(void)assertStyleIsNilWithNilDictForClass:(Class)class {
     id style;
-    XCTAssertNoThrow(style = [BYConfigParser parseStyleObjectPropertiesOnClass:class fromDict:nil], @"Shouldn't throw");
+    XCTAssertNoThrow(style = [[class alloc] initWithDictionary:nil error:nil], @"Shouldn't throw");
     XCTAssertNil(style, @"Style should be nil for class %@", class);
 }
 
--(void)assertStyleIsNotNilWithEmptyDictForClass:(Class)class {
+-(void)assertStyleIsNilWithEmptyDictForClass:(Class)class {
     id style;
-    XCTAssertNoThrow(style = [BYConfigParser parseStyleObjectPropertiesOnClass:class
-                                                                      fromDict:@{}]);
-    XCTAssertNotNil(style, @"Style should not be nil");
-    XCTAssertEqual([style class], class, @"Class should be the same");
+    XCTAssertNoThrow(style = [[class alloc] initWithDictionary:@{} error:nil], @"Shouldn't throw");
+
+    XCTAssertNil(style, @"Style should not be nil");
 }
 
 -(void)assertShadows:(NSArray*)array hasOneShadowWithColor:(UIColor*)color radius:(float)radius andOffset:(CGSize)offset {
@@ -502,11 +501,11 @@
     
     BYGradientStop *stop1 = gradient.stops[0];
     XCTAssert([stop1.color isEqualToColor:color1], @"Stop 1 color should be equal");
-    XCTAssertEqual(stop1.stop, position1, @"Position 1 should be equal");
+    XCTAssertEqual(stop1.position, position1, @"Position 1 should be equal");
 
     BYGradientStop *stop2 = gradient.stops[1];
     XCTAssert([stop2.color isEqualToColor:color2], @"Stop 2 color should be equal");
-    XCTAssertEqual(stop2.stop, position2, @"Position 2 should be equal");
+    XCTAssertEqual(stop2.position, position2, @"Position 2 should be equal");
 }
 
 -(void)assertBorder:(BYBorder*)border hasWidth:(float)width color:(UIColor*)color andCornerRadius:(float)radius {

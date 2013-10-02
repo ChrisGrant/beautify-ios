@@ -8,14 +8,15 @@
 
 #import "BYViewStyle.h"
 #import <UIKit/UIKit.h>
+#import "BYShadow.h"
 
 @class BYBorder;
 
 @interface BYImageViewStyle : BYViewStyle
 
 @property BYBorder *border;
-@property NSArray *innerShadows;
-@property NSArray *outerShadows;
+@property NSArray<BYShadow, Optional> *innerShadows;
+@property NSArray<BYShadow, Optional> *outerShadows;
 
 +(BYImageViewStyle*)defaultStyle;
 

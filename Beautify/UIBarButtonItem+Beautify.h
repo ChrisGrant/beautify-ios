@@ -11,12 +11,7 @@
 
 @interface UIBarButtonItem (Beautify)
 
-/*
- Return the renderer which enchances the UI for this view controller.
-*/
-@property (readonly) __weak BYBarButtonItemRenderer *renderer;
-
--(void)createRenderer;
+-(BYBarButtonItemRenderer*)renderer;
 
 /*
  Whether this view is 'immune' to the globally applied theme, i.e. it will maintain the style defined by the

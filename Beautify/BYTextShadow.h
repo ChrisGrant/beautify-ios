@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSONModel.h"
 
-@interface BYTextShadow : NSObject <NSCopying>
+@interface BYTextShadow : JSONModel <NSCopying>
 
 @property CGSize offset;
 
-@property UIColor *color;
+@property UIColor<Optional> *color;
 
 /*
  Create a text shadow with the specified offset and color.

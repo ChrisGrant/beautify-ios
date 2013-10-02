@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSONModel.h"
 
 /*
  A style property representing the font for the text on a UIView.
  */
-@interface BYFont : NSObject <NSCopying>
+@interface BYFont : JSONModel <NSCopying>
 
 /*
  The font name.

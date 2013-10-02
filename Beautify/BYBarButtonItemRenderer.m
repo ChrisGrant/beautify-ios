@@ -109,7 +109,7 @@
     
     if(backgroundImage) {
         UIGraphicsBeginImageContext(newSize);
-        [backgroundImage.image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+        [backgroundImage.data drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
         newImage = UIGraphicsGetImageFromCurrentImageContext();
         UIGraphicsEndImageContext();
     }

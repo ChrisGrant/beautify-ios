@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JSONModel.h"
 
 @class BYButtonStyle;
 @class BYSwitchStyle;
@@ -23,7 +24,7 @@
  * Represents a rendering configuration, typically containing a number of
  * style configurations for a range of UI elements.
  */
-@interface BYTheme : NSObject <NSCopying>
+@interface BYTheme : JSONModel <NSCopying>
 
 @property BYButtonStyle *buttonStyle;
 @property BYSwitchStyle *switchStyle;
@@ -34,6 +35,7 @@
 @property BYTableViewCellStyle *tableViewCellStyle;
 @property BYImageViewStyle *imageViewStyle;
 @property BYBarButtonStyle *barButtonItemStyle;
+@property BYBarButtonStyle *backBarButtonItemStyle;
 @property BYSliderStyle *sliderStyle;
 
 +(BYTheme*)fromFile:(NSString*)file;

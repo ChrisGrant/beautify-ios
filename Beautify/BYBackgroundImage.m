@@ -12,8 +12,36 @@
 
 -(id)copyWithZone:(NSZone *)zone {
     BYBackgroundImage *copy = [[BYBackgroundImage allocWithZone:zone] init];
-    copy.image = self.image.copy;
+    copy.data = self.data.copy;
     return copy;
+}
+
+-(instancetype)initWithDictionary:(NSDictionary *)dict error:(NSError *__autoreleasing *)err {
+    id style = [super initWithDictionary:dict error:err];
+    
+    BYBackgroundImage *bgImage = (BYBackgroundImage*)style;
+    [bgImage setContentMode:[BYBackgroundImage contentModeFromDict:dict]];
+    return style;
+}
+
++(BOOL)propertyIsOptional:(NSString *)propertyName {
+    return [[propertyName lowercaseString] isEqualToString:@"contentMode"];
+}
+
++(BYImageContentMode)contentModeFromDict:(NSDictionary*)dict {
+    if([[dict allKeys] containsObject:@"contentMode"]) {
+        NSString *contentString = [dict[@"contentMode"] lowercaseString];
+        if([contentString isEqualToString:@"fill"]) {
+            return BYImageContentModeFill;
+        }
+        else if([contentString isEqualToString:@"aspectfill"]) {
+            return BYImageContentModeAspectFill;
+        }
+        else if([contentString isEqualToString:@"tile"]) {
+            return BYImageContentModeTile;
+        }
+    }
+    return BYImageContentModeFill; // Default to fill.
 }
 
 @end

@@ -11,19 +11,18 @@
 #import "BYFont.h"
 #import "BYText.h"
 #import "BYDropShadow.h"
-#import "UIColor+HexColors.h"
 
 @class BYText, BYTextShadow, BYGradient;
 
 @interface BYNavigationBarStyle : BYViewStyle
 
-@property UIColor* backgroundColor;
-@property BYGradient *backgroundGradient;
+@property UIColor<Optional> *backgroundColor;
+@property BYGradient<Optional> *backgroundGradient;
 
 @property BYText *title;
-@property BYTextShadow* titleShadow;
+@property BYTextShadow<Optional> *titleShadow;
 
-@property BYDropShadow *dropShadow;
+@property BYDropShadow<Optional> *dropShadow;
 
 +(BYNavigationBarStyle*)defaultStyle;
 

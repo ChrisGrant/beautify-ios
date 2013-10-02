@@ -13,7 +13,6 @@
 #import "BYShadow.h"
 #import "BYGradient.h"
 #import "BYBackgroundImage.h"
-#import "UIColor+HexColors.h"
 
 @class BYBorder;
 
@@ -23,14 +22,14 @@
 @property BYText *title;
 
 // background
-@property UIColor *backgroundColor;
-@property BYGradient *backgroundGradient;
-@property BYBackgroundImage *backgroundImage;
+@property UIColor<Optional> *backgroundColor;
+@property BYGradient<Optional> *backgroundGradient;
+@property BYBackgroundImage<Optional> *backgroundImage;
 
 // border
-@property BYBorder *border;
-@property NSArray *innerShadows;
-@property NSArray *outerShadows;
+@property BYBorder<Optional> *border;
+@property NSArray<BYShadow, Optional> *innerShadows;
+@property NSArray<BYShadow, Optional> *outerShadows;
 
 +(BYTextFieldStyle*)defaultStyle;
 

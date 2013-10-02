@@ -16,6 +16,8 @@
 #import "UIView+Beautify.h"
 #import "NSObject+Beautify.h"
 
+#import "UIBarButtonItem+Beautify.h"
+
 @implementation UIViewController (Beautify)
 
 -(BYStyleRenderer*)renderer {
@@ -27,6 +29,10 @@
 -(void)override_viewDidLoad {
     if([self shouldCreateRenderer]) {
         [self createRenderer];
+        
+        UIBarButtonItem *i = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStylePlain
+                                                             target:nil action:nil];
+        self.navigationItem.backBarButtonItem = i;
     }
     [self override_viewDidLoad];
 }

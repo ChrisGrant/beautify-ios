@@ -28,6 +28,7 @@
 #import "BYLabelRenderer.h"
 #import "BYButtonRenderer.h"
 #import "BYImageViewRenderer.h"
+#import "BYBarButtonItemRenderer.h"
 
 // theme and styles
 #import "BYTheme.h"

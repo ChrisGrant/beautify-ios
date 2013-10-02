@@ -31,17 +31,24 @@
     [self.imageView setImmuneToBeautify:NO];
     
     [self.descriptionLabel setText:self.beautifyDescripiton];
+    UIBarButtonItem *one = [[UIBarButtonItem alloc] initWithTitle:@"1"
+                                                            style:UIBarButtonItemStylePlain
+                                                           target:nil
+                                                           action:nil];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    UIBarButtonItem *two = [[UIBarButtonItem alloc] initWithTitle:@"2"
+                                                            style:UIBarButtonItemStylePlain
+                                                           target:nil
+                                                           action:nil];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Bar Button"
-                                                                              style:UIBarButtonItemStylePlain
-                                                                             target:nil
-                                                                             action:nil];
+    UIBarButtonItem *three = [[UIBarButtonItem alloc] initWithTitle:@"3"
+                                                            style:UIBarButtonItemStylePlain
+                                                           target:nil
+                                                           action:nil];
     
-    // This is used for the custom view controller. We customise some of the controls in code below.
+    self.navigationItem.rightBarButtonItems = @[one, two, three];
+    
     if(self.applyCustomStyles) {
-    
         self.customStyleSwitch.hidden = NO;
         [self.customStyleSwitch setDesiredSwitchSize:CGSizeMake(100, 30)];
         BYSwitchState *offState = [BYSwitchState new];
@@ -102,6 +109,15 @@
 
 -(NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
     return 100;
+}
+
+-(IBAction)buttonTapped:(UIButton *)sender {
+    UIViewController *vc = [UIViewController new];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
+    [button setTitle:@"Push View Controller" forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    [vc.view addSubview:button];
+    [[self navigationController] pushViewController:vc animated:YES];
 }
 
 @end

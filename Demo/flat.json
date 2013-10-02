@@ -1,5 +1,5 @@
 {
-    "schemaVersion": "1.2",
+    "schemaVersion": "1.3",
     "theme": {
         "sliderStyle": {
             "title": {
@@ -132,7 +132,7 @@
                         "size": 0
                     }
                 },
-                "text": " ",
+                "text": "",
                 "backgroundColor": "#34495E",
                 "textShadow": {
                     "color": "#00000000",
@@ -150,7 +150,7 @@
                         "size": 0
                     }
                 },
-                "text": " ",
+                "text": "",
                 "backgroundColor": "#888888",
                 "textShadow": {
                     "color": "#00000000",
@@ -288,23 +288,58 @@
             "innerShadows": [],
             "outerShadows": [],
             "stateSetters": [
-                {
-                    "propertyName": "backgroundColor",
-                    "state": "highlighted",
-                    "value": "#16A085"
-                },
-                {
-                    "state": "highlighted",
-                    "propertyName": "title",
-                    "value": {
-                        "color": "#FFFFFF",
-                        "font": {
-                            "name": "ArialMT",
-                            "size": 14
-                        }
-                    }
+                             {
+                             "propertyName": "backgroundColor",
+                             "state": "highlighted",
+                             "value": "#16A085"
+                             },
+                             {
+                             "state": "highlighted",
+                             "propertyName": "title",
+                             "value": {
+                             "color": "#FFFFFF",
+                             "font": {
+                             "name": "ArialMT",
+                             "size": 14
+                             }
+                             }
+                             }
+                             ]
+        },
+        "backBarButtonItemStyle": {
+            "title": {
+                "color": "#FFFFFF",
+                "font": {
+                    "name": "ArialMT",
+                    "size": 14
                 }
-            ]
+            },
+            "backgroundColor": "#1ABC9C",
+            "border": {
+                "width": "0",
+                "color": "#000000",
+                "cornerRadius": "5"
+            },
+            "innerShadows": [],
+            "outerShadows": [],
+            "stateSetters": [
+                             {
+                             "propertyName": "backgroundColor",
+                             "state": "highlighted",
+                             "value": "#16A085"
+                             },
+                             {
+                             "state": "highlighted",
+                             "propertyName": "title",
+                             "value": {
+                             "color": "#FFFFFF",
+                             "font": {
+                             "name": "ArialMT",
+                             "size": 14
+                             }
+                             }
+                             }
+                             ]
         }
     }
 }

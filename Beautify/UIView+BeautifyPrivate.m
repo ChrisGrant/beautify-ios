@@ -19,6 +19,7 @@
 #import "BYBeautify_Private.h"
 #import "BYThemeManager_Private.h"
 #import "NSObject+Beautify.h"
+#import "BYBarButtonItemRenderer.h"
 
 @implementation UIView (BeautifyPrivate)
 
@@ -50,6 +51,9 @@
         }
         else if ([self isKindOfClass:[UITableView class]]) {
             renderer = [[BYTableViewRenderer alloc] initWithView:self theme:[[BYThemeManager instance] currentTheme]];
+        }
+        else if ([self class] == NSClassFromString(@"UINavigationButton")) {
+            renderer = [[BYBarButtonItemRenderer alloc] initWithView:self theme:[[BYThemeManager instance] currentTheme]];
         }
         else if ([self isKindOfClass:[UIButton class]] && [self isChildOfTableViewCell]) {
             // Don't style buttons that are inside of tableviewcells (yet).
@@ -160,8 +164,12 @@
         [names addObjectsFromArray:@[@"UINavigationBar", @"_UIToolbarBackground", @"UILabel"]];
     }
     
-    if([self isKindOfClass:NSClassFromString(@"UINavigationButton")]){
+    if([[self class] isKindOfClass:NSClassFromString(@"UINavigationButton")]){
         [names addObject:@"UINavigationButton"];
+    }
+    
+    if([self class] == NSClassFromString(@"UINavigationItemView")) {
+        [names addObject:@"UINavigationItemView"];
     }
     
     return names;

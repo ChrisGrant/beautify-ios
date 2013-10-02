@@ -26,4 +26,8 @@
     return copy;
 }
 
++(BOOL)propertyIsOptional:(NSString *)propertyName {
+    return [propertyName.lowercaseString isEqualToString:@"cornerradius"];
+}
+
 @end

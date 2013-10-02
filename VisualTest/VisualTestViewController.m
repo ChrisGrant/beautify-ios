@@ -81,11 +81,6 @@
     // Set properties for UIBarButton UIControlStateNormal
     BYBarButtonItemRenderer *renderer = customizedButtonRight.renderer;
 
-    BYText *text = [BYText new];
-    [text setFont:[BYFont fontWithName:@"Copperplate"]];
-    [text setColor:[UIColor redColor]];
-    [renderer setTitleStyle:text forState:UIControlStateNormal];
-
     BYBorder *border = [BYBorder new];
     border.width = 5.0f;
     border.color = [UIColor orangeColor];
@@ -96,12 +91,6 @@
     [renderer setInnerShadows:@[innerShadow] forState:UIControlStateNormal];
     BYShadow *outerShadow = [BYShadow shadowWithOffset:CGSizeMake(0, 0) radius:20 color:[UIColor redColor]];
     [renderer setOuterShadows:@[outerShadow] forState:UIControlStateNormal];
-    
-    // Set properties for UIBarButton UIControlStateHighlighted    
-    text = [BYText new];
-    [text setFont:[BYFont fontWithName:@"AmericanTypewriter"]];
-    [text setColor:[UIColor magentaColor]];
-    [renderer setTitleStyle:text forState:UIControlStateHighlighted];
     
     border = [BYBorder new];
     border.width = 5.0f;
