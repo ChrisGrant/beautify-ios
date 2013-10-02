@@ -23,7 +23,6 @@
 #import "BYTheme.h"
 #import "BYSwitchStyle.h"
 
-
 @interface ConfigParserTests : XCTestCase
 @end
 
