@@ -7,7 +7,6 @@
 //
 
 #import "BYTheme.h"
-#import "BYConfigParser.h"
 #import "BYSwitchStyle.h"
 #import "BYLabelStyle.h"
 #import "BYViewControllerStyle.h"
@@ -24,12 +23,11 @@
 
 +(BYTheme *)fromDictionary:(NSDictionary *)dict {
     NSDictionary *themeDict = dict[@"theme"];
-    BYTheme* theme = [BYConfigParser parseStyleObjectPropertiesOnClass:[BYTheme class]
-                                                              fromDict:themeDict];
+    BYTheme* theme = [[BYTheme alloc] initWithDictionary:themeDict error:nil];
     return theme;
 }
 
-+(BYTheme *)fromFile:(NSString *)file {
++(BYTheme*)fromFile:(NSString *)file {
     NSString* filePath = [[NSBundle mainBundle] pathForResource:file ofType:@"json"];
     NSData* json = [NSData dataWithContentsOfFile:filePath];
     
@@ -46,16 +44,35 @@
             NSString *fileVersion = dict[@"schemaVersion"];
             
             // Compare it to the current version. If they aren't equal, we can't continue and should log an error.
-            if([fileVersion isEqualToString:JSON_SCHEMA_VERSION]) {
-                theme = [self fromDictionary:dict];
+            if(![fileVersion isEqualToString:JSON_SCHEMA_VERSION]) {
+                NSLog(@"[BYTheme fromFile] failed - The version of the file (%@) was invalid. Expecting %@", fileVersion, JSON_SCHEMA_VERSION);
+                return nil;
+            }
+            
+            NSError *parseError;
+            theme = [[BYTheme alloc] initWithDictionary:dict[@"theme"] error:&parseError];
+            if(parseError) {
+                NSLog(@"Parse error when reading the JSON - %@", parseError.debugDescription);
+                return nil;
             }
             else {
-                NSLog(@"[BYTheme fromFile] failed - The version of the file (%@) was invalid. Expecting %@", fileVersion, JSON_SCHEMA_VERSION);
+                return theme;
             }
         }
     }
     else {
         NSLog(@"[BYTheme fromFile] failed - Unable to load file");
+    }
+    return theme;
+}
+
+-(instancetype)initWithDictionary:(NSDictionary *)dict error:(NSError *__autoreleasing *)err {
+    if(!dict)
+        return nil;
+    
+    BYTheme *theme = [super initWithDictionary:dict error:err];
+    if(theme == nil) {
+        theme = [BYTheme new];
     }
     return theme;
 }

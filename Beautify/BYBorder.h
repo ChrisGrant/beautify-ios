@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSONModel.h"
 
 /*
  A style property representing the border for a UIView.
  */
-@interface BYBorder : NSObject <NSCopying>
+@interface BYBorder : JSONModel <NSCopying>
 
 /*
  The border width.
@@ -26,7 +27,7 @@
 /*
  The color of the border.
  */
-@property UIColor *color;
+@property UIColor<Optional> *color;
 
 /*
  Create a BYBorder with the specified properties.

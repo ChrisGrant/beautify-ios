@@ -78,7 +78,7 @@
         // Update the background image
         _backgroundImageView.hidden = NO;
         _backgroundImageView.frame = vc.view.bounds;
-        _backgroundImageView.image = style.backgroundImage.image;
+        _backgroundImageView.image = style.backgroundImage.data;
     }
     
     if (backgroundColor == nil) {

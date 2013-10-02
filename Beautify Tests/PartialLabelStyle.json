@@ -1,8 +1,16 @@
 {
     "title": {
-        "color": "#FFFFFF"
+        "color": "#FFFFFF",
+        "font": {
+            "name": "HelveticaNeue-Bold",
+            "size": 10
+        }
     },
     "titleShadow": {
-        "color": "#0000FF"
+        "color": "#0000FF",
+        "offset": {
+            "x":1,
+            "y":2
+        }
     }
 }

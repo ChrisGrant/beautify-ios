@@ -12,6 +12,7 @@
 #import "BYFont.h"
 #import "BYGradient.h"
 #import "BYSwitchState.h"
+#import "BYShadow.h"
 
 @class Font, Border;
 
@@ -25,28 +26,28 @@
 @property UIColor *backgroundColor;
 
 // slider bar customizers
-@property BYBorder *barBorder;
-@property NSArray *barInnerShadows;
-@property NSArray *barOuterShadows;
+@property BYBorder<Optional> *barBorder;
+@property NSArray<BYShadow, Optional> *barInnerShadows;
+@property NSArray<BYShadow, Optional> *barOuterShadows;
 @property float barHeightFraction;
 
 // minimum track customizers
-@property UIColor *minimumTrackColor;
-@property UIImage *minimumTrackImage;
-@property BYGradient *minimumTrackBackgroundGradient;
+@property UIColor<Optional> *minimumTrackColor;
+@property UIImage<Optional> *minimumTrackImage;
+@property BYGradient<Optional> *minimumTrackBackgroundGradient;
 
 // maximum track customizers
-@property UIColor *maximumTrackColor;
-@property UIImage *maximumTrackImage;
-@property BYGradient *maximumTrackBackgroundGradient;
+@property UIColor<Optional> *maximumTrackColor;
+@property UIImage<Optional> *maximumTrackImage;
+@property BYGradient<Optional> *maximumTrackBackgroundGradient;
 
 // thumb
-@property BYBorder *thumbBorder;
-@property UIColor *thumbBackgroundColor;
-@property UIImage *thumbImage;
-@property BYGradient *thumbBackgroundGradient;
-@property NSArray *thumbInnerShadows;
-@property NSArray *thumbOuterShadows;
+@property BYBorder<Optional> *thumbBorder;
+@property UIColor<Optional> *thumbBackgroundColor;
+@property UIImage<Optional> *thumbImage;
+@property BYGradient<Optional> *thumbBackgroundGradient;
+@property NSArray<BYShadow, Optional> *thumbInnerShadows;
+@property NSArray<BYShadow, Optional> *thumbOuterShadows;
 
 +(BYSliderStyle*)defaultStyle;
 

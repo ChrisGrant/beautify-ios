@@ -12,6 +12,7 @@
 #import "BYFont.h"
 #import "BYGradient.h"
 #import "BYSwitchState.h"
+#import "BYShadow.h"
 
 @class Font, Border;
 
@@ -25,20 +26,22 @@
 @property BYSwitchState *offState;
 
 // Background
-@property UIColor *highlightColor;
+@property UIColor<Optional> *highlightColor;
 
 // Border
-@property BYBorder *border;
-@property NSArray *innerShadows;
-@property NSArray *outerShadows;
+@property BYBorder<Optional> *border;
+@property NSArray<BYShadow, Optional> *innerShadows;
+@property NSArray<BYShadow, Optional> *outerShadows;
 
 // Thumb
-@property BYBorder *thumbBorder;
-@property UIColor *thumbBackgroundColor;
-@property BYGradient *thumbBackgroundGradient;
-@property NSArray *thumbInnerShadows;
-@property NSArray *thumbOuterShadows;
-@property UIImage *thumbImage, *trackLayerImage, *borderLayerImage;
+@property BYBorder<Optional> *thumbBorder;
+@property UIColor<Optional> *thumbBackgroundColor;
+@property BYGradient<Optional> *thumbBackgroundGradient;
+@property NSArray<BYShadow, Optional> *thumbInnerShadows;
+@property NSArray<BYShadow, Optional> *thumbOuterShadows;
+@property UIImage<Optional> *thumbImage;
+@property UIImage<Optional> *trackLayerImage;
+@property UIImage<Optional> *borderLayerImage;
 @property CGFloat thumbInset;
 
 +(BYSwitchStyle*)defaultStyle;

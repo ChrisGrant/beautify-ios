@@ -18,21 +18,21 @@
 
 // text
 @property BYText *title;
-@property BYTextShadow* titleShadow;
+@property BYTextShadow<Optional> *titleShadow;
 
 // background
-@property UIColor *backgroundColor;
-@property BYGradient *backgroundGradient;
-@property BYBackgroundImage *backgroundImage;
+@property UIColor<Optional> *backgroundColor;
+@property BYGradient<Optional> *backgroundGradient;
+@property BYBackgroundImage<Optional> *backgroundImage;
 
 // border
-@property BYBorder *border;
-@property NSArray *innerShadows;
-@property NSArray *outerShadows;
+@property BYBorder<Optional> *border;
+@property NSArray<BYShadow, Optional> *innerShadows;
+@property NSArray<BYShadow, Optional> *outerShadows;
 
 // accessory views
-@property UIImage *accessoryViewImage;
-@property UIImage *editingAccessoryViewImage;
+@property UIImage<Optional> *accessoryViewImage;
+@property UIImage<Optional> *editingAccessoryViewImage;
 
 +(BYTableViewCellStyle*)defaultStyle;
 

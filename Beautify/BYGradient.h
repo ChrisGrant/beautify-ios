@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSONModel.h"
+#import "BYGradientStop.h"
 
 /*
  A style property representing a background gradient for a UIView.
  */
-@interface BYGradient : NSObject <NSCopying>
+@interface BYGradient : JSONModel <NSCopying>
 
 /*
  Whether the gradient is radial or not.
@@ -26,7 +28,7 @@
 /*
  An array of BYGradientStops defining the gradient colors and locations.
  */
-@property NSArray *stops;
+@property NSArray<BYGradientStop> *stops;
 
 /*
  Create with the specified array of BYGradientStops, this will create a linear gradient.

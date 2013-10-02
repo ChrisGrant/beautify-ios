@@ -138,7 +138,7 @@
                         "size": 0
                     }
                 },
-                "text": " ",
+                "text": "",
                 "backgroundColor": "#34495E",
                 "textShadow": {
                     "color": "#00000000",
@@ -156,7 +156,7 @@
                         "size": 0
                     }
                 },
-                "text": " ",
+                "text": "",
                 "backgroundColor": "#888888",
                 "textShadow": {
                     "color": "#00000000",

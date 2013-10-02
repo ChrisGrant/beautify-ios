@@ -30,6 +30,7 @@
             }
         }
     ],
+    "barHeightFraction" : 1.0,
     "minimumTrackColor": "000000",
     "minimumTrackBackgroundGradient": {
         "radial": false,

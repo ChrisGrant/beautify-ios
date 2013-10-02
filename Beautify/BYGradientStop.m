@@ -14,19 +14,19 @@
 +(BYGradientStop*)stopWithColor:(UIColor*)color at:(float)stopLocation {
     BYGradientStop *stop = [BYGradientStop new];
     stop.color = color;
-    stop.stop = stopLocation;
+    stop.position = stopLocation;
     return stop;
 }
 
 -(id)copyWithZone:(NSZone *)zone {
     BYGradientStop *copy = [[BYGradientStop allocWithZone:zone] init];
     copy.color = self.color.copy;
-    copy.stop = self.stop;
+    copy.position = self.position;
     return copy;
 }
 
 -(NSString *)description{
-    return [NSString stringWithFormat:@"(%@, %f)", self.color, self.stop];
+    return [NSString stringWithFormat:@"(%@, %f)", self.color, self.position];
 }
 
 @end

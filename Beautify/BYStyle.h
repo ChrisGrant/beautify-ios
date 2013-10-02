@@ -7,10 +7,12 @@
 //
 
 #import "BYStyleProtocol.h"
+#import "JSONModel.h"
+#import "BYStateSetter.h"
 
-@interface BYStyle : NSObject <BYStyleProtocol, NSCopying>
+@interface BYStyle : JSONModel <BYStyleProtocol, NSCopying>
 
-@property NSArray* stateSetters;
+@property NSArray<BYStateSetter, Optional> *stateSetters;
 
 -(id)propertyValueForName:(NSString*)name;
 

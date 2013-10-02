@@ -103,7 +103,7 @@
     else {
         _selectedLayer.hidden = YES;
         _selectedNineBoxImage.hidden = NO;
-        _selectedNineBoxImage.image = backgroundImage.image;
+        _selectedNineBoxImage.image = backgroundImage.data;
     }
 }
 

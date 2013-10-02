@@ -7,11 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSONModel.h"
+
+// Used to tell JSONModel to look for shadows in arrays.
+@protocol BYShadow
+@end
+
+// This will remove warnings that NSArrays don't conform to BYShadow protocols.
+@interface NSArray (Shadow)<BYShadow>
+@end
 
 /*
  A style property representing a shadow for a UIView.
  */
-@interface BYShadow : NSObject <NSCopying>
+@interface BYShadow : JSONModel <NSCopying, BYShadow>
 
 /*
  The blur radius for the shadow.
@@ -24,9 +33,9 @@
 @property CGSize offset;
 
 /*
- Color for the shadow.
+ Color for the shadow. Defaults to black.
  */
-@property UIColor *color;
+@property UIColor<Optional> *color;
 
 /*
  Create with the specified offset, blur radius and color.

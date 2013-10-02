@@ -9,33 +9,34 @@
 #import <Foundation/Foundation.h>
 #import "BYText.h"
 #import "BYTextShadow.h"
+#import "JSONModel.h"
 
-@interface BYSwitchState : NSObject <NSCopying>
+@interface BYSwitchState : JSONModel <NSCopying>
 
 /*
  The font and colour of the text
  */
-@property BYText* textStyle;
+@property BYText<Optional> *textStyle;
 
 /*
  The text rendered for this switch state
  */
-@property NSString* text;
+@property NSString<Optional> *text;
 
 /*
  The background color for the switch at this state
  */
-@property UIColor* backgroundColor;
+@property UIColor<Optional> *backgroundColor;
 
 /*
  The shadow for the text at this state
  */
-@property BYTextShadow* textShadow;
+@property BYTextShadow<Optional> *textShadow;
 
 /*
  The border color for the swich at this state
  */
-@property UIColor* borderColor;
+@property UIColor<Optional> *borderColor;
 
 /*
  Create a Switch State with the specified text style, text, background color and text shadow.

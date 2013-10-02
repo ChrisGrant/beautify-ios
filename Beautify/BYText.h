@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSONModel.h"
+#import "BYFont.h"
 
-@class BYFont;
-
-@interface BYText : NSObject <NSCopying>
+@interface BYText : JSONModel <NSCopying>
 
 /*
  Font for the text.

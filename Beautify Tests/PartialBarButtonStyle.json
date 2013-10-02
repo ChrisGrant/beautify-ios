@@ -1,4 +1,11 @@
 {
+    "title": {
+        "color": "#FFFFFF",
+        "font": {
+            "name": "HelveticaNeue-Bold",
+            "size": 10
+        }
+    },
     "backgroundGradient": {
         "radial": false,
         "stops": [

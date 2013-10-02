@@ -4,5 +4,6 @@
         "width": 2,
         "color": "000000",
         "cornerRadius": 9
-    }
+    },
+    "barHeightFraction" : 0.2
 }

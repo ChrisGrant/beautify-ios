@@ -26,7 +26,9 @@
     // add superclass properties
     NSMutableArray *superPropertyNames = [NSMutableArray new];
     if (propertyClass.superclass != [NSObject class]) {
-        superPropertyNames = [self propertyNames:propertyClass.superclass];
+        if(propertyClass) {
+            superPropertyNames = [self propertyNames:propertyClass.superclass];
+        }
     }
     for (NSString *superPropertyName in superPropertyNames) {
         [propertyNames addObject:superPropertyName];
