@@ -13,7 +13,6 @@
 #import "BYGradient.h"
 #import "BYBackgroundImage.h"
 #import "BYTextShadow.h"
-#import "UIColor+HexColors.h"
 
 @interface BYTableViewCellStyle : BYViewStyle
 
