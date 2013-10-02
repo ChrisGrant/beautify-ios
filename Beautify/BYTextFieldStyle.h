@@ -13,7 +13,6 @@
 #import "BYShadow.h"
 #import "BYGradient.h"
 #import "BYBackgroundImage.h"
-#import "UIColor+HexColors.h"
 
 @class BYBorder;
 

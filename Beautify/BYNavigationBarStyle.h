@@ -11,7 +11,6 @@
 #import "BYFont.h"
 #import "BYText.h"
 #import "BYDropShadow.h"
-#import "UIColor+HexColors.h"
 
 @class BYText, BYTextShadow, BYGradient;
 

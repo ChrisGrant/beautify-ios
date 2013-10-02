@@ -205,7 +205,7 @@
 		7047011A17E1C13200FEA5F5 /* BYSliderLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011817E1C13200FEA5F5 /* BYSliderLayer.m */; };
 		7047011B17E1C13200FEA5F5 /* BYSliderRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011917E1C13200FEA5F5 /* BYSliderRenderer.m */; };
 		7047011D17E1C14300FEA5F5 /* BYSwitchGestureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011C17E1C14300FEA5F5 /* BYSwitchGestureView.m */; };
-		7047012017E1C1F200FEA5F5 /* UISwitch+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047011E17E1C1F200FEA5F5 /* UISwitch+Beautify.h */; };
+		7047012017E1C1F200FEA5F5 /* UISwitch+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047011E17E1C1F200FEA5F5 /* UISwitch+Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7047012117E1C1F200FEA5F5 /* UISwitch+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011F17E1C1F200FEA5F5 /* UISwitch+Beautify.m */; };
 		7047012917E1C23800FEA5F5 /* BYSwitchGestureView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047012817E1C23800FEA5F5 /* BYSwitchGestureView.h */; };
 		7047012D17E1C27A00FEA5F5 /* BYSliderRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047012C17E1C27A00FEA5F5 /* BYSliderRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -328,7 +328,7 @@
 		70FF54DB17E6FB3E00F9BF03 /* BYSwitchStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A83174157B40039F3F3 /* BYSwitchStyle.m */; };
 		70FF54DF17E7040F00F9BF03 /* ValidButtonStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 70FF54DE17E7040F00F9BF03 /* ValidButtonStyle.json */; };
 		70FF54E117E7042700F9BF03 /* PartialButtonStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 70FF54E017E7042700F9BF03 /* PartialButtonStyle.json */; };
-		70FF912817F5A51E00972848 /* BYBarButtonItemRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 70FF912617F5A51E00972848 /* BYBarButtonItemRenderer.h */; };
+		70FF912817F5A51E00972848 /* BYBarButtonItemRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 70FF912617F5A51E00972848 /* BYBarButtonItemRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70FF912917F5A51E00972848 /* BYBarButtonItemRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FF912717F5A51E00972848 /* BYBarButtonItemRenderer.m */; };
 		7205345917579C61000A27C0 /* BYNavigationBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205345817579C61000A27C0 /* BYNavigationBarRenderer.m */; };
 		7205345C1757A000000A27C0 /* BYNavigationBarStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 7205345A1757A000000A27C0 /* BYNavigationBarStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
