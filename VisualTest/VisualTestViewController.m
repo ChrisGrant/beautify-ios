@@ -53,7 +53,7 @@
         
         [self addTableViews];
         
-        [self.renderer setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1.0] forState:UIControlStateNormal];
+        [self.renderer setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1.0]];
     }
     return self;
 }
