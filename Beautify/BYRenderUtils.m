@@ -19,10 +19,10 @@ UIEdgeInsets ComputeInsetsForShadows(NSArray* outerShadows) {
     UIEdgeInsets inset = UIEdgeInsetsZero;
     
     for (BYShadow *ss in outerShadows) {
-        inset.top = MAX(inset.top, ss.radius);
-        inset.bottom = MAX(inset.bottom, ss.radius);
-        inset.left = MAX(inset.left, ss.radius);
-        inset.right = MAX(inset.right, ss.radius);
+        inset.top = MAX(inset.top, ss.radius + MIN(ss.offset.height, 0));
+        inset.bottom = MAX(inset.bottom, ss.radius + MAX(ss.offset.height, 0));
+        inset.left = MAX(inset.left, ss.radius + MIN(ss.offset.width, 0));
+        inset.right = MAX(inset.right, ss.radius + MAX(ss.offset.width, 0));
     }
     return inset;
 }
