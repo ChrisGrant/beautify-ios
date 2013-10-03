@@ -16,6 +16,7 @@
 
 @interface BYNavigationBarStyle : BYViewStyle
 
+@property UIColor<Optional> *tintColor;
 @property UIColor<Optional> *backgroundColor;
 @property BYGradient<Optional> *backgroundGradient;
 

@@ -1,5 +1,5 @@
 {
-    "schemaVersion": "1.3",
+    "schemaVersion": "1.4",
     "theme": {
         "sliderStyle": {
             "title": {
@@ -192,7 +192,8 @@
                     "size": 0
                 }
             },
-            "backgroundColor": "#2C3E50",
+            "tintColor":"2C3E50",
+            "backgroundColor": "#2C3E5000",
             "titleShadow": {
                 "color": "#00000099",
                 "offset": {
