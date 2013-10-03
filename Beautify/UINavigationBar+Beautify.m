@@ -81,8 +81,13 @@
         else {
             NSLog(@"Renderer for UI element not found: %@", self.class);
         }
-        [self setBackIndicatorImage:[UIImage new]];
-        [self setBackIndicatorTransitionMaskImage:[UIImage new]];
+        
+        if([self respondsToSelector:@selector(setBackIndicatorImage:)]
+           && [self respondsToSelector:@selector(setBackIndicatorTransitionMaskImage:)]) {
+            // Hide the default back indicator images.
+            [self setBackIndicatorImage:[UIImage new]];
+            [self setBackIndicatorTransitionMaskImage:[UIImage new]];
+        }
     }
 }
 
