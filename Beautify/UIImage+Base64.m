@@ -110,5 +110,9 @@
     return theData;
 }
 
++(NSString*)base64ImageFromUIImage:(UIImage*)image {
+    NSData * data = [UIImagePNGRepresentation(image) base64EncodedDataWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    return [NSString stringWithUTF8String:[data bytes]];
+}
 
 @end

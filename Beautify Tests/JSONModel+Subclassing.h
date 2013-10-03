@@ -18,5 +18,6 @@
 @interface JSONModel (Subclassing)
 
 +(BOOL)isSubclassOfClass:(Class)aClass;
+-(BOOL)isKindOfClass:(Class)aClass;
 
 @end

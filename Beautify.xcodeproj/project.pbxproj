@@ -222,6 +222,7 @@
 		7047013E17E1C6CA00FEA5F5 /* BYTopShadowRenderingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010E17E1C11100FEA5F5 /* BYTopShadowRenderingLayer.m */; };
 		7047013F17E1C6CE00FEA5F5 /* BYImageViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010F17E1C11100FEA5F5 /* BYImageViewRenderer.m */; };
 		7047014017E1C6D100FEA5F5 /* UIImageView+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011117E1C11100FEA5F5 /* UIImageView+Beautify.m */; };
+		7076B69217FD824B0015593F /* BYSerializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7076B69117FD824B0015593F /* BYSerializationTests.m */; };
 		707A869317F9B435005A102F /* JSONValueTransformer+BeautifyExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 707A869117F9B435005A102F /* JSONValueTransformer+BeautifyExtension.h */; };
 		707A869417F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 707A869217F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m */; };
 		707A869917FAE8D0005A102F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B492A317F2CD0C002B62DB /* SystemConfiguration.framework */; };
@@ -530,6 +531,7 @@
 		7047011F17E1C1F200FEA5F5 /* UISwitch+Beautify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UISwitch+Beautify.m"; path = "Beautify/UISwitch+Beautify.m"; sourceTree = SOURCE_ROOT; };
 		7047012817E1C23800FEA5F5 /* BYSwitchGestureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYSwitchGestureView.h; path = Beautify/BYSwitchGestureView.h; sourceTree = SOURCE_ROOT; };
 		7047012C17E1C27A00FEA5F5 /* BYSliderRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYSliderRenderer.h; path = Beautify/BYSliderRenderer.h; sourceTree = SOURCE_ROOT; };
+		7076B69117FD824B0015593F /* BYSerializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYSerializationTests.m; sourceTree = "<group>"; };
 		707A869117F9B435005A102F /* JSONValueTransformer+BeautifyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JSONValueTransformer+BeautifyExtension.h"; path = "Beautify/JSONValueTransformer+BeautifyExtension.h"; sourceTree = SOURCE_ROOT; };
 		707A869217F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JSONValueTransformer+BeautifyExtension.m"; path = "Beautify/JSONValueTransformer+BeautifyExtension.m"; sourceTree = SOURCE_ROOT; };
 		707F516B17FB10A000928B0B /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
@@ -1145,6 +1147,7 @@
 				70BFBE9C17FC124F0034365F /* JSONModel+Subclassing.h */,
 				70BFBE9D17FC124F0034365F /* JSONModel+Subclassing.m */,
 				70FE246A17E0B385009A7113 /* Supporting Files */,
+				7076B69117FD824B0015593F /* BYSerializationTests.m */,
 			);
 			path = "Beautify Tests";
 			sourceTree = "<group>";
@@ -1893,6 +1896,7 @@
 				700E155F17E32184006E124E /* BYSwitchState.m in Sources */,
 				700E155B17E32132006E124E /* BYTextFieldStyle.m in Sources */,
 				700E154617E30691006E124E /* BeautifyColorTests.m in Sources */,
+				7076B69217FD824B0015593F /* BYSerializationTests.m in Sources */,
 				707F518F17FB1F9D00928B0B /* NSArray+JSONModel.m in Sources */,
 				700E155617E3210B006E124E /* BYSliderStyle.m in Sources */,
 			);

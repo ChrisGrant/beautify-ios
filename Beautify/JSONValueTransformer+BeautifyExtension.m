@@ -16,6 +16,10 @@
     return [UIColor colorWithHexString:string];
 }
 
+-(NSString*)JSONObjectFromUIColor:(UIColor*)color {
+    return [UIColor hexValuesFromUIColor:color];
+}
+
 -(NSValue*)CGSizeFromNSDictionary:(NSDictionary*)offsetDict {
     float x = 0;
     float y = 0;
@@ -35,8 +39,17 @@
     return [NSValue valueWithCGSize:CGSizeMake(x, y)];
 }
 
+-(NSDictionary*)JSONObjectFromCGSize:(CGSize)size {
+    return @{@"x": [NSNumber numberWithFloat:size.width],
+             @"y": [NSNumber numberWithFloat:size.height]};
+}
+
 -(UIImage *)UIImageFromNSString:(NSString *)string {
     return [UIImage imageFromBase64String:string];
+}
+
+-(NSString*)JSONObjectFromUIImage:(UIImage*)image {
+    return [UIImage base64ImageFromUIImage:image];
 }
 
 -(UIControlState)stateFromString:(NSString*)stateString {
