@@ -113,12 +113,19 @@
             // Calculate the final frame, centered on the original frame, then draw the image in this.
             CGRect r = CGRectMake((rectSize.width-aspectFillSize.width)/2, (rectSize.height-aspectFillSize.height)/2,
                                   aspectFillSize.width, aspectFillSize.height);
+            
+            CGContextTranslateCTM(ctx, 0, rect.size.height);
+            CGContextScaleCTM(ctx, 1.0, -1.0);
             CGContextDrawImage(ctx, r, imageRef);
         }
         else if (backgroundImage.contentMode == BYImageContentModeFill) {
+            CGContextTranslateCTM(ctx, 0, rect.size.height);
+            CGContextScaleCTM(ctx, 1.0, -1.0);
             CGContextDrawImage(ctx, rect, imageRef);
         }
         else if (backgroundImage.contentMode == BYImageContentModeTile) {
+            CGContextTranslateCTM(ctx, 0, image.size.height / self.contentsScale);
+            CGContextScaleCTM(ctx, 1.0, -1.0);
             CGContextDrawTiledImage(ctx, CGRectMake(0, 0, image.size.width / self.contentsScale, image.size.height / self.contentsScale), imageRef);
         }
     }
