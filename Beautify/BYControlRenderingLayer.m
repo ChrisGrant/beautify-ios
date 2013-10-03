@@ -14,13 +14,13 @@
 #import "BYBackgroundImage.h"
 
 @implementation BYControlRenderingLayer {
-    BYViewRenderer* _renderer;
+    BYStyleRenderer* _renderer;
     BOOL _useSuppliedState;
     UIControlState _state;
     CGRect originalFrame;
 }
 
--(id)initWithRenderer:(BYViewRenderer *)renderer {
+-(id)initWithRenderer:(BYStyleRenderer *)renderer {
     if (self = [super init] ) {
         _renderer = renderer;
         _useSuppliedState = NO;

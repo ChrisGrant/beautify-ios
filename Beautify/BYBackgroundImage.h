@@ -30,4 +30,9 @@ typedef NS_ENUM(NSInteger, BYImageContentMode) {
  */
 @property BYImageContentMode contentMode;
 
+/*
+ Creates a background image with the specified image and content mode.
+ */
++(BYBackgroundImage*)backgroundImageWithImage:(UIImage*)image andContentMode:(BYImageContentMode)contentMode;
+
 @end
