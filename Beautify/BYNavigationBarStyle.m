@@ -38,6 +38,7 @@
 
 -(id)copyWithZone:(NSZone*)zone {
     BYNavigationBarStyle *copy = [super copyWithZone:zone];
+    copy.tintColor = self.tintColor.copy;
     copy.backgroundColor = self.backgroundColor.copy;
     copy.backgroundGradient = self.backgroundGradient.copy;
     copy.title = self.title.copy;
