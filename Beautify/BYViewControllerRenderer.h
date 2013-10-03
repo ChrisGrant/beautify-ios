@@ -16,16 +16,16 @@
 /*
  Set the background color for the view controller associated with this renderer.
  */
--(void)setBackgroundColor:(UIColor*)backgroundColor forState:(UIControlState)state;
+-(void)setBackgroundColor:(UIColor*)backgroundColor;
 
 /*
  Set the background gradient for the view controller associated with this renderer.
  */
--(void)setBackgroundGradient:(BYGradient*)backgroundGradient forState:(UIControlState)state;
+-(void)setBackgroundGradient:(BYGradient*)backgroundGradient;
 
 /*
  Set the background image for the view controller associated with this renderer.
  */
--(void)setBackgroundImage:(BYBackgroundImage*)backgroundImage forState:(UIControlState)state;
+-(void)setBackgroundImage:(BYBackgroundImage*)backgroundImage;
 
 @end

@@ -14,12 +14,14 @@
  */
 @interface BYControlRenderingLayer : BYStyleLayer
 
-// creates a layer and associates it with the given renderer. The layer will use the current control state
-// when re-drawing.
--(id)initWithRenderer:(BYViewRenderer*)renderer;
+/*
+ Creates a layer and associates it with the given renderer. The layer will use the current control state when redrawing.
+ */
+-(id)initWithRenderer:(BYStyleRenderer*)renderer;
 
-// creates a layer and associates it with the given renderer. The layer will always
-// use the given state when rendering.
--(id)initWithRenderer:(BYViewRenderer*)renderer state:(UIControlState)state;
+/*
+ Creates a layer and associates it with the given renderer. The layer will always use the given control state when redrawing.
+ */
+-(id)initWithRenderer:(BYStyleRenderer*)renderer state:(UIControlState)state;
 
 @end

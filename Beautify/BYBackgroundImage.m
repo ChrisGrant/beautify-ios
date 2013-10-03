@@ -44,4 +44,11 @@
     return BYImageContentModeFill; // Default to fill.
 }
 
++(BYBackgroundImage*)backgroundImageWithImage:(UIImage*)image andContentMode:(BYImageContentMode)contentMode {
+    BYBackgroundImage *bg = [[self class] new];
+    [bg setData:image];
+    [bg setContentMode:contentMode];
+    return bg;
+}
+
 @end

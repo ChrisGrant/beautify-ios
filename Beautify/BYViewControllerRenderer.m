@@ -10,13 +10,12 @@
 #import "BYViewControllerRenderer.h"
 #import "BYViewControllerStyle.h"
 #import "BYTheme.h"
-#import "BYGradient.h"
-#import "BYGradientLayer.h"
 #import "BYStyleRenderer_Private.h"
+#import "BYControlRenderingLayer.h"
 
 @implementation BYViewControllerRenderer {
     UIImageView* _backgroundImageView;
-    BYGradientLayer* _backgroundGradientLayer;
+    BYControlRenderingLayer *_renderingLayer;
 }
 
 -(id)initWithView:(id)view theme:(BYTheme*)theme {
@@ -27,20 +26,9 @@
 }
 
 -(void)setup:(UIViewController*)viewController theme:(BYTheme*)theme {
-    // Create the background image
-    _backgroundImageView = [[UIImageView alloc] initWithFrame:viewController.view.bounds];
-    [_backgroundImageView setContentMode:UIViewContentModeScaleAspectFill];
-    [viewController.view.layer insertSublayer:_backgroundImageView.layer atIndex:0];
-
-    // Hide until required
-    _backgroundImageView.hidden = YES;
-
-    // Create the background gradient
-    _backgroundGradientLayer = [[BYGradientLayer alloc] initWithRenderer:self];
-    [_backgroundGradientLayer setFrame:viewController.view.bounds];
-    [viewController.view.layer insertSublayer:_backgroundGradientLayer atIndex:0];
-    [_backgroundGradientLayer setNeedsDisplay];
-    
+    _renderingLayer = [[BYControlRenderingLayer alloc] initWithRenderer:self];
+    [_renderingLayer setFrame:viewController.view.bounds];
+    [viewController.view.layer insertSublayer:_renderingLayer atIndex:0];
     [self configureFromStyle];
 }
 
@@ -66,54 +54,22 @@
 }
 
 -(void)redrawViewController:(UIViewController*)vc style:(BYViewControllerStyle*)style {
-    BYGradient *backgroundGradient = [self propertyValueForNameWithCurrentState:@"backgroundGradient"];
-    BYBackgroundImage *backgroundImage = [self propertyValueForNameWithCurrentState:@"backgroundImage"];
-    UIColor *backgroundColor = [self propertyValueForNameWithCurrentState:@"backgroundColor"];
-        
-    if (backgroundImage == nil) {
-        // Hide the background image view
-        _backgroundImageView.hidden = YES;
-    }
-    else {
-        // Update the background image
-        _backgroundImageView.hidden = NO;
-        _backgroundImageView.frame = vc.view.bounds;
-        _backgroundImageView.image = style.backgroundImage.data;
-    }
-    
-    if (backgroundColor == nil) {
-        // Clear the background color for the main view
-        vc.view.backgroundColor = [UIColor clearColor];
-    }
-    else {
-        // Render a color if we have one
-        vc.view.backgroundColor = backgroundColor;
-    }
-   
-    if (backgroundGradient.stops.count == 0) {
-        // Hide the background gradient view
-        _backgroundGradientLayer.hidden = YES;
-    }
-    else {
-        // Render a gradient if we have one
-        _backgroundGradientLayer.hidden = NO;
-        _backgroundGradientLayer.frame = vc.view.bounds;
-        [_backgroundGradientLayer setNeedsDisplay];
-    }
+    [_renderingLayer setFrame:vc.view.bounds];
+    [_renderingLayer setNeedsDisplay];
 }
 
 #pragma mark - Style property setters
 
--(void)setBackgroundColor:(UIColor*)backgroundColor forState:(UIControlState)state {
-    [self setPropertyValue:backgroundColor forName:@"backgroundColor" forState:state];
+-(void)setBackgroundColor:(UIColor*)backgroundColor {
+    [self setPropertyValue:backgroundColor forName:@"backgroundColor" forState:UIControlStateNormal];
 }
 
--(void)setBackgroundGradient:(BYGradient*)backgroundGradient forState:(UIControlState)state {
-    [self setPropertyValue:backgroundGradient forName:@"backgroundGradient" forState:state];
+-(void)setBackgroundGradient:(BYGradient*)backgroundGradient {
+    [self setPropertyValue:backgroundGradient forName:@"backgroundGradient" forState:UIControlStateNormal];
 }
 
--(void)setBackgroundImage:(BYBackgroundImage*)backgroundImage forState:(UIControlState)state {
-    [self setPropertyValue:backgroundImage forName:@"backgroundImage" forState:state];
+-(void)setBackgroundImage:(BYBackgroundImage*)backgroundImage {
+    [self setPropertyValue:backgroundImage forName:@"backgroundImage" forState:UIControlStateNormal];
 }
 
 @end
