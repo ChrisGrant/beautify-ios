@@ -24,4 +24,9 @@
  */
 -(id)initWithRenderer:(BYStyleRenderer*)renderer state:(UIControlState)state;
 
+/*
+ Set this property to make the control layer draw with a custom path. The layer will use bezierPathWithRoundedRect by default if this property is nil.
+ */
+@property UIBezierPath *customPath;
+
 @end
