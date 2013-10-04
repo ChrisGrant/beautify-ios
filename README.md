@@ -160,7 +160,7 @@ And that's it! `redBorderedButton` will now have a red, 5px border while its sta
 ###Excluding controls
 Sometimes you will want certain controls to be excluded from the beautify rendering and for them to keep their default styling. To do this, simply set the `isImmuneToBeautify` property on any of your controls to `YES`. The default value for `isImmuneToBeautify` is `NO` for all controls, except **UIImageView**. 
 
-UIImageViews are commonly used as the component parts of other controls and are often frequently throughout applications. Given how unlikely it would be that you would want to style every single image view in your application, we decided to default the `isImmuneToBeautify` property to `YES` for UIImageViews. If you do wish to style a `UIImageView`, simply set it to `NO`.
+UIImageViews are commonly used as the component parts of other controls and are often frequently used throughout applications. Given how unlikely it would be that you would want to style every single image view in your application, we decided to default the `isImmuneToBeautify` property to `YES` for UIImageViews. If you do wish to style a `UIImageView`, simply set it to `NO`.
 
 ##License
 beautify-ios uses the Apache v2 license
