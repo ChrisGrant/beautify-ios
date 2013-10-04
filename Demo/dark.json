@@ -5,11 +5,10 @@
             "title": {
                 "color": "#16153B",
                 "font": {
-                    "name": "ArialMT",
+                    "name": "GillSans",
                     "size": 18
                 }
             },
-            "backgroundColor": "#00D4F0",
             "backgroundGradient": {
                 "radial": false,
                 "stops": [
@@ -48,17 +47,12 @@
             },
             "stateSetters": [
                              {
-                             "propertyName": "backgroundColor",
-                             "state": "highlighted",
-                             "value": "#16A085"
-                             },
-                             {
                              "state": "highlighted",
                              "propertyName": "title",
                              "value": {
                              "color": "#FFFFFF",
                              "font": {
-                             "name": "ArialMT",
+                             "name": "GillSans",
                              "size": 18
                              }
                              }
@@ -84,7 +78,7 @@
             "title": {
                 "color": "#00D4F0",
                 "font": {
-                    "name": "ArialMT",
+                    "name": "GillSans",
                     "size": 15
                 }
             },
@@ -130,7 +124,7 @@
             "title": {
                 "color": "#999999",
                 "font": {
-                    "name": "ArialMT",
+                    "name": "GillSans",
                     "size": 0
                 }
             },
@@ -141,7 +135,7 @@
                 "textStyle": {
                     "color": "#FFFFFF",
                     "font": {
-                        "name": "ArialMT",
+                        "name": "GillSans",
                         "size": 0
                     }
                 },
@@ -159,7 +153,7 @@
                 "textStyle": {
                     "color": "#888888",
                     "font": {
-                        "name": "ArialMT",
+                        "name": "GillSans",
                         "size": 0
                     }
                 },
@@ -210,7 +204,7 @@
             "title": {
                 "color": "#C9C3E6",
                 "font": {
-                    "name": "ArialMT-Bold",
+                    "name": "GillSans-Bold",
                     "size": 0
                 }
             },
@@ -228,7 +222,7 @@
             "title": {
                 "color": "#8D79F2",
                 "font": {
-                    "name": "ArialMT",
+                    "name": "GillSans",
                     "size": 0
                 }
             },
@@ -246,11 +240,6 @@
                           }
                           ]
             },
-            "border": {
-                "width": 0,
-                "color": "#555555",
-                "cornerRadius": 0
-            },
             "innerShadows": [],
             "outerShadows": [
                              {
@@ -259,14 +248,6 @@
                              "offset": {
                              "x": 0,
                              "y": 1
-                             },
-                             "circleChanger": {
-                             "offset": {
-                             "x": 0,
-                             "y": 0
-                             },
-                             "angle": 0,
-                             "distance": 0
                              }
                              }
                              ],
@@ -284,7 +265,7 @@
                              "value": {
                              "color": "#FFFFFF",
                              "font": {
-                             "name": "ArialMT",
+                             "name": "GillSans",
                              "size": 0
                              }
                              }
@@ -328,7 +309,7 @@
             "title": {
                 "color": "#FFFFFF",
                 "font": {
-                    "name": "ArialMT",
+                    "name": "GillSans",
                     "size": 14
                 }
             },
@@ -361,7 +342,7 @@
                              "value": {
                              "color": "#FFFFFF",
                              "font": {
-                             "name": "ArialMT",
+                             "name": "GillSans",
                              "size": 14
                              }
                              }
@@ -404,7 +385,7 @@
             "title": {
                 "color": "#FFFFFF",
                 "font": {
-                    "name": "ArialMT",
+                    "name": "GillSans",
                     "size": 14
                 }
             },
@@ -430,19 +411,8 @@
                              "propertyName": "backgroundColor",
                              "state": "highlighted",
                              "value": "#232323"
-                             },
-                             {
-                             "state": "highlighted",
-                             "propertyName": "title",
-                             "value": {
-                             "color": "#FFFFFF",
-                             "font": {
-                             "name": "ArialMT",
-                             "size": 14
                              }
-                             }
-                             }
-                             ]
+                            ]
         }
     }
 }

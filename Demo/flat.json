@@ -2,14 +2,7 @@
     "schemaVersion": "1.4",
     "theme": {
         "sliderStyle": {
-            "title": {
-                "color": "#FFFFFF",
-                "font": {
-                    "name": "ArialMT",
-                    "size": 18
-                }
-            },
-            "barHeightFraction" : 0.5,
+            "barHeightFraction": 0.5,
             "barBorder": {
                 "width": "0",
                 "color": "#000000",
@@ -26,7 +19,24 @@
             },
             "thumbBackgroundColor": "#1ABC9C",
             "thumbInnerShadows": [],
-            "thumbOuterShadows": [],
+            "thumbOuterShadows": []
+        },
+        "buttonStyle": {
+            "title": {
+                "color": "#FFFFFF",
+                "font": {
+                    "name": "ArialMT",
+                    "size": 18
+                }
+            },
+            "backgroundColor": "#1ABC9C",
+            "border": {
+                "width": "0",
+                "color": "#FFFFFF",
+                "cornerRadius": "10"
+            },
+            "innerShadows": [],
+            "outerShadows": [],
             "stateSetters": [
                              {
                              "propertyName": "backgroundColor",
@@ -46,46 +56,11 @@
                              }
                              ]
         },
-        "buttonStyle": {
-            "title": {
-                "color": "#FFFFFF",
-                "font": {
-                    "name": "ArialMT",
-                    "size": 18
-                }
-            },
-            "backgroundColor": "#1ABC9C",
-            "border": {
-                "width": "0",
-                "color": "#FFFFFF",
-                "cornerRadius": "10"
-            },
-            "innerShadows": [],
-            "outerShadows": [],
-            "stateSetters": [
-                {
-                    "propertyName": "backgroundColor",
-                    "state": "highlighted",
-                    "value": "#16A085"
-                },
-                {
-                    "state": "highlighted",
-                    "propertyName": "title",
-                    "value": {
-                        "color": "#FFFFFF",
-                        "font": {
-                            "name": "ArialMT",
-                            "size": 18
-                        }
-                    }
-                }
-            ]
-        },
         "textFieldStyle": {
             "title": {
                 "color": "#404E65",
                 "font": {
-                    "name": "Helvetica",
+                    "name": "ArialMT",
                     "size": 14
                 }
             },
@@ -106,29 +81,23 @@
                              ]
         },
         "viewControllerStyle": {
-            "backgroundColor": "#FFFFFF",
-            "backgroundGradient": {
-                "radial": true,
-                "stops": []
-            },
-            "stateSetters": []
+            "backgroundColor": "#FFFFFF"
         },
         "labelStyle": {
             "title": {
                 "color": "#404E65",
                 "font": {
-                    "name": "HelveticaNeue-Light",
+                    "name": "ArialMT",
                     "size": 0
                 }
-            },
-            "stateSetters": []
+            }
         },
         "switchStyle": {
             "onState": {
                 "textStyle": {
                     "color": "#FFFFFF",
                     "font": {
-                        "name": "Helvetica-Bold",
+                        "name": "ArialMT",
                         "size": 0
                     }
                 },
@@ -146,7 +115,7 @@
                 "textStyle": {
                     "color": "#888888",
                     "font": {
-                        "name": "Helvetica-Bold",
+                        "name": "ArialMT",
                         "size": 0
                     }
                 },
@@ -173,26 +142,26 @@
             "outerShadows": [],
             "border": {
                 "width": "3",
-                "color": "#FFFFFF",
+                "color": "#00000000",
                 "cornerRadius": "15"
             },
             "stateSetters": [
-                {
-                    "propertyName": "thumbBackgroundColor",
-                    "state": "highlighted",
-                    "value": "#DDDDDD"
-                }
-            ]
+                             {
+                             "propertyName": "thumbBackgroundColor",
+                             "state": "highlighted",
+                             "value": "#DDDDDD"
+                             }
+                             ]
         },
         "navigationBarStyle": {
             "title": {
                 "color": "#FFFFFF",
                 "font": {
-                    "name": "Helvetica-Bold",
+                    "name": "ArialMT",
                     "size": 0
                 }
             },
-            "tintColor":"2C3E50",
+            "tintColor": "2C3E50",
             "backgroundColor": "#2C3E5000",
             "titleShadow": {
                 "color": "#00000099",
@@ -207,7 +176,7 @@
             "title": {
                 "color": "#404E65",
                 "font": {
-                    "name": "Verdana",
+                    "name": "ArialMT",
                     "size": 0
                 }
             },
@@ -219,48 +188,33 @@
             },
             "innerShadows": [],
             "outerShadows": [
-                {
-                    "color": "#DDDDDD",
-                    "radius": "1",
-                    "offset": {
-                        "x": 2,
-                        "y": 2
-                    },
-                    "circleChanger": {
-                        "offset": {
-                            "x": 0,
-                            "y": 0
-                        },
-                        "angle": 0,
-                        "distance": 0
-                    }
-                }
-            ],
-            "titleShadow": {
-                "color": "#00000000",
-                "offset": {
-                    "x": 0,
-                    "y": 0
-                }
-            },
+                             {
+                             "color": "#DDDDDD",
+                             "radius": "1",
+                             "offset": {
+                             "x": 2,
+                             "y": 2
+                             }
+                             }
+                             ],
             "stateSetters": [
-                {
-                    "state": "highlighted",
-                    "propertyName": "title",
-                    "value": {
-                        "color": "#FFFFFF",
-                        "font": {
-                            "name": "Verdana",
-                            "size": 0
-                        }
-                    }
-                },
-                {
-                    "propertyName": "backgroundColor",
-                    "state": "highlighted",
-                    "value": "#1ABC9C"
-                }
-            ]
+                             {
+                             "state": "highlighted",
+                             "propertyName": "title",
+                             "value": {
+                             "color": "#FFFFFF",
+                             "font": {
+                             "name": "Verdana",
+                             "size": 0
+                             }
+                             }
+                             },
+                             {
+                             "propertyName": "backgroundColor",
+                             "state": "highlighted",
+                             "value": "#1ABC9C"
+                             }
+                             ]
         },
         "imageViewStyle": {
             "border": {
