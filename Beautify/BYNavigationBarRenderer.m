@@ -55,7 +55,9 @@
     BYNavigationBarStyle *style = self.style;
     if(style) {
         UINavigationBar *navBar = self.adaptedView;
-        navBar.barTintColor = style.tintColor;
+        if([navBar respondsToSelector:@selector(setBarTintColor:)]) {
+            navBar.barTintColor = style.tintColor;
+        }
         
         NSMutableDictionary *attributeDictionary = [NSMutableDictionary new];
         UIFont *currentFont = navBar.titleTextAttributes[UITextAttributeFont];
