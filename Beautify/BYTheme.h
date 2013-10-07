@@ -26,17 +26,17 @@
  */
 @interface BYTheme : JSONModel <NSCopying>
 
-@property BYButtonStyle *buttonStyle;
-@property BYSwitchStyle *switchStyle;
-@property BYLabelStyle *labelStyle;
-@property BYViewControllerStyle *viewControllerStyle;
-@property BYTextFieldStyle *textFieldStyle;
-@property BYNavigationBarStyle *navigationBarStyle;
-@property BYTableViewCellStyle *tableViewCellStyle;
-@property BYImageViewStyle *imageViewStyle;
-@property BYBarButtonStyle *barButtonItemStyle;
-@property BYBarButtonStyle *backBarButtonItemStyle;
-@property BYSliderStyle *sliderStyle;
+@property BYButtonStyle<Optional> *buttonStyle;
+@property BYSwitchStyle<Optional> *switchStyle;
+@property BYLabelStyle<Optional> *labelStyle;
+@property BYViewControllerStyle<Optional> *viewControllerStyle;
+@property BYTextFieldStyle<Optional> *textFieldStyle;
+@property BYNavigationBarStyle<Optional> *navigationBarStyle;
+@property BYTableViewCellStyle<Optional> *tableViewCellStyle;
+@property BYImageViewStyle<Optional> *imageViewStyle;
+@property BYBarButtonStyle<Optional> *barButtonItemStyle;
+@property BYBarButtonStyle<Optional> *backBarButtonItemStyle;
+@property BYSliderStyle<Optional> *sliderStyle;
 
 +(BYTheme*)fromFile:(NSString*)file;
 

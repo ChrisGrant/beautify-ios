@@ -64,7 +64,7 @@
 		1D464664174669D7003840E4 /* BYSwitchStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A82174157B40039F3F3 /* BYSwitchStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D464665174669D7003840E4 /* BYViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A84174157B40039F3F3 /* BYViewStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D464666174669D7003840E4 /* BYStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 729757C6173BB861003A34A5 /* BYStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D464667174669D7003840E4 /* BYStateSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 729757CC173BED3A003A34A5 /* BYStateSetter.h */; };
+		1D464667174669D7003840E4 /* BYStateSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 729757CC173BED3A003A34A5 /* BYStateSetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D464668174669D7003840E4 /* BYStyleProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A8E174157D20039F3F3 /* BYStyleProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1D464669174669D7003840E4 /* BYStyleSetterCustomizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E168F2173D2EAE004CB021 /* BYStyleSetterCustomizer.h */; };
 		1D46466A174669D7003840E4 /* BYTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FF02172EA612000C7811 /* BYTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -120,6 +120,7 @@
 		54DDE26C17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DDE26A17C65D1A0081E1AD /* BYSliderMaximumTrackLayer.h */; };
 		54DDE26E17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE26B17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m */; };
 		54DDE26F17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE26B17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m */; };
+		7000537917FDC0F70095F2EE /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F516C17FB10A000928B0B /* JSONModel.m */; };
 		7007254217EAF0C0001F7C41 /* PartialNavigationBarStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7007253C17EAF0C0001F7C41 /* PartialNavigationBarStyle.json */; };
 		7007254317EAF0C0001F7C41 /* PartialTableViewCellStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7007253D17EAF0C0001F7C41 /* PartialTableViewCellStyle.json */; };
 		7007254417EAF0C0001F7C41 /* PartialTextFieldStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7007253E17EAF0C0001F7C41 /* PartialTextFieldStyle.json */; };
@@ -236,28 +237,27 @@
 		707F518017FB10A000928B0B /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517517FB10A000928B0B /* NSArray+JSONModel.m */; };
 		707F518117FB10A000928B0B /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517817FB10A000928B0B /* JSONKeyMapper.m */; };
 		707F518217FB10A000928B0B /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517A17FB10A000928B0B /* JSONValueTransformer.m */; };
-		707F518317FB1F7B00928B0B /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F516C17FB10A000928B0B /* JSONModel.m */; };
 		707F518417FB1F7C00928B0B /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F516C17FB10A000928B0B /* JSONModel.m */; };
-		707F518517FB1F8000928B0B /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F516B17FB10A000928B0B /* JSONModel.h */; };
-		707F518617FB1F8400928B0B /* JSONModelArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F516D17FB10A000928B0B /* JSONModelArray.h */; };
+		707F518517FB1F8000928B0B /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F516B17FB10A000928B0B /* JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		707F518617FB1F8400928B0B /* JSONModelArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F516D17FB10A000928B0B /* JSONModelArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		707F518717FB1F8900928B0B /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F516E17FB10A000928B0B /* JSONModelArray.m */; };
 		707F518817FB1F8900928B0B /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F516E17FB10A000928B0B /* JSONModelArray.m */; };
 		707F518917FB1F8E00928B0B /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517017FB10A000928B0B /* JSONModelClassProperty.m */; };
 		707F518A17FB1F8E00928B0B /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517017FB10A000928B0B /* JSONModelClassProperty.m */; };
-		707F518B17FB1F9100928B0B /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F516F17FB10A000928B0B /* JSONModelClassProperty.h */; };
-		707F518C17FB1F9400928B0B /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517117FB10A000928B0B /* JSONModelError.h */; };
+		707F518B17FB1F9100928B0B /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F516F17FB10A000928B0B /* JSONModelClassProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		707F518C17FB1F9400928B0B /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517117FB10A000928B0B /* JSONModelError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		707F518D17FB1F9700928B0B /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517217FB10A000928B0B /* JSONModelError.m */; };
 		707F518E17FB1F9800928B0B /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517217FB10A000928B0B /* JSONModelError.m */; };
 		707F518F17FB1F9D00928B0B /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517517FB10A000928B0B /* NSArray+JSONModel.m */; };
 		707F519017FB1F9E00928B0B /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517517FB10A000928B0B /* NSArray+JSONModel.m */; };
-		707F519117FB1FA100928B0B /* NSArray+JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517417FB10A000928B0B /* NSArray+JSONModel.h */; };
-		707F519217FB1FA600928B0B /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517717FB10A000928B0B /* JSONKeyMapper.h */; };
+		707F519117FB1FA100928B0B /* NSArray+JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517417FB10A000928B0B /* NSArray+JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		707F519217FB1FA600928B0B /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517717FB10A000928B0B /* JSONKeyMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		707F519317FB1FA900928B0B /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517817FB10A000928B0B /* JSONKeyMapper.m */; };
 		707F519417FB1FA900928B0B /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517817FB10A000928B0B /* JSONKeyMapper.m */; };
-		707F519517FB1FAC00928B0B /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517917FB10A000928B0B /* JSONValueTransformer.h */; };
+		707F519517FB1FAC00928B0B /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517917FB10A000928B0B /* JSONValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		707F519617FB1FAF00928B0B /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517A17FB10A000928B0B /* JSONValueTransformer.m */; };
 		707F519717FB1FAF00928B0B /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517A17FB10A000928B0B /* JSONValueTransformer.m */; };
-		707F519817FB1FB300928B0B /* JSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517B17FB10A000928B0B /* JSONModelLib.h */; };
+		707F519817FB1FB300928B0B /* JSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517B17FB10A000928B0B /* JSONModelLib.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		70907E6D1797E6F600F83417 /* BYImageViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70907E6B1797E6F600F83417 /* BYImageViewStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70907E701797E6F600F83417 /* BYImageViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70907E6C1797E6F600F83417 /* BYImageViewStyle.m */; };
 		70907E7B1797FBC300F83417 /* roller@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70907E7A1797FBC300F83417 /* roller@2x.png */; };
@@ -1736,12 +1736,12 @@
 				72F0795F175CCC2F00FC27DB /* BYDelegateMultiplexer.m in Sources */,
 				70F61B8917831AE100DCA906 /* BYRenderUtils.m in Sources */,
 				7047011717E1C11100FEA5F5 /* UIImageView+Beautify.m in Sources */,
-				707F518317FB1F7B00928B0B /* JSONModel.m in Sources */,
 				543570E717BE312C007FA7CE /* UIBarButtonItem+Beautify.m in Sources */,
 				7047010617E1C06B00FEA5F5 /* NSObject+Beautify.m in Sources */,
 				70397B9217DF33190095001B /* BYBarButtonStyle.m in Sources */,
 				547C32D417C4C1EE009D6289 /* BYSliderStyle.m in Sources */,
 				54DDE26F17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m in Sources */,
+				7000537917FDC0F70095F2EE /* JSONModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

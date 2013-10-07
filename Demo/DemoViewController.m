@@ -27,6 +27,8 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+    
     // you have to explicitly enable beautify for image views
     [self.imageView setImmuneToBeautify:NO];
     
