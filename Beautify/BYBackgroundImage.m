@@ -28,6 +28,19 @@
     return [[propertyName lowercaseString] isEqualToString:@"contentMode"];
 }
 
+-(id)JSONObjectForContentMode {
+    switch (self.contentMode) {
+        case BYImageContentModeFill:
+            return @"fill";
+        case BYImageContentModeAspectFill:
+            return @"aspectFill";
+        case BYImageContentModeTile:
+            return @"tile";
+        default:
+            return @"fill";
+    }
+}
+
 +(BYImageContentMode)contentModeFromDict:(NSDictionary*)dict {
     if([[dict allKeys] containsObject:@"contentMode"]) {
         NSString *contentString = [dict[@"contentMode"] lowercaseString];

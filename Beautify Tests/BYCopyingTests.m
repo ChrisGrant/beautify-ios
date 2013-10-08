@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 Beautify. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
 #import "Beautify.h"
 #import "UIColor+Comparison.h"
 #import "NSObject+Properties.h"
 #import "BYStateSetter.h"
 #import "JSONValueTransformer+BeautifyExtension.h"
+#import "BYTestHelper.h"
 
-@interface BYCopyingTests : XCTestCase
+@interface BYCopyingTests : BYTestHelper
 @end
 
 @implementation BYCopyingTests
@@ -140,74 +140,6 @@
     NSDictionary *dictionary = [BYCopyingTests dictionaryFromJSONFile:name];
     id style = [[class alloc] initWithDictionary:dictionary error:nil];
     return style;
-}
-
--(void)assertObject:(id)prop withPropertyName:(NSString*)propertyName isEqualToObject:(id)copiedProp {
-    if([prop isKindOfClass:[NSNumber class]]) {
-        XCTAssertEqual([prop floatValue], [copiedProp floatValue], @"Should have equal %@", propertyName);
-    }
-    else if ([prop isKindOfClass:[UIColor class]]) {
-        XCTAssert([prop isEqualToColor:copiedProp], @"Should have equal %@", propertyName);
-    }
-    else if ([prop isKindOfClass:[NSString class]]) {
-        XCTAssert([prop isEqualToString:copiedProp], @"Strings should be equal!");
-    }
-    else if ([prop isKindOfClass:[NSArray class]]) {
-        NSLog(@"Array");
-        NSArray *array = prop;
-        NSArray *copiedArray = copiedProp;
-        XCTAssertEqual(array.count, copiedArray.count, @"Array for %@ should have the same length", propertyName);
-        
-        // For arrays, we call this method again, but for each item in the array.
-        [array enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-            // Check obj is equal with its corresponding object in the copied array.
-            id copiedObj = copiedArray[idx];
-            [self assertObject:copiedObj withPropertyName:propertyName isEqualToObject:copiedObj];
-        }];
-    }
-    else if ([prop isKindOfClass:[NSValue class]]) {
-        XCTAssert([prop isEqual:copiedProp], @"Should be equal values");
-    }
-    else if ([prop isKindOfClass:[UIImage class]]) {
-        UIImage *image = prop;
-        UIImage *copiedImage = copiedProp;
-        XCTAssert([UIImagePNGRepresentation(image) isEqualToData:UIImagePNGRepresentation(copiedImage)], @"Image data should be equal!");
-    }
-    else if ([[self allowedClassSet] containsObject:[prop class]]) {
-        [self assertObjectOne:prop isEqualToObjectTwo:copiedProp];
-    }
-    else {
-        // If it's not a class we are expecting, then log that we don't know what it is here.
-        NSLog(@"ERROR: Tests did not check %@ on class %@. Unknown class type.", propertyName, [prop class]);
-    }
-}
-
-NSSet *backingClassSet;
--(NSSet*)allowedClassSet {
-    if(!backingClassSet) {
-        backingClassSet = [NSSet setWithArray:@[[BYGradientStop class], [BYFont class], [BYTextShadow class],
-                                                [BYText class], [BYGradient class], [BYShadow class],
-                                                [BYStateSetter class], [BYBorder class], [BYDropShadow class],
-                                                [BYSwitchState class], [BYBackgroundImage class], [BYSliderStyle class],
-                                                [BYLabelStyle class], [BYNavigationBarStyle class], [BYButtonStyle class],
-                                                [BYViewControllerStyle class], [BYSwitchStyle class],
-                                                [BYTextFieldStyle class], [BYTableViewCellStyle class],
-                                                [BYBarButtonStyle class], [BYImageViewStyle class]]];
-    }
-    return backingClassSet;
-}
-
--(void)assertObjectOne:(NSObject *)object isEqualToObjectTwo:(NSObject *)object2 {
-    NSArray *properties = [NSObject propertyNames:[object class]];
-    
-    for (NSString *propertyName in properties) {
-        id prop = [object valueForKey:propertyName];
-        id copiedProp = [object2 valueForKey:propertyName];
-        if(prop == nil && copiedProp == nil) {
-            return;
-        }
-        [self assertObject:prop withPropertyName:propertyName isEqualToObject:copiedProp];
-    }
 }
 
 -(void)checkObjectCanBeCopiedAndResultHasEqualProperties:(NSObject<NSCopying>*)object {

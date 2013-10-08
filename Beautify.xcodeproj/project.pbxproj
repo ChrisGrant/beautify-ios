@@ -284,6 +284,8 @@
 		70C211B817DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
 		70C211B917DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
 		70E19557178462B20096E458 /* VisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E19555178462B20096E458 /* VisualTestViewController.m */; };
+		70EFB6B4180419C300FF75AA /* BYImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EFB6B3180419C300FF75AA /* BYImageTests.m */; };
+		70EFB6BB1804228000FF75AA /* BYTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EFB6BA1804228000FF75AA /* BYTestHelper.m */; };
 		70F0E09617EC4914001207E5 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F0E09417EC4914001207E5 /* DemoViewController.m */; };
 		70F0E09717EC4914001207E5 /* DemoiPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70F0E09517EC4914001207E5 /* DemoiPhoneViewController.xib */; };
 		70F0E09917EC4B39001207E5 /* DemoiPadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70F0E09817EC4B39001207E5 /* DemoiPadViewController.xib */; };
@@ -571,6 +573,9 @@
 		70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableVisualTestViewController.m; sourceTree = "<group>"; };
 		70E19554178462B10096E458 /* VisualTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualTestViewController.h; sourceTree = "<group>"; };
 		70E19555178462B20096E458 /* VisualTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisualTestViewController.m; sourceTree = "<group>"; };
+		70EFB6B3180419C300FF75AA /* BYImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYImageTests.m; sourceTree = "<group>"; };
+		70EFB6BA1804228000FF75AA /* BYTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTestHelper.m; sourceTree = "<group>"; };
+		70EFB6BC180422ED00FF75AA /* BYTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTestHelper.h; sourceTree = "<group>"; };
 		70F0E09317EC4914001207E5 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		70F0E09417EC4914001207E5 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 		70F0E09517EC4914001207E5 /* DemoiPhoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoiPhoneViewController.xib; sourceTree = "<group>"; };
@@ -891,6 +896,11 @@
 				700E154317E30668006E124E /* ConfigParserTests.m */,
 				70F1FD0917E34FB1006018C9 /* ConfigParserPropertyParsingTests.m */,
 				700E156917E341C6006E124E /* ConfigParserUtilitiesTests.m */,
+				7076B69117FD824B0015593F /* BYSerializationTests.m */,
+				7044FB5B17F072620066E61A /* BYCopyingTests.m */,
+				70EFB6B3180419C300FF75AA /* BYImageTests.m */,
+				70EFB6BC180422ED00FF75AA /* BYTestHelper.h */,
+				70EFB6BA1804228000FF75AA /* BYTestHelper.m */,
 			);
 			name = "ConfigParser Tests";
 			sourceTree = "<group>";
@@ -952,14 +962,6 @@
 				700F293216F3711300E85ED3 /* VisualTest-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7044FB5A17F072530066E61A /* Copying Tests */ = {
-			isa = PBXGroup;
-			children = (
-				7044FB5B17F072620066E61A /* BYCopyingTests.m */,
-			);
-			name = "Copying Tests";
 			sourceTree = "<group>";
 		};
 		7074287616F861B1003C2D1F /* Renderers */ = {
@@ -1139,7 +1141,6 @@
 		70FE246917E0B385009A7113 /* Beautify Tests */ = {
 			isa = PBXGroup;
 			children = (
-				7044FB5A17F072530066E61A /* Copying Tests */,
 				700E156817E34128006E124E /* ConfigParser Tests */,
 				700E154517E30691006E124E /* BeautifyColorTests.m */,
 				700E156417E33DF1006E124E /* UIColor+Comparison.h */,
@@ -1147,7 +1148,6 @@
 				70BFBE9C17FC124F0034365F /* JSONModel+Subclassing.h */,
 				70BFBE9D17FC124F0034365F /* JSONModel+Subclassing.m */,
 				70FE246A17E0B385009A7113 /* Supporting Files */,
-				7076B69117FD824B0015593F /* BYSerializationTests.m */,
 			);
 			path = "Beautify Tests";
 			sourceTree = "<group>";
@@ -1870,6 +1870,7 @@
 				707F518817FB1F8900928B0B /* JSONModelArray.m in Sources */,
 				700E156317E321A6006E124E /* BYStyle.m in Sources */,
 				700E154F17E320D7006E124E /* BYButtonStyle.m in Sources */,
+				70EFB6B4180419C300FF75AA /* BYImageTests.m in Sources */,
 				700E154E17E320C8006E124E /* BYBorder.m in Sources */,
 				707F518D17FB1F9700928B0B /* JSONModelError.m in Sources */,
 				70BFBE9917FC0A130034365F /* JSONValueTransformer+BeautifyExtension.m in Sources */,
@@ -1896,6 +1897,7 @@
 				700E155F17E32184006E124E /* BYSwitchState.m in Sources */,
 				700E155B17E32132006E124E /* BYTextFieldStyle.m in Sources */,
 				700E154617E30691006E124E /* BeautifyColorTests.m in Sources */,
+				70EFB6BB1804228000FF75AA /* BYTestHelper.m in Sources */,
 				7076B69217FD824B0015593F /* BYSerializationTests.m in Sources */,
 				707F518F17FB1F9D00928B0B /* NSArray+JSONModel.m in Sources */,
 				700E155617E3210B006E124E /* BYSliderStyle.m in Sources */,

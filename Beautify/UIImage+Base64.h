@@ -11,6 +11,6 @@
 @interface UIImage (Base64)
 
 +(UIImage*)imageFromBase64String:(NSString*)string;
-+(NSString*)base64ImageFromUIImage:(UIImage*)image;
++(NSString*)base64StringFromUIImage:(UIImage*)image;
 
 @end

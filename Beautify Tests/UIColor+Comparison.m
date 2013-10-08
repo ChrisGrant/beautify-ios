@@ -7,26 +7,15 @@
 //
 
 #import "UIColor+Comparison.h"
+#import "UIColor+HexColors.h"
 
 @implementation UIColor (Comparison)
 
 -(BOOL)isEqualToColor:(UIColor*)otherColor {
-    CGColorSpaceRef colorSpaceRGB = CGColorSpaceCreateDeviceRGB();
+    NSString *selfColorString = [UIColor hexValuesFromUIColor:self];
+    NSString *otherColorString = [UIColor hexValuesFromUIColor:otherColor];
     
-    UIColor *(^convertColorToRGBSpace)(UIColor*) = ^(UIColor *color) {
-        if(CGColorSpaceGetModel(CGColorGetColorSpace(color.CGColor)) == kCGColorSpaceModelMonochrome) {
-            const CGFloat *oldComponents = CGColorGetComponents(color.CGColor);
-            CGFloat components[4] = {oldComponents[0], oldComponents[0], oldComponents[0], oldComponents[1]};
-            return [UIColor colorWithCGColor:CGColorCreate(colorSpaceRGB, components)];
-        } else
-            return color;
-    };
-    
-    UIColor *selfColor = convertColorToRGBSpace(self);
-    otherColor = convertColorToRGBSpace(otherColor);
-    CGColorSpaceRelease(colorSpaceRGB);
-    
-    return [selfColor isEqual:otherColor];
+    return [selfColorString isEqualToString:otherColorString];
 }
 
 @end

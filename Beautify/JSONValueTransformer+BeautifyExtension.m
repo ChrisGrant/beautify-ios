@@ -27,21 +27,22 @@
     if(offsetDict) {
         if ([[offsetDict allKeys] containsObject:@"x"]) {
             if([NSNull null] != offsetDict[@"x"]) {
-                x = [offsetDict[@"x"] doubleValue];
+                x = [offsetDict[@"x"] floatValue];
             }
         }
         if ([[offsetDict allKeys] containsObject:@"y"]) {
             if([NSNull null] != offsetDict[@"y"]) {
-                y = [offsetDict[@"y"] doubleValue];
+                y = [offsetDict[@"y"] floatValue];
             }
         }
     }
     return [NSValue valueWithCGSize:CGSizeMake(x, y)];
 }
 
--(NSDictionary*)JSONObjectFromCGSize:(CGSize)size {
-    return @{@"x": [NSNumber numberWithFloat:size.width],
-             @"y": [NSNumber numberWithFloat:size.height]};
+-(NSDictionary*)JSONObjectFromCGSize:(NSValue*)sizeValue {
+    NSDictionary *dict =  @{@"x": [NSNumber numberWithFloat:[sizeValue CGSizeValue].width],
+                            @"y": [NSNumber numberWithFloat:[sizeValue CGSizeValue].height]};
+    return dict;
 }
 
 -(UIImage *)UIImageFromNSString:(NSString *)string {
@@ -49,7 +50,7 @@
 }
 
 -(NSString*)JSONObjectFromUIImage:(UIImage*)image {
-    return [UIImage base64ImageFromUIImage:image];
+    return [UIImage base64StringFromUIImage:image];
 }
 
 -(UIControlState)stateFromString:(NSString*)stateString {
