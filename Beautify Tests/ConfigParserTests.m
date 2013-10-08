@@ -55,16 +55,16 @@
 
 -(void)assertDefaultTheme:(BYTheme*)theme {
     XCTAssertNotNil(theme, @"Theme should not be nil");
-    XCTAssertNotNil(theme.buttonStyle, @"Should be nil");
-    XCTAssertNotNil(theme.switchStyle, @"Should be nil");
-    XCTAssertNotNil(theme.labelStyle, @"Should be nil");
-    XCTAssertNotNil(theme.viewControllerStyle, @"Should be nil");
-    XCTAssertNotNil(theme.textFieldStyle, @"Should be nil");
-    XCTAssertNotNil(theme.navigationBarStyle, @"Should be nil");
-    XCTAssertNotNil(theme.tableViewCellStyle, @"Should be nil");
-    XCTAssertNotNil(theme.imageViewStyle, @"Should be nil");
-    XCTAssertNotNil(theme.barButtonItemStyle, @"Should be nil");
-    XCTAssertNotNil(theme.sliderStyle, @"Should be nil");
+    XCTAssertNil(theme.buttonStyle, @"Should be nil");
+    XCTAssertNil(theme.switchStyle, @"Should be nil");
+    XCTAssertNil(theme.labelStyle, @"Should be nil");
+    XCTAssertNil(theme.viewControllerStyle, @"Should be nil");
+    XCTAssertNil(theme.textFieldStyle, @"Should be nil");
+    XCTAssertNil(theme.navigationBarStyle, @"Should be nil");
+    XCTAssertNil(theme.tableViewCellStyle, @"Should be nil");
+    XCTAssertNil(theme.imageViewStyle, @"Should be nil");
+    XCTAssertNil(theme.barButtonItemStyle, @"Should be nil");
+    XCTAssertNil(theme.sliderStyle, @"Should be nil");
 }
 
 #pragma mark - Button Style Testing
@@ -348,9 +348,8 @@
     [self assertStyleIsNilWithNilDictForClass:[BYImageViewStyle class]];
 }
 
--(void)testImageViewStyleWithEmptyDict {
-    [self assertStyleIsNilWithEmptyDictForClass:[BYImageViewStyle class]];
-}
+// We don't call assertStyleIsNilWithEmptyDictForClass:[BYImageViewStyle class] here because image view style *should* be nil
+// with an empty dictionary - all of it's properties are optional and it is also optional on theme.
 
 -(void)testImageViewStyleWithValidDict {
     BYImageViewStyle *imageStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"ValidImageViewStyle"
