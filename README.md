@@ -79,7 +79,10 @@ The examples above have shown how to change the visual appearance of a single co
 
 
 ##Building beautify
-To build beautify, open up **Beautify.xcodeproj** and select the "Beautify" scheme. Hit build and the **Beautify.framework** target should be built and deployed to your *DerivedData* directory. To find the resulting framework, right click on the Beautify.framework product in the products group and select *Show in Finder*.
+You must run two commands: 
+`git submodule init` to initialize your local configuration file, and `git submodule update` to fetch all the data it requires.
+
+Once you have done this, you can now build beautify. Open up **Beautify.xcodeproj** and select the "Beautify" scheme. Hit build and the **Beautify.framework** target should be built and deployed to your *DerivedData* directory. To find the resulting framework, right click on the Beautify.framework product in the products group and select *Show in Finder*.
 
 ![Beautify Products](Documentation/Images/products.png "Products")
 
