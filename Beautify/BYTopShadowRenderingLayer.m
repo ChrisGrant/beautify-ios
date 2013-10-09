@@ -32,7 +32,8 @@
     BYBorder *border = [_renderer propertyValueForNameWithCurrentState:@"border"];
     NSArray *innerShadows = [_renderer propertyValueForNameWithCurrentState:@"innerShadows"];
     
-    RenderInnerShadows(ctx, border, innerShadows, rect);
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:border.cornerRadius];
+    RenderInnerShadows(ctx, innerShadows, path);
 }
 
 @end

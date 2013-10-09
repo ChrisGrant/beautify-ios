@@ -65,7 +65,7 @@
         UIBezierPath* thumbPath = [UIBezierPath bezierPathWithRoundedRect:thumbRect
                                                             cornerRadius:thumbBorder.cornerRadius];
 
-        RenderOuterShadows(ctx, thumbBorder, thumbOuterShadows, _originalFrame);
+        RenderOuterShadows(ctx, thumbOuterShadows, thumbPath);
 
         // fill the thumb background
         CGContextAddPath(ctx, thumbPath.CGPath);
@@ -84,7 +84,8 @@
         }
         CGContextRestoreGState(ctx);
 
-        RenderInnerShadows(ctx, thumbBorder, thumbInnerShadows, thumbRect);
+        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:thumbRect cornerRadius:thumbBorder.cornerRadius];
+        RenderInnerShadows(ctx, thumbInnerShadows, path);
 
         // render the border
         CGContextAddPath(ctx, thumbPath.CGPath);

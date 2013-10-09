@@ -55,7 +55,8 @@
             CGContextFillPath(ctx);
         }
         
-        RenderInnerShadows(ctx, border, innerShadows, self.bounds);
+        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:border.cornerRadius];
+        RenderInnerShadows(ctx, innerShadows, path);
         
         if (border.width > 0) {
             UISwitch *view = self.renderer.adaptedView;

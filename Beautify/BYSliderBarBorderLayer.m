@@ -32,7 +32,9 @@
         UIBezierPath *borderPath = [BYSwitchBorderLayer borderPathForBounds:self.bounds andBorder:border];
         
         NSArray* barInnerShadows = [self.renderer propertyValueForNameWithCurrentState:@"barInnerShadows"];
-        RenderInnerShadows(ctx, border, barInnerShadows, self.bounds);
+        
+        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:border.cornerRadius];
+        RenderInnerShadows(ctx, barInnerShadows, path);
         
         // render the border
         CGContextAddPath(ctx, borderPath.CGPath);
