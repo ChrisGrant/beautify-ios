@@ -35,7 +35,8 @@
     NSArray* outerShadows = [self.renderer propertyValueForNameWithCurrentState:@"outerShadows"];
     
     // render outer shadows
-    RenderOuterShadows(ctx, border, outerShadows, originalFrame);
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:originalFrame cornerRadius:border.cornerRadius];
+    RenderOuterShadows(ctx, outerShadows, path);
 }
 
 @end

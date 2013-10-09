@@ -19,9 +19,8 @@ UIEdgeInsets UIEdgeInsetsInflate(UIEdgeInsets insets, float dx, float dy);
 UIEdgeInsets ComputeInsetsForShadows(NSArray* outerShadows);
 UIEdgeInsets ComputeExpandingInsetsForShadows(NSArray* outerShadows, BOOL expanding);
 
-// Renders all of the given shadows with 'inset = YES'
-void RenderInnerShadows(CGContextRef ctx, BYBorder* border, NSArray* innerShadows, CGRect rect);
-void RenderOuterShadows(CGContextRef ctx, BYBorder* border, NSArray* outerShadows, CGRect rect);
+void RenderInnerShadows(CGContextRef ctx, NSArray *innerShadows, UIBezierPath *path);
+void RenderOuterShadows(CGContextRef ctx, NSArray *outerShadows, UIBezierPath *path);
 
 /*
  * Renders a gradient within the given rectangle

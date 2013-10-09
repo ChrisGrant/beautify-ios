@@ -85,7 +85,7 @@
     }
     
     // Draw the outer shadows
-    RenderOuterShadows(ctx, border, outerShadows, rect);
+    RenderOuterShadows(ctx, outerShadows, layerPath);
     
     // Use the bezier as a clipping path
     [layerPath addClip];
@@ -135,7 +135,8 @@
         }
     }
     
-    RenderInnerShadows(ctx, border, innerShadows, rect);
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:border.cornerRadius];
+    RenderInnerShadows(ctx, innerShadows, path);
     
     // Draw the border
     if (border.width > 0) {                
