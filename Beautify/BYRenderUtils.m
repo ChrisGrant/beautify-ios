@@ -14,7 +14,6 @@ UIEdgeInsets UIEdgeInsetsInflate(UIEdgeInsets insets, float dx, float dy) {
     return UIEdgeInsetsMake(insets.top + dy, insets.left + dx, insets.bottom + dy, insets.right + dx);
 }
 
-// Computes the insets requires to accomodate the given outer shadows
 UIEdgeInsets ComputeInsetsForShadows(NSArray* outerShadows) {
     UIEdgeInsets inset = UIEdgeInsetsZero;
     
@@ -39,55 +38,64 @@ UIEdgeInsets ComputeExpandingInsetsForShadows(NSArray* outerShadows, BOOL expand
 // Renders all of the given inner Shadows with 'inset = YES'
 void RenderInnerShadows(CGContextRef ctx, NSArray *innerShadows, UIBezierPath *path) {
     for(BYShadow *shadow in innerShadows) {
-        // These should all be inset
-        if(!(CGSizeEqualToSize(CGSizeZero, shadow.offset) && shadow.radius == 0.0f)) {
+        
+        if(CGSizeEqualToSize(shadow.offset, CGSizeZero) && shadow.radius <= 0) {
+            // Don't render a shadow if the offset's values and the radius are 0.
+            break;
+        }
+        
+        CGContextSaveGState(ctx);
+        {
+            CGFloat shadowBlurRadius = shadow.radius;
+            CGFloat shadowWidth = shadow.offset.width;
+            CGFloat shadowHeight = shadow.offset.height;
+            
+            CGRect ovalBorderRect = CGRectInset([path bounds], -shadowBlurRadius, -shadowBlurRadius);
+            ovalBorderRect = CGRectOffset(ovalBorderRect, -shadowWidth, -shadowHeight);
+            ovalBorderRect = CGRectInset(CGRectUnion(ovalBorderRect, [path bounds]), -1, 1);
+            
+            UIBezierPath *ovalNegativePath = [UIBezierPath bezierPathWithRect:ovalBorderRect];
+            [ovalNegativePath appendPath:path];
+            [ovalNegativePath setUsesEvenOddFillRule:YES];
+            
             CGContextSaveGState(ctx);
             {
-                CGFloat shadowBlurRadius = shadow.radius;
-                CGFloat shadowWidth = shadow.offset.width;
-                CGFloat shadowHeight = shadow.offset.height;
+                CGFloat xOffset = shadowWidth + round(ovalBorderRect.size.width);
+                CGFloat yOffset = shadowHeight;
                 
-                CGRect ovalBorderRect = CGRectInset([path bounds], -shadowBlurRadius, -shadowBlurRadius);
-                ovalBorderRect = CGRectOffset(ovalBorderRect, -shadowWidth, -shadowHeight);
-                ovalBorderRect = CGRectInset(CGRectUnion(ovalBorderRect, [path bounds]), -1, 1);
+                CGContextSetShadowWithColor(ctx, CGSizeMake(xOffset + copysign(0.1, xOffset),
+                                                            yOffset + copysign(0.1, yOffset)),
+                                            shadowBlurRadius,
+                                            shadow.color.CGColor);
+                [path addClip];
                 
-                UIBezierPath *ovalNegativePath = [UIBezierPath bezierPathWithRect:ovalBorderRect];
-                [ovalNegativePath appendPath:path];
-                [ovalNegativePath setUsesEvenOddFillRule:YES];
-                
-                CGContextSaveGState(ctx);
-                {
-                    CGFloat xOffset = shadowWidth + round(ovalBorderRect.size.width);
-                    CGFloat yOffset = shadowHeight;
-                    
-                    CGContextSetShadowWithColor(ctx, CGSizeMake(xOffset + copysign(0.1, xOffset),
-                                                                yOffset + copysign(0.1, yOffset)),
-                                                shadowBlurRadius,
-                                                shadow.color.CGColor);
-                    [path addClip];
-                    
-                    CGAffineTransform transform = CGAffineTransformMakeTranslation(-round(ovalBorderRect.size.width), 0);
-                    [ovalNegativePath applyTransform:transform];
-                    [shadow.color setFill];
-                    [ovalNegativePath fill];
-                }
-                CGContextRestoreGState(ctx);
+                CGAffineTransform transform = CGAffineTransformMakeTranslation(-round(ovalBorderRect.size.width), 0);
+                [ovalNegativePath applyTransform:transform];
+                [shadow.color setFill];
+                [ovalNegativePath fill];
             }
             CGContextRestoreGState(ctx);
         }
+        CGContextRestoreGState(ctx);
     }
 }
 
 void RenderOuterShadows(CGContextRef ctx, NSArray *outerShadows, UIBezierPath *path) {
-    for (BYShadow *ss in outerShadows) {
+    for (BYShadow *shadow in outerShadows) {
+        
+        if(CGSizeEqualToSize(shadow.offset, CGSizeZero) && shadow.radius <= 0) {
+            // Don't render a shadow if the offset's values and the radius are 0.
+            break;
+        }
+        
         CGContextSaveGState(ctx);
         {
             // create a shadow
-            CGContextSetShadowWithColor(ctx, ss.offset, ss.radius, ss.color.CGColor);
+            CGContextSetShadowWithColor(ctx, shadow.offset, shadow.radius, shadow.color.CGColor);
             
             // render the path
             CGContextAddPath(ctx, path.CGPath);
-            CGContextSetFillColorWithColor(ctx, ss.color.CGColor);
+            CGContextSetFillColorWithColor(ctx, shadow.color.CGColor);
             CGContextSetLineWidth(ctx, 1.0);
             
             CGContextFillPath(ctx);

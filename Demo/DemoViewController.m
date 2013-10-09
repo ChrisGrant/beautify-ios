@@ -113,6 +113,10 @@
     return 100;
 }
 
+- (IBAction)iPadButtonTapped:(id)sender {
+    [self buttonTapped:sender];
+}
+
 -(IBAction)buttonTapped:(UIButton *)sender {
     UIViewController *vc = [UIViewController new];
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];

@@ -14,6 +14,7 @@
 #import "BYTheme.h"
 #import "BYBarButtonStyle.h"
 #import "BYControlRenderingLayer.h"
+#import "BYRenderUtils.h"
 
 @implementation BYBarButtonItemRenderer {
     UILabel *_label;
@@ -58,7 +59,7 @@
     _isBackButtonRenderer = isBackButtonRenderer;
     if(_isBackButtonRenderer) {
         self.style = _backStyle;
-        self.controlLayer.customPath = [self generateBackButtonPath];
+        self.controlLayer.customPath = [self backButtonPath];
     }
     else {
         self.style = _normalStyle;
@@ -94,9 +95,9 @@
 // This is the amount that the back button's "<" protrudes out of the left of the button.
 #define BACK_BUTTON_OFFSET 12
 
--(UIBezierPath*)generateBackButtonPath {
-    BYBorder *border = [self propertyValueForName:@"border" forState:UIControlStateNormal];
-    
+-(UIBezierPath*)backButtonPath {
+    BYBorder *border = [self propertyValueForNameWithCurrentState:@"border"];
+
     CGFloat height = ((UIView*)self.adaptedView).bounds.size.height;
     CGFloat width = ((UIView*)self.adaptedView).bounds.size.width;
     CGFloat radius = border.cornerRadius;
