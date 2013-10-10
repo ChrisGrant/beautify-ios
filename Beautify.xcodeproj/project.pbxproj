@@ -258,6 +258,7 @@
 		707F519617FB1FAF00928B0B /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517A17FB10A000928B0B /* JSONValueTransformer.m */; };
 		707F519717FB1FAF00928B0B /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517A17FB10A000928B0B /* JSONValueTransformer.m */; };
 		707F519817FB1FB300928B0B /* JSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517B17FB10A000928B0B /* JSONModelLib.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		708411C01806EB78005EA23C /* BYImmunityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 708411BF1806EB78005EA23C /* BYImmunityTests.m */; };
 		70907E6D1797E6F600F83417 /* BYImageViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70907E6B1797E6F600F83417 /* BYImageViewStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70907E701797E6F600F83417 /* BYImageViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70907E6C1797E6F600F83417 /* BYImageViewStyle.m */; };
 		70907E7B1797FBC300F83417 /* roller@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70907E7A1797FBC300F83417 /* roller@2x.png */; };
@@ -547,6 +548,7 @@
 		707F517917FB10A000928B0B /* JSONValueTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONValueTransformer.h; sourceTree = "<group>"; };
 		707F517A17FB10A000928B0B /* JSONValueTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONValueTransformer.m; sourceTree = "<group>"; };
 		707F517B17FB10A000928B0B /* JSONModelLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONModelLib.h; path = submodules/JSONModel/JSONModel/JSONModelLib.h; sourceTree = "<group>"; };
+		708411BF1806EB78005EA23C /* BYImmunityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYImmunityTests.m; sourceTree = "<group>"; };
 		70907E6B1797E6F600F83417 /* BYImageViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYImageViewStyle.h; sourceTree = "<group>"; };
 		70907E6C1797E6F600F83417 /* BYImageViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYImageViewStyle.m; sourceTree = "<group>"; };
 		70907E7A1797FBC300F83417 /* roller@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "roller@2x.png"; sourceTree = "<group>"; };
@@ -1137,6 +1139,7 @@
 		70FE246917E0B385009A7113 /* Beautify Tests */ = {
 			isa = PBXGroup;
 			children = (
+				708411BF1806EB78005EA23C /* BYImmunityTests.m */,
 				7044FB5A17F072530066E61A /* Copying Tests */,
 				700E156817E34128006E124E /* ConfigParser Tests */,
 				700E154517E30691006E124E /* BeautifyColorTests.m */,
@@ -1860,6 +1863,7 @@
 				700E155817E32119006E124E /* BYSwitchStyle.m in Sources */,
 				700E155717E32111006E124E /* BYStateSetter.m in Sources */,
 				70BF4F0017FB2AB600F807F6 /* UIImage+Base64.m in Sources */,
+				708411C01806EB78005EA23C /* BYImmunityTests.m in Sources */,
 				700E155C17E3213C006E124E /* BYTextShadow.m in Sources */,
 				700E155217E320F2006E124E /* BYLabelStyle.m in Sources */,
 				700E155A17E32125006E124E /* BYText.m in Sources */,
