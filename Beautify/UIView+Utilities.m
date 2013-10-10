@@ -8,6 +8,7 @@
 
 #import "UIView+Utilities.h"
 #import <objc/runtime.h>
+#import "UIView+Beautify.h"
 
 @implementation UIView (Utilities)
 
@@ -48,6 +49,13 @@
         else {
             return;
         }
+    }
+}
+
+-(void)recursivelySetSubViewImmunity:(BOOL)immunity {
+    [self setImmuneToBeautify:immunity];
+    for (UIView *subview in self.subviews) {
+        [subview recursivelySetSubViewImmunity:immunity];
     }
 }
 
