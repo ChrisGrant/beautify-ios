@@ -86,13 +86,19 @@
 }
 
 -(void)themeUpdated:(NSNotification*)notification {
-    BYTheme *theme = notification.object;
-    [self.renderer setTheme:theme];
-    
-    [[self allBarItems] enumerateObjectsUsingBlock:^(UIBarButtonItem *item, NSUInteger idx, BOOL *stop) {
-        UIView *v = [item valueForKey:@"view"];
-        [[v renderer] setTheme:theme];
-    }];
+    // Commit the whole theme update as a CATransaction without animations. This improves performance.
+    [CATransaction begin];
+    [CATransaction setDisableActions:YES];
+    {
+        BYTheme *theme = notification.object;
+        [self.renderer setTheme:theme];
+        
+        [[self allBarItems] enumerateObjectsUsingBlock:^(UIBarButtonItem *item, NSUInteger idx, BOOL *stop) {
+            UIView *v = [item valueForKey:@"view"];
+            [[v renderer] setTheme:theme];
+        }];
+    }
+    [CATransaction commit];
 }
 
 // Combines all of the bar items into a single array.
