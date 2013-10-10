@@ -11,6 +11,7 @@
 #import "UIView+BeautifyPrivate.h"
 #import "BYStyleRenderer.h"
 #import "NSObject+Beautify.h"
+#import "UIView+Utilities.h"
 
 @implementation UIView (Beautify)
 
@@ -24,27 +25,15 @@
     [self override_didMoveToWindow];
 }
 
--(BOOL)isImmuneToBeautify{
-    if ([super isImmuneToBeautify]) {
-        return YES;
-    }
-    
-    // This view isn't immune, but check that none of it's parents are immune to beautify.
-    id resp = [self nextResponder];
-    while (resp != nil) {
-        if([resp respondsToSelector:@selector(isImmuneToBeautify)]) {
-            if([resp isImmuneToBeautify]) {
-                return YES;
-            }
-        }
-        resp = [resp nextResponder];
-    }
-    
-    return NO;
+-(BOOL)isImmuneToBeautify {
+    return [super isImmuneToBeautify];
 }
 
 -(void)setImmuneToBeautify:(BOOL)immuneToBeautify{
     [super setImmuneToBeautify:immuneToBeautify];
+    for (UIView *v in self.subviews) {
+        [v recursivelySetSubViewImmunity:immuneToBeautify];
+    }
 }
 
 @end

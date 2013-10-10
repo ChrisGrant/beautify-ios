@@ -13,6 +13,7 @@
 -(void)hideAllSubViews;
 -(void)dumpViewHierarchy;
 -(void)dumpParentViewHierarchy;
+-(void)recursivelySetSubViewImmunity:(BOOL)immunity;
 
 @property UIFont* previousFont;
 
