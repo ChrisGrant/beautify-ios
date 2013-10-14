@@ -122,6 +122,7 @@
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(100, 100, 200, 200)];
     [button setTitle:@"Push View Controller" forState:UIControlStateNormal];
     [button addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];
+    vc.title = @"Pushed";
     [vc.view addSubview:button];
     [[self navigationController] pushViewController:vc animated:YES];
 }

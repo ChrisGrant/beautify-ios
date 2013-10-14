@@ -80,9 +80,7 @@
     UIBezierPath *layerPath = [UIBezierPath bezierPathWithRoundedRect:rect
                                                          cornerRadius:border.cornerRadius];
     if(self.customPath) {
-        UIEdgeInsets insets = ComputeExpandingInsetsForShadows(outerShadows, YES);
         layerPath = self.customPath;
-        [layerPath applyTransform:CGAffineTransformMakeTranslation(fabs(insets.left), fabs(insets.top))];
     }
     
     // Draw the outer shadows
