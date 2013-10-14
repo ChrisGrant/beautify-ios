@@ -54,6 +54,7 @@
         }
         else if ([self class] == NSClassFromString(@"UINavigationButton")) {
             renderer = [[BYBarButtonItemRenderer alloc] initWithView:self theme:[[BYThemeManager instance] currentTheme]];
+            ((BYBarButtonItemRenderer*)renderer).isBackButtonRenderer = NO;
         }
         else if ([self isKindOfClass:[UIButton class]] && [self isChildOfTableViewCell]) {
             // Don't style buttons that are inside of tableviewcells (yet).

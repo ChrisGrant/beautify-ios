@@ -79,7 +79,6 @@
     // a rounded rectangle bezier path that describes the layer
     UIBezierPath *layerPath = [UIBezierPath bezierPathWithRoundedRect:rect
                                                          cornerRadius:border.cornerRadius];
-    
     if(self.customPath) {
         layerPath = self.customPath;
     }
