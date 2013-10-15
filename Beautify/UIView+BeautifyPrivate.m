@@ -63,12 +63,33 @@
         else {
             renderer = [[BYThemeManager instance] rendererForView:self];
         }
-        [self associateRenderer:renderer];
     }
+}
+
+-(void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change context:(void*)context{
+    [self.renderer redraw];
+}
+
+-(void)override_dealloc {
+    BYStyleRenderer *renderer = objc_getAssociatedObject(self, @"renderer");
+    if(renderer) {
+        [self removeObserver:self forKeyPath:@"frame"];
+        [self removeObserver:self forKeyPath:@"bounds"];
+    }
+    [self override_dealloc];
 }
 
 -(void)associateRenderer:(BYStyleRenderer*)renderer {
     if (renderer != nil) {
+        // Subscribe to changes to the frame and the bounds here. Yes, we do subscribe to both. Sometimes bounds changes
+        // without frame changing... (UIKit is not strictly KVO compliant).
+        [self addObserver:self forKeyPath:@"frame"
+                  options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld)
+                  context:nil];
+        [self addObserver:self forKeyPath:@"bounds"
+                  options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld)
+                  context:nil];
+        
         objc_setAssociatedObject(self, @"renderer", renderer, OBJC_ASSOCIATION_RETAIN);
     }
 }

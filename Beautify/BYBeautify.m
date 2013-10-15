@@ -82,7 +82,8 @@
     // Used to style the back button item
     [self swizzleMethod:[UINavigationBar class] method:@"pushNavigationItem:"];
     
-    [self swizzleMethod:[UISwitch class] method:@"setFrame:"];
+    // Remove KVO.
+    [self swizzleMethod:[UIView class] method:@"dealloc"];
 }
 
 -(void)swizzleMethod:(Class)class method:(NSString*) methodName {
