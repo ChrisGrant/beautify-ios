@@ -14,23 +14,6 @@
 
 @implementation BYViewRenderer
 
--(id)initWithView:(id)view theme:(BYTheme*)theme{
-    if (self = [super initWithView:view theme:theme]) {
-        [self.adaptedView addObserver:self forKeyPath:@"frame"
-                  options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld)
-                  context:nil];
-        [self.adaptedView addObserver:self forKeyPath:@"bounds"
-                  options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld)
-                  context:nil];
-    }
-    return self;
-}
-
--(void)dealloc {
-    [self.adaptedView removeObserver:self forKeyPath:@"frame"];
-    [self.adaptedView removeObserver:self forKeyPath:@"bounds"];
-}
-
 -(void)configureFromStyle {
     float alpha = 1;
     [[self propertyValueForNameWithCurrentState:@"alpha"] getValue:&alpha];

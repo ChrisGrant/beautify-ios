@@ -15,6 +15,7 @@
 #import "BYControlRenderer_Private.h"
 #import "BYButtonStyle.h"
 #import "BYFont.h"
+#import "UIView+BeautifyPrivate.h"
 
 @implementation BYButtonRenderer {
     BYLabelRenderer *_labelRenderer;
@@ -39,6 +40,7 @@
         [button hideAllSubViews];
         
         _labelRenderer = [[BYLabelRenderer alloc] initWithView:button.titleLabel theme:theme];
+        [_labelRenderer setIgnoreThemeUpdates:YES];
         [self addRendererLayers];
         [self configureFromStyle];
     }
@@ -81,12 +83,10 @@
         if(theme.buttonStyle) {
             return theme.buttonStyle;
         }
-        if(button.buttonType == UIButtonTypeCustom) {
+        else if(button.buttonType == UIButtonTypeCustom) {
             return [BYButtonStyle defaultCustomStyle];
         }
-        else {
-            return [BYButtonStyle defaultSystemStyle];
-        }
+        return [BYButtonStyle defaultSystemStyle];
     }
     NSLog(@"Could not find an appropriate style for this type of button!");
     return nil;

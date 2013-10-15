@@ -41,7 +41,9 @@
 
 -(void)configureFromStyle {
     UIViewController* vc = (UIViewController*)self.adaptedView;
-    BYViewControllerStyle* style = self.style;
+    BYViewControllerStyle *style = self.style;
+    
+    vc.view.backgroundColor = [UIColor redColor];
     
     if ([vc class] == [UINavigationController class]){
         for (UIViewController* vcs in ((UINavigationController*)vc).viewControllers) {

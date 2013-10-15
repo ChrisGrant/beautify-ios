@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @class BYTheme;
+@class BYStyleRenderer;
 
 @interface UIView (BeautifyPrivate)
 
 -(void)createRenderer;
 
 -(void)applyTheme:(BYTheme*)theme;
+-(void)associateRenderer:(BYStyleRenderer*)renderer;
 
 @end

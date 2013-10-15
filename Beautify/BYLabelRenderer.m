@@ -1,5 +1,5 @@
 //
-//  LabelRenderer.m
+//  BYLabelRenderer.m
 //  Beautify
 //
 //  Created by Adrian Conlin on 30/04/2013.
@@ -56,6 +56,12 @@
     label.shadowOffset = textShadow.offset;
     
     [super configureFromStyle];
+}
+
+-(void)setTheme:(BYTheme*)theme {
+    if(!self.ignoreThemeUpdates) {
+        [super setTheme:theme];
+    }
 }
 
 #pragma mark - Style property customization

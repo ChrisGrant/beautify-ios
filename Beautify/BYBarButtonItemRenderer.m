@@ -39,6 +39,7 @@
         
         if(_label) {
             _labelRenderer = [[BYLabelRenderer alloc] initWithView:_label theme:theme];
+            [_labelRenderer setIgnoreThemeUpdates:YES];
         }
         
         [self configureFromStyle];
