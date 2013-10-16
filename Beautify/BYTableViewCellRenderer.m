@@ -72,7 +72,7 @@
     BYTextShadow* textShadow = [self propertyValueForNameWithCurrentState:@"titleShadow"];
 
     UILabel* label = cell.textLabel;
-    label.textColor = [UIColor redColor];
+    label.textColor = textStyle.color;
     label.font = [textStyle.font createFont:label.font];
     label.shadowColor = textShadow.color;
     label.shadowOffset = textShadow.offset;
