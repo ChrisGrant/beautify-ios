@@ -14,20 +14,17 @@ UIEdgeInsets UIEdgeInsetsInflate(UIEdgeInsets insets, float dx, float dy) {
     return UIEdgeInsetsMake(insets.top + dy, insets.left + dx, insets.bottom + dy, insets.right + dx);
 }
 
-UIEdgeInsets ComputeInsetsForShadows(NSArray* outerShadows) {
+UIEdgeInsets ComputeInsetsForShadows(BYShadow* ss) {
     UIEdgeInsets inset = UIEdgeInsetsZero;
-    
-    for (BYShadow *ss in outerShadows) {
-        inset.top = MAX(inset.top, ss.radius + MIN(ss.offset.height, 0));
-        inset.bottom = MAX(inset.bottom, ss.radius + MAX(ss.offset.height, 0));
-        inset.left = MAX(inset.left, ss.radius + MIN(ss.offset.width, 0));
-        inset.right = MAX(inset.right, ss.radius + MAX(ss.offset.width, 0));
-    }
+    inset.top = MAX(inset.top, ss.radius + MIN(ss.offset.height, 0));
+    inset.bottom = MAX(inset.bottom, ss.radius + MAX(ss.offset.height, 0));
+    inset.left = MAX(inset.left, ss.radius + MIN(ss.offset.width, 0));
+    inset.right = MAX(inset.right, ss.radius + MAX(ss.offset.width, 0));
     return inset;
 }
 
-UIEdgeInsets ComputeExpandingInsetsForShadows(NSArray* outerShadows, BOOL expanding) {
-    UIEdgeInsets inset = ComputeInsetsForShadows(outerShadows);
+UIEdgeInsets ComputeExpandingInsetsForShadows(BYShadow* shadow, BOOL expanding) {
+    UIEdgeInsets inset = ComputeInsetsForShadows(shadow);
     if(expanding){
         inset = UIEdgeInsetsMake(-inset.top * 2, -inset.left * 2,
                                  -inset.bottom * 2, -inset.right * 2);
@@ -35,13 +32,11 @@ UIEdgeInsets ComputeExpandingInsetsForShadows(NSArray* outerShadows, BOOL expand
     return inset;
 }
 
-// Renders all of the given inner Shadows with 'inset = YES'
-void RenderInnerShadows(CGContextRef ctx, NSArray *innerShadows, UIBezierPath *path) {
-    for(BYShadow *shadow in innerShadows) {
-        
+void RenderInnerShadow(CGContextRef ctx, BYShadow *shadow, UIBezierPath *path) {
+    
         if(CGSizeEqualToSize(shadow.offset, CGSizeZero) && shadow.radius <= 0) {
             // Don't render a shadow if the offset's values and the radius are 0.
-            break;
+            return;
         }
         
         CGContextSaveGState(ctx);
@@ -77,15 +72,12 @@ void RenderInnerShadows(CGContextRef ctx, NSArray *innerShadows, UIBezierPath *p
             CGContextRestoreGState(ctx);
         }
         CGContextRestoreGState(ctx);
-    }
 }
 
-void RenderOuterShadows(CGContextRef ctx, NSArray *outerShadows, UIBezierPath *path) {
-    for (BYShadow *shadow in outerShadows) {
-        
+void RenderOuterShadow(CGContextRef ctx, BYShadow *shadow, UIBezierPath *path) {
         if(CGSizeEqualToSize(shadow.offset, CGSizeZero) && shadow.radius <= 0) {
             // Don't render a shadow if the offset's values and the radius are 0.
-            break;
+            return;
         }
         
         CGContextSaveGState(ctx);
@@ -101,7 +93,6 @@ void RenderOuterShadows(CGContextRef ctx, NSArray *outerShadows, UIBezierPath *p
             CGContextFillPath(ctx);
         }
         CGContextRestoreGState(ctx);
-    }
 }
 
 /*

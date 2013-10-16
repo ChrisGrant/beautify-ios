@@ -27,8 +27,8 @@
     copy.backgroundImage = self.backgroundImage.copy;
     
     copy.border = self.border.copy;
-    copy.innerShadows = self.innerShadows.copy;
-    copy.outerShadows = self.outerShadows.copy;
+    copy.innerShadow = self.innerShadow.copy;
+    copy.outerShadow = self.outerShadow.copy;
     
     copy.accessoryViewImage = self.accessoryViewImage.copy;
     copy.editingAccessoryViewImage = self.editingAccessoryViewImage.copy;

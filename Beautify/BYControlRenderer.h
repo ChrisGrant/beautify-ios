@@ -8,7 +8,7 @@
 
 #import "BYViewRenderer.h"
 
-@class BYGradient, BYBackgroundImage, BYBorder;
+@class BYGradient, BYBackgroundImage, BYBorder, BYShadow;
 
 @interface BYControlRenderer : BYViewRenderer
 
@@ -41,11 +41,11 @@
 /*
  Set the inner shadows for the button associated with this renderer.
  */
--(void)setInnerShadows:(NSArray*)innerShadows forState:(UIControlState)state;
+-(void)setInnerShadow:(BYShadow*)innerShadow forState:(UIControlState)state;
 
 /*
  Set the outer shadows for the button associated with this renderer.
  */
--(void)setOuterShadows:(NSArray*)outerShadows forState:(UIControlState)state;
+-(void)setOuterShadow:(BYShadow*)outerShadow forState:(UIControlState)state;
 
 @end

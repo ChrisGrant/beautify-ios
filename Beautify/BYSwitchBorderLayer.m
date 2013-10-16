@@ -42,7 +42,7 @@
         BYBorder* border = [self.renderer propertyValueForNameWithCurrentState:@"border"];
         UIBezierPath *borderPath = [BYSwitchBorderLayer borderPathForBounds:self.bounds andBorder:border];
         
-        NSArray* innerShadows = [self.renderer propertyValueForNameWithCurrentState:@"innerShadows"];
+        BYShadow* innerShadow = [self.renderer propertyValueForNameWithCurrentState:@"innerShadow"];
         UIColor* highlightColor = [self.renderer propertyValueForNameWithCurrentState:@"highlightColor"];
         
         if(highlightColor) {
@@ -56,7 +56,7 @@
         }
         
         UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:border.cornerRadius];
-        RenderInnerShadows(ctx, innerShadows, path);
+        RenderInnerShadow(ctx, innerShadow, path);
         
         if (border.width > 0) {
             UISwitch *view = self.renderer.adaptedView;

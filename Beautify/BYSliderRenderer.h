@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BYViewRenderer.h"
 
-@class BYFont, BYGradient, BYBorder;
+@class BYFont, BYGradient, BYBorder, BYShadow;
 
 /*
  A renderer responsible for enhancing a UISlider.
@@ -33,12 +33,12 @@
 /*
  Set the inner shadows for the slider bar associated with this renderer.
  */
--(void)setBarInnerShadows:(NSArray*)barInnerShadows forState:(UIControlState)state;
+-(void)setBarInnerShadow:(BYShadow*)barInnerShadow forState:(UIControlState)state;
 
 /*
  Set the outer shadows for the slider bar associated with this renderer.
  */
--(void)setBarOuterShadows:(NSArray*)barOuterShadows forState:(UIControlState)state;
+-(void)setBarOuterShadow:(BYShadow*)barOuterShadow forState:(UIControlState)state;
 
 #pragma mark - Minimum track customizers
 
@@ -104,11 +104,11 @@
 /*
  Set the inner shadows for the thumb on the slider bar associated with this renderer.
  */
--(void)setThumbInnerShadows:(NSArray*)thumbInnerShadows forState:(UIControlState)state;
+-(void)setThumbInnerShadow:(BYShadow*)thumbInnerShadow forState:(UIControlState)state;
 
 /*
  Set the outer shadows for the thumb on the slider bar associated with this renderer.
  */
--(void)setThumbOuterShadows:(NSArray*)thumbOuterShadows forState:(UIControlState)state;
+-(void)setThumbOuterShadow:(BYShadow*)thumbOuterShadow forState:(UIControlState)state;
 
 @end

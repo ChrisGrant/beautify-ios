@@ -26,8 +26,8 @@
         style.title = [BYText textWithFont:titleFont color:[UIColor blackColor]];
         style.backgroundColor = [UIColor whiteColor];
         style.border = [BYBorder borderWithColor:[UIColor colorWithWhite:0.33 alpha:1.0] width:2 radius:7.0];
-        style.outerShadows = @[[BYShadow shadowWithOffset:CGSizeMake(0, 1.0) radius:1.0f color:[UIColor colorWithWhite:1.0 alpha:0.8f]]];
-        style.innerShadows = @[[BYShadow shadowWithOffset:CGSizeMake(0, 1.0) radius:2.0f color:[UIColor colorWithWhite:0.0 alpha:0.8f]]];
+        style.outerShadow = [BYShadow shadowWithOffset:CGSizeMake(0, 1.0) radius:1.0f color:[UIColor colorWithWhite:1.0 alpha:0.8f]];
+        style.innerShadow = [BYShadow shadowWithOffset:CGSizeMake(0, 1.0) radius:2.0f color:[UIColor colorWithWhite:0.0 alpha:0.8f]];
     }
     return style;
 }
@@ -41,8 +41,8 @@
     copy.backgroundImage = self.backgroundImage.copy;
     
     copy.border = self.border.copy;
-    copy.innerShadows = self.innerShadows.copy;
-    copy.outerShadows = self.outerShadows.copy;
+    copy.innerShadow = self.innerShadow.copy;
+    copy.outerShadow = self.outerShadow.copy;
     
     return copy;
 }

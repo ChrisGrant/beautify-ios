@@ -100,9 +100,9 @@
 
 -(UIBezierPath*)backButtonPath {
     BYBorder *border = [self propertyValueForNameWithCurrentState:@"border"];
-    NSArray *shadows = [self propertyValueForNameWithCurrentState:@"outerShadows"];
+    BYShadow *shadow = [self propertyValueForNameWithCurrentState:@"outerShadow"];
     
-    UIEdgeInsets insets = ComputeExpandingInsetsForShadows(shadows, YES);
+    UIEdgeInsets insets = ComputeExpandingInsetsForShadows(shadow, YES);
     
     CGFloat height = ((UIView*)self.adaptedView).bounds.size.height;
     CGFloat width = ((UIView*)self.adaptedView).bounds.size.width;

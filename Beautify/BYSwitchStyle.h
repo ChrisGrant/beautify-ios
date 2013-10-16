@@ -30,15 +30,15 @@
 
 // Border
 @property BYBorder<Optional> *border;
-@property NSArray<BYShadow, Optional> *innerShadows;
-@property NSArray<BYShadow, Optional> *outerShadows;
+@property BYShadow<Optional> *innerShadow;
+@property BYShadow<Optional> *outerShadow;
 
 // Thumb
 @property BYBorder<Optional> *thumbBorder;
 @property UIColor<Optional> *thumbBackgroundColor;
 @property BYGradient<Optional> *thumbBackgroundGradient;
-@property NSArray<BYShadow, Optional> *thumbInnerShadows;
-@property NSArray<BYShadow, Optional> *thumbOuterShadows;
+@property BYShadow<Optional> *thumbInnerShadow;
+@property BYShadow<Optional> *thumbOuterShadow;
 @property UIImage<Optional> *thumbImage;
 @property UIImage<Optional> *trackLayerImage;
 @property UIImage<Optional> *borderLayerImage;

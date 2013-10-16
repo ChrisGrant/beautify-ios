@@ -312,12 +312,12 @@
     [self setPropertyValue:barBorder forName:@"barBorder" forState:state];
 }
 
--(void)setBarInnerShadows:(NSArray*)barInnerShadows forState:(UIControlState)state {
-    [self setPropertyValue:barInnerShadows forName:@"barInnerShadows" forState:state];
+-(void)setBarInnerShadow:(BYShadow*)barInnerShadow forState:(UIControlState)state {
+    [self setPropertyValue:barInnerShadow forName:@"barInnerShadow" forState:state];
 }
 
--(void)setBarOuterShadows:(NSArray*)barOuterShadows forState:(UIControlState)state {
-    [self setPropertyValue:barOuterShadows forName:@"barOuterShadows" forState:state];
+-(void)setBarOuterShadow:(BYShadow*)barouterShadow forState:(UIControlState)state {
+    [self setPropertyValue:barouterShadow forName:@"barouterShadow" forState:state];
 }
 
 // minimum track
@@ -368,12 +368,12 @@
                              withObjCType:@encode(float)] forName:@"thumbSize" forState:state];
 }
 
--(void)setThumbInnerShadows:(NSArray*)thumbInnerShadows forState:(UIControlState)state {
-    [self setPropertyValue:thumbInnerShadows forName:@"thumbInnerShadows" forState:state];
+-(void)setThumbInnerShadow:(BYShadow*)thumbInnerShadow forState:(UIControlState)state {
+    [self setPropertyValue:thumbInnerShadow forName:@"thumbInnerShadow" forState:state];
 }
 
--(void)setThumbOuterShadows:(NSArray*)thumbOuterShadows forState:(UIControlState)state {
-    [self setPropertyValue:thumbOuterShadows forName:@"thumbOuterShadows" forState:state];
+-(void)setThumbOuterShadow:(BYShadow*)thumbOuterShadow forState:(UIControlState)state {
+    [self setPropertyValue:thumbOuterShadow forName:@"thumbOuterShadow" forState:state];
 }
 
 @end

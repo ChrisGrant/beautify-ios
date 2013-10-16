@@ -382,12 +382,12 @@
     [self setPropertyValue:border forName:@"border" forState:state];
 }
 
--(void)setInnerShadows:(NSArray*)innerShadows forState:(UIControlState)state {
-    [self setPropertyValue:innerShadows forName:@"innerShadows" forState:state];
+-(void)setInnerShadow:(BYShadow*)innerShadow forState:(UIControlState)state {
+    [self setPropertyValue:innerShadow forName:@"innerShadow" forState:state];
 }
 
--(void)setOuterShadows:(NSArray*)outerShadows forState:(UIControlState)state {
-    [self setPropertyValue:outerShadows forName:@"outerShadows" forState:state];
+-(void)setouterShadow:(BYShadow*)outerShadow forState:(UIControlState)state {
+    [self setPropertyValue:outerShadow forName:@"outerShadow" forState:state];
 }
 
 -(void)setBorderLayerImage:(UIImage*)borderLayerImage forState:(UIControlState)state {
@@ -416,12 +416,12 @@
                              withObjCType:@encode(float)] forName:@"thumbSize" forState:state];
 }
 
--(void)setThumbInnerShadows:(NSArray*)thumbInnerShadows forState:(UIControlState)state {
-    [self setPropertyValue:thumbInnerShadows forName:@"thumbInnerShadows" forState:state];
+-(void)setThumbInnerShadow:(BYShadow*)thumbInnerShadow forState:(UIControlState)state {
+    [self setPropertyValue:thumbInnerShadow forName:@"thumbInnerShadow" forState:state];
 }
 
--(void)setThumbOuterShadows:(NSArray*)thumbOuterShadows forState:(UIControlState)state {
-    [self setPropertyValue:thumbOuterShadows forName:@"thumbOuterShadows" forState:state];
+-(void)setThumbouterShadow:(BYShadow*)thumbOuterShadow forState:(UIControlState)state {
+    [self setPropertyValue:thumbOuterShadow forName:@"thumbOuterShadow" forState:state];
 }
 
 -(void)setThumbImage:(UIImage*)thumbImage forState:(UIControlState)state {

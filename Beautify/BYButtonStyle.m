@@ -35,8 +35,8 @@
                                              color:[UIColor colorWithRed:56.0f/255.0f green:84.0f/255.0f blue:135.0f/255.0f alpha:1.0f]];
         style.backgroundColor = [UIColor whiteColor];
         style.border = [BYBorder borderWithColor:[UIColor colorWithWhite:0.67f alpha:1.0] width:2.0f radius:8];
-        style.outerShadows = @[[BYShadow shadowWithOffset:CGSizeMake(0, 1) radius:1.0f color:[UIColor whiteColor]]];
-        style.innerShadows = @[[BYShadow shadowWithOffset:CGSizeMake(0, 1) radius:1.0 color:[UIColor colorWithWhite:0.6 alpha:0.6]]];
+        style.outerShadow = [BYShadow shadowWithOffset:CGSizeMake(0, 1) radius:1.0f color:[UIColor whiteColor]];
+        style.innerShadow = [BYShadow shadowWithOffset:CGSizeMake(0, 1) radius:1.0 color:[UIColor colorWithWhite:0.6 alpha:0.6]];
         
         BYStateSetter *highlightedBGSetter = [BYStateSetter new];
         highlightedBGSetter.propertyName = @"backgroundGradient";
@@ -63,8 +63,8 @@
     [copy setBackgroundGradient:self.backgroundGradient.copy];
     [copy setBackgroundImage:self.backgroundImage.copy];
     [copy setBorder:self.border.copy];
-    [copy setInnerShadows:self.innerShadows.copy];
-    [copy setOuterShadows:self.outerShadows.copy];
+    [copy setInnerShadow:self.innerShadow.copy];
+    [copy setOuterShadow:self.outerShadow.copy];
     [copy setStateSetters:self.stateSetters.copy];
     return copy;
 }
