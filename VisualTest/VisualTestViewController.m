@@ -88,9 +88,9 @@
     [renderer setBorder:border forState:UIControlStateNormal];
 
     BYShadow *innerShadow = [BYShadow shadowWithOffset:CGSizeMake(0, 0) radius:10 color:[UIColor greenColor]];
-    [renderer setInnerShadows:@[innerShadow] forState:UIControlStateNormal];
+    [renderer setInnerShadow:innerShadow forState:UIControlStateNormal];
     BYShadow *outerShadow = [BYShadow shadowWithOffset:CGSizeMake(0, 0) radius:20 color:[UIColor redColor]];
-    [renderer setOuterShadows:@[outerShadow] forState:UIControlStateNormal];
+    [renderer setOuterShadow:outerShadow forState:UIControlStateNormal];
     
     border = [BYBorder new];
     border.width = 5.0f;
@@ -99,9 +99,9 @@
     [renderer setBorder:border forState:UIControlStateHighlighted];
     
     innerShadow = [BYShadow shadowWithOffset:CGSizeMake(0, 0) radius:15 color:[UIColor redColor]];
-    [renderer setInnerShadows:@[innerShadow] forState:UIControlStateHighlighted];
+    [renderer setInnerShadow:innerShadow forState:UIControlStateHighlighted];
     outerShadow = [BYShadow shadowWithOffset:CGSizeMake(0, 0) radius:20 color:[UIColor greenColor]];
-    [renderer setOuterShadows:@[outerShadow] forState:UIControlStateHighlighted];
+    [renderer setOuterShadow:outerShadow forState:UIControlStateHighlighted];
     
     self.navigationItem.rightBarButtonItems = @[customizedButtonRight, beautifyDefaultButtonRight, defaultButtonRight];
     
@@ -179,10 +179,10 @@
     [renderer setBorder:border forState:UIControlStateNormal];
     
     BYShadow *shadow1 = [BYShadow shadowWithOffset:CGSizeZero radius:25.0 color:[UIColor blueColor]];
-    [renderer setOuterShadows:@[shadow1] forState:UIControlStateNormal];
+    [renderer setOuterShadow:shadow1 forState:UIControlStateNormal];
     
     BYShadow *shadow2 = [BYShadow shadowWithOffset:CGSizeZero radius:51.0 color:[UIColor blackColor]];
-    [renderer setInnerShadows:@[shadow2] forState:UIControlStateNormal];
+    [renderer setInnerShadow:shadow2 forState:UIControlStateNormal];
     
     [self addDefaultView:iv1 beautifyDefaultView:iv2 andCustomisedView:iv3 withHeight:200];
 }
@@ -218,7 +218,7 @@
     [renderer setThumbBackgroundColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
     BYShadow *shadow1 = [BYShadow shadowWithOffset:CGSizeZero radius:100.0 color:[UIColor blackColor]];
-    [renderer setThumbInnerShadows:@[shadow1] forState:UIControlStateNormal];
+    [renderer setThumbInnerShadow:shadow1 forState:UIControlStateNormal];
     
     [self addDefaultView:s1 beautifyDefaultView:s2 andCustomisedView:s3 withHeight:30];
 }
@@ -236,7 +236,7 @@
     border.cornerRadius = 5.0f;
     
     BYShadow *shadow1 = [BYShadow shadowWithOffset:CGSizeZero radius:10.0 color:[UIColor greenColor]];
-    [renderer setBarOuterShadows:@[shadow1] forState:UIControlStateNormal];
+    [renderer setBarOuterShadow:shadow1 forState:UIControlStateNormal];
     
     // default bar thickness is very thin on ios7 and so trying to draw inner shadows and bar border makes things look a bit ugly
     BYBorder *barBorder = [BYBorder new];
@@ -246,7 +246,7 @@
     [renderer setBarBorder:barBorder forState:UIControlStateNormal];
 
     BYShadow *shadow2 = [BYShadow shadowWithOffset:CGSizeZero radius:5.0 color:[UIColor whiteColor]];
-    [renderer setBarInnerShadows:@[shadow2] forState:UIControlStateNormal];
+    [renderer setBarInnerShadow:shadow2 forState:UIControlStateNormal];
     
     [renderer setMinimumTrackColor:[UIColor blueColor] forState:UIControlStateNormal];
     [renderer setMinimumTrackBackgroundGradient:[BYGradient new] forState:UIControlStateNormal];
@@ -255,7 +255,7 @@
     [renderer setMaximumTrackBackgroundGradient:[BYGradient new] forState:UIControlStateNormal];
     
     BYShadow *shadow4 = [BYShadow shadowWithOffset:CGSizeZero radius:15.0 color:[UIColor yellowColor]];
-    [renderer setThumbOuterShadows:@[shadow4] forState:UIControlStateNormal];
+    [renderer setThumbOuterShadow:shadow4 forState:UIControlStateNormal];
     
     BYBorder *thumbBorder = [BYBorder new];
     thumbBorder.width = 1.0f;
@@ -266,7 +266,7 @@
     [renderer setThumbBackgroundColor:[UIColor purpleColor] forState:UIControlStateNormal];
     
     BYShadow *shadow3 = [BYShadow shadowWithOffset:CGSizeZero radius:10.0 color:[UIColor greenColor]];
-    [renderer setThumbInnerShadows:@[shadow3] forState:UIControlStateNormal];
+    [renderer setThumbInnerShadow:shadow3 forState:UIControlStateNormal];
             
     [self addDefaultView:s1 beautifyDefaultView:s2 andCustomisedView:s3 withHeight:25];
 }
@@ -293,7 +293,7 @@
     [renderer setBorder:border forState:UIControlStateNormal];
     
     BYShadow *shadow1 = [BYShadow shadowWithOffset:CGSizeZero radius:30.0 color:[UIColor blackColor]];
-    [renderer setInnerShadows:@[shadow1] forState:UIControlStateNormal];
+    [renderer setInnerShadow:shadow1 forState:UIControlStateNormal];
     
     [self addDefaultView:rtf1 beautifyDefaultView:rtf2 andCustomisedView:rtf3 withHeight:44];
 }

@@ -30,10 +30,10 @@
 
 -(void)drawLayerInRect:(CGRect)rect withContext:(CGContextRef)ctx {
     BYBorder *border = [_renderer propertyValueForNameWithCurrentState:@"border"];
-    NSArray *innerShadows = [_renderer propertyValueForNameWithCurrentState:@"innerShadows"];
+    BYShadow *innerShadow = [_renderer propertyValueForNameWithCurrentState:@"innerShadow"];
     
     UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:border.cornerRadius];
-    RenderInnerShadows(ctx, innerShadows, path);
+    RenderInnerShadow(ctx, innerShadow, path);
 }
 
 @end

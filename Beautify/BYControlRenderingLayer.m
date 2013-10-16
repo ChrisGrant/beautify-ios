@@ -40,8 +40,8 @@
 }
 
 -(void)setFrame:(CGRect)frame {
-    NSArray *outerShadows = [self propertyValue:@"outerShadows"];
-    UIEdgeInsets insets = ComputeExpandingInsetsForShadows(outerShadows, YES);
+    BYShadow *outerShadow = [self propertyValue:@"outerShadow"];
+    UIEdgeInsets insets = ComputeExpandingInsetsForShadows(outerShadow, YES);
     
     originalFrame = frame;
     // Inflate the frame to make space for outer shadows
@@ -69,10 +69,10 @@
 }
 
 -(void)drawLayerInRect:(CGRect)rect withContext:(CGContextRef)ctx {
-    NSArray *outerShadows = [self propertyValue:@"outerShadows"];
+    BYShadow *outerShadow = [self propertyValue:@"outerShadow"];
     UIColor* backgroundColor = [self propertyValue:@"backgroundColor"];
     BYGradient *backgroundGradient = [self propertyValue:@"backgroundGradient"];
-    NSArray *innerShadows = [self propertyValue:@"innerShadows"];
+    BYShadow *innerShadow = [self propertyValue:@"innerShadow"];
     BYBorder *border = [self propertyValue:@"border"];
     BYBackgroundImage *backgroundImage = [self propertyValue:@"backgroundImage"];
 
@@ -84,7 +84,7 @@
     }
     
     // Draw the outer shadows
-    RenderOuterShadows(ctx, outerShadows, layerPath);
+    RenderOuterShadow(ctx, outerShadow, layerPath);
     
     // Use the bezier as a clipping path
     [layerPath addClip];
@@ -135,7 +135,7 @@
     }
     
     UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:border.cornerRadius];
-    RenderInnerShadows(ctx, innerShadows, path);
+    RenderInnerShadow(ctx, innerShadow, path);
     
     // Draw the border
     if (border.width > 0) {                

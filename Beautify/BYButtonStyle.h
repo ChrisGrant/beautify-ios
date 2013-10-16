@@ -30,8 +30,8 @@
 
 // border
 @property BYBorder<Optional> *border;
-@property NSArray<BYShadow, Optional> *innerShadows;
-@property NSArray<BYShadow, Optional> *outerShadows;
+@property BYShadow<Optional> *innerShadow;
+@property BYShadow<Optional> *outerShadow;
 
 // This is the default style for UIButtonTypeCustom
 +(BYButtonStyle*)defaultCustomStyle;

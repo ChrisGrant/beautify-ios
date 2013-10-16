@@ -71,6 +71,12 @@ static NSDictionary* styleProperties = nil;
                                 @"editingaccessoryviewimage" : [UIImage class],
                                 @"onstate" : [BYSwitchState class],
                                 @"offstate" : [BYSwitchState class],
+                                @"innershadow" : [BYShadow class],
+                                @"outershadow" : [BYShadow class],
+                                @"barinnershadow" : [BYShadow class],
+                                @"baroutershadow" : [BYShadow class],
+                                @"thumbinnershadow" : [BYShadow class],
+                                @"thumboutershadow" : [BYShadow class],
                                 };
         });
         

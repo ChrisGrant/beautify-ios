@@ -18,8 +18,8 @@
 -(id)copyWithZone:(NSZone *)zone {
     BYImageViewStyle *copy = [super copyWithZone:zone];
     copy.border = self.border.copy;
-    copy.innerShadows = [self.innerShadows copyWithZone:zone];
-    copy.outerShadows = [self.outerShadows copyWithZone:zone];
+    copy.innerShadow = [self.innerShadow copyWithZone:zone];
+    copy.outerShadow = [self.outerShadow copyWithZone:zone];
     return copy;
 }
 

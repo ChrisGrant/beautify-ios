@@ -59,11 +59,11 @@
 -(void)configureFromStyle {
     UIImageView *imageView = (UIImageView*)self.adaptedView;
     
-    NSArray *outerShadows = [self propertyValueForNameWithCurrentState:@"outerShadows"];
+    BYShadow *outerShadow = [self propertyValueForNameWithCurrentState:@"outerShadow"];
     BYBorder *border = [self propertyValueForNameWithCurrentState:@"border"];
     
     CGRect replacementImageViewFrame = imageView.bounds;
-    UIEdgeInsets insets = ComputeInsetsForShadows(outerShadows);
+    UIEdgeInsets insets = ComputeInsetsForShadows(outerShadow);
     replacementImageViewFrame.origin.x = replacementImageViewFrame.origin.x + (insets.left * 2);
     replacementImageViewFrame.origin.y = replacementImageViewFrame.origin.y + (insets.top * 2);
     [_replacementImageView setFrame:replacementImageViewFrame];

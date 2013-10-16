@@ -55,37 +55,30 @@
             }
         ]
     },
-    "thumbInnerShadows": [
-        {
-            "color": "#FFFFFF",
-            "radius": "2",
-            "offset": {
-                "x": 2,
-                "y": 2
-            }
+    "thumbInnerShadow": {
+        "color": "#FFFFFF",
+        "radius": "2",
+        "offset": {
+            "x": 2,
+            "y": 2
         }
-    ],
-    "thumbOuterShadows": [],
-    "innerShadows": [
-        {
-            "color": "#000000",
-            "radius": "4",
-            "offset": {
-                "x": 0,
-                "y": 0
-            }
+    },
+    "innerShadow": {
+        "color": "#000000",
+        "radius": "4",
+        "offset": {
+            "x": 0,
+            "y": 0
         }
-    ],
-    "outerShadows": [
-        {
-            "color": "#FF0000",
-            "radius": 0,
-            "offset": {
-                "x": 0,
-                "y": -2
-            }
+    },
+    "outerShadow": {
+        "color": "#FF0000",
+        "radius": 0,
+        "offset": {
+            "x": 0,
+            "y": -2
         }
-    ],
+    },
     "border": {
         "width": 1,
         "color": "#FF0000",

@@ -91,7 +91,7 @@
     
     [self assertBorder:buttonStyle.border hasWidth:1.0f color:[UIColor redColor] andCornerRadius:8.0f];
     
-    [self assertShadows:buttonStyle.outerShadows hasOneShadowWithColor:[UIColor greenColor] radius:2.0f andOffset:CGSizeMake(2, 3)];
+    [self assertShadows:buttonStyle.outerShadow hasOneShadowWithColor:[UIColor greenColor] radius:2.0f andOffset:CGSizeMake(2, 3)];
     
     BYStateSetter *setter = buttonStyle.stateSetters[0];
     XCTAssertEqual(setter.state, UIControlStateHighlighted, @"Should be for the highlighted state");
@@ -146,13 +146,13 @@
          hasStopOneColor:[UIColor whiteColor] atPosition:1.0f
          andStopTwoColor:[UIColor blueColor] atPosition:0.0f andIsRadial:NO withRadialOffset:CGSizeZero];
     
-    [self assertShadows:switchStyle.thumbInnerShadows hasOneShadowWithColor:[UIColor whiteColor]
+    [self assertShadows:switchStyle.thumbInnerShadow hasOneShadowWithColor:[UIColor whiteColor]
                  radius:2 andOffset:CGSizeMake(2, 2)];
-    XCTAssertEqual(switchStyle.thumbOuterShadows.count, (NSUInteger)0, @"Should be no outer shadows");
+    XCTAssertNil(switchStyle.thumbOuterShadow, @"Should be no outer shadow.");
     
-    [self assertShadows:switchStyle.innerShadows hasOneShadowWithColor:[UIColor blackColor]
+    [self assertShadows:switchStyle.innerShadow hasOneShadowWithColor:[UIColor blackColor]
                  radius:4 andOffset:CGSizeZero];
-    [self assertShadows:switchStyle.outerShadows hasOneShadowWithColor:[UIColor redColor]
+    [self assertShadows:switchStyle.outerShadow hasOneShadowWithColor:[UIColor redColor]
                  radius:0 andOffset:CGSizeMake(0, -2)];
     
     [self assertBorder:switchStyle.border hasWidth:1 color:[UIColor redColor] andCornerRadius:15];
@@ -260,7 +260,7 @@
     
     [self assertBorder:textStyle.border hasWidth:1.0f color:[UIColor redColor] andCornerRadius:8.0f];
     
-    [self assertShadows:textStyle.outerShadows hasOneShadowWithColor:[UIColor greenColor] radius:2.0f andOffset:CGSizeMake(2, 3)];
+    [self assertShadows:textStyle.outerShadow hasOneShadowWithColor:[UIColor greenColor] radius:2.0f andOffset:CGSizeMake(2, 3)];
 }
 
 -(void)testTextFieldStyleWithPartialDict {
@@ -326,8 +326,8 @@
          hasStopOneColor:[UIColor redColor] atPosition:0.1 andStopTwoColor:[UIColor blueColor] atPosition:0.9
              andIsRadial:NO withRadialOffset:CGSizeZero];
     [self assertBorder:tableStyle.border hasWidth:1 color:[UIColor redColor] andCornerRadius:8];
-    [self assertShadows:tableStyle.outerShadows hasOneShadowWithColor:[UIColor greenColor] radius:2 andOffset:CGSizeMake(2, 3)];
-    [self assertShadows:tableStyle.innerShadows hasOneShadowWithColor:[UIColor redColor] radius:3 andOffset:CGSizeMake(5, 5)];
+    [self assertShadows:tableStyle.outerShadow hasOneShadowWithColor:[UIColor greenColor] radius:2 andOffset:CGSizeMake(2, 3)];
+    [self assertShadows:tableStyle.innerShadow hasOneShadowWithColor:[UIColor redColor] radius:3 andOffset:CGSizeMake(5, 5)];
     XCTAssertNotNil(tableStyle.accessoryViewImage, @"Accessory image should not be nil");
     XCTAssertNotNil(tableStyle.editingAccessoryViewImage, @"Editing accessory image should not be nil");
 }
@@ -355,8 +355,8 @@
     BYImageViewStyle *imageStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"ValidImageViewStyle"
                                                                                            andClass:[BYImageViewStyle class]];
     [self assertBorder:imageStyle.border hasWidth:53.0f color:[UIColor redColor] andCornerRadius:1];
-    [self assertShadows:imageStyle.outerShadows hasOneShadowWithColor:[UIColor greenColor] radius:2.0f andOffset:CGSizeMake(2, 3)];
-    [self assertShadows:imageStyle.innerShadows hasOneShadowWithColor:[UIColor whiteColor] radius:5.0f andOffset:CGSizeMake(1, 4)];
+    [self assertShadows:imageStyle.outerShadow hasOneShadowWithColor:[UIColor greenColor] radius:2.0f andOffset:CGSizeMake(2, 3)];
+    [self assertShadows:imageStyle.innerShadow hasOneShadowWithColor:[UIColor whiteColor] radius:5.0f andOffset:CGSizeMake(1, 4)];
 }
 
 -(void)testImageViewStyleWithPartialDict {
@@ -389,7 +389,7 @@
     
     [self assertBorder:barStyle.border hasWidth:1.0f color:[UIColor redColor] andCornerRadius:8.0f];
     
-    [self assertShadows:barStyle.outerShadows hasOneShadowWithColor:[UIColor greenColor] radius:2.0f andOffset:CGSizeMake(2, 3)];
+    [self assertShadows:barStyle.outerShadow hasOneShadowWithColor:[UIColor greenColor] radius:2.0f andOffset:CGSizeMake(2, 3)];
 }
 
 -(void)testBarButtonStyleWithPartialDict {
@@ -417,8 +417,8 @@
 
     [self assertBorder:sliderStyle.barBorder hasWidth:2 color:[UIColor redColor] andCornerRadius:10];
     
-    [self assertShadows:sliderStyle.barInnerShadows hasOneShadowWithColor:[UIColor blackColor] radius:4 andOffset:CGSizeZero];
-    [self assertShadows:sliderStyle.barOuterShadows hasOneShadowWithColor:[UIColor redColor] radius:0 andOffset:CGSizeMake(0, -2)];
+    [self assertShadows:sliderStyle.barInnerShadow hasOneShadowWithColor:[UIColor blackColor] radius:4 andOffset:CGSizeZero];
+    [self assertShadows:sliderStyle.barOuterShadow hasOneShadowWithColor:[UIColor redColor] radius:0 andOffset:CGSizeMake(0, -2)];
     
     XCTAssertEqual((float)sliderStyle.barHeightFraction, 1.0f, @"Bar Height Fraction should be 1");
     
@@ -441,9 +441,9 @@
          hasStopOneColor:[UIColor whiteColor] atPosition:1.0f
          andStopTwoColor:[UIColor blueColor] atPosition:0.0f andIsRadial:NO withRadialOffset:CGSizeZero];
     
-    [self assertShadows:sliderStyle.thumbInnerShadows hasOneShadowWithColor:[UIColor whiteColor]
+    [self assertShadows:sliderStyle.thumbInnerShadow hasOneShadowWithColor:[UIColor whiteColor]
                  radius:2 andOffset:CGSizeMake(2, 2)];
-    XCTAssertEqual(sliderStyle.thumbOuterShadows.count, (NSUInteger)0, @"Should be no outer shadows");
+    XCTAssertNil(sliderStyle.thumbOuterShadow, @"Should be no outer shadow");
 }
 
 -(void)testSliderStyleWithPartialDict {
@@ -478,10 +478,8 @@
     XCTAssertNil(style, @"Style should not be nil");
 }
 
--(void)assertShadows:(NSArray*)array hasOneShadowWithColor:(UIColor*)color radius:(float)radius andOffset:(CGSize)offset {
-    XCTAssertEqual(array.count, (NSUInteger)1, @"Should only be 1 shadow");
-    BYShadow *shadow = array[0];
-    
+-(void)assertShadows:(BYShadow*)array hasOneShadowWithColor:(UIColor*)color radius:(float)radius andOffset:(CGSize)offset {
+    BYShadow *shadow = array;
     XCTAssert([shadow.color isEqualToColor:color], @"Colors should be equal");
     XCTAssertEqual(shadow.radius, radius, @"Radii should be equal");
     XCTAssertEqual(shadow.offset, offset, @"Offset should be equal");

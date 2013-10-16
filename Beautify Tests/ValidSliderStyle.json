@@ -4,26 +4,22 @@
         "color": "#FF0000",
         "cornerRadius": 10
     },
-    "barInnerShadows": [
-        {
-            "color": "#000000",
-            "radius": "4",
-            "offset": {
-                "x": 0,
-                "y": 0
-            }
+    "barInnerShadow": {
+        "color": "#000000",
+        "radius": "4",
+        "offset": {
+            "x": 0,
+            "y": 0
         }
-    ],
-    "barOuterShadows": [
-        {
-            "color": "#FF0000",
-            "radius": 0,
-            "offset": {
-                "x": 0,
-                "y": -2
-            }
+    },
+    "barOuterShadow": {
+        "color": "#FF0000",
+        "radius": 0,
+        "offset": {
+            "x": 0,
+            "y": -2
         }
-    ],
+    },
     "barHeightFraction" : 1.0,
     "minimumTrackColor": "000000",
     "minimumTrackBackgroundGradient": {
@@ -72,15 +68,12 @@
             }
         ]
     },
-    "thumbInnerShadows": [
-        {
-            "color": "#FFFFFF",
-            "radius": "2",
-            "offset": {
-                "x": 2,
-                "y": 2
-            }
+    "thumbInnerShadow": {
+        "color": "#FFFFFF",
+        "radius": "2",
+        "offset": {
+            "x": 2,
+            "y": 2
         }
-    ],
-    "thumbOuterShadows": []
+    },
 }

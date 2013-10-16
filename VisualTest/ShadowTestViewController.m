@@ -43,7 +43,7 @@
     [renderer1 setBorder:border1 forState:UIControlStateNormal];
     
     BYShadow *shadow2 = [BYShadow shadowWithOffset:CGSizeZero radius:75.0 color:[UIColor blackColor]];
-    [renderer1 setInnerShadows:@[shadow2] forState:UIControlStateNormal];
+    [renderer1 setInnerShadow:shadow2 forState:UIControlStateNormal];
 }
 
 -(void)addTextFieldsWithBorderStyle:(UITextBorderStyle)borderStyle {
