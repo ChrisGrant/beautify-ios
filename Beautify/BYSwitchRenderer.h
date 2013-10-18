@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BYViewRenderer.h"
 
-@class BYFont, BYGradient, BYBorder, BYSwitchState;
+@class BYFont, BYGradient, BYBorder, BYSwitchState, BYShadow;
 
 /*
  A renderer responsible for enhancing a UISwitch.
@@ -51,14 +51,14 @@
 -(void)setBorder:(BYBorder*)border forState:(UIControlState)state;
 
 /*
- Set the inner shadows for the switch associated with this renderer.
+ Set the inner shadow for the switch associated with this renderer.
  */
--(void)setInnerShadows:(NSArray*)innerShadows forState:(UIControlState)state;
+-(void)setInnerShadow:(BYShadow*)innerShadow forState:(UIControlState)state;
 
 /*
- Set the outer shadows for the switch associated with this renderer.
+ Set the outer shadow for the switch associated with this renderer.
  */
--(void)setOuterShadows:(NSArray*)outerShadows forState:(UIControlState)state;
+-(void)setouterShadow:(BYShadow*)outerShadow forState:(UIControlState)state;
 
 /*
  Set the image for the border layer on the switch associated with this renderer.
@@ -90,12 +90,12 @@
 /*
  Set the inner shadows for the thumb on the switch associated with this renderer.
  */
--(void)setThumbInnerShadows:(NSArray*)thumbInnerShadows forState:(UIControlState)state;
+-(void)setThumbInnerShadow:(BYShadow*)thumbInnerShadow forState:(UIControlState)state;
 
 /*
  Set the outer shadows for the thumb on the switch associated with this renderer.
  */
--(void)setThumbOuterShadows:(NSArray*)thumbOuterShadows forState:(UIControlState)state;
+-(void)setThumbouterShadow:(BYShadow*)thumbOuterShadow forState:(UIControlState)state;
 
 /*
  Set the image for the thumb on the switch associated with this renderer.

@@ -1,5 +1,5 @@
 {
-    "schemaVersion": "1.4",
+    "schemaVersion": "1.5",
     "theme": {
         "buttonStyle": {
             "title": {
@@ -27,17 +27,14 @@
                 "color": "#FFFFFF",
                 "cornerRadius": 5
             },
-            "innerShadows": [],
-            "outerShadows": [
-                             {
-                             "color": "#000000BF",
-                             "radius": 5,
-                             "offset": {
-                             "x": 1.4,
-                             "y": 1.4
-                             }
-                             }
-                             ],
+            "outerShadow":{
+                "color": "#000000BF",
+                "radius": 5,
+                "offset": {
+                    "x": 1.4,
+                    "y": 1.4
+                }
+            },
             "titleShadow": {
                 "color": "#C9C3E6",
                 "offset": {
@@ -58,10 +55,9 @@
                              }
                              },
                              {
-                             "propertyName": "outerShadows",
+                             "propertyName": "outerShadow",
                              "state":"highlighted",
                              "value":
-                             [
                               {
                                 "color": "#000000",
                                 "radius": 20,
@@ -70,7 +66,6 @@
                                     "y": 12
                                 }
                               }
-                             ]
                              }
                              ]
         },
@@ -88,13 +83,10 @@
                 "color": "#16A085",
                 "cornerRadius": 10
             },
-            "outerShadows": [],
-            "innerShadows": [
-                             {
-                             "color": "#000000BF",
-                             "radius": 5
-                             }
-                             ],
+            "innerShadow":{
+                "color": "#000000BF",
+                "radius": 5
+            },
             "stateSetters": [
                              {
                              "propertyName": "backgroundColor",
@@ -174,19 +166,14 @@
             },
             "highlightColor": "#00000000",
             "thumbBackgroundColor": "#00D4F0",
-            "thumbInnerShadows": [],
-            "thumbOuterShadows": [],
-            "innerShadows": [],
-            "outerShadows": [
-                             {
-                             "color": "#000000BF",
-                             "radius": 5,
-                             "offset": {
-                             "x": 1.4,
-                             "y": 1.4
-                             }
-                             }
-                             ],
+            "outerShadow": {
+                "color": "#000000BF",
+                "radius": 5,
+                "offset": {
+                    "x": 1.4,
+                    "y": 1.4
+                }
+            },
             "border": {
                 "width": 0,
                 "color": "#FFFFFF",
@@ -240,17 +227,14 @@
                           }
                           ]
             },
-            "innerShadows": [],
-            "outerShadows": [
-                             {
-                             "color": "#C9C3E6",
-                             "radius": 1,
-                             "offset": {
-                             "x": 0,
-                             "y": 1
-                             }
-                             }
-                             ],
+            "outerShadow": {
+                "color": "#C9C3E6",
+                "radius": 1,
+                "offset": {
+                    "x": 0,
+                    "y": 1
+                }
+            },
             "titleShadow": {
                 "color": "#00000000",
                 "offset": {
@@ -283,26 +267,22 @@
                 "color": "#C9C3E6",
                 "cornerRadius": 0
             },
-            "innerShadows": [
-                             {
-                             "color": "#000000",
-                             "radius": 10,
-                             "offset": {
-                             "x": 0,
-                             "y": 0
-                             }
-                             }
-                             ],
-            "outerShadows": [
-                             {
-                             "color": "#000000",
-                             "radius": 0,
-                             "offset": {
-                             "x": 0,
-                             "y": 0
-                             }
-                             }
-                             ],
+            "innerShadow": {
+                "color": "#000000",
+                "radius": 10,
+                "offset": {
+                    "x": 0,
+                    "y": 0
+                }
+            },
+            "outerShadow": {
+                "color": "#000000",
+                "radius": 0,
+                "offset": {
+                    "x": 0,
+                    "y": 0
+                }
+            },
             "stateSetters": []
         },
         "barButtonItemStyle": {
@@ -319,17 +299,14 @@
                 "color": "#000000",
                 "cornerRadius": "5"
             },
-            "innerShadows": [],
-            "outerShadows": [
-                             {
-                             "color": "#000000BF",
-                             "radius": 5,
-                             "offset": {
-                             "x": 1.4,
-                             "y": 1.4
-                             }
-                             }
-                             ],
+            "outerShadow": {
+                "color": "#000000BF",
+                "radius": 2,
+                "offset": {
+                    "x": 1,
+                    "y": 1
+                }
+            },
             "stateSetters": [
                              {
                              "propertyName": "backgroundColor",
@@ -356,8 +333,6 @@
                 "color": "#000000",
                 "cornerRadius": "5"
             },
-            "barInnerShadows": [],
-            "barOuterShadows": [],
             "minimumTrackColor": "#00D4F0",
             "maximumTrackColor": "#BFBFBF",
             "thumbBorder": {
@@ -366,13 +341,10 @@
                 "cornerRadius": "5"
             },
             "thumbBackgroundColor": "#00D4F0",
-            "thumbInnerShadows": [],
-            "thumbOuterShadows": [
-                                  {
-                                  "color": "#000000BF",
-                                  "radius": 5
-                                  }
-                                  ],
+            "thumbOuterShadow": {
+                "color": "#000000BF",
+                "radius": 5
+            },
             "stateSetters": [
                              {
                              "propertyName": "backgroundColor",
@@ -395,17 +367,14 @@
                 "color": "#000000",
                 "cornerRadius": "5"
             },
-            "innerShadows": [],
-            "outerShadows": [
-                             {
-                             "color": "#000000BF",
-                             "radius": 5,
-                             "offset": {
-                             "x": 1.4,
-                             "y": 1.4
-                             }
-                             }
-                             ],
+            "outerShadow": {
+                "color": "#000000BF",
+                "radius": 10,
+                "offset": {
+                    "x": 1.4,
+                    "y": 1.4
+                }
+            },
             "stateSetters": [
                              {
                              "propertyName": "backgroundColor",

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "BYBorder.h"
 #import "BYGradient.h"
+#import "BYShadow.h"
 
 #ifndef Beautify_RenderUtils_h
 #define Beautify_RenderUtils_h
@@ -16,12 +17,11 @@
 UIEdgeInsets UIEdgeInsetsInflate(UIEdgeInsets insets, float dx, float dy);
 
 // Computes the insets requires to accomodate the given outer shadows
-UIEdgeInsets ComputeInsetsForShadows(NSArray* outerShadows);
-UIEdgeInsets ComputeExpandingInsetsForShadows(NSArray* outerShadows, BOOL expanding);
+UIEdgeInsets ComputeInsetsForShadows(BYShadow *shadow);
+UIEdgeInsets ComputeExpandingInsetsForShadows(BYShadow *shadow, BOOL expanding);
 
-// Renders all of the given shadows with 'inset = YES'
-void RenderInnerShadows(CGContextRef ctx, BYBorder* border, NSArray* innerShadows, CGRect rect);
-void RenderOuterShadows(CGContextRef ctx, BYBorder* border, NSArray* outerShadows, CGRect rect);
+void RenderInnerShadow(CGContextRef ctx, BYShadow *shadow, UIBezierPath *path);
+void RenderOuterShadow(CGContextRef ctx, BYShadow *shadow, UIBezierPath *path);
 
 /*
  * Renders a gradient within the given rectangle

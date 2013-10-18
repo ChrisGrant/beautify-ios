@@ -12,6 +12,7 @@
 #import "BYViewRenderer_Private.h"
 #import "BYBackgroundImage.h"
 #import "BYControlRenderer_Private.h"
+#import "BYShadow.h"
 
 @implementation BYControlRenderer
 
@@ -55,12 +56,12 @@
     [self setPropertyValue:border forName:@"border" forState:state];
 }
 
--(void)setInnerShadows:(NSArray*)innerShadows forState:(UIControlState)state {
-    [self setPropertyValue:innerShadows forName:@"innerShadows" forState:state];
+-(void)setInnerShadow:(BYShadow*)innerShadow forState:(UIControlState)state {
+    [self setPropertyValue:innerShadow forName:@"innerShadow" forState:state];
 }
 
--(void)setOuterShadows:(NSArray*)outerShadows forState:(UIControlState)state {
-    [self setPropertyValue:outerShadows forName:@"outerShadows" forState:state];
+-(void)setOuterShadow:(BYShadow*)outerShadow forState:(UIControlState)state {
+    [self setPropertyValue:outerShadow forName:@"outerShadow" forState:state];
 }
 
 @end

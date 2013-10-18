@@ -15,8 +15,8 @@
 @interface BYImageViewStyle : BYViewStyle
 
 @property BYBorder<Optional> *border;
-@property NSArray<BYShadow, Optional> *innerShadows;
-@property NSArray<BYShadow, Optional> *outerShadows;
+@property BYShadow<Optional> *innerShadow;
+@property BYShadow<Optional> *outerShadow;
 
 +(BYImageViewStyle*)defaultStyle;
 

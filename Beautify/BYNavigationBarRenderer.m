@@ -16,6 +16,9 @@
 #import "BYControlRenderingLayer.h"
 #import "UINavigationBar+Beautify.h"
 
+#import "UIView+Beautify.h"
+#import "BYLabelRenderer.h"
+
 @interface BYNavigationBarRenderer ()
 @property BYNavigationBarStyle *style; // Strongly type the style.
 @end
@@ -84,12 +87,15 @@
             navBar.shadowImage = [self makeImageWithDropShadow:[style dropShadow]];
         }
         
-        UIViewController *presentingController = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
-        if([presentingController isKindOfClass:[UINavigationController class]]) {
-            UINavigationController *navController = (UINavigationController*)presentingController;
-            // This forces the navigation bar to update it's attributes to those that have been set above with UIAppearance
-            [navController pushViewController:[UIViewController new] animated:NO];
-            [navController popViewControllerAnimated:NO];
+        for (UIView *v in navBar.subviews) {
+            if([v isKindOfClass:NSClassFromString(@"UINavigationItemView")]) {
+                for(UIView *label in v.subviews) {
+                    if([label isKindOfClass:[UILabel class]]) {
+                        [[label renderer] setTextStyle:style.title forState:UIControlStateNormal];
+                        [[label renderer] setTextShadow:style.titleShadow forState:UIControlStateNormal];
+                    }
+                }
+            }
         }
     }
     

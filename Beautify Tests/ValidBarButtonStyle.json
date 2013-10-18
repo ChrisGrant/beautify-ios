@@ -32,16 +32,14 @@
         "color": "#FF0000",
         "cornerRadius": 8
     },
-    "outerShadows": [
-                     {
-                     "radius": 2,
-                     "color": "#00FF00",
-                     "offset": {
-                     "x": 2,
-                     "y": 3
-                     }
-                     }
-                     ],
+    "outerShadow":{
+        "radius": 2,
+        "color": "#00FF00",
+        "offset": {
+            "x": 2,
+            "y": 3
+        }
+    },
     "stateSetters": [
                      {
                      "state": "highlighted",

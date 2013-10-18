@@ -14,18 +14,20 @@
 #import "BYRenderUtils.h"
 #import "BYStyleSetterCustomizer.h"
 #import "BYStyleCustomizer.h"
+#import "UIView+BeautifyPrivate.h"
 
 @implementation BYStyleRenderer {
     // a map of style customisers based on control state
     NSMutableDictionary* _customizersForStateMap;
-    UIView *_viewToObserve;
+    __weak UIView *_viewToObserve;
 }
 
 -(id)initWithView:(id)view theme:(BYTheme*)theme {
     if (self = [super init]) {
+
         _adaptedView = view;
         _style = [self styleFromTheme:theme];
-        
+
         [self setUpStyleCustomizersForControlStates];
 
         if([_adaptedView isKindOfClass:[UIViewController class]]) {
@@ -34,31 +36,10 @@
         }
         else if([_adaptedView isKindOfClass:[UIView class]]) {
             _viewToObserve = _adaptedView;
+            [view associateRenderer:self];
         }
-        
-        [_viewToObserve addObserver:self
-                        forKeyPath:@"frame"
-                           options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld)
-                           context:nil];
-        
-        [_viewToObserve addObserver:self
-                        forKeyPath:@"bounds"
-                           options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld)
-                           context:nil];
     }
     return self;
-}
-
--(void)dealloc {
-    [_viewToObserve removeObserver:self forKeyPath:@"frame"];
-    [_viewToObserve removeObserver:self forKeyPath:@"bounds"];
-}
-
--(void)observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object
-                       change:(NSDictionary*)change context:(void *)context {
-    if ([keyPath isEqualToString:@"frame"] || [keyPath isEqualToString:@"bounds"]) {
-        [self redraw];
-    }
 }
 
 #pragma mark - Theme and style customization

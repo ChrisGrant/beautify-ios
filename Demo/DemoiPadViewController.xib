@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
@@ -35,7 +35,7 @@
                         <outlet property="dataSource" destination="-1" id="fQ8-hm-yHw"/>
                     </connections>
                 </tableView>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="HfG-rB-yNO">
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="HfG-rB-yNO">
                     <rect key="frame" x="354" y="0.0" width="670" height="768"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <subviews>
@@ -56,6 +56,9 @@
                             <state key="normal" title="Button">
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="iPadButtonTapped:" destination="-1" eventType="touchUpInside" id="NTM-We-4tQ"/>
+                            </connections>
                         </button>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Some Text" borderStyle="roundedRect" placeholder="Text Field" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rrh-XY-5tw">
                             <rect key="frame" x="235" y="312" width="200" height="44"/>
@@ -82,12 +85,11 @@
                             <rect key="frame" x="233" y="463" width="204" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </slider>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beautifyImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="lYY-OR-WAy">
-                            <rect key="frame" x="235" y="545" width="200" height="200"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beautifyImage.png" translatesAutoresizingMaskIntoConstraints="NO" id="lYY-OR-WAy">
+                            <rect key="frame" x="100" y="545" width="470" height="200"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="200" id="PhM-RN-28g"/>
-                                <constraint firstAttribute="width" constant="200" id="PyL-un-8Nu"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This view controller has been styled by beautify. Each view controller has a separate description which will appear here." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="suQ-fg-0Ir">
@@ -113,6 +115,7 @@
                         <constraint firstAttribute="centerX" secondItem="68h-GB-fVO" secondAttribute="centerX" id="CoO-zG-E7U"/>
                         <constraint firstItem="lYY-OR-WAy" firstAttribute="top" secondItem="68h-GB-fVO" secondAttribute="bottom" constant="49" id="Len-i1-GNo"/>
                         <constraint firstAttribute="bottom" secondItem="lYY-OR-WAy" secondAttribute="bottom" constant="100" id="MGw-Qh-fjj"/>
+                        <constraint firstItem="lYY-OR-WAy" firstAttribute="leading" secondItem="HfG-rB-yNO" secondAttribute="leading" constant="100" id="TOd-Y7-D5X"/>
                         <constraint firstItem="g4u-RM-ioV" firstAttribute="leading" secondItem="HfG-rB-yNO" secondAttribute="leading" constant="20" id="Tdg-am-Pzs"/>
                         <constraint firstItem="68h-GB-fVO" firstAttribute="top" secondItem="rrh-XY-5tw" secondAttribute="bottom" constant="107" id="WfS-wu-SHZ"/>
                         <constraint firstItem="g4u-RM-ioV" firstAttribute="centerY" secondItem="YPh-uK-6rS" secondAttribute="centerY" id="bpU-k8-BjQ"/>
@@ -123,6 +126,7 @@
                         <constraint firstAttribute="centerX" secondItem="3jR-Qu-mdl" secondAttribute="centerX" id="kXa-2Z-O3D"/>
                         <constraint firstItem="f5T-pR-adu" firstAttribute="top" secondItem="rrh-XY-5tw" secondAttribute="bottom" constant="32" id="qhs-au-S6s"/>
                         <constraint firstItem="3jR-Qu-mdl" firstAttribute="top" secondItem="suQ-fg-0Ir" secondAttribute="bottom" constant="25" id="she-Ud-OZA"/>
+                        <constraint firstAttribute="trailing" secondItem="lYY-OR-WAy" secondAttribute="trailing" constant="100" id="ufo-gD-mqm"/>
                         <constraint firstItem="YPh-uK-6rS" firstAttribute="centerX" secondItem="suQ-fg-0Ir" secondAttribute="centerX" constant="0.5" id="w0N-pF-Vjs"/>
                         <constraint firstAttribute="centerX" secondItem="rrh-XY-5tw" secondAttribute="centerX" id="w5Z-z5-JLG"/>
                         <constraint firstItem="f5T-pR-adu" firstAttribute="trailing" secondItem="rrh-XY-5tw" secondAttribute="trailing" id="wrP-9N-rjj"/>

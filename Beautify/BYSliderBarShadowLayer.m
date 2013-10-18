@@ -15,8 +15,8 @@
 }
 
 -(void)setFrame:(CGRect)frame withWidthPadding:(float)widthPadding {
-    NSArray *outerShadows = [self.renderer propertyValueForNameWithCurrentState:@"barOuterShadows"];
-    UIEdgeInsets insets = ComputeExpandingInsetsForShadows(outerShadows, YES);
+    BYShadow *outerShadow = [self.renderer propertyValueForNameWithCurrentState:@"barouterShadow"];
+    UIEdgeInsets insets = ComputeExpandingInsetsForShadows(outerShadow, YES);
    
     originalFrame = frame;
     
@@ -32,10 +32,11 @@
 
 -(void)drawInContext:(CGContextRef)ctx {
     BYBorder* border = [self.renderer propertyValueForNameWithCurrentState:@"barBorder"];
-    NSArray* outerShadows = [self.renderer propertyValueForNameWithCurrentState:@"barOuterShadows"];
+    BYShadow* outerShadow = [self.renderer propertyValueForNameWithCurrentState:@"barouterShadow"];
     
     // render outer shadows
-    RenderOuterShadows(ctx, border, outerShadows, originalFrame);
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:originalFrame cornerRadius:border.cornerRadius];
+    RenderOuterShadow(ctx, outerShadow, path);
 }
 
 @end

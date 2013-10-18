@@ -15,8 +15,8 @@
 }
 
 -(void)setFrame:(CGRect)frame {
-    NSArray *outerShadows = [self.renderer propertyValueForNameWithCurrentState:@"outerShadows"];
-    UIEdgeInsets insets = ComputeExpandingInsetsForShadows(outerShadows, YES);
+    BYShadow *outerShadow = [self.renderer propertyValueForNameWithCurrentState:@"outerShadow"];
+    UIEdgeInsets insets = ComputeExpandingInsetsForShadows(outerShadow, YES);
     
     originalFrame = frame;
     
@@ -32,10 +32,11 @@
 
 -(void)drawInContext:(CGContextRef)ctx {
     BYBorder* border = [self.renderer propertyValueForNameWithCurrentState:@"border"];
-    NSArray* outerShadows = [self.renderer propertyValueForNameWithCurrentState:@"outerShadows"];
+    BYShadow* outerShadow = [self.renderer propertyValueForNameWithCurrentState:@"outerShadow"];
     
     // render outer shadows
-    RenderOuterShadows(ctx, border, outerShadows, originalFrame);
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:originalFrame cornerRadius:border.cornerRadius];
+    RenderOuterShadow(ctx, outerShadow, path);
 }
 
 @end

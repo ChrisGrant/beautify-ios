@@ -23,7 +23,7 @@
 
 -(void)setImmuneToBeautify:(BOOL)immuneToBeautify{
     UIView *v = [self valueForKey:@"view"];
-    return [v setImmuneToBeautify:immuneToBeautify];
+    [v setImmuneToBeautify:immuneToBeautify];
 }
 
 @end

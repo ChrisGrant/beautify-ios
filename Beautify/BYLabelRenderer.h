@@ -1,5 +1,5 @@
 //
-//  LabelRenderer.h
+//  BYLabelRenderer.h
 //  Beautify
 //
 //  Created by Adrian Conlin on 30/04/2013.
@@ -28,5 +28,10 @@
  Set the text style for the button associated with this renderer.
  */
 -(void)setTextShadow:(BYTextShadow*)textShadow forState:(UIControlState)state;
+
+/*
+ If the renderer is managed by another renderer, ignore the theme updates and apply the styles from that renderer.
+ */
+@property BOOL ignoreThemeUpdates;
 
 @end

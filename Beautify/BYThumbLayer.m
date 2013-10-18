@@ -26,8 +26,8 @@
 }
 
 -(void)setFrame:(CGRect)frame {
-    NSArray *outerShadows = [self.renderer propertyValueForNameWithCurrentState:@"thumbOuterShadows"];
-    UIEdgeInsets insets = ComputeExpandingInsetsForShadows(outerShadows, YES);
+    BYShadow *outerShadow = [self.renderer propertyValueForNameWithCurrentState:@"thumbOuterShadow"];
+    UIEdgeInsets insets = ComputeExpandingInsetsForShadows(outerShadow, YES);
     
     _originalFrame = frame;
     
@@ -55,17 +55,17 @@
         CGContextDrawImage(ctx, self.bounds, thumbImage.CGImage);
     }
     else {
-        BYBorder* thumbBorder = [self.renderer propertyValueForNameWithCurrentState:@"thumbBorder"];
-        BYGradient* thumbBackgroundGradient = [self.renderer propertyValueForNameWithCurrentState:@"thumbBackgroundGradient"];
-        NSArray* thumbInnerShadows = [self.renderer propertyValueForNameWithCurrentState:@"thumbInnerShadows"];
-        NSArray* thumbOuterShadows = [self.renderer propertyValueForNameWithCurrentState:@"thumbOuterShadows"];
-        UIColor* thumbBackgroundColor = [self.renderer propertyValueForNameWithCurrentState:@"thumbBackgroundColor"];
+        BYBorder *thumbBorder = [self.renderer propertyValueForNameWithCurrentState:@"thumbBorder"];
+        BYGradient *thumbBackgroundGradient = [self.renderer propertyValueForNameWithCurrentState:@"thumbBackgroundGradient"];
+        BYShadow *thumbInnerShadow = [self.renderer propertyValueForNameWithCurrentState:@"thumbInnerShadow"];
+        BYShadow *thumbOuterShadow = [self.renderer propertyValueForNameWithCurrentState:@"thumbOuterShadow"];
+        UIColor *thumbBackgroundColor = [self.renderer propertyValueForNameWithCurrentState:@"thumbBackgroundColor"];
         
         CGRect thumbRect = CGRectInset(_originalFrame, thumbBorder.width/2, thumbBorder.width/2);
         UIBezierPath* thumbPath = [UIBezierPath bezierPathWithRoundedRect:thumbRect
                                                             cornerRadius:thumbBorder.cornerRadius];
 
-        RenderOuterShadows(ctx, thumbBorder, thumbOuterShadows, _originalFrame);
+        RenderOuterShadow(ctx, thumbOuterShadow, thumbPath);
 
         // fill the thumb background
         CGContextAddPath(ctx, thumbPath.CGPath);
@@ -84,7 +84,8 @@
         }
         CGContextRestoreGState(ctx);
 
-        RenderInnerShadows(ctx, thumbBorder, thumbInnerShadows, thumbRect);
+        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:thumbRect cornerRadius:thumbBorder.cornerRadius];
+        RenderInnerShadow(ctx, thumbInnerShadow, path);
 
         // render the border
         CGContextAddPath(ctx, thumbPath.CGPath);

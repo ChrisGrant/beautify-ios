@@ -32,28 +32,17 @@
             if([[backBarView renderer] isKindOfClass:[BYBarButtonItemRenderer class]]) {
                 BYBarButtonItemRenderer *renderer = (BYBarButtonItemRenderer*)backBarView.renderer;
                 [renderer setIsBackButtonRenderer:YES];
+                [renderer setTheme:[[BYThemeManager instance] currentTheme]];
                 [renderer redraw];
             }
         }
         
-        // Go through all of the items and check they have a renderer.
-        for (UINavigationItem *item in self.items) {
-            [self createRendererForItem:item.leftBarButtonItem];
-            for(UIBarButtonItem *bbi in item.rightBarButtonItems) {
-                [self createRendererForItem:bbi];
-            }
-            
-            [self createRendererForItem:item.rightBarButtonItem];
-            for(UIBarButtonItem *bbi in item.leftBarButtonItems) {
-                [self createRendererForItem:bbi];
-            }
-        }
+        [[self allBarItems] enumerateObjectsUsingBlock:^(UIBarButtonItem *item, NSUInteger idx, BOOL *stop) {
+            UIView *v = [item valueForKey:@"view"];
+            [v createRenderer];
+            [[v renderer] redraw];
+        }];
     }
-}
-
--(void)createRendererForItem:(UIBarButtonItem *)bbi {
-    UIView *v = [bbi valueForKey:@"view"];
-    [v createRenderer];
 }
 
 // Recursively finds an array of all the UINavigationItemButtonViews
@@ -97,8 +86,37 @@
 }
 
 -(void)themeUpdated:(NSNotification*)notification {
-    BYTheme *theme = notification.object;
-    [self.renderer setTheme:theme];
+    // Commit the whole theme update as a CATransaction without animations. This improves performance.
+    [CATransaction begin];
+    [CATransaction setDisableActions:YES];
+    {
+        BYTheme *theme = notification.object;
+        [self.renderer setTheme:theme];
+        
+        [[self allBarItems] enumerateObjectsUsingBlock:^(UIBarButtonItem *item, NSUInteger idx, BOOL *stop) {
+            UIView *v = [item valueForKey:@"view"];
+            [[v renderer] setTheme:theme];
+        }];
+    }
+    [CATransaction commit];
+}
+
+// Combines all of the bar items into a single array.
+-(NSArray*)allBarItems {
+    NSMutableArray *array = [NSMutableArray new];
+    for (UINavigationItem *item in self.items) {
+        if(item.leftBarButtonItems)
+            [array addObject:item.leftBarButtonItem];
+        [array addObjectsFromArray:item.leftBarButtonItems];
+        
+        if(item.rightBarButtonItem)
+            [array addObject:item.rightBarButtonItem];
+        [array addObjectsFromArray:item.rightBarButtonItems];
+        
+        if(item.backBarButtonItem)
+            [array addObject:item.backBarButtonItem];
+    }
+    return array;
 }
 
 @end

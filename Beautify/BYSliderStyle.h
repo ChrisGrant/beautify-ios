@@ -23,8 +23,8 @@
 
 // slider bar customizers
 @property BYBorder<Optional> *barBorder;
-@property NSArray<BYShadow, Optional> *barInnerShadows;
-@property NSArray<BYShadow, Optional> *barOuterShadows;
+@property BYShadow<Optional> *barInnerShadow;
+@property BYShadow<Optional> *barOuterShadow;
 @property float barHeightFraction;
 
 // minimum track customizers
@@ -42,8 +42,8 @@
 @property UIColor<Optional> *thumbBackgroundColor;
 @property UIImage<Optional> *thumbImage;
 @property BYGradient<Optional> *thumbBackgroundGradient;
-@property NSArray<BYShadow, Optional> *thumbInnerShadows;
-@property NSArray<BYShadow, Optional> *thumbOuterShadows;
+@property BYShadow<Optional> *thumbInnerShadow;
+@property BYShadow<Optional> *thumbOuterShadow;
 
 +(BYSliderStyle*)defaultStyle;
 

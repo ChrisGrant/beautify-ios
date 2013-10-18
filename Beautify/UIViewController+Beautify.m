@@ -15,8 +15,7 @@
 #import "UIView+BeautifyPrivate.h"
 #import "UIView+Beautify.h"
 #import "NSObject+Beautify.h"
-
-#import "UIBarButtonItem+Beautify.h"
+#import "UIView+Utilities.h"
 
 @implementation UIViewController (Beautify)
 
@@ -43,6 +42,15 @@
 
 -(void)setImmuneToBeautify:(BOOL)immuneToBeautify {
     [super setImmuneToBeautify:immuneToBeautify];
+    
+    if([self isKindOfClass:[UINavigationController class]]) {
+        // If this is a navigation controller, make sure all of the view controllers recieve the immunity message too.
+        UINavigationController *nc = (UINavigationController*)self;
+        for (UIViewController *vc in nc.viewControllers) {
+            [vc setImmuneToBeautify:YES];
+        }
+    }
+    [self.view recursivelySetSubViewImmunity:immuneToBeautify];
 }
 
 -(BOOL)shouldCreateRenderer {
@@ -53,9 +61,15 @@
 }
 
 -(void)themeUpdated:(NSNotification*)notification {
-    BYTheme *theme = notification.object;
-    [self.renderer setTheme:theme];
-    [self.view applyTheme:theme];
+    // Commit the whole theme update as a CATransaction without animations. This improves performance.
+    [CATransaction begin];
+    [CATransaction setDisableActions:YES];
+    {
+        BYTheme *theme = notification.object;
+        [self.renderer setTheme:theme];
+        [self.view applyTheme:theme];
+    }
+    [CATransaction commit];
 }
 
 -(void)didRotate:(NSNotification*)notification {
