@@ -14,4 +14,8 @@
 -(void)assertObjectOne:(NSObject *)object isEqualToObjectTwo:(NSObject *)object2;
 -(void)assertObject:(id)prop withPropertyName:(NSString*)propertyName isEqualToObject:(id)copiedProp;
 
+-(id)styleFromDictNamed:(NSString*)name andClass:(Class)theClass;
+-(void)checkObjectCanBeCopiedAndResultHasEqualProperties:(NSObject<NSCopying>*)object;
++(NSDictionary*)dictionaryFromJSONFile:(NSString*)fileName;
+
 @end

@@ -10,6 +10,7 @@
 #import "UIColor+Comparison.h"
 #import "NSObject+Properties.h"
 #import "BYTestHelper.h"
+#import "JSONModel.h"
 
 @implementation BYTestHelper
 
@@ -61,6 +62,39 @@
     else {
         [self assertObjectOne:prop isEqualToObjectTwo:copiedProp];
     }
+}
+
+#pragma mark - Helper methods
+
+-(id)styleFromDictNamed:(NSString*)name andClass:(Class)theClass {
+    NSDictionary *dictionary = [BYTestHelper dictionaryFromJSONFile:name];
+    id style = [[theClass alloc] initWithDictionary:dictionary error:nil];
+    return style;
+}
+
+-(void)checkObjectCanBeCopiedAndResultHasEqualProperties:(NSObject<NSCopying>*)object {
+    NSObject *object2;
+    XCTAssertNoThrow(object2 = [object copy], @"Should be able to create a copy");
+    XCTAssertNotNil(object2, @"Copy should not be nil");
+    XCTAssertNotEqualObjects(object, object2, @"Should be different objects");
+    XCTAssertEqual([object class], [object2 class], @"Should have the same class (%@)", [object class]);
+    
+    [self assertObjectOne:object isEqualToObjectTwo:object2];
+}
+
++(NSDictionary*)dictionaryFromJSONFile:(NSString*)fileName {
+    NSBundle *unitTestBundle = [NSBundle bundleForClass:[self class]];
+    NSString *path = [unitTestBundle pathForResource:fileName ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSError *error;
+    NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data
+                                                               options:NSJSONReadingMutableContainers
+                                                                 error:&error];
+    if(error) {
+        NSLog(@"Error - %@", error.debugDescription);
+        return nil;
+    }
+    return dictionary;
 }
 
 @end
