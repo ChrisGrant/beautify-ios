@@ -86,8 +86,8 @@ static NSDictionary* styleProperties = nil;
         
         id value = dict[@"value"];
         
-        // If the property name ends in shadows, we know it's a shadow array
-        if([stateSetter.propertyName.lowercaseString hasSuffix:@"shadows"]) {
+        // If the property name ends in shadow, we know it's a shadow array
+        if([stateSetter.propertyName.lowercaseString hasSuffix:@"shadow"]) {
             stateSetter.value = [BYShadow arrayOfModelsFromDictionaries:value];
         }
         else if([colors containsObject:stateSetter.propertyName.lowercaseString]) {

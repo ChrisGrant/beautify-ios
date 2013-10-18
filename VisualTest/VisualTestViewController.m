@@ -238,7 +238,7 @@
     BYShadow *shadow1 = [BYShadow shadowWithOffset:CGSizeZero radius:10.0 color:[UIColor greenColor]];
     [renderer setBarOuterShadow:shadow1 forState:UIControlStateNormal];
     
-    // default bar thickness is very thin on ios7 and so trying to draw inner shadows and bar border makes things look a bit ugly
+    // default bar thickness is very thin on ios7 and so trying to draw inner shadow and bar border makes things look a bit ugly
     BYBorder *barBorder = [BYBorder new];
     barBorder.width = 1.0f;
     barBorder.color = [UIColor blackColor];

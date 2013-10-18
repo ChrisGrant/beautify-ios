@@ -41,10 +41,10 @@
 
 -(void)setFrame:(CGRect)frame {
     BYShadow *outerShadow = [self propertyValue:@"outerShadow"];
-    UIEdgeInsets insets = ComputeExpandingInsetsForShadows(outerShadow, YES);
+    UIEdgeInsets insets = ComputeExpandingInsetsForShadow(outerShadow, YES);
     
     originalFrame = frame;
-    // Inflate the frame to make space for outer shadows
+    // Inflate the frame to make space for outer shadow
     frame = UIEdgeInsetsInsetRect(frame, insets);
 
     // Move the origin of the 'original' frame to compensate
@@ -83,7 +83,7 @@
         layerPath = self.customPath;
     }
     
-    // Draw the outer shadows
+    // Draw the outer shadow
     RenderOuterShadow(ctx, outerShadow, layerPath);
     
     // Use the bezier as a clipping path

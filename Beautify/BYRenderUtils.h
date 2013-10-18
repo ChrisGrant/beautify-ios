@@ -16,9 +16,9 @@
 
 UIEdgeInsets UIEdgeInsetsInflate(UIEdgeInsets insets, float dx, float dy);
 
-// Computes the insets requires to accomodate the given outer shadows
-UIEdgeInsets ComputeInsetsForShadows(BYShadow *shadow);
-UIEdgeInsets ComputeExpandingInsetsForShadows(BYShadow *shadow, BOOL expanding);
+// Computes the insets requires to accomodate the given outer shadow
+UIEdgeInsets ComputeInsetsForShadow(BYShadow *shadow);
+UIEdgeInsets ComputeExpandingInsetsForShadow(BYShadow *shadow, BOOL expanding);
 
 void RenderInnerShadow(CGContextRef ctx, BYShadow *shadow, UIBezierPath *path);
 void RenderOuterShadow(CGContextRef ctx, BYShadow *shadow, UIBezierPath *path);

@@ -14,7 +14,7 @@ UIEdgeInsets UIEdgeInsetsInflate(UIEdgeInsets insets, float dx, float dy) {
     return UIEdgeInsetsMake(insets.top + dy, insets.left + dx, insets.bottom + dy, insets.right + dx);
 }
 
-UIEdgeInsets ComputeInsetsForShadows(BYShadow* ss) {
+UIEdgeInsets ComputeInsetsForShadow(BYShadow* ss) {
     UIEdgeInsets inset = UIEdgeInsetsZero;
     inset.top = MAX(inset.top, ss.radius + MIN(ss.offset.height, 0));
     inset.bottom = MAX(inset.bottom, ss.radius + MAX(ss.offset.height, 0));
@@ -23,8 +23,8 @@ UIEdgeInsets ComputeInsetsForShadows(BYShadow* ss) {
     return inset;
 }
 
-UIEdgeInsets ComputeExpandingInsetsForShadows(BYShadow* shadow, BOOL expanding) {
-    UIEdgeInsets inset = ComputeInsetsForShadows(shadow);
+UIEdgeInsets ComputeExpandingInsetsForShadow(BYShadow* shadow, BOOL expanding) {
+    UIEdgeInsets inset = ComputeInsetsForShadow(shadow);
     if(expanding){
         inset = UIEdgeInsetsMake(-inset.top * 2, -inset.left * 2,
                                  -inset.bottom * 2, -inset.right * 2);
