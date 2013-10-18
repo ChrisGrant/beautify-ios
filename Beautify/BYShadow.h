@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "JSONModel.h"
 
-// Used to tell JSONModel to look for shadows in arrays.
+// Used to tell JSONModel to look for shadow in arrays.
 @protocol BYShadow
 @end
 

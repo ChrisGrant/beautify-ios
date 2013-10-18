@@ -72,7 +72,7 @@
     textField.textColor = self.style.title.color;
     textField.font = [self.style.title.font createFont:textField.font];
     
-    // Make sure shadows can be drawn outside bounds
+    // Make sure shadow can be drawn outside bounds
     textField.clipsToBounds = NO;
     
     [super configureFromStyle];

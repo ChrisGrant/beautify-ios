@@ -16,11 +16,11 @@
 
 -(void)setFrame:(CGRect)frame {
     BYShadow *outerShadow = [self.renderer propertyValueForNameWithCurrentState:@"outerShadow"];
-    UIEdgeInsets insets = ComputeExpandingInsetsForShadows(outerShadow, YES);
+    UIEdgeInsets insets = ComputeExpandingInsetsForShadow(outerShadow, YES);
     
     originalFrame = frame;
     
-    // Inflate the frame to make space for outer shadows
+    // Inflate the frame to make space for outer shadow
     frame = UIEdgeInsetsInsetRect(frame, insets);
     
     // Move the origin of the 'original' frame to compensate
@@ -34,7 +34,7 @@
     BYBorder* border = [self.renderer propertyValueForNameWithCurrentState:@"border"];
     BYShadow* outerShadow = [self.renderer propertyValueForNameWithCurrentState:@"outerShadow"];
     
-    // render outer shadows
+    // render outer shadow
     UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:originalFrame cornerRadius:border.cornerRadius];
     RenderOuterShadow(ctx, outerShadow, path);
 }

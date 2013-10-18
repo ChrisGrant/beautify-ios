@@ -88,12 +88,12 @@
 -(void)setThumbBackgroundGradient:(BYGradient*)thumbBackgroundGradient forState:(UIControlState)state;
 
 /*
- Set the inner shadows for the thumb on the switch associated with this renderer.
+ Set the inner shadow for the thumb on the switch associated with this renderer.
  */
 -(void)setThumbInnerShadow:(BYShadow*)thumbInnerShadow forState:(UIControlState)state;
 
 /*
- Set the outer shadows for the thumb on the switch associated with this renderer.
+ Set the outer shadow for the thumb on the switch associated with this renderer.
  */
 -(void)setThumbouterShadow:(BYShadow*)thumbOuterShadow forState:(UIControlState)state;
 

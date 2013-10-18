@@ -31,12 +31,12 @@
 -(void)setBarBorder:(BYBorder*)barBorder forState:(UIControlState)state;
 
 /*
- Set the inner shadows for the slider bar associated with this renderer.
+ Set the inner shadow for the slider bar associated with this renderer.
  */
 -(void)setBarInnerShadow:(BYShadow*)barInnerShadow forState:(UIControlState)state;
 
 /*
- Set the outer shadows for the slider bar associated with this renderer.
+ Set the outer shadow for the slider bar associated with this renderer.
  */
 -(void)setBarOuterShadow:(BYShadow*)barOuterShadow forState:(UIControlState)state;
 
@@ -102,12 +102,12 @@
 -(void)setThumbSize:(float)thumbSize forState:(UIControlState)state;
 
 /*
- Set the inner shadows for the thumb on the slider bar associated with this renderer.
+ Set the inner shadow for the thumb on the slider bar associated with this renderer.
  */
 -(void)setThumbInnerShadow:(BYShadow*)thumbInnerShadow forState:(UIControlState)state;
 
 /*
- Set the outer shadows for the thumb on the slider bar associated with this renderer.
+ Set the outer shadow for the thumb on the slider bar associated with this renderer.
  */
 -(void)setThumbOuterShadow:(BYShadow*)thumbOuterShadow forState:(UIControlState)state;
 
