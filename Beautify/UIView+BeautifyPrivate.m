@@ -150,7 +150,7 @@
     
     // UISteppers
     if([self isKindOfClass:[UIButton class]]) {
-        [names addObject:@"_UIStepperButton"];
+        [names addObjectsFromArray:@[@"_UIStepperButton", @"UITextField"]];
     }
     
     // UINavigationBar and UITabBar labels should not be styled by the standard UILabel styling.
