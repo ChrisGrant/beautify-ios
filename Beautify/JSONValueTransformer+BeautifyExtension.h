@@ -12,10 +12,13 @@
 @interface JSONValueTransformer (BeautifyExtensions)
 
 -(UIColor*)UIColorFromNSString:(NSString*)color;
+-(NSString*)JSONObjectFromUIColor:(UIColor*)color;
 
 -(NSValue*)CGSizeFromNSDictionary:(NSDictionary*)dict;
+-(NSDictionary*)JSONObjectFromCGSize:(NSValue*)size;
 
 -(UIImage*)UIImageFromNSString:(NSString*)string;
+-(NSString*)JSONObjectFromUIImage:(UIImage*)image;
 
 -(UIControlState)stateFromString:(NSString*)stateString;
 

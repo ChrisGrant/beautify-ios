@@ -222,6 +222,7 @@
 		7047013E17E1C6CA00FEA5F5 /* BYTopShadowRenderingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010E17E1C11100FEA5F5 /* BYTopShadowRenderingLayer.m */; };
 		7047013F17E1C6CE00FEA5F5 /* BYImageViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010F17E1C11100FEA5F5 /* BYImageViewRenderer.m */; };
 		7047014017E1C6D100FEA5F5 /* UIImageView+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011117E1C11100FEA5F5 /* UIImageView+Beautify.m */; };
+		7076B69217FD824B0015593F /* BYSerializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7076B69117FD824B0015593F /* BYSerializationTests.m */; };
 		707A869317F9B435005A102F /* JSONValueTransformer+BeautifyExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 707A869117F9B435005A102F /* JSONValueTransformer+BeautifyExtension.h */; };
 		707A869417F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 707A869217F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m */; };
 		707A869917FAE8D0005A102F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B492A317F2CD0C002B62DB /* SystemConfiguration.framework */; };
@@ -284,6 +285,8 @@
 		70C211B817DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
 		70C211B917DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
 		70E19557178462B20096E458 /* VisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E19555178462B20096E458 /* VisualTestViewController.m */; };
+		70EFB6B4180419C300FF75AA /* BYImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EFB6B3180419C300FF75AA /* BYImageTests.m */; };
+		70EFB6BB1804228000FF75AA /* BYTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EFB6BA1804228000FF75AA /* BYTestHelper.m */; };
 		70F0E09617EC4914001207E5 /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F0E09417EC4914001207E5 /* DemoViewController.m */; };
 		70F0E09717EC4914001207E5 /* DemoiPhoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70F0E09517EC4914001207E5 /* DemoiPhoneViewController.xib */; };
 		70F0E09917EC4B39001207E5 /* DemoiPadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70F0E09817EC4B39001207E5 /* DemoiPadViewController.xib */; };
@@ -531,6 +534,7 @@
 		7047011F17E1C1F200FEA5F5 /* UISwitch+Beautify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UISwitch+Beautify.m"; path = "Beautify/UISwitch+Beautify.m"; sourceTree = SOURCE_ROOT; };
 		7047012817E1C23800FEA5F5 /* BYSwitchGestureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYSwitchGestureView.h; path = Beautify/BYSwitchGestureView.h; sourceTree = SOURCE_ROOT; };
 		7047012C17E1C27A00FEA5F5 /* BYSliderRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYSliderRenderer.h; path = Beautify/BYSliderRenderer.h; sourceTree = SOURCE_ROOT; };
+		7076B69117FD824B0015593F /* BYSerializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYSerializationTests.m; sourceTree = "<group>"; };
 		707A869117F9B435005A102F /* JSONValueTransformer+BeautifyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JSONValueTransformer+BeautifyExtension.h"; path = "Beautify/JSONValueTransformer+BeautifyExtension.h"; sourceTree = SOURCE_ROOT; };
 		707A869217F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JSONValueTransformer+BeautifyExtension.m"; path = "Beautify/JSONValueTransformer+BeautifyExtension.m"; sourceTree = SOURCE_ROOT; };
 		707F516B17FB10A000928B0B /* JSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONModel.h; sourceTree = "<group>"; };
@@ -571,6 +575,9 @@
 		70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableVisualTestViewController.m; sourceTree = "<group>"; };
 		70E19554178462B10096E458 /* VisualTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VisualTestViewController.h; sourceTree = "<group>"; };
 		70E19555178462B20096E458 /* VisualTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VisualTestViewController.m; sourceTree = "<group>"; };
+		70EFB6B3180419C300FF75AA /* BYImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYImageTests.m; sourceTree = "<group>"; };
+		70EFB6BA1804228000FF75AA /* BYTestHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTestHelper.m; sourceTree = "<group>"; };
+		70EFB6BC180422ED00FF75AA /* BYTestHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTestHelper.h; sourceTree = "<group>"; };
 		70F0E09317EC4914001207E5 /* DemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoViewController.h; sourceTree = "<group>"; };
 		70F0E09417EC4914001207E5 /* DemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoViewController.m; sourceTree = "<group>"; };
 		70F0E09517EC4914001207E5 /* DemoiPhoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoiPhoneViewController.xib; sourceTree = "<group>"; };
@@ -891,6 +898,11 @@
 				700E154317E30668006E124E /* ConfigParserTests.m */,
 				70F1FD0917E34FB1006018C9 /* ConfigParserPropertyParsingTests.m */,
 				700E156917E341C6006E124E /* ConfigParserUtilitiesTests.m */,
+				7076B69117FD824B0015593F /* BYSerializationTests.m */,
+				7044FB5B17F072620066E61A /* BYCopyingTests.m */,
+				70EFB6B3180419C300FF75AA /* BYImageTests.m */,
+				70EFB6BC180422ED00FF75AA /* BYTestHelper.h */,
+				70EFB6BA1804228000FF75AA /* BYTestHelper.m */,
 			);
 			name = "ConfigParser Tests";
 			sourceTree = "<group>";
@@ -952,14 +964,6 @@
 				700F293216F3711300E85ED3 /* VisualTest-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7044FB5A17F072530066E61A /* Copying Tests */ = {
-			isa = PBXGroup;
-			children = (
-				7044FB5B17F072620066E61A /* BYCopyingTests.m */,
-			);
-			name = "Copying Tests";
 			sourceTree = "<group>";
 		};
 		7074287616F861B1003C2D1F /* Renderers */ = {
@@ -1140,7 +1144,6 @@
 			isa = PBXGroup;
 			children = (
 				708411BF1806EB78005EA23C /* BYImmunityTests.m */,
-				7044FB5A17F072530066E61A /* Copying Tests */,
 				700E156817E34128006E124E /* ConfigParser Tests */,
 				700E154517E30691006E124E /* BeautifyColorTests.m */,
 				700E156417E33DF1006E124E /* UIColor+Comparison.h */,
@@ -1871,6 +1874,7 @@
 				707F518817FB1F8900928B0B /* JSONModelArray.m in Sources */,
 				700E156317E321A6006E124E /* BYStyle.m in Sources */,
 				700E154F17E320D7006E124E /* BYButtonStyle.m in Sources */,
+				70EFB6B4180419C300FF75AA /* BYImageTests.m in Sources */,
 				700E154E17E320C8006E124E /* BYBorder.m in Sources */,
 				707F518D17FB1F9700928B0B /* JSONModelError.m in Sources */,
 				70BFBE9917FC0A130034365F /* JSONValueTransformer+BeautifyExtension.m in Sources */,
@@ -1897,6 +1901,8 @@
 				700E155F17E32184006E124E /* BYSwitchState.m in Sources */,
 				700E155B17E32132006E124E /* BYTextFieldStyle.m in Sources */,
 				700E154617E30691006E124E /* BeautifyColorTests.m in Sources */,
+				70EFB6BB1804228000FF75AA /* BYTestHelper.m in Sources */,
+				7076B69217FD824B0015593F /* BYSerializationTests.m in Sources */,
 				707F518F17FB1F9D00928B0B /* NSArray+JSONModel.m in Sources */,
 				700E155617E3210B006E124E /* BYSliderStyle.m in Sources */,
 			);
@@ -2057,7 +2063,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "Demo/Demo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -2089,7 +2095,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				INFOPLIST_FILE = "Demo/Demo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

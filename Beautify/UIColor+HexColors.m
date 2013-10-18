@@ -7,6 +7,8 @@
 //
 
 #import "UIColor+HexColors.h"
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 @implementation UIColor (HexColors)
 
@@ -70,30 +72,135 @@
 }
 
 +(NSString *)hexValuesFromUIColor:(UIColor *)color {
-    if (!color) {
-        return nil;
+    NSAssert(color.canProvideRGBComponents, @"Must be an RGB color to use -hexStringValue");
+    NSString *result;
+    switch (color.colorSpaceModel)
+    {
+        case kCGColorSpaceModelRGB:
+            result = [NSString stringWithFormat:@"%02X%02X%02X", color.redByte, color.greenByte, color.blueByte];
+            break;
+        case kCGColorSpaceModelMonochrome:
+            result = [NSString stringWithFormat:@"%02X%02X%02X", color.whiteByte, color.whiteByte, color.whiteByte];
+            break;
+        default:
+            result = nil;
     }
-    
-    if (color == [UIColor whiteColor]) {
-        // Special case, as white doesn't fall into the RGB color space
-        return @"ffffff";
-    }
- 
-    CGFloat red;
-    CGFloat blue;
-    CGFloat green;
-    CGFloat alpha;
-    
-    [color getRed:&red green:&green blue:&blue alpha:&alpha];
-    
-    int redDec = (int)(red * 255);
-    int greenDec = (int)(green * 255);
-    int blueDec = (int)(blue * 255);
-    
-    NSString *returnString = [NSString stringWithFormat:@"%02x%02x%02x", (unsigned int)redDec, (unsigned int)greenDec, (unsigned int)blueDec];
-
-    return returnString;
-    
+    return result;
 }
+
+- (BOOL) canProvideRGBComponents
+{
+    switch (self.colorSpaceModel)
+    {
+        case kCGColorSpaceModelRGB:
+        case kCGColorSpaceModelMonochrome:
+            return YES;
+        default:
+            return NO;
+    }
+}
+
+- (CGColorSpaceModel) colorSpaceModel
+{
+    return CGColorSpaceGetModel(CGColorGetColorSpace(self.CGColor));
+}
+
+- (BOOL) usesMonochromeColorspace
+{
+    return (self.colorSpaceModel == kCGColorSpaceModelMonochrome);
+}
+
+- (CGFloat) red
+{
+    NSAssert(self.canProvideRGBComponents, @"Must be an RGB color to use -red");
+    CGFloat r = 0.0f;
+    
+    switch (self.colorSpaceModel)
+    {
+        case kCGColorSpaceModelRGB:
+            [self getRed:&r green:NULL blue:NULL alpha:NULL];
+            break;
+        case kCGColorSpaceModelMonochrome:
+            [self getWhite:&r alpha:NULL];
+        default:
+            break;
+    }
+    
+    return r;
+}
+
+- (CGFloat) green
+{
+    NSAssert(self.canProvideRGBComponents, @"Must be an RGB color to use -green");
+    CGFloat g = 0.0f;
+    
+    switch (self.colorSpaceModel)
+    {
+        case kCGColorSpaceModelRGB:
+            [self getRed:NULL green:&g blue:NULL alpha:NULL];
+            break;
+        case kCGColorSpaceModelMonochrome:
+            [self getWhite:&g alpha:NULL];
+        default:
+            break;
+    }
+    
+    return g;
+}
+
+- (CGFloat) blue
+{
+    NSAssert(self.canProvideRGBComponents, @"Must be an RGB color to use -blue");
+    CGFloat b = 0.0f;
+    
+    switch (self.colorSpaceModel)
+    {
+        case kCGColorSpaceModelRGB:
+            [self getRed:NULL green:NULL blue:&b alpha:NULL];
+            break;
+        case kCGColorSpaceModelMonochrome:
+            [self getWhite:&b alpha:NULL];
+        default:
+            break;
+    }
+    
+    return b;
+}
+
+- (CGFloat) alpha
+{
+    NSAssert(self.canProvideRGBComponents, @"Must be an RGB color to use -alpha");
+    CGFloat a = 0.0f;
+    
+    switch (self.colorSpaceModel)
+    {
+        case kCGColorSpaceModelRGB:
+            [self getRed:NULL green:NULL blue:NULL alpha:&a];
+            break;
+        case kCGColorSpaceModelMonochrome:
+            [self getWhite:NULL alpha:&a];
+        default:
+            break;
+    }
+    
+    return a;
+}
+
+- (CGFloat) white
+{
+    NSAssert(self.usesMonochromeColorspace, @"Must be a Monochrome color to use -white");
+    
+    CGFloat w;
+    [self getWhite:&w alpha:NULL];
+    return w;
+}
+
+#define MAKEBYTE(_VALUE_) (int)(_VALUE_ * 0xFF) & 0xFF
+
+- (Byte) redByte { return MAKEBYTE(self.red); }
+- (Byte) greenByte { return MAKEBYTE(self.green); }
+- (Byte) blueByte { return MAKEBYTE(self.blue); }
+- (Byte) alphaByte { return MAKEBYTE(self.alpha); }
+- (Byte) whiteByte { return MAKEBYTE(self.white); };
 
 @end

@@ -19,4 +19,8 @@
     return NO;
 }
 
+-(BOOL)isKindOfClass:(Class)aClass {
+    return [[self class] isSubclassOfClass:aClass];
+}
+
 @end
