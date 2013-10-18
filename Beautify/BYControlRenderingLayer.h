@@ -10,7 +10,7 @@
 #import "BYStyleLayer.h"
 
 /*
- A layer that is used to render a background border and shadows. 
+ A layer that is used to render a background border and shadow. 
  */
 @interface BYControlRenderingLayer : BYStyleLayer
 

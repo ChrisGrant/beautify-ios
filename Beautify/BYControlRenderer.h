@@ -39,12 +39,12 @@
 #pragma mark - Shadow customizers
 
 /*
- Set the inner shadows for the button associated with this renderer.
+ Set the inner shadow for the button associated with this renderer.
  */
 -(void)setInnerShadow:(BYShadow*)innerShadow forState:(UIControlState)state;
 
 /*
- Set the outer shadows for the button associated with this renderer.
+ Set the outer shadow for the button associated with this renderer.
  */
 -(void)setOuterShadow:(BYShadow*)outerShadow forState:(UIControlState)state;
 

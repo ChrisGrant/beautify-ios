@@ -27,12 +27,7 @@
 
 -(id)initWithView:(id)view theme:(BYTheme*)theme{
     UITextField *textField = (UITextField*)view;
-    
-    // Only create a renderer for the rounded rect type for now.
-    if(textField.borderStyle != UITextBorderStyleRoundedRect) {
-        return nil;
-    }
-    
+    textField.borderStyle = UITextBorderStyleRoundedRect;
     if(self = [super initWithView:view theme:theme]) {
         [self setup:textField theme:theme];
     }
@@ -40,19 +35,20 @@
 }
 
 -(void)setup:(UITextField*)textField theme:(BYTheme*)theme {
-    if(textField.borderStyle == UITextBorderStyleRoundedRect) {
-        [textField hideAllSubViews];
-        for(UIView *subview in textField.subviews) {
-            // Don't hide the text field label, otherwise no text will be visible!
-            if([subview isKindOfClass:NSClassFromString(@"UITextFieldLabel")]) {
-                [subview setHidden:NO];
-            }
+    [textField hideAllSubViews];
+    
+    textField.layer.borderColor = [UIColor redColor].CGColor;
+    
+    for(UIView *subview in textField.subviews) {
+        // Don't hide the text field label, otherwise no text will be visible!
+        if([subview isKindOfClass:NSClassFromString(@"UITextFieldLabel")]) {
+            [subview setHidden:NO];
         }
-        [textField getDelegateProxy].proxiedDelegate = self;
-        
-        [self addRendererLayers];
-        [self configureFromStyle];
     }
+    [textField getDelegateProxy].proxiedDelegate = self;
+    
+    [self addRendererLayers];
+    [self configureFromStyle];
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField {
@@ -72,25 +68,17 @@
     textField.textColor = self.style.title.color;
     textField.font = [self.style.title.font createFont:textField.font];
     
-    // Make sure shadows can be drawn outside bounds
+    // Make sure shadow can be drawn outside bounds
     textField.clipsToBounds = NO;
     
     [super configureFromStyle];
 }
 
 -(id)styleFromTheme:(BYTheme*)theme {
-    UITextField *textField = (UITextField*)self.adaptedView;
-    
-    if(textField.borderStyle == UITextBorderStyleRoundedRect) {
-        if(theme.textFieldStyle) {
-            return theme.textFieldStyle;
-        }
-
-        return [BYTextFieldStyle defaultStyle];
+    if(theme.textFieldStyle) {
+        return theme.textFieldStyle;
     }
-    
-    NSLog(@"Could not find an appropriate style for text field based on it's border style.");
-    return nil;
+    return [BYTextFieldStyle defaultStyle];
 }
 
 @end

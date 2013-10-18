@@ -32,6 +32,15 @@
     _controlLayer.hidden = NO;
     [_controlLayer setFrame:adaptedView.bounds];
     [_controlLayer setNeedsDisplay];
+    
+    // If we have a background image, color, or gradient, then clear the view's background color.
+    BYBackgroundImage *bgImage = [self propertyValueForNameWithCurrentState:@"backgroundImage"];
+    BYGradient *bgGradient = [self propertyValueForNameWithCurrentState:@"backgroundGradient"];
+    UIColor *bgColor = [self propertyValueForNameWithCurrentState:@"backgroundColor"];
+    if(bgImage || bgGradient || bgColor) {
+        UIView *view = (UIView*)self.adaptedView;
+        view.backgroundColor = [UIColor clearColor];
+    }
 }
 
 // override if a UI element supports more than UIControlStateNormal

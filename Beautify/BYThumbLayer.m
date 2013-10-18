@@ -27,11 +27,11 @@
 
 -(void)setFrame:(CGRect)frame {
     BYShadow *outerShadow = [self.renderer propertyValueForNameWithCurrentState:@"thumbOuterShadow"];
-    UIEdgeInsets insets = ComputeExpandingInsetsForShadows(outerShadow, YES);
+    UIEdgeInsets insets = ComputeExpandingInsetsForShadow(outerShadow, YES);
     
     _originalFrame = frame;
     
-    // Inflate the frame to make space for outer shadows
+    // Inflate the frame to make space for outer shadow
     frame = UIEdgeInsetsInsetRect(frame, insets);
     
     // Move the origin of the 'original' frame to compensate
