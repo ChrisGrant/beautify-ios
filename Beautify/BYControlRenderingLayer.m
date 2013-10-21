@@ -63,7 +63,8 @@
 -(id)propertyValue:(NSString*)propertyName {
     if (_useSuppliedState) {
         return [_renderer propertyValueForName:propertyName forState:_state];
-    } else {
+    }
+    else {
         return [_renderer propertyValueForNameWithCurrentState:propertyName];
     }
 }

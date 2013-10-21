@@ -46,13 +46,14 @@
 
 -(void)setTheme:(BYTheme*)theme {
     _style = [self styleFromTheme:theme];
-    
     [self setUpStyleCustomizersForControlStates];
     [self redraw];
 }
 
 -(void)setUpStyleCustomizersForControlStates {
-    _customizersForStateMap = [NSMutableDictionary new];
+    if(!_customizersForStateMap) {
+        _customizersForStateMap = [NSMutableDictionary new];
+    }
 
     BYStyleCustomizer *highlightedCustomizer = [self createCustomizersForState:UIControlStateHighlighted];
     _customizersForStateMap[DescriptionForState(UIControlStateHighlighted)] = highlightedCustomizer;

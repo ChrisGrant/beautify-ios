@@ -6,17 +6,17 @@
 //  Copyright (c) 2013 Colin Eberhardt. All rights reserved.
 //
 
-#import "VisualTestViewController.h"
+#import "FullVisualTestViewController.h"
 #import "ShadowTestViewController.h"
 #import "TableVisualTestViewController.h"
 #import "Beautify.h"
 
 #define PADDING 10
 
-@interface VisualTestViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface FullVisualTestViewController () <UITableViewDataSource, UITableViewDelegate>
 @end
 
-@implementation VisualTestViewController {
+@implementation FullVisualTestViewController {
     CGFloat yPos;
     UIScrollView *_scrollView;
 }

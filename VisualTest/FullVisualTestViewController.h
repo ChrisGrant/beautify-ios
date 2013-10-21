@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VisualTestViewController : UIViewController
+@interface FullVisualTestViewController : UIViewController
 
 @end
