@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "VisualTestViewController.h"
+#import "FullVisualTestViewController.h"
 #import "ShadowTestViewController.h"
 
 #import "Beautify.h"
@@ -19,9 +19,6 @@
     // enhance the UI controls
     [[BYBeautify instance] activate];
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[VisualTestViewController new]];
-    [self.window makeKeyAndVisible];
     return YES;
 }
 
