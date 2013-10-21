@@ -28,12 +28,16 @@
 -(void)override_viewDidLoad {
     if([self shouldCreateRenderer]) {
         [self createRenderer];
-        
         UIBarButtonItem *i = [[UIBarButtonItem alloc] initWithTitle:nil style:UIBarButtonItemStylePlain
                                                              target:nil action:nil];
         self.navigationItem.backBarButtonItem = i;
     }
     [self override_viewDidLoad];
+}
+
+-(void)override_viewWillLayoutSubviews {
+    [[self renderer] redraw];
+    [self override_viewWillLayoutSubviews];
 }
 
 -(BOOL)isImmuneToBeautify {
@@ -47,7 +51,7 @@
         // If this is a navigation controller, make sure all of the view controllers recieve the immunity message too.
         UINavigationController *nc = (UINavigationController*)self;
         for (UIViewController *vc in nc.viewControllers) {
-            [vc setImmuneToBeautify:YES];
+            [vc setImmuneToBeautify:immuneToBeautify];
         }
     }
     [self.view recursivelySetSubViewImmunity:immuneToBeautify];

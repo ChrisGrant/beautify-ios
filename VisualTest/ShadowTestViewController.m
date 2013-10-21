@@ -17,19 +17,16 @@
     UIScrollView *_scrollView;
 }
 
--(id)init {
-    self = [super init];
-    if (self) {
-        _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-        [_scrollView setAlwaysBounceVertical:YES];
-        [_scrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
-        [self.view addSubview:_scrollView];
-        
-        yPos = 10;
-        
-        [self addTextFieldsWithBorderStyle:UITextBorderStyleRoundedRect];
-    }
-    return self;
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    [_scrollView setAlwaysBounceVertical:YES];
+    [_scrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+    [self.view addSubview:_scrollView];
+    
+    yPos = 10;
+    
+    [self addTextFieldsWithBorderStyle:UITextBorderStyleRoundedRect];
 }
 
 - (void)modifyTextField:(UITextField *)textField withWidth:(int)width andRadius:(int)radius {
