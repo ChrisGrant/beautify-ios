@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="FBN-xa-Zds">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="L15-l9-Au8">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
@@ -39,10 +39,10 @@
             </objects>
             <point key="canvasLocation" x="1974" y="-1854"/>
         </scene>
-        <!--View Controller - Menu-->
+        <!--Menu View Controller - Menu-->
         <scene sceneID="TrE-jW-g0f">
             <objects>
-                <viewController id="uEb-ig-Th4" sceneMemberID="viewController">
+                <viewController id="uEb-ig-Th4" customClass="BYMenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KS0-rG-Moa"/>
                         <viewControllerLayoutGuide type="bottom" id="63b-8f-pL9"/>
@@ -129,10 +129,10 @@
             </objects>
             <point key="canvasLocation" x="1974" y="-695"/>
         </scene>
-        <!--View Controller-->
+        <!--Renderer Precedence View Controller - Renderer Precedence Test-->
         <scene sceneID="Ocy-2h-0wB">
             <objects>
-                <viewController id="L15-l9-Au8" sceneMemberID="viewController">
+                <viewController id="L15-l9-Au8" customClass="BYRendererPrecedenceViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FXf-xH-eFc"/>
                         <viewControllerLayoutGuide type="bottom" id="qKB-Mh-Nsb"/>
@@ -140,13 +140,105 @@
                     <view key="view" contentMode="scaleToFill" id="b2n-0l-jU2">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0h-hn-H4j">
+                                <rect key="frame" x="292" y="160" width="184" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="JKc-bh-tBi"/>
+                                    <constraint firstAttribute="height" constant="77" id="T3p-8R-yfV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Custom Background">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rda-FS-fwK">
+                                <rect key="frame" x="526" y="160" width="184" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="0BC-R0-Ca0"/>
+                                    <constraint firstAttribute="width" constant="184" id="T6Q-cN-3Z8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Custom Font">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYi-vI-b6f">
+                                <rect key="frame" x="58" y="160" width="184" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="ZD9-Ku-kFn"/>
+                                    <constraint firstAttribute="width" constant="184" id="ZQJ-Gq-1o4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Default Button">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A custom renderer should change the background of this button to red. It should not have the default style." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="184" translatesAutoresizingMaskIntoConstraints="NO" id="5Wz-a4-IXF">
+                                <rect key="frame" x="292" y="245" width="184" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A custom renderer should change the font of this button. It should not have the default style." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="184" translatesAutoresizingMaskIntoConstraints="NO" id="rGF-oL-8gw">
+                                <rect key="frame" x="526" y="245" width="184" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No custom renderers should do anything to this button. It should have the default style." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="184" translatesAutoresizingMaskIntoConstraints="NO" id="lP5-ny-yfU">
+                                <rect key="frame" x="58" y="245" width="184" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This view controller will change the theme it uses every 2 seconds. The controls modified by renderers should remain the same." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="668" translatesAutoresizingMaskIntoConstraints="NO" id="ZrT-3i-u4B">
+                                <rect key="frame" x="50" y="94" width="668" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZrT-3i-u4B" firstAttribute="leading" secondItem="b2n-0l-jU2" secondAttribute="leading" constant="50" id="13j-sY-RIx"/>
+                            <constraint firstAttribute="trailing" secondItem="ZrT-3i-u4B" secondAttribute="trailing" constant="50" id="1pf-Os-L1m"/>
+                            <constraint firstItem="q0h-hn-H4j" firstAttribute="width" secondItem="5Wz-a4-IXF" secondAttribute="width" id="5h7-r4-zBU"/>
+                            <constraint firstItem="lP5-ny-yfU" firstAttribute="top" secondItem="hYi-vI-b6f" secondAttribute="bottom" constant="8" id="Ajd-vp-DQp"/>
+                            <constraint firstItem="Rda-FS-fwK" firstAttribute="leading" secondItem="q0h-hn-H4j" secondAttribute="trailing" constant="50" id="Bbo-aV-YkP"/>
+                            <constraint firstItem="rGF-oL-8gw" firstAttribute="top" secondItem="Rda-FS-fwK" secondAttribute="bottom" constant="8" id="BgL-f8-DnT"/>
+                            <constraint firstItem="rGF-oL-8gw" firstAttribute="centerX" secondItem="Rda-FS-fwK" secondAttribute="centerX" id="JaZ-6f-3zX"/>
+                            <constraint firstItem="q0h-hn-H4j" firstAttribute="leading" secondItem="hYi-vI-b6f" secondAttribute="trailing" constant="50" id="NWE-AL-OPI"/>
+                            <constraint firstItem="ZrT-3i-u4B" firstAttribute="top" secondItem="FXf-xH-eFc" secondAttribute="bottom" constant="30" id="VtP-dL-WlW"/>
+                            <constraint firstItem="q0h-hn-H4j" firstAttribute="top" secondItem="ZrT-3i-u4B" secondAttribute="bottom" constant="30" id="b0u-WT-OQr"/>
+                            <constraint firstItem="hYi-vI-b6f" firstAttribute="width" secondItem="lP5-ny-yfU" secondAttribute="width" id="cS3-F6-NFG"/>
+                            <constraint firstItem="rGF-oL-8gw" firstAttribute="width" secondItem="Rda-FS-fwK" secondAttribute="width" id="dn2-ua-10l"/>
+                            <constraint firstItem="q0h-hn-H4j" firstAttribute="centerY" secondItem="Rda-FS-fwK" secondAttribute="centerY" id="laI-0f-UmD"/>
+                            <constraint firstItem="hYi-vI-b6f" firstAttribute="centerX" secondItem="lP5-ny-yfU" secondAttribute="centerX" id="mth-VQ-WQd"/>
+                            <constraint firstAttribute="centerX" secondItem="q0h-hn-H4j" secondAttribute="centerX" id="rtU-46-uCZ"/>
+                            <constraint firstItem="5Wz-a4-IXF" firstAttribute="top" secondItem="q0h-hn-H4j" secondAttribute="bottom" constant="8" id="wA4-5d-DuU"/>
+                            <constraint firstItem="q0h-hn-H4j" firstAttribute="centerY" secondItem="hYi-vI-b6f" secondAttribute="centerY" id="zCG-ct-0sa"/>
+                            <constraint firstItem="q0h-hn-H4j" firstAttribute="centerX" secondItem="5Wz-a4-IXF" secondAttribute="centerX" id="zOg-oy-MwG"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bB7-Nc-hwG"/>
+                    <navigationItem key="navigationItem" title="Renderer Precedence Test" id="bB7-Nc-hwG"/>
+                    <connections>
+                        <outlet property="customBackgroundButton" destination="q0h-hn-H4j" id="yVw-cN-iCR"/>
+                        <outlet property="customFontButton" destination="Rda-FS-fwK" id="oXg-uk-UJk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZz-8z-Ie9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1974" y="429"/>
+            <point key="canvasLocation" x="1969" y="424"/>
         </scene>
         <!--Table Visual Test View Controller-->
         <scene sceneID="yZ4-v3-og1">

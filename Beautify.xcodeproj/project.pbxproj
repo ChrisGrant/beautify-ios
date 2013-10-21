@@ -189,6 +189,11 @@
 		70397B9117DF33190095001B /* BYBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* BYBarButtonStyle.m */; };
 		70397B9217DF33190095001B /* BYBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* BYBarButtonStyle.m */; };
 		703C8F5B1815174800C80487 /* VisualTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 703C8F5A1815174800C80487 /* VisualTest.storyboard */; };
+		703C8F5E18151E6600C80487 /* BYRendererPrecedenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 703C8F5D18151E6600C80487 /* BYRendererPrecedenceViewController.m */; };
+		703C8F5F18152B5900C80487 /* flat.json in Resources */ = {isa = PBXBuildFile; fileRef = 7027C5D017EC92F5006D8008 /* flat.json */; };
+		703C8F6018152B5C00C80487 /* dark.json in Resources */ = {isa = PBXBuildFile; fileRef = 7027C5D517F04341006D8008 /* dark.json */; };
+		703C8F6318152CE200C80487 /* BYMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 703C8F6218152CE200C80487 /* BYMenuViewController.m */; };
+		703C8F6418152DF900C80487 /* UIImage+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF4EFC17FB294800F807F6 /* UIImage+Base64.m */; };
 		7044FB5C17F072620066E61A /* BYCopyingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7044FB5B17F072620066E61A /* BYCopyingTests.m */; };
 		7047010517E1C06B00FEA5F5 /* NSObject+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010217E1C06B00FEA5F5 /* NSObject+Beautify.h */; };
 		7047010617E1C06B00FEA5F5 /* NSObject+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010317E1C06B00FEA5F5 /* NSObject+Beautify.m */; };
@@ -517,6 +522,10 @@
 		70397B8D17DF33190095001B /* BYBarButtonStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBarButtonStyle.h; sourceTree = "<group>"; };
 		70397B8E17DF33190095001B /* BYBarButtonStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBarButtonStyle.m; sourceTree = "<group>"; };
 		703C8F5A1815174800C80487 /* VisualTest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VisualTest.storyboard; sourceTree = "<group>"; };
+		703C8F5C18151E6600C80487 /* BYRendererPrecedenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYRendererPrecedenceViewController.h; sourceTree = "<group>"; };
+		703C8F5D18151E6600C80487 /* BYRendererPrecedenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYRendererPrecedenceViewController.m; sourceTree = "<group>"; };
+		703C8F6118152CE200C80487 /* BYMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYMenuViewController.h; sourceTree = "<group>"; };
+		703C8F6218152CE200C80487 /* BYMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYMenuViewController.m; sourceTree = "<group>"; };
 		7044FB5B17F072620066E61A /* BYCopyingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYCopyingTests.m; sourceTree = "<group>"; };
 		7047010217E1C06B00FEA5F5 /* NSObject+Beautify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Beautify.h"; path = "Beautify/NSObject+Beautify.h"; sourceTree = SOURCE_ROOT; };
 		7047010317E1C06B00FEA5F5 /* NSObject+Beautify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+Beautify.m"; path = "Beautify/NSObject+Beautify.m"; sourceTree = SOURCE_ROOT; };
@@ -949,7 +958,11 @@
 				70207AE717BE199A00632311 /* ShadowTestViewController.m */,
 				70C211B417DF01DB00CA110B /* TableVisualTestViewController.h */,
 				70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */,
+				703C8F5C18151E6600C80487 /* BYRendererPrecedenceViewController.h */,
+				703C8F5D18151E6600C80487 /* BYRendererPrecedenceViewController.m */,
 				700F292B16F3711300E85ED3 /* Supporting Files */,
+				703C8F6118152CE200C80487 /* BYMenuViewController.h */,
+				703C8F6218152CE200C80487 /* BYMenuViewController.m */,
 			);
 			path = VisualTest;
 			sourceTree = "<group>";
@@ -1562,6 +1575,8 @@
 				703C8F5B1815174800C80487 /* VisualTest.storyboard in Resources */,
 				700F293716F3711300E85ED3 /* Default.png in Resources */,
 				700F293916F3711300E85ED3 /* Default@2x.png in Resources */,
+				703C8F6018152B5C00C80487 /* dark.json in Resources */,
+				703C8F5F18152B5900C80487 /* flat.json in Resources */,
 				70907E7B1797FBC300F83417 /* roller@2x.png in Resources */,
 				70FE245E17E089D1009A7113 /* barButtonImage.png in Resources */,
 				700F293B16F3711300E85ED3 /* Default-568h@2x.png in Resources */,
@@ -1815,6 +1830,7 @@
 				70FF54CA17E6FAEA00F9BF03 /* BYNavigationBarStyle.m in Sources */,
 				70FF54CF17E6FAFD00F9BF03 /* BYTextFieldStyle.m in Sources */,
 				707F518017FB10A000928B0B /* NSArray+JSONModel.m in Sources */,
+				703C8F6418152DF900C80487 /* UIImage+Base64.m in Sources */,
 				7047014017E1C6D100FEA5F5 /* UIImageView+Beautify.m in Sources */,
 				707F517E17FB10A000928B0B /* JSONModelClassProperty.m in Sources */,
 				1DE9D2FA174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m in Sources */,
@@ -1827,6 +1843,7 @@
 				70FF54C417E6FACE00F9BF03 /* BYButtonStyle.m in Sources */,
 				72FDEDA617571F92002F1093 /* UITextField+Beautify.m in Sources */,
 				70FF54C517E6FAD100F9BF03 /* BYFont.m in Sources */,
+				703C8F5E18151E6600C80487 /* BYRendererPrecedenceViewController.m in Sources */,
 				7047013C17E1C6B400FEA5F5 /* BYSliderMinimumTrackLayer.m in Sources */,
 				7047013117E1C40100FEA5F5 /* BYSwitchGestureView.m in Sources */,
 				707F517D17FB10A000928B0B /* JSONModelArray.m in Sources */,
@@ -1834,6 +1851,7 @@
 				72FDEDA91757204C002F1093 /* BYControlRenderer.m in Sources */,
 				7047012F17E1C3F900FEA5F5 /* BYSliderLayer.m in Sources */,
 				70FF54C717E6FAD800F9BF03 /* BYImageViewStyle.m in Sources */,
+				703C8F6318152CE200C80487 /* BYMenuViewController.m in Sources */,
 				7027C5D417ECA20E006D8008 /* UIColor+HexColors.m in Sources */,
 				70FF54CE17E6FAF900F9BF03 /* BYText.m in Sources */,
 				7205345917579C61000A27C0 /* BYNavigationBarRenderer.m in Sources */,
