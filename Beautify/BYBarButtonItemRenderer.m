@@ -50,12 +50,12 @@
 -(BYBarButtonStyle*)styleFromTheme:(BYTheme*)theme {
     // Store both the back button and the normal button style for future use.
     _normalStyle = theme.barButtonItemStyle;
-    _backStyle = theme.backBarButtonItemStyle;
+    _backStyle = theme.backButtonItemStyle;
     
     if(self.isBackButtonRenderer) {
-        return theme.backBarButtonItemStyle;
+        return _backStyle;
     }
-    return theme.barButtonItemStyle;
+    return _normalStyle;
 }
 
 -(void)setIsBackButtonRenderer:(BOOL)isBackButtonRenderer {

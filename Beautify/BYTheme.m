@@ -22,8 +22,7 @@
 @implementation BYTheme
 
 +(BYTheme *)fromDictionary:(NSDictionary *)dict {
-    NSDictionary *themeDict = dict[@"theme"];
-    BYTheme* theme = [[BYTheme alloc] initWithDictionary:themeDict error:nil];
+    BYTheme* theme = [self validateAndReturnThemeFromDictionary:dict];
     return theme;
 }
 
@@ -40,28 +39,34 @@
             NSLog(@"Error: Could not parse JSON! %@", jsonError.debugDescription);
         }
         else {
-            // Find the version of the JSON file being passed in.
-            NSString *fileVersion = dict[@"schemaVersion"];
-            
-            // Compare it to the current version. If they aren't equal, we can't continue and should log an error.
-            if(![fileVersion isEqualToString:JSON_SCHEMA_VERSION]) {
-                NSLog(@"[BYTheme fromFile] failed - The version of the file (%@) was invalid. Expecting %@", fileVersion, JSON_SCHEMA_VERSION);
-                return nil;
-            }
-            
-            NSError *parseError;
-            theme = [[BYTheme alloc] initWithDictionary:dict[@"theme"] error:&parseError];
-            if(parseError) {
-                NSLog(@"Parse error when reading the JSON - %@", parseError.debugDescription);
-                return nil;
-            }
-            else {
-                return theme;
-            }
+            theme = [self validateAndReturnThemeFromDictionary:dict];
         }
     }
     else {
         NSLog(@"[BYTheme fromFile] failed - Unable to load file");
+    }
+    return theme;
+}
+
++(BYTheme*)validateAndReturnThemeFromDictionary:(NSDictionary*)dict {
+    // Find the version of the JSON file being passed in.
+    BYTheme *theme= nil;
+    NSString *fileVersion = dict[@"schemaVersion"];
+    
+    // Compare it to the current version. If they aren't equal, we can't continue and should log an error.
+    if(![fileVersion isEqualToString:JSON_SCHEMA_VERSION]) {
+        NSLog(@"[BYTheme fromFile] failed - The version of the file (%@) was invalid. Expecting %@", fileVersion, JSON_SCHEMA_VERSION);
+        return nil;
+    }
+    
+    NSError *parseError;
+    theme = [[BYTheme alloc] initWithDictionary:dict[@"theme"] error:&parseError];
+    if(parseError) {
+        NSLog(@"Parse error when reading the JSON - %@", parseError.debugDescription);
+        return nil;
+    }
+    else {
+        return theme;
     }
     return theme;
 }
@@ -88,7 +93,7 @@
         self.tableViewCellStyle = [BYTableViewCellStyle defaultStyle];
         self.imageViewStyle = [BYImageViewStyle defaultStyle];
         self.barButtonItemStyle = [BYBarButtonStyle defaultStyle];
-        self.backBarButtonItemStyle = [BYBarButtonStyle defaultBackButtonStyle];
+        self.backButtonItemStyle = [BYBarButtonStyle defaultBackButtonStyle];
         self.sliderStyle = [BYSliderStyle defaultStyle];
     }
     return self;
@@ -105,7 +110,7 @@
     theme.tableViewCellStyle = self.tableViewCellStyle.copy;
     theme.imageViewStyle = self.imageViewStyle.copy;
     theme.barButtonItemStyle = self.barButtonItemStyle.copy;
-    theme.backBarButtonItemStyle = self.backBarButtonItemStyle.copy;
+    theme.backButtonItemStyle = self.backButtonItemStyle.copy;
     theme.sliderStyle = self.sliderStyle.copy;
     return theme;
 }
