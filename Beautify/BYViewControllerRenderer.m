@@ -40,22 +40,21 @@
 }
 
 -(void)configureFromStyle {
-    UIViewController* vc = (UIViewController*)self.adaptedView;
+    UIViewController *vc = (UIViewController*)self.adaptedView;
     BYViewControllerStyle *style = self.style;
-    
     vc.view.backgroundColor = style.backgroundColor;
     
-    if ([vc class] == [UINavigationController class]){
+    if ([vc class] == [UINavigationController class]) {
         for (UIViewController* vcs in ((UINavigationController*)vc).viewControllers) {
-            [self redrawViewController:vcs style:style];
+            [self redrawViewController:vcs];
         }
     }
     else {
-        [self redrawViewController:vc style:style];
+        [self redrawViewController:vc];
     }
 }
 
--(void)redrawViewController:(UIViewController*)vc style:(BYViewControllerStyle*)style {
+-(void)redrawViewController:(UIViewController*)vc {
     [_renderingLayer setFrame:vc.view.bounds];
     [_renderingLayer setNeedsDisplay];
 }

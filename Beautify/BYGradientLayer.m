@@ -29,9 +29,7 @@
 
 -(void)drawInContext:(CGContextRef)ctx {
     UIGraphicsPushContext(ctx);
-    
     [self drawGradientInRect:self.frame withContext:ctx];
-    
     UIGraphicsPopContext();
 }
 
@@ -46,7 +44,7 @@
 
 -(id<CAAction>)actionForKey:(NSString*)key {
     // This stops the animation of the layer when drawInContext is called.
-    if ([key isEqualToString: @"contents"]) {
+    if ([key isEqualToString:@"contents"]) {
         return nil;
     }
     return [super actionForKey:key];

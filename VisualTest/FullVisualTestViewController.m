@@ -21,72 +21,70 @@
     UIScrollView *_scrollView;
 }
 
--(id)init {
-    if(self = [super init]) {
-        [self setTitle:@"Visual Test"];
-        
-        [self addBarButtonItems];
-        
-        _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-        [_scrollView setContentInset:UIEdgeInsetsMake(64, 0, 0, 0)];
-        [_scrollView setAlwaysBounceVertical:YES];
-        [_scrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
-        [self.view addSubview:_scrollView];
-
-        yPos = 10;
-        
-        [self addLabels];
-        [self addImageViews];
-
-        yPos += 10;
-
-        [self addButtonsWithType:UIButtonTypeCustom andTitle:@"Custom"];
-        [self addButtonsWithType:UIButtonTypeRoundedRect andTitle:@"Rounded/System"]; // aka UIButtonTypeSystem in iOS7
-     
-        [self addSwitches];
-        [self addSliders];
-
-        [self addTextFieldsWithBorderStyle:UITextBorderStyleRoundedRect text:@"I am a rounded text field"];
-        [self addTextFieldsWithBorderStyle:UITextBorderStyleNone text:@"I am a no border text field"];
-        [self addTextFieldsWithBorderStyle:UITextBorderStyleBezel text:@"I am a bezeled text field"];
-        [self addTextFieldsWithBorderStyle:UITextBorderStyleLine text:@"I am a line bordered text field"];
-        
-        [self addTableViews];
-        
-        [self.renderer setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1.0]];
-    }
-    return self;
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    [self setTitle:@"Visual Test"];
+    
+    [self addBarButtonItems];
+    
+    _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+    [_scrollView setContentInset:UIEdgeInsetsMake(64, 0, 0, 0)];
+    [_scrollView setAlwaysBounceVertical:YES];
+    [_scrollView setAutoresizingMask:UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
+    [self.view addSubview:_scrollView];
+    
+    yPos = 10;
+    
+    [self addLabels];
+    [self addImageViews];
+    
+    yPos += 10;
+    
+    [self addButtonsWithType:UIButtonTypeCustom andTitle:@"Custom"];
+    [self addButtonsWithType:UIButtonTypeRoundedRect andTitle:@"Rounded/System"]; // aka UIButtonTypeSystem in iOS7
+    
+    [self addSwitches];
+    [self addSliders];
+    
+    [self addTextFieldsWithBorderStyle:UITextBorderStyleRoundedRect text:@"I am a rounded text field"];
+    [self addTextFieldsWithBorderStyle:UITextBorderStyleNone text:@"I am a no border text field"];
+    [self addTextFieldsWithBorderStyle:UITextBorderStyleBezel text:@"I am a bezeled text field"];
+    [self addTextFieldsWithBorderStyle:UITextBorderStyleLine text:@"I am a line bordered text field"];
+    
+    [self addTableViews];
+    
+    [self.renderer setBackgroundColor:[UIColor colorWithWhite:0.9 alpha:1.0]];
 }
 
 -(void)addBarButtonItems{
     // create default UIBarButtonItem with UIBarButtonItemStyleBordered
     UIBarButtonItem *defaultButtonRight = [[UIBarButtonItem alloc] initWithTitle:@"Default"
-                                                                      style:UIBarButtonItemStyleBordered
-                                                                     target:self
-                                                                     action:@selector(pushView)];
+                                                                           style:UIBarButtonItemStyleBordered
+                                                                          target:self
+                                                                          action:@selector(pushView)];
     [defaultButtonRight setImmuneToBeautify:YES];
     
     // create a beautify default UIBarButtonItem with UIBarButtonItemStyleBordered
     UIBarButtonItem *beautifyDefaultButtonRight = [[UIBarButtonItem alloc] initWithTitle:@"Beautify Default"
+                                                                                   style:UIBarButtonItemStyleBordered
+                                                                                  target:self
+                                                                                  action:@selector(pushView)];
+    
+    // create customized UIBarButtonItem with UIBarButtonItemStyleBordered
+    UIBarButtonItem *customizedButtonRight = [[UIBarButtonItem alloc] initWithTitle:@"Customised"
                                                                               style:UIBarButtonItemStyleBordered
                                                                              target:self
                                                                              action:@selector(pushView)];
     
-    // create customized UIBarButtonItem with UIBarButtonItemStyleBordered
-    UIBarButtonItem *customizedButtonRight = [[UIBarButtonItem alloc] initWithTitle:@"Customised"
-                                                                        style:UIBarButtonItemStyleBordered
-                                                                       target:self
-                                                                       action:@selector(pushView)];
-    
     // Set properties for UIBarButton UIControlStateNormal
     BYBarButtonItemRenderer *renderer = customizedButtonRight.renderer;
-
+    
     BYBorder *border = [BYBorder new];
     border.width = 5.0f;
     border.color = [UIColor orangeColor];
     border.cornerRadius = 20.0f;
     [renderer setBorder:border forState:UIControlStateNormal];
-
+    
     BYShadow *innerShadow = [BYShadow shadowWithOffset:CGSizeMake(0, 0) radius:10 color:[UIColor greenColor]];
     [renderer setInnerShadow:innerShadow forState:UIControlStateNormal];
     BYShadow *outerShadow = [BYShadow shadowWithOffset:CGSizeMake(0, 0) radius:20 color:[UIColor redColor]];
@@ -110,16 +108,16 @@
                                                                          target:nil
                                                                          action:nil];
     [defaultButtonLeft setImmuneToBeautify:YES];
-
+    
     UIBarButtonItem *beautifyDefaultButtonLeft = [[UIBarButtonItem alloc] initWithTitle:@"B.D."
-                                                                                   style:UIBarButtonItemStylePlain
-                                                                                  target:nil
-                                                                                  action:nil];
+                                                                                  style:UIBarButtonItemStylePlain
+                                                                                 target:nil
+                                                                                 action:nil];
     
     UIBarButtonItem *customizedButtonLeft = [[UIBarButtonItem alloc] initWithTitle:@"C"
-                                                                              style:UIBarButtonItemStyleDone
-                                                                             target:nil
-                                                                             action:nil];
+                                                                             style:UIBarButtonItemStyleDone
+                                                                            target:nil
+                                                                            action:nil];
     
     self.navigationItem.leftBarButtonItems = @[defaultButtonLeft, beautifyDefaultButtonLeft, customizedButtonLeft];
     [self.navigationItem setLeftItemsSupplementBackButton:YES];
@@ -194,7 +192,7 @@
     
     
     [s3 setDesiredSwitchSize:CGSizeMake(200, 30)];
-
+    
     BYSwitchRenderer *renderer = s3.renderer;
     
     BYSwitchState *onState = [BYSwitchState new];
@@ -206,7 +204,7 @@
     onState.textStyle = [BYText textWithFont:[BYFont fontWithName:@"ArialMT-Bold"] color:[UIColor blueColor]];
     onState.backgroundColor = [UIColor redColor];
     [renderer setOnState:onState forState:UIControlStateNormal];
-
+    
     BYBorder *border = [BYBorder new];
     border.width = 2.0f;
     border.color = [UIColor blackColor];
@@ -214,7 +212,7 @@
     
     [renderer setBorder:border forState:UIControlStateNormal];
     [renderer setThumbBorder:border forState:UIControlStateNormal];
-
+    
     [renderer setThumbBackgroundColor:[UIColor whiteColor] forState:UIControlStateNormal];
     
     BYShadow *shadow1 = [BYShadow shadowWithOffset:CGSizeZero radius:100.0 color:[UIColor blackColor]];
@@ -244,13 +242,13 @@
     barBorder.color = [UIColor blackColor];
     barBorder.cornerRadius = 5.0f;
     [renderer setBarBorder:barBorder forState:UIControlStateNormal];
-
+    
     BYShadow *shadow2 = [BYShadow shadowWithOffset:CGSizeZero radius:5.0 color:[UIColor whiteColor]];
     [renderer setBarInnerShadow:shadow2 forState:UIControlStateNormal];
     
     [renderer setMinimumTrackColor:[UIColor blueColor] forState:UIControlStateNormal];
     [renderer setMinimumTrackBackgroundGradient:[BYGradient new] forState:UIControlStateNormal];
-
+    
     [renderer setMaximumTrackColor:[UIColor redColor] forState:UIControlStateNormal];
     [renderer setMaximumTrackBackgroundGradient:[BYGradient new] forState:UIControlStateNormal];
     
@@ -267,7 +265,7 @@
     
     BYShadow *shadow3 = [BYShadow shadowWithOffset:CGSizeZero radius:10.0 color:[UIColor greenColor]];
     [renderer setThumbInnerShadow:shadow3 forState:UIControlStateNormal];
-            
+    
     [self addDefaultView:s1 beautifyDefaultView:s2 andCustomisedView:s3 withHeight:25];
 }
 
@@ -397,7 +395,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath { return 80; }
 
-#pragma mark - UITableViewDelegate 
+#pragma mark - UITableViewDelegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     TableVisualTestViewController *tvc = [TableVisualTestViewController new];
