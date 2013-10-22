@@ -11,13 +11,14 @@
 #import "UIColor+Comparison.h"
 #import "Beautify.h"
 #import "BYTestHelper.h"
+#import "BYJSONVersion.h"
 
 @interface BYSerializationTests : BYTestHelper
 @end
 
 @implementation BYSerializationTests
 
--(void)testDefaultTheme {
+-(void)testSerializeThenDeserializeDefaultTheme {
     BYTheme *theme = [BYTheme new];
     NSString *json;
     XCTAssertNoThrow(json = [theme toJSONString], @"Shouldn't throw when exporting default theme to JSON");
@@ -35,6 +36,18 @@
     XCTAssertNotNil(theme2, @"Theme should not be nil!");
     
     [self assertObjectOne:theme2 isEqualToObjectTwo:theme];
+}
+
+-(void)testThemeWrapping {
+    BYTheme *theme = [BYTheme new];
+    NSDictionary *json;
+    XCTAssertNoThrow(json = [theme toDictionary], @"Yo, this shouldn't throw when exporting the default theme to a dictionary B!");
+    XCTAssertNotNil(json, @"Dictionary should not be nil");
+    
+    XCTAssert([json.allKeys containsObject:@"theme"], @"There should be a \"theme\" key in the dictionary!");
+    XCTAssert([json.allKeys containsObject:@"schemaVersion"], @"There should be a \"schemaVersion\" key in the dictionary!");
+    
+    XCTAssert([json[@"schemaVersion"] isEqualToString:JSON_SCHEMA_VERSION], @"Schema version should be equal");
 }
 
 @end
