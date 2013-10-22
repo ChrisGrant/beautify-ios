@@ -24,7 +24,6 @@
     if (!self.isImmuneToBeautify) {
         
         // Find all of the UINavigationItems and then set the last one to be the back button renderer.
-        [self searchForBackButtonInSubviewsOfView:self];
         NSArray *barviews = [self searchForBackButtonInSubviewsOfView:self];
         if(barviews.count > 0) {
             UIView *backBarView = barviews[barviews.count - 1];
@@ -37,6 +36,8 @@
             }
         }
         
+        [[self renderer] redraw];
+
         [[self allBarItems] enumerateObjectsUsingBlock:^(UIBarButtonItem *item, NSUInteger idx, BOOL *stop) {
             UIView *v = [item valueForKey:@"view"];
             [v createRenderer];
