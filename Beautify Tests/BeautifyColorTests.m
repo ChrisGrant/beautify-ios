@@ -56,13 +56,13 @@
 }
 
 -(void)testHexConversionBothWays {
-    [self hexStringConvertsToColorAndBackAgainCorrectly:@"#000000"];
-    [self hexStringConvertsToColorAndBackAgainCorrectly:@"#ffffff"];
-    [self hexStringConvertsToColorAndBackAgainCorrectly:@"#FF0000"];
-    [self hexStringConvertsToColorAndBackAgainCorrectly:@"#FF00FF"];
-    [self hexStringConvertsToColorAndBackAgainCorrectly:@"#FFFF00"];
-    [self hexStringConvertsToColorAndBackAgainCorrectly:@"#00FFFF"];
-    [self hexStringConvertsToColorAndBackAgainCorrectly:@"#FFFF00"];
+    [self hexStringConvertsToColorAndBackAgainCorrectly:@"#000000ff"];
+    [self hexStringConvertsToColorAndBackAgainCorrectly:@"#ffffffff"];
+    [self hexStringConvertsToColorAndBackAgainCorrectly:@"#FF000000"];
+    [self hexStringConvertsToColorAndBackAgainCorrectly:@"#FF00FF00"];
+    [self hexStringConvertsToColorAndBackAgainCorrectly:@"#FFFF00ff"];
+    [self hexStringConvertsToColorAndBackAgainCorrectly:@"#00FFFF33"];
+    [self hexStringConvertsToColorAndBackAgainCorrectly:@"#FFFF0000"];
 }
 
 -(void)hexStringConvertsToColorAndBackAgainCorrectly:(NSString*)inputString {
