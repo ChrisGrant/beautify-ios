@@ -77,10 +77,10 @@
     switch (color.colorSpaceModel)
     {
         case kCGColorSpaceModelRGB:
-            result = [NSString stringWithFormat:@"%02X%02X%02X", color.redByte, color.greenByte, color.blueByte];
+            result = [NSString stringWithFormat:@"%02X%02X%02X%02X", color.redByte, color.greenByte, color.blueByte, color.alphaByte];
             break;
         case kCGColorSpaceModelMonochrome:
-            result = [NSString stringWithFormat:@"%02X%02X%02X", color.whiteByte, color.whiteByte, color.whiteByte];
+            result = [NSString stringWithFormat:@"%02X%02X%02X%02X", color.whiteByte, color.whiteByte, color.whiteByte, color.alphaByte];
             break;
         default:
             result = nil;
