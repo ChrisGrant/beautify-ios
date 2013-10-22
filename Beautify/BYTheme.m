@@ -129,18 +129,4 @@
     return wrapperDict;
 }
 
--(NSString *)toJSONString{
-    NSDictionary *dictionaryToOutput = [self toDictionary];
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dictionaryToOutput
-                                                       options:NSJSONWritingPrettyPrinted
-                                                         error:&error];
-    if (!jsonData) {
-        NSLog(@"Error parsing dictionary: %@", error);
-        return nil;
-    }
-    
-    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-}
-
 @end

@@ -37,4 +37,11 @@
     return [[propertyName lowercaseString] isEqualToString:@"alpha"];
 }
 
+-(NSDictionary*)toDictionary {
+    NSMutableDictionary *dict = [[super toDictionary] mutableCopy];
+    // Remove the alpha property. Remove this entire method when we support alpha for whole controls on the web.
+    [dict removeObjectForKey:@"alpha"];
+    return dict;
+}
+
 @end
