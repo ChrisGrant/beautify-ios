@@ -88,7 +88,7 @@
         }
         
         for (UIView *v in navBar.subviews) {
-            if([v isKindOfClass:NSClassFromString(@"UINavigationItemView")]) {
+            if([v class] == NSClassFromString(@"UINavigationItemView")) {
                 for(UIView *label in v.subviews) {
                     if([label isKindOfClass:[UILabel class]]) {
                         [[label renderer] setTextStyle:style.title forState:UIControlStateNormal];
