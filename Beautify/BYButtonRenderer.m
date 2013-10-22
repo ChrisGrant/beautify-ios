@@ -71,6 +71,10 @@
     if (text) {
         [_labelRenderer setTextStyle:text forState:UIControlStateNormal];
     }
+    
+    // Force the alpha to be 1.0. Otherwise the button changes it's alpha value when it becomes highlighted.
+    ((UIButton*)self.adaptedView).titleLabel.alpha = 1.0;
+    
     [_labelRenderer setTextShadow:textShadow forState:UIControlStateNormal];
     [_labelRenderer redraw];
     
