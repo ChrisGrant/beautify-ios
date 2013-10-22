@@ -19,6 +19,9 @@
 #import "BYImageViewStyle.h"
 #import "BYJSONVersion.h"
 
+#define SCHEMA_VERSION_KEY @"schemaVersion"
+#define THEME_KEY @"theme"
+
 @implementation BYTheme
 
 +(BYTheme *)fromDictionary:(NSDictionary *)dict {
@@ -27,12 +30,12 @@
 }
 
 +(BYTheme*)fromFile:(NSString *)file {
-    NSString* filePath = [[NSBundle mainBundle] pathForResource:file ofType:@"json"];
-    NSData* json = [NSData dataWithContentsOfFile:filePath];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:file ofType:@"json"];
+    NSData *json = [NSData dataWithContentsOfFile:filePath];
     
-    BYTheme* theme = nil;
+    BYTheme *theme;
     if (json) {
-        NSError* jsonError;
+        NSError *jsonError;
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:json options:NSJSONReadingAllowFragments
                                                                error:&jsonError];
         if (jsonError) {
@@ -50,8 +53,8 @@
 
 +(BYTheme*)validateAndReturnThemeFromDictionary:(NSDictionary*)dict {
     // Find the version of the JSON file being passed in.
-    BYTheme *theme= nil;
-    NSString *fileVersion = dict[@"schemaVersion"];
+    BYTheme *theme;
+    NSString *fileVersion = dict[SCHEMA_VERSION_KEY];
     
     // Compare it to the current version. If they aren't equal, we can't continue and should log an error.
     if(![fileVersion isEqualToString:JSON_SCHEMA_VERSION]) {
@@ -60,7 +63,7 @@
     }
     
     NSError *parseError;
-    theme = [[BYTheme alloc] initWithDictionary:dict[@"theme"] error:&parseError];
+    theme = [[BYTheme alloc] initWithDictionary:dict[THEME_KEY] error:&parseError];
     if(parseError) {
         NSLog(@"Parse error when reading the JSON - %@", parseError.debugDescription);
         return nil;
@@ -113,6 +116,31 @@
     theme.backButtonItemStyle = self.backButtonItemStyle.copy;
     theme.sliderStyle = self.sliderStyle.copy;
     return theme;
+}
+
+-(NSDictionary*)toDictionary {
+    // Get the dictionary that we need to wrap in the version number.
+    NSDictionary *dict = [super toDictionary];
+
+    // Wrap the dictionary in "theme" property as well as adding the current schema version.
+    NSMutableDictionary *wrapperDict = [NSMutableDictionary new];
+    [wrapperDict setObject:JSON_SCHEMA_VERSION forKey:SCHEMA_VERSION_KEY];
+    [wrapperDict setObject:dict forKey:THEME_KEY];
+    return wrapperDict;
+}
+
+-(NSString *)toJSONString{
+    NSDictionary *dictionaryToOutput = [self toDictionary];
+    NSError *error;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dictionaryToOutput
+                                                       options:NSJSONWritingPrettyPrinted
+                                                         error:&error];
+    if (!jsonData) {
+        NSLog(@"Error parsing dictionary: %@", error);
+        return nil;
+    }
+    
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
 }
 
 @end
