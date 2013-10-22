@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "BYBeautify_Private.h"
 #import "BYThemeManager_Private.h"
+#import "BYVersionUtils.h"
 
 @implementation BYBeautify
 
@@ -42,6 +43,11 @@
     if (!_active) {
         [self swizzleAll];
         _active = YES;
+    }
+    
+    // Warn the user that Beautify is currently iOS7 only.
+    if(SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+        NSLog(@"Warning! Beautify is not fully compatible with this version of iOS. Beautify currently only supports iOS 7.0 and higher.");
     }
 }
 
