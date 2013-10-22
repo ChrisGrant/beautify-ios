@@ -85,7 +85,7 @@
         default:
             result = nil;
     }
-    return result;
+    return [@"#" stringByAppendingString:result];
 }
 
 - (BOOL) canProvideRGBComponents
