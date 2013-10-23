@@ -14,6 +14,14 @@
 
 @implementation BYBeautify
 
++(NSString*)getInfo {
+    return [NSString stringWithFormat:@"Version: %s", BEAUTIFY_VERSION_NUMBER[0] ? BEAUTIFY_VERSION_NUMBER : "Unversioned"];
+}
+
+-(NSString*)getInfo {
+    return [BYBeautify getInfo];
+}
+
 +(BYBeautify*)instance {
     static dispatch_once_t pred = 0;
     __strong static id _sharedObject = nil;

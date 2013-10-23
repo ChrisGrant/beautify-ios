@@ -45,4 +45,11 @@
  */
 -(void)activateWithStyle:(NSString*)styleName;
 
+#pragma mark - 
+#pragma mark Version Info
+
+/** Returns a string describing the version of the Beautify framework being used. */
++(NSString*)getInfo;
+-(NSString*)getInfo;
+
 @end
