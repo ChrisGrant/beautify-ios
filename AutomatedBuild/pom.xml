@@ -15,25 +15,7 @@
         <artifactId>xcode-maven-plugin</artifactId>
         <version>1.13.0</version>
         <extensions>true</extensions>
-        <!-- optional configurations, e.g.
-          <configuration>
-             <!-- Earlier versions of the xcode-maven-plugin created only one
-                  framework. The configuration for that the framework should
-                  be built was specified with property below. For backward
-                  compatibility the corresponding artifact is still deployed and
-                  it is still possible to provide the configuration below.
-                  Since version 1.9.3 the frameworks are created by default for the
-                  configurations "Debug" and "Release". In case frameworks should be built
-                  for other configurations these configurations needs to be specified
-                  by the configurations sections mentioned below.
-               -->
               <primaryFmwkConfiguration>Release</primaryFmwkConfiguration>
-              
-              
-             <!-- Note that the framework project will be built by default
-             for both Release and Debug configurations. If you want not to built
-             for both, you should specify the desired configuration here -->
-              
              <configurations>
                <configuration>Debug</configuration> 
                <configuration>Release</configuration>
