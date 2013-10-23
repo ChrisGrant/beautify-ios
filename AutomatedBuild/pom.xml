@@ -15,13 +15,6 @@
         <artifactId>xcode-maven-plugin</artifactId>
         <version>1.13.0</version>
         <extensions>true</extensions>
-              <primaryFmwkConfiguration>Release</primaryFmwkConfiguration>
-             <configurations>
-               <configuration>Debug</configuration> 
-               <configuration>Release</configuration>
-             </configurations>
-           <configuration>
-          -->
       </plugin>
     </plugins>
   </build>
