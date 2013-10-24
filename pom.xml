@@ -18,6 +18,11 @@
         <artifactId>xcode-maven-plugin</artifactId>
         <version>1.13.0</version>
         <extensions>true</extensions>
+        <configuration>
+          <settings>
+            <GCC_PREPROCESSOR_DEFINITIONS>BEAUTIFY_VERSION_NUMBER=${project.version}</GCC_PREPROCESSOR_DEFINITIONS>
+          </settings>
+        </configuration>
       </plugin>
     </plugins>
   </build>
