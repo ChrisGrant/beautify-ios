@@ -4,9 +4,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.beautify.common</groupId>
-  <artifactId>beautify-parent</artifactId>
+  <artifactId>Beautify</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>xcode-framework</packaging>
+  <properties>
+    <xcode.sourceDirectory>.</xcode.sourceDirectory>
+  </properties>
 
   <build>
     <plugins>
@@ -18,4 +21,5 @@
       </plugin>
     </plugins>
   </build>
+  
 </project>
