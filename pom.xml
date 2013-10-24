@@ -27,6 +27,31 @@
   <build>
     <plugins>
       <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.2.1</version>
+        <executions>
+          <!-- This is a workaround to get git submodules working with the maven release plugin -->
+          <!-- Each Maven module should do this in case we ever want to execute them separately -->
+          <execution>
+              <id>git-submodules</id>
+              <phase>initialize</phase>
+              <goals>
+                  <goal>exec</goal>
+              </goals>
+              <configuration>
+                  <executable>git</executable>
+                  <workingDirectory>../../..</workingDirectory>
+                  <arguments>
+                      <argument>submodule</argument>
+                      <argument>update</argument>
+                      <argument>--init</argument>
+                  </arguments>
+              </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <groupId>com.sap.prd.mobile.ios.mios</groupId>
         <artifactId>xcode-maven-plugin</artifactId>
         <version>1.13.0</version>
