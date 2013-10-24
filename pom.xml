@@ -9,7 +9,7 @@
 
   <groupId>com.beautify.common</groupId>
   <artifactId>Beautify</artifactId>
-  <version>0.5</version>
+  <version>1.3-SNAPSHOT</version>
   <packaging>xcode-framework</packaging>
   <properties>
     <xcode.sourceDirectory>.</xcode.sourceDirectory>
