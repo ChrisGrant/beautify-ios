@@ -15,7 +15,7 @@
     <connection>scm:git:git@github.com:beautify/beautify-ios.git</connection>
     <developerConnection>scm:git:git@github.com:beautify/beautify-ios.git</developerConnection>
     <url>scm:git:git@github.com:beautify/beautify-ios.git</url>
-    <tag>HEAD</tag>
+    <tag>master</tag>
   </scm>
 
   <build>
