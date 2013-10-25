@@ -57,7 +57,7 @@ static NSDictionary* styleProperties = nil;
                                 @"backgroundgradient" : [BYGradient class],
                                 @"backgroundimage" : [BYBackgroundImage class],
                                 @"border" : [BYBorder class],
-                                @"barBorder" : [BYBorder class],
+                                @"barborder" : [BYBorder class],
                                 @"minimumtrackimage" : [UIImage class],
                                 @"minimumtrackbackgroundgradient" : [BYGradient class],
                                 @"maximumtrackimage" : [UIImage class],
