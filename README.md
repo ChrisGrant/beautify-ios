@@ -75,7 +75,7 @@ NSArray* shadows = @[
 
 Beautify adds borders, shadows (inner and outer), gradients (radial and linear) to all the UIKit controls. It also enhances `UITextField`, adding a highlighted state, and allows you to change the text on a `UISwitch` control.
 
-The examples above have shown how to change the visual appearance of a single control. It would be quite a lot of work to explicitly style every single control in your application. For that reason beautify has the concept of a theme which is automatically rolled out to every single control in your application.Furthermore, you can encode the theme in JSON format reducing the amount of code you need to write.
+The examples above have shown how to change the visual appearance of a single control. It would be quite a lot of work to explicitly style every single control in your application. For that reason beautify has the concept of a theme which is automatically rolled out to every single control in your application. Furthermore, you can encode the theme in JSON format reducing the amount of code you need to write.
 
 
 ##Building beautify
