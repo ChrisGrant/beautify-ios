@@ -8,14 +8,19 @@
 
 #import "BYImmuneControlsViewController.h"
 #import "Beautify.h"
+#import <MessageUI/MessageUI.h>
+#import "ModalContentViewController.h"
 
-@implementation BYImmuneControlsViewController
+@interface BYImmuneControlsViewController () <MFMailComposeViewControllerDelegate>
+@end
+
+@implementation BYImmuneControlsViewController {
+}
 
 -(void)viewDidLoad {
     [super viewDidLoad];
 
     BYTheme *theme = [BYTheme fromFile:@"flat"];
-//    theme.labelStyle.title = [BYText textWithFont:[BYFont fontWithName:@"Zapfino" andSize:0.0] color:[UIColor redColor]];
     [[BYThemeManager instance] applyTheme:theme];
     
     MKPointAnnotation *annotation = [MKPointAnnotation new];
@@ -30,6 +35,36 @@
 - (IBAction)showAlertView:(UIButton *)sender {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Alert View" message:@"My background should be clear! You should be able to see the view behind this alert view. The view controller background color should not be applied to this view." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
+}
+
+- (IBAction)showMailComposeController:(UIButton *)sender {
+        if ([MFMailComposeViewController canSendMail])
+        {
+            MFMailComposeViewController *mfController = [[MFMailComposeViewController alloc] init];
+            [mfController setSubject:@"Beautify Visual Test"];
+            [mfController setMailComposeDelegate:self];
+            [self presentViewController:mfController animated:YES completion:NULL];
+        }
+        else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Can't send email" message:@"Please set up email on this device to be able to send mails" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            [alert show];
+        }
+}
+
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    if (error) {
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error!" message:[NSString stringWithFormat:@"An error occurred: %@",[error description]] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [alert show];
+        [controller dismissViewControllerAnimated:YES completion:nil];
+    }
+    else {
+        [controller dismissViewControllerAnimated:YES completion:nil];
+    }
+}
+
+- (IBAction)showModalNavController:(UIButton *)sender {
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:[ModalContentViewController new]];
+    [self presentViewController:nc animated:YES completion:nil];
 }
 
 @end

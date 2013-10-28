@@ -185,6 +185,8 @@
 		7027C5D117EC92F5006D8008 /* flat.json in Resources */ = {isa = PBXBuildFile; fileRef = 7027C5D017EC92F5006D8008 /* flat.json */; };
 		7027C5D417ECA20E006D8008 /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52216F9AC8500D08DBB /* UIColor+HexColors.m */; };
 		702F450D181E645400748D30 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702F450C181E645400748D30 /* CoreLocation.framework */; };
+		702F450F181E680D00748D30 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702F450E181E680D00748D30 /* MessageUI.framework */; };
+		702F4512181E790300748D30 /* ModalContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 702F4511181E790300748D30 /* ModalContentViewController.m */; };
 		7036DB4916F8659400EBA8AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DCD86C16F377DE008ECF8B /* QuartzCore.framework */; };
 		70397B8F17DF33190095001B /* BYBarButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70397B8D17DF33190095001B /* BYBarButtonStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70397B9117DF33190095001B /* BYBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* BYBarButtonStyle.m */; };
@@ -523,6 +525,9 @@
 		7027C5D017EC92F5006D8008 /* flat.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flat.json; sourceTree = "<group>"; };
 		7027C5D517F04341006D8008 /* dark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dark.json; sourceTree = "<group>"; };
 		702F450C181E645400748D30 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		702F450E181E680D00748D30 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		702F4510181E790300748D30 /* ModalContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalContentViewController.h; sourceTree = "<group>"; };
+		702F4511181E790300748D30 /* ModalContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalContentViewController.m; sourceTree = "<group>"; };
 		70397B8D17DF33190095001B /* BYBarButtonStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBarButtonStyle.h; sourceTree = "<group>"; };
 		70397B8E17DF33190095001B /* BYBarButtonStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYBarButtonStyle.m; sourceTree = "<group>"; };
 		703C8F5A1815174800C80487 /* VisualTest.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VisualTest.storyboard; sourceTree = "<group>"; };
@@ -685,6 +690,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				702F450F181E680D00748D30 /* MessageUI.framework in Frameworks */,
 				702F450D181E645400748D30 /* CoreLocation.framework in Frameworks */,
 				70F284BF181E59DC002E61AA /* MapKit.framework in Frameworks */,
 				72ADB8D616FC9E0200BE925D /* CoreGraphics.framework in Frameworks */,
@@ -974,6 +980,8 @@
 				703C8F6218152CE200C80487 /* BYMenuViewController.m */,
 				70F284BB181E57C8002E61AA /* BYImmuneControlsViewController.h */,
 				70F284BC181E57C8002E61AA /* BYImmuneControlsViewController.m */,
+				702F4510181E790300748D30 /* ModalContentViewController.h */,
+				702F4511181E790300748D30 /* ModalContentViewController.m */,
 			);
 			path = VisualTest;
 			sourceTree = "<group>";
@@ -1298,6 +1306,7 @@
 		72BF4A9516F3179B00A0C0E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				702F450E181E680D00748D30 /* MessageUI.framework */,
 				702F450C181E645400748D30 /* CoreLocation.framework */,
 				70F284BE181E59DC002E61AA /* MapKit.framework */,
 				707F516917FB108100928B0B /* JSONModel */,
@@ -1870,6 +1879,7 @@
 				70FF54CB17E6FAEE00F9BF03 /* BYShadow.m in Sources */,
 				7047013F17E1C6CE00FEA5F5 /* BYImageViewRenderer.m in Sources */,
 				1DE9D2EC174F7BA50070AFD3 /* UIViewController+Beautify.m in Sources */,
+				702F4512181E790300748D30 /* ModalContentViewController.m in Sources */,
 				70FF54D317E6FB1000F9BF03 /* BYViewStyle.m in Sources */,
 				70FF54CA17E6FAEA00F9BF03 /* BYNavigationBarStyle.m in Sources */,
 				70FF54CF17E6FAFD00F9BF03 /* BYTextFieldStyle.m in Sources */,

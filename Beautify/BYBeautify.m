@@ -83,11 +83,6 @@
     
     // Creates renderers for each of the UIBarButtonItems in the UINavigationBar
     [self swizzleClass:[UINavigationBar class] method:@"layoutSubviews"];
-    // Stops UINavigationBar listening for CSThemeUpdatedNotifications
-    [self swizzleClass:[UINavigationBar class] method:@"dealloc"];
-    
-    // Stops UIBarButtonItem listening for CSThemeUpdatedNotifications
-    [self swizzleClass:[UIBarButtonItem class] method:@"dealloc"];
     
     // Sets image as associatedObject if not immuneToBeautify so it is customised by framework
     [self swizzleClass:[UIImageView class] method:@"setImage:"];

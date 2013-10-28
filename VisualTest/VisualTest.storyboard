@@ -317,13 +317,37 @@
                                     <action selector="showAlertView:" destination="dvS-Lf-km6" eventType="touchUpInside" id="5gi-xK-rgD"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N3j-vm-xKq">
+                                <rect key="frame" x="277" y="446" width="214" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show Mail Compose Controller">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showMailComposeController:" destination="dvS-Lf-km6" eventType="touchUpInside" id="OMJ-oU-xSk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iUJ-Xh-IOk">
+                                <rect key="frame" x="297" y="497" width="189" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show Modal Nav Controller">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showModalNavController:" destination="dvS-Lf-km6" eventType="touchUpInside" id="jmm-wR-Qe9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1pH-E1-NJG" firstAttribute="top" secondItem="Eo3-Bt-7oV" secondAttribute="bottom" constant="10" id="3QM-Sr-dBl"/>
                             <constraint firstItem="Eo3-Bt-7oV" firstAttribute="leading" secondItem="trd-Do-22x" secondAttribute="leading" constant="20" id="3sK-R2-jqN"/>
+                            <constraint firstItem="N3j-vm-xKq" firstAttribute="top" secondItem="bcN-gx-NwB" secondAttribute="bottom" constant="20" id="CYQ-Hh-uWb"/>
+                            <constraint firstItem="iUJ-Xh-IOk" firstAttribute="top" secondItem="N3j-vm-xKq" secondAttribute="bottom" constant="21" id="Z5o-4M-z03"/>
+                            <constraint firstItem="N3j-vm-xKq" firstAttribute="centerX" secondItem="bcN-gx-NwB" secondAttribute="centerX" id="ZtO-Ah-aru"/>
                             <constraint firstItem="Eo3-Bt-7oV" firstAttribute="top" secondItem="jW1-NO-RdO" secondAttribute="bottom" constant="20" id="dm8-7B-oZd"/>
                             <constraint firstItem="bcN-gx-NwB" firstAttribute="centerX" secondItem="Eo3-Bt-7oV" secondAttribute="centerX" id="ooJ-wm-hQx"/>
+                            <constraint firstItem="N3j-vm-xKq" firstAttribute="centerX" secondItem="iUJ-Xh-IOk" secondAttribute="centerX" constant="-7.5" id="qrp-up-xle"/>
                             <constraint firstItem="bcN-gx-NwB" firstAttribute="top" secondItem="1pH-E1-NJG" secondAttribute="bottom" constant="26" id="tMC-BS-kRB"/>
                             <constraint firstItem="Eo3-Bt-7oV" firstAttribute="leading" secondItem="1pH-E1-NJG" secondAttribute="leading" id="x0o-RA-BoY"/>
                             <constraint firstAttribute="trailing" secondItem="Eo3-Bt-7oV" secondAttribute="trailing" constant="20" id="y7P-oj-1T9"/>

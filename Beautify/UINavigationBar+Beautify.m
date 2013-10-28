@@ -81,11 +81,6 @@
     }
 }
 
--(void)override_dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-    [self override_dealloc];
-}
-
 -(void)themeUpdated:(NSNotification*)notification {
     // Commit the whole theme update as a CATransaction without animations. This improves performance.
     [CATransaction begin];
