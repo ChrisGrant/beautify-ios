@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 @interface BYImmuneControlsViewController : UIViewController
+@property (weak, nonatomic) IBOutlet MKMapView *map;
 
 @end

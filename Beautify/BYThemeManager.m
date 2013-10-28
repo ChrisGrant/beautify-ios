@@ -73,6 +73,8 @@
         [view isKindOfClass:NSClassFromString(@"_UITextFieldRoundedRectBackgroundViewNeue")]||
         [view isKindOfClass:NSClassFromString(@"_UIToolbarBackground")] ||
         [view isKindOfClass:NSClassFromString(@"_UIModalItemAppViewController")] ||
+        [view isKindOfClass:NSClassFromString(@"MKAttributionLabel")] ||
+        [view isKindOfClass:NSClassFromString(@"MKSmallCalloutViewController")] ||
         [view isKindOfClass:[UITabBarController class]]) {
         return nil;
     }

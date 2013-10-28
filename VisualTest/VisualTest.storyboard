@@ -330,6 +330,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fag-jg-3LQ"/>
+                    <connections>
+                        <outlet property="map" destination="Eo3-Bt-7oV" id="wQ2-7r-rP3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="beJ-ij-Hp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
