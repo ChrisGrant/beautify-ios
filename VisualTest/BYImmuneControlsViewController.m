@@ -15,8 +15,16 @@
     [super viewDidLoad];
 
     BYTheme *theme = [BYTheme fromFile:@"flat"];
-    theme.labelStyle.title = [BYText textWithFont:[BYFont fontWithName:@"Zapfino" andSize:14.0f] color:[UIColor redColor]];
+//    theme.labelStyle.title = [BYText textWithFont:[BYFont fontWithName:@"Zapfino" andSize:0.0] color:[UIColor redColor]];
     [[BYThemeManager instance] applyTheme:theme];
+    
+    MKPointAnnotation *annotation = [MKPointAnnotation new];
+    annotation.coordinate = CLLocationCoordinate2DMake(54.966404, -1.622422);
+    annotation.title = @"Map Annotation Title";
+    annotation.subtitle = @"Map Annotation Subtitle";
+    [self.map addAnnotation:annotation];
+    
+    [self.map setRegion:MKCoordinateRegionMake(annotation.coordinate, MKCoordinateSpanMake(0.1, 0.1))];
 }
 
 - (IBAction)showAlertView:(UIButton *)sender {
