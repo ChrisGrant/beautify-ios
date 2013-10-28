@@ -72,6 +72,7 @@
         [view isKindOfClass:NSClassFromString(@"_UINavigationBarBackIndicatorView")]||
         [view isKindOfClass:NSClassFromString(@"_UITextFieldRoundedRectBackgroundViewNeue")]||
         [view isKindOfClass:NSClassFromString(@"_UIToolbarBackground")] ||
+        [view isKindOfClass:NSClassFromString(@"_UIModalItemAppViewController")] ||
         [view isKindOfClass:[UITabBarController class]]) {
         return nil;
     }

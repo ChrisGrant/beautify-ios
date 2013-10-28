@@ -300,6 +300,8 @@
 		70F0E0A117EC59CC001207E5 /* beautifyImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70F0E09F17EC59CC001207E5 /* beautifyImage@2x.png */; };
 		70F1FD0A17E34FB1006018C9 /* ConfigParserPropertyParsingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F1FD0917E34FB1006018C9 /* ConfigParserPropertyParsingTests.m */; };
 		70F1FD0B17E3683E006018C9 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52016F9AC8500D08DBB /* NSObject+Properties.m */; };
+		70F284BD181E57C8002E61AA /* BYImmuneControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F284BC181E57C8002E61AA /* BYImmuneControlsViewController.m */; };
+		70F284BF181E59DC002E61AA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F284BE181E59DC002E61AA /* MapKit.framework */; };
 		70F61B8617831AE100DCA906 /* BYRenderUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 70F61B8417831AE100DCA906 /* BYRenderUtils.h */; };
 		70F61B8917831AE100DCA906 /* BYRenderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F61B8517831AE100DCA906 /* BYRenderUtils.m */; };
 		70F61B8B17831B4F00DCA906 /* BYRenderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F61B8517831AE100DCA906 /* BYRenderUtils.m */; };
@@ -596,6 +598,9 @@
 		70F0E09E17EC59CC001207E5 /* beautifyImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beautifyImage.png; sourceTree = "<group>"; };
 		70F0E09F17EC59CC001207E5 /* beautifyImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beautifyImage@2x.png"; sourceTree = "<group>"; };
 		70F1FD0917E34FB1006018C9 /* ConfigParserPropertyParsingTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ConfigParserPropertyParsingTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		70F284BB181E57C8002E61AA /* BYImmuneControlsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYImmuneControlsViewController.h; sourceTree = "<group>"; };
+		70F284BC181E57C8002E61AA /* BYImmuneControlsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYImmuneControlsViewController.m; sourceTree = "<group>"; };
+		70F284BE181E59DC002E61AA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		70F61B8417831AE100DCA906 /* BYRenderUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = BYRenderUtils.h; path = Beautify/BYRenderUtils.h; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		70F61B8517831AE100DCA906 /* BYRenderUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYRenderUtils.m; path = Beautify/BYRenderUtils.m; sourceTree = SOURCE_ROOT; };
 		70FAFBB517E7336D00EB6843 /* ValidSwitchStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ValidSwitchStyle.json; sourceTree = "<group>"; };
@@ -678,6 +683,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70F284BF181E59DC002E61AA /* MapKit.framework in Frameworks */,
 				72ADB8D616FC9E0200BE925D /* CoreGraphics.framework in Frameworks */,
 				72ADB8D416FC9DE200BE925D /* Security.framework in Frameworks */,
 				72ADB8D216FC9DDC00BE925D /* CFNetwork.framework in Frameworks */,
@@ -963,6 +969,8 @@
 				700F292B16F3711300E85ED3 /* Supporting Files */,
 				703C8F6118152CE200C80487 /* BYMenuViewController.h */,
 				703C8F6218152CE200C80487 /* BYMenuViewController.m */,
+				70F284BB181E57C8002E61AA /* BYImmuneControlsViewController.h */,
+				70F284BC181E57C8002E61AA /* BYImmuneControlsViewController.m */,
 			);
 			path = VisualTest;
 			sourceTree = "<group>";
@@ -1287,6 +1295,7 @@
 		72BF4A9516F3179B00A0C0E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				70F284BE181E59DC002E61AA /* MapKit.framework */,
 				707F516917FB108100928B0B /* JSONModel */,
 				70B492A317F2CD0C002B62DB /* SystemConfiguration.framework */,
 				72ADB8D516FC9E0200BE925D /* CoreGraphics.framework */,
@@ -1848,6 +1857,7 @@
 				70FF54D217E6FB0D00F9BF03 /* BYViewControllerStyle.m in Sources */,
 				70FF54DA17E6FB3600F9BF03 /* BYStateSetter.m in Sources */,
 				72E168FE173D48FC004CB021 /* BYStyleSetterCustomizer.m in Sources */,
+				70F284BD181E57C8002E61AA /* BYImmuneControlsViewController.m in Sources */,
 				707F518217FB10A000928B0B /* JSONValueTransformer.m in Sources */,
 				70FF54D717E6FB2700F9BF03 /* BYSliderStyle.m in Sources */,
 				70BFBE9A17FC10ED0034365F /* JSONValueTransformer+BeautifyExtension.m in Sources */,
@@ -2060,6 +2070,11 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VisualTest/VisualTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"BEAUTIFY_VERSION_NUMBER='\"VISUAL_TEST_APP\"'",
+				);
 				INFOPLIST_FILE = "VisualTest/VisualTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2081,6 +2096,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VisualTest/VisualTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = "BEAUTIFY_VERSION_NUMBER='\"VISUAL_TEST_APP\"'";
 				INFOPLIST_FILE = "VisualTest/VisualTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";

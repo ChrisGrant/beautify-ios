@@ -91,6 +91,16 @@
                                     <segue destination="cJo-Ox-20T" kind="push" id="EYL-mI-AZd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJO-Gk-6G4">
+                                <rect key="frame" x="325" y="344" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Immune Controls">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="dvS-Lf-km6" kind="push" id="BtZ-O5-HPd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -101,6 +111,8 @@
                             <constraint firstItem="gFA-dH-lQv" firstAttribute="top" secondItem="onU-Co-uUc" secondAttribute="bottom" constant="30" id="ia8-cz-Dtv"/>
                             <constraint firstAttribute="centerX" secondItem="6B4-Be-qhf" secondAttribute="centerX" id="j2O-Hr-Wg7"/>
                             <constraint firstItem="6B4-Be-qhf" firstAttribute="top" secondItem="KS0-rG-Moa" secondAttribute="bottom" constant="30" id="pAg-2C-tK1"/>
+                            <constraint firstItem="zJO-Gk-6G4" firstAttribute="top" secondItem="gFA-dH-lQv" secondAttribute="bottom" constant="40" id="qsU-Ex-kEL"/>
+                            <constraint firstAttribute="centerX" secondItem="zJO-Gk-6G4" secondAttribute="centerX" id="v2u-8s-IMM"/>
                             <constraint firstItem="onU-Co-uUc" firstAttribute="top" secondItem="OxG-bC-0IJ" secondAttribute="bottom" constant="30" id="yEk-tR-mdl"/>
                         </constraints>
                     </view>
@@ -268,6 +280,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44y-uK-yG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1974" y="1599"/>
+        </scene>
+        <!--Immune Controls View Controller-->
+        <scene sceneID="z9a-l1-iEu">
+            <objects>
+                <viewController id="dvS-Lf-km6" customClass="BYImmuneControlsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jW1-NO-RdO"/>
+                        <viewControllerLayoutGuide type="bottom" id="T9k-n3-jt6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="trd-Do-22x">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Eo3-Bt-7oV">
+                                <rect key="frame" x="20" y="84" width="728" height="260"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="TGL-LK-yBi"/>
+                                </constraints>
+                            </mapView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The &quot;Legal&quot; label on the map view above should not be styled." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1pH-E1-NJG">
+                                <rect key="frame" x="20" y="354" width="376" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcN-gx-NwB">
+                                <rect key="frame" x="328" y="396" width="112" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show Alert View">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAlertView:" destination="dvS-Lf-km6" eventType="touchUpInside" id="5gi-xK-rgD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1pH-E1-NJG" firstAttribute="top" secondItem="Eo3-Bt-7oV" secondAttribute="bottom" constant="10" id="3QM-Sr-dBl"/>
+                            <constraint firstItem="Eo3-Bt-7oV" firstAttribute="leading" secondItem="trd-Do-22x" secondAttribute="leading" constant="20" id="3sK-R2-jqN"/>
+                            <constraint firstItem="Eo3-Bt-7oV" firstAttribute="top" secondItem="jW1-NO-RdO" secondAttribute="bottom" constant="20" id="dm8-7B-oZd"/>
+                            <constraint firstItem="bcN-gx-NwB" firstAttribute="centerX" secondItem="Eo3-Bt-7oV" secondAttribute="centerX" id="ooJ-wm-hQx"/>
+                            <constraint firstItem="bcN-gx-NwB" firstAttribute="top" secondItem="1pH-E1-NJG" secondAttribute="bottom" constant="26" id="tMC-BS-kRB"/>
+                            <constraint firstItem="Eo3-Bt-7oV" firstAttribute="leading" secondItem="1pH-E1-NJG" secondAttribute="leading" id="x0o-RA-BoY"/>
+                            <constraint firstAttribute="trailing" secondItem="Eo3-Bt-7oV" secondAttribute="trailing" constant="20" id="y7P-oj-1T9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fag-jg-3LQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="beJ-ij-Hp3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1974" y="2883"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
