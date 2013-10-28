@@ -70,17 +70,6 @@
     [self.renderer redraw];
 }
 
--(void)override_dealloc {
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
-
-    BYStyleRenderer *renderer = objc_getAssociatedObject(self, @"renderer");
-    if(renderer) {
-        [self removeObserver:self forKeyPath:@"frame"];
-        [self removeObserver:self forKeyPath:@"bounds"];
-    }
-    [self override_dealloc];
-}
-
 -(void)associateRenderer:(BYStyleRenderer*)renderer {
     if (renderer != nil) {
         // Subscribe to changes to the frame and the bounds here. Yes, we do subscribe to both. Sometimes bounds changes
@@ -92,8 +81,32 @@
                   options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld)
                   context:nil];
         
+        // Sliders need to redraw when their sublayers change. This is because the slider doesn't add it's own sublayers
+        // until after it is displayed on the screen!
+        if([self isKindOfClass:[UISlider class]]) {
+            [self addObserver:self forKeyPath:@"layer.sublayers"
+                      options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld)
+                      context:nil];
+        }
+        
         objc_setAssociatedObject(self, @"renderer", renderer, OBJC_ASSOCIATION_RETAIN);
     }
+}
+
+-(void)override_dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
+    BYStyleRenderer *renderer = objc_getAssociatedObject(self, @"renderer");
+    if(renderer) {
+        [self removeObserver:self forKeyPath:@"frame"];
+        [self removeObserver:self forKeyPath:@"bounds"];
+
+        // See comment in associateRenderer above regarding slider's special case for it's layers sublayers.
+        if([self isKindOfClass:[UISlider class]]) {
+            [self removeObserver:self forKeyPath:@"layer.sublayers"];
+        }
+    }
+    [self override_dealloc];
 }
 
 -(BOOL)isChildOfTableViewCell {

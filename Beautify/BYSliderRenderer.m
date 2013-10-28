@@ -47,7 +47,7 @@
         UISlider* slider = (UISlider*)view;
         
         if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")){
-            _thumbSize = 30;
+            _thumbSize = 27;
         }
         else {
             _thumbSize = 24;
@@ -60,25 +60,11 @@
     return self;
 }
 
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-    if ([keyPath isEqualToString:@"frame"] || [keyPath isEqualToString:@"bounds"]) {
-        [self redraw];
-    }
-    if ([keyPath isEqualToString:@"value"]) {
-        [self updateLayerLocations];
-    }
-}
-
 -(UISlider*)adaptedSlider {
     return [self adaptedView];
 }
 
 -(void)setup:(UISlider*)slider {
-    // hide existing
-    [slider setThumbImage:[UIImage new] forState:UIControlStateNormal];
-    [slider setMinimumTrackImage:[UIImage new] forState:UIControlStateNormal];
-    [slider setMaximumTrackImage:[UIImage new] forState:UIControlStateNormal];
-    
     slider.clipsToBounds = NO;
     
     CGRect bounds  = [self sliderBarSizeWithBounds:[self adaptedSlider].bounds andThickness:[self sliderThickness]];
@@ -94,7 +80,8 @@
     slider.layer.masksToBounds = NO;
     
     _clipLayerShape = [CAShapeLayer layer];
-    _clipLayerShape.path = [BYSwitchBorderLayer borderPathForBounds:_barBorderLayer.bounds andBorder:[self propertyValueForNameWithCurrentState:@"barBorder"]].CGPath;
+    _clipLayerShape.path = [BYSwitchBorderLayer borderPathForBounds:_barBorderLayer.bounds
+                                                          andBorder:[self propertyValueForNameWithCurrentState:@"barBorder"]].CGPath;
     _clipLayerShape.frame = [self adaptedSlider].bounds;
     
     _clipLayer = [CALayer layer];
@@ -218,6 +205,9 @@
 
 // updates the bounds of the various layers in response to the overall slider frame being changed
 -(void)redraw {
+    
+    [self.adaptedView hideAllSubViews];
+    
     [CATransaction begin];
     
     if (_tapped) {
@@ -255,7 +245,7 @@
     [CATransaction commit];
 }
 
-// the slider thickness is a fraction of the controls height
+// the slider thickness is a fraction of the control's height
 -(float)sliderThickness {
     return [self adaptedSlider].bounds.size.height * [[self propertyValueForNameWithCurrentState:@"barHeightFraction"] floatValue];
 }

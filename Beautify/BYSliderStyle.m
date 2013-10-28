@@ -21,7 +21,7 @@
     BYSliderStyle *style = [BYSliderStyle new];
     
     if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
-        style.barHeightFraction = 0.1;
+        style.barHeightFraction = 0.05;
         style.barBorder = [BYBorder borderWithColor:[UIColor clearColor] width:0 radius:3];
         style.minimumTrackColor = [UIColor colorWithRed:0 green:122.0f/255.0f blue:1.0f alpha:1.0f];
         style.maximumTrackColor = [UIColor colorWithWhite:0.7 alpha:1.0];
