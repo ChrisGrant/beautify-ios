@@ -38,8 +38,6 @@
         
         style.thumbBackgroundColor = [UIColor whiteColor];
         style.thumbBorder = [BYBorder borderWithColor:[UIColor clearColor] width:0 radius:15];
-        style.thumbOuterShadow = [BYShadow shadowWithOffset:CGSizeMake(0, 2) radius:5 color:[UIColor colorWithWhite:0.0 alpha:0.6]];
-        style.thumbBorder = [BYBorder borderWithColor:[UIColor clearColor] width:0 radius:15];
         style.thumbOuterShadow = [BYShadow shadowWithOffset:CGSizeMake(0, 0) radius:3 color:[UIColor colorWithWhite:0.0 alpha:0.5]];
     }
     else {
