@@ -22,7 +22,6 @@
         BYStyleRenderer* renderer = [[BYThemeManager instance] rendererForView:self];
         if (renderer != nil) {
             objc_setAssociatedObject(self, @"renderer", renderer, OBJC_ASSOCIATION_RETAIN);
-            
             [[NSNotificationCenter defaultCenter] addObserver:self
                                                      selector:@selector(themeUpdated:)
                                                          name:CSThemeUpdatedNotification object:nil];

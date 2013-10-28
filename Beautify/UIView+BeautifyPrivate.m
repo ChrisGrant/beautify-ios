@@ -71,6 +71,8 @@
 }
 
 -(void)override_dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+
     BYStyleRenderer *renderer = objc_getAssociatedObject(self, @"renderer");
     if(renderer) {
         [self removeObserver:self forKeyPath:@"frame"];
