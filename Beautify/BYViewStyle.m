@@ -27,7 +27,7 @@
 }
 
 -(id)copyWithZone:(NSZone*)zone {
-    id copy = [[[self class] allocWithZone:zone] init];
+    BYViewStyle *copy = [[[self class] allocWithZone:zone] init];
     [copy setAlpha:self.alpha];
     return copy;
 }

@@ -387,7 +387,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:@"cell"];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"item %d", indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"item %ld", (long)indexPath.row];
     cell.detailTextLabel.text = @"hi";
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
