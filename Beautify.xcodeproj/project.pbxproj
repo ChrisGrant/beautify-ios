@@ -182,12 +182,12 @@
 		702194FA17E1BC95008161D3 /* BYTableViewCellLabelRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194F917E1BC95008161D3 /* BYTableViewCellLabelRenderer.m */; };
 		7027C5D117EC92F5006D8008 /* flat.json in Resources */ = {isa = PBXBuildFile; fileRef = 7027C5D017EC92F5006D8008 /* flat.json */; };
 		7027C5D417ECA20E006D8008 /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52216F9AC8500D08DBB /* UIColor+HexColors.m */; };
+		702BA97A181FC9E100FA5D73 /* BYBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* BYBarButtonStyle.m */; };
 		702F450D181E645400748D30 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702F450C181E645400748D30 /* CoreLocation.framework */; };
 		702F450F181E680D00748D30 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702F450E181E680D00748D30 /* MessageUI.framework */; };
 		702F4512181E790300748D30 /* ModalContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 702F4511181E790300748D30 /* ModalContentViewController.m */; };
 		7036DB4916F8659400EBA8AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DCD86C16F377DE008ECF8B /* QuartzCore.framework */; };
 		70397B8F17DF33190095001B /* BYBarButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70397B8D17DF33190095001B /* BYBarButtonStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70397B9117DF33190095001B /* BYBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* BYBarButtonStyle.m */; };
 		70397B9217DF33190095001B /* BYBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* BYBarButtonStyle.m */; };
 		703C8F5B1815174800C80487 /* VisualTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 703C8F5A1815174800C80487 /* VisualTest.storyboard */; };
 		703C8F5E18151E6600C80487 /* BYRendererPrecedenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 703C8F5D18151E6600C80487 /* BYRendererPrecedenceViewController.m */; };
@@ -1838,6 +1838,7 @@
 				1D56088617415DB600FFD529 /* BYStyleCustomizer.m in Sources */,
 				1D56087917415D8800FFD529 /* BYLabelRenderer.m in Sources */,
 				70FF54D117E6FB0700F9BF03 /* BYTheme.m in Sources */,
+				702BA97A181FC9E100FA5D73 /* BYBarButtonStyle.m in Sources */,
 				7047013617E1C66700FEA5F5 /* UISwitch+Beautify.m in Sources */,
 				70FF54CD17E6FAF600F9BF03 /* BYTableViewCellStyle.m in Sources */,
 				70C211B817DF01DB00CA110B /* TableVisualTestViewController.m in Sources */,
@@ -1908,7 +1909,6 @@
 				72F07947175C941100FC27DB /* BYControlRenderingLayer.m in Sources */,
 				72F07955175C9F2900FC27DB /* UITableViewCell+Beautify.m in Sources */,
 				72F0795E175CCC2F00FC27DB /* BYDelegateMultiplexer.m in Sources */,
-				70397B9117DF33190095001B /* BYBarButtonStyle.m in Sources */,
 				70F61B8B17831B4F00DCA906 /* BYRenderUtils.m in Sources */,
 				543570E617BE312C007FA7CE /* UIBarButtonItem+Beautify.m in Sources */,
 				707F517C17FB10A000928B0B /* JSONModel.m in Sources */,

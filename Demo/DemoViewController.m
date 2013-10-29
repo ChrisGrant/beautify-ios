@@ -105,7 +105,7 @@
 
 -(UITableViewCell *)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath {
     UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    [cell.textLabel setText:[NSString stringWithFormat:@"Cell %i", indexPath.row]];
+    [cell.textLabel setText:[NSString stringWithFormat:@"Cell %li", (long)indexPath.row]];
     return cell;
 }
 

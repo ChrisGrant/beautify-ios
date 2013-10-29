@@ -22,6 +22,7 @@ static NSDictionary* styleProperties = nil;
 
 @implementation BYStateSetter {
     id _val;
+    UIControlState _state;
 }
 
 -(id)value {
@@ -30,6 +31,14 @@ static NSDictionary* styleProperties = nil;
 
 -(void)setValue:(id)val {
     _val = val;
+}
+
+-(UIControlState)state {
+    return _state;
+}
+
+-(void)setState:(UIControlState)state {
+    _state = state;
 }
 
 -(NSString *)description {
