@@ -12,7 +12,7 @@
 #import "BYFont_Private.h"
 #import "BYStyleRenderer_Private.h"
 #import "BYSwitchState.h"
-#import "BYVersionUtils.h"
+#import "BYPlatformVersionUtils.h"
 
 @implementation BYSwitchToggleLayer
 

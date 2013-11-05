@@ -20,7 +20,7 @@
 #import "UISwitch+Beautify.h"
 #import "BYSwitchGestureView.h"
 #import "BYSwitchBorderLayer.h"
-#import "BYVersionUtils.h"
+#import "BYPlatformVersionUtils.h"
 
 @implementation BYSwitchRenderer {
     CAShapeLayer* _clipLayerShape;

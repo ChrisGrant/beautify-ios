@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Colin Eberhardt. All rights reserved.
 //
 
-#import "BYVersionUtils.h"
+#import "BYPlatformVersionUtils.h"
 #import "UIView+Utilities.h"
 #import "BYStyleRenderer_Private.h"
 #import "BYViewRenderer_Private.h"

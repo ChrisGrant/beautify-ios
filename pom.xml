@@ -24,6 +24,28 @@
   <build>
     <plugins>
       <plugin>
+        <artifactId>exec-maven-plugin</artifactId>
+        <groupId>org.codehaus.mojo</groupId>
+        <executions>
+          <execution><!-- Run the version number scripts -->
+            <id>Version Update</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <configuration>
+              <executable>${basedir}/Beautify/scripts/versionUpdate.sh</executable>
+            </configuration>
+          </execution>
+        </executions>
+        <configuration>
+          <arguments>
+            <argument>${project.version}</argument>
+          </arguments>
+        </configuration>
+      </plugin>
+
+      <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
         <version>1.2.1</version>
@@ -48,19 +70,22 @@
           </execution>
         </executions>
       </plugin>
+
       <plugin>
         <groupId>com.sap.prd.mobile.ios.mios</groupId>
         <artifactId>xcode-maven-plugin</artifactId>
         <version>1.13.0</version>
         <extensions>true</extensions>
         <configuration>
-          <settings>
-            <GCC_PREPROCESSOR_DEFINITIONS>BEAUTIFY_VERSION_NUMBER=\"${project.version}\"</GCC_PREPROCESSOR_DEFINITIONS>
-          </settings>
           <target>Beautify</target>
-          <defaultAppConfigurations>Release</defaultAppConfigurations>
+          <primaryFmwkConfiguration>Release</primaryFmwkConfiguration>
+             <!-- We only want to build for the release config -->
+            <configurations>
+              <configuration>Release</configuration>
+            </configurations>
         </configuration>
       </plugin>
+
     </plugins>
   </build>
   

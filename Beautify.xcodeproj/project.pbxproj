@@ -131,7 +131,7 @@
 		7007255417EB0432001F7C41 /* ValidBarButtonStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7007254E17EB0432001F7C41 /* ValidBarButtonStyle.json */; };
 		7007255517EB0432001F7C41 /* ValidImageViewStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7007254F17EB0432001F7C41 /* ValidImageViewStyle.json */; };
 		7007255617EB0432001F7C41 /* ValidSliderStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7007255017EB0432001F7C41 /* ValidSliderStyle.json */; };
-		7009050D178C0EB600D7BEF4 /* BYVersionUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7009050B178C0EB600D7BEF4 /* BYVersionUtils.h */; };
+		7009050D178C0EB600D7BEF4 /* BYPlatformVersionUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7009050B178C0EB600D7BEF4 /* BYPlatformVersionUtils.h */; };
 		700E154417E30668006E124E /* ConfigParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E154317E30668006E124E /* ConfigParserTests.m */; };
 		700E154617E30691006E124E /* BeautifyColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E154517E30691006E124E /* BeautifyColorTests.m */; };
 		700E154717E30D0F006E124E /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52216F9AC8500D08DBB /* UIColor+HexColors.m */; };
@@ -229,6 +229,7 @@
 		7047013E17E1C6CA00FEA5F5 /* BYTopShadowRenderingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010E17E1C11100FEA5F5 /* BYTopShadowRenderingLayer.m */; };
 		7047013F17E1C6CE00FEA5F5 /* BYImageViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010F17E1C11100FEA5F5 /* BYImageViewRenderer.m */; };
 		7047014017E1C6D100FEA5F5 /* UIImageView+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011117E1C11100FEA5F5 /* UIImageView+Beautify.m */; };
+		7066C7CD18290907009E96C6 /* BYBeautifyVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 7066C7CC18290907009E96C6 /* BYBeautifyVersion.h */; };
 		7076B69217FD824B0015593F /* BYSerializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7076B69117FD824B0015593F /* BYSerializationTests.m */; };
 		707A869317F9B435005A102F /* JSONValueTransformer+BeautifyExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 707A869117F9B435005A102F /* JSONValueTransformer+BeautifyExtension.h */; };
 		707A869417F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 707A869217F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m */; };
@@ -488,7 +489,7 @@
 		7007254E17EB0432001F7C41 /* ValidBarButtonStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ValidBarButtonStyle.json; sourceTree = "<group>"; };
 		7007254F17EB0432001F7C41 /* ValidImageViewStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ValidImageViewStyle.json; sourceTree = "<group>"; };
 		7007255017EB0432001F7C41 /* ValidSliderStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ValidSliderStyle.json; sourceTree = "<group>"; };
-		7009050B178C0EB600D7BEF4 /* BYVersionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYVersionUtils.h; sourceTree = "<group>"; };
+		7009050B178C0EB600D7BEF4 /* BYPlatformVersionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYPlatformVersionUtils.h; sourceTree = "<group>"; };
 		700E154317E30668006E124E /* ConfigParserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ConfigParserTests.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		700E154517E30691006E124E /* BeautifyColorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeautifyColorTests.m; sourceTree = "<group>"; };
 		700E156417E33DF1006E124E /* UIColor+Comparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Comparison.h"; sourceTree = "<group>"; };
@@ -551,6 +552,7 @@
 		7047011F17E1C1F200FEA5F5 /* UISwitch+Beautify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UISwitch+Beautify.m"; path = "Beautify/UISwitch+Beautify.m"; sourceTree = SOURCE_ROOT; };
 		7047012817E1C23800FEA5F5 /* BYSwitchGestureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYSwitchGestureView.h; path = Beautify/BYSwitchGestureView.h; sourceTree = SOURCE_ROOT; };
 		7047012C17E1C27A00FEA5F5 /* BYSliderRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYSliderRenderer.h; path = Beautify/BYSliderRenderer.h; sourceTree = SOURCE_ROOT; };
+		7066C7CC18290907009E96C6 /* BYBeautifyVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBeautifyVersion.h; sourceTree = "<group>"; };
 		7076B69117FD824B0015593F /* BYSerializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYSerializationTests.m; sourceTree = "<group>"; };
 		707A869117F9B435005A102F /* JSONValueTransformer+BeautifyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JSONValueTransformer+BeautifyExtension.h"; path = "Beautify/JSONValueTransformer+BeautifyExtension.h"; sourceTree = SOURCE_ROOT; };
 		707A869217F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JSONValueTransformer+BeautifyExtension.m"; path = "Beautify/JSONValueTransformer+BeautifyExtension.m"; sourceTree = SOURCE_ROOT; };
@@ -1335,7 +1337,8 @@
 				72AE74FC17BBB7C300C6A993 /* BYThemeManager_Private.h */,
 				1DDB6A42174BAA40008A2A73 /* BYThemeManager.h */,
 				1DDB6A43174BAA40008A2A73 /* BYThemeManager.m */,
-				7009050B178C0EB600D7BEF4 /* BYVersionUtils.h */,
+				7066C7CC18290907009E96C6 /* BYBeautifyVersion.h */,
+				7009050B178C0EB600D7BEF4 /* BYPlatformVersionUtils.h */,
 				70B492EF17F2DF33002B62DB /* BYJSONVersion.h */,
 			);
 			path = Beautify;
@@ -1376,6 +1379,7 @@
 				7047011217E1C11100FEA5F5 /* BYImageViewRenderer.h in Headers */,
 				707F519817FB1FB300928B0B /* JSONModelLib.h in Headers */,
 				72AE98D4175BB94800787272 /* BYTableViewCellRenderer.h in Headers */,
+				7066C7CD18290907009E96C6 /* BYBeautifyVersion.h in Headers */,
 				1D464642174669A9003840E4 /* BYLabelRenderer.h in Headers */,
 				1D464647174669A9003840E4 /* BYBorder.h in Headers */,
 				1D464645174669A9003840E4 /* BYStyleRenderer.h in Headers */,
@@ -1397,7 +1401,7 @@
 				707F519217FB1FA600928B0B /* JSONKeyMapper.h in Headers */,
 				1DDB6A39174BA951008A2A73 /* BYBeautify.h in Headers */,
 				702194CE17E1BC2E008161D3 /* BYTableViewCellLabelRenderer.h in Headers */,
-				7009050D178C0EB600D7BEF4 /* BYVersionUtils.h in Headers */,
+				7009050D178C0EB600D7BEF4 /* BYPlatformVersionUtils.h in Headers */,
 				1D46464D174669A9003840E4 /* UIView+Beautify.h in Headers */,
 				1D46467617466A07003840E4 /* Beautify-Prefix.pch in Headers */,
 				1D464655174669D7003840E4 /* NSObject+Properties.h in Headers */,
@@ -2026,10 +2030,7 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Beautify/Beautify-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"BEAUTIFY_VERSION_NUMBER='\"$(BEAUTIFY_VERSION_NUMBER)\"'",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "Beautify/Beautify-Info.plist";
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
@@ -2054,7 +2055,6 @@
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Beautify/Beautify-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "BEAUTIFY_VERSION_NUMBER='\"$(BEAUTIFY_VERSION_NUMBER)\"'";
 				INFOPLIST_FILE = "Beautify/Beautify-Info.plist";
 				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
 				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
@@ -2079,11 +2079,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VisualTest/VisualTest-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-					"BEAUTIFY_VERSION_NUMBER='\"VISUAL_TEST_APP\"'",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "VisualTest/VisualTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2105,7 +2101,6 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VisualTest/VisualTest-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "BEAUTIFY_VERSION_NUMBER='\"VISUAL_TEST_APP\"'";
 				INFOPLIST_FILE = "VisualTest/VisualTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
