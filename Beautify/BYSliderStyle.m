@@ -12,8 +12,7 @@
 #import "BYGradient.h"
 #import "BYGradientStop.h"
 #import "BYShadow.h"
-
-#import "BYVersionUtils.h"
+#import "BYPlatformVersionUtils.h"
 
 @implementation BYSliderStyle
 

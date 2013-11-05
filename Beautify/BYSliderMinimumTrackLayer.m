@@ -11,8 +11,7 @@
 #import "BYFont.h"
 #import "BYFont_Private.h"
 #import "BYStyleRenderer_Private.h"
-#import "BYVersionUtils.h"
-
+#import "BYPlatformVersionUtils.h"
 #import "BYRenderUtils.h"
 
 @implementation BYSliderMinimumTrackLayer

@@ -7,7 +7,7 @@
 //
 
 #import "BYNavigationBarStyle.h"
-#import "BYVersionUtils.h"
+#import "BYPlatformVersionUtils.h"
 #import "BYGradient.h"
 #import "BYGradientStop.h"
 #import "BYTextShadow.h"

@@ -1,5 +1,5 @@
 //
-//  BYVersionUtils.h
+//  BYPlatformVersionUtils.h
 //  Beautify
 //
 //  Created by Chris Grant on 09/07/2013.

@@ -7,7 +7,7 @@
 //
 
 #import <objc/runtime.h>
-#import "BYVersionUtils.h"
+#import "BYPlatformVersionUtils.h"
 #import "UIViewController+Beautify.h"
 #import "UIViewController+BeautifyPrivate.h"
 #import "BYStyleRenderer.h"

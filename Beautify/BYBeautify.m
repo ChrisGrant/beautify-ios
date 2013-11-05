@@ -10,12 +10,17 @@
 #import <UIKit/UIKit.h>
 #import "BYBeautify_Private.h"
 #import "BYThemeManager_Private.h"
-#import "BYVersionUtils.h"
+#import "BYPlatformVersionUtils.h"
+#import "BYBeautifyVersion.h"
 
 @implementation BYBeautify
 
 +(NSString*)getInfo {
-    return [NSString stringWithFormat:@"Version: %s", BEAUTIFY_VERSION_NUMBER[0] ? BEAUTIFY_VERSION_NUMBER : "Unversioned"];
+    NSString *versionString = [NSString stringWithFormat:@"%s", BEAUTIFY_VERSION_NUMBER];
+    if(versionString.length < 1) {
+        versionString = @"Unversioned";
+    }
+    return [NSString stringWithFormat:@"Version: %@", versionString];
 }
 
 -(NSString*)getInfo {
