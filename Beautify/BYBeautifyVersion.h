@@ -1,5 +1,5 @@
 //
-//  BYVersion.h
+//  BYBeautifyVersion.h
 //  Beautify
 //
 //  Created by Chris Grant on 05/11/2013.
