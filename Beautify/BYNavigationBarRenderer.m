@@ -15,7 +15,6 @@
 #import "BYFont_Private.h"
 #import "BYControlRenderingLayer.h"
 #import "UINavigationBar+Beautify.h"
-
 #import "UIView+Beautify.h"
 #import "BYLabelRenderer.h"
 
@@ -63,21 +62,22 @@
         }
         
         NSMutableDictionary *attributeDictionary = [NSMutableDictionary new];
-        UIFont *currentFont = navBar.titleTextAttributes[UITextAttributeFont];
+        UIFont *currentFont = navBar.titleTextAttributes[NSFontAttributeName];
         UIFont *styledFont = [style.title.font createFont:currentFont];
         
         if(styledFont) {
-            attributeDictionary[UITextAttributeFont] = styledFont;
+            attributeDictionary[NSFontAttributeName] = styledFont;
         }
         
         if(style.title.color) {
-            attributeDictionary[UITextAttributeTextColor] = style.title.color;
+            attributeDictionary[NSForegroundColorAttributeName] = style.title.color;
         }
         
         if (style.titleShadow) {
-            UIOffset offset = UIOffsetMake(style.titleShadow.offset.width, style.titleShadow.offset.height);
-            attributeDictionary[UITextAttributeTextShadowOffset] = [NSValue valueWithUIOffset:offset];
-            attributeDictionary[UITextAttributeTextShadowColor] = style.titleShadow.color;
+            NSShadow *shadow = [[NSShadow alloc] init];
+            shadow.shadowOffset = style.titleShadow.offset;
+            shadow.shadowColor = style.titleShadow.color;
+            attributeDictionary[NSShadowAttributeName] = shadow;
         }
         
         navBar.titleTextAttributes = attributeDictionary;
