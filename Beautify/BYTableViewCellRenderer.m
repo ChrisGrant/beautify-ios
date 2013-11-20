@@ -25,7 +25,7 @@
 }
 
 -(id)initWithView:(id)view theme:(BYTheme*)theme{
-    if(self = [super initWithView:view theme:theme]) {        
+    if(self = [super initWithView:view theme:theme]) {
         UITableViewCell *cell = (UITableViewCell*)view;
         [self setup:cell theme:theme];
     }
@@ -49,7 +49,6 @@
     [cell.selectedBackgroundView addSubview:_selectedNineBoxImage];
     [cell.selectedBackgroundView sendSubviewToBack:_selectedNineBoxImage];
     
-    // add the button layer that renders the background and border for selected state
     _selectedLayer = [[BYControlRenderingLayer alloc] initWithRenderer:self state:UIControlStateHighlighted];
     [_selectedLayer setFrame:cell.bounds];
     [_selectedLayer setNeedsDisplay];
@@ -57,9 +56,8 @@
         
     [self configureFromStyle];
 }
-    
+
 -(void)configureFromStyle {
-    
     // The superclass takes care of the 'normal' state style
     [super configureFromStyle];
     
@@ -70,24 +68,23 @@
     
     BYText* textStyle = [self propertyValueForNameWithCurrentState:@"title"];
     BYTextShadow* textShadow = [self propertyValueForNameWithCurrentState:@"titleShadow"];
-
+    
     UILabel* label = cell.textLabel;
     label.textColor = textStyle.color;
     label.font = [textStyle.font createFont:label.font];
     label.shadowColor = textShadow.color;
     label.shadowOffset = textShadow.offset;
-    [self makeLabelBackgroundTransparant:cell];
+    [self makeLabelBackgroundTransparent:cell];
     
     UIImage* accessoryViewImage = [self propertyValueForNameWithCurrentState:@"accessoryViewImage"];
     if ((cell.accessoryType == UITableViewCellAccessoryNone) && (accessoryViewImage != nil)) {
         cell.accessoryView = [[UIImageView alloc] initWithImage:accessoryViewImage];
     }
-
+    
     UIImage* editingAccessoryViewImage = [self propertyValueForNameWithCurrentState:@"editingAccessoryViewImage"];
     if ((cell.editingAccessoryType == UITableViewCellAccessoryNone) && (editingAccessoryViewImage != nil)) {
         cell.editingAccessoryView = [[UIImageView alloc] initWithImage:editingAccessoryViewImage];
     }
-    
 }
 
 -(void)configureSelectedView {
@@ -107,14 +104,16 @@
     }
 }
 
-// recursively find labels and make their background color transparant.
--(void)makeLabelBackgroundTransparant:(UIView*)view {
-    UILabel* label = (UILabel*)view;
-    if (label) {
-        label.backgroundColor = [UIColor clearColor];
+// Recursively find labels and make their background color transparent.
+-(void)makeLabelBackgroundTransparent:(UIView*)view {
+    UIView *label = view;
+    if([label isKindOfClass:[UILabel class]]) {
+        if (label) {
+            label.backgroundColor = [UIColor clearColor];
+        }
     }
     for(UIView* child in view.subviews) {
-        [self makeLabelBackgroundTransparant:child];
+        [self makeLabelBackgroundTransparent:child];
     }
 }
 
