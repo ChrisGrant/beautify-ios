@@ -45,7 +45,7 @@
     vc.view.backgroundColor = style.backgroundColor;
     
     if ([vc class] == [UINavigationController class]) {
-        for (UIViewController* vcs in ((UINavigationController*)vc).viewControllers) {
+        for (UIViewController *vcs in ((UINavigationController*)vc).viewControllers) {
             [self redrawViewController:vcs];
         }
     }

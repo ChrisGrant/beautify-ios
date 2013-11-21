@@ -13,6 +13,13 @@
 +(BYTableViewCellStyle*)defaultStyle {
     BYTableViewCellStyle *style = [BYTableViewCellStyle new];
     style.title = [BYText textWithFont:[BYFont new] color:[UIColor blackColor]];
+    
+    BYStateSetter *selectedStateSetter = [BYStateSetter new];
+    selectedStateSetter.propertyName = @"backgroundColor";
+    selectedStateSetter.state = UIControlStateHighlighted;
+    selectedStateSetter.value = [UIColor colorWithWhite:202.0f/255.0f alpha:1.0f];
+    style.stateSetters = @[selectedStateSetter];
+    
     return style;
 }
 
