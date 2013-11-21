@@ -7,25 +7,35 @@
 //
 
 #import "UITableViewCell+Beautify.h"
+#import "UIView+Beautify.h"
+#import "BYStyleRenderer_Private.h"
 
 @implementation UITableViewCell (Beautify)
 
+// The UITableViewCell implementation of setSelected modifies the background colour of the various labels.
+// here we set them back to transparent once again.
 -(void)override_setSelected:(BOOL)selected {
-    // the UITableViewCell implementation of setSelected modifies the background colour of the various labels.
-    // here we set them back to transparent once again.
     [self override_setSelected:selected];
-    [self makeLabelBackgroundTransparant:self];
+    [self internalSetSelected];
+}
+-(void)override_setSelected:(BOOL)selected animated:(BOOL)animated {
+    [self override_setSelected:selected animated:animated];
+    [self internalSetSelected];
 }
 
-// recursively find labels and make their background color transparant.
-- (void)makeLabelBackgroundTransparant:(UIView*)view {
-    
+-(void)internalSetSelected {
+    [self makeLabelBackgroundTransparent:self];
+    [[self renderer] redraw];
+}
+
+// Recursively find labels and make their background color transparent.
+-(void)makeLabelBackgroundTransparent:(UIView*)view {
     if ([view isKindOfClass:[UILabel class]]) {
-        UILabel* label = (UILabel*)view;
+        UILabel *label = (UILabel*)view;
         label.backgroundColor = [UIColor clearColor];
     }
-    for(UIView* child in view.subviews) {
-        [self makeLabelBackgroundTransparant:child];
+    for(UIView *child in view.subviews) {
+        [self makeLabelBackgroundTransparent:child];
     }
 }
 

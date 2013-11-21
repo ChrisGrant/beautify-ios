@@ -85,6 +85,7 @@
     
     // Undoes the modifing of the background colour of the various labels in the UITableView by the original setSelected method by setting it back to transparent.
     [self swizzleClass:[UITableViewCell class] method:@"setSelected:"];
+    [self swizzleClass:[UITableViewCell class] method:@"setSelected:animated:"];
     
     // Creates renderers for each of the UIBarButtonItems in the UINavigationBar
     [self swizzleClass:[UINavigationBar class] method:@"layoutSubviews"];

@@ -66,10 +66,10 @@
     
     UITableViewCell *cell = (UITableViewCell*)self.adaptedView;
     
-    BYText* textStyle = [self propertyValueForNameWithCurrentState:@"title"];
-    BYTextShadow* textShadow = [self propertyValueForNameWithCurrentState:@"titleShadow"];
+    BYText *textStyle = [self propertyValueForNameWithCurrentState:@"title"];
+    BYTextShadow *textShadow = [self propertyValueForNameWithCurrentState:@"titleShadow"];
     
-    UILabel* label = cell.textLabel;
+    UILabel *label = cell.textLabel;
     label.textColor = textStyle.color;
     label.font = [textStyle.font createFont:label.font];
     label.shadowColor = textShadow.color;
@@ -89,7 +89,7 @@
 
 -(void)configureSelectedView {
     UIView *adaptedView = (UIView*)self.adaptedView;
-    BYBackgroundImage* backgroundImage = [self propertyValueForName:@"backgroundImage" forState:UIControlStateHighlighted];
+    BYBackgroundImage *backgroundImage = [self propertyValueForName:@"backgroundImage" forState:UIControlStateHighlighted];
     
     if (backgroundImage == nil) {
         _selectedNineBoxImage.hidden = YES;
@@ -125,6 +125,10 @@
 }
 
 -(UIControlState)currentControlState {
+    UITableViewCell *cell = (UITableViewCell*)self.adaptedView;
+    if(cell.isSelected || cell.isHighlighted) {
+        return UIControlStateHighlighted;
+    }
     return UIControlStateNormal;
 }
 
