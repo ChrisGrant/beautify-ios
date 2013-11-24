@@ -384,6 +384,10 @@
 		72FDED9F17565754002F1093 /* BYTextFieldRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDED9817565742002F1093 /* BYTextFieldRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72FDEDA617571F92002F1093 /* UITextField+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA517571F92002F1093 /* UITextField+Beautify.m */; };
 		72FDEDA91757204C002F1093 /* BYControlRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA81757204B002F1093 /* BYControlRenderer.m */; };
+		83881D321842AABB00A374FC /* BYTabBarRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 83881D301842AABB00A374FC /* BYTabBarRenderer.h */; };
+		83881D331842AABB00A374FC /* BYTabBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83881D311842AABB00A374FC /* BYTabBarRenderer.m */; };
+		83881D361842AB3600A374FC /* BYTabBarStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 83881D341842AB3600A374FC /* BYTabBarStyle.h */; };
+		83881D371842AB3600A374FC /* BYTabBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 83881D351842AB3600A374FC /* BYTabBarStyle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -675,6 +679,10 @@
 		72FDEDA71757204A002F1093 /* BYControlRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYControlRenderer.h; path = Beautify/BYControlRenderer.h; sourceTree = SOURCE_ROOT; };
 		72FDEDA81757204B002F1093 /* BYControlRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = BYControlRenderer.m; path = Beautify/BYControlRenderer.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		72FDEDAD175739D1002F1093 /* BYControlRenderer_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BYControlRenderer_Private.h; path = Beautify/BYControlRenderer_Private.h; sourceTree = SOURCE_ROOT; };
+		83881D301842AABB00A374FC /* BYTabBarRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTabBarRenderer.h; sourceTree = SOURCE_ROOT; };
+		83881D311842AABB00A374FC /* BYTabBarRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTabBarRenderer.m; sourceTree = SOURCE_ROOT; };
+		83881D341842AB3600A374FC /* BYTabBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTabBarStyle.h; sourceTree = "<group>"; };
+		83881D351842AB3600A374FC /* BYTabBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTabBarStyle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -779,6 +787,8 @@
 				1DE9D2FE174F7F540070AFD3 /* BYViewControllerStyle.m */,
 				1DE12A84174157B40039F3F3 /* BYViewStyle.h */,
 				1DE12A85174157B40039F3F3 /* BYViewStyle.m */,
+				83881D341842AB3600A374FC /* BYTabBarStyle.h */,
+				83881D351842AB3600A374FC /* BYTabBarStyle.m */,
 			);
 			name = Styles;
 			sourceTree = "<group>";
@@ -1003,6 +1013,7 @@
 		7074287616F861B1003C2D1F /* Renderers */ = {
 			isa = PBXGroup;
 			children = (
+				83881D2F1842AA3C00A374FC /* TabBar */,
 				547C32CE17C4C1B4009D6289 /* Slider */,
 				54D7FD7317B8EA210004F952 /* BarButtonItem */,
 				72F07961175CCC8700FC27DB /* TableView */,
@@ -1364,6 +1375,15 @@
 			name = TextField;
 			sourceTree = "<group>";
 		};
+		83881D2F1842AA3C00A374FC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				83881D301842AABB00A374FC /* BYTabBarRenderer.h */,
+				83881D311842AABB00A374FC /* BYTabBarRenderer.m */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1402,6 +1422,7 @@
 				1DDB6A39174BA951008A2A73 /* BYBeautify.h in Headers */,
 				702194CE17E1BC2E008161D3 /* BYTableViewCellLabelRenderer.h in Headers */,
 				7009050D178C0EB600D7BEF4 /* BYPlatformVersionUtils.h in Headers */,
+				83881D361842AB3600A374FC /* BYTabBarStyle.h in Headers */,
 				1D46464D174669A9003840E4 /* UIView+Beautify.h in Headers */,
 				1D46467617466A07003840E4 /* Beautify-Prefix.pch in Headers */,
 				1D464655174669D7003840E4 /* NSObject+Properties.h in Headers */,
@@ -1441,6 +1462,7 @@
 				70C211B617DF01DB00CA110B /* TableVisualTestViewController.h in Headers */,
 				1D46464F174669C4003840E4 /* BYStyleRenderer_Private.h in Headers */,
 				1D464650174669C4003840E4 /* BYViewRenderer_Private.h in Headers */,
+				83881D321842AABB00A374FC /* BYTabBarRenderer.h in Headers */,
 				1D464651174669C4003840E4 /* UIView+BeautifyPrivate.h in Headers */,
 				1DDB696B174A2887008A2A73 /* BYFont_Private.h in Headers */,
 				544975CD17D8B953003D7115 /* BYThumbLayer.h in Headers */,
@@ -1762,6 +1784,7 @@
 				7047011517E1C11100FEA5F5 /* BYImageViewRenderer.m in Sources */,
 				707F518E17FB1F9800928B0B /* JSONModelError.m in Sources */,
 				1D46462817466942003840E4 /* BYShadow.m in Sources */,
+				83881D371842AB3600A374FC /* BYTabBarStyle.m in Sources */,
 				7047011B17E1C13200FEA5F5 /* BYSliderRenderer.m in Sources */,
 				1D46462917466942003840E4 /* BYButtonStyle.m in Sources */,
 				1D46462A17466942003840E4 /* BYLabelStyle.m in Sources */,
@@ -1817,6 +1840,7 @@
 				547C32D417C4C1EE009D6289 /* BYSliderStyle.m in Sources */,
 				54DDE26F17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m in Sources */,
 				7000537917FDC0F70095F2EE /* JSONModel.m in Sources */,
+				83881D331842AABB00A374FC /* BYTabBarRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
