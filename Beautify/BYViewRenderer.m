@@ -18,11 +18,20 @@
     float alpha = 1;
     [[self propertyValueForNameWithCurrentState:@"alpha"] getValue:&alpha];
     ((UIView*)self.adaptedView).alpha = alpha;
+    
+    UIColor *tintColor = [self propertyValueForName:@"tintColor" forState:UIControlStateNormal];
+    if(tintColor) {
+        [self.adaptedView setTintColor:tintColor];
+    }
 }
 
 -(void)setAlpha:(float)alpha forState:(UIControlState)state {
     [self setPropertyValue:[NSValue value:&alpha
                              withObjCType:@encode(float)] forName:@"alpha" forState:state];
+}
+
+-(void)setTintColor:(UIColor*)color {
+    [self setPropertyValue:color forName:@"tintColor" forState:UIControlStateNormal];
 }
 
 @end
