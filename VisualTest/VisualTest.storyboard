@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="FBN-xa-Zds">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="FBN-xa-Zds">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -101,13 +101,25 @@
                                     <segue destination="dvS-Lf-km6" kind="push" id="BtZ-O5-HPd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iiC-vD-041">
+                                <rect key="frame" x="334" y="404" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Tint Color Test">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="xuz-yO-XSm" kind="push" id="ePu-PA-CGV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="gFA-dH-lQv" secondAttribute="centerX" constant="-0.5" id="2Uj-Nv-3gx"/>
+                            <constraint firstItem="iiC-vD-041" firstAttribute="top" secondItem="zJO-Gk-6G4" secondAttribute="bottom" constant="30" id="Jd3-QE-bEz"/>
                             <constraint firstAttribute="centerX" secondItem="OxG-bC-0IJ" secondAttribute="centerX" constant="-0.5" id="NQ8-yV-KKB"/>
                             <constraint firstItem="OxG-bC-0IJ" firstAttribute="top" secondItem="6B4-Be-qhf" secondAttribute="bottom" constant="30" id="Ujt-Cy-Y0p"/>
                             <constraint firstAttribute="centerX" secondItem="onU-Co-uUc" secondAttribute="centerX" constant="-0.5" id="bMZ-fc-ma4"/>
+                            <constraint firstItem="iiC-vD-041" firstAttribute="centerX" secondItem="zJO-Gk-6G4" secondAttribute="centerX" id="cj0-cm-Zyj"/>
                             <constraint firstItem="gFA-dH-lQv" firstAttribute="top" secondItem="onU-Co-uUc" secondAttribute="bottom" constant="30" id="ia8-cz-Dtv"/>
                             <constraint firstAttribute="centerX" secondItem="6B4-Be-qhf" secondAttribute="centerX" id="j2O-Hr-Wg7"/>
                             <constraint firstItem="6B4-Be-qhf" firstAttribute="top" secondItem="KS0-rG-Moa" secondAttribute="bottom" constant="30" id="pAg-2C-tK1"/>
@@ -140,6 +152,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zxa-9p-QjX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1974" y="-695"/>
+        </scene>
+        <!--Tint Color Test View Controller-->
+        <scene sceneID="YtK-3y-oiX">
+            <objects>
+                <viewController id="xuz-yO-XSm" customClass="BYTintColorTestViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tdQ-bh-jxO"/>
+                        <viewControllerLayoutGuide type="bottom" id="QPa-ub-k7o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eIb-01-q7n">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrb-i2-SYV">
+                                <rect key="frame" x="361" y="104" width="126" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Custom Tint Color">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="Yrb-i2-SYV" secondAttribute="centerX" constant="-40" id="BUe-KI-UgJ"/>
+                            <constraint firstItem="Yrb-i2-SYV" firstAttribute="top" secondItem="tdQ-bh-jxO" secondAttribute="bottom" constant="40" id="IhK-cy-lJV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ekC-50-4uk"/>
+                    <connections>
+                        <outlet property="customTintButton" destination="Yrb-i2-SYV" id="unh-rq-4am"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5sY-HB-NTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3060" y="-171"/>
         </scene>
         <!--Renderer Precedence View Controller - Renderer Precedence Test-->
         <scene sceneID="Ocy-2h-0wB">

@@ -34,7 +34,7 @@
 
 +(BOOL)propertyIsOptional:(NSString *)propertyName {
      // Alpha is optional. But we must default to 1. See above custom initWithDictionary constructor.
-    return [[propertyName lowercaseString] isEqualToString:@"alpha"];
+    return [[propertyName lowercaseString] isEqualToString:@"alpha"] || [[propertyName lowercaseString] isEqualToString:@"tintcolor"];
 }
 
 -(NSDictionary*)toDictionary {
