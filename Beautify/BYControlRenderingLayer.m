@@ -141,7 +141,7 @@
     // Draw the border
     if (border.width > 0) {                
         CGContextSetStrokeColorWithColor(ctx, border.color.CGColor);
-        layerPath.lineWidth = border.width;
+        layerPath.lineWidth = border.width * 2;
         [layerPath stroke];
     }
 }
