@@ -41,15 +41,18 @@
 
 -(void)setFrame:(CGRect)frame {
     BYShadow *outerShadow = [self propertyValue:@"outerShadow"];
-    UIEdgeInsets insets = ComputeExpandingInsetsForShadow(outerShadow, YES);
-    
     originalFrame = frame;
-    // Inflate the frame to make space for outer shadow
-    frame = UIEdgeInsetsInsetRect(frame, insets);
-
-    // Move the origin of the 'original' frame to compensate
-    originalFrame.origin = CGPointMake(-frame.origin.x, -frame.origin.y);
-
+    
+    if(outerShadow) {
+        UIEdgeInsets insets = ComputeExpandingInsetsForShadow(outerShadow, YES);
+        
+        // Inflate the frame to make space for outer shadow
+        frame = UIEdgeInsetsInsetRect(frame, insets);
+        
+        // Move the origin of the 'original' frame to compensate
+        originalFrame.origin = CGPointMake(-frame.origin.x, -frame.origin.y);
+    }
+    
     self.masksToBounds = NO;
     [super setFrame:frame];
 }
@@ -76,7 +79,7 @@
     BYShadow *innerShadow = [self propertyValue:@"innerShadow"];
     BYBorder *border = [self propertyValue:@"border"];
     BYBackgroundImage *backgroundImage = [self propertyValue:@"backgroundImage"];
-
+    
     // a rounded rectangle bezier path that describes the layer
     UIBezierPath *layerPath = [UIBezierPath bezierPathWithRoundedRect:rect
                                                          cornerRadius:border.cornerRadius];
@@ -105,7 +108,7 @@
     if (backgroundImage) {
         UIImage *image = [backgroundImage data];
         CGImageRef imageRef = image.CGImage;
-
+        
         if(backgroundImage.contentMode == BYImageContentModeAspectFill) {
             // There's no built in way to make an image use aspect fill, so calculate a new frame.
             CGSize rectSize = rect.size;
@@ -114,7 +117,7 @@
             CGFloat ratio = MAX(horizontalRatio, verticalRatio); // The ratio is the biggest of the v & h ratio
             // Calculate a new size based on the ratio
             CGSize aspectFillSize = CGSizeMake(CGImageGetWidth(imageRef) * ratio, CGImageGetHeight(imageRef) * ratio);
-
+            
             // Calculate the final frame, centered on the original frame, then draw the image in this.
             CGRect r = CGRectMake((rectSize.width-aspectFillSize.width)/2, (rectSize.height-aspectFillSize.height)/2,
                                   aspectFillSize.width, aspectFillSize.height);
@@ -139,7 +142,7 @@
     RenderInnerShadow(ctx, innerShadow, path);
     
     // Draw the border
-    if (border.width > 0) {                
+    if (border.width > 0) {
         CGContextSetStrokeColorWithColor(ctx, border.color.CGColor);
         layerPath.lineWidth = border.width * 2;
         [layerPath stroke];
