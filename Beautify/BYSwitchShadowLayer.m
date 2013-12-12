@@ -16,7 +16,7 @@
 
 -(void)setFrame:(CGRect)frame {
     BYShadow *outerShadow = [self.renderer propertyValueForNameWithCurrentState:@"outerShadow"];
-    UIEdgeInsets insets = ComputeExpandingInsetsForShadow(outerShadow, YES);
+    UIEdgeInsets insets = ComputeExpandingInsetsForShadowAndBorder(outerShadow, nil, YES);
     
     originalFrame = frame;
     

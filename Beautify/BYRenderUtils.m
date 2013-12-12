@@ -14,21 +14,22 @@ UIEdgeInsets UIEdgeInsetsInflate(UIEdgeInsets insets, float dx, float dy) {
     return UIEdgeInsetsMake(insets.top + dy, insets.left + dx, insets.bottom + dy, insets.right + dx);
 }
 
-UIEdgeInsets ComputeInsetsForShadow(BYShadow* ss) {
+UIEdgeInsets ComputeInsetsForShadowAndBorder(BYShadow *shadow, BYBorder *border) {
     UIEdgeInsets inset = UIEdgeInsetsZero;
-    inset.top = MAX(0, ss.radius + fabs(ss.offset.height));
-    inset.bottom = MAX(0, ss.radius + fabs(ss.offset.height));
-    inset.left = MAX(0, ss.radius + fabs(ss.offset.width));
-    inset.right = MAX(0, ss.radius + fabs(ss.offset.width));
+    // For each inset property, take the max of the shadow radius + the abs value of the shadow offset, and half the border width.
+    inset.top = MAX(MAX(0, shadow.radius) + fabs(shadow.offset.height), border.width / 2);
+    inset.bottom = MAX(MAX(0, shadow.radius) + fabs(shadow.offset.height), border.width / 2);
+    inset.left = MAX(MAX(0, shadow.radius) + fabs(shadow.offset.width), border.width / 2);
+    inset.right = MAX(MAX(0, shadow.radius) + fabs(shadow.offset.width), border.width / 2);
     return inset;
 }
 
-UIEdgeInsets ComputeExpandingInsetsForShadow(BYShadow* shadow, BOOL expanding) {
-    if(!shadow) {
+UIEdgeInsets ComputeExpandingInsetsForShadowAndBorder(BYShadow *shadow, BYBorder *border, BOOL expanding) {
+    if(!shadow && !border) {
         return UIEdgeInsetsZero;
     }
     
-    UIEdgeInsets inset = ComputeInsetsForShadow(shadow);
+    UIEdgeInsets inset = ComputeInsetsForShadowAndBorder(shadow, border);
     if(expanding){
         inset = UIEdgeInsetsMake(-fabs(inset.top) * 2, -fabs(inset.left) * 2,
                                  -fabs(inset.bottom) * 2, -fabs(inset.right) * 2);
@@ -37,7 +38,6 @@ UIEdgeInsets ComputeExpandingInsetsForShadow(BYShadow* shadow, BOOL expanding) {
 }
 
 void RenderInnerShadow(CGContextRef ctx, BYShadow *shadow, UIBezierPath *path) {
-    
         if(CGSizeEqualToSize(shadow.offset, CGSizeZero) && shadow.radius <= 0) {
             // Don't render a shadow if the offset's values and the radius are 0.
             return;
