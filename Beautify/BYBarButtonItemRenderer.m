@@ -102,7 +102,7 @@
     BYBorder *border = [self propertyValueForNameWithCurrentState:@"border"];
     BYShadow *shadow = [self propertyValueForNameWithCurrentState:@"outerShadow"];
     
-    UIEdgeInsets insets = ComputeExpandingInsetsForShadow(shadow, YES);
+    UIEdgeInsets insets = ComputeExpandingInsetsForShadowAndBorder(shadow, nil, YES);
     
     CGFloat height = ((UIView*)self.adaptedView).bounds.size.height;
     CGFloat width = ((UIView*)self.adaptedView).bounds.size.width;

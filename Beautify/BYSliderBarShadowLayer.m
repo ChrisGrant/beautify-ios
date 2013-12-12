@@ -16,7 +16,7 @@
 
 -(void)setFrame:(CGRect)frame withWidthPadding:(float)widthPadding {
     BYShadow *outerShadow = [self.renderer propertyValueForNameWithCurrentState:@"barouterShadow"];
-    UIEdgeInsets insets = ComputeExpandingInsetsForShadow(outerShadow, YES);
+    UIEdgeInsets insets = ComputeExpandingInsetsForShadowAndBorder(outerShadow, nil, YES);
    
     originalFrame = frame;
     

@@ -27,7 +27,7 @@
 
 -(void)setFrame:(CGRect)frame {
     BYShadow *outerShadow = [self.renderer propertyValueForNameWithCurrentState:@"thumbOuterShadow"];
-    UIEdgeInsets insets = ComputeExpandingInsetsForShadow(outerShadow, YES);
+    UIEdgeInsets insets = ComputeExpandingInsetsForShadowAndBorder(outerShadow, nil, YES);
     
     _originalFrame = frame;
     
