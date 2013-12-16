@@ -11,6 +11,7 @@
 #import "BYGradient.h"
 #import "BYGradientStop.h"
 #import "BYTextShadow.h"
+#import "BYBackgroundImage.h"
 
 @implementation BYNavigationBarStyle
 
@@ -40,6 +41,7 @@
     BYNavigationBarStyle *copy = [super copyWithZone:zone];
     copy.tintColor = self.tintColor.copy;
     copy.backgroundColor = self.backgroundColor.copy;
+    copy.backgroundImage = self.backgroundImage.copy;
     copy.backgroundGradient = self.backgroundGradient.copy;
     copy.title = self.title.copy;
     copy.titleShadow = self.titleShadow.copy;
