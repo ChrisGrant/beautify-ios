@@ -1,0 +1,39 @@
+{
+    "backgroundColor": "#0000ff",
+    "backgroundGradient": {
+        "radial": false,
+        "stops": [
+                  {
+                  "position": "0.0",
+                  "color": "#000000"
+                  },
+                  {
+                  "position": "1.0",
+                  "color": "#FFFFFF"
+                  }
+                  ]
+    },
+    "tintColor": "#000000",
+    "imageTintColor": "#ffffff",
+    "border": {
+        "width": 1,
+        "color": "#FF0000",
+        "cornerRadius": 8
+    },
+    "outerShadow": {
+        "radius": 2,
+        "color": "#00FF00",
+        "offset": {
+            "x": 2,
+            "y": 3
+        }
+    },
+    "innerShadow": {
+        "radius": 5,
+        "color": "#FFFFFF",
+        "offset": {
+            "x": 1,
+            "y": 4
+        }
+    }
+}

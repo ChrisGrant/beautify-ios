@@ -23,4 +23,6 @@
 @property BYShadow<Optional> *innerShadow;
 @property BYShadow<Optional> *outerShadow;
 
++(BYTabBarStyle*)defaultStyle;
+
 @end

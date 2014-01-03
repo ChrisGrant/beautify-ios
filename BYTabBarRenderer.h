@@ -8,6 +8,6 @@
 
 #import <Beautify/Beautify.h>
 
-@interface BYTabBarRenderer : BYControlRenderer
+@interface BYTabBarRenderer : BYViewRenderer
 
 @end

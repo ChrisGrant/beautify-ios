@@ -12,6 +12,7 @@
 #import "BYStateSetter.h"
 #import "JSONValueTransformer+BeautifyExtension.h"
 #import "BYTestHelper.h"
+#import "BYTabBarStyle.h"
 
 @interface BYCopyingTests : BYTestHelper
 @end
@@ -124,6 +125,11 @@
 
 -(void)testViewControllerStyleCopy {
     BYViewControllerStyle *style = [self styleFromDictNamed:@"ValidVCStyle" andClass:[BYViewControllerStyle class]];
+    [self checkObjectCanBeCopiedAndResultHasEqualProperties:style];
+}
+
+-(void)testTabBarStyleCopy {
+    BYTabBarStyle *style = [self styleFromDictNamed:@"ValidTabBarStyle" andClass:[BYTabBarStyle class]];
     [self checkObjectCanBeCopiedAndResultHasEqualProperties:style];
 }
 

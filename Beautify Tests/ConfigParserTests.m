@@ -22,6 +22,7 @@
 #import "BYImageViewStyle.h"
 #import "BYTheme.h"
 #import "BYSwitchStyle.h"
+#import "BYTabBarStyle.h"
 
 @interface ConfigParserTests : XCTestCase
 @end
@@ -412,8 +413,7 @@
 }
 
 -(void)testSliderStyleWithValidDict {
-    BYSliderStyle *sliderStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"ValidSliderStyle"
-                                                                                               andClass:[BYSliderStyle class]];
+    BYSliderStyle *sliderStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"ValidSliderStyle" andClass:[BYSliderStyle class]];
 
     [self assertBorder:sliderStyle.barBorder hasWidth:2 color:[UIColor redColor] andCornerRadius:10];
     
@@ -452,6 +452,42 @@
     XCTAssertEqual(sliderStyle.barHeightFraction, 0.2f, @"Bar Height fraction should be 0.2");
 }
 
+#pragma mark - Tab Bar Testing
+
+-(void)testTabBarStyleWithNilDict {
+    [self assertStyleIsNilWithNilDictForClass:[BYTabBarStyle class]];
+}
+
+-(void)testTabBarStyleWithEmptyDict {
+    [self assertStyleIsNilWithEmptyDictForClass:[BYTabBarStyle class]];
+}
+
+-(void)testTabBarStyleWithPartialDict {
+    BYTabBarStyle *tabBarStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialTabBarStyle"
+                                                                                         andClass:[BYTabBarStyle class]];
+    XCTAssert([tabBarStyle.backgroundColor isEqualToColor:[UIColor greenColor]], @"Background color should be green");
+}
+
+-(void)testTabBarStyleWithValidDict {
+    BYTabBarStyle *tabBarStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"ValidTabBarStyle" andClass:[BYTabBarStyle class]];
+
+    XCTAssert([tabBarStyle.backgroundColor isEqualToColor:[UIColor blueColor]], @"BG color should be blue");
+    
+    [self assertGradient:tabBarStyle.backgroundGradient
+         hasStopOneColor:[UIColor blackColor] atPosition:0
+         andStopTwoColor:[UIColor whiteColor] atPosition:1.0
+             andIsRadial:NO withRadialOffset:CGSizeZero];
+    
+    XCTAssert([tabBarStyle.tintColor isEqualToColor:[UIColor blackColor]], @"Tint color should be black");
+    XCTAssert([tabBarStyle.imageTintColor isEqualToColor:[UIColor whiteColor]], @"Image tint color should be white");
+    
+    [self assertBorder:tabBarStyle.border hasWidth:1.0f color:[UIColor redColor] andCornerRadius:8.0f];
+    
+    [self assertShadows:tabBarStyle.outerShadow hasOneShadowWithColor:[UIColor greenColor] radius:2.0f andOffset:CGSizeMake(2, 3)];
+    
+    [self assertShadows:tabBarStyle.innerShadow hasOneShadowWithColor:[UIColor whiteColor] radius:5.0f andOffset:CGSizeMake(1, 4)];
+}
+
 #pragma mark - Helper Methods
 
 -(id)assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:(NSString*)fileName andClass:(Class)class {
@@ -474,8 +510,7 @@
 -(void)assertStyleIsNilWithEmptyDictForClass:(Class)class {
     id style;
     XCTAssertNoThrow(style = [[class alloc] initWithDictionary:@{} error:nil], @"Shouldn't throw");
-
-    XCTAssertNil(style, @"Style should not be nil");
+    XCTAssertNil(style, @"Style should be be nil for class %@", class);
 }
 
 -(void)assertShadows:(BYShadow*)array hasOneShadowWithColor:(UIColor*)color radius:(float)radius andOffset:(CGSize)offset {

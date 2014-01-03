@@ -27,7 +27,8 @@
                                 @"UITableViewCell" : @"BYTableViewCellRenderer",
                                 @"UISlider" : @"BYSliderRenderer",
                                 @"UINavigationButton" : @"BYBarButtonItemRenderer",
-                                @"UINavigationItemView" : @"BYBarButtonItemRenderer" };
+                                @"UINavigationItemView" : @"BYBarButtonItemRenderer",
+                                @"UITabBar" : @"BYTabBarRenderer"};
     });
     return instance;
 }
@@ -62,6 +63,7 @@
 #pragma mark - Handlers
 
 -(BYStyleRenderer*)rendererForView:(id)view {
+    
     // Some controls should not be styled at all.
     if ([view isKindOfClass:NSClassFromString(@"UIButtonLabel")] ||
         [view isKindOfClass:[UINavigationController class]] ||
@@ -75,6 +77,7 @@
         [view isKindOfClass:NSClassFromString(@"_UIModalItemAppViewController")] ||
         [view isKindOfClass:NSClassFromString(@"MKAttributionLabel")] ||
         [view isKindOfClass:NSClassFromString(@"MKSmallCalloutViewController")] ||
+        [view isKindOfClass:NSClassFromString(@"_UILayoutGuide")] ||
         [view isKindOfClass:[UITabBarController class]]) {
         return nil;
     }
@@ -89,7 +92,7 @@
             id rendererClass = (self.renderers)[viewType];
             id rendererClassInstance = [NSClassFromString(rendererClass) alloc];
             
-            BYStyleRenderer* renderer = [rendererClassInstance initWithView:view theme:[[BYThemeManager instance] currentTheme]];
+            BYStyleRenderer *renderer = [rendererClassInstance initWithView:view theme:[[BYThemeManager instance] currentTheme]];
             return renderer;
         }
     }

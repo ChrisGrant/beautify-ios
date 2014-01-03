@@ -90,7 +90,7 @@
 
 // extracts the style that applies to this renderer from the theme
 -(id)styleFromTheme:(BYTheme*)theme {
-    [NSException raise:@"Implement style from theme in subclass. This is an abstract class" format:nil];
+    [NSException raise:@"Implement styleFromTheme: in subclass. This is an abstract class" format:nil];
     return nil;
 }
 

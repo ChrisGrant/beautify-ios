@@ -322,7 +322,20 @@
                     <view key="view" contentMode="scaleToFill" id="jSj-32-0Zl">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tee-pX-WX2">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="0.56809781749999999" blue="0.31203718590000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tee-pX-WX2" firstAttribute="leading" secondItem="jSj-32-0Zl" secondAttribute="leading" id="2te-IN-YRV"/>
+                            <constraint firstAttribute="bottom" secondItem="Tee-pX-WX2" secondAttribute="bottom" id="EWh-2r-B84"/>
+                            <constraint firstAttribute="trailing" secondItem="Tee-pX-WX2" secondAttribute="trailing" id="NNq-bW-N6a"/>
+                            <constraint firstItem="Tee-pX-WX2" firstAttribute="top" secondItem="jSj-32-0Zl" secondAttribute="top" id="thj-Rf-bwU"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="n7L-H4-SUW"/>
                 </viewController>
@@ -341,7 +354,20 @@
                     <view key="view" contentMode="scaleToFill" id="GWK-8f-NXj">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TEC-XA-g1L">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TEC-XA-g1L" firstAttribute="top" secondItem="GWK-8f-NXj" secondAttribute="top" id="gE0-Bh-3Tl"/>
+                            <constraint firstItem="TEC-XA-g1L" firstAttribute="leading" secondItem="GWK-8f-NXj" secondAttribute="leading" id="iV5-W1-w8Y"/>
+                            <constraint firstAttribute="bottom" secondItem="TEC-XA-g1L" secondAttribute="bottom" id="lBm-A8-MEE"/>
+                            <constraint firstAttribute="trailing" secondItem="TEC-XA-g1L" secondAttribute="trailing" id="xGd-PL-BYi"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="pzd-iT-P6d"/>
                 </viewController>
@@ -360,7 +386,20 @@
                     <view key="view" contentMode="scaleToFill" id="nbg-Bl-N3I">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BTI-ch-2m8">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.36742624639999999" green="0.53658241029999998" blue="0.67362862830000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.36742624639999999" green="0.53658241029999998" blue="0.67362862830000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="BTI-ch-2m8" secondAttribute="bottom" id="9m7-Px-mom"/>
+                            <constraint firstAttribute="trailing" secondItem="BTI-ch-2m8" secondAttribute="trailing" id="EpW-b9-nep"/>
+                            <constraint firstItem="BTI-ch-2m8" firstAttribute="leading" secondItem="nbg-Bl-N3I" secondAttribute="leading" id="FUJ-jJ-CnV"/>
+                            <constraint firstItem="BTI-ch-2m8" firstAttribute="top" secondItem="nbg-Bl-N3I" secondAttribute="top" id="pHW-ZR-XvE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="55Q-td-mL1"/>
                 </viewController>
@@ -373,7 +412,7 @@
             <objects>
                 <tabBarController definesPresentationContext="YES" id="wKD-K2-8m4" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ARL-1e-013"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="QXe-M8-XBZ">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -403,7 +442,20 @@
                     <view key="view" contentMode="scaleToFill" id="AYw-Ua-d5t">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dyN-HR-UCZ">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.1020607462" green="0.1020607462" blue="0.1020607462" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.56809781749999999" blue="0.31203718590000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dyN-HR-UCZ" firstAttribute="leading" secondItem="AYw-Ua-d5t" secondAttribute="leading" id="MdG-SX-Zyw"/>
+                            <constraint firstAttribute="bottom" secondItem="dyN-HR-UCZ" secondAttribute="bottom" id="Vwz-Hx-TVw"/>
+                            <constraint firstItem="dyN-HR-UCZ" firstAttribute="top" secondItem="AYw-Ua-d5t" secondAttribute="top" id="c7S-lT-RdF"/>
+                            <constraint firstAttribute="trailing" secondItem="dyN-HR-UCZ" secondAttribute="trailing" id="pgy-Zl-oq0"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="history" id="ofB-R5-5ka"/>
                 </viewController>
@@ -422,7 +474,6 @@
                     <view key="view" contentMode="scaleToFill" id="a5p-7i-S16">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="downloads" id="eDd-Su-W2r"/>
                 </viewController>
@@ -441,7 +492,20 @@
                     <view key="view" contentMode="scaleToFill" id="8U8-wC-3sK">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2t-F1-Qry">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.44254377319999999" green="0.80612244899999996" blue="0.34544944999999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.44254377319999999" green="0.80612244899999996" blue="0.34544944999999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="k2t-F1-Qry" secondAttribute="bottom" id="3BY-Ci-gbh"/>
+                            <constraint firstItem="k2t-F1-Qry" firstAttribute="leading" secondItem="8U8-wC-3sK" secondAttribute="leading" id="Spj-yn-it6"/>
+                            <constraint firstAttribute="trailing" secondItem="k2t-F1-Qry" secondAttribute="trailing" id="ZiP-DF-EYp"/>
+                            <constraint firstItem="k2t-F1-Qry" firstAttribute="top" secondItem="8U8-wC-3sK" secondAttribute="top" id="srn-xq-AVM"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="zFG-YE-rjb"/>
                 </viewController>

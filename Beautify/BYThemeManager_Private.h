@@ -11,7 +11,7 @@
 @interface BYThemeManager ()
 
 // Map of UI element class to renderer type
-@property NSDictionary* renderers;
+@property NSDictionary *renderers;
 
 // obtains a suitable renderer for the given view
 -(BYStyleRenderer*)rendererForView:(id)view;
