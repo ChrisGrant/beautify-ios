@@ -14,26 +14,30 @@ UIEdgeInsets UIEdgeInsetsInflate(UIEdgeInsets insets, float dx, float dy) {
     return UIEdgeInsetsMake(insets.top + dy, insets.left + dx, insets.bottom + dy, insets.right + dx);
 }
 
-UIEdgeInsets ComputeInsetsForShadow(BYShadow* ss) {
+UIEdgeInsets ComputeInsetsForShadowAndBorder(BYShadow *shadow, BYBorder *border) {
     UIEdgeInsets inset = UIEdgeInsetsZero;
-    inset.top = MAX(inset.top, ss.radius + MIN(ss.offset.height, 0));
-    inset.bottom = MAX(inset.bottom, ss.radius + MAX(ss.offset.height, 0));
-    inset.left = MAX(inset.left, ss.radius + MIN(ss.offset.width, 0));
-    inset.right = MAX(inset.right, ss.radius + MAX(ss.offset.width, 0));
+    // For each inset property, take the max of the shadow radius + the abs value of the shadow offset, and half the border width.
+    inset.top = MAX(MAX(0, shadow.radius) + fabs(shadow.offset.height), border.width / 2);
+    inset.bottom = MAX(MAX(0, shadow.radius) + fabs(shadow.offset.height), border.width / 2);
+    inset.left = MAX(MAX(0, shadow.radius) + fabs(shadow.offset.width), border.width / 2);
+    inset.right = MAX(MAX(0, shadow.radius) + fabs(shadow.offset.width), border.width / 2);
     return inset;
 }
 
-UIEdgeInsets ComputeExpandingInsetsForShadow(BYShadow* shadow, BOOL expanding) {
-    UIEdgeInsets inset = ComputeInsetsForShadow(shadow);
+UIEdgeInsets ComputeExpandingInsetsForShadowAndBorder(BYShadow *shadow, BYBorder *border, BOOL expanding) {
+    if(!shadow && !border) {
+        return UIEdgeInsetsZero;
+    }
+    
+    UIEdgeInsets inset = ComputeInsetsForShadowAndBorder(shadow, border);
     if(expanding){
-        inset = UIEdgeInsetsMake(-inset.top * 2, -inset.left * 2,
-                                 -inset.bottom * 2, -inset.right * 2);
+        inset = UIEdgeInsetsMake(-fabs(inset.top) * 2, -fabs(inset.left) * 2,
+                                 -fabs(inset.bottom) * 2, -fabs(inset.right) * 2);
     }
     return inset;
 }
 
 void RenderInnerShadow(CGContextRef ctx, BYShadow *shadow, UIBezierPath *path) {
-    
         if(CGSizeEqualToSize(shadow.offset, CGSizeZero) && shadow.radius <= 0) {
             // Don't render a shadow if the offset's values and the radius are 0.
             return;

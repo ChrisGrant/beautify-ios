@@ -388,6 +388,7 @@
 		83881D331842AABB00A374FC /* BYTabBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83881D311842AABB00A374FC /* BYTabBarRenderer.m */; };
 		83881D361842AB3600A374FC /* BYTabBarStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 83881D341842AB3600A374FC /* BYTabBarStyle.h */; };
 		83881D371842AB3600A374FC /* BYTabBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 83881D351842AB3600A374FC /* BYTabBarStyle.m */; };
+		83881D3A1842B1E600A374FC /* BYTintColorTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83881D391842B1E600A374FC /* BYTintColorTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -683,6 +684,8 @@
 		83881D311842AABB00A374FC /* BYTabBarRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTabBarRenderer.m; sourceTree = SOURCE_ROOT; };
 		83881D341842AB3600A374FC /* BYTabBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTabBarStyle.h; sourceTree = "<group>"; };
 		83881D351842AB3600A374FC /* BYTabBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTabBarStyle.m; sourceTree = "<group>"; };
+		83881D381842B1E600A374FC /* BYTintColorTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTintColorTestViewController.h; sourceTree = "<group>"; };
+		83881D391842B1E600A374FC /* BYTintColorTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTintColorTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -991,6 +994,8 @@
 				70F284BC181E57C8002E61AA /* BYImmuneControlsViewController.m */,
 				702F4510181E790300748D30 /* ModalContentViewController.h */,
 				702F4511181E790300748D30 /* ModalContentViewController.m */,
+				83881D381842B1E600A374FC /* BYTintColorTestViewController.h */,
+				83881D391842B1E600A374FC /* BYTintColorTestViewController.m */,
 			);
 			path = VisualTest;
 			sourceTree = "<group>";
@@ -1926,6 +1931,7 @@
 				707F517D17FB10A000928B0B /* JSONModelArray.m in Sources */,
 				70FF54C617E6FAD500F9BF03 /* BYGradient.m in Sources */,
 				72FDEDA91757204C002F1093 /* BYControlRenderer.m in Sources */,
+				83881D3A1842B1E600A374FC /* BYTintColorTestViewController.m in Sources */,
 				7047012F17E1C3F900FEA5F5 /* BYSliderLayer.m in Sources */,
 				70FF54C717E6FAD800F9BF03 /* BYImageViewStyle.m in Sources */,
 				703C8F6318152CE200C80487 /* BYMenuViewController.m in Sources */,

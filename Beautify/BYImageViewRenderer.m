@@ -63,7 +63,7 @@
     BYBorder *border = [self propertyValueForNameWithCurrentState:@"border"];
     
     CGRect replacementImageViewFrame = imageView.bounds;
-    UIEdgeInsets insets = ComputeInsetsForShadow(outerShadow);
+    UIEdgeInsets insets = ComputeInsetsForShadowAndBorder(outerShadow, nil);
     replacementImageViewFrame.origin.x = replacementImageViewFrame.origin.x + (insets.left * 2);
     replacementImageViewFrame.origin.y = replacementImageViewFrame.origin.y + (insets.top * 2);
     [_replacementImageView setFrame:replacementImageViewFrame];

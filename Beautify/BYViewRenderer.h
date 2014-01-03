@@ -20,4 +20,9 @@
  */
 -(void)setAlpha:(float)alpha forState:(UIControlState)state;
 
+/*
+ Set the tint color for the view associated with this renderer.
+ */
+-(void)setTintColor:(UIColor*)color;
+
 @end

@@ -37,8 +37,6 @@
 -(void)setup:(UITextField*)textField theme:(BYTheme*)theme {
     [textField hideAllSubViews];
     
-    textField.layer.borderColor = [UIColor redColor].CGColor;
-    
     for(UIView *subview in textField.subviews) {
         // Don't hide the text field label, otherwise no text will be visible!
         if([subview isKindOfClass:NSClassFromString(@"UITextFieldLabel")]) {
