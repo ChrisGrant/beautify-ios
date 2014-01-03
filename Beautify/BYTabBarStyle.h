@@ -10,7 +10,6 @@
 
 @interface BYTabBarStyle : BYViewStyle
 
-@property UIColor<Optional> *tintColor;
 @property UIColor<Optional> *imageTintColor;
 
 // background
