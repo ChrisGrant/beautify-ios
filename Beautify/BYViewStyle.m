@@ -18,6 +18,10 @@
 }
 
 -(instancetype)initWithDictionary:(NSDictionary *)dict error:(NSError *__autoreleasing *)err {
+    if(dict.allKeys.count == 0) {
+        return nil;
+    }
+    
     id style = [super initWithDictionary:dict error:err];
     // Alpha defaults to 0. So check to see if it is present. If not, set it to 1.
     if(![dict.allKeys containsObject:@"alpha"]) {

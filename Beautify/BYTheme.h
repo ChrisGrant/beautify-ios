@@ -19,6 +19,7 @@
 @class BYImageViewStyle;
 @class BYSliderStyle;
 @class BYBarButtonStyle;
+@class BYTabBarStyle;
 
 /**
  * Represents a rendering configuration, typically containing a number of
@@ -37,6 +38,7 @@
 @property BYBarButtonStyle<Optional> *barButtonItemStyle;
 @property BYBarButtonStyle<Optional> *backButtonItemStyle;
 @property BYSliderStyle<Optional> *sliderStyle;
+@property BYTabBarStyle<Optional> *tabBarStyle;
 
 +(BYTheme*)fromFile:(NSString*)file;
 

@@ -15,6 +15,6 @@
 
 @property float alpha;
 
-@property UIColor *tintColor;
+@property UIColor<Optional> *tintColor;
 
 @end

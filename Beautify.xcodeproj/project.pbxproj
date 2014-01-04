@@ -271,6 +271,10 @@
 		70907E6D1797E6F600F83417 /* BYImageViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70907E6B1797E6F600F83417 /* BYImageViewStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70907E701797E6F600F83417 /* BYImageViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70907E6C1797E6F600F83417 /* BYImageViewStyle.m */; };
 		70907E7B1797FBC300F83417 /* roller@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70907E7A1797FBC300F83417 /* roller@2x.png */; };
+		7091C1561876CF370076D201 /* BYTabBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83881D311842AABB00A374FC /* BYTabBarRenderer.m */; };
+		7091C1571876CFFE0076D201 /* BYTabBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 83881D351842AB3600A374FC /* BYTabBarStyle.m */; };
+		7091C15A1876DAF20076D201 /* PartialTabBarStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7091C1581876DAF20076D201 /* PartialTabBarStyle.json */; };
+		7091C15B1876DAF20076D201 /* ValidTabBarStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7091C1591876DAF20076D201 /* ValidTabBarStyle.json */; };
 		70AB9D7417E9DF4000879E5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FE246617E0B385009A7113 /* Foundation.framework */; };
 		70AB9D7517E9DF4000879E5E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ADB8D516FC9E0200BE925D /* CoreGraphics.framework */; };
 		70AB9D7617E9DF4000879E5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72BF4B3416F3487A00A0C0E3 /* UIKit.framework */; };
@@ -384,6 +388,10 @@
 		72FDED9F17565754002F1093 /* BYTextFieldRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDED9817565742002F1093 /* BYTextFieldRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72FDEDA617571F92002F1093 /* UITextField+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA517571F92002F1093 /* UITextField+Beautify.m */; };
 		72FDEDA91757204C002F1093 /* BYControlRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA81757204B002F1093 /* BYControlRenderer.m */; };
+		83881D321842AABB00A374FC /* BYTabBarRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 83881D301842AABB00A374FC /* BYTabBarRenderer.h */; };
+		83881D331842AABB00A374FC /* BYTabBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83881D311842AABB00A374FC /* BYTabBarRenderer.m */; };
+		83881D361842AB3600A374FC /* BYTabBarStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 83881D341842AB3600A374FC /* BYTabBarStyle.h */; };
+		83881D371842AB3600A374FC /* BYTabBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 83881D351842AB3600A374FC /* BYTabBarStyle.m */; };
 		83881D3A1842B1E600A374FC /* BYTintColorTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83881D391842B1E600A374FC /* BYTintColorTestViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -576,6 +584,8 @@
 		70907E6B1797E6F600F83417 /* BYImageViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYImageViewStyle.h; sourceTree = "<group>"; };
 		70907E6C1797E6F600F83417 /* BYImageViewStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYImageViewStyle.m; sourceTree = "<group>"; };
 		70907E7A1797FBC300F83417 /* roller@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "roller@2x.png"; sourceTree = "<group>"; };
+		7091C1581876DAF20076D201 /* PartialTabBarStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PartialTabBarStyle.json; sourceTree = "<group>"; };
+		7091C1591876DAF20076D201 /* ValidTabBarStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ValidTabBarStyle.json; sourceTree = "<group>"; };
 		70AB9D7317E9DF4000879E5E /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70AB9D7917E9DF4000879E5E /* Demo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Demo-Info.plist"; sourceTree = "<group>"; };
 		70AB9D7B17E9DF4000879E5E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -676,6 +686,10 @@
 		72FDEDA71757204A002F1093 /* BYControlRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYControlRenderer.h; path = Beautify/BYControlRenderer.h; sourceTree = SOURCE_ROOT; };
 		72FDEDA81757204B002F1093 /* BYControlRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = BYControlRenderer.m; path = Beautify/BYControlRenderer.m; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		72FDEDAD175739D1002F1093 /* BYControlRenderer_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BYControlRenderer_Private.h; path = Beautify/BYControlRenderer_Private.h; sourceTree = SOURCE_ROOT; };
+		83881D301842AABB00A374FC /* BYTabBarRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTabBarRenderer.h; sourceTree = SOURCE_ROOT; };
+		83881D311842AABB00A374FC /* BYTabBarRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTabBarRenderer.m; sourceTree = SOURCE_ROOT; };
+		83881D341842AB3600A374FC /* BYTabBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTabBarStyle.h; sourceTree = "<group>"; };
+		83881D351842AB3600A374FC /* BYTabBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTabBarStyle.m; sourceTree = "<group>"; };
 		83881D381842B1E600A374FC /* BYTintColorTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTintColorTestViewController.h; sourceTree = "<group>"; };
 		83881D391842B1E600A374FC /* BYTintColorTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYTintColorTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -782,6 +796,8 @@
 				1DE9D2FE174F7F540070AFD3 /* BYViewControllerStyle.m */,
 				1DE12A84174157B40039F3F3 /* BYViewStyle.h */,
 				1DE12A85174157B40039F3F3 /* BYViewStyle.m */,
+				83881D341842AB3600A374FC /* BYTabBarStyle.h */,
+				83881D351842AB3600A374FC /* BYTabBarStyle.m */,
 			);
 			name = Styles;
 			sourceTree = "<group>";
@@ -1008,6 +1024,7 @@
 		7074287616F861B1003C2D1F /* Renderers */ = {
 			isa = PBXGroup;
 			children = (
+				83881D2F1842AA3C00A374FC /* TabBar */,
 				547C32CE17C4C1B4009D6289 /* Slider */,
 				54D7FD7317B8EA210004F952 /* BarButtonItem */,
 				72F07961175CCC8700FC27DB /* TableView */,
@@ -1126,6 +1143,15 @@
 			name = ImageView;
 			sourceTree = "<group>";
 		};
+		7091C15C1876DAF50076D201 /* Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				7091C1581876DAF20076D201 /* PartialTabBarStyle.json */,
+				7091C1591876DAF20076D201 /* ValidTabBarStyle.json */,
+			);
+			name = "Tab Bar";
+			sourceTree = "<group>";
+		};
 		70AB9D7717E9DF4000879E5E /* Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -1214,6 +1240,7 @@
 				7007253A17EAF02B001F7C41 /* Navigation Bar Style */,
 				7007254A17EB03E1001F7C41 /* Slider Style */,
 				70FAFBB417E7335200EB6843 /* Switch Style */,
+				7091C15C1876DAF50076D201 /* Tab Bar */,
 				7007253B17EAF035001F7C41 /* Table View Cell Style */,
 				7007253917EAF022001F7C41 /* Text Field Style */,
 				700ED7D617E9C045009C2C49 /* View Controller Style */,
@@ -1369,6 +1396,15 @@
 			name = TextField;
 			sourceTree = "<group>";
 		};
+		83881D2F1842AA3C00A374FC /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				83881D301842AABB00A374FC /* BYTabBarRenderer.h */,
+				83881D311842AABB00A374FC /* BYTabBarRenderer.m */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1407,6 +1443,7 @@
 				1DDB6A39174BA951008A2A73 /* BYBeautify.h in Headers */,
 				702194CE17E1BC2E008161D3 /* BYTableViewCellLabelRenderer.h in Headers */,
 				7009050D178C0EB600D7BEF4 /* BYPlatformVersionUtils.h in Headers */,
+				83881D361842AB3600A374FC /* BYTabBarStyle.h in Headers */,
 				1D46464D174669A9003840E4 /* UIView+Beautify.h in Headers */,
 				1D46467617466A07003840E4 /* Beautify-Prefix.pch in Headers */,
 				1D464655174669D7003840E4 /* NSObject+Properties.h in Headers */,
@@ -1446,6 +1483,7 @@
 				70C211B617DF01DB00CA110B /* TableVisualTestViewController.h in Headers */,
 				1D46464F174669C4003840E4 /* BYStyleRenderer_Private.h in Headers */,
 				1D464650174669C4003840E4 /* BYViewRenderer_Private.h in Headers */,
+				83881D321842AABB00A374FC /* BYTabBarRenderer.h in Headers */,
 				1D464651174669C4003840E4 /* UIView+BeautifyPrivate.h in Headers */,
 				1DDB696B174A2887008A2A73 /* BYFont_Private.h in Headers */,
 				544975CD17D8B953003D7115 /* BYThumbLayer.h in Headers */,
@@ -1632,6 +1670,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70B492DB17F2CFB9002B62DB /* flat.json in Resources */,
+				7091C15B1876DAF20076D201 /* ValidTabBarStyle.json in Resources */,
 				7007254617EAF0C0001F7C41 /* ValidTableViewCellStyle.json in Resources */,
 				7007255117EB0432001F7C41 /* PartialBarButtonStyle.json in Resources */,
 				7007254317EAF0C0001F7C41 /* PartialTableViewCellStyle.json in Resources */,
@@ -1640,6 +1679,7 @@
 				70FAFBB617E7336D00EB6843 /* ValidSwitchStyle.json in Resources */,
 				7007254517EAF0C0001F7C41 /* ValidNavigationBarStyle.json in Resources */,
 				7007255417EB0432001F7C41 /* ValidBarButtonStyle.json in Resources */,
+				7091C15A1876DAF20076D201 /* PartialTabBarStyle.json in Resources */,
 				70FF54E117E7042700F9BF03 /* PartialButtonStyle.json in Resources */,
 				700ED7D917E9C0DF009C2C49 /* PartialVCStyle.json in Resources */,
 				7007254717EAF0C0001F7C41 /* ValidTextFieldStyle.json in Resources */,
@@ -1767,6 +1807,7 @@
 				7047011517E1C11100FEA5F5 /* BYImageViewRenderer.m in Sources */,
 				707F518E17FB1F9800928B0B /* JSONModelError.m in Sources */,
 				1D46462817466942003840E4 /* BYShadow.m in Sources */,
+				83881D371842AB3600A374FC /* BYTabBarStyle.m in Sources */,
 				7047011B17E1C13200FEA5F5 /* BYSliderRenderer.m in Sources */,
 				1D46462917466942003840E4 /* BYButtonStyle.m in Sources */,
 				1D46462A17466942003840E4 /* BYLabelStyle.m in Sources */,
@@ -1822,6 +1863,7 @@
 				547C32D417C4C1EE009D6289 /* BYSliderStyle.m in Sources */,
 				54DDE26F17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m in Sources */,
 				7000537917FDC0F70095F2EE /* JSONModel.m in Sources */,
+				83881D331842AABB00A374FC /* BYTabBarRenderer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1833,6 +1875,7 @@
 				7047013D17E1C6B700FEA5F5 /* BYSliderRenderer.m in Sources */,
 				1D56087B17415DB600FFD529 /* BYSwitchBorderLayer.m in Sources */,
 				1D56087D17415DB600FFD529 /* BYSwitchLayer.m in Sources */,
+				7091C1561876CF370076D201 /* BYTabBarRenderer.m in Sources */,
 				1D56087E17415DB600FFD529 /* BYSwitchRenderer.m in Sources */,
 				1D56087F17415DB600FFD529 /* BYSwitchShadowLayer.m in Sources */,
 				1D56088017415DB600FFD529 /* BYSwitchToggleLayer.m in Sources */,
@@ -1894,6 +1937,7 @@
 				1DE9D2FA174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m in Sources */,
 				70FF54D017E6FB0200F9BF03 /* BYTextShadow.m in Sources */,
 				1DE9D309174F7F780070AFD3 /* BYViewControllerRenderer.m in Sources */,
+				7091C1571876CFFE0076D201 /* BYTabBarStyle.m in Sources */,
 				7047013817E1C67C00FEA5F5 /* UISlider+Beautify.m in Sources */,
 				72FDED9717565736002F1093 /* BYGradientLayer.m in Sources */,
 				72FDED9A17565742002F1093 /* BYTextFieldRenderer.m in Sources */,

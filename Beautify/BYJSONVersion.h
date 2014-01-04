@@ -6,4 +6,4 @@
 //  Copyright (c) 2013 Beautify. All rights reserved.
 //
 
-#define JSON_SCHEMA_VERSION @"1.5"
+#define JSON_SCHEMA_VERSION @"1.6"

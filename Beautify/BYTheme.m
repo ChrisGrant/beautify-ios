@@ -18,6 +18,7 @@
 #import "BYTableViewCellStyle.h"
 #import "BYImageViewStyle.h"
 #import "BYJSONVersion.h"
+#import "BYTabBarStyle.h"
 
 #define SCHEMA_VERSION_KEY @"schemaVersion"
 #define THEME_KEY @"theme"
@@ -98,6 +99,7 @@
         self.barButtonItemStyle = [BYBarButtonStyle defaultStyle];
         self.backButtonItemStyle = [BYBarButtonStyle defaultBackButtonStyle];
         self.sliderStyle = [BYSliderStyle defaultStyle];
+        self.tabBarStyle = [BYTabBarStyle defaultStyle];
     }
     return self;
 }
@@ -115,6 +117,7 @@
     theme.barButtonItemStyle = self.barButtonItemStyle.copy;
     theme.backButtonItemStyle = self.backButtonItemStyle.copy;
     theme.sliderStyle = self.sliderStyle.copy;
+    theme.tabBarStyle = self.tabBarStyle.copy;
     return theme;
 }
 
