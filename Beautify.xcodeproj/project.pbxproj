@@ -186,6 +186,7 @@
 		702F450D181E645400748D30 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702F450C181E645400748D30 /* CoreLocation.framework */; };
 		702F450F181E680D00748D30 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 702F450E181E680D00748D30 /* MessageUI.framework */; };
 		702F4512181E790300748D30 /* ModalContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 702F4511181E790300748D30 /* ModalContentViewController.m */; };
+		70321B8918A3AC6600227730 /* BYSearchBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CB6CE818A398CA0033B020 /* BYSearchBarRenderer.m */; };
 		7036DB4916F8659400EBA8AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DCD86C16F377DE008ECF8B /* QuartzCore.framework */; };
 		70397B8F17DF33190095001B /* BYBarButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70397B8D17DF33190095001B /* BYBarButtonStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70397B9217DF33190095001B /* BYBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* BYBarButtonStyle.m */; };
@@ -296,6 +297,11 @@
 		70C211B617DF01DB00CA110B /* TableVisualTestViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C211B417DF01DB00CA110B /* TableVisualTestViewController.h */; };
 		70C211B817DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
 		70C211B917DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
+		70CB6CE918A398CA0033B020 /* BYSearchBarRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 70CB6CE718A398CA0033B020 /* BYSearchBarRenderer.h */; };
+		70CB6CEA18A398CA0033B020 /* BYSearchBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CB6CE818A398CA0033B020 /* BYSearchBarRenderer.m */; };
+		70CB6CED18A39D7F0033B020 /* BYSearchBarStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70CB6CEB18A39D7F0033B020 /* BYSearchBarStyle.h */; };
+		70CB6CEE18A39D7F0033B020 /* BYSearchBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CB6CEC18A39D7F0033B020 /* BYSearchBarStyle.m */; };
+		70CB6CEF18A39EAA0033B020 /* BYSearchBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CB6CEC18A39D7F0033B020 /* BYSearchBarStyle.m */; };
 		70E19557178462B20096E458 /* FullVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E19555178462B20096E458 /* FullVisualTestViewController.m */; };
 		70EFB6B4180419C300FF75AA /* BYImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EFB6B3180419C300FF75AA /* BYImageTests.m */; };
 		70EFB6BB1804228000FF75AA /* BYTestHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EFB6BA1804228000FF75AA /* BYTestHelper.m */; };
@@ -603,6 +609,10 @@
 		70BFBE9D17FC124F0034365F /* JSONModel+Subclassing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JSONModel+Subclassing.m"; sourceTree = "<group>"; };
 		70C211B417DF01DB00CA110B /* TableVisualTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableVisualTestViewController.h; sourceTree = "<group>"; };
 		70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableVisualTestViewController.m; sourceTree = "<group>"; };
+		70CB6CE718A398CA0033B020 /* BYSearchBarRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYSearchBarRenderer.h; sourceTree = SOURCE_ROOT; };
+		70CB6CE818A398CA0033B020 /* BYSearchBarRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYSearchBarRenderer.m; sourceTree = SOURCE_ROOT; };
+		70CB6CEB18A39D7F0033B020 /* BYSearchBarStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYSearchBarStyle.h; sourceTree = "<group>"; };
+		70CB6CEC18A39D7F0033B020 /* BYSearchBarStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYSearchBarStyle.m; sourceTree = "<group>"; };
 		70E19554178462B10096E458 /* FullVisualTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullVisualTestViewController.h; sourceTree = "<group>"; };
 		70E19555178462B20096E458 /* FullVisualTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullVisualTestViewController.m; sourceTree = "<group>"; };
 		70EFB6B3180419C300FF75AA /* BYImageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYImageTests.m; sourceTree = "<group>"; };
@@ -798,6 +808,8 @@
 				1DE12A85174157B40039F3F3 /* BYViewStyle.m */,
 				83881D341842AB3600A374FC /* BYTabBarStyle.h */,
 				83881D351842AB3600A374FC /* BYTabBarStyle.m */,
+				70CB6CEB18A39D7F0033B020 /* BYSearchBarStyle.h */,
+				70CB6CEC18A39D7F0033B020 /* BYSearchBarStyle.m */,
 			);
 			name = Styles;
 			sourceTree = "<group>";
@@ -1024,6 +1036,7 @@
 		7074287616F861B1003C2D1F /* Renderers */ = {
 			isa = PBXGroup;
 			children = (
+				70CB6CE618A398A60033B020 /* Search Bar */,
 				83881D2F1842AA3C00A374FC /* TabBar */,
 				547C32CE17C4C1B4009D6289 /* Slider */,
 				54D7FD7317B8EA210004F952 /* BarButtonItem */,
@@ -1194,6 +1207,15 @@
 				70BF4EFC17FB294800F807F6 /* UIImage+Base64.m */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		70CB6CE618A398A60033B020 /* Search Bar */ = {
+			isa = PBXGroup;
+			children = (
+				70CB6CE718A398CA0033B020 /* BYSearchBarRenderer.h */,
+				70CB6CE818A398CA0033B020 /* BYSearchBarRenderer.m */,
+			);
+			name = "Search Bar";
 			sourceTree = "<group>";
 		};
 		70FAFBB417E7335200EB6843 /* Switch Style */ = {
@@ -1422,6 +1444,7 @@
 				72AE98D4175BB94800787272 /* BYTableViewCellRenderer.h in Headers */,
 				7066C7CD18290907009E96C6 /* BYBeautifyVersion.h in Headers */,
 				1D464642174669A9003840E4 /* BYLabelRenderer.h in Headers */,
+				70CB6CE918A398CA0033B020 /* BYSearchBarRenderer.h in Headers */,
 				1D464647174669A9003840E4 /* BYBorder.h in Headers */,
 				1D464645174669A9003840E4 /* BYStyleRenderer.h in Headers */,
 				1D464648174669A9003840E4 /* BYFont.h in Headers */,
@@ -1440,6 +1463,7 @@
 				1D46464C174669A9003840E4 /* BYShadow.h in Headers */,
 				72FDED9F17565754002F1093 /* BYTextFieldRenderer.h in Headers */,
 				707F519217FB1FA600928B0B /* JSONKeyMapper.h in Headers */,
+				70CB6CED18A39D7F0033B020 /* BYSearchBarStyle.h in Headers */,
 				1DDB6A39174BA951008A2A73 /* BYBeautify.h in Headers */,
 				702194CE17E1BC2E008161D3 /* BYTableViewCellLabelRenderer.h in Headers */,
 				7009050D178C0EB600D7BEF4 /* BYPlatformVersionUtils.h in Headers */,
@@ -1854,6 +1878,8 @@
 				72AE98DE175BBA7E00787272 /* BYTableViewCellStyle.m in Sources */,
 				72F07948175C941100FC27DB /* BYControlRenderingLayer.m in Sources */,
 				72F07956175C9F2900FC27DB /* UITableViewCell+Beautify.m in Sources */,
+				70CB6CEE18A39D7F0033B020 /* BYSearchBarStyle.m in Sources */,
+				70CB6CEA18A398CA0033B020 /* BYSearchBarRenderer.m in Sources */,
 				72F0795F175CCC2F00FC27DB /* BYDelegateMultiplexer.m in Sources */,
 				70F61B8917831AE100DCA906 /* BYRenderUtils.m in Sources */,
 				7047011717E1C11100FEA5F5 /* UIImageView+Beautify.m in Sources */,
@@ -1895,6 +1921,7 @@
 				70FF54CD17E6FAF600F9BF03 /* BYTableViewCellStyle.m in Sources */,
 				70C211B817DF01DB00CA110B /* TableVisualTestViewController.m in Sources */,
 				544975CF17D8B953003D7115 /* BYThumbLayer.m in Sources */,
+				70CB6CEF18A39EAA0033B020 /* BYSearchBarStyle.m in Sources */,
 				70FF54C317E6FACA00F9BF03 /* BYBorder.m in Sources */,
 				727ADCD116F9B99000D7DDCB /* UIView+Beautify.m in Sources */,
 				727ADCD216F9B99000D7DDCB /* UIView+BeautifyPrivate.m in Sources */,
@@ -1939,6 +1966,7 @@
 				1DE9D309174F7F780070AFD3 /* BYViewControllerRenderer.m in Sources */,
 				7091C1571876CFFE0076D201 /* BYTabBarStyle.m in Sources */,
 				7047013817E1C67C00FEA5F5 /* UISlider+Beautify.m in Sources */,
+				70321B8918A3AC6600227730 /* BYSearchBarRenderer.m in Sources */,
 				72FDED9717565736002F1093 /* BYGradientLayer.m in Sources */,
 				72FDED9A17565742002F1093 /* BYTextFieldRenderer.m in Sources */,
 				70207AE817BE199A00632311 /* ShadowTestViewController.m in Sources */,

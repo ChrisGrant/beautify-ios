@@ -6,11 +6,9 @@
 //  Copyright (c) 2013 Colin Eberhardt. All rights reserved.
 //
 
-#import "BYTheme.h"
-
 static NSString *const CSThemeUpdatedNotification = @"CSThemeUpdatedNotification";
 
-@class BYStyleRenderer;
+@class BYStyleRenderer, BYTheme;
 
 /*
  Theme manager is manages the current theme and related data.
