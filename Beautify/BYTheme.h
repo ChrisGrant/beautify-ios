@@ -20,6 +20,7 @@
 @class BYSliderStyle;
 @class BYBarButtonStyle;
 @class BYTabBarStyle;
+@class BYSearchBarStyle;
 
 /**
  * Represents a rendering configuration, typically containing a number of
@@ -39,6 +40,7 @@
 @property BYBarButtonStyle<Optional> *backButtonItemStyle;
 @property BYSliderStyle<Optional> *sliderStyle;
 @property BYTabBarStyle<Optional> *tabBarStyle;
+@property BYSearchBarStyle<Optional> *searchBarStyle;
 
 +(BYTheme*)fromFile:(NSString*)file;
 

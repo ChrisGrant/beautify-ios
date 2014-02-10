@@ -13,6 +13,8 @@
 +(BYSearchBarStyle*)defaultStyle {
     BYSearchBarStyle *sbs = [BYSearchBarStyle new];
     
+    sbs.backgroundColor = [UIColor colorWithRed:200/255.0f green:200/255.0f blue:205/255.0f alpha:1.0f];
+    
     return sbs;
 }
 

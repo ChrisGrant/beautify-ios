@@ -7,7 +7,10 @@
 //
 
 #import "BYControlRenderer.h"
+@class BYText;
 
 @interface BYTextFieldRenderer : BYControlRenderer
+
+-(void)setTitle:(BYText*)title forState:(UIControlState)state;
 
 @end
