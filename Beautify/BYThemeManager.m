@@ -82,6 +82,8 @@
         [view isKindOfClass:NSClassFromString(@"UICompatibilityInputViewController")] ||
         [view isKindOfClass:NSClassFromString(@"_UISwitchInternalViewNeueStyle1")] ||
         [view isKindOfClass:NSClassFromString(@"_UITableViewCellSeparatorView")] ||
+        [view isKindOfClass:NSClassFromString(@"_UIAlertShimPresentingViewController")] ||
+        [view isKindOfClass:NSClassFromString(@"UIAlertController")] ||
         [view isKindOfClass:[UITabBarController class]]) {
         return nil;
     }
