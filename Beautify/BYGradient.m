@@ -17,7 +17,7 @@
     return gradient;
 }
 
--(id)initWithStops:(NSArray*)stops {
+-(instancetype)initWithStops:(NSArray*)stops {
     if (self = [super init]) {
         _stops = stops;
         _radial = NO;

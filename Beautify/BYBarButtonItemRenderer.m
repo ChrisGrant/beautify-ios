@@ -24,7 +24,7 @@
     BYBarButtonStyle *_backStyle;
 }
 
--(id)initWithView:(id)view theme:(BYTheme*)theme {
+-(instancetype)initWithView:(id)view theme:(BYTheme*)theme {
     if (self = [super initWithView:view theme:theme]) {
         [self addRendererLayers];
         

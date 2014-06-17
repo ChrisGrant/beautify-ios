@@ -10,7 +10,6 @@
 
 @interface UISwitch (Beautify)
 
--(CGSize)desiredSwitchSize;
--(void)setDesiredSwitchSize:(CGSize)frame;
+@property (nonatomic) CGSize desiredSwitchSize;
 
 @end

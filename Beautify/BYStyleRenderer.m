@@ -22,7 +22,7 @@
     __weak UIView *_viewToObserve;
 }
 
--(id)initWithView:(id)view theme:(BYTheme*)theme {
+-(instancetype)initWithView:(id)view theme:(BYTheme*)theme {
     if (self = [super init]) {
 
         _adaptedView = view;

@@ -18,7 +18,7 @@
     BYControlRenderingLayer *_renderingLayer;
 }
 
--(id)initWithView:(id)view theme:(BYTheme*)theme {
+-(instancetype)initWithView:(id)view theme:(BYTheme*)theme {
     if (self = [super initWithView:view theme:theme]) {
         [self setup:view theme:theme];
     }

@@ -30,7 +30,7 @@
 -(void)setImmuneToBeautify:(BOOL)immune {
     objc_setAssociatedObject(self,
                              IMMUNE_TO_BEAUTIFY_NAME,
-                             [NSNumber numberWithBool:immune],
+                             @(immune),
                              OBJC_ASSOCIATION_RETAIN);
     
 }

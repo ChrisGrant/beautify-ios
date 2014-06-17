@@ -25,7 +25,7 @@
 
 @implementation BYTextFieldRenderer
 
--(id)initWithView:(id)view theme:(BYTheme*)theme{
+-(instancetype)initWithView:(id)view theme:(BYTheme*)theme{
     UITextField *textField = (UITextField*)view;
     textField.borderStyle = UITextBorderStyleRoundedRect;
     if(self = [super initWithView:view theme:theme]) {

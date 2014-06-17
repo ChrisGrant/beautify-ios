@@ -22,7 +22,7 @@
     BYTopShadowRenderingLayer *_topLayer;
 }
 
--(id)initWithView:(id)view theme:(BYTheme*)theme {
+-(instancetype)initWithView:(id)view theme:(BYTheme*)theme {
     if(self = [super initWithView:view theme:theme]) {
         UIImageView *imageView = (UIImageView*)view;
         [imageView setClipsToBounds:NO];

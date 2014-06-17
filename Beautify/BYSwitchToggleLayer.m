@@ -141,7 +141,7 @@
     
     if(SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0")) {
         // In iOS7 we have to add the text color as the foreground color in the dict.
-        [attributes setObject:textColor forKey:NSForegroundColorAttributeName];
+        attributes[NSForegroundColorAttributeName] = textColor;
         [text drawInRect:rect withAttributes:attributes];
     }
     else {
