@@ -12,6 +12,7 @@
 #import "BYThemeManager_Private.h"
 #import "BYPlatformVersionUtils.h"
 #import "BYBeautifyVersion.h"
+#import "BYTheme.h"
 
 @implementation BYBeautify
 

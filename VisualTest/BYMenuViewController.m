@@ -8,6 +8,7 @@
 
 #import "BYMenuViewController.h"
 #import "BYThemeManager.h"
+#import "BYTheme.h"
 
 @implementation BYMenuViewController
 

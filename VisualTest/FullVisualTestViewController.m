@@ -40,6 +40,8 @@
     
     yPos += 10;
     
+    [self addSearchBars];
+    
     [self addButtonsWithType:UIButtonTypeCustom andTitle:@"Custom"];
     [self addButtonsWithType:UIButtonTypeRoundedRect andTitle:@"Rounded/System"]; // aka UIButtonTypeSystem in iOS7
     
@@ -400,6 +402,13 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     TableVisualTestViewController *tvc = [TableVisualTestViewController new];
     [[self navigationController] pushViewController:tvc animated:YES];
+}
+
+-(void)addSearchBars {
+    UISearchBar *sb = [UISearchBar new];
+    UISearchBar *s2 = [UISearchBar new];
+    UISearchBar *s3 = [UISearchBar new];
+    [self addDefaultView:sb beautifyDefaultView:s2 andCustomisedView:s3 withHeight:60];
 }
 
 @end
