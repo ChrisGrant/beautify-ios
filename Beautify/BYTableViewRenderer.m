@@ -13,7 +13,7 @@
 
 @implementation BYTableViewRenderer
 
--(id)initWithView:(id)view theme:(BYTheme*)theme {
+-(instancetype)initWithView:(id)view theme:(BYTheme*)theme {
     if (self = [super initWithView:view theme:theme]) {
         // Hijack the label rendering
         [self setup:(UITableView*)view];

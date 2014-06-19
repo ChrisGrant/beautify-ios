@@ -18,7 +18,7 @@
     BYControlRenderingLayer *_renderingLayer;
 }
 
--(id)initWithView:(id)view theme:(BYTheme*)theme {
+-(instancetype)initWithView:(id)view theme:(BYTheme*)theme {
     if (self = [super initWithView:view theme:theme]) {
         [self setup:view theme:theme];
     }
@@ -41,15 +41,15 @@
 
 -(void)configureFromStyle {
     UIViewController *vc = (UIViewController*)self.adaptedView;
-    BYViewControllerStyle *style = self.style;
-    vc.view.backgroundColor = style.backgroundColor;
-    
+
     if ([vc class] == [UINavigationController class]) {
         for (UIViewController *vcs in ((UINavigationController*)vc).viewControllers) {
             [self redrawViewController:vcs];
         }
     }
     else {
+        BYViewControllerStyle *style = self.style;
+        vc.view.backgroundColor = style.backgroundColor;
         [self redrawViewController:vc];
     }
 }
@@ -57,6 +57,7 @@
 -(void)redrawViewController:(UIViewController*)vc {
     [_renderingLayer setFrame:vc.view.bounds];
     [_renderingLayer setNeedsDisplay];
+    vc.view.clipsToBounds = YES;
 }
 
 #pragma mark - Style property setters

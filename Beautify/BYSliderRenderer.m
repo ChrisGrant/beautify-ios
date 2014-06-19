@@ -41,7 +41,7 @@
 
 #define WIDTH_PADDING 3
 
--(id)initWithView:(id)view theme:(BYTheme*)theme {
+-(instancetype)initWithView:(id)view theme:(BYTheme*)theme {
     if (self = [super initWithView:view theme:theme]) {
         // hijack the slider rendering
         UISlider* slider = (UISlider*)view;

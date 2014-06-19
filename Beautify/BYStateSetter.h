@@ -24,9 +24,7 @@
 
 @property NSString *propertyName;
 
--(id)value;
--(void)setValue:(id)val;
--(UIControlState)state;
--(void)setState:(UIControlState)state;
+@property (nonatomic, strong) id value;
+@property (nonatomic) UIControlState state;
 
 @end

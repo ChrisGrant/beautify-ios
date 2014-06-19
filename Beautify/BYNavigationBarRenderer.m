@@ -27,7 +27,7 @@
     UIView *_navBarBackground;
 }
 
--(id)initWithView:(id)view theme:(BYTheme*)theme{
+-(instancetype)initWithView:(id)view theme:(BYTheme*)theme{
     if(self = [super initWithView:view theme:theme]) {
         UINavigationBar *navBar = (UINavigationBar*)view;
         [self setup:navBar theme:theme];

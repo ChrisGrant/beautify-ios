@@ -86,7 +86,7 @@
     return theme;
 }
 
--(id)init {
+-(instancetype)init {
     if (self = [super init]) {
         self.buttonStyle = [BYButtonStyle defaultSystemStyle];
         self.switchStyle = [BYSwitchStyle defaultStyle];
@@ -127,8 +127,8 @@
 
     // Wrap the dictionary in "theme" property as well as adding the current schema version.
     NSMutableDictionary *wrapperDict = [NSMutableDictionary new];
-    [wrapperDict setObject:JSON_SCHEMA_VERSION forKey:SCHEMA_VERSION_KEY];
-    [wrapperDict setObject:dict forKey:THEME_KEY];
+    wrapperDict[SCHEMA_VERSION_KEY] = JSON_SCHEMA_VERSION;
+    wrapperDict[THEME_KEY] = dict;
     return wrapperDict;
 }
 
