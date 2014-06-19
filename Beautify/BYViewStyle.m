@@ -10,7 +10,7 @@
 
 @implementation BYViewStyle
 
--(id)init {
+-(instancetype)init {
     if (self = [super init]) {
         self.alpha = 1.0;
     }

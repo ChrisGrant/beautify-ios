@@ -49,7 +49,7 @@
     BYSwitchGestureView *_gestureView;
 }
 
--(id)initWithView:(id)view theme:(BYTheme*)theme {
+-(instancetype)initWithView:(id)view theme:(BYTheme*)theme {
     if (self = [super initWithView:view theme:theme]) {
         // hijack the switch rendering
         UISwitch* swtch = (UISwitch*)view;

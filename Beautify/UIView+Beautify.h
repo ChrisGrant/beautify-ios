@@ -25,12 +25,7 @@
  This value is recursively passed to all of the subviews of this view. i.e. when setting this value, the same value is
  passed to all of this view's subviews, and all of their subviews etc.
  */
--(BOOL)isImmuneToBeautify;
-
-/*
- Set whether this view is 'immune' to the globally appled theme.
- */
--(void)setImmuneToBeautify:(BOOL)immuneToBeautify;
+@property (nonatomic, getter=isImmuneToBeautify) BOOL immuneToBeautify;
 
 @end
 

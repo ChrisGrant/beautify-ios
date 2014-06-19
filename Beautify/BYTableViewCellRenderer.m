@@ -24,7 +24,7 @@
     UIImageView* _selectedNineBoxImage;
 }
 
--(id)initWithView:(id)view theme:(BYTheme*)theme{
+-(instancetype)initWithView:(id)view theme:(BYTheme*)theme{
     if(self = [super initWithView:view theme:theme]) {
         UITableViewCell *cell = (UITableViewCell*)view;
         [self setup:cell theme:theme];

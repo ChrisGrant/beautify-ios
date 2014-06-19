@@ -25,7 +25,7 @@
     return font;
 }
 
--(id)init {
+-(instancetype)init {
     if(self = [super init]) {
         self.name = [UIFont systemFontOfSize:1.0f].fontName;
     }

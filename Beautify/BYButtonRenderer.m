@@ -21,7 +21,7 @@
     BYLabelRenderer *_labelRenderer;
 }
 
--(id)initWithView:(id)view theme:(BYTheme*)theme {
+-(instancetype)initWithView:(id)view theme:(BYTheme*)theme {
     UIButton *button = (UIButton*)view;
     // Only create a renderer if the button is custom!
     if(button.buttonType != UIButtonTypeCustom && button.buttonType != UIButtonTypeSystem) {
