@@ -24,7 +24,7 @@
 
 @property NSString *propertyName;
 
-@property (nonatomic, strong) id value;
+@property (nonatomic, strong) id <Ignore> value;
 @property (nonatomic) UIControlState state;
 
 @end
