@@ -100,6 +100,7 @@
         self.backButtonItemStyle = [BYBarButtonStyle defaultBackButtonStyle];
         self.sliderStyle = [BYSliderStyle defaultStyle];
         self.tabBarStyle = [BYTabBarStyle defaultStyle];
+        self.searchBarStyle = [BYSearchBarStyle defaultStyle];
     }
     return self;
 }

@@ -79,4 +79,8 @@
     return [BYTextFieldStyle defaultStyle];
 }
 
+-(void)setTitle:(BYText*)title forState:(UIControlState)state {
+    [self setPropertyValue:title forName:@"title" forState:state];
+}
+
 @end

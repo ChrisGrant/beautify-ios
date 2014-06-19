@@ -59,6 +59,21 @@
     }
 }
 
+-(UITextField*)recursivelySearchSubviewsForViewOfType:(Class)classType {
+    for(UIView *v in self.subviews) {
+        if([v isKindOfClass:classType]) {
+            return (UITextField*)v;
+        }
+        else {
+            UITextField *tf = [v recursivelySearchSubviewsForViewOfType:classType];
+            if(tf) {
+                return tf;
+            }
+        }
+    }
+    return nil;
+}
+
 -(void)setPreviousFont:(UIFont*)previousFont {
     objc_setAssociatedObject(self, @"previousFont", previousFont, OBJC_ASSOCIATION_RETAIN);
 }

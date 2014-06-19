@@ -29,6 +29,8 @@
 #import "BYButtonRenderer.h"
 #import "BYImageViewRenderer.h"
 #import "BYBarButtonItemRenderer.h"
+#import "BYTabBarRenderer.h"
+#import "BYSearchBarRenderer.h"
 
 // theme and styles
 #import "BYTheme.h"
@@ -43,6 +45,8 @@
 #import "BYSliderStyle.h"
 #import "BYBarButtonStyle.h"
 #import "BYStyleProtocol.h"
+#import "BYTabBarStyle.h"
+#import "BYSearchBarStyle.h"
 
 // categories that provide access to the renderers
 #import "UIView+Beautify.h"

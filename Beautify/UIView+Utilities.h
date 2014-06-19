@@ -14,6 +14,7 @@
 -(void)dumpViewHierarchy;
 -(void)dumpParentViewHierarchy;
 -(void)recursivelySetSubViewImmunity:(BOOL)immunity;
+-(UITextField*)recursivelySearchSubviewsForViewOfType:(Class)classType;
 
 @property UIFont* previousFont;
 

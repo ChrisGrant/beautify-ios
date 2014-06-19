@@ -9,6 +9,7 @@
 #import "UIView+Beautify.h"
 #import "BYStyleRenderer_Private.h"
 #import "BYThemeManager_Private.h"
+#import "BYTheme.h"
 
 @implementation BYThemeManager
 
@@ -28,7 +29,8 @@
                                 @"UISlider" : @"BYSliderRenderer",
                                 @"UINavigationButton" : @"BYBarButtonItemRenderer",
                                 @"UINavigationItemView" : @"BYBarButtonItemRenderer",
-                                @"UITabBar" : @"BYTabBarRenderer"};
+                                @"UITabBar" : @"BYTabBarRenderer",
+                                @"UISearchBar" : @"BYSearchBarRenderer"};
     });
     return instance;
 }
@@ -95,8 +97,9 @@
         // does the given view match the kind?
         if ([view isKindOfClass:viewClass]) {
             
-            id rendererClass = (self.renderers)[viewType];
-            id rendererClassInstance = [NSClassFromString(rendererClass) alloc];
+            NSString *rendererClassName = (self.renderers)[viewType];
+            Class rendererClass = NSClassFromString(rendererClassName);
+            id rendererClassInstance = [rendererClass alloc];
             
             BYStyleRenderer *renderer = [rendererClassInstance initWithView:view theme:[[BYThemeManager instance] currentTheme]];
             return renderer;
