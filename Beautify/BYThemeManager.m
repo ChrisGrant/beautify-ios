@@ -78,6 +78,12 @@
         [view isKindOfClass:NSClassFromString(@"MKAttributionLabel")] ||
         [view isKindOfClass:NSClassFromString(@"MKSmallCalloutViewController")] ||
         [view isKindOfClass:NSClassFromString(@"_UILayoutGuide")] ||
+        [view isKindOfClass:NSClassFromString(@"UIInputWindowController")] ||
+        [view isKindOfClass:NSClassFromString(@"UICompatibilityInputViewController")] ||
+        [view isKindOfClass:NSClassFromString(@"_UISwitchInternalViewNeueStyle1")] ||
+        [view isKindOfClass:NSClassFromString(@"_UITableViewCellSeparatorView")] ||
+        [view isKindOfClass:NSClassFromString(@"_UIAlertShimPresentingViewController")] ||
+        [view isKindOfClass:NSClassFromString(@"UIAlertController")] ||
         [view isKindOfClass:[UITabBarController class]]) {
         return nil;
     }
