@@ -76,8 +76,4 @@
     [CATransaction commit];
 }
 
--(void)didRotate:(NSNotification*)notification {
-    [self.renderer redraw];
-}
-
 @end
