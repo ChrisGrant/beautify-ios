@@ -28,7 +28,7 @@
 -(void)testTextShadowFromDictWithValidDict {
     BYTextShadow *shadow = [[BYTextShadow alloc] initWithDictionary:@{@"color":@"ffffff", @"offset":@{@"x":@12, @"y":@2}} error:nil];
     XCTAssert([shadow.color isEqualToColor:[UIColor whiteColor]], @"Color should be white!");
-    XCTAssertEqual(shadow.offset, CGSizeMake(12, 2));
+    XCTAssertTrue(CGSizeEqualToSize(shadow.offset, CGSizeMake(12, 2)));
 }
 
 -(void)testTextShadowFromDictWithNilDict {
@@ -45,7 +45,7 @@
     BYTextShadow *shadow = [[BYTextShadow alloc] initWithDictionary:@{@"offset":@{@"x":@3, @"y":@9}} error:nil];
     XCTAssertNotNil(shadow, @"Shadow should not be nil");
     XCTAssertNil(shadow.color, @"We did not specify a color so there shouldn't be one");
-    XCTAssertEqual(shadow.offset, CGSizeMake(3, 9), @"Shadow should have an offset of 3,9");
+    XCTAssertTrue(CGSizeEqualToSize(shadow.offset, CGSizeMake(3, 9)), @"Shadow should have an offset of 3,9");
 }
 
 #pragma mark - State Setters
@@ -60,12 +60,12 @@
                                                                              } error:nil];
     XCTAssert(stateSetter.state == UIControlStateHighlighted, @"Should be for the highlighted state");
     XCTAssertEqual(stateSetter.propertyName, @"titleShadow", @"Should be for the title shadow property");
-    XCTAssert([stateSetter.value isKindOfClass:[BYTextShadow class]], @"Value should be a text shadow!");
+    XCTAssert([(NSObject*)stateSetter.value isKindOfClass:[BYTextShadow class]], @"Value should be a text shadow!");
     
-    BYTextShadow *shadow = stateSetter.value;
+    BYTextShadow *shadow = (BYTextShadow*)stateSetter.value;
     XCTAssertNotNil(shadow, @"Shadow should not be nil");
     XCTAssert([shadow.color isEqualToColor:[UIColor redColor]], @"Color should be red!");
-    XCTAssertEqual(shadow.offset, CGSizeMake(9, 2), @"Shadow should have an offset of 9,2");
+    XCTAssertTrue(CGSizeEqualToSize(shadow.offset, CGSizeMake(9, 2)), @"Shadow should have an offset of 9,2");
 }
 
 -(void)testStateSetterFromDictWithoutState {
@@ -106,7 +106,7 @@
     
     XCTAssert([switchState.textShadow.color isEqualToColor:[UIColor greenColor]], @"Should be green");
     
-    XCTAssertEqual(switchState.textShadow.offset, CGSizeMake(1, 2), @"Should have offset, 1,2");
+    XCTAssertTrue(CGSizeEqualToSize(switchState.textShadow.offset, CGSizeMake(1, 2)), @"Should have offset, 1,2");
 }
 
 -(void)testSwitchStateWithoutText {
@@ -127,7 +127,7 @@
     
     XCTAssert([switchState.textShadow.color isEqualToColor:[UIColor greenColor]], @"Should be green");
     
-    XCTAssertEqual(switchState.textShadow.offset, CGSizeMake(1, 2), @"Should have offset, 1,2");
+    XCTAssertTrue(CGSizeEqualToSize(switchState.textShadow.offset, CGSizeMake(1, 2)), @"Should have offset, 1,2");
 }
 
 -(void)testSwitchStateWithoutTextStyle {
@@ -140,7 +140,7 @@
     XCTAssert([switchState.backgroundColor isEqualToColor:[UIColor blueColor]], @"Should be blue");
     
     XCTAssert([switchState.textShadow.color isEqualToColor:[UIColor greenColor]], @"Should be green");
-    XCTAssertEqual(switchState.textShadow.offset, CGSizeMake(1, 2), @"Should have offset, 1,2");
+    XCTAssertTrue(CGSizeEqualToSize(switchState.textShadow.offset, CGSizeMake(1, 2)), @"Should have offset, 1,2");
 }
 
 -(void)testSwitchStateWithNoDictionary {
@@ -155,7 +155,7 @@
                                                               @"offset": @{@"x": @3, @"y": @2},
                                                               @"color": @"#0000FF"} error:nil];
     XCTAssertEqual(2.0f, shadow.radius, @"Shadow radius should be 2");
-    XCTAssertEqual(CGSizeMake(3, 2), shadow.offset, @"Offset should be 3, 2");
+    XCTAssertTrue(CGSizeEqualToSize(CGSizeMake(3, 2), shadow.offset), @"Offset should be 3, 2");
     XCTAssert([shadow.color isEqualToColor:[UIColor blueColor]], @"Color should be blue");
 }
 
@@ -163,17 +163,17 @@
     BYShadow *shadow = [[BYShadow alloc] initWithDictionary:@{@"radius": @2,
                                                               @"color": @"#0000FF"} error:nil];
     XCTAssertEqual(2.0f, shadow.radius, @"Shadow radius should be 2");
-    XCTAssertEqual(CGSizeZero, shadow.offset, @"Should be a zero shadow offset if we don't specify one.");
+    XCTAssertTrue(CGSizeEqualToSize(CGSizeZero, shadow.offset), @"Should be a zero shadow offset if we don't specify one.");
     XCTAssert([shadow.color isEqualToColor:[UIColor blueColor]], @"Color should be blue");
     
     shadow = [[BYShadow alloc] initWithDictionary:@{@"radius": @2} error:nil];
     XCTAssertEqual(2.0f, shadow.radius, @"Shadow radius should be 2");
-    XCTAssertEqual(CGSizeZero, shadow.offset, @"Should be a zero shadow offset if we don't specify one.");
+    XCTAssertTrue(CGSizeEqualToSize(CGSizeZero, shadow.offset), @"Should be a zero shadow offset if we don't specify one.");
     XCTAssertNil(shadow.color, @"Color should be nil if we don't specify one");
     
     shadow = [[BYShadow alloc] initWithDictionary:@{@"color": @"00FF00"} error:nil];
     XCTAssertEqual(0.0f, shadow.radius, @"Shadow radius should be 0");
-    XCTAssertEqual(CGSizeZero, shadow.offset, @"Should be a zero shadow offset if we don't specify one.");
+    XCTAssertTrue(CGSizeEqualToSize(CGSizeZero, shadow.offset), @"Should be a zero shadow offset if we don't specify one.");
     XCTAssert([shadow.color isEqual:[UIColor greenColor]], @"Color should be green.");
 }
 
@@ -193,7 +193,7 @@
                                                                     } error:nil];
     
     XCTAssertEqual(gradient.radial, YES, @"Gradient should be radial");
-    XCTAssertEqual(gradient.radialOffset, CGSizeMake(20, 30), @"Radial offset should be 20, 30");
+    XCTAssertTrue(CGSizeEqualToSize(gradient.radialOffset, CGSizeMake(20, 30)), @"Radial offset should be 20, 30");
     XCTAssertEqual((NSUInteger)3, gradient.stops.count, @"Should be 3 stops");
     
     BYGradientStop *stop1 = gradient.stops[0];
@@ -213,7 +213,7 @@
                                                         } error:nil];
     
     XCTAssertEqual(gradient.radial, NO, @"Gradient shouldn't be radial");
-    XCTAssertEqual(gradient.radialOffset, CGSizeZero, @"Radial offset should 0,0");
+    XCTAssertTrue(CGSizeEqualToSize(gradient.radialOffset, CGSizeZero), @"Radial offset should 0,0");
     XCTAssertEqual((NSUInteger)2, gradient.stops.count, @"Should be 2 stops");
     
     stop1 = gradient.stops[0];
@@ -257,7 +257,7 @@
                                                                         @"contentMode":@"fill"} error:nil];
     XCTAssertNotNil(bgIm, @"Image shouldn't be nil");
     XCTAssertNotNil(bgIm.data, @"Image's image shouldn't be nil");
-    XCTAssertEqual(bgIm.data.size, CGSizeMake(15, 15), @"Image should be 15x15");
+    XCTAssertTrue(CGSizeEqualToSize(bgIm.data.size, CGSizeMake(15, 15)), @"Image should be 15x15");
     
     XCTAssertEqual(bgIm.contentMode, BYImageContentModeFill, @"Should be fill");
     

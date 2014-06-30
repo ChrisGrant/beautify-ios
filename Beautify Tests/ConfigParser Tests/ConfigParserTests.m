@@ -517,7 +517,7 @@
     BYShadow *shadow = array;
     XCTAssert([shadow.color isEqualToColor:color], @"Colors should be equal");
     XCTAssertEqual(shadow.radius, radius, @"Radii should be equal");
-    XCTAssertEqual(shadow.offset, offset, @"Offset should be equal");
+    XCTAssertTrue(CGSizeEqualToSize(shadow.offset, offset), @"Offset should be equal");
 }
 
 -(void)assertGradient:(BYGradient*)gradient hasStopOneColor:(UIColor*)color1 atPosition:(float)position1
@@ -528,7 +528,7 @@
     
     XCTAssertEqual(gradient.radial, radial, @"Radial should be equal");
     if(gradient.radial) {
-        XCTAssertEqual(gradient.radialOffset, offset, @"Offsets should be equal");
+        XCTAssertTrue(CGSizeEqualToSize(gradient.radialOffset, offset), @"Offsets should be equal");
     }
     
     BYGradientStop *stop1 = gradient.stops[0];
@@ -552,7 +552,7 @@
     if(!textShadow) {
         return;
     }
-    XCTAssertEqual(textShadow.offset, size, @"Text shadow should be equal");
+    XCTAssertTrue(CGSizeEqualToSize(textShadow.offset, size), @"Text shadow should be equal");
     XCTAssert([textShadow.color isEqualToColor:color], @"Text shadow should be equal");
 }
 
