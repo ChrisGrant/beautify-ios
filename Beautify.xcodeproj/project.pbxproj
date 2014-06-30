@@ -7,69 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D46461317466942003840E4 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52016F9AC8500D08DBB /* NSObject+Properties.m */; };
-		1D46461417466942003840E4 /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52216F9AC8500D08DBB /* UIColor+HexColors.m */; };
-		1D46461617466942003840E4 /* BYLabelRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A91174158140039F3F3 /* BYLabelRenderer.m */; };
-		1D46461817466942003840E4 /* BYSwitchBorderLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A991741582F0039F3F3 /* BYSwitchBorderLayer.m */; };
-		1D46461A17466942003840E4 /* BYSwitchLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A9D1741582F0039F3F3 /* BYSwitchLayer.m */; };
-		1D46461B17466942003840E4 /* BYSwitchRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A9F1741582F0039F3F3 /* BYSwitchRenderer.m */; };
-		1D46461C17466942003840E4 /* BYSwitchShadowLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12AA11741582F0039F3F3 /* BYSwitchShadowLayer.m */; };
-		1D46461D17466942003840E4 /* BYSwitchToggleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12AA31741582F0039F3F3 /* BYSwitchToggleLayer.m */; };
-		1D46461F17466942003840E4 /* BYButtonRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12AB31741583F0039F3F3 /* BYButtonRenderer.m */; };
-		1D46462017466942003840E4 /* BYStyleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12ABA174158650039F3F3 /* BYStyleLayer.m */; };
-		1D46462117466942003840E4 /* BYStyleRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12ABC174158650039F3F3 /* BYStyleRenderer.m */; };
-		1D46462217466942003840E4 /* BYViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12ABE174158650039F3F3 /* BYViewRenderer.m */; };
-		1D46462317466942003840E4 /* BYBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEFD172EA5EF000C7811 /* BYBorder.m */; };
-		1D46462417466942003840E4 /* BYFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEE9172EA5B1000C7811 /* BYFont.m */; };
-		1D46462517466942003840E4 /* BYGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEEB172EA5B2000C7811 /* BYGradient.m */; };
-		1D46462617466942003840E4 /* BYGradientStop.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEED172EA5B3000C7811 /* BYGradientStop.m */; };
-		1D46462817466942003840E4 /* BYShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEF1172EA5B6000C7811 /* BYShadow.m */; };
-		1D46462917466942003840E4 /* BYButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FF01172EA606000C7811 /* BYButtonStyle.m */; };
-		1D46462A17466942003840E4 /* BYLabelStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A7F174157B40039F3F3 /* BYLabelStyle.m */; };
-		1D46462B17466942003840E4 /* BYStyleCustomizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A81174157B40039F3F3 /* BYStyleCustomizer.m */; };
-		1D46462C17466942003840E4 /* BYSwitchStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A83174157B40039F3F3 /* BYSwitchStyle.m */; };
-		1D46462D17466942003840E4 /* BYViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A85174157B40039F3F3 /* BYViewStyle.m */; };
-		1D46462E17466942003840E4 /* BYStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 729757C7173BB861003A34A5 /* BYStyle.m */; };
-		1D46462F17466942003840E4 /* BYStateSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 729757CD173BED3A003A34A5 /* BYStateSetter.m */; };
-		1D46463017466942003840E4 /* BYStyleSetterCustomizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E168F3173D2EAF004CB021 /* BYStyleSetterCustomizer.m */; };
-		1D46463117466942003840E4 /* BYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FF03172EA61F000C7811 /* BYTheme.m */; };
-		1D46463217466942003840E4 /* UIView+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54616F9AC9C00D08DBB /* UIView+Beautify.m */; };
-		1D46463317466942003840E4 /* UIView+BeautifyPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54816F9AC9C00D08DBB /* UIView+BeautifyPrivate.m */; };
-		1D46463417466942003840E4 /* UIView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54A16F9AC9C00D08DBB /* UIView+Utilities.m */; };
-		1D464642174669A9003840E4 /* BYLabelRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A90174158140039F3F3 /* BYLabelRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D464643174669A9003840E4 /* BYSwitchRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A9E1741582F0039F3F3 /* BYSwitchRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D464644174669A9003840E4 /* BYButtonRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AB21741583F0039F3F3 /* BYButtonRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D464645174669A9003840E4 /* BYStyleRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12ABB174158650039F3F3 /* BYStyleRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D464646174669A9003840E4 /* BYViewRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12ABD174158650039F3F3 /* BYViewRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D464647174669A9003840E4 /* BYBorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEFC172EA5EE000C7811 /* BYBorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D464648174669A9003840E4 /* BYFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEE8172EA5B0000C7811 /* BYFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D464649174669A9003840E4 /* BYGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEEA172EA5B1000C7811 /* BYGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D46464A174669A9003840E4 /* BYGradientStop.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEEC172EA5B3000C7811 /* BYGradientStop.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D46464B174669A9003840E4 /* BYBackgroundImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEEE172EA5B4000C7811 /* BYBackgroundImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D46464C174669A9003840E4 /* BYShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEF0172EA5B5000C7811 /* BYShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D46464D174669A9003840E4 /* UIView+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA54516F9AC9C00D08DBB /* UIView+Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D46464F174669C4003840E4 /* BYStyleRenderer_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DC6EACD174512BD004EDF37 /* BYStyleRenderer_Private.h */; settings = {ATTRIBUTES = (); }; };
-		1D464650174669C4003840E4 /* BYViewRenderer_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DC6EACE174512BD004EDF37 /* BYViewRenderer_Private.h */; settings = {ATTRIBUTES = (); }; };
-		1D464651174669C4003840E4 /* UIView+BeautifyPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA54716F9AC9C00D08DBB /* UIView+BeautifyPrivate.h */; settings = {ATTRIBUTES = (); }; };
-		1D464655174669D7003840E4 /* NSObject+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA51F16F9AC8500D08DBB /* NSObject+Properties.h */; };
-		1D464656174669D7003840E4 /* UIColor+HexColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA52116F9AC8500D08DBB /* UIColor+HexColors.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		1D464659174669D7003840E4 /* BYSwitchBorderLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A981741582F0039F3F3 /* BYSwitchBorderLayer.h */; };
-		1D46465B174669D7003840E4 /* BYSwitchLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A9C1741582F0039F3F3 /* BYSwitchLayer.h */; };
-		1D46465C174669D7003840E4 /* BYSwitchShadowLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AA01741582F0039F3F3 /* BYSwitchShadowLayer.h */; };
-		1D46465D174669D7003840E4 /* BYSwitchToggleLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AA21741582F0039F3F3 /* BYSwitchToggleLayer.h */; };
-		1D464660174669D7003840E4 /* BYStyleLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AB9174158650039F3F3 /* BYStyleLayer.h */; };
-		1D464661174669D7003840E4 /* BYButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FF00172EA5FE000C7811 /* BYButtonStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D464662174669D7003840E4 /* BYLabelStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A7E174157B40039F3F3 /* BYLabelStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D464663174669D7003840E4 /* BYStyleCustomizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A80174157B40039F3F3 /* BYStyleCustomizer.h */; };
-		1D464664174669D7003840E4 /* BYSwitchStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A82174157B40039F3F3 /* BYSwitchStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D464665174669D7003840E4 /* BYViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A84174157B40039F3F3 /* BYViewStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D464666174669D7003840E4 /* BYStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 729757C6173BB861003A34A5 /* BYStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D464667174669D7003840E4 /* BYStateSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 729757CC173BED3A003A34A5 /* BYStateSetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D464668174669D7003840E4 /* BYStyleProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A8E174157D20039F3F3 /* BYStyleProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D464669174669D7003840E4 /* BYStyleSetterCustomizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E168F2173D2EAE004CB021 /* BYStyleSetterCustomizer.h */; };
-		1D46466A174669D7003840E4 /* BYTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FF02172EA612000C7811 /* BYTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D46466B174669D7003840E4 /* UIView+Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA54916F9AC9C00D08DBB /* UIView+Utilities.h */; };
-		1D46467617466A07003840E4 /* Beautify-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 1DF3D71C1743E58400C40FA9 /* Beautify-Prefix.pch */; };
 		1D56087917415D8800FFD529 /* BYLabelRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A91174158140039F3F3 /* BYLabelRenderer.m */; };
 		1D56087B17415DB600FFD529 /* BYSwitchBorderLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A991741582F0039F3F3 /* BYSwitchBorderLayer.m */; };
 		1D56087D17415DB600FFD529 /* BYSwitchLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A9D1741582F0039F3F3 /* BYSwitchLayer.m */; };
@@ -81,44 +18,14 @@
 		1D56088417415DB600FFD529 /* BYStyleRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12ABC174158650039F3F3 /* BYStyleRenderer.m */; };
 		1D56088517415DB600FFD529 /* BYViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12ABE174158650039F3F3 /* BYViewRenderer.m */; };
 		1D56088617415DB600FFD529 /* BYStyleCustomizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A81174157B40039F3F3 /* BYStyleCustomizer.m */; };
-		1DDB696B174A2887008A2A73 /* BYFont_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6969174A2846008A2A73 /* BYFont_Private.h */; };
-		1DDB6A39174BA951008A2A73 /* BYBeautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6A37174BA951008A2A73 /* BYBeautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DDB6A3B174BA951008A2A73 /* BYBeautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB6A38174BA951008A2A73 /* BYBeautify.m */; };
 		1DDB6A45174BAA40008A2A73 /* BYThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB6A43174BAA40008A2A73 /* BYThemeManager.m */; };
-		1DDB6A46174BAA40008A2A73 /* BYThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB6A43174BAA40008A2A73 /* BYThemeManager.m */; };
-		1DDB6A49174BB209008A2A73 /* BYBeautify_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6A48174BAE3F008A2A73 /* BYBeautify_Private.h */; };
-		1DE9D288174E6D890070AFD3 /* BYText.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D286174E6D880070AFD3 /* BYText.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DE9D28A174E6D890070AFD3 /* BYText.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D287174E6D890070AFD3 /* BYText.m */; };
-		1DE9D2EA174F7BA50070AFD3 /* UIViewController+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D2E8174F7BA50070AFD3 /* UIViewController+Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DE9D2EC174F7BA50070AFD3 /* UIViewController+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2E9174F7BA50070AFD3 /* UIViewController+Beautify.m */; };
-		1DE9D2ED174F7BA50070AFD3 /* UIViewController+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2E9174F7BA50070AFD3 /* UIViewController+Beautify.m */; };
-		1DE9D2F8174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D2F6174F7CD00070AFD3 /* UIViewController+BeautifyPrivate.h */; };
 		1DE9D2FA174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2F7174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m */; };
-		1DE9D2FB174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2F7174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m */; };
-		1DE9D2FF174F7F540070AFD3 /* BYViewControllerStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D2FD174F7F540070AFD3 /* BYViewControllerStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1DE9D302174F7F540070AFD3 /* BYViewControllerStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2FE174F7F540070AFD3 /* BYViewControllerStyle.m */; };
-		1DE9D307174F7F780070AFD3 /* BYViewControllerRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D305174F7F780070AFD3 /* BYViewControllerRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1DE9D309174F7F780070AFD3 /* BYViewControllerRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D306174F7F780070AFD3 /* BYViewControllerRenderer.m */; };
-		1DE9D30A174F7F780070AFD3 /* BYViewControllerRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D306174F7F780070AFD3 /* BYViewControllerRenderer.m */; };
 		543570E617BE312C007FA7CE /* UIBarButtonItem+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 543570E517BE312C007FA7CE /* UIBarButtonItem+Beautify.m */; };
-		543570E717BE312C007FA7CE /* UIBarButtonItem+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 543570E517BE312C007FA7CE /* UIBarButtonItem+Beautify.m */; };
-		543570EA17BE313E007FA7CE /* UIBarButtonItem+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 543570E917BE313E007FA7CE /* UIBarButtonItem+Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		543570F017BE32C3007FA7CE /* Beautify-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 543570EF17BE32C3007FA7CE /* Beautify-Info.plist */; };
-		544975CD17D8B953003D7115 /* BYThumbLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 544975CB17D8B953003D7115 /* BYThumbLayer.h */; };
 		544975CF17D8B953003D7115 /* BYThumbLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 544975CC17D8B953003D7115 /* BYThumbLayer.m */; };
-		544975D017D8B953003D7115 /* BYThumbLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 544975CC17D8B953003D7115 /* BYThumbLayer.m */; };
-		547C32D117C4C1EE009D6289 /* BYSliderStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 547C32CF17C4C1EE009D6289 /* BYSliderStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		547C32D417C4C1EE009D6289 /* BYSliderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C32D017C4C1EE009D6289 /* BYSliderStyle.m */; };
-		547C32D817C4C24B009D6289 /* BYSliderBarBorderLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 547C32D617C4C24B009D6289 /* BYSliderBarBorderLayer.h */; };
-		54A995B7179FD29C00B9B17C /* BYDropShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A995B5179FD29C00B9B17C /* BYDropShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54A995BA179FD29C00B9B17C /* BYDropShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* BYDropShadow.m */; };
-		54ABF0E817A286EE0070B0B6 /* UINavigationBar+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 5480C1FC17A0127000F4007D /* UINavigationBar+Beautify.h */; };
-		54ABF0EB17A286F20070B0B6 /* UINavigationBar+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480C1FD17A0127000F4007D /* UINavigationBar+Beautify.m */; };
 		54ABF0EC17A287110070B0B6 /* UINavigationBar+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480C1FD17A0127000F4007D /* UINavigationBar+Beautify.m */; };
-		54DDE26C17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DDE26A17C65D1A0081E1AD /* BYSliderMaximumTrackLayer.h */; };
 		54DDE26E17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE26B17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m */; };
-		54DDE26F17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE26B17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m */; };
-		7000537917FDC0F70095F2EE /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F516C17FB10A000928B0B /* JSONModel.m */; };
 		7007254217EAF0C0001F7C41 /* PartialNavigationBarStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7007253C17EAF0C0001F7C41 /* PartialNavigationBarStyle.json */; };
 		7007254317EAF0C0001F7C41 /* PartialTableViewCellStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7007253D17EAF0C0001F7C41 /* PartialTableViewCellStyle.json */; };
 		7007254417EAF0C0001F7C41 /* PartialTextFieldStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7007253E17EAF0C0001F7C41 /* PartialTextFieldStyle.json */; };
@@ -131,7 +38,6 @@
 		7007255417EB0432001F7C41 /* ValidBarButtonStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7007254E17EB0432001F7C41 /* ValidBarButtonStyle.json */; };
 		7007255517EB0432001F7C41 /* ValidImageViewStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7007254F17EB0432001F7C41 /* ValidImageViewStyle.json */; };
 		7007255617EB0432001F7C41 /* ValidSliderStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7007255017EB0432001F7C41 /* ValidSliderStyle.json */; };
-		7009050D178C0EB600D7BEF4 /* BYPlatformVersionUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7009050B178C0EB600D7BEF4 /* BYPlatformVersionUtils.h */; };
 		700E154417E30668006E124E /* ConfigParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E154317E30668006E124E /* ConfigParserTests.m */; };
 		700E154617E30691006E124E /* BeautifyColorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 700E154517E30691006E124E /* BeautifyColorTests.m */; };
 		700E154717E30D0F006E124E /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52216F9AC8500D08DBB /* UIColor+HexColors.m */; };
@@ -162,7 +68,6 @@
 		700ED7D517E9B933009C2C49 /* ValidLabelStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 700ED7D317E9B933009C2C49 /* ValidLabelStyle.json */; };
 		700ED7D917E9C0DF009C2C49 /* PartialVCStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 700ED7D717E9C0DF009C2C49 /* PartialVCStyle.json */; };
 		700ED7DA17E9C0DF009C2C49 /* ValidVCStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 700ED7D817E9C0DF009C2C49 /* ValidVCStyle.json */; };
-		700EE91D17E1FFAB00164EA1 /* BYThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6A42174BAA40008A2A73 /* BYThemeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		700F292616F3711300E85ED3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72BF4B3416F3487A00A0C0E3 /* UIKit.framework */; };
 		700F293116F3711300E85ED3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 700F293016F3711300E85ED3 /* main.m */; };
 		700F293516F3711300E85ED3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 700F293416F3711300E85ED3 /* AppDelegate.m */; };
@@ -170,16 +75,6 @@
 		700F293916F3711300E85ED3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700F293816F3711300E85ED3 /* Default@2x.png */; };
 		700F293B16F3711300E85ED3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 700F293A16F3711300E85ED3 /* Default-568h@2x.png */; };
 		70207AE817BE199A00632311 /* ShadowTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70207AE717BE199A00632311 /* ShadowTestViewController.m */; };
-		702194C517E1BC0D008161D3 /* BYSliderBarBorderLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194BF17E1BC0D008161D3 /* BYSliderBarBorderLayer.m */; };
-		702194C617E1BC0D008161D3 /* BYSliderBarShadowLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 702194C017E1BC0D008161D3 /* BYSliderBarShadowLayer.h */; };
-		702194C717E1BC0D008161D3 /* BYSliderBarShadowLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194C117E1BC0D008161D3 /* BYSliderBarShadowLayer.m */; };
-		702194C817E1BC0D008161D3 /* BYSliderLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 702194C217E1BC0D008161D3 /* BYSliderLayer.h */; };
-		702194C917E1BC0D008161D3 /* BYSliderMinimumTrackLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 702194C317E1BC0D008161D3 /* BYSliderMinimumTrackLayer.h */; };
-		702194CA17E1BC0D008161D3 /* BYSliderMinimumTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194C417E1BC0D008161D3 /* BYSliderMinimumTrackLayer.m */; };
-		702194CE17E1BC2E008161D3 /* BYTableViewCellLabelRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 702194CB17E1BC2E008161D3 /* BYTableViewCellLabelRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		702194CF17E1BC2E008161D3 /* BYTableViewRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 702194CC17E1BC2E008161D3 /* BYTableViewRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		702194D017E1BC2E008161D3 /* BYTableViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194CD17E1BC2E008161D3 /* BYTableViewRenderer.m */; };
-		702194FA17E1BC95008161D3 /* BYTableViewCellLabelRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194F917E1BC95008161D3 /* BYTableViewCellLabelRenderer.m */; };
 		7027C5D117EC92F5006D8008 /* flat.json in Resources */ = {isa = PBXBuildFile; fileRef = 7027C5D017EC92F5006D8008 /* flat.json */; };
 		7027C5D417ECA20E006D8008 /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52216F9AC8500D08DBB /* UIColor+HexColors.m */; };
 		702BA97A181FC9E100FA5D73 /* BYBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* BYBarButtonStyle.m */; };
@@ -188,8 +83,6 @@
 		702F4512181E790300748D30 /* ModalContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 702F4511181E790300748D30 /* ModalContentViewController.m */; };
 		70321B8918A3AC6600227730 /* BYSearchBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CB6CE818A398CA0033B020 /* BYSearchBarRenderer.m */; };
 		7036DB4916F8659400EBA8AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72DCD86C16F377DE008ECF8B /* QuartzCore.framework */; };
-		70397B8F17DF33190095001B /* BYBarButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70397B8D17DF33190095001B /* BYBarButtonStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70397B9217DF33190095001B /* BYBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* BYBarButtonStyle.m */; };
 		703C8F5B1815174800C80487 /* VisualTest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 703C8F5A1815174800C80487 /* VisualTest.storyboard */; };
 		703C8F5E18151E6600C80487 /* BYRendererPrecedenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 703C8F5D18151E6600C80487 /* BYRendererPrecedenceViewController.m */; };
 		703C8F5F18152B5900C80487 /* flat.json in Resources */ = {isa = PBXBuildFile; fileRef = 7027C5D017EC92F5006D8008 /* flat.json */; };
@@ -197,24 +90,6 @@
 		703C8F6318152CE200C80487 /* BYMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 703C8F6218152CE200C80487 /* BYMenuViewController.m */; };
 		703C8F6418152DF900C80487 /* UIImage+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF4EFC17FB294800F807F6 /* UIImage+Base64.m */; };
 		7044FB5C17F072620066E61A /* BYCopyingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7044FB5B17F072620066E61A /* BYCopyingTests.m */; };
-		7047010517E1C06B00FEA5F5 /* NSObject+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010217E1C06B00FEA5F5 /* NSObject+Beautify.h */; };
-		7047010617E1C06B00FEA5F5 /* NSObject+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010317E1C06B00FEA5F5 /* NSObject+Beautify.m */; };
-		7047010717E1C06B00FEA5F5 /* UIBarButtonItem+BeautifyPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010417E1C06B00FEA5F5 /* UIBarButtonItem+BeautifyPrivate.h */; };
-		7047010A17E1C08F00FEA5F5 /* UISlider+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010817E1C08F00FEA5F5 /* UISlider+Beautify.h */; };
-		7047010B17E1C08F00FEA5F5 /* UISlider+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010917E1C08F00FEA5F5 /* UISlider+Beautify.m */; };
-		7047011217E1C11100FEA5F5 /* BYImageViewRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010C17E1C11100FEA5F5 /* BYImageViewRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7047011317E1C11100FEA5F5 /* BYTopShadowRenderingLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010D17E1C11100FEA5F5 /* BYTopShadowRenderingLayer.h */; };
-		7047011417E1C11100FEA5F5 /* BYTopShadowRenderingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010E17E1C11100FEA5F5 /* BYTopShadowRenderingLayer.m */; };
-		7047011517E1C11100FEA5F5 /* BYImageViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010F17E1C11100FEA5F5 /* BYImageViewRenderer.m */; };
-		7047011617E1C11100FEA5F5 /* UIImageView+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047011017E1C11100FEA5F5 /* UIImageView+Beautify.h */; };
-		7047011717E1C11100FEA5F5 /* UIImageView+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011117E1C11100FEA5F5 /* UIImageView+Beautify.m */; };
-		7047011A17E1C13200FEA5F5 /* BYSliderLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011817E1C13200FEA5F5 /* BYSliderLayer.m */; };
-		7047011B17E1C13200FEA5F5 /* BYSliderRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011917E1C13200FEA5F5 /* BYSliderRenderer.m */; };
-		7047011D17E1C14300FEA5F5 /* BYSwitchGestureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011C17E1C14300FEA5F5 /* BYSwitchGestureView.m */; };
-		7047012017E1C1F200FEA5F5 /* UISwitch+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047011E17E1C1F200FEA5F5 /* UISwitch+Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7047012117E1C1F200FEA5F5 /* UISwitch+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011F17E1C1F200FEA5F5 /* UISwitch+Beautify.m */; };
-		7047012917E1C23800FEA5F5 /* BYSwitchGestureView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047012817E1C23800FEA5F5 /* BYSwitchGestureView.h */; };
-		7047012D17E1C27A00FEA5F5 /* BYSliderRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047012C17E1C27A00FEA5F5 /* BYSliderRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7047012E17E1C3D200FEA5F5 /* BYBeautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB6A38174BA951008A2A73 /* BYBeautify.m */; };
 		7047012F17E1C3F900FEA5F5 /* BYSliderLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011817E1C13200FEA5F5 /* BYSliderLayer.m */; };
 		7047013117E1C40100FEA5F5 /* BYSwitchGestureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011C17E1C14300FEA5F5 /* BYSwitchGestureView.m */; };
@@ -230,13 +105,195 @@
 		7047013E17E1C6CA00FEA5F5 /* BYTopShadowRenderingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010E17E1C11100FEA5F5 /* BYTopShadowRenderingLayer.m */; };
 		7047013F17E1C6CE00FEA5F5 /* BYImageViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010F17E1C11100FEA5F5 /* BYImageViewRenderer.m */; };
 		7047014017E1C6D100FEA5F5 /* UIImageView+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011117E1C11100FEA5F5 /* UIImageView+Beautify.m */; };
-		7066C7CD18290907009E96C6 /* BYBeautifyVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 7066C7CC18290907009E96C6 /* BYBeautifyVersion.h */; };
+		7065B60319617B7D00A5FA36 /* Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 7065B60219617B7D00A5FA36 /* Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B61319617B7D00A5FA36 /* Beautify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7065B5FE19617B7D00A5FA36 /* Beautify.framework */; };
+		7065B61419617B7D00A5FA36 /* Beautify.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7065B5FE19617B7D00A5FA36 /* Beautify.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		7065B61E19617B8C00A5FA36 /* NSObject+Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA51F16F9AC8500D08DBB /* NSObject+Properties.h */; };
+		7065B61F19617B9000A5FA36 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52016F9AC8500D08DBB /* NSObject+Properties.m */; };
+		7065B62019617B9300A5FA36 /* UIColor+HexColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA52116F9AC8500D08DBB /* UIColor+HexColors.h */; };
+		7065B62119617B9800A5FA36 /* UIColor+HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52216F9AC8500D08DBB /* UIColor+HexColors.m */; };
+		7065B62219617B9C00A5FA36 /* UIImage+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 70BF4EFB17FB294700F807F6 /* UIImage+Base64.h */; };
+		7065B62319617BA000A5FA36 /* UIImage+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF4EFC17FB294800F807F6 /* UIImage+Base64.m */; };
+		7065B62419617BA400A5FA36 /* JSONValueTransformer+BeautifyExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 707A869117F9B435005A102F /* JSONValueTransformer+BeautifyExtension.h */; };
+		7065B62519617BA600A5FA36 /* JSONValueTransformer+BeautifyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 707A869217F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m */; };
+		7065B62619617BAB00A5FA36 /* BYSearchBarRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 70CB6CE718A398CA0033B020 /* BYSearchBarRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B62719617BAF00A5FA36 /* BYSearchBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CB6CE818A398CA0033B020 /* BYSearchBarRenderer.m */; };
+		7065B62819617BB500A5FA36 /* BYTabBarRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 83881D301842AABB00A374FC /* BYTabBarRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B62919617BB800A5FA36 /* BYTabBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83881D311842AABB00A374FC /* BYTabBarRenderer.m */; };
+		7065B62A19617BBA00A5FA36 /* BYSliderBarBorderLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 547C32D617C4C24B009D6289 /* BYSliderBarBorderLayer.h */; };
+		7065B62B19617BBC00A5FA36 /* BYSliderBarBorderLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194BF17E1BC0D008161D3 /* BYSliderBarBorderLayer.m */; };
+		7065B62C19617BC000A5FA36 /* BYSliderBarShadowLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 702194C017E1BC0D008161D3 /* BYSliderBarShadowLayer.h */; };
+		7065B62D19617BC300A5FA36 /* BYSliderBarShadowLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194C117E1BC0D008161D3 /* BYSliderBarShadowLayer.m */; };
+		7065B62E19617BCB00A5FA36 /* BYSliderLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 702194C217E1BC0D008161D3 /* BYSliderLayer.h */; };
+		7065B62F19617BCE00A5FA36 /* BYSliderLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011817E1C13200FEA5F5 /* BYSliderLayer.m */; };
+		7065B63019617BDD00A5FA36 /* BYSliderMaximumTrackLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DDE26A17C65D1A0081E1AD /* BYSliderMaximumTrackLayer.h */; };
+		7065B63119617BE100A5FA36 /* BYSliderMaximumTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DDE26B17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m */; };
+		7065B63219617BE300A5FA36 /* BYSliderMinimumTrackLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 702194C317E1BC0D008161D3 /* BYSliderMinimumTrackLayer.h */; };
+		7065B63319617BE800A5FA36 /* BYSliderMinimumTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194C417E1BC0D008161D3 /* BYSliderMinimumTrackLayer.m */; };
+		7065B63419617BEB00A5FA36 /* BYSliderRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047012C17E1C27A00FEA5F5 /* BYSliderRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B63519617BEE00A5FA36 /* BYSliderRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011917E1C13200FEA5F5 /* BYSliderRenderer.m */; };
+		7065B63619617BF000A5FA36 /* UISlider+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010817E1C08F00FEA5F5 /* UISlider+Beautify.h */; };
+		7065B63719617BF200A5FA36 /* UISlider+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010917E1C08F00FEA5F5 /* UISlider+Beautify.m */; };
+		7065B63819617BF500A5FA36 /* BYBarButtonItemRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 70FF912617F5A51E00972848 /* BYBarButtonItemRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B63919617BF700A5FA36 /* BYBarButtonItemRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FF912717F5A51E00972848 /* BYBarButtonItemRenderer.m */; };
+		7065B63A19617C0500A5FA36 /* BYTableViewRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 702194CC17E1BC2E008161D3 /* BYTableViewRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B63B19617C0700A5FA36 /* BYTableViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194CD17E1BC2E008161D3 /* BYTableViewRenderer.m */; };
+		7065B63C19617C0900A5FA36 /* BYTableViewCellLabelRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 702194CB17E1BC2E008161D3 /* BYTableViewCellLabelRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B63D19617C3A00A5FA36 /* UITextField+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA517571F92002F1093 /* UITextField+Beautify.m */; };
+		7065B63E19617C3D00A5FA36 /* BYTextFieldRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDED9817565742002F1093 /* BYTextFieldRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B63F19617C4400A5FA36 /* BYTextFieldRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDED9917565742002F1093 /* BYTextFieldRenderer.m */; };
+		7065B64019617C4B00A5FA36 /* BYGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDED9617565736002F1093 /* BYGradientLayer.m */; };
+		7065B64119617C4E00A5FA36 /* BYViewControllerRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D305174F7F780070AFD3 /* BYViewControllerRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B64219617C5200A5FA36 /* BYViewControllerRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D306174F7F780070AFD3 /* BYViewControllerRenderer.m */; };
+		7065B64319617C7A00A5FA36 /* BYLabelRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A90174158140039F3F3 /* BYLabelRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B64419617C8200A5FA36 /* BYLabelRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A91174158140039F3F3 /* BYLabelRenderer.m */; };
+		7065B64519617C8500A5FA36 /* BYThumbLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 544975CB17D8B953003D7115 /* BYThumbLayer.h */; };
+		7065B64619617C8800A5FA36 /* BYThumbLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 544975CC17D8B953003D7115 /* BYThumbLayer.m */; };
+		7065B64719617C8B00A5FA36 /* BYSwitchBorderLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A981741582F0039F3F3 /* BYSwitchBorderLayer.h */; };
+		7065B64819617C8E00A5FA36 /* BYSwitchBorderLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A991741582F0039F3F3 /* BYSwitchBorderLayer.m */; };
+		7065B64919617C9100A5FA36 /* BYSwitchGestureView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047012817E1C23800FEA5F5 /* BYSwitchGestureView.h */; };
+		7065B64A19617C9300A5FA36 /* BYSwitchGestureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011C17E1C14300FEA5F5 /* BYSwitchGestureView.m */; };
+		7065B64B19617C9700A5FA36 /* BYSwitchLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A9C1741582F0039F3F3 /* BYSwitchLayer.h */; };
+		7065B64C19617C9D00A5FA36 /* BYSwitchLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A9D1741582F0039F3F3 /* BYSwitchLayer.m */; };
+		7065B64D19617CA000A5FA36 /* BYSwitchRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A9E1741582F0039F3F3 /* BYSwitchRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B64E19617CA400A5FA36 /* BYSwitchRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A9F1741582F0039F3F3 /* BYSwitchRenderer.m */; };
+		7065B64F19617CA600A5FA36 /* BYSwitchShadowLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AA01741582F0039F3F3 /* BYSwitchShadowLayer.h */; };
+		7065B65019617CA800A5FA36 /* BYSwitchShadowLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12AA11741582F0039F3F3 /* BYSwitchShadowLayer.m */; };
+		7065B65119617CAB00A5FA36 /* BYSwitchToggleLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AA21741582F0039F3F3 /* BYSwitchToggleLayer.h */; };
+		7065B65219617CAD00A5FA36 /* BYSwitchToggleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12AA31741582F0039F3F3 /* BYSwitchToggleLayer.m */; };
+		7065B65319617CAF00A5FA36 /* UISwitch+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047011E17E1C1F200FEA5F5 /* UISwitch+Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B65419617CB800A5FA36 /* UISwitch+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011F17E1C1F200FEA5F5 /* UISwitch+Beautify.m */; };
+		7065B65519617CBB00A5FA36 /* BYButtonRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AB21741583F0039F3F3 /* BYButtonRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B65619617CBF00A5FA36 /* BYButtonRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12AB31741583F0039F3F3 /* BYButtonRenderer.m */; };
+		7065B65719617CC500A5FA36 /* BYTopShadowRenderingLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010D17E1C11100FEA5F5 /* BYTopShadowRenderingLayer.h */; };
+		7065B65819617CC800A5FA36 /* BYTopShadowRenderingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010E17E1C11100FEA5F5 /* BYTopShadowRenderingLayer.m */; };
+		7065B65919617CCA00A5FA36 /* BYImageViewRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010C17E1C11100FEA5F5 /* BYImageViewRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B65A19617CCF00A5FA36 /* BYImageViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010F17E1C11100FEA5F5 /* BYImageViewRenderer.m */; };
+		7065B65B19617CD100A5FA36 /* UIImageView+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047011017E1C11100FEA5F5 /* UIImageView+Beautify.h */; };
+		7065B65C19617CD300A5FA36 /* UIImageView+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047011117E1C11100FEA5F5 /* UIImageView+Beautify.m */; };
+		7065B65D19617CD600A5FA36 /* BYStyleLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12AB9174158650039F3F3 /* BYStyleLayer.h */; };
+		7065B65E19617CD800A5FA36 /* BYStyleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12ABA174158650039F3F3 /* BYStyleLayer.m */; };
+		7065B65F19617CDA00A5FA36 /* BYStyleRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12ABB174158650039F3F3 /* BYStyleRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B66019617CDE00A5FA36 /* BYStyleRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12ABC174158650039F3F3 /* BYStyleRenderer.m */; };
+		7065B66119617CE000A5FA36 /* BYStyleRenderer_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DC6EACD174512BD004EDF37 /* BYStyleRenderer_Private.h */; };
+		7065B66219617CE300A5FA36 /* BYViewRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12ABD174158650039F3F3 /* BYViewRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B66319617CE700A5FA36 /* BYViewRenderer_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DC6EACE174512BD004EDF37 /* BYViewRenderer_Private.h */; };
+		7065B66419617CEB00A5FA36 /* BYViewRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12ABE174158650039F3F3 /* BYViewRenderer.m */; };
+		7065B66519617CED00A5FA36 /* BYControlRenderingLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F07943175C941100FC27DB /* BYControlRenderingLayer.h */; };
+		7065B66619617CEF00A5FA36 /* BYControlRenderingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F07944175C941100FC27DB /* BYControlRenderingLayer.m */; };
+		7065B66719617CF100A5FA36 /* BYControlRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDEDA71757204A002F1093 /* BYControlRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B66819617CF700A5FA36 /* BYControlRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA81757204B002F1093 /* BYControlRenderer.m */; };
+		7065B66919617CFD00A5FA36 /* BYDelegateMultiplexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F0795B175CCC2E00FC27DB /* BYDelegateMultiplexer.m */; };
+		7065B66A19617D0000A5FA36 /* BYDelegateMultiplexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F0795A175CCC2D00FC27DB /* BYDelegateMultiplexer.h */; };
+		7065B66B19617D0500A5FA36 /* BYRenderUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 70F61B8417831AE100DCA906 /* BYRenderUtils.h */; };
+		7065B66C19617D0800A5FA36 /* BYRenderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F61B8517831AE100DCA906 /* BYRenderUtils.m */; };
+		7065B66D19617D1000A5FA36 /* UIView+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA54516F9AC9C00D08DBB /* UIView+Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B66E19617D4700A5FA36 /* UIView+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54616F9AC9C00D08DBB /* UIView+Beautify.m */; };
+		7065B66F19617D4900A5FA36 /* UIView+BeautifyPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA54716F9AC9C00D08DBB /* UIView+BeautifyPrivate.h */; };
+		7065B67019617D4C00A5FA36 /* UIView+BeautifyPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54816F9AC9C00D08DBB /* UIView+BeautifyPrivate.m */; };
+		7065B67119617D4E00A5FA36 /* UIView+Utilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDA54916F9AC9C00D08DBB /* UIView+Utilities.h */; };
+		7065B67219617D5200A5FA36 /* UIView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54A16F9AC9C00D08DBB /* UIView+Utilities.m */; };
+		7065B67319617D5400A5FA36 /* UIViewController+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D2E8174F7BA50070AFD3 /* UIViewController+Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B67419617D5800A5FA36 /* UIViewController+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2E9174F7BA50070AFD3 /* UIViewController+Beautify.m */; };
+		7065B67519617D5A00A5FA36 /* UIViewController+BeautifyPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D2F6174F7CD00070AFD3 /* UIViewController+BeautifyPrivate.h */; };
+		7065B67619617D5D00A5FA36 /* UIViewController+BeautifyPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2F7174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m */; };
+		7065B67719617D5F00A5FA36 /* UINavigationBar+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 5480C1FC17A0127000F4007D /* UINavigationBar+Beautify.h */; };
+		7065B67819617D6200A5FA36 /* UINavigationBar+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 5480C1FD17A0127000F4007D /* UINavigationBar+Beautify.m */; };
+		7065B67919617D6500A5FA36 /* UIBarButtonItem+BeautifyPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010417E1C06B00FEA5F5 /* UIBarButtonItem+BeautifyPrivate.h */; };
+		7065B67A19617D6E00A5FA36 /* UIBarButtonItem+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 543570E917BE313E007FA7CE /* UIBarButtonItem+Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B67B19617D7300A5FA36 /* UIBarButtonItem+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 543570E517BE312C007FA7CE /* UIBarButtonItem+Beautify.m */; };
+		7065B67C19617D7500A5FA36 /* NSObject+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 7047010217E1C06B00FEA5F5 /* NSObject+Beautify.h */; };
+		7065B67D19617D7800A5FA36 /* NSObject+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 7047010317E1C06B00FEA5F5 /* NSObject+Beautify.m */; };
+		7065B67E19617D7B00A5FA36 /* BYBorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEFC172EA5EE000C7811 /* BYBorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B67F19617D8400A5FA36 /* BYBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEFD172EA5EF000C7811 /* BYBorder.m */; };
+		7065B68019617D8700A5FA36 /* BYFont.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEE8172EA5B0000C7811 /* BYFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B68119617D9100A5FA36 /* BYFont_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6969174A2846008A2A73 /* BYFont_Private.h */; };
+		7065B68219617D9300A5FA36 /* BYFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEE9172EA5B1000C7811 /* BYFont.m */; };
+		7065B68319617D9600A5FA36 /* BYGradient.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEEA172EA5B1000C7811 /* BYGradient.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B68419617D9A00A5FA36 /* BYGradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEEB172EA5B2000C7811 /* BYGradient.m */; };
+		7065B68519617D9C00A5FA36 /* BYGradientStop.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEEC172EA5B3000C7811 /* BYGradientStop.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B68619617DA000A5FA36 /* BYGradientStop.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEED172EA5B3000C7811 /* BYGradientStop.m */; };
+		7065B68719617DA300A5FA36 /* BYBackgroundImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEEE172EA5B4000C7811 /* BYBackgroundImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B68819617DA800A5FA36 /* BYBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEEF172EA5B5000C7811 /* BYBackgroundImage.m */; };
+		7065B68919617DAB00A5FA36 /* BYShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FEF0172EA5B5000C7811 /* BYShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B68A19617DB100A5FA36 /* BYShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEF1172EA5B6000C7811 /* BYShadow.m */; };
+		7065B68B19617DB300A5FA36 /* BYText.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D286174E6D880070AFD3 /* BYText.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B68C19617DB700A5FA36 /* BYText.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D287174E6D890070AFD3 /* BYText.m */; };
+		7065B68D19617DBA00A5FA36 /* BYSwitchState.h in Headers */ = {isa = PBXBuildFile; fileRef = 72D7105217548DAE00635F21 /* BYSwitchState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B68F19617DC100A5FA36 /* BYSwitchState.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D7105317548DAE00635F21 /* BYSwitchState.m */; };
+		7065B69019617DC400A5FA36 /* BYTextShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 727A86241757453800F6C6D9 /* BYTextShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B69119617DC700A5FA36 /* BYTextShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 727A86251757453800F6C6D9 /* BYTextShadow.m */; };
+		7065B69219617DCA00A5FA36 /* BYDropShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A995B5179FD29C00B9B17C /* BYDropShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B69319617DCE00A5FA36 /* BYDropShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A995B6179FD29C00B9B17C /* BYDropShadow.m */; };
+		7065B69419617DD600A5FA36 /* BYBarButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70397B8D17DF33190095001B /* BYBarButtonStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B69519617DDC00A5FA36 /* BYBarButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70397B8E17DF33190095001B /* BYBarButtonStyle.m */; };
+		7065B69619617DDE00A5FA36 /* BYButtonStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FF00172EA5FE000C7811 /* BYButtonStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B69719617DE300A5FA36 /* BYButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FF01172EA606000C7811 /* BYButtonStyle.m */; };
+		7065B69819617DE500A5FA36 /* BYImageViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70907E6B1797E6F600F83417 /* BYImageViewStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B69919617DEE00A5FA36 /* BYImageViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70907E6C1797E6F600F83417 /* BYImageViewStyle.m */; };
+		7065B69A19617DF100A5FA36 /* BYLabelStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A7E174157B40039F3F3 /* BYLabelStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B69B19617DF500A5FA36 /* BYLabelStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A7F174157B40039F3F3 /* BYLabelStyle.m */; };
+		7065B69C19617DF700A5FA36 /* BYNavigationBarStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 7205345A1757A000000A27C0 /* BYNavigationBarStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B69D19617DFD00A5FA36 /* BYNavigationBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205345B1757A000000A27C0 /* BYNavigationBarStyle.m */; };
+		7065B69E19617DFF00A5FA36 /* BYSliderStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 547C32CF17C4C1EE009D6289 /* BYSliderStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B69F19617E0300A5FA36 /* BYSliderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 547C32D017C4C1EE009D6289 /* BYSliderStyle.m */; };
+		7065B6A019617E0500A5FA36 /* BYStateSetter.h in Headers */ = {isa = PBXBuildFile; fileRef = 729757CC173BED3A003A34A5 /* BYStateSetter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6A119617E0A00A5FA36 /* BYStateSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 729757CD173BED3A003A34A5 /* BYStateSetter.m */; };
+		7065B6A219617E0C00A5FA36 /* BYStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 729757C6173BB861003A34A5 /* BYStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6A319617E1200A5FA36 /* BYStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 729757C7173BB861003A34A5 /* BYStyle.m */; };
+		7065B6A419617E1500A5FA36 /* BYStyleCustomizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A80174157B40039F3F3 /* BYStyleCustomizer.h */; };
+		7065B6A519617E1900A5FA36 /* BYStyleCustomizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A81174157B40039F3F3 /* BYStyleCustomizer.m */; };
+		7065B6A619617E1D00A5FA36 /* BYStyleProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A8E174157D20039F3F3 /* BYStyleProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6A719617E2100A5FA36 /* BYStyleSetterCustomizer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E168F2173D2EAE004CB021 /* BYStyleSetterCustomizer.h */; };
+		7065B6A819617E2500A5FA36 /* BYStyleSetterCustomizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E168F3173D2EAF004CB021 /* BYStyleSetterCustomizer.m */; };
+		7065B6A919617E2700A5FA36 /* BYSwitchStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A82174157B40039F3F3 /* BYSwitchStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6AA19617E2E00A5FA36 /* BYSwitchStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A83174157B40039F3F3 /* BYSwitchStyle.m */; };
+		7065B6AB19617E3000A5FA36 /* BYTableViewCellStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 72AE98D9175BBA7E00787272 /* BYTableViewCellStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6AC19617E3500A5FA36 /* BYTableViewCellStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AE98DA175BBA7E00787272 /* BYTableViewCellStyle.m */; };
+		7065B6AD19617E3800A5FA36 /* BYTextFieldStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDECCE175656E0002F1093 /* BYTextFieldStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6AE19617E3C00A5FA36 /* BYTextFieldStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDECCF175656E0002F1093 /* BYTextFieldStyle.m */; };
+		7065B6AF19617E3F00A5FA36 /* BYViewControllerStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE9D2FD174F7F540070AFD3 /* BYViewControllerStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6B019617E4300A5FA36 /* BYViewControllerStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE9D2FE174F7F540070AFD3 /* BYViewControllerStyle.m */; };
+		7065B6B119617E4500A5FA36 /* BYViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DE12A84174157B40039F3F3 /* BYViewStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6B219617E4A00A5FA36 /* BYViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A85174157B40039F3F3 /* BYViewStyle.m */; };
+		7065B6B419617E4C00A5FA36 /* BYTabBarStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 83881D341842AB3600A374FC /* BYTabBarStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6B519617E4F00A5FA36 /* BYTabBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 83881D351842AB3600A374FC /* BYTabBarStyle.m */; };
+		7065B6B619617E5200A5FA36 /* BYSearchBarStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70CB6CEB18A39D7F0033B020 /* BYSearchBarStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6B719617E5400A5FA36 /* BYSearchBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CB6CEC18A39D7F0033B020 /* BYSearchBarStyle.m */; };
+		7065B6B819617E5700A5FA36 /* BYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FF03172EA61F000C7811 /* BYTheme.m */; };
+		7065B6B919617E5A00A5FA36 /* BYTheme.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D13FF02172EA612000C7811 /* BYTheme.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6BB19617E6B00A5FA36 /* BYBeautify_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6A48174BAE3F008A2A73 /* BYBeautify_Private.h */; };
+		7065B6BC19617E6E00A5FA36 /* BYBeautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6A37174BA951008A2A73 /* BYBeautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6BD19617E7900A5FA36 /* BYBeautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB6A38174BA951008A2A73 /* BYBeautify.m */; };
+		7065B6BE19617E7E00A5FA36 /* BYThemeManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DDB6A42174BAA40008A2A73 /* BYThemeManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6BF19617E8300A5FA36 /* BYThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB6A43174BAA40008A2A73 /* BYThemeManager.m */; };
+		7065B6C019617E8700A5FA36 /* BYBeautifyVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 7066C7CC18290907009E96C6 /* BYBeautifyVersion.h */; };
+		7065B6C119617E8A00A5FA36 /* BYPlatformVersionUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 7009050B178C0EB600D7BEF4 /* BYPlatformVersionUtils.h */; };
+		7065B6C219617E8C00A5FA36 /* BYJSONVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 70B492EF17F2DF33002B62DB /* BYJSONVersion.h */; };
+		7065B6C319617EB300A5FA36 /* JSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517B17FB10A000928B0B /* JSONModelLib.h */; };
+		7065B6C419617EBA00A5FA36 /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F516B17FB10A000928B0B /* JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6C519617EBF00A5FA36 /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F516C17FB10A000928B0B /* JSONModel.m */; };
+		7065B6C719617EC500A5FA36 /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F516E17FB10A000928B0B /* JSONModelArray.m */; };
+		7065B6C919617ECE00A5FA36 /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517017FB10A000928B0B /* JSONModelClassProperty.m */; };
+		7065B6CA19617ED100A5FA36 /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517217FB10A000928B0B /* JSONModelError.m */; };
+		7065B6CB19617ED400A5FA36 /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517117FB10A000928B0B /* JSONModelError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6CD19617EDE00A5FA36 /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517517FB10A000928B0B /* NSArray+JSONModel.m */; };
+		7065B6CE19617EE300A5FA36 /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517717FB10A000928B0B /* JSONKeyMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6CF19617EE800A5FA36 /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517817FB10A000928B0B /* JSONKeyMapper.m */; };
+		7065B6D019617EEA00A5FA36 /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517917FB10A000928B0B /* JSONValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6D119617EEE00A5FA36 /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517A17FB10A000928B0B /* JSONValueTransformer.m */; };
+		7065B6D219617F0200A5FA36 /* BYTableViewCellRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AE98D3175BB94800787272 /* BYTableViewCellRenderer.m */; };
+		7065B6D319617F0E00A5FA36 /* BYTableViewCellLabelRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 702194F917E1BC95008161D3 /* BYTableViewCellLabelRenderer.m */; };
+		7065B6D5196180FB00A5FA36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7065B6D4196180FB00A5FA36 /* Foundation.framework */; };
+		7065B6D61961905400A5FA36 /* BYTableViewCellRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72AE98D2175BB94800787272 /* BYTableViewCellRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6D7196190A800A5FA36 /* BYBeautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDB6A38174BA951008A2A73 /* BYBeautify.m */; };
+		7065B6D91961911400A5FA36 /* Beautify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7065B5FE19617B7D00A5FA36 /* Beautify.framework */; };
+		7065B6DA1961913600A5FA36 /* BYNavigationBarRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7205345717579C61000A27C0 /* BYNavigationBarRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7065B6DC1961926400A5FA36 /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F516F17FB10A000928B0B /* JSONModelClassProperty.h */; };
+		7065B6DD1961927000A5FA36 /* NSArray+JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517417FB10A000928B0B /* NSArray+JSONModel.h */; };
 		7076B69217FD824B0015593F /* BYSerializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7076B69117FD824B0015593F /* BYSerializationTests.m */; };
-		707A869317F9B435005A102F /* JSONValueTransformer+BeautifyExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = 707A869117F9B435005A102F /* JSONValueTransformer+BeautifyExtension.h */; };
-		707A869417F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 707A869217F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m */; };
 		707A869917FAE8D0005A102F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B492A317F2CD0C002B62DB /* SystemConfiguration.framework */; };
 		707F516117FB001C00928B0B /* BYBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEEF172EA5B5000C7811 /* BYBackgroundImage.m */; };
-		707F516217FB001D00928B0B /* BYBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEEF172EA5B5000C7811 /* BYBackgroundImage.m */; };
 		707F516317FB001E00928B0B /* BYBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13FEEF172EA5B5000C7811 /* BYBackgroundImage.m */; };
 		707F516417FB004000928B0B /* dark.json in Resources */ = {isa = PBXBuildFile; fileRef = 7027C5D517F04341006D8008 /* dark.json */; };
 		707F516517FB004100928B0B /* dark.json in Resources */ = {isa = PBXBuildFile; fileRef = 7027C5D517F04341006D8008 /* dark.json */; };
@@ -248,59 +305,32 @@
 		707F518117FB10A000928B0B /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517817FB10A000928B0B /* JSONKeyMapper.m */; };
 		707F518217FB10A000928B0B /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517A17FB10A000928B0B /* JSONValueTransformer.m */; };
 		707F518417FB1F7C00928B0B /* JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F516C17FB10A000928B0B /* JSONModel.m */; };
-		707F518517FB1F8000928B0B /* JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F516B17FB10A000928B0B /* JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		707F518617FB1F8400928B0B /* JSONModelArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F516D17FB10A000928B0B /* JSONModelArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		707F518717FB1F8900928B0B /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F516E17FB10A000928B0B /* JSONModelArray.m */; };
 		707F518817FB1F8900928B0B /* JSONModelArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F516E17FB10A000928B0B /* JSONModelArray.m */; };
-		707F518917FB1F8E00928B0B /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517017FB10A000928B0B /* JSONModelClassProperty.m */; };
 		707F518A17FB1F8E00928B0B /* JSONModelClassProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517017FB10A000928B0B /* JSONModelClassProperty.m */; };
-		707F518B17FB1F9100928B0B /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F516F17FB10A000928B0B /* JSONModelClassProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		707F518C17FB1F9400928B0B /* JSONModelError.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517117FB10A000928B0B /* JSONModelError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		707F518D17FB1F9700928B0B /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517217FB10A000928B0B /* JSONModelError.m */; };
-		707F518E17FB1F9800928B0B /* JSONModelError.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517217FB10A000928B0B /* JSONModelError.m */; };
 		707F518F17FB1F9D00928B0B /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517517FB10A000928B0B /* NSArray+JSONModel.m */; };
-		707F519017FB1F9E00928B0B /* NSArray+JSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517517FB10A000928B0B /* NSArray+JSONModel.m */; };
-		707F519117FB1FA100928B0B /* NSArray+JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517417FB10A000928B0B /* NSArray+JSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		707F519217FB1FA600928B0B /* JSONKeyMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517717FB10A000928B0B /* JSONKeyMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		707F519317FB1FA900928B0B /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517817FB10A000928B0B /* JSONKeyMapper.m */; };
 		707F519417FB1FA900928B0B /* JSONKeyMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517817FB10A000928B0B /* JSONKeyMapper.m */; };
-		707F519517FB1FAC00928B0B /* JSONValueTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517917FB10A000928B0B /* JSONValueTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		707F519617FB1FAF00928B0B /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517A17FB10A000928B0B /* JSONValueTransformer.m */; };
 		707F519717FB1FAF00928B0B /* JSONValueTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 707F517A17FB10A000928B0B /* JSONValueTransformer.m */; };
-		707F519817FB1FB300928B0B /* JSONModelLib.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517B17FB10A000928B0B /* JSONModelLib.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		708411C01806EB78005EA23C /* BYImmunityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 708411BF1806EB78005EA23C /* BYImmunityTests.m */; };
-		70907E6D1797E6F600F83417 /* BYImageViewStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70907E6B1797E6F600F83417 /* BYImageViewStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70907E701797E6F600F83417 /* BYImageViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70907E6C1797E6F600F83417 /* BYImageViewStyle.m */; };
 		70907E7B1797FBC300F83417 /* roller@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70907E7A1797FBC300F83417 /* roller@2x.png */; };
 		7091C1561876CF370076D201 /* BYTabBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83881D311842AABB00A374FC /* BYTabBarRenderer.m */; };
 		7091C1571876CFFE0076D201 /* BYTabBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 83881D351842AB3600A374FC /* BYTabBarStyle.m */; };
 		7091C15A1876DAF20076D201 /* PartialTabBarStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7091C1581876DAF20076D201 /* PartialTabBarStyle.json */; };
 		7091C15B1876DAF20076D201 /* ValidTabBarStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7091C1591876DAF20076D201 /* ValidTabBarStyle.json */; };
-		70AB9D7417E9DF4000879E5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FE246617E0B385009A7113 /* Foundation.framework */; };
 		70AB9D7517E9DF4000879E5E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ADB8D516FC9E0200BE925D /* CoreGraphics.framework */; };
 		70AB9D7617E9DF4000879E5E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72BF4B3416F3487A00A0C0E3 /* UIKit.framework */; };
 		70AB9D7C17E9DF4000879E5E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 70AB9D7A17E9DF4000879E5E /* InfoPlist.strings */; };
 		70AB9D7E17E9DF4000879E5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AB9D7D17E9DF4000879E5E /* main.m */; };
 		70AB9D8217E9DF4000879E5E /* BYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AB9D8117E9DF4000879E5E /* BYAppDelegate.m */; };
 		70AB9D9017E9DF4000879E5E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70AB9D8F17E9DF4000879E5E /* Images.xcassets */; };
-		70AB9DAA17E9E7F300879E5E /* Beautify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AB9DA917E9E7F300879E5E /* Beautify.framework */; };
 		70B492DB17F2CFB9002B62DB /* flat.json in Resources */ = {isa = PBXBuildFile; fileRef = 7027C5D017EC92F5006D8008 /* flat.json */; };
-		70B492F017F2DF33002B62DB /* BYJSONVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = 70B492EF17F2DF33002B62DB /* BYJSONVersion.h */; };
-		70BF4EFD17FB294800F807F6 /* UIImage+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 70BF4EFB17FB294700F807F6 /* UIImage+Base64.h */; };
-		70BF4EFE17FB294800F807F6 /* UIImage+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF4EFC17FB294800F807F6 /* UIImage+Base64.m */; };
 		70BF4EFF17FB29EF00F807F6 /* BYBarButtonItemRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FF912717F5A51E00972848 /* BYBarButtonItemRenderer.m */; };
 		70BF4F0017FB2AB600F807F6 /* UIImage+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BF4EFC17FB294800F807F6 /* UIImage+Base64.m */; };
 		70BFBE9917FC0A130034365F /* JSONValueTransformer+BeautifyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 707A869217F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m */; };
 		70BFBE9A17FC10ED0034365F /* JSONValueTransformer+BeautifyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 707A869217F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m */; };
 		70BFBE9E17FC124F0034365F /* JSONModel+Subclassing.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BFBE9D17FC124F0034365F /* JSONModel+Subclassing.m */; };
 		70BFBE9F17FC12720034365F /* JSONModel+Subclassing.m in Sources */ = {isa = PBXBuildFile; fileRef = 70BFBE9D17FC124F0034365F /* JSONModel+Subclassing.m */; };
-		70C211B617DF01DB00CA110B /* TableVisualTestViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 70C211B417DF01DB00CA110B /* TableVisualTestViewController.h */; };
 		70C211B817DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
-		70C211B917DF01DB00CA110B /* TableVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C211B517DF01DB00CA110B /* TableVisualTestViewController.m */; };
-		70CB6CE918A398CA0033B020 /* BYSearchBarRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 70CB6CE718A398CA0033B020 /* BYSearchBarRenderer.h */; };
-		70CB6CEA18A398CA0033B020 /* BYSearchBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CB6CE818A398CA0033B020 /* BYSearchBarRenderer.m */; };
-		70CB6CED18A39D7F0033B020 /* BYSearchBarStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 70CB6CEB18A39D7F0033B020 /* BYSearchBarStyle.h */; };
-		70CB6CEE18A39D7F0033B020 /* BYSearchBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CB6CEC18A39D7F0033B020 /* BYSearchBarStyle.m */; };
 		70CB6CEF18A39EAA0033B020 /* BYSearchBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 70CB6CEC18A39D7F0033B020 /* BYSearchBarStyle.m */; };
 		70E19557178462B20096E458 /* FullVisualTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E19555178462B20096E458 /* FullVisualTestViewController.m */; };
 		70EFB6B4180419C300FF75AA /* BYImageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EFB6B3180419C300FF75AA /* BYImageTests.m */; };
@@ -314,11 +344,11 @@
 		70F1FD0B17E3683E006018C9 /* NSObject+Properties.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA52016F9AC8500D08DBB /* NSObject+Properties.m */; };
 		70F284BD181E57C8002E61AA /* BYImmuneControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F284BC181E57C8002E61AA /* BYImmuneControlsViewController.m */; };
 		70F284BF181E59DC002E61AA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F284BE181E59DC002E61AA /* MapKit.framework */; };
-		70F61B8617831AE100DCA906 /* BYRenderUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 70F61B8417831AE100DCA906 /* BYRenderUtils.h */; };
-		70F61B8917831AE100DCA906 /* BYRenderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F61B8517831AE100DCA906 /* BYRenderUtils.m */; };
 		70F61B8B17831B4F00DCA906 /* BYRenderUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F61B8517831AE100DCA906 /* BYRenderUtils.m */; };
 		70FAFBB617E7336D00EB6843 /* ValidSwitchStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 70FAFBB517E7336D00EB6843 /* ValidSwitchStyle.json */; };
 		70FAFBBA17E7425600EB6843 /* PartialSwitchStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 70FAFBB917E7425600EB6843 /* PartialSwitchStyle.json */; };
+		70FD6E28196198A400AE9ACA /* BYNavigationBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205345817579C61000A27C0 /* BYNavigationBarRenderer.m */; };
+		70FD6E291961A0D700AE9ACA /* JSONModelArray.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F516D17FB10A000928B0B /* JSONModelArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		70FE245E17E089D1009A7113 /* barButtonImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 70FE245D17E089D1009A7113 /* barButtonImage.png */; };
 		70FE246517E0B385009A7113 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70FE246417E0B385009A7113 /* XCTest.framework */; };
 		70FE246817E0B385009A7113 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72BF4B3416F3487A00A0C0E3 /* UIKit.framework */; };
@@ -348,20 +378,7 @@
 		70FF54DB17E6FB3E00F9BF03 /* BYSwitchStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DE12A83174157B40039F3F3 /* BYSwitchStyle.m */; };
 		70FF54DF17E7040F00F9BF03 /* ValidButtonStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 70FF54DE17E7040F00F9BF03 /* ValidButtonStyle.json */; };
 		70FF54E117E7042700F9BF03 /* PartialButtonStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 70FF54E017E7042700F9BF03 /* PartialButtonStyle.json */; };
-		70FF912817F5A51E00972848 /* BYBarButtonItemRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 70FF912617F5A51E00972848 /* BYBarButtonItemRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70FF912917F5A51E00972848 /* BYBarButtonItemRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 70FF912717F5A51E00972848 /* BYBarButtonItemRenderer.m */; };
 		7205345917579C61000A27C0 /* BYNavigationBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205345817579C61000A27C0 /* BYNavigationBarRenderer.m */; };
-		7205345C1757A000000A27C0 /* BYNavigationBarStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 7205345A1757A000000A27C0 /* BYNavigationBarStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7205345F1757A000000A27C0 /* BYNavigationBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205345B1757A000000A27C0 /* BYNavigationBarStyle.m */; };
-		720534611758EC04000A27C0 /* BYNavigationBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7205345817579C61000A27C0 /* BYNavigationBarRenderer.m */; };
-		7276DDAF17563949004CC446 /* BYSwitchState.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D7105317548DAE00635F21 /* BYSwitchState.m */; };
-		727A862817575C3C00F6C6D9 /* BYTextFieldStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDECCE175656E0002F1093 /* BYTextFieldStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		727A862A17575C4600F6C6D9 /* BYTextShadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 727A86251757453800F6C6D9 /* BYTextShadow.m */; };
-		727A862C17575C5100F6C6D9 /* BYSwitchState.h in Headers */ = {isa = PBXBuildFile; fileRef = 72D7105217548DAE00635F21 /* BYSwitchState.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		727A862E17575C5600F6C6D9 /* BYTextShadow.h in Headers */ = {isa = PBXBuildFile; fileRef = 727A86241757453800F6C6D9 /* BYTextShadow.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		727A863017575C9F00F6C6D9 /* BYControlRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA81757204B002F1093 /* BYControlRenderer.m */; };
-		727A863217575CAD00F6C6D9 /* BYTextFieldStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDECCF175656E0002F1093 /* BYTextFieldStyle.m */; };
-		727A863617575D1700F6C6D9 /* UITextField+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA517571F92002F1093 /* UITextField+Beautify.m */; };
 		727ADCD116F9B99000D7DDCB /* UIView+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54616F9AC9C00D08DBB /* UIView+Beautify.m */; };
 		727ADCD216F9B99000D7DDCB /* UIView+BeautifyPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54816F9AC9C00D08DBB /* UIView+BeautifyPrivate.m */; };
 		727ADCD316F9B99000D7DDCB /* UIView+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDA54A16F9AC9C00D08DBB /* UIView+Utilities.m */; };
@@ -369,47 +386,48 @@
 		72ADB8D216FC9DDC00BE925D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ADB8D116FC9DDC00BE925D /* CFNetwork.framework */; };
 		72ADB8D416FC9DE200BE925D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ADB8D316FC9DE200BE925D /* Security.framework */; };
 		72ADB8D616FC9E0200BE925D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72ADB8D516FC9E0200BE925D /* CoreGraphics.framework */; };
-		72AE98D4175BB94800787272 /* BYTableViewCellRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72AE98D2175BB94800787272 /* BYTableViewCellRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72AE98D6175BB94800787272 /* BYTableViewCellRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AE98D3175BB94800787272 /* BYTableViewCellRenderer.m */; };
-		72AE98D7175BB94800787272 /* BYTableViewCellRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AE98D3175BB94800787272 /* BYTableViewCellRenderer.m */; };
-		72AE98DB175BBA7E00787272 /* BYTableViewCellStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 72AE98D9175BBA7E00787272 /* BYTableViewCellStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		72AE98DE175BBA7E00787272 /* BYTableViewCellStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 72AE98DA175BBA7E00787272 /* BYTableViewCellStyle.m */; };
 		72E168FE173D48FC004CB021 /* BYStyleSetterCustomizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E168F3173D2EAF004CB021 /* BYStyleSetterCustomizer.m */; };
-		72F07945175C941100FC27DB /* BYControlRenderingLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F07943175C941100FC27DB /* BYControlRenderingLayer.h */; };
 		72F07947175C941100FC27DB /* BYControlRenderingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F07944175C941100FC27DB /* BYControlRenderingLayer.m */; };
-		72F07948175C941100FC27DB /* BYControlRenderingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F07944175C941100FC27DB /* BYControlRenderingLayer.m */; };
 		72F07955175C9F2900FC27DB /* UITableViewCell+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F07952175C9F2900FC27DB /* UITableViewCell+Beautify.m */; };
-		72F07956175C9F2900FC27DB /* UITableViewCell+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F07952175C9F2900FC27DB /* UITableViewCell+Beautify.m */; };
-		72F07959175C9F9700FC27DB /* UITableViewCell+Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F07951175C9F2900FC27DB /* UITableViewCell+Beautify.h */; };
-		72F0795C175CCC2F00FC27DB /* BYDelegateMultiplexer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F0795A175CCC2D00FC27DB /* BYDelegateMultiplexer.h */; };
 		72F0795E175CCC2F00FC27DB /* BYDelegateMultiplexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F0795B175CCC2E00FC27DB /* BYDelegateMultiplexer.m */; };
-		72F0795F175CCC2F00FC27DB /* BYDelegateMultiplexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F0795B175CCC2E00FC27DB /* BYDelegateMultiplexer.m */; };
-		72F0797F1761F11000FC27DB /* Beautify.h in Headers */ = {isa = PBXBuildFile; fileRef = 72F0797E1761F11000FC27DB /* Beautify.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		72F079811761F2C500FC27DB /* BYControlRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDEDA71757204A002F1093 /* BYControlRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		72F079831761F34500FC27DB /* BYNavigationBarRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7205345717579C61000A27C0 /* BYNavigationBarRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72FDED9717565736002F1093 /* BYGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDED9617565736002F1093 /* BYGradientLayer.m */; };
 		72FDED9A17565742002F1093 /* BYTextFieldRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDED9917565742002F1093 /* BYTextFieldRenderer.m */; };
-		72FDED9B17565749002F1093 /* BYGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDED9617565736002F1093 /* BYGradientLayer.m */; };
-		72FDED9D1756574D002F1093 /* BYTextFieldRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDED9917565742002F1093 /* BYTextFieldRenderer.m */; };
-		72FDED9F17565754002F1093 /* BYTextFieldRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72FDED9817565742002F1093 /* BYTextFieldRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		72FDEDA617571F92002F1093 /* UITextField+Beautify.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA517571F92002F1093 /* UITextField+Beautify.m */; };
 		72FDEDA91757204C002F1093 /* BYControlRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FDEDA81757204B002F1093 /* BYControlRenderer.m */; };
-		83881D321842AABB00A374FC /* BYTabBarRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 83881D301842AABB00A374FC /* BYTabBarRenderer.h */; };
-		83881D331842AABB00A374FC /* BYTabBarRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 83881D311842AABB00A374FC /* BYTabBarRenderer.m */; };
-		83881D361842AB3600A374FC /* BYTabBarStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 83881D341842AB3600A374FC /* BYTabBarStyle.h */; };
-		83881D371842AB3600A374FC /* BYTabBarStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 83881D351842AB3600A374FC /* BYTabBarStyle.m */; };
 		83881D3A1842B1E600A374FC /* BYTintColorTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83881D391842B1E600A374FC /* BYTintColorTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		70FE247217E0B385009A7113 /* PBXContainerItemProxy */ = {
+		7065B61119617B7D00A5FA36 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 72BF4A8A16F3179B00A0C0E3 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1D46460517466915003840E4;
+			remoteGlobalIDString = 7065B5FD19617B7D00A5FA36;
+			remoteInfo = Beautify;
+		};
+		7065B61519617B7D00A5FA36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72BF4A8A16F3179B00A0C0E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7065B5FD19617B7D00A5FA36;
 			remoteInfo = Beautify;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7065B61C19617B7D00A5FA36 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7065B61419617B7D00A5FA36 /* Beautify.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1D13FEE8172EA5B0000C7811 /* BYFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYFont.h; sourceTree = "<group>"; };
@@ -428,7 +446,6 @@
 		1D13FF01172EA606000C7811 /* BYButtonStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYButtonStyle.m; sourceTree = "<group>"; };
 		1D13FF02172EA612000C7811 /* BYTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYTheme.h; sourceTree = "<group>"; };
 		1D13FF03172EA61F000C7811 /* BYTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = BYTheme.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		1D46460617466915003840E4 /* Beautify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Beautify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC6EACD174512BD004EDF37 /* BYStyleRenderer_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYStyleRenderer_Private.h; path = Beautify/BYStyleRenderer_Private.h; sourceTree = SOURCE_ROOT; };
 		1DC6EACE174512BD004EDF37 /* BYViewRenderer_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYViewRenderer_Private.h; path = Beautify/BYViewRenderer_Private.h; sourceTree = SOURCE_ROOT; };
 		1DDB6969174A2846008A2A73 /* BYFont_Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BYFont_Private.h; sourceTree = "<group>"; };
@@ -479,7 +496,6 @@
 		1DF3D71C1743E58400C40FA9 /* Beautify-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Beautify-Prefix.pch"; sourceTree = "<group>"; };
 		543570E517BE312C007FA7CE /* UIBarButtonItem+Beautify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = "UIBarButtonItem+Beautify.m"; path = "Beautify/UIBarButtonItem+Beautify.m"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		543570E917BE313E007FA7CE /* UIBarButtonItem+Beautify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = "UIBarButtonItem+Beautify.h"; path = "Beautify/UIBarButtonItem+Beautify.h"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		543570EF17BE32C3007FA7CE /* Beautify-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Beautify-Info.plist"; path = "Beautify/Beautify-Info.plist"; sourceTree = SOURCE_ROOT; };
 		543570F617BE32DB007FA7CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Beautify/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		544975CB17D8B953003D7115 /* BYThumbLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYThumbLayer.h; path = Beautify/BYThumbLayer.h; sourceTree = SOURCE_ROOT; };
 		544975CC17D8B953003D7115 /* BYThumbLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYThumbLayer.m; path = Beautify/BYThumbLayer.m; sourceTree = SOURCE_ROOT; };
@@ -567,6 +583,10 @@
 		7047011F17E1C1F200FEA5F5 /* UISwitch+Beautify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UISwitch+Beautify.m"; path = "Beautify/UISwitch+Beautify.m"; sourceTree = SOURCE_ROOT; };
 		7047012817E1C23800FEA5F5 /* BYSwitchGestureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYSwitchGestureView.h; path = Beautify/BYSwitchGestureView.h; sourceTree = SOURCE_ROOT; };
 		7047012C17E1C27A00FEA5F5 /* BYSliderRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYSliderRenderer.h; path = Beautify/BYSliderRenderer.h; sourceTree = SOURCE_ROOT; };
+		7065B5FE19617B7D00A5FA36 /* Beautify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Beautify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7065B60119617B7D00A5FA36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Beautify/Info.plist; sourceTree = SOURCE_ROOT; };
+		7065B60219617B7D00A5FA36 /* Beautify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Beautify.h; path = Beautify/Beautify.h; sourceTree = SOURCE_ROOT; };
+		7065B6D4196180FB00A5FA36 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7066C7CC18290907009E96C6 /* BYBeautifyVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBeautifyVersion.h; sourceTree = "<group>"; };
 		7076B69117FD824B0015593F /* BYSerializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BYSerializationTests.m; sourceTree = "<group>"; };
 		707A869117F9B435005A102F /* JSONValueTransformer+BeautifyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JSONValueTransformer+BeautifyExtension.h"; path = "Beautify/JSONValueTransformer+BeautifyExtension.h"; sourceTree = SOURCE_ROOT; };
@@ -674,7 +694,6 @@
 		72F07952175C9F2900FC27DB /* UITableViewCell+Beautify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = "UITableViewCell+Beautify.m"; path = "Beautify/UITableViewCell+Beautify.m"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		72F0795A175CCC2D00FC27DB /* BYDelegateMultiplexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BYDelegateMultiplexer.h; path = Beautify/BYDelegateMultiplexer.h; sourceTree = SOURCE_ROOT; };
 		72F0795B175CCC2E00FC27DB /* BYDelegateMultiplexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYDelegateMultiplexer.m; path = Beautify/BYDelegateMultiplexer.m; sourceTree = SOURCE_ROOT; };
-		72F0797E1761F11000FC27DB /* Beautify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = Beautify.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		72FDA51F16F9AC8500D08DBB /* NSObject+Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+Properties.h"; path = "Beautify/NSObject+Properties.h"; sourceTree = SOURCE_ROOT; };
 		72FDA52016F9AC8500D08DBB /* NSObject+Properties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = "NSObject+Properties.m"; path = "Beautify/NSObject+Properties.m"; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		72FDA52116F9AC8500D08DBB /* UIColor+HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+HexColors.h"; path = "Beautify/UIColor+HexColors.h"; sourceTree = SOURCE_ROOT; };
@@ -705,13 +724,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1D46460017466915003840E4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		700F292216F3711300E85ED3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -722,9 +734,17 @@
 				72ADB8D616FC9E0200BE925D /* CoreGraphics.framework in Frameworks */,
 				72ADB8D416FC9DE200BE925D /* Security.framework in Frameworks */,
 				72ADB8D216FC9DDC00BE925D /* CFNetwork.framework in Frameworks */,
+				7065B61319617B7D00A5FA36 /* Beautify.framework in Frameworks */,
 				72ADB8D016FC9DD500BE925D /* libicucore.dylib in Frameworks */,
 				7036DB4916F8659400EBA8AA /* QuartzCore.framework in Frameworks */,
 				700F292616F3711300E85ED3 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7065B5FA19617B7D00A5FA36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,10 +752,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7065B6D91961911400A5FA36 /* Beautify.framework in Frameworks */,
+				7065B6D5196180FB00A5FA36 /* Foundation.framework in Frameworks */,
 				70AB9D7517E9DF4000879E5E /* CoreGraphics.framework in Frameworks */,
 				70AB9D7617E9DF4000879E5E /* UIKit.framework in Frameworks */,
-				70AB9D7417E9DF4000879E5E /* Foundation.framework in Frameworks */,
-				70AB9DAA17E9E7F300879E5E /* Beautify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -845,8 +865,9 @@
 		1D46460817466915003840E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7065B60219617B7D00A5FA36 /* Beautify.h */,
+				7065B60119617B7D00A5FA36 /* Info.plist */,
 				1DF3D71C1743E58400C40FA9 /* Beautify-Prefix.pch */,
-				543570EF17BE32C3007FA7CE /* Beautify-Info.plist */,
 				543570F517BE32DB007FA7CE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -1349,9 +1370,9 @@
 			isa = PBXGroup;
 			children = (
 				700F292516F3711300E85ED3 /* VisualTest.app */,
-				1D46460617466915003840E4 /* Beautify.framework */,
 				70FE246317E0B385009A7113 /* Beautify Tests.xctest */,
 				70AB9D7317E9DF4000879E5E /* Demo.app */,
+				7065B5FE19617B7D00A5FA36 /* Beautify.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1359,6 +1380,7 @@
 		72BF4A9516F3179B00A0C0E3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7065B6D4196180FB00A5FA36 /* Foundation.framework */,
 				702F450E181E680D00748D30 /* MessageUI.framework */,
 				702F450C181E645400748D30 /* CoreLocation.framework */,
 				70F284BE181E59DC002E61AA /* MapKit.framework */,
@@ -1384,7 +1406,6 @@
 				707428AF16F861C4003C2D1F /* StyleRolling */,
 				1D3DA626172EA770006216B7 /* Theme */,
 				1D46460817466915003840E4 /* Supporting Files */,
-				72F0797E1761F11000FC27DB /* Beautify.h */,
 				1DDB6A48174BAE3F008A2A73 /* BYBeautify_Private.h */,
 				1DDB6A37174BA951008A2A73 /* BYBeautify.h */,
 				1DDB6A38174BA951008A2A73 /* BYBeautify.m */,
@@ -1430,136 +1451,112 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1D46460117466915003840E4 /* Headers */ = {
+		7065B5FB19617B7D00A5FA36 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				702194C617E1BC0D008161D3 /* BYSliderBarShadowLayer.h in Headers */,
-				1D464643174669A9003840E4 /* BYSwitchRenderer.h in Headers */,
-				7047010717E1C06B00FEA5F5 /* UIBarButtonItem+BeautifyPrivate.h in Headers */,
-				1D464644174669A9003840E4 /* BYButtonRenderer.h in Headers */,
-				702194CF17E1BC2E008161D3 /* BYTableViewRenderer.h in Headers */,
-				7047011217E1C11100FEA5F5 /* BYImageViewRenderer.h in Headers */,
-				707F519817FB1FB300928B0B /* JSONModelLib.h in Headers */,
-				72AE98D4175BB94800787272 /* BYTableViewCellRenderer.h in Headers */,
-				7066C7CD18290907009E96C6 /* BYBeautifyVersion.h in Headers */,
-				1D464642174669A9003840E4 /* BYLabelRenderer.h in Headers */,
-				70CB6CE918A398CA0033B020 /* BYSearchBarRenderer.h in Headers */,
-				1D464647174669A9003840E4 /* BYBorder.h in Headers */,
-				1D464645174669A9003840E4 /* BYStyleRenderer.h in Headers */,
-				1D464648174669A9003840E4 /* BYFont.h in Headers */,
-				1DE9D307174F7F780070AFD3 /* BYViewControllerRenderer.h in Headers */,
-				1D464649174669A9003840E4 /* BYGradient.h in Headers */,
-				1D46464A174669A9003840E4 /* BYGradientStop.h in Headers */,
-				72F079831761F34500FC27DB /* BYNavigationBarRenderer.h in Headers */,
-				1D464646174669A9003840E4 /* BYViewRenderer.h in Headers */,
-				707F518617FB1F8400928B0B /* JSONModelArray.h in Headers */,
-				72F079811761F2C500FC27DB /* BYControlRenderer.h in Headers */,
-				70FF912817F5A51E00972848 /* BYBarButtonItemRenderer.h in Headers */,
-				707F519117FB1FA100928B0B /* NSArray+JSONModel.h in Headers */,
-				707F519517FB1FAC00928B0B /* JSONValueTransformer.h in Headers */,
-				7047012D17E1C27A00FEA5F5 /* BYSliderRenderer.h in Headers */,
-				1D46464B174669A9003840E4 /* BYBackgroundImage.h in Headers */,
-				1D46464C174669A9003840E4 /* BYShadow.h in Headers */,
-				72FDED9F17565754002F1093 /* BYTextFieldRenderer.h in Headers */,
-				707F519217FB1FA600928B0B /* JSONKeyMapper.h in Headers */,
-				70CB6CED18A39D7F0033B020 /* BYSearchBarStyle.h in Headers */,
-				1DDB6A39174BA951008A2A73 /* BYBeautify.h in Headers */,
-				702194CE17E1BC2E008161D3 /* BYTableViewCellLabelRenderer.h in Headers */,
-				7009050D178C0EB600D7BEF4 /* BYPlatformVersionUtils.h in Headers */,
-				83881D361842AB3600A374FC /* BYTabBarStyle.h in Headers */,
-				1D46464D174669A9003840E4 /* UIView+Beautify.h in Headers */,
-				1D46467617466A07003840E4 /* Beautify-Prefix.pch in Headers */,
-				1D464655174669D7003840E4 /* NSObject+Properties.h in Headers */,
-				1D464656174669D7003840E4 /* UIColor+HexColors.h in Headers */,
-				70BF4EFD17FB294800F807F6 /* UIImage+Base64.h in Headers */,
-				70907E6D1797E6F600F83417 /* BYImageViewStyle.h in Headers */,
-				1D464661174669D7003840E4 /* BYButtonStyle.h in Headers */,
-				1D464664174669D7003840E4 /* BYSwitchStyle.h in Headers */,
-				1D464665174669D7003840E4 /* BYViewStyle.h in Headers */,
-				1D464666174669D7003840E4 /* BYStyle.h in Headers */,
-				1DE9D2FF174F7F540070AFD3 /* BYViewControllerStyle.h in Headers */,
-				727A862817575C3C00F6C6D9 /* BYTextFieldStyle.h in Headers */,
-				707F518517FB1F8000928B0B /* JSONModel.h in Headers */,
-				7205345C1757A000000A27C0 /* BYNavigationBarStyle.h in Headers */,
-				72AE98DB175BBA7E00787272 /* BYTableViewCellStyle.h in Headers */,
-				547C32D117C4C1EE009D6289 /* BYSliderStyle.h in Headers */,
-				70397B8F17DF33190095001B /* BYBarButtonStyle.h in Headers */,
-				707F518C17FB1F9400928B0B /* JSONModelError.h in Headers */,
-				1DDB6A49174BB209008A2A73 /* BYBeautify_Private.h in Headers */,
-				1D464659174669D7003840E4 /* BYSwitchBorderLayer.h in Headers */,
-				1D46465B174669D7003840E4 /* BYSwitchLayer.h in Headers */,
-				1D46465C174669D7003840E4 /* BYSwitchShadowLayer.h in Headers */,
-				1D46465D174669D7003840E4 /* BYSwitchToggleLayer.h in Headers */,
-				1D464660174669D7003840E4 /* BYStyleLayer.h in Headers */,
-				7047011617E1C11100FEA5F5 /* UIImageView+Beautify.h in Headers */,
-				1D464662174669D7003840E4 /* BYLabelStyle.h in Headers */,
-				1D464663174669D7003840E4 /* BYStyleCustomizer.h in Headers */,
-				1D464667174669D7003840E4 /* BYStateSetter.h in Headers */,
-				1D464668174669D7003840E4 /* BYStyleProtocol.h in Headers */,
-				1D464669174669D7003840E4 /* BYStyleSetterCustomizer.h in Headers */,
-				1D46466A174669D7003840E4 /* BYTheme.h in Headers */,
-				1D46466B174669D7003840E4 /* UIView+Utilities.h in Headers */,
-				707A869317F9B435005A102F /* JSONValueTransformer+BeautifyExtension.h in Headers */,
-				54ABF0E817A286EE0070B0B6 /* UINavigationBar+Beautify.h in Headers */,
-				54A995B7179FD29C00B9B17C /* BYDropShadow.h in Headers */,
-				7047010517E1C06B00FEA5F5 /* NSObject+Beautify.h in Headers */,
-				70C211B617DF01DB00CA110B /* TableVisualTestViewController.h in Headers */,
-				1D46464F174669C4003840E4 /* BYStyleRenderer_Private.h in Headers */,
-				1D464650174669C4003840E4 /* BYViewRenderer_Private.h in Headers */,
-				83881D321842AABB00A374FC /* BYTabBarRenderer.h in Headers */,
-				1D464651174669C4003840E4 /* UIView+BeautifyPrivate.h in Headers */,
-				1DDB696B174A2887008A2A73 /* BYFont_Private.h in Headers */,
-				544975CD17D8B953003D7115 /* BYThumbLayer.h in Headers */,
-				7047011317E1C11100FEA5F5 /* BYTopShadowRenderingLayer.h in Headers */,
-				1DE9D288174E6D890070AFD3 /* BYText.h in Headers */,
-				1DE9D2EA174F7BA50070AFD3 /* UIViewController+Beautify.h in Headers */,
-				1DE9D2F8174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.h in Headers */,
-				727A862C17575C5100F6C6D9 /* BYSwitchState.h in Headers */,
-				702194C917E1BC0D008161D3 /* BYSliderMinimumTrackLayer.h in Headers */,
-				727A862E17575C5600F6C6D9 /* BYTextShadow.h in Headers */,
-				7047012917E1C23800FEA5F5 /* BYSwitchGestureView.h in Headers */,
-				72F07945175C941100FC27DB /* BYControlRenderingLayer.h in Headers */,
-				70B492F017F2DF33002B62DB /* BYJSONVersion.h in Headers */,
-				72F07959175C9F9700FC27DB /* UITableViewCell+Beautify.h in Headers */,
-				72F0795C175CCC2F00FC27DB /* BYDelegateMultiplexer.h in Headers */,
-				72F0797F1761F11000FC27DB /* Beautify.h in Headers */,
-				70F61B8617831AE100DCA906 /* BYRenderUtils.h in Headers */,
-				543570EA17BE313E007FA7CE /* UIBarButtonItem+Beautify.h in Headers */,
-				707F518B17FB1F9100928B0B /* JSONModelClassProperty.h in Headers */,
-				7047010A17E1C08F00FEA5F5 /* UISlider+Beautify.h in Headers */,
-				547C32D817C4C24B009D6289 /* BYSliderBarBorderLayer.h in Headers */,
-				7047012017E1C1F200FEA5F5 /* UISwitch+Beautify.h in Headers */,
-				54DDE26C17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.h in Headers */,
-				700EE91D17E1FFAB00164EA1 /* BYThemeManager.h in Headers */,
-				702194C817E1BC0D008161D3 /* BYSliderLayer.h in Headers */,
+				7065B63A19617C0500A5FA36 /* BYTableViewRenderer.h in Headers */,
+				7065B6A219617E0C00A5FA36 /* BYStyle.h in Headers */,
+				7065B6A419617E1500A5FA36 /* BYStyleCustomizer.h in Headers */,
+				7065B64D19617CA000A5FA36 /* BYSwitchRenderer.h in Headers */,
+				7065B68119617D9100A5FA36 /* BYFont_Private.h in Headers */,
+				7065B64319617C7A00A5FA36 /* BYLabelRenderer.h in Headers */,
+				7065B69219617DCA00A5FA36 /* BYDropShadow.h in Headers */,
+				7065B60319617B7D00A5FA36 /* Beautify.h in Headers */,
+				7065B6AF19617E3F00A5FA36 /* BYViewControllerStyle.h in Headers */,
+				7065B63219617BE300A5FA36 /* BYSliderMinimumTrackLayer.h in Headers */,
+				7065B67719617D5F00A5FA36 /* UINavigationBar+Beautify.h in Headers */,
+				7065B6CB19617ED400A5FA36 /* JSONModelError.h in Headers */,
+				7065B65319617CAF00A5FA36 /* UISwitch+Beautify.h in Headers */,
+				7065B67C19617D7500A5FA36 /* NSObject+Beautify.h in Headers */,
+				7065B6B919617E5A00A5FA36 /* BYTheme.h in Headers */,
+				7065B66119617CE000A5FA36 /* BYStyleRenderer_Private.h in Headers */,
+				7065B6A619617E1D00A5FA36 /* BYStyleProtocol.h in Headers */,
+				7065B67519617D5A00A5FA36 /* UIViewController+BeautifyPrivate.h in Headers */,
+				7065B66B19617D0500A5FA36 /* BYRenderUtils.h in Headers */,
+				7065B62E19617BCB00A5FA36 /* BYSliderLayer.h in Headers */,
+				7065B69619617DDE00A5FA36 /* BYButtonStyle.h in Headers */,
+				7065B69A19617DF100A5FA36 /* BYLabelStyle.h in Headers */,
+				7065B6CE19617EE300A5FA36 /* JSONKeyMapper.h in Headers */,
+				7065B63619617BF000A5FA36 /* UISlider+Beautify.h in Headers */,
+				7065B6AB19617E3000A5FA36 /* BYTableViewCellStyle.h in Headers */,
+				7065B64B19617C9700A5FA36 /* BYSwitchLayer.h in Headers */,
+				7065B69819617DE500A5FA36 /* BYImageViewStyle.h in Headers */,
+				7065B6D61961905400A5FA36 /* BYTableViewCellRenderer.h in Headers */,
+				7065B67119617D4E00A5FA36 /* UIView+Utilities.h in Headers */,
+				7065B6D019617EEA00A5FA36 /* JSONValueTransformer.h in Headers */,
+				7065B6C419617EBA00A5FA36 /* JSONModel.h in Headers */,
+				7065B6DD1961927000A5FA36 /* NSArray+JSONModel.h in Headers */,
+				7065B6BE19617E7E00A5FA36 /* BYThemeManager.h in Headers */,
+				7065B68019617D8700A5FA36 /* BYFont.h in Headers */,
+				7065B6C019617E8700A5FA36 /* BYBeautifyVersion.h in Headers */,
+				7065B63019617BDD00A5FA36 /* BYSliderMaximumTrackLayer.h in Headers */,
+				7065B6BC19617E6E00A5FA36 /* BYBeautify.h in Headers */,
+				7065B62619617BAB00A5FA36 /* BYSearchBarRenderer.h in Headers */,
+				7065B65B19617CD100A5FA36 /* UIImageView+Beautify.h in Headers */,
+				7065B6DA1961913600A5FA36 /* BYNavigationBarRenderer.h in Headers */,
+				7065B66319617CE700A5FA36 /* BYViewRenderer_Private.h in Headers */,
+				7065B67A19617D6E00A5FA36 /* UIBarButtonItem+Beautify.h in Headers */,
+				7065B65519617CBB00A5FA36 /* BYButtonRenderer.h in Headers */,
+				7065B6B619617E5200A5FA36 /* BYSearchBarStyle.h in Headers */,
+				7065B64719617C8B00A5FA36 /* BYSwitchBorderLayer.h in Headers */,
+				7065B6BB19617E6B00A5FA36 /* BYBeautify_Private.h in Headers */,
+				7065B65719617CC500A5FA36 /* BYTopShadowRenderingLayer.h in Headers */,
+				7065B64919617C9100A5FA36 /* BYSwitchGestureView.h in Headers */,
+				7065B64F19617CA600A5FA36 /* BYSwitchShadowLayer.h in Headers */,
+				7065B62819617BB500A5FA36 /* BYTabBarRenderer.h in Headers */,
+				7065B63C19617C0900A5FA36 /* BYTableViewCellLabelRenderer.h in Headers */,
+				7065B65919617CCA00A5FA36 /* BYImageViewRenderer.h in Headers */,
+				7065B68919617DAB00A5FA36 /* BYShadow.h in Headers */,
+				7065B6DC1961926400A5FA36 /* JSONModelClassProperty.h in Headers */,
+				7065B69E19617DFF00A5FA36 /* BYSliderStyle.h in Headers */,
+				7065B66719617CF100A5FA36 /* BYControlRenderer.h in Headers */,
+				7065B62019617B9300A5FA36 /* UIColor+HexColors.h in Headers */,
+				7065B6C319617EB300A5FA36 /* JSONModelLib.h in Headers */,
+				7065B62A19617BBA00A5FA36 /* BYSliderBarBorderLayer.h in Headers */,
+				7065B69419617DD600A5FA36 /* BYBarButtonStyle.h in Headers */,
+				7065B69019617DC400A5FA36 /* BYTextShadow.h in Headers */,
+				7065B67319617D5400A5FA36 /* UIViewController+Beautify.h in Headers */,
+				7065B67E19617D7B00A5FA36 /* BYBorder.h in Headers */,
+				7065B66D19617D1000A5FA36 /* UIView+Beautify.h in Headers */,
+				7065B63419617BEB00A5FA36 /* BYSliderRenderer.h in Headers */,
+				7065B63E19617C3D00A5FA36 /* BYTextFieldRenderer.h in Headers */,
+				7065B6B419617E4C00A5FA36 /* BYTabBarStyle.h in Headers */,
+				7065B69C19617DF700A5FA36 /* BYNavigationBarStyle.h in Headers */,
+				7065B65F19617CDA00A5FA36 /* BYStyleRenderer.h in Headers */,
+				7065B6A019617E0500A5FA36 /* BYStateSetter.h in Headers */,
+				7065B64119617C4E00A5FA36 /* BYViewControllerRenderer.h in Headers */,
+				7065B66219617CE300A5FA36 /* BYViewRenderer.h in Headers */,
+				7065B6AD19617E3800A5FA36 /* BYTextFieldStyle.h in Headers */,
+				7065B66A19617D0000A5FA36 /* BYDelegateMultiplexer.h in Headers */,
+				7065B6C119617E8A00A5FA36 /* BYPlatformVersionUtils.h in Headers */,
+				7065B63819617BF500A5FA36 /* BYBarButtonItemRenderer.h in Headers */,
+				7065B64519617C8500A5FA36 /* BYThumbLayer.h in Headers */,
+				7065B65119617CAB00A5FA36 /* BYSwitchToggleLayer.h in Headers */,
+				7065B68D19617DBA00A5FA36 /* BYSwitchState.h in Headers */,
+				7065B68319617D9600A5FA36 /* BYGradient.h in Headers */,
+				70FD6E291961A0D700AE9ACA /* JSONModelArray.h in Headers */,
+				7065B61E19617B8C00A5FA36 /* NSObject+Properties.h in Headers */,
+				7065B6A919617E2700A5FA36 /* BYSwitchStyle.h in Headers */,
+				7065B66F19617D4900A5FA36 /* UIView+BeautifyPrivate.h in Headers */,
+				7065B62C19617BC000A5FA36 /* BYSliderBarShadowLayer.h in Headers */,
+				7065B6A719617E2100A5FA36 /* BYStyleSetterCustomizer.h in Headers */,
+				7065B62219617B9C00A5FA36 /* UIImage+Base64.h in Headers */,
+				7065B67919617D6500A5FA36 /* UIBarButtonItem+BeautifyPrivate.h in Headers */,
+				7065B62419617BA400A5FA36 /* JSONValueTransformer+BeautifyExtension.h in Headers */,
+				7065B6B119617E4500A5FA36 /* BYViewStyle.h in Headers */,
+				7065B66519617CED00A5FA36 /* BYControlRenderingLayer.h in Headers */,
+				7065B68B19617DB300A5FA36 /* BYText.h in Headers */,
+				7065B6C219617E8C00A5FA36 /* BYJSONVersion.h in Headers */,
+				7065B65D19617CD600A5FA36 /* BYStyleLayer.h in Headers */,
+				7065B68519617D9C00A5FA36 /* BYGradientStop.h in Headers */,
+				7065B68719617DA300A5FA36 /* BYBackgroundImage.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1D46460517466915003840E4 /* Beautify */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1D46460E17466915003840E4 /* Build configuration list for PBXNativeTarget "Beautify" */;
-			buildPhases = (
-				1D4645FE17466915003840E4 /* Run BYript */,
-				1D4645FF17466915003840E4 /* Sources */,
-				1D46460017466915003840E4 /* Frameworks */,
-				1D46460117466915003840E4 /* Headers */,
-				1D46460217466915003840E4 /* Resources */,
-				1D46460317466915003840E4 /* Run BYript */,
-				1D46460417466915003840E4 /* Run BYript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Beautify;
-			productName = Beautify;
-			productReference = 1D46460617466915003840E4 /* Beautify.framework */;
-			productType = "com.apple.product-type.bundle";
-		};
 		700F292416F3711300E85ED3 /* VisualTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 700F294416F3711300E85ED3 /* Build configuration list for PBXNativeTarget "VisualTest" */;
@@ -1568,15 +1565,36 @@
 				700F292216F3711300E85ED3 /* Frameworks */,
 				700F292316F3711300E85ED3 /* Resources */,
 				70E728F91819120A002F1097 /* Run Script */,
+				7065B61C19617B7D00A5FA36 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7065B61219617B7D00A5FA36 /* PBXTargetDependency */,
+				7065B61619617B7D00A5FA36 /* PBXTargetDependency */,
 			);
 			name = VisualTest;
 			productName = VisualTest;
 			productReference = 700F292516F3711300E85ED3 /* VisualTest.app */;
 			productType = "com.apple.product-type.application";
+		};
+		7065B5FD19617B7D00A5FA36 /* Beautify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7065B61B19617B7D00A5FA36 /* Build configuration list for PBXNativeTarget "Beautify" */;
+			buildPhases = (
+				7065B5F919617B7D00A5FA36 /* Sources */,
+				7065B5FA19617B7D00A5FA36 /* Frameworks */,
+				7065B5FB19617B7D00A5FA36 /* Headers */,
+				7065B5FC19617B7D00A5FA36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Beautify;
+			productName = Beautify;
+			productReference = 7065B5FE19617B7D00A5FA36 /* Beautify.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		70AB9D7217E9DF4000879E5E /* Demo */ = {
 			isa = PBXNativeTarget;
@@ -1607,7 +1625,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				70FE247317E0B385009A7113 /* PBXTargetDependency */,
 			);
 			name = "Beautify Tests";
 			productName = "Beautify Tests";
@@ -1624,6 +1641,9 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = Beautify;
 				TargetAttributes = {
+					7065B5FD19617B7D00A5FA36 = {
+						CreatedOnToolsVersion = 6.0;
+					};
 					70FE246217E0B385009A7113 = {
 						TestTargetID = 700F292416F3711300E85ED3;
 					};
@@ -1642,22 +1662,15 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				7065B5FD19617B7D00A5FA36 /* Beautify */,
+				70FE246217E0B385009A7113 /* Beautify Tests */,
 				700F292416F3711300E85ED3 /* VisualTest */,
 				70AB9D7217E9DF4000879E5E /* Demo */,
-				1D46460517466915003840E4 /* Beautify */,
-				70FE246217E0B385009A7113 /* Beautify Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1D46460217466915003840E4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		700F292316F3711300E85ED3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1670,7 +1683,13 @@
 				70907E7B1797FBC300F83417 /* roller@2x.png in Resources */,
 				70FE245E17E089D1009A7113 /* barButtonImage.png in Resources */,
 				700F293B16F3711300E85ED3 /* Default-568h@2x.png in Resources */,
-				543570F017BE32C3007FA7CE /* Beautify-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7065B5FC19617B7D00A5FA36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1724,48 +1743,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1D4645FE17466915003840E4 /* Run BYript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run BYript";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave BYript to do\n    exit 0\nfi\nset -u\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n\tUFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version  from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && \\\n   [[ -f \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && \\\n   [[ ! \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Clean other platform if needed\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n\techo \"Platform \\\"$UFW_SDK_PLATFORM\\\" was cleaned recently. Cleaning \\\"$UFW_OTHER_PLATFORM\\\" as well\"\n\techo xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\n\txcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" clean\nfi\n\n\n# Make sure we are building from fresh binaries\n\nrm -rf \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nrm -rf \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework\"\n";
-		};
-		1D46460317466915003840E4 /* Run BYript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run BYript";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "HEADERS_ROOT=$SRCROOT/$PRODUCT_NAME\nFRAMEWORK_HEADERS_DIR=\"$BUILT_PRODUCTS_DIR/$WRAPPER_NAME/Versions/$FRAMEWORK_VERSION/Headers\"\n\n## only header files expected at this point\nPUBLIC_HEADERS=$(find $FRAMEWORK_HEADERS_DIR/. -not -type d 2> /dev/null | sed -e \"s@.*/@@g\")\n\nFIND_OPTS=\"\"\nfor PUBLIC_HEADER in $PUBLIC_HEADERS; do\n  if [ -n \"$FIND_OPTS\" ]; then\n    FIND_OPTS=\"$FIND_OPTS -o\"\n  fi\n  FIND_OPTS=\"$FIND_OPTS -name '$PUBLIC_HEADER'\"\ndone\n\nif [ -n \"$FIND_OPTS\" ]; then\n  for ORIG_HEADER in $(eval \"find $HEADERS_ROOT/. $FIND_OPTS\" 2> /dev/null | sed -e \"s@^$HEADERS_ROOT/./@@g\"); do\n    PUBLIC_HEADER=$(basename $ORIG_HEADER)\n    RELATIVE_PATH=$(dirname $ORIG_HEADER)\n    if [ -e $FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER ]; then\n      mkdir -p \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH\"\n      mv \"$FRAMEWORK_HEADERS_DIR/$PUBLIC_HEADER\" \"$FRAMEWORK_HEADERS_DIR/$RELATIVE_PATH/$PUBLIC_HEADER\"\n    fi\n  done\nfi\n";
-		};
-		1D46460417466915003840E4 /* Run BYript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run BYript";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nset +u\nif [[ $UFW_MASTER_SCRIPT_RUNNING ]]\nthen\n    # Nothing for the slave BYript to do\n    exit 0\nfi\nset -u\nexport UFW_MASTER_SCRIPT_RUNNING=1\n\n\n# Functions\n\n## List files in the specified directory, storing to the specified array.\n#\n# @param $1 The path to list\n# @param $2 The name of the array to fill\n#\n##\nlist_files ()\n{\n    filelist=$(ls \"$1\")\n    while read line\n    do\n        eval \"$2[\\${#$2[*]}]=\\\"\\$line\\\"\"\n    done <<< \"$filelist\"\n}\n\n\n# Sanity check\n\nif [[ ! -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]]\nthen\n    echo \"Framework target \\\"${TARGET_NAME}\\\" had no source files to build from. Make sure your source files have the correct target membership\"\n    exit 1\nfi\n\n\n# Gather information\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\n    UFW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find platform name from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\n    UFW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\n    echo \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\n    exit 1\nfi\n\nif [[ \"$UFW_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\n    UFW_OTHER_PLATFORM=iphonesimulator\nelse\n    UFW_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$UFW_SDK_PLATFORM$ ]]\nthen\n    UFW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${UFW_OTHER_PLATFORM}\"\nelse\n    echo \"Could not find $UFW_SDK_PLATFORM in $BUILT_PRODUCTS_DIR\"\n    exit 1\nfi\n\n\n# Short-circuit if all binaries are up to date.\n# We already checked the other platform in the prerun BYript.\n\nif [[ -f \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" ]] && [[ -f \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]] && [[ ! \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -nt \"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.embeddedframework/${EXECUTABLE_PATH}\" ]]\nthen\n    exit 0\nfi\n\n\n# Make sure the other platform gets built\n\necho \"Build other platform\"\n\necho xcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${UFW_OTHER_PLATFORM}${UFW_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" CONFIGURATION_TEMP_DIR=\"${PROJECT_TEMP_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\" $ACTION\n\n\n# Build the fat static library binary\n\necho \"Create universal static library\"\n\necho \"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\"$DT_TOOLCHAIN_DIR/usr/bin/libtool\" -static \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" \"${UFW_OTHER_BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\" -o \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\"\n\necho mv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\nmv \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}.temp\" \"${BUILT_PRODUCTS_DIR}/${EXECUTABLE_PATH}\"\n\n\n# Build framework structure\n\necho \"Build symlinks\"\n\necho ln -sfh $FRAMEWORK_VERSION \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\nln -sfh $FRAMEWORK_VERSION \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Versions/Current\"\necho ln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Headers\"\necho ln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\nln -sfh Versions/Current/Resources \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Resources\"\necho ln -sfh \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\nln -sfh \"Versions/Current/${EXECUTABLE_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${EXECUTABLE_NAME}\"\n\n# Replace other platform's framework with a copy of this one (so that both have the same universal binary)\n\necho \"Copy from $UFW_SDK_PLATFORM to $UFW_OTHER_PLATFORM\"\n\necho rm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\nrm -rf \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\necho cp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\ncp -a \"${BUILD_DIR}/${CONFIGURATION}-${UFW_SDK_PLATFORM}\" \"${BUILD_DIR}/${CONFIGURATION}-${UFW_OTHER_PLATFORM}\"\n";
-		};
 		70E728F91819120A002F1097 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1797,102 +1774,6 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1D4645FF17466915003840E4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D46461317466942003840E4 /* NSObject+Properties.m in Sources */,
-				1D46461417466942003840E4 /* UIColor+HexColors.m in Sources */,
-				54A995BA179FD29C00B9B17C /* BYDropShadow.m in Sources */,
-				1D46461617466942003840E4 /* BYLabelRenderer.m in Sources */,
-				707F516217FB001D00928B0B /* BYBackgroundImage.m in Sources */,
-				707F518717FB1F8900928B0B /* JSONModelArray.m in Sources */,
-				1D46461817466942003840E4 /* BYSwitchBorderLayer.m in Sources */,
-				70907E701797E6F600F83417 /* BYImageViewStyle.m in Sources */,
-				1DDB6A3B174BA951008A2A73 /* BYBeautify.m in Sources */,
-				702194D017E1BC2E008161D3 /* BYTableViewRenderer.m in Sources */,
-				1DDB6A46174BAA40008A2A73 /* BYThemeManager.m in Sources */,
-				1D46461A17466942003840E4 /* BYSwitchLayer.m in Sources */,
-				1D46461B17466942003840E4 /* BYSwitchRenderer.m in Sources */,
-				707A869417F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m in Sources */,
-				1D46461C17466942003840E4 /* BYSwitchShadowLayer.m in Sources */,
-				1D46461D17466942003840E4 /* BYSwitchToggleLayer.m in Sources */,
-				1D46461F17466942003840E4 /* BYButtonRenderer.m in Sources */,
-				1D46462017466942003840E4 /* BYStyleLayer.m in Sources */,
-				707F519317FB1FA900928B0B /* JSONKeyMapper.m in Sources */,
-				1D46462117466942003840E4 /* BYStyleRenderer.m in Sources */,
-				70BF4EFE17FB294800F807F6 /* UIImage+Base64.m in Sources */,
-				1D46462217466942003840E4 /* BYViewRenderer.m in Sources */,
-				707F518917FB1F8E00928B0B /* JSONModelClassProperty.m in Sources */,
-				1D46462317466942003840E4 /* BYBorder.m in Sources */,
-				1D46462417466942003840E4 /* BYFont.m in Sources */,
-				1D46462517466942003840E4 /* BYGradient.m in Sources */,
-				1D46462617466942003840E4 /* BYGradientStop.m in Sources */,
-				7047011517E1C11100FEA5F5 /* BYImageViewRenderer.m in Sources */,
-				707F518E17FB1F9800928B0B /* JSONModelError.m in Sources */,
-				1D46462817466942003840E4 /* BYShadow.m in Sources */,
-				83881D371842AB3600A374FC /* BYTabBarStyle.m in Sources */,
-				7047011B17E1C13200FEA5F5 /* BYSliderRenderer.m in Sources */,
-				1D46462917466942003840E4 /* BYButtonStyle.m in Sources */,
-				1D46462A17466942003840E4 /* BYLabelStyle.m in Sources */,
-				1D46462B17466942003840E4 /* BYStyleCustomizer.m in Sources */,
-				1D46462C17466942003840E4 /* BYSwitchStyle.m in Sources */,
-				54ABF0EB17A286F20070B0B6 /* UINavigationBar+Beautify.m in Sources */,
-				1D46462D17466942003840E4 /* BYViewStyle.m in Sources */,
-				1D46462E17466942003840E4 /* BYStyle.m in Sources */,
-				702194C717E1BC0D008161D3 /* BYSliderBarShadowLayer.m in Sources */,
-				1D46462F17466942003840E4 /* BYStateSetter.m in Sources */,
-				70C211B917DF01DB00CA110B /* TableVisualTestViewController.m in Sources */,
-				1D46463017466942003840E4 /* BYStyleSetterCustomizer.m in Sources */,
-				7047011417E1C11100FEA5F5 /* BYTopShadowRenderingLayer.m in Sources */,
-				707F519017FB1F9E00928B0B /* NSArray+JSONModel.m in Sources */,
-				702194C517E1BC0D008161D3 /* BYSliderBarBorderLayer.m in Sources */,
-				1D46463117466942003840E4 /* BYTheme.m in Sources */,
-				7047011A17E1C13200FEA5F5 /* BYSliderLayer.m in Sources */,
-				1D46463217466942003840E4 /* UIView+Beautify.m in Sources */,
-				1D46463317466942003840E4 /* UIView+BeautifyPrivate.m in Sources */,
-				70FF912917F5A51E00972848 /* BYBarButtonItemRenderer.m in Sources */,
-				1D46463417466942003840E4 /* UIView+Utilities.m in Sources */,
-				702194FA17E1BC95008161D3 /* BYTableViewCellLabelRenderer.m in Sources */,
-				1DE9D28A174E6D890070AFD3 /* BYText.m in Sources */,
-				1DE9D2ED174F7BA50070AFD3 /* UIViewController+Beautify.m in Sources */,
-				1DE9D2FB174F7CD10070AFD3 /* UIViewController+BeautifyPrivate.m in Sources */,
-				1DE9D302174F7F540070AFD3 /* BYViewControllerStyle.m in Sources */,
-				1DE9D30A174F7F780070AFD3 /* BYViewControllerRenderer.m in Sources */,
-				7047010B17E1C08F00FEA5F5 /* UISlider+Beautify.m in Sources */,
-				7276DDAF17563949004CC446 /* BYSwitchState.m in Sources */,
-				72FDED9B17565749002F1093 /* BYGradientLayer.m in Sources */,
-				72FDED9D1756574D002F1093 /* BYTextFieldRenderer.m in Sources */,
-				727A862A17575C4600F6C6D9 /* BYTextShadow.m in Sources */,
-				727A863017575C9F00F6C6D9 /* BYControlRenderer.m in Sources */,
-				7047012117E1C1F200FEA5F5 /* UISwitch+Beautify.m in Sources */,
-				727A863217575CAD00F6C6D9 /* BYTextFieldStyle.m in Sources */,
-				702194CA17E1BC0D008161D3 /* BYSliderMinimumTrackLayer.m in Sources */,
-				727A863617575D1700F6C6D9 /* UITextField+Beautify.m in Sources */,
-				7205345F1757A000000A27C0 /* BYNavigationBarStyle.m in Sources */,
-				7047011D17E1C14300FEA5F5 /* BYSwitchGestureView.m in Sources */,
-				707F519617FB1FAF00928B0B /* JSONValueTransformer.m in Sources */,
-				720534611758EC04000A27C0 /* BYNavigationBarRenderer.m in Sources */,
-				544975D017D8B953003D7115 /* BYThumbLayer.m in Sources */,
-				72AE98D7175BB94800787272 /* BYTableViewCellRenderer.m in Sources */,
-				72AE98DE175BBA7E00787272 /* BYTableViewCellStyle.m in Sources */,
-				72F07948175C941100FC27DB /* BYControlRenderingLayer.m in Sources */,
-				72F07956175C9F2900FC27DB /* UITableViewCell+Beautify.m in Sources */,
-				70CB6CEE18A39D7F0033B020 /* BYSearchBarStyle.m in Sources */,
-				70CB6CEA18A398CA0033B020 /* BYSearchBarRenderer.m in Sources */,
-				72F0795F175CCC2F00FC27DB /* BYDelegateMultiplexer.m in Sources */,
-				70F61B8917831AE100DCA906 /* BYRenderUtils.m in Sources */,
-				7047011717E1C11100FEA5F5 /* UIImageView+Beautify.m in Sources */,
-				543570E717BE312C007FA7CE /* UIBarButtonItem+Beautify.m in Sources */,
-				7047010617E1C06B00FEA5F5 /* NSObject+Beautify.m in Sources */,
-				70397B9217DF33190095001B /* BYBarButtonStyle.m in Sources */,
-				547C32D417C4C1EE009D6289 /* BYSliderStyle.m in Sources */,
-				54DDE26F17C65D1B0081E1AD /* BYSliderMaximumTrackLayer.m in Sources */,
-				7000537917FDC0F70095F2EE /* JSONModel.m in Sources */,
-				83881D331842AABB00A374FC /* BYTabBarRenderer.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		700F292116F3711300E85ED3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1998,6 +1879,100 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7065B5F919617B7D00A5FA36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7065B62B19617BBC00A5FA36 /* BYSliderBarBorderLayer.m in Sources */,
+				7065B66819617CF700A5FA36 /* BYControlRenderer.m in Sources */,
+				7065B64E19617CA400A5FA36 /* BYSwitchRenderer.m in Sources */,
+				7065B6BD19617E7900A5FA36 /* BYBeautify.m in Sources */,
+				7065B6A519617E1900A5FA36 /* BYStyleCustomizer.m in Sources */,
+				7065B62D19617BC300A5FA36 /* BYSliderBarShadowLayer.m in Sources */,
+				7065B6CD19617EDE00A5FA36 /* NSArray+JSONModel.m in Sources */,
+				7065B68819617DA800A5FA36 /* BYBackgroundImage.m in Sources */,
+				7065B6B519617E4F00A5FA36 /* BYTabBarStyle.m in Sources */,
+				7065B65A19617CCF00A5FA36 /* BYImageViewRenderer.m in Sources */,
+				7065B6C519617EBF00A5FA36 /* JSONModel.m in Sources */,
+				7065B6D119617EEE00A5FA36 /* JSONValueTransformer.m in Sources */,
+				7065B6B719617E5400A5FA36 /* BYSearchBarStyle.m in Sources */,
+				7065B68219617D9300A5FA36 /* BYFont.m in Sources */,
+				7065B64819617C8E00A5FA36 /* BYSwitchBorderLayer.m in Sources */,
+				7065B66019617CDE00A5FA36 /* BYStyleRenderer.m in Sources */,
+				7065B68C19617DB700A5FA36 /* BYText.m in Sources */,
+				7065B6B819617E5700A5FA36 /* BYTheme.m in Sources */,
+				7065B6A819617E2500A5FA36 /* BYStyleSetterCustomizer.m in Sources */,
+				7065B67219617D5200A5FA36 /* UIView+Utilities.m in Sources */,
+				7065B65019617CA800A5FA36 /* BYSwitchShadowLayer.m in Sources */,
+				7065B63319617BE800A5FA36 /* BYSliderMinimumTrackLayer.m in Sources */,
+				7065B6D219617F0200A5FA36 /* BYTableViewCellRenderer.m in Sources */,
+				7065B6B019617E4300A5FA36 /* BYViewControllerStyle.m in Sources */,
+				7065B65419617CB800A5FA36 /* UISwitch+Beautify.m in Sources */,
+				7065B64C19617C9D00A5FA36 /* BYSwitchLayer.m in Sources */,
+				7065B69119617DC700A5FA36 /* BYTextShadow.m in Sources */,
+				7065B67419617D5800A5FA36 /* UIViewController+Beautify.m in Sources */,
+				7065B63719617BF200A5FA36 /* UISlider+Beautify.m in Sources */,
+				7065B6AE19617E3C00A5FA36 /* BYTextFieldStyle.m in Sources */,
+				7065B62319617BA000A5FA36 /* UIImage+Base64.m in Sources */,
+				7065B64A19617C9300A5FA36 /* BYSwitchGestureView.m in Sources */,
+				70FD6E28196198A400AE9ACA /* BYNavigationBarRenderer.m in Sources */,
+				7065B62719617BAF00A5FA36 /* BYSearchBarRenderer.m in Sources */,
+				7065B67B19617D7300A5FA36 /* UIBarButtonItem+Beautify.m in Sources */,
+				7065B6AA19617E2E00A5FA36 /* BYSwitchStyle.m in Sources */,
+				7065B66C19617D0800A5FA36 /* BYRenderUtils.m in Sources */,
+				7065B69919617DEE00A5FA36 /* BYImageViewStyle.m in Sources */,
+				7065B64419617C8200A5FA36 /* BYLabelRenderer.m in Sources */,
+				7065B64219617C5200A5FA36 /* BYViewControllerRenderer.m in Sources */,
+				7065B68419617D9A00A5FA36 /* BYGradient.m in Sources */,
+				7065B67019617D4C00A5FA36 /* UIView+BeautifyPrivate.m in Sources */,
+				7065B65219617CAD00A5FA36 /* BYSwitchToggleLayer.m in Sources */,
+				7065B69F19617E0300A5FA36 /* BYSliderStyle.m in Sources */,
+				7065B64019617C4B00A5FA36 /* BYGradientLayer.m in Sources */,
+				7065B65C19617CD300A5FA36 /* UIImageView+Beautify.m in Sources */,
+				7065B69519617DDC00A5FA36 /* BYBarButtonStyle.m in Sources */,
+				7065B6CF19617EE800A5FA36 /* JSONKeyMapper.m in Sources */,
+				7065B69719617DE300A5FA36 /* BYButtonStyle.m in Sources */,
+				7065B65E19617CD800A5FA36 /* BYStyleLayer.m in Sources */,
+				7065B61F19617B9000A5FA36 /* NSObject+Properties.m in Sources */,
+				7065B63519617BEE00A5FA36 /* BYSliderRenderer.m in Sources */,
+				7065B63919617BF700A5FA36 /* BYBarButtonItemRenderer.m in Sources */,
+				7065B6CA19617ED100A5FA36 /* JSONModelError.m in Sources */,
+				7065B68619617DA000A5FA36 /* BYGradientStop.m in Sources */,
+				7065B62F19617BCE00A5FA36 /* BYSliderLayer.m in Sources */,
+				7065B68A19617DB100A5FA36 /* BYShadow.m in Sources */,
+				7065B69D19617DFD00A5FA36 /* BYNavigationBarStyle.m in Sources */,
+				7065B6B219617E4A00A5FA36 /* BYViewStyle.m in Sources */,
+				7065B67F19617D8400A5FA36 /* BYBorder.m in Sources */,
+				7065B66419617CEB00A5FA36 /* BYViewRenderer.m in Sources */,
+				7065B62519617BA600A5FA36 /* JSONValueTransformer+BeautifyExtension.m in Sources */,
+				7065B63F19617C4400A5FA36 /* BYTextFieldRenderer.m in Sources */,
+				7065B6C919617ECE00A5FA36 /* JSONModelClassProperty.m in Sources */,
+				7065B6BF19617E8300A5FA36 /* BYThemeManager.m in Sources */,
+				7065B68F19617DC100A5FA36 /* BYSwitchState.m in Sources */,
+				7065B63B19617C0700A5FA36 /* BYTableViewRenderer.m in Sources */,
+				7065B6D319617F0E00A5FA36 /* BYTableViewCellLabelRenderer.m in Sources */,
+				7065B69B19617DF500A5FA36 /* BYLabelStyle.m in Sources */,
+				7065B6AC19617E3500A5FA36 /* BYTableViewCellStyle.m in Sources */,
+				7065B6C719617EC500A5FA36 /* JSONModelArray.m in Sources */,
+				7065B63D19617C3A00A5FA36 /* UITextField+Beautify.m in Sources */,
+				7065B67D19617D7800A5FA36 /* NSObject+Beautify.m in Sources */,
+				7065B65619617CBF00A5FA36 /* BYButtonRenderer.m in Sources */,
+				7065B62119617B9800A5FA36 /* UIColor+HexColors.m in Sources */,
+				7065B66E19617D4700A5FA36 /* UIView+Beautify.m in Sources */,
+				7065B67619617D5D00A5FA36 /* UIViewController+BeautifyPrivate.m in Sources */,
+				7065B63119617BE100A5FA36 /* BYSliderMaximumTrackLayer.m in Sources */,
+				7065B66919617CFD00A5FA36 /* BYDelegateMultiplexer.m in Sources */,
+				7065B69319617DCE00A5FA36 /* BYDropShadow.m in Sources */,
+				7065B67819617D6200A5FA36 /* UINavigationBar+Beautify.m in Sources */,
+				7065B6A319617E1200A5FA36 /* BYStyle.m in Sources */,
+				7065B62919617BB800A5FA36 /* BYTabBarRenderer.m in Sources */,
+				7065B64619617C8800A5FA36 /* BYThumbLayer.m in Sources */,
+				7065B6A119617E0A00A5FA36 /* BYStateSetter.m in Sources */,
+				7065B65819617CC800A5FA36 /* BYTopShadowRenderingLayer.m in Sources */,
+				7065B66619617CEF00A5FA36 /* BYControlRenderingLayer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		70AB9D6F17E9DF4000879E5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2025,6 +2000,7 @@
 				707F518A17FB1F8E00928B0B /* JSONModelClassProperty.m in Sources */,
 				707F518817FB1F8900928B0B /* JSONModelArray.m in Sources */,
 				700E156317E321A6006E124E /* BYStyle.m in Sources */,
+				7065B6D7196190A800A5FA36 /* BYBeautify.m in Sources */,
 				700E154F17E320D7006E124E /* BYButtonStyle.m in Sources */,
 				70EFB6B4180419C300FF75AA /* BYImageTests.m in Sources */,
 				700E154E17E320C8006E124E /* BYBorder.m in Sources */,
@@ -2063,10 +2039,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		70FE247317E0B385009A7113 /* PBXTargetDependency */ = {
+		7065B61219617B7D00A5FA36 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1D46460517466915003840E4 /* Beautify */;
-			targetProxy = 70FE247217E0B385009A7113 /* PBXContainerItemProxy */;
+			target = 7065B5FD19617B7D00A5FA36 /* Beautify */;
+			targetProxy = 7065B61119617B7D00A5FA36 /* PBXContainerItemProxy */;
+		};
+		7065B61619617B7D00A5FA36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7065B5FD19617B7D00A5FA36 /* Beautify */;
+			targetProxy = 7065B61519617B7D00A5FA36 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -2098,52 +2079,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		1D46460F17466915003840E4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Beautify/Beautify-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
-				INFOPLIST_FILE = "Beautify/Beautify-Info.plist";
-				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				LINK_WITH_STANDARD_LIBRARIES = NO;
-				MACH_O_TYPE = mh_object;
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				RUN_CLANG_STATIC_ANALYZER = NO;
-				SKIP_INSTALL = YES;
-				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Debug;
-		};
-		1D46461017466915003840E4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CONTENTS_FOLDER_PATH = "$(WRAPPER_NAME)/Versions/$(FRAMEWORK_VERSION)";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				FRAMEWORK_VERSION = A;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Beautify/Beautify-Prefix.pch";
-				INFOPLIST_FILE = "Beautify/Beautify-Info.plist";
-				INFOPLIST_PATH = "$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/Info.plist";
-				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
-				LINK_WITH_STANDARD_LIBRARIES = NO;
-				MACH_O_TYPE = mh_object;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				RUN_CLANG_STATIC_ANALYZER = NO;
-				SKIP_INSTALL = YES;
-				UNLOCALIZED_RESOURCES_FOLDER_PATH = "$(CONTENTS_FOLDER_PATH)/Resources";
-				WRAPPER_EXTENSION = framework;
-			};
-			name = Release;
-		};
 		700F294216F3711300E85ED3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2158,6 +2093,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "VisualTest/VisualTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
@@ -2179,12 +2115,92 @@
 				GCC_PREFIX_HEADER = "VisualTest/VisualTest-Prefix.pch";
 				INFOPLIST_FILE = "VisualTest/VisualTest-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7065B61719617B7D00A5FA36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = Beautify/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7065B61819617B7D00A5FA36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = Beautify/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -2376,20 +2392,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D46460E17466915003840E4 /* Build configuration list for PBXNativeTarget "Beautify" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1D46460F17466915003840E4 /* Debug */,
-				1D46461017466915003840E4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		700F294416F3711300E85ED3 /* Build configuration list for PBXNativeTarget "VisualTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				700F294216F3711300E85ED3 /* Debug */,
 				700F294316F3711300E85ED3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7065B61B19617B7D00A5FA36 /* Build configuration list for PBXNativeTarget "Beautify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7065B61719617B7D00A5FA36 /* Debug */,
+				7065B61819617B7D00A5FA36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

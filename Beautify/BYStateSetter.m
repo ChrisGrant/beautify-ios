@@ -121,4 +121,9 @@ static NSDictionary* styleProperties = nil;
     return nil;
 }
 
++(BOOL)propertyIsIgnored:(NSString *)propertyName
+{
+    return YES;
+}
+
 @end

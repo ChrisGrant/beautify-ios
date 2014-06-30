@@ -33,6 +33,10 @@
     }
 }
 
+-(void)didRotate:(NSNotification*)notification {
+    [self.renderer redraw];
+}
+
 -(void)override_dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [self override_dealloc];

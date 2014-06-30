@@ -18,7 +18,9 @@
     selectedStateSetter.propertyName = @"backgroundColor";
     selectedStateSetter.state = UIControlStateHighlighted;
     selectedStateSetter.value = [UIColor colorWithWhite:202.0f/255.0f alpha:1.0f];
-    style.stateSetters = @[selectedStateSetter];
+    if(selectedStateSetter) {
+        style.stateSetters = @[selectedStateSetter];
+    }
     
     return style;
 }

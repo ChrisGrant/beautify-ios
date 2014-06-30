@@ -12,17 +12,17 @@
 
 @implementation JSONValueTransformer (BeautifyExtensions)
 
--(UIColor*)UIColorFromNSString:(NSString*)string {
+-(UIColor *)UIColorFromNSString:(NSString*)string {
     return [UIColor colorWithHexString:string];
 }
 
--(NSString*)JSONObjectFromUIColor:(UIColor*)color {
+-(NSString *)JSONObjectFromUIColor:(UIColor*)color {
     return [UIColor hexValuesFromUIColor:color];
 }
 
--(NSValue*)CGSizeFromNSDictionary:(NSDictionary*)offsetDict {
-    float x = 0;
-    float y = 0;
+-(NSValue *)CGSizeFromNSDictionary:(NSDictionary*)offsetDict {
+    CGFloat x = 0;
+    CGFloat y = 0;
     
     if(offsetDict) {
         if ([[offsetDict allKeys] containsObject:@"x"]) {

@@ -2,9 +2,16 @@
 //  Beautify.h
 //  Beautify
 //
-//  Created by Colin Eberhardt on 07/06/2013.
-//  Copyright (c) 2013 Colin Eberhardt. All rights reserved.
+//  Copyright (c) 2014 Beautify. All rights reserved.
 //
+
+#import <UIKit/UIKit.h>
+
+//! Project version number for Beautify.
+FOUNDATION_EXPORT double BeautifyVersionNumber;
+
+//! Project version string for Beautify.
+FOUNDATION_EXPORT const unsigned char BeautifyVersionString[];
 
 // The types which are used for style property values
 #import "BYBorder.h"
@@ -56,3 +63,5 @@
 
 #import "BYBeautify.h"
 #import "BYThemeManager.h"
+
+#import "BYTableViewCellLabelRenderer.h"
