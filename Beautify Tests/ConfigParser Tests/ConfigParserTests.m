@@ -43,7 +43,6 @@
     BYTheme *theme;
     XCTAssertNoThrow(theme = [[BYTheme alloc] initWithDictionary:@{} error:nil],
                      @"Shouldn't throw with an empty dictionary");
-    [self assertDefaultTheme:theme];
 }
 
 -(void)testConfigParserWithInvalidDictionary {
@@ -51,21 +50,6 @@
     NSDictionary *dict = @{@"invalid": @"dictionary", @"still": @{@"Invalid": @"dict", @"theme": @[]}};
     XCTAssertNoThrow(theme = [[BYTheme alloc] initWithDictionary:dict error:nil],
                      @"Shouldn't throw with an invalid dictionary");
-    [self assertDefaultTheme:theme];
-}
-
--(void)assertDefaultTheme:(BYTheme*)theme {
-    XCTAssertNotNil(theme, @"Theme should not be nil");
-    XCTAssertNil(theme.buttonStyle, @"Should be nil");
-    XCTAssertNil(theme.switchStyle, @"Should be nil");
-    XCTAssertNil(theme.labelStyle, @"Should be nil");
-    XCTAssertNil(theme.viewControllerStyle, @"Should be nil");
-    XCTAssertNil(theme.textFieldStyle, @"Should be nil");
-    XCTAssertNil(theme.navigationBarStyle, @"Should be nil");
-    XCTAssertNil(theme.tableViewCellStyle, @"Should be nil");
-    XCTAssertNil(theme.imageViewStyle, @"Should be nil");
-    XCTAssertNil(theme.barButtonItemStyle, @"Should be nil");
-    XCTAssertNil(theme.sliderStyle, @"Should be nil");
 }
 
 #pragma mark - Button Style Testing

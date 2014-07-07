@@ -52,6 +52,24 @@
     return theme;
 }
 
+-(BOOL)__isJSONModelSubClass:(Class)class {
+    if([NSStringFromClass(class) isEqualToString:NSStringFromClass([BYSwitchStyle class])] ||
+       [NSStringFromClass(class) isEqualToString:NSStringFromClass([BYButtonStyle class])] ||
+       [NSStringFromClass(class) isEqualToString:NSStringFromClass([BYSliderStyle class])] ||
+       [NSStringFromClass(class) isEqualToString:NSStringFromClass([BYLabelStyle class])] ||
+       [NSStringFromClass(class) isEqualToString:NSStringFromClass([BYViewControllerStyle class])] ||
+       [NSStringFromClass(class) isEqualToString:NSStringFromClass([BYTextFieldStyle class])] ||
+       [NSStringFromClass(class) isEqualToString:NSStringFromClass([BYNavigationBarStyle class])] ||
+       [NSStringFromClass(class) isEqualToString:NSStringFromClass([BYTableViewCellStyle class])] ||
+       [NSStringFromClass(class) isEqualToString:NSStringFromClass([BYImageViewStyle class])] ||
+       [NSStringFromClass(class) isEqualToString:NSStringFromClass([BYBarButtonStyle class])] ||
+       [NSStringFromClass(class) isEqualToString:NSStringFromClass([BYTabBarStyle class])] ||
+       [NSStringFromClass(class) isEqualToString:NSStringFromClass([BYSearchBarStyle class])]) {
+        return YES;
+    }
+    return NO;
+}
+
 +(BYTheme*)validateAndReturnThemeFromDictionary:(NSDictionary*)dict {
     // Find the version of the JSON file being passed in.
     BYTheme *theme;
@@ -76,8 +94,13 @@
 }
 
 -(instancetype)initWithDictionary:(NSDictionary *)dict error:(NSError *__autoreleasing *)err {
-    if(!dict)
+    if(!dict) {
         return nil;
+    }
+    
+    if(dict.allKeys.count == 0) {
+        return [BYTheme new];
+    }
     
     BYTheme *theme = [super initWithDictionary:dict error:err];
     if(theme == nil) {
@@ -125,7 +148,7 @@
 -(NSDictionary*)toDictionary {
     // Get the dictionary that we need to wrap in the version number.
     NSDictionary *dict = [super toDictionary];
-
+    
     // Wrap the dictionary in "theme" property as well as adding the current schema version.
     NSMutableDictionary *wrapperDict = [NSMutableDictionary new];
     wrapperDict[SCHEMA_VERSION_KEY] = JSON_SCHEMA_VERSION;
