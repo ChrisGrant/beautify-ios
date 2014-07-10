@@ -28,20 +28,20 @@ static NSString *appleLogoString = @"data:image/png;base64,iVBORw0KGgoAAAANSUhEU
     UIImage *image;
     XCTAssertNoThrow(image = [UIImage imageFromBase64String:blackLaunchString], @"Should not throw an exception with a valid parameter");
     XCTAssertNotNil(image, @"Image should not be nil");
-    XCTAssertEqual(image.size, CGSizeMake(320, 480), @"Should have the correct size!");
+    XCTAssertTrue(CGSizeEqualToSize(image.size, CGSizeMake(320, 480)), @"Should have the correct size!");
 }
 
 -(void)testEncodeThenDecodeProducesEqualString {
     UIImage *image;
     XCTAssertNoThrow(image = [UIImage imageFromBase64String:appleLogoString], @"Should not throw an exception with a valid parameter");
     XCTAssertNotNil(image, @"Image should not be nil");
-    XCTAssertEqual(image.size, CGSizeMake(92, 110), @"Should have the correct size!");
+    XCTAssertTrue(CGSizeEqualToSize(image.size, CGSizeMake(92, 110)), @"Should have the correct size!");
     
     // Now let's decode the image and compare the result
     NSString *decodedString = [UIImage base64StringFromUIImage:image];
     
     UIImage *recreatedImage = [UIImage imageFromBase64String:decodedString];
-    XCTAssertEqual(recreatedImage.size, CGSizeMake(92, 110), @"Should have the correct size after being recreated!");
+    XCTAssertTrue(CGSizeEqualToSize(recreatedImage.size, CGSizeMake(92, 110)), @"Should have the correct size after being recreated!");
     
     XCTAssert([BYImageTests image:image isEqualTo:recreatedImage], @"Images should be equal!");
 }
