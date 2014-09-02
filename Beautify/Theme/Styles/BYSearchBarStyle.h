@@ -20,7 +20,7 @@
 
 #pragma mark Text Field Properties 
 
-@property BYText *textFieldText;
+@property BYText<Optional> *textFieldText;
 
 @property UIColor<Optional> *textFieldBackgroundColor;
 @property BYGradient<Optional> *textFieldBackgroundGradient;

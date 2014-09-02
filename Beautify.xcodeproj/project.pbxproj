@@ -267,6 +267,8 @@
 		7065B6DA1961913600A5FA36 /* BYNavigationBarRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7205345717579C61000A27C0 /* BYNavigationBarRenderer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7065B6DC1961926400A5FA36 /* JSONModelClassProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F516F17FB10A000928B0B /* JSONModelClassProperty.h */; };
 		7065B6DD1961927000A5FA36 /* NSArray+JSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 707F517417FB10A000928B0B /* NSArray+JSONModel.h */; };
+		7067B14619B5FD64001D7473 /* PartialSearchBarStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7067B14419B5FD64001D7473 /* PartialSearchBarStyle.json */; };
+		7067B14719B5FD64001D7473 /* ValidSearchBarStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 7067B14519B5FD64001D7473 /* ValidSearchBarStyle.json */; };
 		7076B69217FD824B0015593F /* BYSerializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7076B69117FD824B0015593F /* BYSerializationTests.m */; };
 		707A869917FAE8D0005A102F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B492A317F2CD0C002B62DB /* SystemConfiguration.framework */; };
 		707F516417FB004000928B0B /* dark.json in Resources */ = {isa = PBXBuildFile; fileRef = 7027C5D517F04341006D8008 /* dark.json */; };
@@ -561,6 +563,8 @@
 		7065B60219617B7D00A5FA36 /* Beautify.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Beautify.h; path = Beautify/Beautify.h; sourceTree = SOURCE_ROOT; };
 		7065B6D4196180FB00A5FA36 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7066C7CC18290907009E96C6 /* BYBeautifyVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BYBeautifyVersion.h; sourceTree = "<group>"; };
+		7067B14419B5FD64001D7473 /* PartialSearchBarStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = PartialSearchBarStyle.json; path = "ConfigParser Tests/Test JSON Files/Search Bar Style/PartialSearchBarStyle.json"; sourceTree = "<group>"; };
+		7067B14519B5FD64001D7473 /* ValidSearchBarStyle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ValidSearchBarStyle.json; path = "ConfigParser Tests/Test JSON Files/Search Bar Style/ValidSearchBarStyle.json"; sourceTree = "<group>"; };
 		7076B69117FD824B0015593F /* BYSerializationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BYSerializationTests.m; path = "ConfigParser Tests/BYSerializationTests.m"; sourceTree = "<group>"; };
 		707A869117F9B435005A102F /* JSONValueTransformer+BeautifyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "JSONValueTransformer+BeautifyExtension.h"; path = "Beautify/JSONValueTransformer+BeautifyExtension.h"; sourceTree = SOURCE_ROOT; };
 		707A869217F9B435005A102F /* JSONValueTransformer+BeautifyExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "JSONValueTransformer+BeautifyExtension.m"; path = "Beautify/JSONValueTransformer+BeautifyExtension.m"; sourceTree = SOURCE_ROOT; };
@@ -1025,6 +1029,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7067B14319B5FCDC001D7473 /* Search Bar Style */ = {
+			isa = PBXGroup;
+			children = (
+				7067B14419B5FD64001D7473 /* PartialSearchBarStyle.json */,
+				7067B14519B5FD64001D7473 /* ValidSearchBarStyle.json */,
+			);
+			name = "Search Bar Style";
+			sourceTree = "<group>";
+		};
 		7074287616F861B1003C2D1F /* Renderers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1250,6 +1263,7 @@
 				7007254817EB03D6001F7C41 /* Image Style */,
 				700ED7D117E9B8CD009C2C49 /* Label Style */,
 				7007253A17EAF02B001F7C41 /* Navigation Bar Style */,
+				7067B14319B5FCDC001D7473 /* Search Bar Style */,
 				7007254A17EB03E1001F7C41 /* Slider Style */,
 				70FAFBB417E7335200EB6843 /* Switch Style */,
 				7091C15C1876DAF50076D201 /* Tab Bar */,
@@ -1685,6 +1699,7 @@
 				7091C15B1876DAF20076D201 /* ValidTabBarStyle.json in Resources */,
 				7007254617EAF0C0001F7C41 /* ValidTableViewCellStyle.json in Resources */,
 				7007255117EB0432001F7C41 /* PartialBarButtonStyle.json in Resources */,
+				7067B14719B5FD64001D7473 /* ValidSearchBarStyle.json in Resources */,
 				7007254317EAF0C0001F7C41 /* PartialTableViewCellStyle.json in Resources */,
 				7007255217EB0432001F7C41 /* PartialImageViewStyle.json in Resources */,
 				7007254417EAF0C0001F7C41 /* PartialTextFieldStyle.json in Resources */,
@@ -1695,6 +1710,7 @@
 				70FF54E117E7042700F9BF03 /* PartialButtonStyle.json in Resources */,
 				700ED7D917E9C0DF009C2C49 /* PartialVCStyle.json in Resources */,
 				7007254717EAF0C0001F7C41 /* ValidTextFieldStyle.json in Resources */,
+				7067B14619B5FD64001D7473 /* PartialSearchBarStyle.json in Resources */,
 				7007255617EB0432001F7C41 /* ValidSliderStyle.json in Resources */,
 				7007254217EAF0C0001F7C41 /* PartialNavigationBarStyle.json in Resources */,
 				7007255517EB0432001F7C41 /* ValidImageViewStyle.json in Resources */,

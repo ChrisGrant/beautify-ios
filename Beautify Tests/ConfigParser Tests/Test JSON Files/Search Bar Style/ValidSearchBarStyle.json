@@ -1,0 +1,79 @@
+{
+    "backgroundColor": "#00ff00",
+    "backgroundGradient": {
+        "radial": false,
+        "stops": [
+                  {
+                  "position": "0.0",
+                  "color": "#000000"
+                  },
+                  {
+                  "position": "1.0",
+                  "color": "#FFFFFF"
+                  }
+                  ]
+    },
+    "border": {
+        "width": 2,
+        "cornerRadius": 3,
+        "color": "#000000"
+    },
+    "innerShadow": {
+        "radius": 3,
+        "color": "#00FF00",
+        "offset": {
+            "x": 1,
+            "y": 2
+        }
+    },
+    "outerShadow": {
+        "radius": 2,
+        "color": "#0000FF",
+        "offset": {
+            "x": 2,
+            "y": 3
+        }
+    },
+    "textFieldText": {
+        "color": "#FFFFFF",
+        "font": {
+            "name": "Helvetica-Bold",
+            "size": 12
+        }
+    },
+    "textFieldBackgroundColor": "#ff0000",
+    "textFieldBackgroundGradient": {
+        "radial": false,
+        "stops": [
+                  {
+                  "position": "0.0",
+                  "color": "#000000"
+                  },
+                  {
+                  "position": "1.0",
+                  "color": "#0000ff"
+                  }
+                  ]
+    },
+    "textFieldBorder": {
+        "width": 5,
+        "cornerRadius": 3,
+        "color": "#ffffff"
+    },
+    "textFieldInnerShadow": {
+        "radius": 2,
+        "color": "#ff0000",
+        "offset": {
+            "x": 2,
+            "y": 2
+        }
+    },
+    "textFieldOuterShadow": {
+        "radius": 21,
+        "color": "#FF0000",
+        "offset": {
+            "x": 10,
+            "y": 0
+        }
+    }
+}

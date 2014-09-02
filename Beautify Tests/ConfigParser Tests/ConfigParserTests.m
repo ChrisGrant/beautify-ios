@@ -82,7 +82,7 @@
     XCTAssertEqual(setter.state, UIControlStateHighlighted, @"Should be for the highlighted state");
     XCTAssert([setter.propertyName isEqualToString:@"title"], @"Should be for the title");
     
-    BYText *text = setter.value;
+    BYText *text = (BYText*)setter.value;
     [self assertText:text hasName:@"HelveticaNeue-Bold" size:14.0f andColor:[UIColor whiteColor]];
 }
 
@@ -455,7 +455,7 @@
 
 -(void)testTabBarStyleWithValidDict {
     BYTabBarStyle *tabBarStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"ValidTabBarStyle" andClass:[BYTabBarStyle class]];
-
+    
     XCTAssert([tabBarStyle.backgroundColor isEqualToColor:[UIColor blueColor]], @"BG color should be blue");
     
     [self assertGradient:tabBarStyle.backgroundGradient
@@ -471,6 +471,52 @@
     [self assertShadows:tabBarStyle.outerShadow hasOneShadowWithColor:[UIColor greenColor] radius:2.0f andOffset:CGSizeMake(2, 3)];
     
     [self assertShadows:tabBarStyle.innerShadow hasOneShadowWithColor:[UIColor whiteColor] radius:5.0f andOffset:CGSizeMake(1, 4)];
+}
+
+#pragma mark - Search Bar Testing
+
+-(void)testSearchBarStyleWithNilDict {
+    [self assertStyleIsNilWithNilDictForClass:[BYSearchBarStyle class]];
+}
+
+-(void)testSearchBarStyleWithEmptyDict {
+    [self assertStyleIsNilWithEmptyDictForClass:[BYSearchBarStyle class]];
+}
+
+-(void)testSearchBarStyleWithPartialDict {
+    BYSearchBarStyle *searchBarStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"PartialSearchBarStyle"
+                                                                                         andClass:[BYSearchBarStyle class]];
+    XCTAssert([searchBarStyle.backgroundColor isEqualToColor:[UIColor greenColor]], @"Background color should be green");
+}
+
+-(void)testSearchBarStyleWithValidDict {
+    BYSearchBarStyle *searchBarStyle = [self assertNotNilAndDoesNotThrowWhileReturningStyleFromJSONFile:@"ValidSearchBarStyle" andClass:[BYSearchBarStyle class]];
+    
+    XCTAssert([searchBarStyle.backgroundColor isEqualToColor:[UIColor greenColor]], @"BG color should be green");
+    
+    [self assertGradient:searchBarStyle.backgroundGradient
+         hasStopOneColor:[UIColor blackColor] atPosition:0
+         andStopTwoColor:[UIColor whiteColor] atPosition:1
+             andIsRadial:NO withRadialOffset:CGSizeZero];
+    
+    [self assertBorder:searchBarStyle.border hasWidth:2.0f color:[UIColor blackColor] andCornerRadius:3.0f];
+    
+    [self assertShadows:searchBarStyle.innerShadow hasOneShadowWithColor:[UIColor greenColor] radius:3.0f andOffset:CGSizeMake(1, 2)];
+    [self assertShadows:searchBarStyle.outerShadow hasOneShadowWithColor:[UIColor blueColor] radius:2.0f andOffset:CGSizeMake(2, 3)];
+    
+    [self assertText:searchBarStyle.textFieldText hasName:@"Helvetica-Bold" size:12 andColor:[UIColor whiteColor]];
+    
+    XCTAssert([searchBarStyle.textFieldBackgroundColor isEqualToColor:[UIColor redColor]], @"BG color should be red");
+    
+    [self assertGradient:searchBarStyle.textFieldBackgroundGradient
+         hasStopOneColor:[UIColor blackColor] atPosition:0
+         andStopTwoColor:[UIColor blueColor] atPosition:1
+             andIsRadial:NO withRadialOffset:CGSizeZero];
+    
+    [self assertBorder:searchBarStyle.textFieldBorder hasWidth:5.0f color:[UIColor whiteColor] andCornerRadius:3.0f];
+    
+    [self assertShadows:searchBarStyle.textFieldInnerShadow hasOneShadowWithColor:[UIColor redColor] radius:2.0f andOffset:CGSizeMake(2, 2)];
+    [self assertShadows:searchBarStyle.textFieldOuterShadow hasOneShadowWithColor:[UIColor redColor] radius:21.0f andOffset:CGSizeMake(10, 0)];
 }
 
 #pragma mark - Helper Methods
