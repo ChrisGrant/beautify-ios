@@ -65,7 +65,6 @@
 #pragma mark - Handlers
 
 -(BYStyleRenderer*)rendererForView:(id)view {
-    
     // Some controls should not be styled at all.
     if ([view isKindOfClass:NSClassFromString(@"UIButtonLabel")] ||
         [view isKindOfClass:[UINavigationController class]] ||
@@ -101,7 +100,8 @@
             Class rendererClass = NSClassFromString(rendererClassName);
             id rendererClassInstance = [rendererClass alloc];
             
-            BYStyleRenderer *renderer = [rendererClassInstance initWithView:view theme:[[BYThemeManager instance] currentTheme]];
+            BYStyleRenderer *renderer = [rendererClassInstance initWithView:view
+                                                                      theme:[[BYThemeManager instance] currentTheme]];
             return renderer;
         }
     }
