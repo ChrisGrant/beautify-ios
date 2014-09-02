@@ -99,6 +99,8 @@
     // Used to style the back button item
     [self swizzleClass:[UINavigationBar class] method:@"pushNavigationItem:"];
     
+    [self swizzleClass:[UIViewController class] method:@"preferredStatusBarStyle"];
+    
     // Remove KVO.
     [self swizzleClass:[UIView class] method:@"dealloc"];
 }

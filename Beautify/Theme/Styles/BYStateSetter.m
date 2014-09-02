@@ -25,23 +25,23 @@ static NSDictionary* styleProperties = nil;
     UIControlState _state;
 }
 
--(id)value {
+- (id)value {
     return _val;
 }
 
--(void)setValue:(id)val {
+- (void)setValue:(id)val {
     _val = val;
 }
 
--(UIControlState)state {
+- (UIControlState)state {
     return _state;
 }
 
--(void)setState:(UIControlState)state {
+- (void)setState:(UIControlState)state {
     _state = state;
 }
 
--(NSString *)description {
+- (NSString *)description {
     return [NSString stringWithFormat:@"property : %@, value : %@",
             self.propertyName, self.value];
 }
@@ -121,8 +121,7 @@ static NSDictionary* styleProperties = nil;
     return nil;
 }
 
-+(BOOL)propertyIsIgnored:(NSString *)propertyName
-{
++ (BOOL)propertyIsIgnored:(NSString *)propertyName {
     return YES;
 }
 

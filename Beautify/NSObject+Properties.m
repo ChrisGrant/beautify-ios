@@ -19,7 +19,10 @@
     for (unsigned int i = 0; i < propertyCount; ++i) {
         objc_property_t property = properties[i];
         const char * name = property_getName(property);
-        [propertyNames addObject:@(name)];
+        NSString *propertyName = @(name);
+        if (![self shouldExclude:propertyName]) {
+            [propertyNames addObject:propertyName];
+        }
     }
     free(properties);
     
@@ -31,10 +34,17 @@
         }
     }
     for (NSString *superPropertyName in superPropertyNames) {
-        [propertyNames addObject:superPropertyName];
+        if (![self shouldExclude:superPropertyName]) {
+            [propertyNames addObject:superPropertyName];
+        }
     }
     
     return propertyNames;
+}
+
++ (BOOL)shouldExclude:(NSString *)string {
+    return [string isEqualToString:@"hash"] || [string isEqualToString:@"superclass"] ||
+        [string isEqualToString:@"description"] || [string isEqualToString:@"debugDescription"];
 }
 
 @end

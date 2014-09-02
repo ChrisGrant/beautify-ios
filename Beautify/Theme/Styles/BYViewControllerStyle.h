@@ -19,6 +19,8 @@
 
 @property BYGradient<Optional> *backgroundGradient;
 
-+(BYViewControllerStyle*)defaultStyle;
+@property UIStatusBarStyle statusBarStyle;
+
++ (BYViewControllerStyle*)defaultStyle;
 
 @end

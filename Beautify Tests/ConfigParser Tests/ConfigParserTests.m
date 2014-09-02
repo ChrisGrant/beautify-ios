@@ -214,6 +214,7 @@
     XCTAssert([vcStyle.backgroundColor isEqualToColor:[UIColor whiteColor]], @"Background should be white");
     [self assertGradient:vcStyle.backgroundGradient hasStopOneColor:[UIColor whiteColor] atPosition:1.0f
          andStopTwoColor:[UIColor blueColor] atPosition:0 andIsRadial:NO withRadialOffset:CGSizeZero];
+    XCTAssertEqual(UIStatusBarStyleLightContent, vcStyle.statusBarStyle);
 }
 
 -(void)testViewControllerStyleWithPartialDict {
