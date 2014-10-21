@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'beautify', :exclusive => true do
+  pod "beautify", :path => "../"
+end
+target 'Tests', :exclusive => true do
+  pod "beautify", :path => "../"
+end
+target 'VisualTest', :exclusive => true do
+  pod "beautify", :path => "../"
+end

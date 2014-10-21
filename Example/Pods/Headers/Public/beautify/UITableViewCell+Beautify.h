@@ -1,0 +1,1 @@
+../../../../../Pod/Classes/UITableViewCell+Beautify.h
