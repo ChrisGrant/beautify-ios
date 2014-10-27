@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/BYTabBarRenderer.h
+../../../../../Pod/Classes/Renderers/BYTabBarRenderer.h

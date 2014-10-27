@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/BYViewRenderer.h
+../../../../../Pod/Classes/Renderers/BYViewRenderer.h

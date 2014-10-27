@@ -12,7 +12,7 @@
 #import "BYShadow.h"
 #import "BYTextShadow.h"
 
-/*
+/**
  Represents a group of rendering properties for a given label style.
  */
 @interface BYLabelStyle : BYViewStyle

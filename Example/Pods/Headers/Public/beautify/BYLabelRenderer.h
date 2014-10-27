@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/BYLabelRenderer.h
+../../../../../Pod/Classes/Renderers/BYLabelRenderer.h

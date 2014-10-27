@@ -3,7 +3,7 @@
 //  Beautify
 //
 //  Created by Chris Grant on 03/07/2013.
-//  Copyright (c) 2013 Colin Eberhardt. All rights reserved.
+//  Copyright (c) Beautify. All rights reserved.
 //
 
 #import "FullVisualTestViewController.h"
@@ -106,7 +106,7 @@
     self.navigationItem.rightBarButtonItems = @[customizedButtonRight, beautifyDefaultButtonRight, defaultButtonRight];
     
     UIBarButtonItem *defaultButtonLeft = [[UIBarButtonItem alloc] initWithTitle:@"D."
-                                                                          style:UIBarButtonItemStylePlainr
+                                                                          style:UIBarButtonItemStylePlain
                                                                          target:nil
                                                                          action:nil];
     [defaultButtonLeft setImmuneToBeautify:YES];

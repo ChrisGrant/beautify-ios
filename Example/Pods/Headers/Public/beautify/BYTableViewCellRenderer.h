@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/BYTableViewCellRenderer.h
+../../../../../Pod/Classes/Renderers/BYTableViewCellRenderer.h

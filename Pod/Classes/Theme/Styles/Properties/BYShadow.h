@@ -2,7 +2,6 @@
 //  Shadow.h
 //  Beautify
 //
-//  Created by Chris Grant on 14/03/2013.
 //  Copyright (c) Beautify. All rights reserved.
 //
 
@@ -13,32 +12,37 @@
 @protocol BYShadow
 @end
 
-// This will remove warnings that NSArrays don't conform to BYShadow protocols.
-@interface NSArray (Shadow)<BYShadow>
+@interface NSArray (Shadow)<BYShadow> // This will remove warnings that NSArrays don't conform to BYShadow protocols.
 @end
 
-/*
- A style property representing a shadow for a UIView.
+/**
+ *  A style property representing a shadow for a UIView.
  */
 @interface BYShadow : JSONModel <NSCopying, BYShadow>
 
-/*
- The blur radius for the shadow.
+/**
+ *  The blur radius for the shadow.
  */
 @property float radius;
 
-/*
- The offset of the shadow from the associated UI element.
+/**
+ *  The offset of the shadow from the associated UI element.
  */
 @property CGSize offset;
 
-/*
- Color for the shadow. Defaults to black.
+/**
+ *  Color for the shadow. Defaults to black.
  */
 @property UIColor<Optional> *color;
 
-/*
- Create with the specified offset, blur radius and color.
+/**
+ *  Creates a BYShadow with the specified offset, blur radius and color.
+ *
+ *  @param offset The offset for the shadow.
+ *  @param radius The blur radius for the shadow.
+ *  @param color  The color of the shadow.
+ *
+ *  @return A new BYShadow instance with the specified offset, blur and color.
  */
 +(BYShadow*)shadowWithOffset:(CGSize)offset radius:(float)radius color:(UIColor*)color;
 

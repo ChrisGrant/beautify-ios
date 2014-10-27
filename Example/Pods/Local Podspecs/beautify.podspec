@@ -21,11 +21,8 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Pod/Classes/**/*.{h,m}'
   s.public_header_files = 'Pod/Classes/**/*.h'
+  s.private_header_files = 'Pod/Classes/Private/**/*.h'
 
-  s.resource_bundles = {
-    'beautify' => ['Pod/Assets/*.png']
-  }
-
-  # s.frameworks = 'UIKit', 'MapKit'
+  s.frameworks = 'UIKit'
   s.dependency 'JSONModel', '1.0.1'
 end

@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/UIViewController+Beautify.h
+../../../../../Pod/Classes/View Categories/UIViewController+Beautify.h

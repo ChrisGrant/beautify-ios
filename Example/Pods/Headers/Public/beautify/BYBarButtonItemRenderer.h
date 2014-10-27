@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/BYBarButtonItemRenderer.h
+../../../../../Pod/Classes/Renderers/BYBarButtonItemRenderer.h

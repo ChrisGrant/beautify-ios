@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/BYTableViewCellLabelRenderer.h
+../../../../../Pod/Classes/Renderers/BYTableViewCellLabelRenderer.h

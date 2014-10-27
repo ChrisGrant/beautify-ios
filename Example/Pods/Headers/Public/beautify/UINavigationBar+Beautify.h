@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/UINavigationBar+Beautify.h
+../../../../../Pod/Classes/View Categories/UINavigationBar+Beautify.h

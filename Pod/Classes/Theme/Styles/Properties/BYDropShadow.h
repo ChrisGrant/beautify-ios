@@ -15,7 +15,7 @@
 
 @property float height;
 
-/*
+/**
  Create a drop shadow with the specified color and height.
  */
 +(BYDropShadow*)shadowWithColor:(UIColor*)color andHeight:(float)height;
