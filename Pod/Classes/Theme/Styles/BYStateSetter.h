@@ -15,7 +15,7 @@
 @interface NSArray (StateSetter) <BYStateSetter>
 @end
 
-/*
+/**
  State setters are used to describe the various visual states affect a style. A state setter
  is associated with a control state and describes the value that will be applied to a given style property
  when the given state is enhanced.

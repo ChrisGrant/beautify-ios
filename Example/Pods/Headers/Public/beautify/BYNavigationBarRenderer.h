@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/BYNavigationBarRenderer.h
+../../../../../Pod/Classes/Renderers/BYNavigationBarRenderer.h

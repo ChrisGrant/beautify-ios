@@ -15,22 +15,22 @@ typedef NS_ENUM(NSInteger, BYImageContentMode) {
     BYImageContentModeTile
 };
 
-/*
+/**
  A style property representing an image for use as a background for a view.
  */
 @interface BYBackgroundImage : JSONModel <NSCopying>
 
-/*
+/**
  The image.
  */
 @property UIImage* data;
 
-/*
+/**
  The content mode for the image when it is displayed
  */
 @property BYImageContentMode contentMode;
 
-/*
+/**
  Creates a background image with the specified image and content mode.
  */
 +(BYBackgroundImage*)backgroundImageWithImage:(UIImage*)image andContentMode:(BYImageContentMode)contentMode;

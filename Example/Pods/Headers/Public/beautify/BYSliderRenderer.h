@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/BYSliderRenderer.h
+../../../../../Pod/Classes/Renderers/BYSliderRenderer.h

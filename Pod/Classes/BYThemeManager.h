@@ -10,12 +10,12 @@ static NSString *const CSThemeUpdatedNotification = @"CSThemeUpdatedNotification
 
 @class BYStyleRenderer, BYTheme;
 
-/*
+/**
  Theme manager is manages the current theme and related data.
  */
 @interface BYThemeManager : NSObject
 
-/*
+/**
  Accesses the theme manager singleton instance.
  */
 +(BYThemeManager*)instance;

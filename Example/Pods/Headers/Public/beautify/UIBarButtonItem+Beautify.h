@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/UIBarButtonItem+Beautify.h
+../../../../../Pod/Classes/View Categories/UIBarButtonItem+Beautify.h

@@ -1,1 +1,1 @@
-../../../../../Pod/Classes/UISwitch+Beautify.h
+../../../../../Pod/Classes/View Categories/UISwitch+Beautify.h

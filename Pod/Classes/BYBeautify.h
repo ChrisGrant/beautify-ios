@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-/*
+/**
  Beautify is a singleton class which is responsible for activating the beautify framework for the current application. On
  activation all the UI controls within your application will have their rendering capabilities be 'enhanced'.
  
@@ -30,26 +30,29 @@
  */
 @interface BYBeautify : NSObject
 
-/*
- Accesses the beautify singleton instance.
+/**
+ *  Accesses the beautify singleton instance.
  */
-+(BYBeautify*)instance;
++ (BYBeautify *)instance;
 
-/*
- Activates beautify in order to 'enhance' the UI controls of your application.
+/**
+ *  Activates beautify in order to 'enhance' the UI controls of your application.
  */
--(void)activate;
+- (void)activate;
 
-/*
- Activates beautify and loads a style from a JSON file with the given name.
+/**
+ *  Activates beautify and loads a style from a JSON file with the given name.
+ *
+ *  @param styleName The JSON file name of the style file to load. Note that you do not need to specify the '.json'
+ *  file extension.
  */
--(void)activateWithStyle:(NSString*)styleName;
+- (void)activateWithStyle:(NSString *)styleName;
 
 #pragma mark - 
 #pragma mark Version Info
 
 /** Returns a string describing the version of the Beautify framework being used. */
-+(NSString*)getInfo;
--(NSString*)getInfo;
++ (NSString*)getInfo;
+- (NSString*)getInfo;
 
 @end

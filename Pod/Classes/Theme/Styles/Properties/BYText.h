@@ -12,17 +12,17 @@
 
 @interface BYText : JSONModel <NSCopying>
 
-/*
+/**
  Font for the text.
  */
 @property BYFont *font;
 
-/*
+/**
  Color for the text.
  */
 @property UIColor *color;
 
-/*
+/**
  Create with the specified font and color.
  */
 +(BYText*)textWithFont:(BYFont*)font color:(UIColor*)color;
