@@ -1,4 +1,5 @@
-#beautify-ios
+#beautify-ios[![Build Status](https://travis-ci.org/beautify/beautify-ios.svg?branch=master)](https://travis-ci.org/beautify/beautify-ios)
+
 [Beautify](http://beautify.io/ "beautify") enhances Apple's UIKit controls, re-rendering them  to give you much more control over their visual appearance. 
 
 The **beautify-ios** framework is part of a much more ambitious project, which will allow live-styling of applications that have been enhanced by the beautify framework. We plan to release this to our beta programme members shortly.
