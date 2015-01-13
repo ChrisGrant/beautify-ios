@@ -7,20 +7,16 @@ The **beautify-ios** framework is part of a much more ambitious project, which w
 **beautify-ios** currently supports the following controls; `UISwitch`, `UISlider`, `UITableViewCell`, `UINavigationBar`, `UITextField`, `UILabel`, `UIButton` and `UIImageView`, with more to follow …
 
 ## Contents
-
   * [Setup](#setup)
   * [A quick introduction](#a-quick-introduction)
   * [Usage](#usage)
-	* [Adding the framework](#adding-the-framework)
-	* [Activating beautify](#activating-beautify)
-		* [Building a theme in code](#building-a-theme-in-code)
-		* [Loading a theme from a JSON file](#loading-a-theme-from-a-json-file)
+	* [Building a theme in code](#building-a-theme-in-code)
+	* [Loading a theme from a JSON file](#loading-a-theme-from-a-json-file)
 	* [Styling Specific Controls](#styling-specific-controls)
 	* [Excluding controls](#excluding-controls)
   * [Licence](#licence)
 
 ##Setup
-
 Beautify is available as a [CocoaPod](http://cocoapods.org/?q=beautify).
 
 To add beautify to your project, follow these steps:
