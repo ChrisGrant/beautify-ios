@@ -8,8 +8,8 @@ The **beautify-ios** framework is part of a much more ambitious project, which w
 
 ## Contents
 
+  * [Setup](#setup)
   * [A quick introduction](#a-quick-introduction)
-  * [Building beautify](#building-beautify)
   * [Usage](#usage)
 	* [Adding the framework](#adding-the-framework)
 	* [Activating beautify](#activating-beautify)
@@ -18,6 +18,21 @@ The **beautify-ios** framework is part of a much more ambitious project, which w
 	* [Styling Specific Controls](#styling-specific-controls)
 	* [Excluding controls](#excluding-controls)
   * [Licence](#licence)
+
+##Setup
+
+Beautify is available as a [CocoaPod](http://cocoapods.org/?q=beautify).
+
+To add beautify to your project, follow these steps:
+- Add pod 'beautify' to your Podfile
+- Run pod install
+- Open App.xcworkspace
+- Add the following to your AppDelegate's `didFinishLaunchingWithOptions:` method:
+```objc
+[[BYBeautify instance] activate];
+```
+
+You shouldn't notice an immediate change. The default states of the controls have been styled to match the default Apple style.
 
 ##A quick introduction
 
@@ -78,40 +93,17 @@ Beautify adds borders, shadows (inner and outer), gradients (radial and linear) 
 
 The examples above have shown how to change the visual appearance of a single control. It would be quite a lot of work to explicitly style every single control in your application. For that reason beautify has the concept of a theme which is automatically rolled out to every single control in your application. Furthermore, you can encode the theme in JSON format reducing the amount of code you need to write.
 
-
-##Building beautify
-You must run two commands: 
-`git submodule init` to initialize your local configuration file, and `git submodule update` to fetch all the data it requires.
-
-Once you have done this, you can now build beautify. Open up **Beautify.xcodeproj** and select the "Beautify" scheme. Hit build and the **Beautify.framework** target should be built and deployed to your *DerivedData* directory. To find the resulting framework, right click on the Beautify.framework product in the products group and select *Show in Finder*.
-
-![Beautify Products](Documentation/Images/products.png "Products")
-
 ##Usage
 
-###Adding the framework
-To use beautify in your own project, copy **Beautify.framework** from your *DerivedData* directory into the *Frameworks* group in your own project. To ensure that the framework has been linked correctly, check that **Beautify.framework** appears in the *Link Binary with Libraries* section of your target's build phases.
+###Modifying the appearance of controls
+When you have activated beautify, and want to modify the appearance of your controls, you have three options:
+  1. Create a global theme in code, which beautify will roll-out to all of your UI controls.
+  2. Create a theme in JSON (either manually or on the [beautify site](http://beautify.io)), which beautify will roll-out to all of your UI controls.
+  3. Modify the appearance of controls on a per-control basis, via the `renderer` property that beautify adds to the controls.
 
-![Binary Links](Documentation/Images/binarylinks.png "Link Binary with Libraries")
+You can also use a combination of these methods, applying a global theme but making appearance changes to individual controls. These three methods are described in more detail below.
 
-###Activating beautify
-Activating beautify requires one line of code:
-
-```objc
-[[BYBeautify instance] activate];
-```
-
-Place this at the top of the `didFinishLaunchingWithOptions:` method in your app delegate and all of the controls in your app will be rendered with beautify. You shouldn't notice an immediate change. The default states of the controls have been styled to match the default Apple style. When you do want to modify the appearance of your controls you have three options:
-
-  1. Modify the appearance on a per-control basis via the `renderer` property that beautify adds to the controls.
-  2. Create a global theme in code, which beautify will roll-out to all of your UI controls.
-  3. Create a JSON theme which is applied as per the global theme.
-  
-You can also use these methods in combination, applying a global theme, but making appearance changes to individual controls.
-
-These three methods are described in more detail below:  
-
-####Building a theme in code	
+####Building a theme in code
 Start off by instantiating a new `BYTheme` object. This object contains all of the properties you will need to style your application. The theme has a number of style properties that relate to each of the UIKit controls, you can use these to change the visual appearance as in the example below:
 
 ```objc	
