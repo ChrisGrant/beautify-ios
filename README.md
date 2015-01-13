@@ -32,7 +32,7 @@ To add beautify to your project, follow these steps:
 [[BYBeautify instance] activate];
 ```
 
-You shouldn't notice an immediate change. The default states of the controls have been styled to match the default Apple style.
+You shouldn't notice an immediate change. The default states of the controls have been styled to match the default Apple style. To customise the style, check out the [usage](#usage) section below.
 
 ##A quick introduction
 
@@ -97,9 +97,9 @@ The examples above have shown how to change the visual appearance of a single co
 
 ###Modifying the appearance of controls
 When you have activated beautify, and want to modify the appearance of your controls, you have three options:
-  1. Create a global theme in code, which beautify will roll-out to all of your UI controls.
-  2. Create a theme in JSON (either manually or on the [beautify site](http://beautify.io)), which beautify will roll-out to all of your UI controls.
-  3. Modify the appearance of controls on a per-control basis, via the `renderer` property that beautify adds to the controls.
+  1. **Create a global theme in code**, which beautify will roll-out to all of your UI controls.
+  2. **Create a global theme in JSON** (either manually or on the [beautify site](http://beautify.io)), which beautify will roll-out to all of your UI controls.
+  3. **Modify the appearance of controls on a per-control basis**, via the `renderer` property that beautify adds to the controls.
 
 You can also use a combination of these methods, applying a global theme but making appearance changes to individual controls. These three methods are described in more detail below.
 
